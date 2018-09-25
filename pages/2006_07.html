@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: July 2006 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2006_06.html" title="June 2006" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2006_08.html" title="August 2006" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_06.html">&laquo; June 2006</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2006_08.html">August 2006 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">July 27, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007294"></a>
+<h3 class="title">Jeff Barr - Amazon Web Service Evangelist, KMi Podium</h3>
+
+<p>[Scrappy notes from a presentation earlier this week by Jeff Barr to the Open University on Amazon webservices]</p>
+
+<p>(Amazon now has 57 million active customers worldwide.)</p>
+
+<p>AWS started to become reaility 2002.</p>
+
+<p>Amazon is a technology consumer (25 TB of business/historical data, 21 fufillment centres worldwide) as well as a technology provider - to Amazon Associates (1, 080, 000 active sellers) as well as s/w developers (160, 000 signed up for ws).</p>
+
+<p><strong>Programmable website</strong></p>
+
+<p>- support for industry standards<br />
+- provide remote access to data and functionality via apis<br />
+- decouple data and presentation<br />
+- means to leverage technology investment</p>
+
+<p><a href="http://aws.amazon.com/">AWS</a>  -</p>
+
+<p>- building block web services (storage, queuing)<br />
+- ecommerce capability<br />
+- new business models<br />
+- customer created content</p>
+
+<p>8 public web services<br />
+- Mechanical Turk<br />
+- AWIS - alexa web info service - crawl every 2 month, data acquired via Alexa toolbar (300TB of data), 3 types of crawl data: current, historic, new crawl<br />
+- AHP - amazon historical pricing - e.g. mine historical data to idenitfy seasonal trends<br />
+- SQS - simple queue service - FIFO<br />
+- Alexa top sites - top sites by alexa traffic rank<br />
+- AWSP - alexa web search platform - roll your own search engine<br />
+- ECS - ecommerce service (includes similarity data (?) - people who bought this also bought that)<br />
+- S3 - simple storage system</p>
+
+<p>[No mention of <a href="http://www.awszone.com/">AWSZone Scratchpads</a>?]</p>
+
+<p>Each web service seen as a separate business; developers are an important new  customer segment for Amazon; some services for free (because business comes back to Amazon); some services are paid for (e.g. S3);</p>
+
+<p>Business model associated with each web service</p>
+
+<p><strong>3 business models</strong></p>
+
+<p>1) free access, 1 call per second, traffic back to amazon; e.g. ECS; data in exchange for sales; developers can also earn money e.g. through amazon associate program; alse need business model for developer<br />
+2)  monthly fee - e.g. historical pricing service<br />
+3) usage/resource based charging model e.g. Amazon S3, alexa services, SQS, Mechanical Turk<br />
+- can pay for this using personal amazon account.</p>
+
+<p><strong>ECS</strong></p>
+
+<p>Now in 4th major release</p>
+
+<p>Complete access to amazon product catalogue<br />
+Reviews<br />
+Shopping cart - checkout on amazon property, tho' cart can be filled on any site<br />
+wishlists</p>
+
+<p><a href="http://del.icio.us/psychemedia/barr@kmi+ecs">examples....</a></p>
+
+<p>e.g. <em>click sharing</em>  [I like that:-)] (innovative business model) as seen at <a href="http://www.associate-o-matic.com/">http://www.associate-o-matic.com/</a>  - Amazon store builder in which developer takes commission from 1 in 10 transactions</p>
+
+<p>Specialised sites tend to be vertical in nature, more focussed e.g. in terms of market segment.</p>
+
+<p><strong>S3</strong><br />
+Pay as you go/pay only for what you use<br />
+15 cents per gigabyte month<br />
+20 cents per G to access data<br />
+Private and public storage<br />
+scalable, reliable, cost-effective, simple for developer<br />
+800M objects stored to date<br />
+Throw any amount of data at it, and that's fine :-)<br />
+Web scaleable, automatic replication<br />
+4 9s reliable<br />
+Same storage facility is used for Amazon product catalogue<br />
+Amazon don't peek inside stored data - user encryption okay<br />
+Anonymous storage not possible - user must register to be able to use service (so they can be billed...)<br />
+Linear cost scaling (cf. having to over-invest in your own servers against predicted grwoth of your web business)<br />
+Data - 1 byte to 5GB<br />
+REST or soap api; unique URL for each object in s3</p>
+
+<p><a href="http://www.mturk.com">Amazon Mechanical Turk</a><br />
+Tasks that are "easy for a human, tough for a computer"<br />
+"people on demand"<br />
+Make the most of latent labour workforce.<br />
+Looks like a machine, but actually relies on human information processing inside ("human inside", "person inside") - artificial artificial intelligence; human in the loop; HITs - Human intelligence tasks<br />
+Developer can put a qualification step in the workflow e.g. to test the worker is qualified to performn the task.<br />
+May get the same job done by several people, then if 2 from 3, 3 from 5 etc give the same answer you have some sort of reliability guarantee over quality of the work<br />
+Reputation is tracked - number of HITs applied for and number of hits accepted on worker side; number of hits completed and number of HITs accepted on job allocation side</p>
+
+<p>Qn: 1-click as paypal alternative? not as far as aware</p>
+
+<p>REST vs SOAP  - as of a year ago, about 80% REST , 20% SOAP</p>
+
+<p>I meant to ask: "Amazon ECS in SL?" but didn't get a chance. However, it seems <a href="http://aws.typepad.com/aws/2006/07/life2life_ecspo.html">someone has just hacked the search part...</a></p>
+
+<p>Extensions - e.g. <a href="http://bookburro.org/">book burro</a> on Jeff's Amazon catalogue pages...<br />
+Okay for browser extensions like book burro if Amazon stands a chance of getting some traffic back as a result.<br />
+[??is this the same for using webservices? e.g book details completion on OU library catalogue?  - maybe put a link to 'buy this book on Amazon.]</p>
+
+<p>All in all, an interesting overview (particulalry some of the numbers and the three business models for ws decomposed) and good to see someone I read via the <a href="http://aws.typepad.com/">Amazon web services blog</a> in the flesh.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007294.html">10:59 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7294" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007293"></a>
+<h3 class="title">Personal Computing Guidance for Distance Education Students</h3>
+
+<p>The <a href="http://blogs.msdn.com/ie/archive/2006/07/26/678149.aspx">IE7 Blog</a> has just reported that:</p>
+
+<blockquote>To help our customers become more secure and up-to-date, we will distribute IE7 as a high-priority update via Automatic Updates (AU) shortly after the final version is released for Windows XP, planned for the fourth quarter of this year.
+...
+If you decide to install IE7, it will preserve your current toolbars, home page, search settings, and favorites and installing will not change your choice of default browser. You will also be able to roll back to IE6 at any point by using Add/Remove Programs in the Control Panel. Finally, users who have AU turned off will not be notified.</blockquote>
+
+<p>This is something I think we in the OU should be taking into account <em>now</em> for courses starting in February, 2007 (<em>2007B</em>).</p>
+
+<p>With <a href="http://www.microsoft.com/windows/support/endofsupport.mspx">Microsoft no longer supporting Windows 98</a> amidst stark warning notices ("Microsoft is retiring support for these products because they are outdated and can expose customers to security risks.") I think there is a case for the OU pushing our students to upgrade.</p>
+
+<p>Why? Well, security for one, but with an O/S that supports a large installed base of IE7 (or <a href="http://getfirefox.com">Firefox</a>, or maybe even something like <a href="http://flock.com">Flock</a> or <a href="http://opera.com">Opera</a>) this means that we can at the very least start to:</p>
+
+<p>1) develop pedagogic strategies that exploit tabbed browsing (I haven't met one person who has been able to go back to a no tab browser having experienced tabbed browsing!); I think there are all sorts of ways we can develop user skills to exploit this functionality.</p>
+
+<p>2) exploit in-built feed subscription. Okay, so I'm a feed junky, but whereas I can imagine a web future where all the pages are Atom or RSS and none end in <em>.html</em>, I can't imagine the converse... (note to self - revist <a href="http://micro-info.blogspot.com/2005/09/separating-navigation-from-content-and.html">The Skeletal Web: separating content, style and navigation</a> someday).</p>
+
+<p>At the moment, OU courses require students' computers to conform to either a <a href="http://www3.open.ac.uk/personal-computing/courses/Basic2007.shtm">basic specification</a> (Windows 98 SE) or a <a href="http://www3.open.ac.uk/personal-computing/courses/Standard2007.shtm"> standard specification</a> (XP Home).</p>
+
+<p>But maybe it's time to start rethinking even further..?</p>
+
+<p>One the one hand, and one step on from the current wave of <a href="http://dip.lodoc.us/articles/2006/03/18/web-desktop-the-next-big-internet-tool">web start pages</a> like <a href="http://www.itchyhands.com/2005/12/23/overview-personalised-homepages">these</a>, the rise of the web desktops, or <a href="http://money.cnn.com/magazines/business2/business2_archive/2006/03/01/8370596/index.htm">webtops</a> as they seem to be coming called in some quarters, means that maybe we could start to push forward an 'always on' computing specification for students who do have guaranteed, always on web access?</p>
+
+<p>Historical note: it seems we've been here before, as this PC World article (<a href="http://www.pcworld.com/news/article/0,aid,32022,00.asp">"Ditch That Desktop for a Webtop</a>) from October 2000 demonstrates:<br />
+<blockquote>With today's dispersed workforce and the ever-changing computer industry, organizations are consistently in a state of flux trying to keep end users up to date. The cost associated with investing in and maintaining office applications is high.<br />
+To ease this burden, there is a new model of computing available today in its infancy: Webtops. These virtual desktops provide access to application suites via a Web browser. In the not-too-distant future, users won't be required to carry laptop computers to access, share, and manipulate information: They'll simply need Web appliances.<br />
+...<br />
+Research company Gartner Group predicts Webtops will become mainstream by 2002, and users will be free from relying on laptops to access the applications and information they need.<br />
+</blockquote></p>
+
+<p>Okay - so maybe that was an ambitious prediction <em>then</em> and maybe things are different <em>now</em>? For example, many of the components for a web based collaborative office suite are in place (e.g. <a href="http://blogs.zdnet.com/web2explorer/?p=123">Web Office Suite: best of breed products</a>).</p>
+
+<p>On the other hand, and <a href="http://technology.guardian.co.uk/online/comment/story/0,,1816072,00.html">virtualisation</a> is only going to get easier (it's laready becoming <a href="http://www.infoworld.com/article/06/07/19/30OPcurve_1.html">free</a>).</p>
+
+<p>Take for example this appealing approach that VMWare describe as <a href="http://www.vmware.com/vmtn/appliances/">virtual appliances</a>:</p>
+
+<blockquote>A virtual appliance is a fully pre-installed and pre-configured application and operating system environment that runs on any standard x86 desktop or server in a self-contained, isolated environment known as a virtual machine. Virtual appliances provide an evolutionary step in the software distribution model.</blockquote>
+
+<p>The main idea of virtualisation is that whatever your operating system, you can run <em>other</em> operating systems 'within' it. And the idea of virtual appliances is that that these other operating systems can actually be delivered to provide a guaranteed configuration (which means installing software within it can be managed efficiently, as in an enterprise setup.</p>
+
+<p>Hmm -  methinks it could be interesting if we had an OU virtual appliance?</p>
+
+<p>I'm convinced a third part of the mix will portable apps too, as discussed with respect to a mooted <a href="http://blogs.open.ac.uk/Maths/ajh59/005515.html">USB Study Stick</a>.  Quite how this would sit with a virtual appliance (unless  perhaps that virtual appliance lived on the memory stick?) I'm not sure yet. Maybe I need to start playing with some live cd distros, like <a href="http://knoppix.com">Knoppix</a> (I wonder if anyone has integrated this with an online storage client yet, <a href="http://aws.typepad.com/aws/2006/05/product_idea_li.html">as suggested for Amazon S3</a>?).</p>
+
+<p>In he same way I think portable apps could be a huge boon for OUr students, I'm also starting to get a similar gut feeling towards <a href="http://codinginparadise.org/weblog/2006/04/now-in-browser-near-you-offline-access.html">browser persistent storage</a> (or <a href="http://ajaxian.com/archives/firefox-2-client-side-storage-and-a-lot-more">natively</a>) - there's nothing I can articulate as yet, but it just feels right (and it's portable).</p>
+
+<p>So interesting times... and for an organisation with 3 year lead in times to courses that have to last 8 years in presentation (unless the model changes...) I think it's time we started imagining 3, 5 and 10 year futures a little more seriously...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007293.html">12:25 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7293" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 24, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007292"></a>
+<h3 class="title">Amazon2OU Library Pivot Browsing</h3>
+
+<p>All seems quiet on the <a href="http://www.talis.com/tdn/competition">Talis Library Mashup Competition</a>, so for what it's worth, here's an early entry... a <a href="http://getfirefox.com">Firefox</a> <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> script that demonstrates a few ways of making use of an ISBN that's contained within a page URL.</p>
+
+<p>So here it is:</p>
+
+<p><hr /><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerBookDetails.user.js">OUTravellerBookDetailsScript</a> script that will:</p>
+
+<p>1) extract something that looks like an ISBN from a page URL;</p>
+
+<p>2) if it finds a candidate ISBN, it will pop up a small user panel, that will:<br />
+a) Provide a link to a service that will create a citation for the book described by that ISBN at <a href="http://www.studentabc.com/">Studentabc.com</a>;<br />
+b) Provide a link to look up the author of that book in the OU library catalogue (<a href="http://voyager.open.ac.uk">voyager.open.ac.uk</a>);<br />
+c) Provide a link to look up the title of that book in the OU library catalogue.</p>
+
+<p><img alt="OUTravellerBookDetails.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/OUTravellerBookDetails.jpg" width="439" height="248" border="0" /></p>
+
+<p>The information used for the catalogue and citation lookups is obtained by a call to the Amazon web service using the ISBN extracted from the page URL as a key.</p>
+
+<p>The call to the citation creating service is made using a form created dynamically within the page by the GM script.</p>
+
+<p><img alt="studentabcCitation.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/studentabcCitation.jpg" width="655" height="299" border="0" /></p>
+
+<p>The links to the library catalogue demonstrate the construction of a normal/RESTful URL.</p>
+
+<p>The title of the post suggests pivot browsing, so I guess what I mean here is that the script demonstrates how an ISBN pulled from an Amazon, Barnes and Noble, Ottakars, etc. page URL can be used to "pivot search" into the OU library catalogue by Title or Author.</p>
+
+<p>The script does actually tuen up some things about the catalogue I didn't appreciate too, such as it's non-intuitive way of dealing with author search (at least, I couldnl;t work out what was going on). As a result, I've hacked a heuristic to pass (sometimes!) the first author's surname, follwed by their first intitial (maybe...). If I get chance, I'll try and work on this more...</p>
+
+<p>As to why I used the Amazon webservice for the book details lookup - simply because I expect most (if any) people using the script to use it for books browsed on Amazon...</p>
+
+<p><hr /></p>
+
+<p>The script isn't a demonstration of a major league mashup by any means - it's more at the level of simple lego bricks... because whilst I look forward to seeing some heavyweight library mashups submitted to this competition, I was also hoping to see some entrants showing off tiny demos of particular tricks and tips that I could reuse;-) (It's much easier pulling a function out of a script that's 50 lines long in total than searching for it in a several hundred, or thousand, lines of code...).</p>
+
+<p>Indeed, one thing I'd like to see come out of the TDN competition is a set of library mashup design patterns, a bit like the <a href="http://developer.yahoo.com/ypatterns/index.php:">Yahoo User Interface design patterns</a>:</p>
+
+<blockquote>Patterns are optimal solutions to common problems. As common problems are tossed around a community and are resolved, common solutions often spontaneously emerge. Eventually, the best of these rise above the din and self-identify and become refined until they reach the status of a Design Pattern.</blockquote>
+[<a href="http://www.iawiki.net/WebsitePatterns">IAWiki</a>]
+
+<p>According to the <a href="http://developer.yahoo.com/ypatterns/page.php?page=lifecycle">Yahoo developer site</a>, a pattern has four primary components: a title, a problem, a context and a solution. User Interface patterns can be effectivley demonstrated with simple screen shots.</p>
+
+<p>For the mashup competition, I think it would be really handy if there was a stream demonstrating fucntional design patterns, backed up with simple bits of code (in whatever language) implementing the proposed pattern. If possible/appropriate, a demo of both server side (PHP, say) and client side (javascript)   code would add even more value...</p>
+
+<p>Anyway - that's as maybe, and something I aspire to rather than something I am actually going to put into practise tonight...because it's late and I just want to get this thing posted...</p>
+
+<p>The script is not offered as a 'production service' application, although it should work. The styling leaves somethign to be desired, but I'm not a designer (I wish I could work the <a href="http://37signals.com">37 Signals</a> way!).</p>
+
+<p>However, I hope it encourages other people to submit tiny, tiny exemplars of mashup components over the next few weeks that may be generally useful. I suspect there aren't that many people out there who are either capable of, or have time to, develop heavyweight apps (and I wouldn't expect these to be submitted until the final submission day anyway!), but in the meantime, why not share any snippets you might have? Who knows, maybe the Talis folks will give a prize to the smallest/simplest mashup???</p>
+
+<p>Technorati tag: <a href="http://technorati.com/tag/MUTL06" rel="tag">MUTL06</a></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007292.html">01:49 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7292" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 22, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007291"></a>
+<h3 class="title">Another Take on PLEs</h3>
+
+<p>One of the stances I take towards PLEs is (not surprisingly) that they are in some sense amenable to personalisation. Tinkering with my <a href="http://vledemo.open.ac.uk/course/view.php?id=69">VLE Library demo</a> 'course' just now (if you aren't of the OU and you want a guest ticket, mail me, and I'll see what I can do)  I started wondering about the extent to which instructors are allowed to add widgets of their own choosing to the VLEs in their own institutions, or whether they can only incorporate modules from an 'approved list'; or maybe whether they have to go to someone in their academic computing service who looks after the VLE, and asks them to configure a course with the various optional functional modules that are supported.</p>
+
+<p>What prompted this thought was this agenda item for the forthcoming <a href="http://docs.moodle.org/en/UK_MoodleMoot_06_hackfest">Moodle Moot hackfest</a></p>
+
+<blockquote>Page-Based Chat Roster and Whiteboard
+
+<p>The COVCELL project is developing a chat module (based on jabber) for Moodle. Chat rosters are to be generated on a per-page basis, so that anyone who is logged in and is viewing a particular page will be able to see who else is viewing that page and start a chat session with them. Group chat will be supported and it will be possible to use a whiteboard (based on Coccinella) in the chat.</p>
+
+<p>More information can be found at:</p>
+
+<p>    * http://covcell.cms.hu-berlin.de/tracov/wiki/Phase_I<br />
+    * http://covcell.org/ <br />
+</blockquote></p>
+
+<p>Err - 2 minutes later - like this <a href="http://gabbly.com">embedded Gabbly chat box</a>, perhaps?</p>
+
+<p><img alt="moodleGabbly1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moodleGabbly1.jpg" width="401" height="353" border="0" /></p>
+
+<p><img alt="moodleGabbly2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moodleGabbly2.jpg" width="350" height="335" border="0" /></p>
+
+<p>(Hmm - that <a href="http://feed.gabbly.com/vledemo.open.ac.uk/course/view.php?id">Gabbly feed from Library VLE Demo page</a> suggests a security issue to me... the page requires authentication to get in, but the feed is public. Also, the address of the feed appears to be <em>http://feed.gabbly.com/vledemo.open.ac.uk/course/view.php?id</em>, and the same adress is given for the actual chat box. Now my course is actually <em>id=69</em>...so I wonder - if someone on another course had a Gabbly chat box, would we share the same discussion? i.e. will Gabbly only act Moodle installation wide, and not within particular pages?<br />
+ <br />
+Okay - so maybe Gabbly chat can't be used out of the can as a page based chat roster (or maybe it could if there was a sensible and informative URL/addressing structure in Moodle?) For the sake of 35 mins installation, and 20 mins blog posting (!), I think it was worth it though...</p>
+
+<p>Anyway - what this suggests to me is that maybe there is another dimension to the *LEs? That is, environments that support the inclusion of arbitrary HTML/js widgets that are not neceassrily part of the VLE configuration?</p>
+
+<p>To my mind, these look set to take off this year, e.g. with the impending <a href="http://www.widgetbox.com/">widgetbox</a> widget exchange (I love a phrase in their elevator pitch - <em>syndicating functionality</em>) or <a href="http://snipperoo.com/">Snipperoo universal widget</a> (see also the <a href="http://blogs.zdnet.com/BTL/?p=2783">ZDNet post</a>).</p>
+
+<p>So how about thinking about PLEs in this way - as envirnments in whcih a) instructors and/or b) students are allowed to include gadgets/widgets in the environment if they so wish?</p>
+
+<p>For example, at the moment I'm adding all sorts of gadgets to my Moodle account - and I hope the demo VLE continues to allow me that freedom.</p>
+
+<p>But several questions arise:</p>
+
+<p>1) in the production environment, will course team members be allowed to add artbitrary HTML content to their Moodle course directly?</p>
+
+<p>2) will CT members be allowed to add <em>Javascript</em> enriched pages to their course?</p>
+
+<p>3) will CT members be allowed to embed 3rd party HTML/js widgets to their course?</p>
+
+<p>PS Hmmm - maybe they'll follow the MySpace approach...:</p>
+
+<blockquote>MySpace has taken a step to increase security that disables a key method for third party vendors to spread their services inside the online social network. The company is using new code in a new version of flash that disables outgoing links from flash widgets and it is pushing users to install the blockable version of flash by requiring that they do so in order to view MySpace hosted video.
+...
+Just as javascript has been unusable in MySpace, most flash objects are also now unable to link out to third party sites when viewed with Flash player 9.
+...
+This means that the “get this widget” function so key to the viral spread of a growing industry of MySpace widgets will soon be unavailable.</blockquote>
+<a href="http://www.techcrunch.com/2006/07/20/myspace-security-measure-disables-viral-spread-of-widgets/">Reported on Techcrunch</a>
+
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007291.html">02:58 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7291" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007290"></a>
+<h3 class="title">Moodle Gripes #2</h3>
+
+<p>...or maybe #2 and #3?</p>
+
+<p>An increasing number of courses are looking at embedding audio snippets into course materials. So just out of curiousity, I wondered whether the VLE Demo had embedded media filters enabled, that scan a page for media links (mp3, for example) and make them inline playable. From a quick test, it seems they are enabled (a flash player definitely is pulled in to the page) but broken (for me at least):</p>
+
+<p><img alt="moodleGrip2brokenaudio.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moodleGrip2brokenaudio.jpg" width="642" height="138" border="0" /></p>
+
+<p>Ah well, maybe it's my browser not playing - can I get the <a href="http://del.icio.us/help/playtagger">delioious playtagger</a> to work (it's the same principle, search for mp3s and bring an embedded Flash player into the page to play them):</p>
+
+<p><img alt="moodlegripe3sholuldwork.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moodlegripe3sholuldwork.jpg" width="638" height="119" border="0" /></p>
+
+<p>So it's the Moodle player embedding code appears to be broken... (I could try and find out why, but hey - not my job;-) Maybe someone else will fix it some time..? Anyway, here's the gripe - and it's one I've come across before...</p>
+
+<p>If you put a script in a Moodle edited web page that manipulates the DOM and adds stuff to the page (like the play button image that the delicious script inserted), when you edit the page it is loaded into a WYSIWYG page editor...which runs the script, and manipulates the page in the context of the editor; so now the code for the image is part of the document being edited, and if you save the page, that code will be saved too. Meaning that the next time you run the page you will have <em>two</em> images; one from the code that  was inserted  by the WYSIWYG editor, one that is dynamically added when the page loads and the script runs.</p>
+
+<p>Each time you edit the page, another element is added:</p>
+
+<p><img alt="moddlegripe2edit.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moddlegripe2edit.jpg" width="688" height="254" border="0" /></p>
+
+<p>So this is my Moodle gripe #2: the page editor defaults to WYSIWYG and runs any scripts you have in the page being editied.</p>
+
+<p>So I wonder - is there any way of either setting a preference for the editor so that by default it shows the code view, or that disables the rich text editor altogether (I never use it, personally - I'd rather write the HTML tags myself).</p>
+
+<p>PS for internal readers, I'm trying all sorts of embeddable stuff out in Moodle at <a href="http://vledemo.open.ac.uk/course/view.php?id=69">VLE Library Demo</a>. I've also opened it up to <em>guests</em> who have a key - mail me if you want the key...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007290.html">01:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7290" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 19, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007285"></a>
+<h3 class="title">Moodle Gripes  #1</h3>
+
+<p>A week away at summer school, and it's sooooooooo hard getting back into the blogging routine..</p>
+
+<p>Anyway - a gentle start: here is the first of what I guess will be many Moodle gripes as I start to play with a demo course in the current <a href="http://vledemo.open.ac.uk">VLE sandpit</a> (mine's <a href="http://vledemo.open.ac.uk/course/view.php?id=69">VLE Library Demo</a> if you want to check it out - OU authentication required, I suspect...).</p>
+
+<p>Mumble #1: to reorder panels on the screen you have to use up, down and sidways arrows, moving the block one step at a time... Needless to say, new blocks are added at the bottom of the  column, which makes for a slow and painful seriesd of clicks to move a panel up to the top.</p>
+
+<p>It's at times like this I realise how much I like drag and drop, as in <a href="http://netvibes.com/">Netvibes</a> or <a href="http://myopenlibrary.open.ac.uk/dd/dd2.php">MyOpenLibrary (Web 2.0 style alpha)</a>.</p>
+
+<p>(There are so many toolkits out there now that make this thing easy, I found I've come to expect this... Hmm - there's a <a href="http://moodlemoot.org/">Moodlemoot here next week</a>  - I wonder if they have a hackfest as part of it? If so, I wonder what the chances are of someone pulling  together a prototype/scriptaculous (or similar) js toolkit/framework for Moodle? Hmm - it seems <a href="http://docs.moodle.org/en/UK_MoodleMoot_06_hackfest">they do have a hackfest</a>, but there's nothing interesting suggested ;-)</p>
+
+<p>And before anyone says it's a low spec browser compatibility thing for the students, <em>users can't reorder the layout of the blocks on the screen...</em></p>
+
+<p>...which may or may not be another grumble in its own right...</p>
+
+<p>Ah well, the Moodle interface isn't supposed to be a whizzy <a href="http://www.techcrunch.com/2006/06/11/30-boxes-launches-webtop-service/">webtop</a> is it?</p>
+
+<p>PS my first doodles were to add <a href="http://grazr.com/">Grazr</a>, <a href="http://www.mindsack.com/?page_id=45">SpiffySearch</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/005877.html">Embeddable deliSearch</a> into separate HTML panels. First impression is they seem to work okay, though it would be handy if the system offered a way of autoloading a specified stylesheet to handle any styling quirks required within the block...</p>
+
+<p>Technorati Tags: <a href="http://technorati.com/tag/webtop" rel="tag">webtop</a>, <a href="http://technorati.com/tag/elearning" rel="tag">elearning</a>, <a href="http://technorati.com/tag/moodle" rel="tag">moodle</a></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007285.html">09:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7285" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 07, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007232"></a>
+<h3 class="title">OPML Bulk Upload Feed for Feeds Listed on a Webpage</h3>
+
+<p>As I mentioned in a previous post about <a href="http://blogs.open.ac.uk/Maths/ajh59/007199.html">Managing OPML</a>, I've been struggling to find efficient ways of getting feed collections together, whether from individual links or link collections held on single page (and where the publishers haven't provided an OPML feed). Like <a href="http://www.sciencemag.org/rss/">Science Magazine</a>, for example:</p>
+
+<p><img alt="scienceMagFeeds.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/scienceMagFeeds.jpg" width="562" height="345" border="0" /></p>
+
+<p>So it was with interest that I picked up the following up from John Tropea at <a href="http://libraryclips.blogsome.com/2006/07/07/feedshow-has-an-opml-builder/">LibraryClips</a>: an <a href="http://www.feedshow.com/goodies/opml/OPMLBuilder-create-opml-from-rss-list.php">OPML Builder</a> tool from <a href="http://www.feedshow.com/">feedshow</a> that will look for XML or RSS feeds within a web page, extract them and generate an OPML file of the results for something like <a href="http://www.blogbridge.com/directory/">Blogbridge Library</a> feed off.</p>
+
+<p>Here's the builder form:</p>
+
+<p><img alt="opmlBuilder.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/opmlBuilder.jpg" width="618" height="381" border="0" /></p>
+
+<p>There are filters for different file types, as well as the ability to define custom filters.</p>
+
+<p>It doesn't quite go far enough for me though;-) What I'd really like to do woul dbe able to define OPML folderes to bundle links from a page into subcollections. For example, at the <a href="http://library.open.ac.uk/resources/newstock.html">OU Library new books</a> page, feeds are organised on the page by Faculty. It would be so handy to be able to use an enhanced OPMLBuilder tool to create an OPML file with the feeds organised in subset by Faculty...</p>
+
+<p><img alt="OUlibraryNewBooksRSS.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/OUlibraryNewBooksRSS.jpg" width="624" height="665" border="0" /></p>
+
+<p>Anyway, for what it's worth, here's a link to the feed generated by the Feedshow OPMLBuilder from the OU new books page: <a href="http://www.feedshow.com/goodies/opml/tmp/OPML_797bd8aeaeaabe9e1d4efd65a63474e1.xml">OU New Books (OPML)</a>.  (I wonder how persistent that link is, or would be if I have lots of filters applied? Ah - "Temporary OPML files are created (files are purged periodically, so don't link to these files)." - so the service is good for a bulk upload then, but not persistent reading lists...)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007232.html">10:37 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7232" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 06, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007225"></a>
+<h3 class="title">Cite This Book</h3>
+
+<p>Kirsty Baker in the Library passed me a couple of links today to services that render citation details in a recognised citation format: <a href="http://citationmachine.net/">Citation Machine</a>and <a href="http://www.studentabc.com/builder">StudentABC Citation Composer</a>.</p>
+
+<p>Here's the latter:</p>
+
+<p><img alt="studentABCform.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/studentABCform.jpg" width="681" height="497" border="0" /></p>
+
+<p>This sort of tool looks like it may provide a useful starting point for teaching students about citation formats, in advance of moving them up to full blown citation management tools, (<a href="http://blogs.open.ac.uk/Maths/ajh59/006110.html">RefWorks</a> is the service we make available to students).</p>
+
+<p>It's also something that's easily integrated into the OU Traveller script by reusing the <a href="http://blogs.open.ac.uk/Maths/ajh59/007156.html">book details</a> code I posted a few days ago, which you may remember looks up the details of a book given its ISBN using an Amazon webservice, creates a form mimicking a form somewhere else on the web, completes the form using the book details from Amazon and then posts the form automatically. Anyway, here's the demo - a cut down OU Traveller form:<br />
+ <br />
+<img alt="OUtravellerCite.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/OUtravellerCite.jpg" width="562" height="432" border="0" /></p>
+
+<p>The citation that's generated:</p>
+
+<p><img alt="studentABCcite.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/studentABCcite.jpg" width="552" height="192" border="0" /></p>
+
+<p>It's even editable:</p>
+
+<p><img alt="studentABCedit.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/studentABCedit.jpg" width="548" height="392" border="0" /></p>
+
+<p>Here's the script: <a href="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerCite.user.js">OU Traveller - book citation.</a></p>
+
+<p>Now I wonder, does the library catalogue have links to common citation style formats from book records in the catalogue?</p>
+
+<p><strong>Update:</strong> Here's a bookmarklet that will take the user to the 'cite this web page' form: <a href="javascript:function v(n,v){el=d.createElement('input');el.type='text';el.name=n;el.value=v;f.appendChild(el);};void(d=document);void(uri='http://www.studentabc.com/app/action/Search');void(f=d.createElement('form'));void(f.method='post');void(f.action=uri);v('term',d.location.href);d.body.appendChild(f);f.submit();">Cite this page</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007225.html">04:43 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7225" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 03, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007199"></a>
+<h3 class="title">Managing OPML</h3>
+
+<p>For whatever reason, I didn't really get into <a href="http://share.opml.org/"Share Your OPML</a> when it launched and haven't yet played with <a href="http://www.opmlworkstation.com/">OPML Workstation</a>, though it's on my to do list, but I have been playing with <a href="http://www.blogbridge.com/directory/">Blogbridge Library</a> (here's <a href="http://www.blogbridge.com/trial1/">my trial account</a>) becuase I like the shelf metaphor, and I've also been playing with <a href="http://feedcollectors.com/">FeedCollectors</a>, mainly I think because I saw it announced someowhere on the day I was looking for a way of collecting feeds into OPML files (so I could upload them to my Blogbridge Library.</p>
+
+<p>Here, then, is a brief review on how the playing has gone since I posted <a href="http://blogs.open.ac.uk/Maths/ajh59/007105.html">my review of Blogbridge Library</a>.</p>
+
+<p>First off, I've been struggling with a way of uploading individual feeds to a Blogbridge Library shelf. Secondly, I'd like to be able to reorder the shelves, and perhaps drag items from one shelf and drop them on to another.</p>
+
+<p>The second is self-explanatory (hopefully) but the first I can perhaps describe a little more clearly by comparison with <a href="http://squidoo.com">Squidoo</a>, a 'lensing bookmarking service' that lets you collect bookmarks related to a particular topic  ina user managed 'lens' and organise links within the topic/lens in a set of user-defined subtopics (modules). (Stanford's <a href="http://h2obeta.law.harvard.edu/">H20 Playlists</a> are similar.)  For those of you who haven't visited Squidoo, here's a lens I set up to go with a talk about Firefox: <a href="http://www.squidoo.com/ffSearch/">ffSearch on Squidoo</a>.</p>
+
+<p><img alt="squidoo.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/squidoo.jpg" width="525" height="561" border="0" /></p>
+
+<p>What I like about Squidoo, and what I'd like to see developed for the Blogbridge library, is the way you can bookmark pages (as in a social bookmarking system) from a bookmarklet, and associate them first with a lens:</p>
+
+<p><img alt="squidooLens.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/squidooLens.jpg" width="283" height="515" border="0" /></p>
+
+<p>and then a module/subtopic within a lens:</p>
+
+<p><img alt="squidooModule.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/squidooModule.jpg" width="226" height="253" border="0" /></p>
+
+<p>The mapping I'd like to see made form the Squidoo way of doing things, to a Blogbridge Library equivalent, is hopefully obvious: "lens to bookshelf" and "linklist module to item (i.e. feed collection) on bookshelf".</p>
+
+<p>For bookmarking feeds that are hidden in a link tag (and so autodiscoverable), as for example in blog posts, it would be handy if the bookmarklet could avail itself of feed autodiscovery, as for example, demonstrated by this demo <a href="http://blogs.open.ac.uk/Maths/ajh59/005818.html">+ feed 2 delicious</a> bookmarklet .</p>
+
+<p>However, until that all becomes available (here's hoping) I've needed a way of bundling feeds into different OPML collections so I could upload to the Blogbrdige Library. For some things, I could perhaps have tweaked my <a href="http://blogs.open.ac.uk/Maths/ajh59/006027.html">Pagelinks2OPMl</a> code, or <a href="http://blogs.open.ac.uk/Maths/ajh59/006527.html">OPML persistent feedroll generators</a> biut I figured there must be a 'delicious for OPML' service out there, and there is: <a href="http://feedcollectors.com/">Feedcollectors</a>.</p>
+
+<p>The service is still a little ropey, but shows promise. You can order feeds by collection and get OPML feeds from the collection for example:</p>
+
+<p><img alt="feedcollectorScience.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/feedcollectorScience.jpg" width="717" height="466" border="0" /></p>
+
+<p>and upload feeds to a collection either individually or via an OPML feed itself.</p>
+
+<p><img alt="feedcollectorScience2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/feedcollectorScience2.jpg" width="580" height="473" border="0" /></p>
+
+<p>Several of my Blogbridge Library shelves are actually fed from OPML feeds from my FeedCollectors collections.</p>
+
+<p>As with the Blogbridge Library, bookmarklet support for FeedCollectors is sadly lacking at the moment, something I may try to address if I ever find a spare half hour again...!</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007199.html">10:21 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7199" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007194"></a>
+<h3 class="title">OU Traveller - Request This Book</h3>
+
+<p>I knocked up (out of other bits) a script today that adds a link to the <a href="http://blogs.open.ac.uk/Maths/ajh59/007069.html">OU Traveller panel</a> when a book is not found in the OU Library that makes it easy for the user request the book in question. Clicking the link will (almost...) fire off a request to order that book using the the Library's official request a book form.</p>
+
+<p>Building the script has thrown up a few usability issues regarding the actual library form. (Which is why I say the form almost works; it can be made to work completely by adding user details or by making a minor change or two to the orignal form and form handler, such as putting in a confirmation screen so the user can check the details that have been submitted.)</p>
+
+<p>[Update: another (better?) alternative might be to pop up a dialogue to allow a user to enter their personal details if they want to reserve a book? If this info could also be saved into the Amazon cookie withuot upsetting Amazon, that might be neat?]</p>
+
+<p>As the actual library form requires user info (not provided by the Greasmonkey script) this suggests that I need to tweak the GM script so that it supports user customisation, and then I either: a) build a GM script generator that builds a personal script when provided with user details, or b) embed the script in toolbar or other FF extension that provides a user preferences dialogue.</p>
+
+<p>The new script builds heavily on the <a href="http://blogs.open.ac.uk/Maths/ajh59/007156.html">Lookup Book Details</a> script (<a href="http://blogs.open.ac.uk/Maths/ajh59/007165.html">public demo version</a>) and can be found here: <a href="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerRequest.user.js">OU Traveller Request This Book</a> Greasemonkey script.</p>
+
+<p>The main innovation in this script is the reuse of the this test <a href="javascript:function v(n,v){el=d.createElement('input');el.type='text';el.name=n;el.value=v;f.appendChild(el);};void(d=document);void(uri='http://library.open.ac.uk/waltonhall/book/bookrequest.php');void(f=d.createElement('form'));void(f.method='post');void(f.action=uri);v('name','Hirst');v('email','a.j.hirst@open.ac.uk');v('faculty','Technology');v('dateofpub','2006');v('author','TESTING');v('itemtitle','PLEASE IGNORE');d.body.appendChild(f);f.submit();"bookmarklet</a> which mimicked the behaviour of the original <a href="http://library.open.ac.uk/waltonhall/book/bookrequest.php">request a book</a> page. (If there is interest, I can post a version of this script for the <a href="http://blogs.open.ac.uk/Maths/ajh59/007165.html">demo page</a>.)</p>
+
+<p>What the script does is create a form element, and populate it with input fields (of type <em>text</em>) to mimic the fields in the form on the original page. The inputs are assigned values from the relevant items in an XML details page (keyed by ISBN) that is requested from the Amazon web service (returning something like this: <a href="http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemLookup&ContentType=text%2Fxml&SubscriptionId=0DK8EWAWVKXSH8SEMVR2&ItemId=0849304563&ResponseGroup=Images,ItemAttributes">book details from Amazon</a> (link obtained via <a href="http://blogs.open.ac.uk/Maths/ajh59/ISBNLinks.html">ISBN Links Generator</a>)).</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007194.html">06:21 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7194" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 02, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007181"></a>
+<h3 class="title">Amazon Media Library</h3>
+
+<p>Stumbling around looking for information about <a href="http://www.amazon.com/edocs">Amazon eDocs</a> (about which maybe more another day) I came across an interesting post from <a href="http://www.resourceshelf.com">ResourceShelf</a> about <a href="http://www.resourceshelf.com/2006/05/22/amazons-search-inside-the-book-gets-a-new-look-with-new-amazononlinereader-and-your-media-library/">Amazon's New  online Reader and Media Library</a>. Again, the online reader/search inside service I'll maybe post about another day, because what caught my interest was the write up about the <a href="http://www.amazon.com/exec/obidos/tg/browse/-/16386681/102-9809476-3868122">Amazon Personal Media Library</a> (<a href="http://scilib.typepad.com/science_library_pad/2006/07/amazonthing.html">Richard Akerman</a> also spotted the Media Library just now, as well as a tidy URL for the service: <a href="http://www.amazon.com/gp/library/">www.amazon.com/gp/library/</a>).</p>
+
+<p>An Amazon<em>.com</em> (not <em>.co.uk</em> etc.) service, the <em>Your  Media Library</em> service:</p>
+
+<blockquote>... is a secure location to store information about all of your media purchases as well as access your digital products, such as eBooks, eDocs, Amazon Upgrades, Amazon Shorts, the free electronic user manuals that come with some products, and free music files and video clips that are available with select CDs and other multimedia products.</blockquote>
+
+<p>This particularly caught my eye because the library interface is built around a bookshelf metaphor (something regular readers will know I've been tracking lately, e.g. <a href="http://blogs.open.ac.uk/Maths/ajh59/007105.html">here, in respect of ejournal OPML feeds</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/007024.html">here, in respect of library books</a>).</p>
+
+<p><img alt="amazonMediaLibrary.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/amazonMediaLibrary.jpg" width="734" height="479" border="0" /></p>
+
+<p>A similar display style is used for media items, using cover artwork:</p>
+
+<p><img alt="amazonMediaLibraryMusic.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/amazonMediaLibraryMusic.jpg" width="675" height="324" border="0" /></p>
+
+<p>Items can be added based around a search, or from ASINs/ISBNs etc.</p>
+
+<p><img alt="amazonMediaLibraryAddItem.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/amazonMediaLibraryAddItem.jpg" width="220" height="196" border="0" /></p>
+
+<p>If I was an Amazon.com customer, then any of my future purchases (and maybe my previous ones?) could be added automatically to my media library. What would be really useful for me here in the UK though (and assuming that the Media Library won't be available to .co.uk cusotmers in the near term) would be the ability to upload all the purchaces from my Amazon.co.uk account to my media library on the .com site.</p>
+
+<p>A feed of items from my Media Library would also be handy (cf. <a href="http://blogs.open.ac.uk/Maths/ajh59/006280.html">Amazon wishlist feeds</a>, as would be the ability to upload titems to my media library from a feed (e.g. from <a href="http://librarything.com">LibraryThing</a> or my OU library current loans feeds (maybe this would have to  be on a tempoary shelf?).</p>
+
+<p>The Media Library allows tagging, and display of items tagged in a particular way, but I don't think there is a way of showing several separate shelves on different themes.</p>
+
+<p>Nor does there appear to be a way of automatically viewing wishlist items on a wishlist shelf.</p>
+
+<p>Just in passing, this additional, related service also caught my eye: <a href="http://www.amazon.com/exec/obidos/tg/browse/-/110744011/102-9809476-3868122">Amazon Upgrade</a>, which supports "upgrading" of phyisical (i.e. print) books with an online version:</p>
+
+<blockquote>Upgrading Your Physical Books is Easy
+If you buy a book that is in the Amazon Upgrade program, you are given the option to upgrade to online access at the end of the purchase process.</blockquote>
+
+<p>This is something I'm going to have to mentally mix in with my thinking on <a href="http://blogs.open.ac.uk/Maths/ajh59/006669.html">O'Reilly's SafariU</a> for potential OUseful use! ;-)</p>
+
+<p>And I think I'm also going to have to do a version of <a href="http://blogs.open.ac.uk/Maths/ajh59/005988.html">OU Course Catalogue Takes Lead from Amazon?</a> that considers ways in which the Library catalogue pages could ape Amazon (as opposed to  <a href="http://blogs.open.ac.uk/Maths/ajh59/006401.html">Amazon-Supported Library Services</a>) and maybe also a version of <a href="http://blogs.open.ac.uk/Maths/ajh59/006074.html">Customer Participation at Amazon.com</a> looking at how <a href="http://oci.open.ac.uk">OCI</a> might foster community spirit...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007181.html">11:50 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7181" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 01, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007165"></a>
+<h3 class="title">Demo Book Details from ISBN Greasemonkey Script</h3>
+
+<p>My <a href="http://blogs.open.ac.uk/Maths/ajh59/007156.html">recent post</a> on a script that will autocomplete book information details given an ISBN was based on a script that only works on a page that lies behind the OU authentication system, (which is one way of making stuff freely available BUT limiting any understanding that users can get from it easily, I suppose...)</p>
+
+<p>But as we're in the middle of a <a href="http://www.talis.com/tdn/competition">library mashup co-opetition</a> at the moment, I thought I better post a version of the script that people can play with in case they want to reuse any part of it, or just pore over it to work out what bits they can reuse...</p>
+
+<p>So here you go:</p>
+
+<p>- a simple <a href="http://blogs.open.ac.uk/Maths/ajh59/demoBookDetailsForm.html">book details form</a>;<br />
+- an associated <a href="http://blogs.open.ac.uk/Maths/ajh59/demoBookDetailsForm.user.js">Greasemonkey script</a> that will, on clicking the GM appended 'get book details' link, look at the ISBN field of the form, pull out out the ISBN, fetch the book details from Amazon and paste them back in the form...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007165.html">10:16 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7165" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007164"></a>
+<h3 class="title">Bloglines Feed Migration Non-Trivial</h3>
+
+<p>WHY WON'T YOU ACCEPT THAT I OWN MY FEEDBURNER FEED, BLOGLINES??????????</p>
+
+<p><!-- ckey="6828508F" --></p>
+
+<p>Update: eventually - thank you...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007164.html">07:34 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7164" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007163"></a>
+<h3 class="title">Bloglines Feed Migration</h3>
+
+<p><a href="http://www.bloglines.com">Bloglines</a> have just announced a new set of <a href="http://www.bloglines.com/about/news#108">publisher tools</a> that let you claim a feed and then migrate subscribes from it to a replacement (I think).</p>
+
+<p>Now it maybe that those of you who are on my old feed in Bloglines <em>haven't</em> moved to the <a href="http://feeds.feedburner.com">OUseful Feedburner feed</a> because you don't want the occasional added value <a href="http://del.icio.us/psychemedia/feedthru"><em>feedthru</em> linkblog posts</a>...</p>
+
+<p>But I'm starting to think about moving to a new blogging engine (the one I use at the moment is old and slow...). Which in turn means I need to think about killing off the old feeds and forcing migration to the Feedburner one...</p>
+
+<p><!-- ckey="5EAEF4A9" --><!-- ckey="6828508F" --></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007163.html">06:59 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7163" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007157"></a>
+<h3 class="title">A Neat Live Clipboard Demo</h3>
+
+<p>I like the idea of <a href="http://spaces.msn.com/editorial/rayozzie/demo/liveclip/liveclipsample/clipboardexample.html">Live Clipboard</a> a lot, though I've yet to build anything that makes us of the functionality. And I think I like it even more after playing with this <a href="http://www.sparqlets.org/clipboard/home">web clipboard</a> demo today.</p>
+
+<p>The <a href="http://www.sparqlets.org/clipboard/demo">web clipboard demo</a> shows a listing of blog post headers that can be cut from a web page and pasted to other parts of the page (in the same - or different - window, browser, etc.)</p>
+
+<p>Two landing sites (pasting points) are defined on the page - one that pulls in the actual post content from offsite and displays it in the page, the other that displays a description of the resource. For the blog post item, the content of the post is actually pulled in from outside when the resource link is pasted to that landing site.</p>
+
+<p>This is poorly explained, I'm sorry, (it's late here...) so go an play. Or check out this 2MB movie I made earlier to show the functionality off to a couple of other people: <a href="http://phoenix.open.ac.uk/~tony_hirst/webClipboard">silent web clipboard screencast</a>. Note that the main action takes place in Firefox, although I bring in IE at the end to show how items can be cut from a page displayed in one browser and pasted into a page loaded in another browser altogether.</p>
+
+<p>There's a whole load of stuff going on under the bonnet in there that I don't know much about (and won't really, until I have a proper play and build one or two things myself) but as this demo shows, the web clipboard stuff is getting easier to do with each iteration of the thinking behind it.</p>
+
+<p>The big question for me is - how can we make use of this stuff??? E-portfolios?</p>
+
+<p><strong>Update:</strong> walking the dog this afternoon, I wondered whether the web clipboard code could be used in a custom <a href="http://eco.netvibes.com">Netvibes</a> tab. This required including necessary styling - and all javascript - in the file (rather than using file includes/style imports) and recasting the onload function to the Netvibes equivalent (NV_ONLOAD). <em>However</em>, while it all worked in simulation, I couldn't get the landing image to load in the live Netvibes panel. Maybe this is easily fixed, maybe it isn't, but I don't have any more time today to spend on this, and other projects beckon for the next week at least. However, I do think that adding webclipboard functionality to <a href="http://netvibes.com">Netvibes</a> would be really handy, and provide and excellent playground for tinkering with the idea of the live/web clipboard. If anyone gets a demo of this working in Netvibes, please let me know:-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007157.html">12:40 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7157" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007156"></a>
+<h3 class="title">OUTraveller: Lookup Book Details</h3>
+
+<p>Another potential component for the OU Library Traveller Script, this part representing the first step towards implementing a suggestion made by Mark Stride for a routine that would allow a user to request a library book purchase if the book wasn't found in the OU Library catalogue from a lookup on an Amazon book page.</p>
+
+<p>To break the problem down, I've implemented a function that will add a button/link to the <a href="http://library.open.ac.uk/waltonhall/book/bookrequest.php">request a book page</a> (internal only, I think...) that will complete the request form given an ISBN.</p>
+
+<p>For example, here's before a lookup (the <em>Get Book Details</em> link is added by the script):</p>
+
+<p><img alt="getBookDetailsBefore.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/getBookDetailsBefore.jpg" width="590" height="212" border="0" /></p>
+
+<p>and here's after:</p>
+
+<p><img alt="getBookDetailsAfter.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/getBookDetailsAfter.jpg" width="583" height="208" border="0" /></p>
+
+<p>The book details are actually pulled in from Amazon, via a RESTful <a href="http://www.amazon.com/b/102-9809476-3868122?ie=UTF8&node=3435361">Amazon webservice</a>, though there are alternatives (e.g. the info/xml links generated by the <a href="http://blogs.open.ac.uk/Maths/ajh59/ISBNLinks.html">ISBN Links Generator</a>).</p>
+
+<p>The script is a little tatty, especially in the way the form elements are identified (raw counting!). However, the "request a book" page is due to be redesigned, and so it may be that the functionality this script provides will actually be built into the next version. (I'll also try and get the page marked up semantically).</p>
+
+<p>If you want to try out the script, here it is: <a href="http://blogs.open.ac.uk/Maths/ajh59/libSuggestDetails.user.js">Complete book details</a>.</p>
+
+<p><strong>Update:</strong> I've posted over the w/e about a <a href="http://blogs.open.ac.uk/Maths/ajh59/007165.html">public demo</a> of this service.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007156.html">12:05 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7156" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

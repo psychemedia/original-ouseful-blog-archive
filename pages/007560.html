@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: SearchTab Display of Several Web Search Engines</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007543.html" title="Opening Up OU Administrative Content with Dapper" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007576.html" title="searchfeedr, pageSearch and deliSearch Combined Interface" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007543.html">&laquo; Opening Up OU Administrative Content with Dapper</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007576.html">searchfeedr, pageSearch and deliSearch Combined Interface &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 27, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">SearchTab Display of Several Web Search Engines</h3>
+
+<p>I've just been doodling a few tweaks to my tabbed search engine display page, and the result is quite fun (well I think so) so I thought I'd post it here:</p>
+
+<p><img alt="searchTabNew.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabNew.png" width="757" height="566" border="0" /></p>
+
+<p>The page has an API of sorts:<br />
+<ul><li><a href="http://ouseful.open.ac.uk/searchTabs.php"><em>http://ouseful.open.ac.uk/searchTabs.php</em></a> is the page itself. Arguments can be added on to the end of the URL by using a <em>?</em>followed by the required argument(s). Multiple arguments are separated in the normal way with an ampersand (&).</li><br />
+<li><em>q=</em> defines the query string; quoted phrases are ok too (for example, <em>q=%22space%20science%22</em> in the URL gives the quoted phrase "space science" in the query shown</em>). If you call the page with a query in the URL, it will make that query available to all the search engines when the page loads.</li><br />
+<li><em>s=</em> defines the search engines to be displayed, and the order they should appear in. Each search engine is distinguished by a one (and maybe two, in future) character code, comma separated. The codes are as follows:<br />
+ - g Google<br />
+ - y Yahoo<br />
+ - m MSN/Microsoft WIndows Live<br />
+ - c Clusty<br />
+ - a altavista<br />
+ - A Ask<br />
+The OU search tab is always provided. <s>and still appears</s> All the supported search tabs appear if the <em>s</em> argument is omitted.</p>
+
+<p>If you want to load a page with a couple of search engines, and no initial query, just use the s argument - e.g. <a href="http://ouseful.open.ac.uk/searchTabs.php?s=y,g">http://ouseful.open.ac.uk/searchTabs.php?s=y,g</a>  gives you Yahoo! andf Google.</li></ul><br />
+So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22technology%20faculty%22%20robotics&s=a,c,y">http://ouseful.open.ac.uk/searchTabs.php?q=%22technology%20faculty%22%20robotics&s=a,c,y</a> loads the following page:</p>
+
+<p><img alt="searchTabdemo.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabdemo.png" width="766" height="560" border="0" /></p>
+
+<p>The intention behind the search tabs page is to allow a relatively quick an easy comparison of several search engines using the same query.</p>
+
+<p>This may be useful in information skills programmes, if only to help students realise that there are alternative, general purpose web search engines to Google, and that they all tend to give slightly different results.</p>
+
+<p>if there are any search engines missing that you think really should be included, drop me a line.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September 27, 2006 10:15 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007560.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="SearchTab Display of Several Web Search Engines";
+ z_post_category="elearning";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

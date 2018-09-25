@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Another Take on PLEs</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007290.html" title="Moodle Gripes #2" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007292.html" title="Amazon2OU Library Pivot Browsing" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007290.html">&laquo; Moodle Gripes #2</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007292.html">Amazon2OU Library Pivot Browsing &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 22, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Another Take on PLEs</h3>
+
+<p>One of the stances I take towards PLEs is (not surprisingly) that they are in some sense amenable to personalisation. Tinkering with my <a href="http://vledemo.open.ac.uk/course/view.php?id=69">VLE Library demo</a> 'course' just now (if you aren't of the OU and you want a guest ticket, mail me, and I'll see what I can do)  I started wondering about the extent to which instructors are allowed to add widgets of their own choosing to the VLEs in their own institutions, or whether they can only incorporate modules from an 'approved list'; or maybe whether they have to go to someone in their academic computing service who looks after the VLE, and asks them to configure a course with the various optional functional modules that are supported.</p>
+
+<p>What prompted this thought was this agenda item for the forthcoming <a href="http://docs.moodle.org/en/UK_MoodleMoot_06_hackfest">Moodle Moot hackfest</a></p>
+
+<blockquote>Page-Based Chat Roster and Whiteboard
+
+<p>The COVCELL project is developing a chat module (based on jabber) for Moodle. Chat rosters are to be generated on a per-page basis, so that anyone who is logged in and is viewing a particular page will be able to see who else is viewing that page and start a chat session with them. Group chat will be supported and it will be possible to use a whiteboard (based on Coccinella) in the chat.</p>
+
+<p>More information can be found at:</p>
+
+<p>    * http://covcell.cms.hu-berlin.de/tracov/wiki/Phase_I<br />
+    * http://covcell.org/ <br />
+</blockquote></p>
+
+<p>Err - 2 minutes later - like this <a href="http://gabbly.com">embedded Gabbly chat box</a>, perhaps?</p>
+
+<p><img alt="moodleGabbly1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moodleGabbly1.jpg" width="401" height="353" border="0" /></p>
+
+<p><img alt="moodleGabbly2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/moodleGabbly2.jpg" width="350" height="335" border="0" /></p>
+
+<p>(Hmm - that <a href="http://feed.gabbly.com/vledemo.open.ac.uk/course/view.php?id">Gabbly feed from Library VLE Demo page</a> suggests a security issue to me... the page requires authentication to get in, but the feed is public. Also, the address of the feed appears to be <em>http://feed.gabbly.com/vledemo.open.ac.uk/course/view.php?id</em>, and the same adress is given for the actual chat box. Now my course is actually <em>id=69</em>...so I wonder - if someone on another course had a Gabbly chat box, would we share the same discussion? i.e. will Gabbly only act Moodle installation wide, and not within particular pages?<br />
+ <br />
+Okay - so maybe Gabbly chat can't be used out of the can as a page based chat roster (or maybe it could if there was a sensible and informative URL/addressing structure in Moodle?) For the sake of 35 mins installation, and 20 mins blog posting (!), I think it was worth it though...</p>
+
+<p>Anyway - what this suggests to me is that maybe there is another dimension to the *LEs? That is, environments that support the inclusion of arbitrary HTML/js widgets that are not neceassrily part of the VLE configuration?</p>
+
+<p>To my mind, these look set to take off this year, e.g. with the impending <a href="http://www.widgetbox.com/">widgetbox</a> widget exchange (I love a phrase in their elevator pitch - <em>syndicating functionality</em>) or <a href="http://snipperoo.com/">Snipperoo universal widget</a> (see also the <a href="http://blogs.zdnet.com/BTL/?p=2783">ZDNet post</a>).</p>
+
+<p>So how about thinking about PLEs in this way - as envirnments in whcih a) instructors and/or b) students are allowed to include gadgets/widgets in the environment if they so wish?</p>
+
+<p>For example, at the moment I'm adding all sorts of gadgets to my Moodle account - and I hope the demo VLE continues to allow me that freedom.</p>
+
+<p>But several questions arise:</p>
+
+<p>1) in the production environment, will course team members be allowed to add artbitrary HTML content to their Moodle course directly?</p>
+
+<p>2) will CT members be allowed to add <em>Javascript</em> enriched pages to their course?</p>
+
+<p>3) will CT members be allowed to embed 3rd party HTML/js widgets to their course?</p>
+
+<p>PS Hmmm - maybe they'll follow the MySpace approach...:</p>
+
+<blockquote>MySpace has taken a step to increase security that disables a key method for third party vendors to spread their services inside the online social network. The company is using new code in a new version of flash that disables outgoing links from flash widgets and it is pushing users to install the blockable version of flash by requiring that they do so in order to view MySpace hosted video.
+...
+Just as javascript has been unusable in MySpace, most flash objects are also now unable to link out to third party sites when viewed with Flash player 9.
+...
+This means that the “get this widget” function so key to the viral spread of a growing industry of MySpace widgets will soon be unavailable.</blockquote>
+<a href="http://www.techcrunch.com/2006/07/20/myspace-security-measure-disables-viral-spread-of-widgets/">Reported on Techcrunch</a>
+
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July 22, 2006 02:58 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Another Take on PLEs";
+ z_post_category="vle";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

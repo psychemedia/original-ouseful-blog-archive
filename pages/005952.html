@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: DOI and OpenURL Resolution</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005948.html" title="My Bookshelf" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005963.html" title="Integrating Ad Hoc and Formal Communities" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005948.html">&laquo; My Bookshelf</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005963.html">Integrating Ad Hoc and Formal Communities &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 16, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">DOI and OpenURL Resolution</h3>
+
+<p>One of the things that I keep coming back to in the area of technological support for elearning is how best to reference online resources in a persistent way.</p>
+
+<p>Earlier this week, I fired off a sanity checking email to <a href="http://libraryissues.blogspot.com/">Tim Wales</a>, the Technology Faculty liaison in the OU Library to see if this link pattern: <em>http://libezproxy.open.ac.uk/login?url=http://dx.doi.org/</em>whateverDOI worked in general for sites that were registered with the OU <a href="http://blogs.open.ac.uk/Maths/ajh59/005864.html">ezproxy</a>, the idea being that the <em>ezproxy</em> would handle authentication with commercial database providers.</p>
+
+<p>The thing that was concerning me was that <a href="http://dx.doi.org/">http://dx.doi.org/</a> resolves a DOI to another website, and I wasn't clear whether the libezproxy script would be happy with this.</p>
+
+<p>Well, it does seem to work , but perhaps more interesting was the reply that Tim sent back. In particular, he made the very useful point that using the DOI would not necessarily result in a direct link to content in perpetuity for cases where the OU's subscription to the host of the particular article identfied by the DOI lapsed.</p>
+
+<blockquote>[F]or article linking, I was tending towards considering
+advocating the alternative method of using an OpenURL link with our
+<a href="http://librarywiki.open.ac.uk/Wiki.jsp?page=LinkfinderPlus">Linkfinder+ resolver</a> [internal link] as it would automatically take users to an
+alternative source of the document if one existed thanks to our multiple
+subscriptions or present an alternative search options screen. With a
+DOI link, if our subscription to the resource expired, the user would
+have to know to look on our catalogue for other options or would think
+they would have to buy it from the host site.</blockquote>
+
+<p>Tim then went on, it seems, to hack a solution:</p>
+
+<blockquote>The ideal would be to combine the two together and this facility does exist in Linkfinder+. I have just worked this out, this is the combi DOI
+openurl link ... :
+
+<p>http://libezproxy.open.ac.uk/login?url=http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:<em>theDOI</em></blockquote></p>
+
+<p>So - here's a rather neat recipe for: 1) resolving a DOI, 2) against the OU LinkFinder+/OpenURL resolver, and  3) accessing the article via <em>libezproxy</em>.</p>
+
+<p>As an example, (if you're behind SAMS), Tim concludes:</p>
+
+<blockquote>[Here's a link to a database we do subscribe to:] <a href="http://libezproxy.open.ac.uk/login?url=http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:10.1016/S0040-1625(03)00072-6">http://libezproxy.open.ac.uk/login?url=http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:10.1016/S0040-1625(03)00072-6</a>
+
+<p>This is an example of what happens with a DOI'd resource that we do not<br />
+have access to with our current Linkfinder+ configuration:<br />
+<a href="http://libezproxy.open.ac.uk/login?url=http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:10.1002/0470841559.ch1">http://libezproxy.open.ac.uk/login?url=http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:10.1002/0470841559.ch1</a></p>
+
+<p>You can see that the Publisher link does take the user to the resource in the end.</blockquote></p>
+
+<p>One thing to note is that not all OpenURL resolved resources will necessarily require libezproxy access (err, is that right?)  - anyway, under that assumption, I have set up a OUseful shortcut - <a href="http://open.ac.uk/doi:">http://ouseful.open.ac.uk/doi:</a> - which redirects to <em>http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:</em>, enabling LinkResolver resolution of doi queries.</p>
+
+<p><br />
+Just while I'm on the topic, here is an <a href="http://library11.open.ac.uk/linking/lfp.htm">OpenURL link generator</a>, and here is a link to the <a href="http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display">OU Open URL resolver</a>.</p>
+
+<p>There are a couple of official LinkResolver graphics, too: <img src="http://openurl.open.ac.uk/lfp/images/linkfinderplus.gif" alt="Check for Full Text graphic" /> and <img src="http://openurl.open.ac.uk/lfp/images/linkfinderplus2.gif" alt="Anoyther Check for Full Text graphic" /></p>
+
+<p>For finding DOIs, here's a <a href="http://www.crossref.org/03libraries/37guest_query.html">DOI lookup service</a>, and here's a <a href="http://dx.doi.org/">DOI resolver</a> (and <a href="http://hdl.handle.net/">another DOI resolver</a>).</p>
+
+<p>I guess the next thing to do is to get these things working with a <a href="http://curtis.med.yale.edu/dchud/resolvable/">COinS bookmarklet or Greasemonkey script</a>!<br />
+ <br />
+PS a couple of things that came to mind when trawling items for this post: 1) the same document (?terminology) may be available on several commercial databases, and each database will have it's own DOI for the document- is there an <a href="http://www.oclc.org/research/projects/xisbn/default.htm">xISBN</a> equivalent for DOIs (xDOI)? The LinkResolver+ I guess works by looking up the reference of the artcle referenced by a DOI, and then finding a database that the OU subscribes that serves that document - which is not really xDOI, though it has a similar effect. 2)  Using libezproxy results in URLs of the form <em>http://ieeexplore.ieee.org.libezproxy.open.ac.uk/</em>, for example. Does this mean the OU is effectively republishing the <em>ieeexplore.ieee.org</em> site in this case, which is presumably a breach of copyright?</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 16, 2006 07:46 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005952.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Course News Widget Wants List</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/004181.html" title="T184 News Konfabulator Widget" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/004395.html" title="OU Course Info Live Search?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/004181.html">&laquo; T184 News Konfabulator Widget</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/004395.html">OU Course Info Live Search? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 11, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Course News Widget Wants List</h3>
+
+<p>A couple more thoughts on the <a title="OUseful Info: T184 News Konfabulator Widget" href="http://blogs.open.ac.uk/Maths/ajh59/004181.html">T184 News Konfabulator Widget</a> posted earlier, specifically, how to meake it <em>useable</em>...</p>
+
+<p>As you may remember, the widget looks like this:</p>
+
+<p><img alt="newsWidgetOpen.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/newsWidgetOpen.jpg" width="286" height="183" border="0" /> <img alt="newsWidgetClosed.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/newsWidgetClosed.JPG" width="286" height="111" border="0" /></p>
+
+<p>The only problem is - how do I know when there is there a <em>new</em> news story, particularly for the Course News feeds?</p>
+
+<p>The use of a hot colour, or unread flag, are two possible options. This would highlight the name of the feed containing the unread item when the feed list is collapsed, and the unread items when it is open.</p>
+
+<p>So - how does the widget know when an item has been acknowledged? For the Course News items, clicking on a link takes you to the Course Website, which requires a login. Which is why - if the news item is pithy enough, it usually just suffices to hover over the link to see if it is worth the effort logging in to read the whole story...</p>
+
+<p><img alt="widgetNewsItem.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/widgetNewsItem.JPG" width="334" height="212" border="0" /></p>
+
+<p>This means, of course, that you can't guarantee that the user will acknoldge a link by clicking it (though they might by hovering over it).</p>
+
+<p>At first I imagined that what would probably be more useful would be to have an <em>Acknowledge</em> button that would mark as seen all open, highlighted news items. However, it may be better if each item was flagged witha flag, that could be clicked on to acknowldge the message.</p>
+
+<p>Another alternative, perhaps, would be to link some news feeds into a widget such as the What to Do</em> widget that ships with Konfabulator (or perhaps the tidier <a href="http://www.widgetgallery.com/index.php?search=what+to+do&x=0&y=0">Mini-What To Do</a> widget).</p>
+
+<p>This widget could pop up each new Course News item on your To Do list. Where the frequency of nes postings is low, this wouldn't be too much intrusion on day to day behaviour (assuming you use the To Do widget, of course!) whilst ensuring a reasonably high impact on attention when a new item is posted.</p>
+
+<p><img alt="toDoClosed.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/toDoClosed.JPG" width="327" height="198" border="0" /> <img alt="toDoOpen.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/toDoOpen.jpg" width="321" height="222" border="0" /></p>
+
+<p>As the title of this post suggests, I haven;t implemented any of these alerting systems yet... But I shall pop them on to my To Do list ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August 11, 2005 08:38 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/004185.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

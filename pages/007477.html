@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Microformats and URL Pipelines</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007458.html" title="Pageflakes Tabs Shareable in Groups" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007487.html" title="Gliffy Collaborative Image Drawing Tool" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007458.html">&laquo; Pageflakes Tabs Shareable in Groups</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007487.html">Gliffy Collaborative Image Drawing Tool &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 19, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Microformats and URL Pipelines</h3>
+
+<p>Just before I went on holiday, I was having an email/GTalk chat with <a href="http://suda.co.uk/">Brian Suda</a> about various things and he showed me the neatest <a href="http://blogs.open.ac.uk/Maths/ajh59/006045.html">pipelined URL</a> that I've seen so far, recalled here from the wonderful chat archive thing(?!) that <a href="http://mail.google.com/mail/help/chat.html">chat in Gmail</a> offers.</p>
+
+<p><a href="http://maps.google.com/maps?f=q&hl=en&q=http://suda.co.uk/projects/microformats/geo/get-geo.php%3Furi%3Dhttp%253A%252F%252Fcgi.w3.org%252Fcgi-bin%252Ftidy%253FdocAddr%253Dhttp%25253A%25252F%25252Fbabelfish.altavista.com%25252Fbabelfish%25252Ftrurl_pagecontent%25253Flp%25253Den_de%252526url%25253Dhttp%25253A%25252F%25252Fsuda.co.uk%25252Fpublications%25252FEuroOSCON06%25252F">Brian Suda's crazy URL pipeline, escaped umpteen times...</a>.</p>
+
+<p>The pipeline starts with <a href="http://suda.co.uk/publications/EuroOSCON06/">http://suda.co.uk/publications/EuroOSCON06/</a> which deails the conference presentation Brian was demoing this sort of technique.</p>
+
+<p>That post is then <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_de&url=http%3A%2F%2Fsuda.co.uk%2Fpublications%2FEuroOSCON06%2F">translated into German</a> using the Altavista babelfish service (err...why - just showing off?!;-)</p>
+
+<p>The German version of the page is then tidied up using the <a href="http://cgi.w3.org/cgi-bin/tidy?docAddr=http%3A%2F%2Fbabelfish.altavista.com%2Fbabelfish%2Ftrurl_pagecontent%3Flp%3Den_de%26url%3Dhttp%253A%252F%252Fsuda.co.uk%252Fpublications%252FEuroOSCON06%252F">W3 HTML Tidy service</a> to ensure it is well formed XHTML.</p>
+
+<p><em>This</em> document is then parsed by a routine of Brian's that <a href="http://suda.co.uk/projects/microformats/geo/get-geo.php?uri=http%3A%2F%2Fcgi.w3.org%2Fcgi-bin%2Ftidy%3FdocAddr%3Dhttp%253A%252F%252Fbabelfish.altavista.com%252Fbabelfish%252Ftrurl_pagecontent%253Flp%253Den_de%2526url%253Dhttp%253A%252F%252Fsuda.co.uk%252Fpublications%252FEuroOSCON06%252F">makes a KML file from the scraped geotag info</a>.</p>
+
+<p>Finally, the KMl file is <a href="http://maps.google.com/maps?f=q&hl=en&q=http://suda.co.uk/projects/microformats/geo/get-geo.php%3Furi%3Dhttp%253A%252F%252Fcgi.w3.org%252Fcgi-bin%252Ftidy%253FdocAddr%253Dhttp%25253A%25252F%25252Fbabelfish.altavista.com%25252Fbabelfish%25252Ftrurl_pagecontent%25253Flp%25253Den_de%252526url%25253Dhttp%25253A%25252F%25252Fsuda.co.uk%25252Fpublications%25252FEuroOSCON06%25252F">piped into a google map</a>.</p>
+
+<p>Phew...! One of the big tricks I picked up from this is the use of multiple escapes (which I realised is a trick that solves quite a few problems I've been having with deliSearch handling of URLs that need escaping...:-)</p>
+
+<p>Anyway, apart from posting that megalink, what I'm really posting about is Brian's new <a href="http://www.oreilly.com/catalog/microformats/">O'Reilly PDF book on microformats</a>... one to get added to the OU SafariU account, I think...</p>
+
+<p>Microformats will have a lot of traction over the next 18 months or so, I think, and for all their downsides, I think they'll help the <em>ad hoc</em> semantic web reach some sort of critical mass. So much so, I think we'll see enough of an uptake in microformats to prompt a flurry of services in the same way that there are all manner of feed based services exploiting a rich enough feed ecosystem for them to be (almost...) viable.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September 19, 2006 12:12 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007477.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Microformats and URL Pipelines";
+ z_post_category="semweb";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Talis Silkworm Library 2.0 Platform</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006123.html" title="WebApping - Web Apps Made Blog Easy" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006142.html" title="Ad Supported Courses" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006123.html">&laquo; WebApping - Web Apps Made Blog Easy</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006142.html">Ad Supported Courses &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 04, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Talis Silkworm Library 2.0 Platform</h3>
+
+<p><strong>Update:</strong> documentation for the Talis Platform<br />
+ (Library 2.0) API is now starting to appear on the <a href="http://www.talis.com/tdn/">Talis Developer Network</a> at <a href="http://www.talis.com/tdn/platform/">Talis Platform API</a>.</p>
+
+<p>A week or so ago, a public draft of the Talis Community Licence appeared in <a href="http://iandavis.com/blog/2006/04/announcing-the-talis-community-licence">this blog post</a>.  <br />
+ It came with the following claim:</p>
+
+<blockquote>[This licence] is going to play a key role in [the Talis Silkworm] technology platform. It gives users and contributors of all kinds of platform data some fundamental rights with one important restriction. Basically it:
+
+<p>    * Grants the freedom to use the data for any purpose<br />
+    * Grants the freedom to modify and mix the data<br />
+    * Grants the freedom to redistribute copies<br />
+    * Prevents any attempt to deny those freedoms to others</p>
+
+<p>We're expecting the Talis platform to manage and make available under this licence a huge variety of data ranging from MARC to RDF and everything in-between - that's 4 decades of data formats!</p>
+
+<p>The licence has its roots in the GPL and includes the same sort of redistribution...</blockquote></p>
+
+<p>I mailed this announcement to a select few, with the comment that it seemed to signal the imminent arrival of an open APIs to the <a href="http://silkworm.talis.com/">Silkworm platform</a>, something that had been hinted at when <a href="http://blogs.talis.com/panlibus/">Paul Miller</a>, the Talis <em>technology evangelist</em> spoke at the OU <a href="http://blogs.open.ac.uk/Maths/ajh59/006028.html">a couple of weeks ago</a>.</p>
+
+<p>Well - you'll be glad to know the first phase of the Talis Library 2.0 platform duly arrived in the form of the <a href="http://directory.talis.com/ui/ ">Silkworm directory</a> last week (blogged about <a href="http://informationtakesover.co.uk/archives/2006/04/27/talis-platform-silkworm/">here</a>).</p>
+
+<p>A few of us had had a sneak preview (much appreciated, thanks) beforehand, which is partly why I've held off blogging about it - I'm a little guilty that I haven't found the time to knock up some sort of OU/Silkworm mashup (I was hoping to find an hour (that may have turned into four - you know how it goes!) to put something together, but other things are afoot at the moment that have got in the way of anything that might turn into open ended play time...)</p>
+
+<p>Anyway, the first <a href="http://directory.talis.com/ui/">Silkworm Direcroty interface</a> is now open to play with, and I'm assured API details are on the way.</p>
+
+<p>As some details are out now, and more due any time,  I think it's probably ok to pass on some of the details that Ian Davies originally mailed out:</p>
+
+<blockquote>Technically the directory runs off an RDF store using Jena and Joseki, fronted by a thin web app written in ASP.NET and XSLT. The directory stores descriptions of collections, physical locations and electronic services. [e.g. here's a description of the <a href="http://api.talis.com/1/dir/sparql?query=describe+%3Chttp%3A%2F%2Fdirectory.talis.com%2Fres%2Fdddconv-rlg1418%23self%3E">Open University collection</a>] We'll be introducing grouping of resources, descriptions of organisations and relationships between collections soon. The services are described in detail as RDF so we can programatically build queries into them.
+...
+There are a number of other RDF-based services .... Each primary resource in the directory
+links to its RDF representation via a little blue icon beside its title. These point to our <a href="http://api.talis.com/1/dir/sparql">sparql endpoint</a>
+
+<p>For the sparql service we plan on not allowing GRAPH/FROM queries<br />
+either, certainly not from day one. As we scale the service out we might<br />
+enable it.</p>
+
+<p>We're using Joseki for the Sparql stuff. All the pages you see at http://directory.talis.com/ui/ are generated using XSLT on RDF/XML coming out of Joseki.</blockquote></p>
+
+<p>Collection information is alo published as HTML as this page describing the <a href="http://directory.talis.com/ui/ViewService.aspx?id=http://directory.talis.com/res/dddconv-rlg1418-svc%23self">OU Library OPAC</a> demonstrates (the enabled search over the catalogue even works, too:-)</p>
+
+<p>Some of the URLs look as if they are going to be hackable, generatable(?), which is handy. For example, this URL: <em>http://api.talis.com/1/node/items/ad9.sw/bib?title=rdf</em> is described as follows:</p>
+
+<blockquote>We have a public service that uses the service information to automatically link into the OPAC. For example, on that page above you can see the generated identifier for Bath University is "ad9.sw". You can plug that into a URL like this and search for RDF.
+
+<p>The [URL] syntax is a custom one based on what we know we can support for the majority of our service descriptions. It currently supports isbn, title and author parameters. Full documentation is coming :) We plan to support "real" protocols like SRU and OAI and map them to the  capabilities of the target OPAC. These will have URLs like:</p>
+
+<p>http://api.talis.com/1/node/items/ad9.sw/sru</blockquote></p>
+
+<p>An RDF returning search is also supported, taking the form <em>http://api.talis.com/1/dir/collections?api_key=?????&search=open</em>:</p>
+
+<p><img alt="silkwormRDF.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/silkwormRDF.jpg" width="663" height="420" border="0" /></p>
+
+<p>One thing I'm keen to explore is how the library location lookup service can be used to augment the <a href="http://library.open.ac.uk/libraries/update/access_acdem.html">OU 'Libraries Near You' service</a> which provides an ugly interface to a 'library by postcode' lookup service augmented with information about lending rights for OU students, as well as library opening times and other administrative information.</p>
+
+<p>In contrast, the Silkworm version goes for a Google maps mashup:</p>
+
+<p><img alt="silkwormMap.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/silkwormMap.jpg" width="699" height="452" border="0" /></p>
+
+<p>At the moment though, the OU data is far more reliable (and maintained). The Talis approach appears to be <a href="http://directory.talis.com/ui/GetInvolved.aspx">appealing to community support/maintenance of the library information database</a>, something the OU has done centrally (by phoning people up and hassling them, I guess!)</p>
+
+<p>One thing I'm keen to explore is how we can work with Talis on maintaining this sort of information, and guaranteeing its correctness, for mutual benefit. (I should qualify that - I am 'outside the system' and so restricted to buolding proof of concept demonstrators that othe people would have to decide to adopt...)</p>
+
+<p>If you want to keep up with what Talis are doing, I believe more announcements are due throughout May on the <a href="http://www.talis.com/tdn/">Talis Developer Network</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May  4, 2006 12:52 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Talis Silkworm Library 2.0 Platform";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Paced Content Delivery via RSS</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/004638.html" title="Keeping Course Homepages Current With &#39;Related News&#39; Feeds" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/004853.html" title="Playing with the ROUTES XML feed - almost..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/004638.html">&laquo; Keeping Course Homepages Current With 'Related News' Feeds</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/004853.html">Playing with the ROUTES XML feed - almost... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 21, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Paced Content Delivery via RSS</h3>
+
+<p>I just stumbled across this announcement (<a title="Surfarama » RSS for serialized content" href="http://www.surfarama.com/index.php?p=242">Surfarama » RSS for serialized content</a>) about delivering an e-book to readers, a few pages a day, via RSS:</p>
+
+<p><em>"[It]doesn’t matter when you first subscribe, this feed will deliver the book to your feed reader in the right order, a couple of chapters a day, over the next month."</em></p>
+
+<p>The idea has apparently surfaced a few times in the past (such as <a href="http://www.russellbeattie.com/notebook/1008220.html">here</a>.</p>
+
+<p>I think I like this, and I think I like it a lot. The mechansim provides one way of delivering paced content to users of elearning materials.</p>
+
+<p>Rather than having to log on to an elearning providers site, the mechanism allows course content to be pushed to the student a bit a time, whioch might be attractive to informal learners.</p>
+
+<p>The content arrives in your personal reader, so if the chunks are small enough, then a reader might well be able to work through the chunk there and then.</p>
+
+<p>If a user is allowed to tune the delivery times (i.e. the times at which their RSS reader picks up the content) then they could ensure that content is delivered at an appropriate time.</p>
+
+<p>Say you have a slow Tuesday afternoon most weeks? Then schedule a content pickup for lunchtime Tuesday. The content won't be languishing in your RSS reader marked as unread for days as you wait for your study day to come around. Instead, the content arrives at a time you said you'd be ready for it. </p>
+
+<p>The two things I like about this idea, then, are:</p>
+
+<ol><li>Getting learning content pushed to a user's personal space, as a result of the user subscribing to it, as opposed to publishing it to a 'private' VLE the student must log in to and only uses for their learning activities. This personal space idea is an important one, I think, as it embeds the learning material/content in channel's thaty users use to receive content on a daily basis. That is, we are embedding learning in everyday activity (which may or may not be effective practise? But is is <em>one way</em> of rethinking lifelong learning, in the sense of integrating learning into everyday activities.</li>
+<li>Allowing users to schedule delivery/pickup of content for times when they are likely to be able to consume it*.</li></ol>
+
+<p>*This reminds me of another thread that keeps appearing, about the downside of subscription and the overload that's now facing more and more of us as we subscribe to more and more feeds. Just as my mailbox has hundreds of emails in various states (read, unread, replied to, must reply to, etc. etc.), now my RSS feeds are starting to back up with unread, and increasingly ignored posts. The problem is of too much info.<br />
+ <br />
+Perhaps one way round this is for me to:</p>
+
+<p>a) start filtering feeds a bit more;<br />
+<em>and</em></p>
+
+<p>b) start scheduling different feeds for pickup on different days, say. So I could have a CSS day, and a Web 2.0 day...?! This introduces a lag, sure, but it does block out in an architectural way the days on which particular things I'm subscribed to feed me new content. (I guess it's also a way of using technology to help me out with my lack of discipline!)</p>
+
+<p><br />
+And finally, a PS - in case you haven't heard, the <em>flock</em> "social browser" is now available as a <a href="http://www.flock.com/developer">developer\download</a>...<br />
+</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 21, 2005 06:15 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/004775.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

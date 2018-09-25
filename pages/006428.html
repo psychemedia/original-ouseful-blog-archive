@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Search Browser History in Flock</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006406.html" title="Google/Yahoo/Amazon Certified Professionals..." />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006460.html" title="Not Beta, But Gamma or Delta?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006406.html">&laquo; Google/Yahoo/Amazon Certified Professionals...</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006460.html">Not Beta, But Gamma or Delta? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 17, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Search Browser History in Flock</h3>
+
+<p>Every couple of months I pop over to <a href="http://flock.com">flock.com</a> to see how the Flock 'social browser' is coming on. In fact, uit seems like it's almost ready to go to beta (hopefully in the next few weeks) so it'll be interesting to see what the take up is.</p>
+
+<p>If you haven't tried, seen or even read about Flock, it's builit on top for the Firefox code base but with lots of in-built customisations and extensions that support all sorts of social behaviour - Flickr photo-sharing, social bookmarking, blogging and so on.</p>
+
+<p>Anyway, what I particulary liked when I tried Flock out today was the <em>search browser history</em> option.</p>
+
+<p><img alt="flockHistorySearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/flockHistorySearch.jpg" width="266" height="251" border="0" /></p>
+
+<p>If you type your search terms in the browser search box <em>and don't hit return</em> a pop-up menu appears with links to pages in your browser history that are hits for the search term. (The effect is <a href="http://wiki.flock.com/index.php?title=Search_bar">described here</a>.)</p>
+
+<p>Now this functionality is something I've been after for a long time, though I've had glimpses of it from Google search history, Yahoo! MyWeb 2.0, various desktop search tools, and Simpy search, and I;m not sure but it mayu well turn out to be a bit like tabbed browsing - once you've tried it for a day or too, there's now way you'd want to give it up.</p>
+
+<p>The search works because there's a search engine (<a href="http://lucene.apache.org/">Lucene</a>) built into the Flock browser itself, which is a really neat move. Along with the web service handlers that are embedded within the Firefox code (e.g. here's how to call a SOAP service using the <a href="http://www.oreillynet.com/pub/a/javascript/synd/2002/08/30/mozillasoapapi.html?page=1">Firefox/Mozilla web service API</a>) allwe need now is a lite internal server...</p>
+
+<p>In fact, that's just got me thinking - would it be neat if there were programmer extensions that provide easy to use hooks and handlers for the various public APIs that are now available? Flock makes use of some of these already, of course - e.g. the APIs for Flickr, delicious and Blogger, to name just three - but would it also be useful to provide a mapping extension to allow users to easily embed Google maps in simple self-coded browser apps (or kisok apps)? Or an eBay or Amazon toolkit built into the browser? Or a <a href="https://developer.paypal.com/">Paypal API</a> enhanced <em>point of sale (POS)</em> browser for kiosk use, perhaps? Hmm..I dunno - maybe need to think this through a bit more...</p>
+
+<p>PS For some reason delicious via the web has been really slow for me lately (perhaps it's all my bookmarks) so now I do virtually all my delicious bookmarking from my Firefox <a href="http://performancing.com/firefox">Perfomancing extension</a> (PFF): </p>
+
+<p><img alt="deliciousPFF.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliciousPFF.jpg" width="641" height="275" border="0" /></p>
+
+<p>That's in addition to blogging from the PFF, of course :-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May 17, 2006 09:21 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006428.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html><head><title>delicious2opml</title>
+
+<script type="text/javascript">
+function cleanScript(){
+  if (document.getElementById('myFeedsScript')) document.getElementsByTagName('head')[0].removeChild(document.getElementById('myFeedsScript'));
+}
+
+var popHack=false;
+
+function feedjson2deljson(json_data) {
+   var rtrn = [];
+   for(var i=0; i<json_data.items.length; i++) {
+      obj = {};
+      obj.d = json_data.items[i].title;
+      obj.u = json_data.items[i].link;
+      obj.n = '';
+      if(json_data.items[i].description)
+         obj.n = json_data.items[i].description;
+      if(json_data.items[i].content)
+         obj.n = json_data.items[i].content;
+      rtrn.push(obj);
+   }//end for
+   return rtrn;
+}//end feedjson2deljson
+
+function generateOPMLfromDelicious(){
+ cleanScript();popHack=false;
+ var usrName=document.getElementById('usrName').value;
+ var usrTag=document.getElementById('usrTag').value;
+ if ((usrName=='popular')||(usrName=='')) {popHack=true;myURL="http://psychemediasxoxotools.ning.com/outlineconvert.php?output=json&classes=items&url="+escape('http://del.icio.us/rss/popular/'+usrTag)+"&callback=generateOPML";}
+ else myURL="http://del.icio.us/feeds/json/"+usrName+"/"+usrTag+"?count=100&callback=generateOPML";
+ var script = document.createElement('script');
+ script.id = 'myFeedsScript';
+ script.type = 'text/javascript';
+ script.src=myURL;
+ document.getElementsByTagName('head')[0].appendChild(script);
+}
+  
+function generateOPMLItems(deliLinks){
+ var opmlItem='';
+ for (var i=0, post; post = deliLinks[i]; i++) {
+        var li = document.createElement('li')
+        var a = document.createElement('a')
+        a.style.marginLeft = '5px'
+        opmlItem+='<outline type="link" text="'+post.d+'" url="'+post.u+'" />\n';
+ }
+    
+ return opmlItem;
+}
+
+function generateOPML(delicious){
+ if (popHack) delicious=feedjson2deljson(delicious);
+ var opml='<opml version="1.0">\n<head>\n<title>Social Bookmarks Feeds</title>\n</head>\n<body>\n';
+ opml+=generateOPMLItems(delicious);
+ opml+='</body>\n</opml>';
+
+ var element = document.getElementById('output');
+ element.value=opml;
+}
+
+</script>
+
+
+</head><body>
+
+<h2>delicious2OPML</h2>
+<p>Submit a delicious user name/tag and generate an OPML file with items of the form:<br />
+<br />
+<em>&lt;outline type="link" text="mootools%20-%20home" url="http%3A//mootools.net/"/&gt;</em><br />
+<br />
+one for each delicious link item (up to a maximum of 100 links).</p>
+<p>If no user is specified, appropriately tagged <em>popular</em> items will be used instead.</p>
+<form>
+
+user name <input size="20" id="usrName" type="text"> (Default is <em>popular</em>)<br />
+tag <input size="20" id="usrTag" type="text"><br />
+<input value="generate OPML" onclick="generateOPMLfromDelicious()" type="button"> 
+</form>
+
+
+<form action="">
+  <div><textarea id="output" cols="100" rows="35" style="width: 98%;"></textarea>
+  <br>
+  <br>
+
+  <input value="select all" onclick="javascript:this.form.output.focus();this.form.output.select();" class="but" type="button"> </div>
+</form>
+
+</body></html>

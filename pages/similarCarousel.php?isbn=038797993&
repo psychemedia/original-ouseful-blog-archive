@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - DHTML Load (Bounded)</title>
+<script src="http://ouseful.ning.com/yui/yahoo.js"></script> 
+<script src="http://ouseful.ning.com/yui/event.js"></script> 
+<script src="http://ouseful.ning.com/yui/container_core.js"></script> 
+<script src="http://ouseful.ning.com/yui/connection.js"></script> 
+<script src="http://ouseful.ning.com/yui/dom.js"></script> 
+<script src="http://ouseful.ning.com/yui/animation.js"></script>
+
+<script src="http://ouseful.ning.com/yui/jsonTools.js"></script>
+<script src="http://ouseful.ning.com/yui/carousel.js"></script>
+<script src="http://ouseful.ning.com/yui/carouselUsr.js"></script>
+
+<link href="http://ouseful.ning.com/yui/fonts.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/grids.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/sample.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/carousel.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/carouselUsr.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript">
+
+// dummy data (images are randomly chosen from this array)
+
+var fmtItem = function(imgUrl, url, title) {
+
+  	var innerHTML = 
+  		'<a href="' + 
+  		url + 
+  		'"><img src="' + 
+  		imgUrl +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		title + 
+  		'</a>';
+  
+	return innerHTML;
+	
+}    
+
+var load = function(carousel, start, last) {
+
+	for(var i=start; i<=last; i++) {
+		carousel.addItem(i,fmtItem(bookInfoArray[i-1].bookCover,bookInfoArray[i-1].bookLink,bookInfoArray[i-1].bookTitle));
+	}
+}
+
+
+var pageLoad = function(cSize) 
+{
+	var carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:    .8,
+			animationMethod:   YAHOO.util.Easing.easeBoth,
+			scrollInc:         3,
+			navMargin:         40,
+			size:              cSize,
+			loadInitHandler:   loadInitialItems,
+			prevElementID:     "prev-arrow",
+			nextElementID:     "next-arrow",
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+	
+}
+
+
+//the amazon bit from: www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html
+
+// AJH - need to swap these out for YUI equivalents
+
+
+	var bookInfoArray=new Array();
+	function bookInfoItem(bookCover,bookLink,bookTitle){
+		this.bookCover=bookCover;
+		this.bookLink=bookLink;
+		this.bookTitle=bookTitle;
+	}
+	function addBookInfoItem(bookCover,bookLink,bookTitle){
+		bookInfoArray[bookInfoArray.length]=new bookInfoItem(bookCover,bookLink,bookTitle);
+	}
+
+// Callback function referenced by the JSON script, This teases the
+// JSON object out into DOM Nodes, and appends them to 'searchResults' DIV)
+	var amzJSONCallback = function(tmpData){
+		var upperLimit=tmpData.ItemSet.Item.length-1;
+		var count=0;
+		var imageURL; var URL;
+		for(var i=0; i<upperLimit; i++){
+			var tmpItem = tmpData.ItemSet.Item[i]
+			if (tmpItem.asin!="") {
+				imageURL="http://images.amazon.com/images/P/"+tmpItem.asin+".01.TZZZZZZZ";
+				URL="http://www.amazon.co.uk/exec/obidos/ASIN/"+tmpItem.asin+"/robofestauk-21";
+				addBookInfoItem(imageURL,URL,tmpItem.title);
+				count++;
+			}
+		}
+		if(count!=0){
+			pageLoad(count);
+		}
+
+	}
+
+//Make use of aws: webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium
+//similarities: http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&Version=2005-03-23&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ItemLookup&AssociateTag=robofestauk-21&ItemId=0596009208&ResponseGroup=Similarities&Style=http://blogs.open.ac.uk/Maths/ajh59/similarities2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback
+// Search function - creates, builds, and adds remote JSON script
+// to the page, which in turn calls amzJSONCallback
+	var currISBN="038797993";
+
+	var amazonSearch = function(){
+			//var request = 'http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium&Style=http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback';
+			var request = 'http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&Version=2005-03-23&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ItemLookup&AssociateTag=robofestauk-21&ItemId='+currISBN+'&ResponseGroup=Similarities&Style=http://blogs.open.ac.uk/Maths/ajh59/similarities2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback';
+			aObj = new JSONscriptRequest(request);
+			aObj.buildScriptTag();
+			aObj.addScriptTag();
+	}
+
+	YAHOO.util.Event.addListener(window, 'load', amazonSearch);
+</script>
+</head>
+
+<body>
+<div id="dhtml-carousel" class="carousel-component">
+	<div><img id="prev-arrow" alt="previous arrow" class="left-button-image" src="http://ouseful.ning.com/yui/left-enabled.gif"/></div>
+	<div><img id="next-arrow" alt="next arrow" class="right-button-image" src="http://ouseful.ning.com/yui/right-enabled.gif"/></div>
+
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

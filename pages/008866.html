@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn Daily Learning Chunks via RSS</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008847.html" title="The Electronic Provision of Course Content" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008931.html" title="DigiLab now open in the OU Library..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008847.html">&laquo; The Electronic Provision of Course Content</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008931.html">DigiLab now open in the OU Library... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 27, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn Daily Learning Chunks via RSS</h3>
+
+<p>Several bloggers <a href="http://www.researchbuzz.org/wp/2006/11/20/service-for-publishing-cyclic-rss-feeds/">picked up</a> today on <a href="http://www.feedcycle.com/">FeedCycle</a>, a new web application for managing serialised RSS feeds:<br />
+<blockquote>A serialised RSS web feed enables a subscriber to receive, perhaps on a daily basis, sequential episodes from within a series of episodes. The subscriber always starts at the beginning regardless when they start their subscription.</blockquote><br />
+I've been waiting for something like this to appear for some time (e.g. see <a href="http://blogs.open.ac.uk/Maths/ajh59/004775.html">Paced Content Delivery via RSS</a> (from just over a year ago?!?!? Where's the time gone?!) and <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?search=paced%20content&IncludeBlogs=1149">a few other related items</a>) so it was exciting to see how the (UK-based) developers have gone about it.</p>
+
+<p>(The feed you subscribe to has a timestamp argument - now why didn't I think of that? Producing my own scheduled feeds via a simple feed relay that takes an original subscription timestamp and desired duty cycle should only take a handful of lines of PHP....)</p>
+
+<p>Anyway, anyway - having already got a web feed creation route set up (after a fashion) for OpenLearn/LabSpace content, I couldn't wait to try out <a href="http://www.feedcycle.com/">FeedCycle</a>. Free (limited) accounts are available so I set one up to use the <a href="http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">T180 Living with the internet: keeping it safe</a>  content.</p>
+
+<p>At the moment, getting content into FeedCycle seems a bit clunky. I would have like to import my own RSS feed, but instead I had to copy and paste items one at a time into the FeedCycle editor.</p>
+
+<p><img alt="feedcycle.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/feedcycle.jpg" width="513" height="513" border="0" /></p>
+
+<p>Pasting HTM L directly is perfectly acceptable - FeedCycle automatically wraps the content in CDATA tags. It's also possible to add a media enclosure to a feed item (so I added in a couple of related presentations from <a href="http://itconversations.com">IT Conversations</a>).</p>
+
+<p>Once you've got the content in, the ability to reorder items is quite useful:</p>
+
+<p><img alt="feedcycle1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/feedcycle1.jpg" width="485" height="485" border="0" /></p>
+
+<p>The frequency with which feed items are published can be set from 1 hour to about 30 days. It would be handy if this could be handled via another URL argument. I originally started out testing the feed with an hourly publishing rate, but  for the link below it's set at one item per day. It's not possible (at the moment) to generate URLs for the same cyclic feed with different delivery/publication rates, nor is it possible to copy a whole feed and use it as the basis for another (e.g. with just a different publication rate).</p>
+
+<p><img alt="feedCycle2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/feedCycle2.jpg" width="943" height="457" border="0" /></p>
+
+<p>Delivering training materials via FeedCyle is one of the <a href="http://www.feedcycle.com/ideas.php">suggested</a> commercial applications. However, I think there is great potential for publishing OpenLearn content in this way.</p>
+
+<p>The OpenLearn material is already chunked into short sections, ideal for consuming via a feed on a daily basis.</p>
+
+<p>Just like 'tip of the day', materials can be delivered one small chunk at a time once per day to the informal learner's feed reader. For learners who can get into the habit of looking at the feed once every day or two, the course material will be delivered in a sensibly paced way, and will not overload the learner in advance. </p>
+
+<p>There are issues in not being able to get ahead, of course. But there are a couple of workarounds: one is to <a href="http://grazr.com/gzpanel.html?view=3p&file=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">look at the whole course feed</a>; another is to resubscribe to the feed with a backdated timestamp (it would be easy enough to build a  tool to support this). It would be neat if FeedCycle could support a 'send me the next item now' service - maybe that's on the cards?</p>
+
+<p>Anyway - I know you're itching to try it out ;-) so here's the T180 <a href="http://openlearn.open.ac.uk/course/view.php?id=1664">Living With the Internet: Keeping It Safe</a> block as a paced feed (items delivered according to a daily schedule). If you're reading this via a feed reader, you'll probably need to click through to the actual blog page because the timestamped feed subscription link is generated via a Javascript include:</p>
+
+<p>Here's the paced feed link - <script type="text/javascript" src="http://feeds.feedcycle.com/chicklet.php?type=1&amp;url=10053/10093/31fc36f3&amp;message=OpenLearn%20Daily%20-%20Living%20With%20the%20Internet%3A%20Keeping%20It%20Safe%20%2814%20day%20feed%29"></script></p>
+
+<p>Once subscribed, you'll get one section/item per day in your feedreader for the next fortnight.</p>
+
+<p>If you give it a go and have either success in consuming the feed, or grief consuming it, please let me know...</p>
+
+<p>And if anyone out there is interested in developing this a bit further, maybe helping tighten up the <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearn2rss.xsl">OpenLearn/LabSpace XML2RSS stylesheet</a> (or markup generated by it), working on automation routes for mining LabSpace ;-), developing a custom, lightweight FeedCycle inspired script suited to educational use, or generally helping to create a daily learning chunks platform to help push LabSpace sourced content (maybe remixed with other <a href="http://del.icio.us/psychemedia/ocw">OCW</a> content), please get in touch.... :-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 27, 2006 05:02 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>This would be good one to try it out on: http://infocult.typepad.com/dracula/index.rdf</p>
+
+<p>Currently they manage this through the timing of the entries rather than in clever feed things...</p>
+<span class="comments-post">Posted by: <a href="http://www.cetis.ac.uk/members/scott">Scott Wilson</a> at November 28, 2006 01:28 PM</span>
+</div>
+<div class="comments-body">
+<p>Hi,<br />
+On FeedCycle you can now import an existing feed - no more cutting and pasting!</p>
+
+<p>Apologies it wasn't there when you reviewed it.</p>
+
+<p>Thanks for your feedback - this is what keeps us focussed!</p>
+
+<p>Alex<br />
+FeedCycle</p>
+<span class="comments-post">Posted by: <a href="http://www.feedcycle.com">Alex</a> at November 30, 2006 09:16 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008866.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

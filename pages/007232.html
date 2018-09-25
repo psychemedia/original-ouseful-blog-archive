@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OPML Bulk Upload Feed for Feeds Listed on a Webpage</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007225.html" title="Cite This Book" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007285.html" title="Moodle Gripes  #1" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007225.html">&laquo; Cite This Book</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007285.html">Moodle Gripes  #1 &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 07, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OPML Bulk Upload Feed for Feeds Listed on a Webpage</h3>
+
+<p>As I mentioned in a previous post about <a href="http://blogs.open.ac.uk/Maths/ajh59/007199.html">Managing OPML</a>, I've been struggling to find efficient ways of getting feed collections together, whether from individual links or link collections held on single page (and where the publishers haven't provided an OPML feed). Like <a href="http://www.sciencemag.org/rss/">Science Magazine</a>, for example:</p>
+
+<p><img alt="scienceMagFeeds.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/scienceMagFeeds.jpg" width="562" height="345" border="0" /></p>
+
+<p>So it was with interest that I picked up the following up from John Tropea at <a href="http://libraryclips.blogsome.com/2006/07/07/feedshow-has-an-opml-builder/">LibraryClips</a>: an <a href="http://www.feedshow.com/goodies/opml/OPMLBuilder-create-opml-from-rss-list.php">OPML Builder</a> tool from <a href="http://www.feedshow.com/">feedshow</a> that will look for XML or RSS feeds within a web page, extract them and generate an OPML file of the results for something like <a href="http://www.blogbridge.com/directory/">Blogbridge Library</a> feed off.</p>
+
+<p>Here's the builder form:</p>
+
+<p><img alt="opmlBuilder.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/opmlBuilder.jpg" width="618" height="381" border="0" /></p>
+
+<p>There are filters for different file types, as well as the ability to define custom filters.</p>
+
+<p>It doesn't quite go far enough for me though;-) What I'd really like to do woul dbe able to define OPML folderes to bundle links from a page into subcollections. For example, at the <a href="http://library.open.ac.uk/resources/newstock.html">OU Library new books</a> page, feeds are organised on the page by Faculty. It would be so handy to be able to use an enhanced OPMLBuilder tool to create an OPML file with the feeds organised in subset by Faculty...</p>
+
+<p><img alt="OUlibraryNewBooksRSS.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/OUlibraryNewBooksRSS.jpg" width="624" height="665" border="0" /></p>
+
+<p>Anyway, for what it's worth, here's a link to the feed generated by the Feedshow OPMLBuilder from the OU new books page: <a href="http://www.feedshow.com/goodies/opml/tmp/OPML_797bd8aeaeaabe9e1d4efd65a63474e1.xml">OU New Books (OPML)</a>.  (I wonder how persistent that link is, or would be if I have lots of filters applied? Ah - "Temporary OPML files are created (files are purged periodically, so don't link to these files)." - so the service is good for a bulk upload then, but not persistent reading lists...)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July  7, 2006 10:37 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007232.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

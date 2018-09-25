@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Wikipeadia + OpenLearn?</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010441.html" title="Re-Presentation and Re-Interpretation of OpenLearn XML Materials" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010445.html" title="&quot;When T293 had its last presentation in 2001...&quot;: We Ignore Digital Media at OUr Peril" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010441.html">&laquo; Re-Presentation and Re-Interpretation of OpenLearn XML Materials</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010445.html">"When T293 had its last presentation in 2001...": We Ignore Digital Media at OUr Peril &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 23, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Wikipeadia + OpenLearn?</h3>
+
+<p>I spent huge chunks of today tinkering on and off with different combinations of Wikipedia and <a href="http://blogs.open.ac.uk/Maths/ajh59/010439.html">OpenLearn content in wikimindmap style</a> but none of it was very satisfactory. Here are a few things I noticed/tried along the way (nothing more substantial to report...):<br />
+<ul><li><a href="http://wikimindmap.com">wikimindmap</a> uses a modifed version of the map widget, that handles special "wikilinks" that launch a new wikimindmap centred on a new topic;</li><br />
+<li><a href="http://en.wikipedia.org/w/api.php">Wikipedia has an API</a> and a <a href="http://en.wikipedia.org/w/query.php">query interface</a> (via <a href="http://www.searchenginejournal.com/how-to-find-wikipedia-links/5169/">searchenginejournal.com</a>) that will return results via a JSON feed;</li><br />
+<li>it's easy to add the Yahoo content analyser to a Yahoo pipe that feeds off an OpenLearn RSS feed (and then optionally use the returned terms as the basis of a Yahoo search over Openlearn or Wikipedia, for example) <em>but</em> non-RSS appended links don't seem to make it to the Yahoo Pipes output RSS feed - though they do appear in the JSON feed;</li><br />
+<li>this <a href="http://goessner.net/download/prj/jsonxml/">json2xml</a> Javascript routine can be combined with a <a href="http://blog.pipes.yahoo.com/examples/example.01.html">Pipes AJAX feed</a> to generate XML text containing everything the Yahoo pipe has generated, RSS compliant or not.</li></ul><br />
+It's easy enough to handcraft a map that combines OpenLearn Unit links with Wikipedia maps - but why is this interesting/useful? If I manage to produce a demo that feels even half-way right, I'll post it.</p>
+
+<p>For now, here's a glimpse:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5079371946206514242"><img src="http://lh6.google.com/image/tony.hirst/Rn2N35e5TEI/AAAAAAAAAHk/lUw2pi2QrsE/s800/openlearnwikipedia.png" /></a></p>
+
+<p>This shows a combination of an OpenLearn Unit map and a Wikipedia/wikimindmap node (the exploded "computer virus" node). The green recycle symbols are a feature of the modified map viewer. Clicking on the symbol loads a new wikimindmap centred on the corresponding node.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 23, 2007 10:20 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010443.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

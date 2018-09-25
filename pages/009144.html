@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Navigating LabSpace</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009142.html" title="More OpenLearn RSS Feeds..." />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/009148.html" title="Video Sharing LabSpace Resources" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/009142.html">&laquo; More OpenLearn RSS Feeds...</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/009148.html">Video Sharing LabSpace Resources &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 05, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Navigating LabSpace</h3>
+
+<p>One of the problems I have with the way Moodle is being used for LabSpace/OpenLearn is the truly horrible navigation scheme that has been adopted within a unit:</p>
+
+<p><img alt="labspaceLinks.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/labspaceLinks.jpg" width="504" height="389" border="0" /></p>
+
+<p>which I tried to improve upon using a variety of OPML widgets and an OPML links file structured according to sections within a unit using <a href="http://blogs.open.ac.uk/Maths/ajh59/008189.html">Optimal OpenLearn navigation</a>, for example.</p>
+
+<p>The arbitrary naming scheme applied to URLs further complicates matters - course index pages take the form <em>http://labspace.open.ac.uk/course/view.php?id=1977</em> and course resource pages the form <em>http://labspace.open.ac.uk/mod/resource/view.php?id=44145</em>.</p>
+
+<p>The id numbers are arbitrary, and for course resources not necessarily consecutive.</p>
+
+<p>One request I've had relating to feedcycled/RSSified versions of LabSpace courses is for item level links back to the original page. With no programmatic access to resource IDs, and no sensible URL naming scheme for resources, I saw this as being 'nice, but...'</p>
+
+<p>However, it struck me that the horrible list of page links shown in the screenshot above could be easily scraped and used to see a simple database/array that could return the URL for the <em>n</em>'th page in a unit (cf. the <em>n</em>'th item in a feed).</p>
+
+<p>So here's a demo - it only works for T180_8 at the moment:</p>
+
+<p>- <a href="http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8">Course index page: http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8</a><br />
+- <a href="http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&item=4">Unit resource page: http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&item=4</a><br />
+- <a href="http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&item=all">All resource pages for a unit: http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&item=all</a></p>
+
+<p>The service root is at: <em>http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php</em><br />
+The service arguments are: <em>cid</em> - course identifier; <em>item</em> - the number of the resource item required (<em>all</em> returns a list of all the resources, omitting the argument (or setting it to 0) returns the URL for the course index page).</p>
+
+<p>I will probably XMLify this service and produce an HTML link output at some point...</p>
+
+<p>When I get a chance, I'll revamp the openlearn2rss stylesheet to add these links in as item links; (which means I should then regenerate all the courses I did <a href="http://blogs.open.ac.uk/Maths/ajh59/009142.html">yesterday</a> - sigh...)</p>
+
+<p>PS I've just added another switch to the URL, the optional <em>&op=redirect</em>. Using this switch will redirect to the appropriate LabSpace page. For example:</p>
+
+<p>- <a href="http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&op=redirect">Course index page: http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&op=redirect</a><br />
+- <a href="http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&item=4&op=redirect">Unit resource page: http://ouseful.open.ac.uk/openlearnplayground/labspaceURL.php?cid=T180_8&item=4&op=redirect</a><br />
+</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January  5, 2007 04:29 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/009144.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

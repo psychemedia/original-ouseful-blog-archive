@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Delivering Personally Scheduled Web Feeds</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009204.html" title="&quot;Through My Eyes&quot; in Second Life" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/009214.html" title="OU IT/elearning Related Job Opportunities Round-Up" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/009204.html">&laquo; "Through My Eyes" in Second Life</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/009214.html">OU IT/elearning Related Job Opportunities Round-Up &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 20, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Delivering Personally Scheduled Web Feeds</h3>
+
+<p>Chatting to Nick Heap, Chair of the OU's <a href="http://telemat.open.ac.uk/webapps/">Web Applications Development Certificate courses</a>, about 'feedcycles' (like the <a href="http://ouseful.open.ac.uk/openlearndaily">OpenLearn_<em>daily</em></a> feeds) the other day, he pointed out yet another obvious and efficient way of doing part of it if we're to deliver content at scale using feedcycles ('static', pre-written, web feeds whose content is delivered according to a schedule determined by the user when they subscribe):</p>
+
+<p>Simply run a job on each feed to create offline files/records that contain either a single item (one each for each delivery item - so e.g. delivery_item(n) would contain the <em>n</em>the item) or the list of items to date, plus the current one (so for example, the delivery_to_date(3) record would contain the first three delivery items, plus the current one (indexing from 0...)).</p>
+
+<p>I've also started wondering what other options we might offer to allow users to schedule deliveries within their own feeds.</p>
+
+<p>The options I've come up with include the <em>delivery time</em> (i.e. time of day each new item appears), the <em>delivery start date</em> (so for example I may want content to start next Tuesday; a 'header' item describing the feed would be made available immediately);  the <em>delivery period</em> (i.e. how frequently new items should appear); the <em>number of items in the first delivery</em> (a user may want to start with several items immediately - hmm, so I need an <em>Immediate start</em> button somewhere...); the <em>number of items per delivery</em>.</p>
+
+<p>Here's a demo: <a href="http://blogs.open.ac.uk/Maths/ajh59/feedCycle.php">schedule my feed</a> [URL subject to change]</p>
+
+<p>I need to define some URL arguments to carry this information, which maybe something the folks at <a href="http://feedcycle.co.uk">FeedCycle</a> would be interested in chatting about/would have an opinion on?</p>
+
+<p>I also need a way for subscribers to a feed to  - somehow - demand additional items? Hmm - maybe a <em>getahead</em> argument could do this? Users would add <em>?getahead=2</em> to the subscription URL to get the next 2 items over an above what they are already being fed? <em>getahead</em> would have to be relative - so to get the next two items over and above the additional two that have already been demanded would require the argument to change to  <em>?getahead=2</em>.</p>
+
+<p>This suggests a model for updating feeds in a feedreader. A subscription option to 'get ahead in this feedcycle' would automatically take care of the <em>getahead</em> numbering.  The reader would also have to not think this were a completely new feed  - you would want to preserve the read/unread state of items that have already been delivered via the feedcycle.</p>
+
+<p><em>getahead</em> could also be used to provide a negative offset, in effect a 'halt delivery' option, that would <em>delay</em> the delivery of new items by a particular number of delivery slots.</p>
+
+<p>I suppose for completeness, you'd also need to support a 'pause' option, that would halt delivery of items until the user was ready to restart the cycle, at which point a relative negative <em>getahead</em> offset could be automatically generated. </p>
+
+<p>And finaly, a 'fast forward to end' or 'all' option that would deliver the complete contents of the feedcycle.</p>
+
+<p>Hmm - this is possibly richer than I thought - and achievable too?</p>
+
+<p>PS in reply to <a href="http://www.downes.ca/cgi-bin/page.cgi?post=38180">Stephen Downes</a> on this post, (whose commenting system doesn't work for me at the mo, which is why I'm posting here):<br />
+<blockquote>I've learned from experience that you don't want to "run a job on each feed" - or, more accurately, that you want such a job to involve as few CPU cycles as possible. After all, if each feed represents several database lookups, some processing, and some file writing (and in my case, emailing) then customized feeds begin to generate some serious overhead</blockquote></p>
+
+<p><em>I agree with what you're saying about server overhead for feed delivery, Stephen.</p>
+
+<p>What I was thinking was that when you register a feed *as a publisher*, it's processed to produce N  (or 2N) flat files for an N item feed (newfeed_firstMitems.xml and newFeed_Mth_item.xml), each flat file file containing either the first M items or the M'th item.</p>
+
+<p>When a feedreader polls the feedserver, the current timestamp is checked against the one in the feed URL, offset items (one ahead, etc) accounted for, and the corresponding number of items to be delivered calculated. The corresponding thisfeed_firstMitems.xml (or thisfeed_Mth_item.xml) is then returned. </p>
+
+<p>I see the carving up of the submitted feed as an offline, run it once service executed to generate static files that can be returned as required. Judicious use of metadata to tell feedreaders when would be sensible to ping the feedserver should also be part of the mix. The path to a fully working, scaleable system is likely to be a twisty one, but the payoff in terms of utility to users is woth it, I think?</p>
+
+<p>As to the comment - "I refused to call them 'serialized web feeds' because RSS is not a 'web' technology" - ok, slack use of language on my part, but I'm trying to get away from saying RSS feeds... ;-)</em></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 20, 2007 12:51 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>PLEASE - Can anyone help ? (RSS FEED ...using Feeder)<br />
+I’ve built our website and before launching into the podder sphere I wanted to check-out the RSS Feed and have bumped into some problems... <br />
+We're using Feeder (Reinvented Software) to created the .xml files which it seems to produce okay - publishing is causing me a problem and yet the ftp set-up is correct.<br />
+I've been trying to sort out this out for ages and don't know anyone who could talk me through this program - do you know anyone who could help ?<br />
+Paul Weller, Photo-Journalist - D/Line +44 (0) 1386 841 490<br />
+E-Mail: paul.weller@itinerantpodcaster.com<br />
+Internet: www.itinerantpodcaster.com</p>
+<span class="comments-post">Posted by: <a href="http://www.itinerantpodcaster.com">Paul Weller</a> at January 23, 2007 06:31 PM</span>
+</div>
+<div class="comments-body">
+<p>I've not used that programme [http://reinventedsoftware.com/feeder/] (I still haven't got into the podcasting groove...)</p>
+
+<p>What's the problem? Have you managed to ftp something else to your server successfully? Are you sure a firewall isn't blocking the ftp process?</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony</a> at January 23, 2007 07:01 PM</span>
+</div>
+<div class="comments-body">
+<p>I'm looking for something similar. Let's say a faculty has materials prepared for class that can be distributed via RSS--audio files, pdf's, etc. We want to update the feed weekly, such that each RSS update contains the content for that week. So we could enter the start date of the term, and somehow automagically generate the new updates on a weekly basis. It wouldn't be dependent on when the user subscribes, however, it would be like a relative date update based on a set interval (weekly) and start date. Make sense? Do you know of any tool out there for this sort of thing?</p>
+<span class="comments-post">Posted by: <a href="http://idea.zanestate.edu">todd</a> at March  4, 2007 03:08 PM</span>
+</div>
+<div class="comments-body">
+<p>The way that feedcyle.co.uk works, and the approach I was going to take, is to include a timestamp of when the subscription was made in the subscription URL.<br />
+Every time the feed is polled, a comparison is made between the current time and the subscription timestamp, to work out how many items to include in the feed.</p>
+
+<p>For your purposes - a fixed start date with items release every week - you would just hard wire the subscription timestamp in the subscription URL to the date of the start of the course.</p>
+
+<p>I have fragments of scrappy PHP that I keep meaning to tinker with that will serialise an arbitrary feed according subscription time etc;</p>
+
+<p>You're welcome to it such as it is (little more than php time() function examples, really...</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at March  4, 2007 06:16 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/009213.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

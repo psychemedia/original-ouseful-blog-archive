@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Scriptaculous Slider Configuration Tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<script type='text/javascript'>
+
+function attachDemoSlider(){
+ var switches=new Array();
+ var testTrackStyle='';
+ var testHandleStyle='cursor:move;';
+
+ var orientation=document.getElementById('orientation').value;
+ //alert(orientation);
+ if ((orientation=='horizontal')||(orientation=='vertical')) {
+  switches[switches.length]="axis:'"+orientation+"'";
+  switch(orientation) {
+   case 'horizontal':
+	testTrackStyle+='width:200px; height:5px;';
+	testHandleStyle+='width:5px; height:10px;';
+	break;
+   case 'vertical':
+	testTrackStyle+='width:5px; height:200px;';
+	testHandleStyle+='width:10px; height:5px;';
+	break;
+   default:
+  }
+ }
+
+ var handleColour=document.getElementById('handleColour').value;
+ if (handleColour!='') testHandleStyle+='background-color:'+handleColour+';'; else testHandleStyle+='background-color:#f00;';
+
+ var trackColour=document.getElementById('trackColour').value;
+ if (trackColour!='') testTrackStyle+='background-color:'+trackColour+';'; else testTrackStyle+='background-color:#aaa;';
+ var rangeMin=document.getElementById('rangeMin').value;
+ var rangeMax=document.getElementById('rangeMax').value;
+ if ((rangeMax!='')&&(rangeMin!='')) switches[switches.length]='range:$R('+rangeMin+','+rangeMax+')';
+
+ var sliderValue=document.getElementById('sliderValue').value;
+ if (sliderValue!='') switches[switches.length]="sliderValue:"+sliderValue;
+
+ var values=document.getElementById('values').value;
+ if (values!='') switches[switches.length]='values:['+values+']';
+
+ var alignX=document.getElementById('alignX').value;
+ if (alignX!='') switches[switches.length]='alignX:'+alignX;
+
+ var alignY=document.getElementById('alignY').value;
+ if (alignY!='') switches[switches.length]='alignY:'+alignY;
+
+ var switchesString='';
+ if (switches.length>0) switchesString=switches[0];
+ for (var i=1; i<switches.length;i++){
+  switchesString+=', '+switches[i];
+ } 
+
+ var createSliderCode="new Control.Slider('testHandle','testTrack',{"+switchesString+", onSlide:function(v){$('testDebug').innerHTML='slide: '+v}, onChange:function(v){$('testDebug').innerHTML='changed! '+v}});";
+
+ //alert(switchesString);
+ for (var i=0;i<document.dataForm.outputType.length;i++)
+  if (document.dataForm.outputType[i].checked==true)
+   var outputType=document.dataForm.outputType[i].value;
+  
+ if (outputType=='outputExample') {
+  var divTestTrack=document.createElement('div');
+  var divTestHandle=document.createElement('div');
+  var divTestDebug=document.createElement('div');
+  divTestTrack.setAttribute('id','testTrack');
+  divTestTrack.setAttribute('style',testTrackStyle);
+  divTestHandle.setAttribute('id','testHandle'); 
+  divTestHandle.setAttribute('style',testHandleStyle);
+  divTestDebug.setAttribute('id','testDebug');
+  divTestDebug.setAttribute('style','padding-top: 5px;');
+  divTestTrack.appendChild(divTestHandle);
+
+  var script = document.createElement('script');
+  script.setAttribute('type', 'text/javascript');
+  var scriptCode=document.createTextNode(createSliderCode);
+  script.appendChild(scriptCode);
+
+  var output = document.getElementById('output');
+  for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+  output.appendChild(divTestTrack);
+  output.appendChild(divTestDebug);
+  output.appendChild(script);
+ } else {
+  var output=document.getElementById('output');
+  for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+  var createSliderDiv="<div style='"+testTrackStyle+"' id='testTrack'><div style='"+testHandleStyle+"' id='testHandle'></div></div><div style='padding-top: 5px;' id='testDebug'></div>";
+  var textCode=document.createTextNode(createSliderCode);
+  var textCode2=document.createTextNode(createSliderDiv);
+  output.appendChild(document.createTextNode('Here is your javascript:'));
+  output.appendChild(document.createElement('br'));
+  output.appendChild(textCode); 
+  output.appendChild(document.createElement('br'));
+  output.appendChild(document.createTextNode('Here are the statements to create the slider itself:'));
+  output.appendChild(document.createElement('br'));
+  output.appendChild(textCode2);
+ } 
+}
+
+</script>
+
+</head>
+
+<body>
+<!-- import a couple of 3rd party libraries - in this case prototype and scriptaculous -->
+<script src="http://wiki.script.aculo.us/javascripts/prototype.js" type="text/javascript"></script>
+<script src="http://wiki.script.aculo.us/javascripts/scriptaculous.js" type="text/javascript"></script>
+<h1>Scriptaculous Slider Code Generator (v0.01a)</h1>
+<form name="dataForm" action="" onsubmit="attachDemoSlider(); return false;">
+  <table>
+    <tr><td><label for='orientation' >Orientation</label></td><td><select name="orientation" id='orientation'><option value='vertical'>vertical</option><option value='horizontal'>horizontal</option></select></td><td>(Up-down (vertical) or left-right (horizontal) slider.)</td></tr>
+    <tr><td><label for='rangeMin' >Range min.</label></td><td><input id='rangeMin' /></td><td>(Minimum slider value; default is 0.0.)</td></tr>
+    <tr><td><label for='rangeMax' >Range max.</label></td><td><input id='rangeMax' /></td><td>(Maximum slider value; default is 1.0.)</td></tr>
+    <tr><td><label for='sliderValue' >Slider Value</label></td><td><input id='sliderValue' /></td>
+      <td>(Initial slider value; should be within minimum and maximum range.)</td>
+    </tr>
+    <tr><td><label for='values' >Values</label></td><td><input id='values' /></td>
+      <td>(Specify discrete values the slider can take (e.g. 0, 5, 10, 15); should 
+        be with max/min range.)</td>
+    </tr>
+    <tr><td><label for='handleColour' >Handle Colour</label><div style='width:5px;height:10px' id='sampleHandleColour' /></td><td><input id='handleColour' value='rgb(0, 155, 255)' type='hidden' />
+	<div id="trackHandleColour" style="width:200px;background-color:#aaa;height:5px;position:relative;">
+	<div id="trackHandleColourR" style="opacity:0.5;position:absolute;top:0;left:0;width:5px;height:10px;background-color:#f00;"> </div>
+	<div id="trackHandleColourG" style="opacity:0.5;position:absolute;top:0;left:0;width:5px;height:10px;background-color:#0f0;"> </div>
+	<div id="trackHandleColourB" style="opacity:0.5;position:absolute;top:0;left:0;width:5px;height:10px;background-color:#00f;"> </div>
+	</div></td><td>(Use the slider to set the red, green and blue values.)</td></tr>
+    <tr><td><label for='trackColour' >Track Colour</label><div style='width:5px;height:10px' id='sampleTrackColour' /></td><td><input id='trackColour' value='rgb(0, 155, 255)' type='hidden' />
+	<div id="trackTrackColour" style="width:200px;background-color:#aaa;height:5px;position:relative;">
+	    	<div id="trackTrackColourR" style="opacity:0.5;position:absolute;top:0;left:0;width:5px;height:10px;background-color:#f00;"> </div>
+		<div id="trackTrackColourG" style="opacity:0.5;position:absolute;top:0;left:0;width:5px;height:10px;background-color:#0f0;"> </div>
+		<div id="trackTrackColourB" style="opacity:0.5;position:absolute;top:0;left:0;width:5px;height:10px;background-color:#00f;"> </div>
+	</div></td><td>(Use the slider to set the red, green and blue values.)</td></tr>
+    <tr><td><label for='alignX' >Align X</label></td><td><input id='alignX' /></td><td>(Does something related to the offset of the max value on the horizontal slider.)</td></tr>
+    <tr><td><label for='alignY' >Align Y</label></td><td><input id='alignY' /></td><td>(Does something related to the offset of the max value on the vertical slider.)</td></tr>
+
+    <tr><td><label for='' ></label></td><td><input id='' /></td></tr>
+ </table>
+    <label>
+    <input type="radio" name="outputType" value="outputExample" />
+    Example Slider</label>
+    <label>
+    <input type="radio" name="outputType" value="outputCode" checked />
+    Slider Code</label>
+ 
+  <input value="generate" class="but" type="submit">
+</form>
+<p><em>Only tested in Firefox 1.51</em>. (NB I spotted at least the following bugs in IE: 
+i) the colour previews don't work;
+ii) the example slider isn't generated.
+iii) the example slider doesn't work.)
+If anyone is interested in taking this web page application further, please mail me a link to your version...:-)</p>
+<script type='text/javascript'>
+function updateRGB(v, s, r, g, b){
+ v.value='rgb('+r+', '+g+', '+b+')';
+ s.setAttribute('style','background-color:'+v.value+';width:5px;height:10px;');
+}
+function setRGBValueHandleColour(v) {
+ trackHandleColourRValue=v[0].toFixed();
+ trackHandleColourGValue=v[1].toFixed();
+ trackHandleColourBValue=v[2].toFixed();
+ updateRGB(document.getElementById('handleColour'),document.getElementById('sampleHandleColour'),trackHandleColourRValue,trackHandleColourGValue,trackHandleColourBValue);
+}
+function setRGBValueTrackColour(v) {
+ trackTrackColourRValue=v[0].toFixed();
+ trackTrackColourGValue=v[1].toFixed();
+ trackTrackColourBValue=v[2].toFixed();
+ updateRGB(document.getElementById('trackColour'),document.getElementById('sampleTrackColour'),trackTrackColourRValue,trackTrackColourGValue,trackTrackColourBValue);
+}
+var trackHandleColourControl= new Control.Slider(['trackHandleColourR','trackHandleColourG','trackHandleColourB'],'trackHandleColour',{
+        range:$R(0,255), sliderValue:[0, 155, 255],
+	  onSlide:function(v){setRGBValueHandleColour(v)},
+        onChange:function(v){setRGBValueHandleColour(v)}});
+var trackTrackColourControl=  new Control.Slider(['trackTrackColourR','trackTrackColourG','trackTrackColourB'],'trackTrackColour',{
+        range:$R(0,255), sliderValue:[0, 155, 255],
+        onSlide:function(v){setRGBValueTrackColour(v)},
+        onChange:function(v){setRGBValueTrackColour(v)}});
+updateRGB(document.getElementById('trackColour'),document.getElementById('sampleTrackColour'),0,155,255);
+updateRGB(document.getElementById('handleColour'),document.getElementById('sampleHandleColour'),0,155,255);
+</script>
+<p></p><div id='output' />
+</body>
+</html>

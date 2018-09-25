@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: searchfeedr labs Now Featuring Domain and Page Lists</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007868.html" title="OU Second Life Explorations" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007888.html" title="Greasemonkey for Rapid Prototyping" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007868.html">&laquo; OU Second Life Explorations</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007888.html">Greasemonkey for Rapid Prototyping &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 13, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">searchfeedr labs Now Featuring Domain and Page Lists</h3>
+
+<p>Another couple of pieces of the <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrlabs.php">searchfeedr</a> jigsaw fell into place tonight - a first attempt at styling using <a href="http://www.html.it/articoli/nifty/index.html">Nifty corners</a> (I lost the <em>e</em>, so obviously rounded corners  were next, right?) and the thing I've been putting off because it was a feature I wanted most - link lists showing the domains (and page links, if relevant) - that are being searched over.</p>
+
+<p><img alt="sfLabsStyle1.png" src="http://blogs.open.ac.uk/Maths/ajh59/sfLabsStyle1.png" width="1040" height="609" border="0" /></p>
+
+<p>To recap, searchfeedr allows you to add page and domain search limits to a search that can be carried out on the most popular web search engines, by automatically constructing advanced search queries for them.</p>
+
+<p>The orginal inspiration - deliSearch - took the search limits from a user's tagged bookmark feeds on delicious. This approach was generalised so that links from any web feed (RSS, Atom) etc. could be used to pipe the search limits into searchfeedr.</p>
+
+<p>The generalised searchfeedr approach can be easily customised. deliSearch is optimised to use a JSON feed from delicious, rather than an XML web feed -  but it could just as easily be implemented using a delicous web feed (I intend to do this for  <em>popular</em> delcious feeds). Customisations in the form of bookmarklets and Greasemonkey scripts that add a searchfeedr search box to  technorati, H20 Playlists, Blinklist, Wink and more are <a href="http://blogs.open.ac.uk/Maths/ajh59/007576.html">already available as demos</a>.</p>
+
+<p>The labs site now supports several other <em>searchfeedr</em> inspired searches - pageLinks pulls in limts based on the outgoing links found on a web page with a particular URL; linkSearch searches over the pages (or domains) that link <em>to</em> a page with a given URL. relatedSearch uses the similicious service to find pages on delicious that are related to a page with a given URL.</p>
+
+<p>Although developed originally for Yahoo! and the Yahoo! search API, the current version of searchfeedr loads in the actual search engine results page for a given search into an embedded iframe. This means that searchfeedr can actually be used to feed querries made to <em>different</em> search engines. At the moment, searchfeedr can create advanced search queries running domain limited searches for <a href="">Yahoo!, Google, Microsoft Live and AltaVista</a>.</p>
+
+<p>The current labs version of searchfeedr has only been tested in Firefox 1.5 so far, and the design is intended for a 1024px width screen. If anyone does try it out, I'd be interested to hear how you get on.</p>
+
+<p>Anyway - on with the story...</p>
+
+<p>Having got the links up in a very short time frame, the 'suppress domains' feature jumped out at me. How it works is this:</p>
+
+<p>- on hitting the search button, searchfeedr pulls in its search limits feed. This can be used to provide wither page or domain based search limits for the search query. That is, the search can be run over pages, or whole domains. The list of domains is extracted and popped into a domains list. If a page search is selected, the pages that ere being used as search limits are also listed.</p>
+
+<p>- clicking on page or domain links opens up the corresponding web page in the iframe results area. This aspect of searchfeedr can thus be used to navigate links associated with a particular <a href="http://blogs.open.ac.uk/Maths/ajh59/005914.html">search hub</a>. So for example, I can use this part of searchfeedr to navigate the links on a particular page, the links that link to that page, the links in a particular delcious tag feed, and so on. (Note that the number of links displayed is actually limited in number.)</p>
+
+<p>- checking any of the domain checkboxes removes that domain (and in the case of page based searches, all pages based on that domain) from the search query, and reruns the search. This feature thus allows you to further prune a set of search results very quickly indeed.</p>
+
+<p>Ho hum.... even though it only took a couple of hours to do these mods, it's used up loads of my creative energy... so time for a swift half, I think... and if you want to play, you can find the latest version  at the <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrlabs.php">searchfeedr labs</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 13, 2006 10:31 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007884.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

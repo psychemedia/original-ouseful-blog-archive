@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OU Library Amazon Greasemonkey Script</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006027.html" title="Pagelinks to OPML Generator" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006029.html" title="Opera Widgets" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006027.html">&laquo; Pagelinks to OPML Generator</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006029.html">Opera Widgets &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 06, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OU Library Amazon Greasemonkey Script</h3>
+
+<p>Earlier today, <a href="http://blogs.talis.com/panlibus/">Paul Miller</a> from Talis gave an 'Intro to Library 2.0' talk in the Library (blogged in part by <a href="http://kmi.open.ac.uk/people/marc/?p=377">Marc</a> during the talk; I have some notes, too, that I will pop up later).</p>
+
+<p>During the talk, Paul mentioned the use of <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> scripts for inserting library catalogue info into Amazon web pages (like <a href="http://www.mundell.org/2005/12/08/amazon-seattle-public-library-lookup-greasemonkey-script-updated/">this</a> or <a href="http://www.daveyp.com/blog/index.php/archives/60/">this</a>. I thought I'd posted an OU version of this script, but apparently not. (I do have a <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">library lookup</a> button on my <a href="http://blogs.open.ac.uk/Maths/ajh59/005845.html">OU Library Firefox toolbar</a> though, which does something similar, albeit it ina more clunky way (i.e. a way that requires a postive user action, specifically clicking the Library lookup button). </p>
+
+<p><img src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbar1_3.JPG" alt="OU Library Firefox toolbar" /></p>
+
+<p>Anyway - the Greasemonkey script hinted at above is easy enough to hack around, so here's a first pass (I'm not sure it's fully debugged yet, e.g. for books being catalogued or on order):  <a href="http://blogs.open.ac.uk/Maths/ajh59/ouLibLookup.user.js">Amazon UK OU Library Linky</a>. (To use it, you'll need Greasemonkey installed on Firefox).</p>
+
+<p>Here are few examples of what it does:</p>
+
+<p>A book that can be found in the OU library:</p>
+
+<p><img alt="amazonOULinky1.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/amazonOULinky1.JPG" width="638" height="118" border="0" /></p>
+
+<p><br />
+A book that can be found in several versions in the library (e.g. on the shelf and inelectronic format):</p>
+
+<p><img alt="amazonOULinky.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/amazonOULinky.JPG" width="555" height="323" border="0" /></p>
+
+<p><br />
+A book that is currently on loan from the library:</p>
+
+<p><img alt="amazonOULinky2.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/amazonOULinky2.JPG" width="511" height="155" border="0" /></p>
+
+<p><br />
+A book available in electronic format in the library (I guess we could link directly to the ezproxied version here?):</p>
+
+<p><img alt="amazonOULinky3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/amazonOULinky3.JPG" width="680" height="222" border="0" /></p>
+
+<p><br />
+Not found in the OU library:</p>
+
+<p><img alt="amazonOULinky4.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/amazonOULinky4.JPG" width="492" height="91" border="0" /></p>
+
+<p>In fact, this book is in the library under a different ISBN - maybe worth using <a href="http://www.oclc.org/research/projects/xisbn/">xISBN</a> (I think <s>Dave Pattern at Huddersfield has done this? or perhaps it was</s> <an href="http://weblog.infoworld.com/udell/2006/01/30.html">Jon Udell</a> has done this, but I can't get his script to work...? For amazon.co.uk, Jon's script needs at least the origTitle regexp tweaking, and I also had to tweak the ISBN regexp. It still failed to work though and I don't have any more more time to spend on it just now:-(</p>
+
+<p><br />
+PS If you prefer, here is an <a href="http://blogs.open.ac.uk/Maths/ajh59/ouLibLookupBranded.user.js">OU branded script</a>:</p>
+
+<p><img alt="brandedOUAmazonLinky.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/brandedOUAmazonLinky.JPG" width="558" height="177" border="0" /><br />
+</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April  6, 2006 06:25 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006028.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="OU Library Amazon Greasemonkey Script";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

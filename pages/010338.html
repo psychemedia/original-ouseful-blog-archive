@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: MicroSoft Popfly - Mashups for the Masses?</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010334.html" title="PLE as a Platform?" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010340.html" title="Popfly Openlearn Movie Player" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010334.html">&laquo; PLE as a Platform?</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010340.html">Popfly Openlearn Movie Player &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 26, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">MicroSoft Popfly - Mashups for the Masses?</h3>
+
+<p>Okay - it's late, but I just spotted my invite to <a href="http://popfly.ms">Microsoft's PopFly</a> mashup tool in alpha... anyone else been playing?</p>
+
+<p>The interface suggests I have invites - but I don't? I assume blogging about the tool is ok, similarly posting screenshots, but I'm going to hold off for a bit*, at least until I get to knock up a demo or two (things are a little unstable on my machine at the mo ;-)</p>
+
+<p>In the meantime, here are a couple of youTube movies - a <a href="http://www.youtube.com/watch?v=hkTdJAYb--M">3 minute video overview of Popfly</a> and a longer <a href="http://www.youtube.com/watch?v=8-lYVLuxICk">twenty minute video demo of Popfly</a>:</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/hkTdJAYb--M"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/hkTdJAYb--M" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>Suffice to say - the app is web based - though you do have to install the Silverlight beta. This seemed to install okay for Firefox on OS/X, Macbook Pro (and also onto XP Pro under Parallels - although Parallels doesn't offer 3D support so I don't know how many of the graphical UI blocks in Popfly will work?).</p>
+
+<p>* Okay - maybe a couple of quick comments about the app: the idea is much like Pipes - wire together functional/process blocks and UI blocks, setting internal parameters where necessary. There are a few functional/computational blocks - like regular expressions - which means you can get your hands a little dirty if you want to/have to. Of the third party apps, Yahoo had quite a few tools in the 'official' blocks toolbar (which also has space for user created blocks) but of Google support, there was no sign... Hmmm... ;-) [It seems <a href="http://feeds.feedburner.com/~r/Techcrunch/~3/119776240/">TechCrunch noticed this too</a>:-)]</p>
+
+<p><br />
+With the <a href="http://blogs.open.ac.uk/Maths/ajh59/010305.html">Scratch educational programming'n'animation tool</a> coming on to the scene last week, and the <a href="http://blogs.open.ac.uk/Maths/ajh59/009285.html">Yahoo Pipes web feed mashup tool</a> three months or so ago, there's now quite a spectrum of drag'n'drop, plug'n'play mashup editors out there in the wild...</p>
+
+<p>... not to mention point'n'click screenscrapers like <a href="httpp://dappit.com">Dapper</a> and intuitive online movie editors like <a href="http://www.scenemaker.net/">Scenemaker</a> (which lets you tag clipped segments within youTube - and other online video sites - movies) and multimedia players like <a href="http://splashcastmedia.com">Splashcast</a> for compiling multimedia assets in 'shows' and 'channels' that you can publish to your own site.</p>
+
+<p>And here's one from the BBC that sneaked out quietly - <a href="http://www.bbc.co.uk/radio4/science/findlistenlabel/index.shtml?programme=allinthemind20070501&ssorl=1179766447&ssoc=forgotten_password">find / listen / label - annotatable audio</a> (more info <a href="http://www.bbc.co.uk/radio4/science/findlistenlabel/help.html">here</a>):<br />
+<blockquote>This is a tool for adding notes to radio programmes. You can split the programme into smaller sections, called snippets, and then add a Label.</p>
+
+<p>Radio programmes can be split into snippets, like chapters. These may be associated with articles in the programme, like interviews, or just mark out interesting bits. The purpose of dividing the programmes like this is to make it easier for everyone to Find and Listen to specific parts of the programme.</blockquote></p>
+
+<p>So there you go, a few more tools to add to the list that show how <a href="http://education.guardian.co.uk/schools/comment/story/0,,1984347,00.html">ICT education is getting left behind</a>...</p>
+
+<p> ...and in case you haven't noticed, it's not just mutterings about ICT "education" that are getting louder - if you haven't already seen it, you could do a <em>lot</em> worse than taking 40 minutes out to listen to Sir Ken Robinson asking: <a href="http://www.ted.com/talks/view/id/66">Do schools kill creativity?</a>.</p>
+
+<p>If you think the answer is "yes", then what are you gonna do about it?</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May 26, 2007 01:34 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010338.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="MicroSoft Popfly - Mashups for the Masses?";
+ z_post_category="Web2.0";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

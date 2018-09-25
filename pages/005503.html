@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Synching Social Bookmarking Systems</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005502.html" title="Social Bookmarking Systems OPML Feed Generator" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005504.html" title="More on SOcial Bookmark Synching..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005502.html">&laquo; Social Bookmarking Systems OPML Feed Generator</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005504.html">More on SOcial Bookmark Synching... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 06, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Synching Social Bookmarking Systems</h3>
+
+<p>How effective is social bookmark synching? Earlier this week I <br />
+<a title="OUseful Info: Bookmark Synching, Bookmark Searching..." href="http://blogs.open.ac.uk/Maths/ajh59/005497.html">posted</a> about the synching services offered by <a href="http://simpy.com">Simpy</a>, <a href="http://spurl.net">Spurl</a> and <a href="http://wink.com">Wink</a>. <br />
+(NB <a href="http://scuttle.org/">Scuttle</a> will also synch with del.icio.us). Here are a few more thoughts, particularly insofar as they relate to <a href="http://blogs.open.ac.uk/Maths/ajh59/005336.html">distributed social bookmarking</a>.</p>
+
+<p>First of all, the synching service appears to be a one off - I click the button and the bookmarks are copied across to the service from del.icio.us (typically...).</p>
+
+<p>Now I can understand this mode of operation when I want to sync a service with my browser favourites (not that I use those anymore...) - there's no way that the service can easily grab any bookmarks I've made since the last sync operation from my browser.</p>
+
+<p>But that's not true for the online bookmarking services. Once I've set up a synch-link, it would be handy if I could set up a daily top-up, for example, whereby the service I'm synching <em>into</em> subscribes to my personal RSS feed at the service I'm synching <em>from</em> and grabs all the latest additions and changes.</p>
+
+<p>Why would this be useful? Well, it would let me bookmark in a mixed way, for example using a del.icio.us account for home bookmarking, CiteULike or Connotea for work related links, and so on, whilst still maintaining an meta-archive of <em>all</em> my links.</p>
+
+<p><a href="http://www.suprglu.com">Suprglu</a> does this for <a href="http://psychemedia.suprglu.com/">me</a> with my various blog feeds, and I think it would be handy to have a related service for my bookmarks...</p>
+
+<p>I could quite imagine a star based system architecture, whereby one or two major systems will synch from large numbers of minor social bookmarking systems, and perhaps also synch back to them (e.g. I think Wink will update del.icio.us with any (or is that just particularly tagged?) bookmarks I make in Wink).</p>
+
+<p>If the major social bookmarking systems/hubs then synched between each other, we could have quite a fluid(?!), automated transport of links across the systems.</p>
+
+<p>Putting filters in place, so as to only synch certain tags or tag combinations, would allow users to maintain different profiles of themselves on different systems. Being able to set synch frequency, or support pings (both incoming and outgoing), would also be useful.</p>
+
+<p>I've argued before that individuals maintaining more than one social bookmarking persona is not necessarily a bad thing - for example, I desire different tools when making personal bookmarks as compared to academic, work or research related bookmarks; I require different search tools for these different aspects of my online behavior; when recommendation systems start mining my bookmarks I may want to cultivate different personas, and so on.</p>
+
+<p>The growth of <em>lensing</em> applications such as <a href="http://www.squidoo.com/">Squidoo</a> or <a href="http://h2obeta.law.harvard.edu/">H2O Playlist</a> and personal/customised search applications such as <a href="http://www.scoopgo.com/">ScoopGO!</a> (do they want Yahoo! to buy them, do you think!?), or <a href="http://rollyo.com">Rollyo</a>, as well as the  <a href="http://blogs.open.ac.uk/Maths/ajh59/005493.html"><em>people-powered search engines</em></a>, suggests that <em>aggregation</em> and <em>synching</em> tools will be useful for those of us who don't just adopt whatever service I use first because it came via my browser's default homepage/bandwidth provides portal.</p>
+
+<p>PS As to what other services should be synched to - <a href="http://www.connotea.org">Connotea</a> would be handy for me, along with <a href="http://www.citeulike.org">CiteULike</a> which I haven't really used yet, but which is near the top of my 'to play with' list...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January  6, 2006 10:04 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005503.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

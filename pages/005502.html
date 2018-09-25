@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Social Bookmarking Systems OPML Feed Generator</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005501.html" title="OPML Generator now includes Simpy..." />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005503.html" title="Synching Social Bookmarking Systems" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005501.html">&laquo; OPML Generator now includes Simpy...</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005503.html">Synching Social Bookmarking Systems &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 05, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Social Bookmarking Systems OPML Feed Generator</h3>
+
+<p>Following the previous couple of posts on an OPML generating web page application for collating the RSS feeds for the <a href="http://simpy.com">Simpy</a> and <a href="http://del.icio.us">del.icio.us</a> social bookmarking systems, I have now tidied up the code, added <a href="http://www.connotea.org">Connotea</a> to the mix, and included support for generating feeds that cover several systems at once.</p>
+
+<p><img alt="Social Bookmarking Systems OPML Generator" src="http://blogs.open.ac.uk/Maths/ajh59/sbOPMLGenerator.JPG" width="664" height="481" border="0" /></p>
+
+<p>Please feel free to try out this new version of my <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPML.html">Social Bookmarking Systems OPML Feed Generator</a>.</p>
+
+<p>All comments appreciated, especially bug reports, suggestions for other social bookmarking systems to include, and details about how you've used the generated OPML feeds/which online services or desktop applications you've used them with, etc.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January  5, 2006 11:28 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>I think having Connetea is excellent. Would you be interested developping an OPML for Engineering Village 2 where a user can track a term i.e nanotechnology, an author and a journal title all in one OPML feed?<br />
+thanks<br />
+rafael</p>
+<span class="comments-post">Posted by: <a href="http://rafaelsidi.blogspot.com">Rafael Sidi</a> at January  6, 2006 03:33 AM</span>
+</div>
+<div class="comments-body">
+<p>what about allowing the user to specify username and service on an individual basis? I mean something like on each line ask service, username, tag(s). Maybe also allowing user to enter URL of a known feed to take care of locally hosted systems like Scuttle would be cool.</p>
+<span class="comments-post">Posted by: <a href="http://idea.zanestate.edu">todd</a> at January  6, 2006 05:57 PM</span>
+</div>
+<div class="comments-body">
+<p>This is great. Let us know when you get CiteULike into the mix!</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;rickla&#46;rick&#64;gmail&#46;com">Rick</a> at January  7, 2006 06:20 AM</span>
+</div>
+<div class="comments-body">
+<p>I have just added citeulike and scuttle, as well as  a user specified domain option.</p>
+
+<p>On the to-do list are the ability to build up lists of users/tags dynamically (using javascript/dom (Code snippets/references/examples that i can 'reuse' are most welcome;-), and support for generating paths that take groups into account.</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">tony</a> at January  8, 2006 01:07 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005502.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

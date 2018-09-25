@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: My Bookshelf</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005946.html" title="&quot;OPML List of Links on This Page&quot; Bookmarklet" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005952.html" title="DOI and OpenURL Resolution" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005946.html">&laquo; "OPML List of Links on This Page" Bookmarklet</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005952.html">DOI and OpenURL Resolution &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 15, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">My Bookshelf</h3>
+
+<p>An interesting informal, internal project I found out about a week or two ago that sprang up out of a bet, so I believe (<em>"So Tom if you manage to setup a running system (technology + people) which captures over 50% of what is on the shelves in KMi and maintains this for at least 3 months I'll buy you a bottle of champagne (or equivalent other alcohol)"</em>) which provides a nicely rendered listing of the books in on your shelf given just their ISBN numbers.</p>
+
+<p>The project is called <a href="http://bookshelf.open.ac.uk/">Bookshelf</a>, and the way it works is this:</p>
+
+<blockquote>You provide a text file containing the ISBNs of books on your bookshelf. A PHP script then reads the text file, looks up each of the ISBNs using the Amazon.co.uk Web Services API, collects all the results and displays them together in one list. If you're using a recent browser like Firefox then some XSLT code transforms the XML from Amazon into XHTML to provide a human readable version.</blockquote>
+
+<p>If you have OU intranet access you can see a <a href="http://stadium.open.ac.uk/stadia/preview.php?s=29&whichevent=628">presentation</a> all about it. </p>
+
+<p>The guys who've been developing the Bookshelf (as an aside to their PhD work, apparently - amazing what a postgrad will do for a free drink!) are <a href="http://kmi.open.ac.uk/people/tom/">Tom Heath</a> and <a href="http://kmi.open.ac.uk/people/mark/">Mark Gaved</a> - their day job projects look equally interesting too.</p>
+
+<p>A few days after seeing the demo,  another similar app crossed one of my in-feeds: <a href="http://planb.nicecupoftea.org/archives/001311.html">Delicious Library</a>. SImilar effect, but the execution seems a little more laboured to me.</p>
+
+<p>Anyway, it'll be interesting to see how both of these progress...</p>
+
+<p>[<strong>Update:</strong> it'd be neat if the chaps could work <a href="http://blog.mix06.com/virtualmix/archive/2006/03/15/Amazon.aspx">Amazon RSS wishlists</a> into the mix somehow, perhaps brokering who you might borrow books on your wishlist from, based on their bokshelf items?]</p>
+
+<p>PS Just because, anyone interested in this sort of thing who hasn't already come across <a href="http://www.librarything.com">LibraryThing</a> should probably go and check it out.</p>
+
+<p>PPS Anyone know if there's anyone looking at a <a href="http://microformats.org/wiki/Main_Page">book info microformat</a>? [Here's some work on a <a href="http://microformats.org/wiki/cite">citation microformat</a> and here's the <a href="http://www.openurl.info/registry">OpenURL</a> inspired <a href="http://ocoins.info/cobgbook.html">CoINS book reference</a> description.]</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 15, 2006 09:53 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005948.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

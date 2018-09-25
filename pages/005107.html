@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Towards a Managed Social Bookmarking Environment in Higher Education</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005090.html" title="Playing With the ROUTES-XML Feed - Getting There" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005115.html" title="Unintended Learning" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005090.html">&laquo; Playing With the ROUTES-XML Feed - Getting There</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005115.html">Unintended Learning &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 04, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Towards a Managed Social Bookmarking Environment in Higher Education</h3>
+
+<p>As followers of this blog will know, one of the topics I keep doodling about is <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?IncludeBlogs=1149&search=education+social+bookmark">social bookmarking in an academic context</a>. In this post, I want to start considering how we might use such tools at scale in a managed environment.</p>
+
+<p>A couple of services promote themselves as being directed towards educational users (I'm thinking of <a title="Scuttledu - Online Bookmarks Manager for Educators" href="http://blogs.zanestate.edu/mybookmarks/">Scuttledu - Online Bookmarks Manager for Educators</a> and <a href="http://connotea.org/">Connotea</a> in particular) but at the moment their focus appears to be on recruiting individual users, rather than offering a 'solution' at a cohort or even institutional level.</p>
+
+<p>So  - let's get to it: a first stab at identifying some of the issues that are likely to arise when considering how to integrate a social bookmarking system into a managed, institutionally administered, loosely coupled VLE. The sort of environment where it falls to sysadmin to says who's allowed where, and possibly also who can say what.</p>
+
+<p>Just to ground my thoughts, I shall assume that the system we're going to adopt will be something based on Connotea, in part because the code for an early version at least has been released under an open content license (you can <a href="http://sourceforge.net/projects/connotea">download the Connotea source code from Sourceforge</a>).</p>
+
+<p>To provide even more context, let's assume that we're might want to use the social bookmarking within an institution in the following ways (this list is not necessarily complete):</p>
+
+<ol><li>By registering all the students on a particular course to the system so they can use it in course related exercises;</li>
+<li>By registering every student who joins the institution so they can use it as a resource throughout their registration period, and even beyond (i.e. when they graduate);</li>
+<li>To allow the system to integrate with pre-existing authentication systems;</li>
+<li>To allow students to share knowledge between cohorts (e.g. so one year's coohrt can leave a legacy to the next cohort);</li>
+<li>To provide an environment where student project teams or tutor groups can share bookmarks and comments privately amongst themselves;</li>
+<li>To provide a bookmarking component in an e-portfolio system;</li>
+<li>To maintain a needs-serving link with graduates/alumni by continuing to host their bookmarks (perhaps supporting this service by advertising relevant courses or fundraising initiatives to such alumni at a future date;-);</li></ol>
+
+<p>Additional constraints may arise as a result of working with particular cohorts, such as minors or vulnerable groups.</p>
+
+<p>For example, suppose that there is a requirement to ensure that all bookmarks are moderated. Let us assume that there are several possible levels of moderation:<br />
+<ul><li><em>strong moderation</em>, by which we mean that a moderator must approve every link before <em>anyone</em> can click-thru it (including the person who saved the bookmark);</li><br />
+<li><em>intermediate moderation</em>, in which a user may follow their own bookmarks but a moderator must approve them before they can be shared; and</li><br />
+<li><em>weak moderation</em>, whereby bookmarks may be shared within a group but must be approved by a moderator before they can be made public.</li><br />
+<li><em>no moderation</em> - users are free to bookmark what they like and may choose whether to keep it private, share it with one or more groups, or make it public.</li></ul></p>
+
+<p>Taking Connotea as an example, how might we implement these various levels of moderation?</p>
+
+<p>In the first case - <em>strong moderation</em> - all bookmarks could be held in an 'awaiting approval table', which contains all the fields used to store a bookmark, plus the user's ID and a moderation approval state flag. When a moderator approves the message, the 'approved' flag is set and the bookmark can be saved to the user's bookmark list.</p>
+
+<p>In the second case - <em>intermediate moderation</em> - the bookmark would be saved to the user's bookmark list as a private bookmark AND a lock would be placed on the bookmark preventing the user from sharing it (this could be managed within a 'lock this bookmark' table recording the user and bookmark ID, and the lock state). If the user attempted to share the bookmark, the system would first heck the 'bookmark lock' table to see if the bookmark had been opened up by the moderator for sharing. In terms of usability, it would be courteous to inform the user when a bookmark had been enabled for sharing, or even automatically share it as soon as received approval if that preference had been previously expressed by the user.</p>
+
+<p>In the third and final case - <em>weak moderation</em> - the lock state within a lock table may be used to characterise the level of locking applied. For example, one might imagine being able to lock the shareability of the bookmark to the extent that it was <em>locked against</em> public sharing, <em>locked against</em> sharing with one or more specified groups, or <em>opened up</em> to sharing with particular groups (and by implication locked against sharing with all other groups).</p>
+
+<p>There may also be a place for an <em>enforced privacy</em> regime in which users are not allowed to share bookmarks with each other at all, <em>ever</em>, yet still require strong moderation. A 'bookmark lock' table would be enough to support this facility.</p>
+
+<p>A weaker view might enforce <em>restricted sharing</em> in which the user was only allowed to share bokmarks with several groups. Once again, a 'bookmark lock' table with lock states set for each group ('shareable', 'shareable when approved', 'not shareable') should be enough to support this facility.</p>
+
+<p>For completeness, we may also want to consider the extent to which comments may be shared. The simplest assumption, of course, is that comments and links share the same sharing privileges, but this is not necessarily so. For example, there may be occasions in which you want users to share links, <em>but</em> keep their comments private, perhaps until some embargo date.</p>
+
+<p>How would students use such a system, and what sort of sharing should be encouraged (for example, should we have global public sharing, sharing within cohorts but not across years, sharing within tutor groups but not between tutor groups and so on)? Allied to this are questions relating to providing users with default tags to tag resources (i.e. tags which are automatically applied depending on student context).</p>
+
+<p>Scuttledu takes the approach of automatically tagging resources with a grade level identified from a user's personal profile. It's easy to see how such a technique could be used for a student on a particular course, but problems arise if a student is registered on more than one course at a particular time.</p>
+
+<p>Another approach may be to follow services such as <a href="http://del.icio.us/">del.icio.us</a> which offer recommended tags to a user whenever they bookmark a resource.</p>
+
+<p>The provision of separate bookmarks for a student to bookmark resources with different default tags (e.g. different bookmarks for each course, or for just personal use) is another possible strategy. (I'm not yet clear how much further this could be taken by embedding bookmarking tools in a browser, for example as <a href="http://www.flock.com">Flock</a> has done.</p>
+
+<p>Finally, I guess I should also say <em>why</em> we might want to run a social bookmarking system in such a managed, or controlled way? Some of the reasons that come to mind (mostly as a result of my uninformed, stereotyped view of central computing services and beancounter' views in general!) are as follows:<br />
+<ul><li>social bookmarking could become a value-adding service, the reliable provision of which forms part of the institution's contract with the student; as such, liveness and reliability need to be guaranteed; uniformity of provision (and a guaranteed high quality of provision) to students</li><br />
+<li>if social bookmarking is to be introduced as part of the learning strategy, some would argue that its use needs to be carefully managed to ensure that it is capable of delivering whatever the learning designer requires; (unfortunately, this approach reminds somewhat of <a href="http://blogs.open.ac.uk/Maths/ajh59/005115.html">unintended learning as a <em>bad</em> thing</a>);</li><br />
+<li>integration with other cohort related batch processes (e.g. registering all new students, or setting particular group privileges for a particular cohort);</li><br />
+<li>Educational establishments need to be wary of what gets published on their domains. List of links to adult resources, for example, are unlikely to be tolerated.</li></ul></p>
+
+<p>It will fall to another post for me to reflect a bit on the contents of the lists braindumped above...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November  4, 2005 06:15 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005107.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

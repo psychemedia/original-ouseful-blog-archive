@@ -1,0 +1,1194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: September 2006 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2006_08.html" title="August 2006" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2006_10.html" title="October 2006" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_08.html">&laquo; August 2006</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2006_10.html">October 2006 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">September 29, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007576"></a>
+<h3 class="title">searchfeedr, pageSearch and deliSearch Combined Interface</h3>
+
+<p>To try and simplify matters with my various feed limited searches, I've pulled together a combined interface that allows users to enter the limit source (a web feed URL, a page URL, or a delicious username/tag combination) into one text box, and the search terms into another:</p>
+
+<p><img alt="searchfeedrplus.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrplus.png" width="671" height="323" border="0" /></p>
+
+<p>I've also posted a <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrGenericPanelPlus.user.js">Greasemonkey script</a> and <a href="javascript:(function(){d=document;b=d.getElementsByTagName('body')[0];function ss(src){s=d.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src',src);b.appendChild(s);};ss('http://blogs.open.ac.uk/Maths/ajh59/searchfeedrGenericPanelPlus.js');})()">bookmarklet</a> that will add a searchfeedr box to delicious user tag pages, Wink user collections, Technorati tag pages and H20 playlist pages, with more to come, including a straightforward 'search the links on this page' tool.</p>
+
+<p>In the meantine, here are three links demonstrating the URL API to <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrplus.php">searchfeedr+</a>:</p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrplus.php?f=http://h2obeta.law.harvard.edu/rss/64211&q=bookmarking">feedSearch over domains from an H20 Playlist RSS feed</a>:<br />
+<img alt="sffd.png" src="http://blogs.open.ac.uk/Maths/ajh59/sffd.png" width="678" height="223" border="0" /></p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrplus.php?f=http://blogs.open.ac.uk/Maths/ajh59/007534.html&q=%22japanese%20knotweed%22&s=pages&t=p">pageSearch of a OUseful blog post over pages</a><br />
+<img alt="sfpp.png" src="http://blogs.open.ac.uk/Maths/ajh59/sfpp.png" width="671" height="215" border="0" /></p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrplus.php?f=psychemedia/library&q=beta&s=pages&t=d">deliSearch over pages</a><br />
+<img alt="sfdp.png" src="http://blogs.open.ac.uk/Maths/ajh59/sfdp.png" width="674" height="217" border="0" /></p>
+
+<p>Slowly, slowly, the pieces come together...it's just a shame I have so many other side projects on the go...</p>
+
+<p>Next stop is to integrate the <a href="http://xoxotools.ning.com">xoxotools</a> running on <a href="http://ning.com">Ning</a> into the searchfeedr app directly, along with the pagescraping tools. Then I'll be able to accept <em>whatever</em> in the search limit text box without the need for the feedSearch/pageSearch/deliSearch selction buttons - a quick parse of the limit string, and a test of the header of the page if the limit specifies a URL (to see if the page is (x)html - a web page -  or xml - a web feed) - should provide enough of a signal to invoke the appropriate tool automatically :-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007576.html">11:09 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7576" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 27, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007560"></a>
+<h3 class="title">SearchTab Display of Several Web Search Engines</h3>
+
+<p>I've just been doodling a few tweaks to my tabbed search engine display page, and the result is quite fun (well I think so) so I thought I'd post it here:</p>
+
+<p><img alt="searchTabNew.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabNew.png" width="757" height="566" border="0" /></p>
+
+<p>The page has an API of sorts:<br />
+<ul><li><a href="http://ouseful.open.ac.uk/searchTabs.php"><em>http://ouseful.open.ac.uk/searchTabs.php</em></a> is the page itself. Arguments can be added on to the end of the URL by using a <em>?</em>followed by the required argument(s). Multiple arguments are separated in the normal way with an ampersand (&).</li><br />
+<li><em>q=</em> defines the query string; quoted phrases are ok too (for example, <em>q=%22space%20science%22</em> in the URL gives the quoted phrase "space science" in the query shown</em>). If you call the page with a query in the URL, it will make that query available to all the search engines when the page loads.</li><br />
+<li><em>s=</em> defines the search engines to be displayed, and the order they should appear in. Each search engine is distinguished by a one (and maybe two, in future) character code, comma separated. The codes are as follows:<br />
+ - g Google<br />
+ - y Yahoo<br />
+ - m MSN/Microsoft WIndows Live<br />
+ - c Clusty<br />
+ - a altavista<br />
+ - A Ask<br />
+The OU search tab is always provided. <s>and still appears</s> All the supported search tabs appear if the <em>s</em> argument is omitted.</p>
+
+<p>If you want to load a page with a couple of search engines, and no initial query, just use the s argument - e.g. <a href="http://ouseful.open.ac.uk/searchTabs.php?s=y,g">http://ouseful.open.ac.uk/searchTabs.php?s=y,g</a>  gives you Yahoo! andf Google.</li></ul><br />
+So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22technology%20faculty%22%20robotics&s=a,c,y">http://ouseful.open.ac.uk/searchTabs.php?q=%22technology%20faculty%22%20robotics&s=a,c,y</a> loads the following page:</p>
+
+<p><img alt="searchTabdemo.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabdemo.png" width="766" height="560" border="0" /></p>
+
+<p>The intention behind the search tabs page is to allow a relatively quick an easy comparison of several search engines using the same query.</p>
+
+<p>This may be useful in information skills programmes, if only to help students realise that there are alternative, general purpose web search engines to Google, and that they all tend to give slightly different results.</p>
+
+<p>if there are any search engines missing that you think really should be included, drop me a line.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007560.html">10:15 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7560" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 25, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007543"></a>
+<h3 class="title">Opening Up OU Administrative Content with Dapper</h3>
+
+<p>Over the weekend, I had a little tinker with <a href="http://www.dappit.com">Dapper</a> that lets you define what are essentially screen scraping profiles that can be applied to a set of 'look-alike' webpages and then used to present the scraped information in a variety of formats - XML, HTML, JSON, and so on.</p>
+
+<p>My first attempt was to try and scrape some of the OU Library Voyager catalogue results pages. However, the HTML is such a mess on those pages that it bugged Dapper out confirmed via an email to the Dapper team). Attempts at scraping the <a href="http://library.open.ac.uk/resources/databases.html">list of databases</a> also met with failure, presumably because the listing is so long...</p>
+
+<p>So instead I turned to the OU course catalogue, with a view to seeing what I could pull out of pages like the course pages for <a href="http://ouseful.open.ac.uk/T324">T324 Keeping Ahead in Information and Communication Technologies</a> or <a href="http://ouseful.open.ac.uk/TU120">TU120 Beyond Google</a></p>
+
+<p><img alt="courseInfo.png" src="http://blogs.open.ac.uk/Maths/ajh59/courseInfo.png" width="458" height="472" border="0" /></p>
+
+<p>How to use Dapper to scrape a page is well illustrated by a <a href="http://www.dappit.com/dapperDemo/">screencast demo</a> on the Dapper site, so I won't repeat it here...</p>
+
+<p>So after half an or so, how far did I get? Well - why not see for yourself: <a href="http://www.dappit.com/dapp-howto-use.php?dappName=OUCourseInfov001a">OU Course Info v0.01a</a>:</p>
+
+<p><img alt="courseinfoScraped.png" src="http://blogs.open.ac.uk/Maths/ajh59/courseinfoScraped.png" width="775" height="136" border="0" /></p>
+
+<p>The information I went for was the course code and title, next srtart date (and fee) plus an attempt at pulling out some assessment data.</p>
+
+<p>I also built in a query argument to let users enter a course code so that information can be scraped from any course page:</p>
+
+<p><img alt="courseInfoUsage.png" src="http://blogs.open.ac.uk/Maths/ajh59/courseInfoUsage.png" width="753" height="205" border="0" /></p>
+
+<p>Usage options include opbtaing an XML feed (e.g. here's an <a href="http://www.dappit.com/RunDapp?dappName=OUCourseInfov001a&v=1&variableArg_0=T184">XML feed for <em>Robotics and the Meaning of Life</em></a>).</p>
+
+<p><img alt="courseXML.png" src="http://blogs.open.ac.uk/Maths/ajh59/courseXML.png" width="844" height="224" border="0" /></p>
+
+<p>The link option looks interesting, though I haven't tried it yet. What it seems to offer is  a way of wiring, or <a href="http://blogs.open.ac.uk/Maths/ajh59/007477.html">pipelining</a>, several Dapper apps together...</p>
+
+<p>As a tool for rapid prototyping "data-web" services by screenscraping legacy web pages, Dapper looks promising. Stability issues - in the sense of parsing tatty HTML pages - need addressing, as the attempt to scrape the OU Voyager catalogue shows, but using a tool like this is certainly easier than trying to write your own regular expressions and Perl scripts!</p>
+
+<p>I wonder whether a feature to run a page through Tidy and then apply an XSLT to it to try and tidy it up/preprocess it a little before working the Dapper magic may be appropriate? It would raise the barrier to entry somewhat for novice users, but then again, it could just be offered as a power tool...</p>
+
+<p>...and it would still be easier than writing Perl from scratch! </p>
+
+<p>Anyway, anyway, I'm looking forward to using Dapper quite a bit more over the coming months  in an attempt to try and get OU related information into a form in which it becomes more generally OUseful, so I'll keep you posted ;-)</p>
+
+<p>PS 8th Feb 07: it seems that the described above Dapp has rotted somewhat and quite a few of the fields aren't being populated. This is always going to be an issue with scraping pages, and one reason why applying things like <a href="http://www.w3.org/2004/01/rdxh/spec">GRDDL</a> to pages containing meaningful semantics is a better bet. Until the day when XML feeds of content like this are provided as a matter of course, that is... Roll on <a href="http://www.elframework.org/projects/xcri">XCRI</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007543.html">11:49 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7543" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 24, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007535"></a>
+<h3 class="title">Customisable Public Topic Focussed Portals and Windows Live Search Macros</h3>
+
+<p>One of the things I've been meaning to blog about for several weeks now is the <a href="http://www.zimbio.com">Zimbio Public Portal</a>. I've also been meaning to have a play with <a  href="http://dev.live.com/blogs/livesearch/archive/2006/06/07/31.aspx">Windows Live Search Macros</a>.  So with <a href="http://ouseful.open.ac.uk/tu120">Beyond Google</a> set to go live in the next couple of weeks, I thought I'd give them both a quick run through in case they're worth mentioning at an appropriate point in the course conferences - or even via the course team blog (depending how we work it - it's behind the firewall and private to the Course Team at the moment).</p>
+
+<p>Zimbio offers easily customised, topic focussed public portals. The straightforward portal set-up procedure allows you to add <em>feedrolls</em>, <em>searchrolls</em>, several flavours of 'tracker' - for news, blogs or images, as well as a group blog, shared notepad, member forum and live chat. One neat touch is the ability to see member presence status on a variety of IM services, a component I know <a href="">Marc Eisenstadt</a> in <a href="http://kmi.open.ac.uk/">KMi</a> has been looking for for some time...</p>
+
+<p>The trackers allow you to set up saved keyword searches, which can be added to, edited or deleted by members, with the results being fed live into the portal.The linkroll and feedroll display member saved links news item headlines from member added feeds. Portal pages also come with OPML web feeds, so you can effectively receive all the portal news components remotely in your own feed reader.</p>
+
+<p>With just a little imagination, you can see how a service like Zimbio could be used to provide an easily customisable, course related portal. </p>
+
+<p>As an example, I set up a quick <a href="http://www.zimbio.com/portal/Beyond+Google">Beyond Google</a> page on Zimbio - and here's the corresponding <a href="http://www.zimbio.com/portal/Beyond+Google/opml">OPML</a> feed.</p>
+
+<p>As ever with using public services on a 'closed' course, membership issues may need resolving to lock down certain features so that they are only available members of a given course cohort. As it stands, Zimbio is still perhaps a little too general in scope to be used out of the box as a key component of an online course offering, but it does raise useful questions about the 'live content' and search related components that can be included in a topic or course specific portal.</p>
+
+<p>Turning now to Microsoft <a href="http://search.live.com/macros">Live Search Macros</a>, these "enable you to quickly create a search engine that is custom tailored to any topic area". Each of these macros is similar to, if rather more flexible than, a <a href="http://builder.search.yahoo.com/">Yahoo search builder</a> (which I blogged about <a href="http://blogs.open.ac.uk/Maths/ajh59/007308.html">here</a>). In particular, Live Search Macros allow you to combine the full range of advanced search limits in a string that will be added to any query you make using the macro.</p>
+
+<p>When constructing a macro, it's possible to preview the result on your own query, and compare the results with the 'raw' search in a two column display. While this feature is very useful, I take issue with the usability: the comparison page open up in a new page, and as far as I can tell it's impossible to tweak the macro within that page - you have to go back to the macro construction page to do that. With Live Search making such a big play in terms of AJAX based interactions, I fully expected the preview search to appear within the macro cosntruction page.</p>
+
+<p>When I've had time to 'tune' some demos using these services, I'll blog them again, along with more links and a few screenshots.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007535.html">11:37 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7535" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007534"></a>
+<h3 class="title">If DRM Scares You, What About BRM?</h3>
+
+<p>In the bits of the blogosphere I follow, DRM (<a href="http://en.wikipedia.org/wiki/Digital_Rights_Management">digital rights management</a>) is often considered to be a <em>Bad Thing</em> because of the restrictions it places on how the purchaser can use whatever it is that has had DRM applied to it.</p>
+
+<p>How much more uproar would there be if it were conceivable that DRMd songs, for example, could 'infect' or taint DRM free files with copy protection? Just imagine it - viral DRM!</p>
+
+<p>At a time when some of the world's largest media companies are beginning to see value in allowing their catalogue items to be shared, it is   maybe worth casting an eye over at the biotech firms, and in particular the seed 'manufacturers', who are developing gene technologies that  cause second generation plants to be sterile, thus preventing purchasers of first generation seed from saving seed from the plants they have grown. If I was minded to coin a phrase to describe this approach, <em>Biological Rights Management</em> (BRM) or <em>Genetic Rights Management</em> (GRM) are two that come to mind.</p>
+
+<p>And note that I don't mean BRM in the sense of patents on genes, which is difficult enough to think clearly about. This is about genetically engineering biological reproductive processes so that copy protection is built in.</p>
+
+<p>Known widely as <a href="http://en.wikipedia.org/wiki/Terminator_technology"><em>Terminator Technology</em></a>, there is spectrum of concerns amongst many opponents of this form of genetic engineering, ranging from the purely economic (farmers can't buy seed one year, then save it for the next - they have to buy it in each year) to fears that TT plants may contaminate, through pollination, non-BRMd plants.</p>
+
+<p>Many plants are propagated seedlessly, of course, traditionally through the use of cuttings, and <a href="http://www.madsci.org/posts/archives/2002-04/1020215334.Ag.r.html">how seedless fruits propagate</a> is another story altogether, but for us to try to engineer in what amounts to copy protection, using approaches that I assume are rather more lab-based than traditional cross or selective plant breeding ever was, concerns me somewhat.</p>
+
+<p>What brought this to my attention was an article in the latest <a href="http://www.gardenorganic.org.uk/organic_way/index.php">Organic Way</a> magazine, which I still receive having signed up to and never left what was the Henry Doubleday Research Association (HDRA) - now rebranded as 'Garden Organic' - ten or more years ago, when life was more balanced and I still had an allotment!</p>
+
+<p>My interest piqued, I had a little dig around for recent news stories about the state of the art in this sort of technology, and found a <a href="http://banterminator.org/news_updates/news_updates/monsanto_announces_takeover_of_delta_pine_land">news item</a> from the activist group <a href="http://banterminator.org">banterminator.org</a> about Monsanto recently buying a company that pioneered the development of Terminator gene technology.</p>
+
+<p><a href="http://www.dvorak.org/blog/?p=6820">Dvorak Uncensored</a> also picked up on that announcement and had a little rant about it.</p>
+
+<p>Time maybe to start watching this one before the biological rootkits get out of hand? And I don't just mean in the sense of <a href="http://www.cabi-bioscience.org/html/japanese_knotweed_alliance.htm">Japanese knotweed</a>!</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007534.html">08:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7534" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 21, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007496"></a>
+<h3 class="title">Leveraging searchfeedr with pageSearch</h3>
+
+<p>I took a day off today fro a bit of guilt free playing with some of the beta invite apps I've got backlogged, but as ever I got sidetracked and just had to scratch an itch that came up last night. The itch started when I realised that the feeds from pages like delicious, wink, technorati etc. that I can generate from user page URLs, and use to feed <a href="http://blogs.open.ac.uk/Maths/ajh59/007309.html">searchfeedr</a>, are actually producing info in a machine readable way that can be obtained 'by force' - by scraping the links from the page directly, an approach I've used before in my <a href="http://blogs.open.ac.uk/Maths/ajh59/005913.html">search links on this page</a> tools.</p>
+
+<p>Anyway, searching back over the <a href="http://feeds.feedburner.com/ouseful">OUseful blog</a> for those tools, I also turned up a post to the demo <a href="http://blogs.open.ac.uk/Maths/ajh59/006027.html">pagelinks2opml generator</a>. Which of course got me thinking...if this were a pagelinks2json tool, that scraped links off a page given it's url, and made them available via a JSON feed, I could feed them as limits directly into <em>searchffedr</em>.</p>
+
+<p>Like this: <a href="http://blogs.open.ac.uk/Maths/ajh59/pageSearch.php">pageSearch - (searchfeedr edition)</a>.</p>
+
+<p>To see how it works - sort of - here's another image served up directly from <a href="http://gliffy.com">Gliffy</a>:</p>
+
+<p><img src="http://www.gliffy.com/pubdoc/1072995/L.jpg" alt="architecture of pagesearch" /></p>
+
+<p>This image was created by copying an image I'd already drawn on Gliffy, and just making one or two minor changes.</p>
+
+<p>The pageSearch tool, too, only required very minor changes to the searchfeedr script to get it to work (one line, in fact...)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007496.html">03:09 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7496" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007494"></a>
+<h3 class="title">Personal Search Engines</h3>
+
+<p>Time to revisit the latest happenings in personal search engines, prompted by a couple of things that have recently passed through my mailbox and feedreader.</p>
+
+<p>First up is <a href="http://www.mojeek.com/mps">Mojeek Personal Search</a>, which recalls <a href="http://blogs.open.ac.uk/Maths/ajh59/007308.html">Yahoo! search builder</a>, Rollyo and my own <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.php">deliSearch</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/pageSearch.php">pagesearch</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedr.php">searchfeedr</a> tools in certain respects.</p>
+
+<p><em>Mojeek Personal Search</em> - which you can see demoed by <a href="http://www.citenik.co.uk/">Citenik</a>, a search engine vertical search tool - offers users the opportunity to:</p>
+
+<blockquote># Create your own personal or topical search engine.
+# Add and remove unlimited number of domains (Free Version up to 1000).
+# Remove domains from the main Mojeek Search Results.
+# Publishable links available to help share your engine and provide the service to your site's visitors (of course you can also keep it secret!).
+# Your own Mojeek Personal Search home page (hidden or publicly available).
+# Retrieve your personal search results in xml format.
+# Add your own logo.
+# Add your own header and footer.
+# Style the results to the exact look and feel of your own site.</blockquote>
+
+<p>(Just by the by, another search engine specific news site opened up a week or two ago - Battelle's <a href="http://battellemedia.com/searchmob/">SearchMob</a>.)</p>
+
+<p><em>Mojeek Personal Search</em> is actually just an add on to the Mojeek search engine, which is being developed here in the UK (by a lone developer), (and which perhaps explains why <a href="http://www.mojeek.co.uk/">UK only search</a> is already available!).</p>
+
+<p>I had a quick chat with Marc, the Mojeek developer, and he also filled me in on a few other features:</p>
+
+<blockquote>At the moment sites need to be already listed in Mojeek to be added to your personal search, for this reason the "Edit Listed Sites" find box acts like an add url function and sites not indexed will be soon. ... The other advantage is, as I have control over the search index and crawling I can choose to crawl these sites more often and deeper.</blockquote>
+
+<p>The biggest attraction for me, though, is that Mojeek Personal Search (MPS) lets users limit the number of search domains to 1000, significantly more thean the 25 I can get out of Yahoo! for the deliSeatch, et al. (Rollyo works under a similar constraint.) The only thing is, as yet, the lack of a way of me actually feeding my own limits in to MPS...</p>
+
+<p>The other site that came back to my attention this week is social search engine <a href="http://wink.com/">Wink</a>, which has just gone into Beta 2, apparently.</p>
+
+<p>The things (for me) to takeaway from the announcement were:</p>
+
+<blockquote><em>Search -</em> You can use Wink just like Google or Yahoo! But Wink results are selected by people as well as machines.  When you like a result, click the thumbs up.  When you don't, click the thumbs down. If you see a result that just doesn't belong - whether it's spam or just irrelevant, click the 'remove' button and watch it disappear. This feedback is used to constantly refine Wink search results.  And Wink includes Google search results so the best Web site can be found even if no one's bookmarked it yet.
+
+<p><em> Collections -</em>  Wink Collections are a cool way for you to organize and share the best links on any topic.  A collection  can be about anything - funny videos, your favorite band, the best restaurants in your area, or research on a new gadget - you name it.  You create a collection and add links to it and it shows up in search results. Others can add links to the Collection - a great way for people to share what they know and improve search.</p>
+
+<p><em> Social Bookmarking -</em>  Using Wink's social bookmarking tool, you can save favorite Web pages and add "tags" - terms that describe the page. You can bookmark any page you visit by placing the "Add to Wink" button in your browser, or bookmark right from the Wink result by clicking on a star. You can add tags and comments to help you remember the site later.  It will also help others find the site.  Users of the popular del.icio.us bookmark service can sync their bookmarks between Wink and del.icio.us.</blockquote></p>
+
+<p>One thing that jumped out at me about the <a href="http://wink.com/--collections">collections</a> was that feeds of collection items are available... Hmm - another <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedr.php">searchfeedr</a> source, methinks...?! ;-)</p>
+
+<p>And hence - the <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrGenericPanel.user.js">searchfeedr Greasemonkey script</a> - now adds <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedr.php">searchfeedr</a> search boxes to Wink, as well as delicious, Technorati, and, prompted b y the Wink collections, H2O playlists too...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007494.html">02:27 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7494" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 20, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007487"></a>
+<h3 class="title">Gliffy Collaborative Image Drawing Tool</h3>
+
+<p>A week in to using a Macbook Pro as my main machine (running <a href="http://www.parallels.com">Parallels</a> for the odd Windows moment) and I realised today that OS/X doesn't come with a drawing package. The <a href="http://www.gimp.org/macintosh/">GIMP</a> required a big download, and Microsoft Paint running in Parallels was not quite up to scratch, so instead I checked my bookmarks for an online drawing package, and came up with <a href="http://gliffy.com">Gliffy</a>, a Flash based drawing tool, and then some...</p>
+
+<p>More to the point, Gliffy is an online, collaborative drawing package, with flowchart, UML, network, user interface, floorplan and basic shape palettes, as well as various colour fills and a small selection of text fonts. Line and connector tools are also provided, along with a range of line and arrow styles.</p>
+
+<p><img alt="gliffy.png" src="http://blogs.open.ac.uk/Maths/ajh59/gliffy.png" width="774" height="585" border="0" /></p>
+
+<p>Collabaration is achieved by entering collaborators' email addresses, which are also used as user names in Glffy, an approach I've started noticing more and more in collaborative online apps (it's the approach used by <a href="http://www.pageflakes.com/?source=2e583676-5fde-4234-ace8-861af6db4b3e">Pageflakes</a> too, for example). By encouraging collaboration, the developers also manage to grow their user base for the app; enforcing email usernames guarantees a relatively pain free way of getting new user collaborators into the system.</p>
+
+<p>Images can be worked on (presumably at separate times) by all the registered collaborators on an image. Images can be saved onto Gliffy servers as either public or private images. Public images can then be linked into other websites as required, line this one for example: </p>
+
+<p><img border='0' src="http://www.gliffy.com/pubdoc/1072480/L.jpg" /></p>
+
+<p>A range of export options - SVG, JPG or PNG, are also supported.</p>
+
+<p>Tools like Gliffy offer interesting possibilities for group based activities, particularly in the OU context where our students all work at a distance. The ability to collaborate in a private group on a drawing, and then export it for inclusion in the student's own work, is an opportunity we have been unable to offer to date, so far as I know.</p>
+
+<p>There's a new OU course, <a href="http://ouseful.open.ac.uk/T885">T885 - Team Engineering</a>, due to start in October that requires students to "explore an engineering ‘problem’ in depth, working as part of a small team. The problem could be developing a product, such as a car door, improving a manufacturing process, such as forming steel sheet, or working with a variety of other engineering systems. Whatever the problem, its investigation will cover technical, environmental and business aspects and many will include a computing/software dimension."</p>
+
+<p>This course is potentially breaking some new ground for the OU, too: "T885 is a not a content-focused course. Instead, you and your team will be responsible for gathering together the information you need to pursue your project." Hmm - I wonder if this means we'll be encouraging students to explore the range of 'out there' online, collaborative applications - like Gliffy, Writely, Basecamp, Jotspot, and so on - at the expense the tools that are (or are not...) likely to be delivered via the new Moodle VLE...?</p>
+
+<p>Just by the by, I also note that <a href="http://writely.com">Writely</a> logins are moving over to Google authentication any time now...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007487.html">07:21 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7487" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 19, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007477"></a>
+<h3 class="title">Microformats and URL Pipelines</h3>
+
+<p>Just before I went on holiday, I was having an email/GTalk chat with <a href="http://suda.co.uk/">Brian Suda</a> about various things and he showed me the neatest <a href="http://blogs.open.ac.uk/Maths/ajh59/006045.html">pipelined URL</a> that I've seen so far, recalled here from the wonderful chat archive thing(?!) that <a href="http://mail.google.com/mail/help/chat.html">chat in Gmail</a> offers.</p>
+
+<p><a href="http://maps.google.com/maps?f=q&hl=en&q=http://suda.co.uk/projects/microformats/geo/get-geo.php%3Furi%3Dhttp%253A%252F%252Fcgi.w3.org%252Fcgi-bin%252Ftidy%253FdocAddr%253Dhttp%25253A%25252F%25252Fbabelfish.altavista.com%25252Fbabelfish%25252Ftrurl_pagecontent%25253Flp%25253Den_de%252526url%25253Dhttp%25253A%25252F%25252Fsuda.co.uk%25252Fpublications%25252FEuroOSCON06%25252F">Brian Suda's crazy URL pipeline, escaped umpteen times...</a>.</p>
+
+<p>The pipeline starts with <a href="http://suda.co.uk/publications/EuroOSCON06/">http://suda.co.uk/publications/EuroOSCON06/</a> which deails the conference presentation Brian was demoing this sort of technique.</p>
+
+<p>That post is then <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_de&url=http%3A%2F%2Fsuda.co.uk%2Fpublications%2FEuroOSCON06%2F">translated into German</a> using the Altavista babelfish service (err...why - just showing off?!;-)</p>
+
+<p>The German version of the page is then tidied up using the <a href="http://cgi.w3.org/cgi-bin/tidy?docAddr=http%3A%2F%2Fbabelfish.altavista.com%2Fbabelfish%2Ftrurl_pagecontent%3Flp%3Den_de%26url%3Dhttp%253A%252F%252Fsuda.co.uk%252Fpublications%252FEuroOSCON06%252F">W3 HTML Tidy service</a> to ensure it is well formed XHTML.</p>
+
+<p><em>This</em> document is then parsed by a routine of Brian's that <a href="http://suda.co.uk/projects/microformats/geo/get-geo.php?uri=http%3A%2F%2Fcgi.w3.org%2Fcgi-bin%2Ftidy%3FdocAddr%3Dhttp%253A%252F%252Fbabelfish.altavista.com%252Fbabelfish%252Ftrurl_pagecontent%253Flp%253Den_de%2526url%253Dhttp%253A%252F%252Fsuda.co.uk%252Fpublications%252FEuroOSCON06%252F">makes a KML file from the scraped geotag info</a>.</p>
+
+<p>Finally, the KMl file is <a href="http://maps.google.com/maps?f=q&hl=en&q=http://suda.co.uk/projects/microformats/geo/get-geo.php%3Furi%3Dhttp%253A%252F%252Fcgi.w3.org%252Fcgi-bin%252Ftidy%253FdocAddr%253Dhttp%25253A%25252F%25252Fbabelfish.altavista.com%25252Fbabelfish%25252Ftrurl_pagecontent%25253Flp%25253Den_de%252526url%25253Dhttp%25253A%25252F%25252Fsuda.co.uk%25252Fpublications%25252FEuroOSCON06%25252F">piped into a google map</a>.</p>
+
+<p>Phew...! One of the big tricks I picked up from this is the use of multiple escapes (which I realised is a trick that solves quite a few problems I've been having with deliSearch handling of URLs that need escaping...:-)</p>
+
+<p>Anyway, apart from posting that megalink, what I'm really posting about is Brian's new <a href="http://www.oreilly.com/catalog/microformats/">O'Reilly PDF book on microformats</a>... one to get added to the OU SafariU account, I think...</p>
+
+<p>Microformats will have a lot of traction over the next 18 months or so, I think, and for all their downsides, I think they'll help the <em>ad hoc</em> semantic web reach some sort of critical mass. So much so, I think we'll see enough of an uptake in microformats to prompt a flurry of services in the same way that there are all manner of feed based services exploiting a rich enough feed ecosystem for them to be (almost...) viable.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007477.html">12:12 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7477" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 16, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007458"></a>
+<h3 class="title">Pageflakes Tabs Shareable in Groups</h3>
+
+<p><a href="http://www.pageflakes.com/?source=2e583676-5fde-4234-ace8-861af6db4b3e">Pageflakes</a> has been bubbling under on my 'post about this' radar for some time - I wanted to hold off until I'd built a pageflake or two to how off - so when they got in touch to talk about sponsorship (no can do from an academic network:-(, I bounced a couple a of questions back about how groups would be handy for sharing tabs amongst students regstered on a particular course in the hope I could get a story or two out of them;-)</p>
+
+<p>I should possibly have done my <a href="http://www.pageflakes.com/help.html">homework</a> first, of course, because it seems that <a href="http://www.pageflakes.com/sharinghelp.html">Pageflakes supports group sharing</a>:</p>
+
+<p><img src="http://www.pageflakes.com/images/Table2.png" alt="Pageflakes group options" /></p>
+
+<blockquote><b>Sharing means invitation-only.</b> If you share a page, only the people that you invite will be able to access it. These selected people will also be able to edit the page. <b>If you publish a page, anyone can view it but only you can make changes.</b> 
+...
+Now, invite some people to your page. The people that you invite don't have to be Pageflakes users. They will receive an email with a link which lets them view your page. You can also invite more people later. If you change your mind, you can un-invite people or un-share/un-publish the page anytime.</blockquote>
+
+<p>(I'm guessing email is used here because: a) Pageflakes users sign on with their email address; b) if the email isn't registered on the user database by Pageflakes, they get to mail out an invite and potentially receive another subscriber.)</p>
+
+<p>I ahve to admit though that now I'm a little confused. If I'm a Pageflakes user, then does the shared page appear on my desktop? I guess so. And if I'm not a Pageflakes user and I get to see the page via a link, then presumably the sharing is unauthenticated and the pages are really public, just hard to find? Or do I just get a normal sign-up page and then have to register as a new user using the email address I received the invite via, so that then when I look at my pages I also see the pages that have been shared with me? That would make sense I suppose, and keeps the shared pages private the sharing group.</p>
+
+<p>For student use, it's possible that we want to guarantee privacy within a course cohort, an argument I started rehearsing in a related context some time ago in <a href="http://blogs.open.ac.uk/Maths/ajh59/005107.html">Towards a Managed Social Bookmarking Environment in Higher Education</a>. As the current tools stand in pageflakes, bulk admin would be a chore, though possible.</p>
+
+<p>Anyway - if you're interested in Pageflakes, the folks over there set up this <a href="http://www.pageflakes.com/?source=2e583676-5fde-4234-ace8-861af6db4b3e">demo Pageflakes educational tab</a> (only works if you are logged out from Pageflakes) using flakes that are already available.</p>
+
+<p><img alt="pageFlakesEducational.png" src="http://blogs.open.ac.uk/Maths/ajh59/pageFlakesEducational.png" width="905" height="564" border="0" /></p>
+
+<p><img alt="pageFlakeGroup.png" src="http://blogs.open.ac.uk/Maths/ajh59/pageFlakeGroup.png" width="937" height="398" border="0" /></p>
+
+<p>I'm not sure how you can get to share these setups (if indeed you can - a) because they are just demos and affiliate linked signup pages, and b) because the page owner needs to add your email address to the page subscriber list) but it's easy enough to create your own simply by adding flakes from the flakes directory.</p>
+
+<p>When I get a chance, I will create a shareable page or two and then make them available to anyone who wants a play... Similarly, if you create a shareable pageflakes page that demos a mix of flakes relevant to education and/or library services, please let me know:-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007458.html">06:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7458" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007457"></a>
+<h3 class="title">Time for an OpenLearnigg (sic)  Environment?</h3>
+
+<p>I've just been trying to finish of the final report for our <a href="http://blogs.open.ac.uk/Maths/ajh59/005529.html">NAGTY online academic study group</a> project - which could have gone better, if truth be told - and as I was doing so I started wondering what a Digg-like, resource based learning environment (that is, a <em>learnigg</em> environment) would be like?</p>
+
+<p>One of the strategies we tried in the NAGTY palaver was to create resources that could be used either to prompt a discussion topic, or could be dropped in to a discussion in response to a question that was raised about some aspect of a particular topic. The resources we pulled on for the NAGTY groups (as well as web based resources discovered by a bit of judicious googling) were largely reversioned from the OU short courses <a href="http://ouseful.open.ac.uk/t183">T183 Design for the Web</a> and <a href="http://ouseful.open.ac.uk/t184">T184 Robotics and the Meaning of Life</a>. (The reversioning involved producing standalone versions of pages and integrating links to discussion threads within them.)</p>
+
+<p>An idea we had in mind when we originally bid to run the groups was to try and explore ways of organising the environment so that students could register any time and just hop on the moving learning escalator, that is, whatever discussion happened to be in progress when the student joined the group.</p>
+
+<p>I'm still working on the escalator metaphor - the fact that it's moving (upwards in my mind's eye), that people can walk up it past other people, or struggle back down past them against the way the escalator is moving, all feature in some way - I'm just not totally clear <em>how</em>, as yet!)</p>
+
+<p>Associated with each discussion topic would be a learning resource - a page or two of web content, perhaps, a journal paper, or even book chapter, for example. Ideally, a link to a digital version of the resource would be available.</p>
+
+<p>And associated with the resource would be some sort of (learning) context, and a question or two for the learner to bear in mind (i,.e focus on - read with a purpose, and all that!) when reading the resource.</p>
+
+<p>So this is maybe where a <em>learnigg</em> environment might come in to play...</p>
+
+<p>Just consider the <a href="http://digg.com">Digg</a> interface for a moment. All stories have a short amount of descriptive text and link to a resource.</p>
+
+<p><img alt="diggMain.png" src="http://blogs.open.ac.uk/Maths/ajh59/diggMain.png" width="671" height="232" border="0" /></p>
+
+<p>Stories can be tagged:</p>
+
+<p><img alt="diggTopics.png" src="http://blogs.open.ac.uk/Maths/ajh59/diggTopics.png" width="585" height="250" border="0" /></p>
+
+<p>Stories can be commented on, and henced used to support a discussion:</p>
+
+<p><img alt="diggComment.png" src="http://blogs.open.ac.uk/Maths/ajh59/diggComment.png" width="570" height="505" border="0" /></p>
+
+<p>Admittedly threading is a bit crazy, as users vote to change where the comment appears, but I guess a traditional threading approach could be used instead? Or maybe the system could support view options&nbsp; over the comment threads - most/least popular, (reverse) chronologial, etc. Alternatively, users could be encouraged to use commenting appropriately so their comment essentially stands alone and contains elements from other comments it relies on? Or what the heck, why not just have a wiki for the comments?</p>
+
+<p>For users coming to the <em>learnigg</em> enviroment, they can navigate resources according to topic, popularity, or 'liveness'.</p>
+
+<p><img alt="diggPopular.png" src="http://blogs.open.ac.uk/Maths/ajh59/diggPopular.png" width="730" height="120" border="0" /></p>
+
+<p><img alt="diggLive.png" src="http://blogs.open.ac.uk/Maths/ajh59/diggLive.png" width="734" height="316" border="0" /></p>
+
+<p>Search should also be in there to support discovery - maybe using a full text search of the linked to resources...</p>
+
+<p>The question is, to what extent would popularity provide a <em>useful</em> signal for users visiting such a site? If the resources were in some way related to, or relevant to, news or broadcast content, then it's possible that user behaviour would bubble up program related content. The OU and BBC co-produce the <a href="http://open2.net">open2.net</a> site, of course, so we do already have a stake in the market for this sort of user attention.</p>
+
+<p>Going back to OCI, I'm not sure what the <a href="http://oci.open.ac.uk">OpenLearn</a> Moodle environment is going to have at its top navigational layer, nor the intent with which users will approach it and the material it contains.</p>
+
+<p>I wonder whether it would be OUseful setting up a <a href="http://pligg.com/">Pligg</a> server somewhere (called <em>openLearnigg</em>, of course;-) which only accepts links from servers that make open educational content available?</p>
+
+<p>One question that occurs to me as a consequence of taken this approach is, what the effect of having multiple different interfaces to the same content is likely to be? Would they compete, stealing traffic from each other? Or might they be complementary?</p>
+
+<p><p class="poweredbyperformancing">powered by <a href="http://performancing.com/firefox" >performancing firefox</a>; screen capture by <a href="https://addons.mozilla.org/firefox/2703/">snapper</a>.</p></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007457.html">05:57 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7457" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 14, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007442"></a>
+<h3 class="title">Learn About Feeds</h3>
+
+<p>Through my affiliation with the Library, I was asked beore the summer break to write a couple of guides for a new crib sheet series - <a href="http://kn.open.ac.uk/workspace.cfm?wpid=5868">Learn About...</a> - being put together as a collaborative effort by the Library, IET and LTS. The new guides are an attempt to provide a standard, uniform set of quick guide briefings/mini-training guides that will replace the independent, and often duplicated (in terms of subject matter), offerings that have  been developed by separate units in recent years.</p>
+<p>Many of the guides are still in draft form (though internal readers can see them on the IET Knowledge network) and cover a wide variety of new technologies, from blogs to wikis, web 2.0 to the semantic web, mobile learning to VLEs.</p>
+<p>The guides I was asked to write cover social bookmarking and RSS/web feeds. Partly in response to a couple of other requests I've had recently for a briefing on web feeds, here's a draft  of that mini-guide. Comments, as ever, appreciated...</p>
+<hr/>
+<h2>Learn About: RSS and Web Feeds</h2>
+<h2>What are they?</h2>
+<p>RSS used to stand for something, but it doesn't really any more - a better term is <span style="font-style: italic;">web feed</span>. Web feeds are XML documents that can be used to transport links, HTML content and multimedia resources (audio and video attachments) around the web. Web feeds are machine readable and can be used to introduce content from one site into another.</p>
+
+<p>The presence of a web feed is displayed on a page using this icon: <img src="http://www.feedicons.com/favicon.ico" alt="Feed icon" /></p>
+
+<p>Web feeds were originally popularised as a way of syndicating blog news. Blogs typically publish one or more web feeds that users can subscribe to from either a web based or desktop client. The client regularly checks the feed to see if new content is available - if it is, it is pulled into the feedreader automatically, without the user having to check back with the publishing site themselves.</p>
+
+<p>Podcasts and video feeds, as well as blog posts, are also syndicated using web feeds.</p>
+
+<p>Web feeds are increasingly being used to syndicate lists of weblinks as link blogs - regularly (often daily) - posted annotated lists of new and interesting weblinks, that may be fed into (and merged with) a blog web feed from a social bookmarking service.</p>
+
+<h2>Who's using them?</h2>
+
+<p>Web feeds are produced published by bloggers to support user subscription to a blog. Web feeds are increasingly used to syndicate news and media feeds. The BBC, for example, publishes a wide selection of <a href="http://news.bbc.co.uk/1/hi/help/3223484.stm">news feeds</a>, as well as giving guidance on the selection of a feed reader.</p>
+
+<p>Many academic publishers are also starting to use feeds to syndicate the contents listings of current journals. The British Library maintains a list of these at <a href="http://zetoc.mimas.ac.uk/rssjnllist.html">Zetoc</a>.</p>
+
+<p>Podcast publishers make podcasts available using feeds that support media enclosures/attachments.</p>
+
+<h2>Why are they significant? </h2>
+
+<p>Web feeds can be used to transport content - HTML, weblinks, audio files, movies - around the web in an invisible, machine readable way. Web feeds are a 'push' technology in that users can <span style="font-style: italic;">subscribe </span>to web feeds, releasing them from the need to visit publisher's web sites to check for updates. Unlike incoming email, over which the user has little control, users <span style="font-style: italic;">choose </span>whether or not to subscribe to a web feed in their feedreader, and have personal control over whether or not to accept content from a particular publisher.</p>
+
+<p>Web feeds can be easily subscribed to from bespoke feedreaders and online personal portals/webtops as well as many email clients. Web feeds are readily integrated into tradtional websites using widely availabe feed-to-html services.</p>
+
+<p>Items can be published to web feeds in timecontrolled ways, thus allowing the time managed distribution of content.</p>
+
+<h2>What are the downsides?</h2>
+
+<p>Feed subscriptions add yet another channel of communication - and potentially yet another inbox - to the users online environment and thus place yet another demand on the user's attention.</p>
+
+<h2>Where are they going?</h2>
+
+<p>One good indicator of how feeds might be used to syndicate information is the <a href="http://backstage.bbc.co.uk/data/Data">BBC Backstage project</a>, which lists experimental BBC web feeds.</p>
+
+<p>Many browsers are now capable of detecting the presence of, and subscribing to, a web feed contained in a web page, alerting the user to the fact by displaying a feed logo on the browser address bar.</p>
+
+<p>Feeds are increasingly being used as a transport medium for search queries and search results, using the <a href="http://www.opensearch.org">OpenSearch </a>protocol. Internet Explorer 7 and Firefox are both capable of adding OpenSearch compliant search engines to the browser search tool.</p>
+
+<p>There is an increasing need to manage feeds and transport bundles of feeds. At the moment, the OPML feed protocol is the <em>de facto</em> standard for creating "feeds of feeds".</p>
+
+<h2>What are the implications for teaching and learning?</h2>
+
+<p>Web feeds allow users to opt-in to information provision and subscribe to information they are interested in and that is relevant to them. Examples include subscriptions to influential blogs, news providers, and contents listing of electronic journals.</p>
+
+<p>Web feeds can be used to transport content into environments such as Moodle from other systems - social bookmarking services, library systems and saved (persistent) searches using OpenSearch. Students may also opt to use their own <a href="http://www.rev2.org/2006/09/09/web-based-desktop-pageflakes-revisited/">webtop</a> (web-desktop) to aggregate feeds and services, creating their own <span style="font-style: italic;">personal learning environment</span>.</p>
+
+<p>Web feeds can be used to deliver current content into online course materials, for example feeding links to electronic resources in to a Further Reading or Current News section of online course materials.<br/></p>
+
+<h2>Further reading and resources</h2>
+
+<p>Examples of web feed integration into Moodle can be found on the <a href="http://vledemo.open.ac.uk/course/view.php?id=69">VLE Library Demo</a>.</p>
+
+<p>Creating a current awareness search feed using Google alerts: <a href="http://breeze5.sabahosted.com/GoogleAlert/">screencast</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007442.html">09:58 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7442" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007441"></a>
+<h3 class="title">OU Library Homepage Heatmap</h3>
+
+<p>I can't resist blogging this - a heat map of the <a href="http://library.open.ac.uk">OU Library homepage</a>: <a onclick="window.open('http://blogs.open.ac.uk/Maths/ajh59/libHeatMap.html','popup','width=871,height=799,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false" href="http://blogs.open.ac.uk/Maths/ajh59/libHeatMap.html">View image</a></p>
+
+<p>The data was collected using a trial version of <a href="http://clickdensity.com/">Clickdensity heatmaps</a> over a 24 hour period a couple of days ago. The trial limits the amount of data that can be collected, so I'm not sure that map actualluy maps hits over that full period of time.</p>
+
+<p>The OU Library site is currently undergoing a redesign, with a target roll out sometime in Q2 of next year (2007) of the new site. Apparently it's being wireframed at the moment, so it will be interesting to see how much cleaner the new design will be, especailly if it's "on brand"! (By the by, OU internal readers who aren't up to speed with brand guidelines and templates can check them out <a href="http://intranet.open.ac.uk/brand">here</a>).</p>
+
+<p>It's been hinted to me that the search box will be far more prominent, but I'm not sure how many other navigational devices will be on the front page.</p>
+
+<p>One of the design considerations is to reduce the number of pages on the site, which apparently currently number in the thousands(?!), a figure that Library's adoption of Macromedia Contribute may be partly responsible for...</p>
+
+<p>Although monthly traffic figures number in hundreds of thousands of impressions every month (a statistic I am starting to be wary of having started collecting - and inspecting - <a href="http://www.google.com/analytics">Google Analytics</a> data for the OUseful blog) and the heat map is of a few thousand imnpressions over a very short period, I think it's interesting to see how few of the dozens and dozens of links on the current Library homepage actually seem to be followed.</p>
+
+<p>Not surprisingly, the Library search box is heavily hit - even if the link you want is on the homepage, I guess that users often can't locate it!</p>
+
+<p>Until the heatmap data started to be collected, I believe that design decisions were being made on the basis of analysis of the raw site statistics (which I don't think were actually that rich - certainly not as rich as Google analytics). I'd be interested to know just how much the graphical heat map hits home how users actually use the library front page, compared to the raw numerical data view, and whether the heat map view has changed the way in which the fron page redesign is being handled...<br/>
+</p>
+
+
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007441.html">09:53 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7441" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007429"></a>
+<h3 class="title">They Stole OUr Learning Environment - Now We're Stealing It Back</h3>
+
+<p>In my <a href="http://blogs.open.ac.uk/Maths/ajh59/007400.html">previous post</a>, I made a claim about how I could add my own <a href="http://widgetbox.com">Widgetbox</a> widgets to a Moodle installation.</p>
+
+<p>So here's a proof of concept Moodle <a href="http://blogs.open.ac.uk/Maths/ajh59/ociSquirt.user.js">"It's My Learning Environment and I Want It Back"</a> Greasemonkey script.</p>
+
+<p>...and here's the proof - taken from <a href="http://moodle.org">moodle.org</a>:</p>
+
+<p><img alt="moodleMe.png" src="http://blogs.open.ac.uk/Maths/ajh59/moodleMe.png" width="575" height="543" border="0" /></p>
+
+<p>(The script is named as it is because I had a peek of the new-and-still-in-testing <http://oci.open.ac.uk">OCI/openlearn</a> Moodle installation today, and originally wrote the script for that:-)</p>
+
+<p>A couple of obvious issues - the size of the iframe is not right. I tried to dynamically resize it by looking at the scrollheight and scrollwidth of the iframe, but couldn't get my code to work (It's late, I'm tired...), so if anyone has the solution, please let me know.</p>
+
+<p>There's also a fudge to select where the ifram goes - I hard coded it in to go at the top of the left hand frame, identified by peeking at the page HTML and finding the <em>id</em> attribute of the panel I wanted my frame to go above.</p>
+
+<p>Other things that need doing - the layout needs tidying up, removing the frame borders maybe?</p>
+
+<p>The widgets on the widgetbox panel would probably need sizing to fit in with the Moodle set up you  know you're going to be working with.</p>
+
+<p>And so on...</p>
+
+<p>If you want to play, get a <a href="http://widgetbox.com">widgetbox</a> account, create a panel, get the URL of the script that generates it and paste it in to the appropriate spot (after <em>var wbURL=</em> and in quotes) in the  <a href="http://blogs.open.ac.uk/Maths/ajh59/ociSquirt.user.js">Greasemonkey script</a>.</p>
+
+<p>You may also want to place the script elsewhere by changing the <em>squirtPoint</em>, whcih should be set to the id of the Moodle panel <em>above which</em> you want the Widgetbox panel to appear.</p>
+
+<p>If anyone out there has access to other locked down VLEs and can knock up an equivalent script, let me know and I'll link to it from here.</p>
+
+<p>Also, if anyone can tid up my script, please let me know:-)</p>
+
+<p>This all reminds me of the  <a href="http://www.ntk.net">Need to Know</a> strapline: <em>THEY STOLE OUR <s>REVOLUTION</s> <strong>LEARNING ENVIRONMENT</strong>. NOW WE'RE STEALING IT BACK</em> ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007429.html">01:13 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7429" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 11, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007400"></a>
+<h3 class="title">If You Want to Personalise Your VLE, You Got it...</h3>
+
+<p>I've just been having a play with <a href="http://widgetbox.com">WidgetBox</a> and now have a way of easily getting my own widgets into Moodle - for Firefox users at least - whether or nor sys admin want me to :-)</p>
+
+<p>A clearinghouse for widgets, Widgetbox users subscribe to widgets from the Widgetbox gallery:</p>
+
+<p><img alt="wbSubscriptions.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wbSubscriptions.jpg" width="643" height="221" border="0" /></p>
+
+<p>If necessary, the widget can then be configured:</p>
+
+<p><img alt="wb_deliSearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wb_deliSearch.jpg" width="643" height="450" border="0" /></p>
+
+<p>As well as widget subscriptions, users can create one or more <em>panels</em>:</p>
+
+<p><img alt="wbPanel.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wbPanel.jpg" width="637" height="187" border="0" /></p>
+
+<p>Subscribed to widgets can then be placed on the panel as required:</p>
+
+<blockquote>Adjust the panel settings to change the format of the panel. To add widgets or text blocks, drag and drop them from the Item Palette to the Panel Layout. Text blocks allow you to add small bits of plain text or HTML to your panel.</blockquote> 
+
+<p><img alt="wbPanelConfig.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wbPanelConfig.jpg" width="652" height="395" border="0" /><br />
+ <br />
+No matter how many widgets you want, there is just a single script element - defining the appropriate panel -  to place in the web page you want to install the widgets on.</p>
+
+<p>Rearranging the order of the widgets in the panel is simply a case of dragging and dropping them to the correct location.</p>
+
+<p>And if you tire of a widget, it's easy to remove it - just drag it off the panel in your widgetbox control panel.</p>
+
+<p>The single script include element also means its easy to write a Greasemonkey script (and hence Firefox extension) or cross-browser bookmarklet to inject the widgetbox panel script element into a Moodle sidebar.</p>
+
+<p>At which point, all the widgets placed on that panel will appear in the Moodle sidebar.</p>
+
+<p>Adding widgets like the <a href="http://grazr.com">Grazr OPML Browser</a> to a VLE, whether via widgetbox or by adding it separately, also provides the user with control over the feeds they can view in the environment if: a) they are able to configure the OPML feed consumed by the Grazr widget, and b) they are able to determine the structure and contents of that feed, for example by using a 3rd party feed management tool such as <a href="http://feedcollectors.com/">Feed Collectors</a> or <a href="http://www.opmlworkstation.com/">OPML Workstation</a>.</p>
+
+<p>So - even if VLE customisation is locked down by the sysadmins - browser extensions will let you retake control:-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007400.html">10:02 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7400" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007391"></a>
+<h3 class="title">Mashing the Library Mashup Compeition? Compleat Grazr on Google ig</h3>
+
+<p>The results of Talis' Mashing up the Library Cmpetition have just been <a href="http://www.talis.com/news/press/Competition2006.shtml">released</a> with John Blyberg's <a href="http://www.blyberg.net/2006/08/18/go-go-google-gadget/">Go-go Google Gadgets</a> taking first place, and the collaborative <a href="http://www.talis.com/tdn/node/1506">Second lIfe Library 2.0 taking second</a>.</p>
+
+<p>Blyberg's gadgets put Library services onto a Google personal page, which is a great <br />
+way of helping  users consume library services where <em>they</em> want. Way to go, John:-)</p>
+
+<p>And as is the way of mashups, it's inspired an extension to my related MUTL entry showing how to <a href="http://blogs.open.ac.uk/Maths/ajh59/007298.html">bundle and display library related web feeds</a>: the Compleat Grazr/OPML Library Interface on Google:</p>
+
+<p>Getting the Grazr gadget onto Google was easy using <a href="http://blogs.opml.org/tommorris/2006/06/24#grazrAndGoogleIgPartIiTheCowContraption">The Cow Contraption</a>, which takes an OPML file URL, mixes it with a Grazr URL and generates an 'add to Google' button for you: <a href="http://fusion.google.com/add?moduleurl=http%3A//www.bbcity.co.uk/tom/cowcontraption.php?opml=http://blogs.open.ac.uk/Maths/ajh59/ousefulLibraryTest.opml&height=400 &title=Grazr&es=es.xml"><img src="http://buttons.googlesyndication.com/fusion/add.gif" width="104" height="17" border="0" alt="Add to Google" /></a></p>
+
+<p><img alt="grazrGoogleig.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrGoogleig.jpg" width="686" height="489" border="0" /></p>
+
+<p>Another related 'getting the libray out there' approach that didn't appear in the MUTL competition, though I was hoping it would, was the display of library services on Netvibes.</p>
+
+<p>Here's my take on it so far:</p>
+
+<ol><li>personal info:
+
+<p><img alt="nvOUdemos.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/nvOUdemos.jpg" width="749" height="528" border="0" /></li><li>Journal info:</p>
+
+<p><img alt="nvJournals.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/nvJournals.jpg" width="749" height="528" border="0" /></li><li>Course related info - in this case from the <a href="http://myopenlibrary.open.ac.uk">OU MyOpenLibrary service</a>:</p>
+
+<p><img alt="nvMyOL.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/nvMyOL.jpg" width="768" height="528" border="0" /></li></ol></p>
+
+<p>All that's required to get this information onto Netvibes are the addresses of relevant web feeds - and a little bit of thought about how to organise them.</p>
+
+<p>Usability is improved by  providing OPML files for bulk 'upload' of feeds to Netvibes, or, even better, the creation of <a href="http://eco.netvibes.com">shareable Netvibes tabs</a> which could be simply added to a user's profile. (If you search for <em>ouseful</em> on the <a href="http://eco.netvibes.com">Netvibes ecosystem</a>, you'll find my shareable tabs.)</p>
+
+<p>I don't think that Netvibes supports groups -  or allows tab publishers to limit who is allowed to copy a tab, which might be useful in some circummstances? Anyway, the first step is surely to get some shareable library tabs up there?</p>
+
+<p>(NB For Netvibes, also read <a href="http://www.pageflakes.com">Pageflakes</a>, etc.)</p>
+
+<p>PS the MUTL competition continues...</p>
+
+<blockquote>Rather than re-run the same competition again next year, we wish to encourage innovative work on an ongoing basis. As such, the competition web site reopens today, and will accept new entries. We will periodically assemble a team of judges to select the best submissions since the last time entries were judged. In addition, we will seek to reward particularly innovative or compelling examples on an ad hoc basis, outside the normal cycle of judging.</blockquote>
+
+<p>Should I..? shall I...? Oh what the heck: <a href="http://technorati.com/tag/MUTL06" rel="tag">MUTL06</a> - or has the tag been changed?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007391.html">11:58 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7391" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 10, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007387"></a>
+<h3 class="title">deliSearch Widget on widgetbox</h3>
+
+<p>Keeping up the deliSearch momentum prompted by my previous post on <a href="http://blogs.open.ac.uk/Maths/ajh59/007379.html">embedding deliSearch in a delicious links page</a>, here's a way of embedding deliSearch in your own blog using a <a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">deliSearch widget</a>:</p>
+
+<p><img alt="wb_deliSearchPreview.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wb_deliSearchPreview.jpg" width="278" height="443" border="0" /></p>
+
+<p>The widget shows a list of links corresponding to a feed from a particular tag combination on a particular delicous user account. A quety can be entered into the search box and applied over the pages listed in the corresponding bookmark feed, or the domains those pages are served from.</p>
+
+<p>I opted to distribute the deliSearch widget through <a href="http://www.widgetbox.com/">widgetbox</a>, which presents the user with a customisation panel prior to download that allows you to customise the settings of the widget:</p>
+
+<p><img alt="wb_deliSearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wb_deliSearch.jpg" width="643" height="450" border="0" /></p>
+
+<p>You can <a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">download the deliSearch widget here</a>.</p>
+
+<p>A second widget (pending - <a href="http://www.widgetbox.com/widget/428c5b41-b6fd-46bc-9d64-22b870d28996">tag aware deliSearch widget</a>) will make use of the widgetbox <a href="http://forums.widgetbox.com/viewtopic.php?pid=18">tag awareness tool</a>,  which  will extract tag information from a blog page and pass it automatically to the widget.</p>
+
+<p>My intention here is to allow users to tag blog posts in such a way that the <a href="http://www.widgetbox.com/widget/428c5b41-b6fd-46bc-9d64-22b870d28996">tag aware deliSearch widget</a> can automatically make use of tag information embedded in a blog post to pull in the correct delicious feed for deliSearch.</p>
+
+<p>If you <a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">download the deliSearch widget</a> and try it out on your own pages, I'd appreciate hearing how you get on with it (and with <a href="http://www.widgetbox.com">widgetbox</a>), and the use cases you're putting to :-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007387.html">11:10 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7387" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 09, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007379"></a>
+<h3 class="title">deliSearch on delicious</h3>
+
+<p>With Em at the <a href="http://www.bestival.net/">Bestival</a>, I thought I'd take the opportunity to have another tinker with some <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a> derivatives this weekend, so here's the first offering: <em>deliSearch tools for del.icio.us</em>.</p>
+
+<p>The standard delicious search offerings are to search delicious, your <a href="htpp://del.icio.us">delicious</a> links or the web:</p>
+
+<p><img alt="deliciousSearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliciousSearch.jpg" width="362" height="102" border="0" /></p>
+
+<p>As regular readers will know, I have been tinkering with various feed limited searches for some time now (most recently with <a href="http://blogs.open.ac.uk/Maths/ajh59/007309.html">searchfeedr</a>), typically using the pages listed in a feed - or the domain those pages are served from - to limit a search.</p>
+
+<p>As its name hopefully suggests, <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a> uses a feed from delicious to limit a search. [<em><a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.php">new AJAX deliSearch interface in testing...</a></em> ]</p>
+
+<p>Services like <a href="http://rollyo.com">Rollyo</a> do similar things in terms of letting users construct their own search engines, but for all their prettiness I do wonder why we need these extra services when we can overload them on something like delicious?</p>
+
+<p>So - here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearchPanel.user.js">deliSearch Greasemonkey script</a> and a <a href="javascript:(function(){d=document;b=d.getElementsByTagName('body')[0];function ss(src){s=d.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src',src);b.appendChild(s);};a=location.href; a=a.replace('http://del.icio.us/','http://del.icio.us/feeds/json/');ss(a);ss('http://blogs.open.ac.uk/Maths/ajh59/deliSearchPanelX.js');})()">deliSearch bookmarklet</a> (Firefox and IE7 at least) that will add (another) search box to a delicious links page and let the user search over either those links <em>or</em> the domains from which they are served.</p>
+
+<p><img alt="deliSearchGM.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliSearchGM.jpg" width="547" height="133" border="0" /></p>
+
+<p>Like Rollyo, deliSearch uses Yahoo to construct OR'd <em>site:</em> or <em>url:</em> search limits, demonstrating how major search engines can be mashed with just a little imagination.</p>
+
+<p>All I need now is for a few people to start posting things like: <em>deliSearch - Rollyo on steroids</em>! ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007379.html">09:29 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7379" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 08, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007371"></a>
+<h3 class="title">Using iframes in a Tab Widget to Support Web Page Comparison</h3>
+
+<p>A couple of things I'm keen to hammer home in an early section of <a href="http://ouseful.open.ac.uk/tu120">Beyond Google</a> are: a) that Google is not the only general purpose search engine out there; and b) that the different, major league search engines may return differently ranked results for identical queries made at the same time.</p>
+
+<p>To try and encourage students to compare search queries across search engines, I have been exploring various ways in which we might used tabbed widgets to embed search pages within a teaching page.</p>
+
+<p>I have popped up several demos at <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabber.html">Multisearch panels demo</a>, including examples of applying the same, predefined search to several search engines via a single link, and allowing the user to apply a single search box query to several search engines at the same time.</p>
+
+<p><img alt="searchTabber.gif" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabber.gif" width="593" height="403" border="0" /></p>
+
+<p>I've also doodled a couple of standalone pages: <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabs.html">GYM Comparison</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabsAcademic.html">Google Scholar and Windows Live Academic</a>.</p>
+
+<p>An <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabs.php">alternative GYM comparison page</a> additionally allows you to a pass a search query directly in to the page, as for example this multiSearch on <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabs.php?q=tabbed%20browsing">tabbed browsing</a>.</p>
+
+<p>One thing I did briefly consider was using AJAX search APIs to pull the results from the different search engines directly into the page.</p>
+
+<p>However, because we want the students to know the results really are coming back from the specified search engines, embedding the real SERPs in an iframe makes this abundantly clear. As far as copyright issues relating to embedding one page in another goes, I would say this is a fair use - no claim other than that the embedded pages are the actual ones are made, and the pages are being embedded to support a comparison being made in an educational context.</p>
+
+<p>We're still working out the best way - if at all - of integrating these sorts of interactive exercise within the course materials, so if anyone has any comments - or has tried something similar in the past - please get in touch...</p>
+
+<p>PS Partly in response to this article on "<a href='http://www.snee.com/bobdc.blog/2006/09/a_great_feature_in_altavista_a.html'>A great feature in AltaVista, alltheweb, and Ask.com, but not in Google</a>", which describes limit searching by date on the Altavista, AllTheWeb and Ask  - but <em>not</em> Google -  advanced search pages, I felt I ought to knock up an <a href="http://blogs.open.ac.uk/Maths/ajh59/searchAdvancedTabs.html">advanced search page tabbed display</a>.</p>
+
+<p>I wonder too whether I really should add a few more search engines to the basic search engine display panel?</p>
+
+<p><img alt="searchTabAdvanced.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabAdvanced.jpg" width="761" height="213" border="0" /></p>
+
+<p>PS I just came across <a href="http://www.gahooyoogle.com/">GahooYoogle</a> which allows you to search Google and Yahoo (web search, image search etc) side by side in a spilt panel view.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007371.html">05:40 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7371" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="007362"></a>
+<h3 class="title">Technology Short Course Program Hacks  #1: Print Page Link References</h3>
+
+<p>Doodling a few ideas for <a href="http://ouseful.open.ac.uk/tu210">Beyond Google</a>, I was reminded today of a hack that may yet be officially adopted into the <a href="http://tscp.open.ac.uk">TSCP</a> templated delivery system: referenced links on printable pages.</p>
+
+<p>Although the aim of the game is to encourage students to read HTML delivered teaching materials l(ike these <a href="http://tscp.open.ac.uk/t187">Vandalism in Cyberspace</a> or these <a href="http://tscp.open.ac.uk/t187">Robotics and the Meaning of Life</a> tasters) online, many students are minded to print them out.</p>
+
+<p>There are issues with this, aside from losing the character of any interactive exercises. In particular, web links described with meaningful link text lose the associated href/web address data, which means the reader does not really know where the resource has come from, and cannot easily make a note to visit it at a later date.</p>
+
+<p>So in the spirit of hacking the courses in advance of new features being integrated into them, here's a course hack: a <a href="http://blogs.open.ac.uk/Maths/ajh59/linkRefsTSCPprint.user.js">Greasemonkey link referencer script</a> that will automatically reference links and provide a numbered reference list to them at the end of the print page.</p>
+
+<p>Observant readers will recognise the script is just a rehash of an earlier tool (a <a href="http://blogs.open.ac.uk/Maths/ajh59/005929.html">link referencing bookmarklet</a>), but hey, reuse is good, right?</p>
+
+<p>To see the script in action, install it and visit this <a href="http://tscp.open.ac.uk/t183/html/lesson1/printintroduction.cfm.htm">example print page from T183 <em>Design for the Web</em></a>, which also be reached by clicking on the print button from this <a href="http://tscp.open.ac.uk/t183/html/lesson1/introduction.cfm.htm">sample page of the course materials</a>:</p>
+
+<p><img alt="t183printButton.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/t183printButton.jpg" width="826" height="200" border="0" /></p>
+
+<p>and here's an example of the link referencing:</p>
+
+<p><img alt="t183printReferenced.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/t183printReferenced.jpg" width="467" height="469" border="0" /></p>
+
+<p>compared to the original:</p>
+
+<p><img alt="t183printUnreferenced.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/t183printUnreferenced.jpg" width="531" height="212" border="0" /></p>
+
+<p>Hmm - okay - bad example... the link text used in these links is actually the web address. But it's too late now for me to grab some more screenshots, so I guess you'll just have to take my word for it that the link referencing script does actually pull the web address out of the <em>href</em> attribute of the link, rather than the link text.</p>
+
+<p>I need to address the styling, and maybe add a <em>References</em> heading, but it's a hack that, at least in my limited testing, appears to do what it's supposed to.</p>
+
+<p>If you're studying any of the Technology Short Course Programme courses, the Greasemonkey script should add link references to every print page.</p>
+
+<p>Now I wonder how else I can start hacking the course pages... </p>
+
+<p>...and I wonder how much fun there is to be had when Moodle ships...:-)</p>
+
+<p>All suggestions appreciated ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007362.html">01:17 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7362" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 06, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007351"></a>
+<h3 class="title">OU in the Blogosphere</h3>
+
+<p>Chatting to someone last week about <a href="http://opinmind.com">opinmind</a>, a sentiment analysing blog search tool, we idly wondered whether anyone in the Communications or Student Services departments at the OU occasionally looked at things like <a href="http://opinmind.com/search.jsp?q=%22open+university%22">opinmind search on "open university"</a>, or similar searches on general blogsearch engines such as  <a href="http://sphere.com">Sphere</a>, more specifically via spaces like <a href="http://search.blogger.com/?as_q=%22open+university%22">Blogger</a> or using site limited searches, such as this one on <a href="http://www.google.co.uk/search?q=%22open+university%22+site%3Amyspace.com">MySpace</a>.</p>
+
+<p>We suspected not...</p>
+
+<p>Anyway, I just had a quick look and turned up various interesting things I didn't know about.</p>
+
+<p>For example, someone had picked up that a new OU course on elearning - <a href="http://www3.open.ac.uk/courses/bin/p12.dll?C01wH808">The eLearning Professional</a>  is now being advertised for a September 2007 start. I think this is being written from <a href="http://iet.open.ac.uk">IET</a>, which does a lot of worthy stuff in the area of elearning/educational technology research. It'll be interesting whether the systems critiqued in the course include the OU's Moodle VLE, which will almost definitely play some role in the delivery - or student experience - of H808 ...</p>
+
+<p>Something else that turned up was a <a href="http://www.publictechnology.net/modules.php?op=modload&name=News&file=article&sid=5590&newlang=&topic=13&catid=0">post</a> about a "new web-based system which allows students studying for postgraduate computing qualifications to choose or propose their dissertation topics online." Going under the name of <a href="http://pads.open.ac.uk/">PADS</a>, it offers a listing of project titles available for students to pursue, and presumably some administration tools. PADS doesn't seem to appear anywhere on the <a href="http://ouseful.open.ac.uk/kn/PADS">IET Knowledge Network</a>, though it does just about make it via a news story onto the first page of the <a href="http://intranet.open.ac.uk/">intranet</a> search results.</p>
+
+<p>PADS seems to have been developed outside the current raft of institutionally sponsored internal IT projects, like the VLE and ECM programmes, so I wonder how well it will integrate with them ;-)</p>
+
+<p>Anyway, I guess this approach of having to look to the blogosphere <em>outside</em> the OU to find out what's interesting going on <em>inside</em> it is the networked equivalent of attending international conferences in order to stand a chance of meeting other staff from the same organisation who are working in similar areas to you!</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007351.html">06:54 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7351" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 04, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007342"></a>
+<h3 class="title">Course Related Mobile Sites</h3>
+
+<p>This is a really lazy post describing a demo (and obsolete!) mobile WAP site for students currently studying an OU course, cut and pasted from <a href="http://technology.open.ac.uk/tel/cor/t396/wap/index.html">here</a> but while it's 5 years or so old as far as I'm concerned, it may be of interest to people who are starting to look at mobile sites again.</p>
+
+<p>When I built the site, it provided an interesting exercise in identifying what sort of content could be sensibly and OUsefully delivered via a small screen, in this case using WAP pages (though I did also get half-way through building an SMS equivalent, which really concetrated the mind in terms of character count!)</p>
+
+<p>A year or so later, I put together another website, this time targetted at <em>potential</em> rather than current (on a course) students: <a href="http://robofesta.open.ac.uk/microinfo/TSCPwap.html">Technology Short Course Program (TSCP) Experimental WAP Service</a>.</p>
+
+<p>It was brought to mind by <a href="http://www.zinadoo.com/">Zinadoo</a>, a basic and easy-to-use mobile web page builder, which made me think that I haven't tried building a mobile site for ages...</p>
+
+<table><tr><td><p>After a temporary welcome screen, users are presented with the WAP service home-page:</p></td><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/main.gif" alt="main page screen shot" width="178" height="225" border="0"></td></tr><tr><td><img alt="overview menu screen shot" border="0" src="http://technology.open.ac.uk/tel/cor/t396/wap/overview.gif" width="181" height="222"></td><td><p>The T396 Overview provides information for students interested in taking T396. This information mirrors that provided on the Courses and Qualifications website for T396.</p><p>In particular, it includes administrative information (course level, the number of credit points, etc.) as well as a short summary of the course.</p></td></tr><tr><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/newinfo.gif" alt="new student info screen shot" width="186" height="213" border="0"></td><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/summary.gif" alt="summary info screen shot" width="183" height="222" border="0"></td></tr><tr><td><p>A wide variety of information is provided for currently enrolled students. This includes alerts regarding Stop Press information that has been made available, information regarding the status of course related mailings and the dates of TMA of deadlines.</p></td><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/info.gif" alt="info screen shot" width="183" height="223" border="0"></td></tr><tr><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/errata.gif" alt="errata screen shot" width="184" height="224" border="0"></td><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/mailings.gif" alt="mailings info screen shot" width="184" height="224" border="0"></td></tr><tr><td><img src="http://technology.open.ac.uk/tel/cor/t396/wap/tmadates.gif" alt="TMA cut-ff dates screen shot" width="185" height="221" border="0"></td><td><p>An additional page identifies the current, previous and next topic of study, with reference to the Study Calendar for the course.</p></td></tr></table>
+
+<p>I think an SMS strategy is currently being looked at in the OU by student services, and mobile Moodle of some sort is also on the cards, I think, but I've not heard - or seen - anything definite as yet...</p>
+
+<p>If any OU readers know about OUr mobile strategy, I'd be keen to hear about it... :-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007342.html">06:54 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7342" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 01, 2006</h2>
+
+
+<div class="blogbody">
+<a name="007331"></a>
+<h3 class="title">OU Releases Creative Archive Content - but so what?</h3>
+
+<p>The OU has just released a couple of dozen <a href="http://www.open2.net/creativearchive/azlisting.html">video clips from OU programmes</a> as part of its involvement with the <a href="http://www.open2.net/creativearchive/">Creative Archive</a> initiative.</p>
+
+<p>The material is released under five <a href="http://www.open2.net/creativearchive/licenceintro.html">licence conditions</a>:<br />
+<ol><li>You can't use the material for commercial purposes</li><br />
+<li>You must share alike</li><br />
+<li>You must credit the people who made the original material properly</li><br />
+<li>You can't use the material to promote something or in ways which would upset other people</li><br />
+<li>You must be in the UK</li></ol></p>
+
+<p>The idea behind the Creative Archive is a great one:<br />
+<blockquote>You bring your imagination - and maybe material that you've made for yourself on your phone, or camcorder. We bring professionally shot footage. Match it, Mash it, Mix it and then share the results.</p>
+
+<p>How you use the footage is, pretty much, up to you. You could just download the videos and watch them on your PC.</blockquote></p>
+
+<p>Err, actually, in terms of playing with the content <em>directly</em> from the website, you can only download the videos... </p>
+
+<p>For unlike providing something like the BBC's <a href="http://www.bbc.co.uk/calc/sn/easy_edit_suite.shtml">easy edit suite</a>, which you can use to mix footage from the <a href="http://www.bbc.co.uk/calc/sn/index.shtml">Open Earth Archive</a>, all that's offered on the OU site are <a href="http://www.open2.net/creativearchive/editingbasics.html">suggested desktop movie editing applications</a>.</p>
+
+<p>Hmmm - so perhaps I could download the content first and then upload it to something like to the <a href="http://eyespot.com">Eyespot</a> online video mixer?</p>
+
+<p>Maybe, but because of the <em>UK only</em> licencing restriction, I guess I'd also have to keep the content private...</p>
+
+<p>...which presumably also means I can't share any of my remixes on <a href="http://youtube.com">youtube</a> (unlike this <a href="http://youtube.com/watch?v=ISaL5HFzEMo">spoof OU video clip</a> or this <a href="http://youtube.com/watch?v=PEFd4tCWtvk">real one</a>(?!)).</p>
+
+<p>Hmmm...seems to me there's a need for UK only video sharing site...</p>
+
+<p>Maybe this is something that the <a href="http://oci.open.ac.uk/">OpenLearn</a> environment (formerly the Open Content Initiative (OCI)) could offer? ;-)</p>
+
+<p>(Note that OpenLearn and Creative Archive are, as far as I know, completely separate. I'm not sure what licence conditions OpenLearn materials will made available when the first batch are released next month, but I suspect they won't be the Creative Archive conditions.)</p>
+
+<p>Just by the by, for OU internal staff, the now lapsed <a href="http://diva.open.ac.uk/">DiVA</a> digital video library provides a searchable (via transcript) archive of some of the OU video back catalogue, although the website remains...</p>
+
+<p>PS Just found out that OpenLearn will launch on October 25th, with OU content provided under a <a href="http://creativecommons.org/worldwide/uk/translated-license">Creative Commons Attribution/Non-commercial/sharealike</a>...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007331.html">12:09 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7331" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

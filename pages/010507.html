@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Quick Way of Adding Weather to the Foot and Mouth Map</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010506.html" title="Co-presenting Search Results on Timelines and Maps" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010508.html" title="The Future of Photography" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010506.html">&laquo; Co-presenting Search Results on Timelines and Maps</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010508.html">The Future of Photography &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 05, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Quick Way of Adding Weather to the Foot and Mouth Map</h3>
+
+<p>[For a Google Map showing the current (as of August 3, 2007) "foot and mouth exclusion zone", try here: <a href="http://maps.google.com/maps?q=http:%2F%2Fwww.edparsons.com%2FFoot_and_Mouth.kml&ie=UTF8&t=h&z=11&om=1">Foot and Mouth Map, as of 3/8/07</a>.]</p>
+
+<p>A comment on Ed Parson's <a href="http://www.edparsons.com/?p=508">Foot and Mouth - a Geographical Problem</a> post suggests:<br />
+<blockquote>The usefulness of the tool or otherwise comes from what analysis can be done with the output. Given that F&amp;M can often be distributed as an airborne disease, some means of showing the wind direction and speed over time makes this more than just a pretty coloured map...</blockquote><br />
+I agree that it would be useful to be able to overlay wind speed and direction markers on to an emergency response map. And I wonder how difficult it would be to use such data to transform (even approximately) a circular overlay to one that reflects the likely distribution of a gas release, say, given prevailing wind conditions? </p>
+
+<p>The more I think about it, the more I can see a use for an "emergency response web 2.0" toolkit that would allow the rapid construction of an information website to aggregate information in the case of an emergency. A combination of something like <a href="http://ning.com">Ning</a> and <a href="http://services.alphaworks.ibm.com/qedwiki/">IBM's QEDWiki</a> (which I really need to get round to playing with...!), maybe?</p>
+
+<p>Anyway, as a stop gap on the weather thing, a quick search on Google MyMaps ("Add content") turns up this mapplet that can display the wind conditions from various locations around the world, including one not far from Guildford:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095168848108791554"><img src="http://lh5.google.com/tony.hirst/RrWtEm4pJwI/AAAAAAAAAXU/uFXwk3I4vfc/s800/gMapplet.png" /></a></p>
+
+<p>Clicking on the temperature marker opens up a pop-up that includes wind direction data:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095162813679740658"><img src="http://lh4.google.com/tony.hirst/RrWnlW4pJvI/AAAAAAAAAXE/bJfPPlnmBaQ/s800/footMouthWeather.png" /></a></p>
+
+<p>The Mapplet is provided by WeatherBug and can be found here: <a href="http://maps.google.com/ig/directory?url=http://mapplets.weatherbug.com/WeatherBugMapplet.xml">WeatherBug Mapplet</a>.</p>
+
+<p>One thing that jumps out at me looking at that map - it would be sensible to make a semi-transparent coloured filter layer within the two circle overlays on the map.</p>
+
+<p>I've not really looked at <a href=:http://code.google.com/apis/kml/documentation/">KML</a> yet, so maybe now's a good time for me to find out a little more about it, and try to add a semi-transparent layer in? ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August  5, 2007 11:54 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010507.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Google Browser Synch</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007019.html" title="Stephen Downes - The Students Own Education" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007024.html" title="Online Bookshelves" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007019.html">&laquo; Stephen Downes - The Students Own Education</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007024.html">Online Bookshelves &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 18, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Google Browser Synch</h3>
+
+<p>At the moment, I'm in the middle of making a series of posts about PLEs, but the narrative I wanted to develop on this topic is getting severely distorted with the wayward order in which I'm making the postings. So just to add to the confusion, here's another out of order piece...</p>
+
+<p>My feeling about PLEs (to be fully articulated in a fuuture post) is that whatever they are, they will have online and offline components. When I describe this to people, the example I use is <a href="http://blogs.open.ac.uk/Maths/ajh59/006020.html">PodNova</a> which has online and desktop client components: an online management tool where I can subscribe to new podcasts and manage my podcast subscriptions, and an offline client, wherer I can download podcasts (as well as manage subscriptions).</p>
+
+<p>If you are using multiple clients (rather than a <a href="http://blogs.open.ac.uk/Maths/ajh59/005515.html">portable client</a>) then the problem of tuning your client environment so that it is consistent across clients is a significant one...</p>
+
+<p>...unlike accessing the same web site from a variety of clients, where you would expect to see the same website, with the most recent interaction history respected (except in the case of crossing between desktop and mobile browsers/clients, in which case you might expect the sasme website to behave differently depending on your access device).</p>
+
+<p>Until now, that is. The <a href="http://www.google.com/tools/firefox/browsersync/">Google Browser Sync</a> extension for Fireox promises:</p>
+
+<blockquote>Google Browser Sync for Firefox is an extension that continuously synchronizes your browser settings – including bookmarks, history, persistent cookies, and saved passwords – across your computers.</blockquote>
+
+<p>There are potentially huge security issues, of course:</p>
+
+<blockquote>Browser Sync keeps all your browsers in sync with each other, so it needs to send potentially sensitive information like your stored passwords, bookmarks, and browser history to the other computers where you've installed it. Also, once you install Browser Sync, you don't need to log in every time you start the browser to access this info. Therefore, someone who uses a computer where you've installed browser sync will have access to all the info you've chosen to sync across your computers. Any new browser settings they create, such as browsing history, will also show up on your other computers.</blockquote> 
+
+<p>The idea that all my clients - indeed all my machines - can be accessed, searched and synched via the network, is one that seems to have momentum at the moment.</p>
+
+<p>For example, Google Desktop search will <a href="http://desktop.google.com/features.html#searchremote">search across all my desktops</a> via a Google centralised directory of the holdings of my machines:</p>
+
+<blockquote>share your indexed files between your computers, we securely transmit this content to Google Desktop servers located at Google.</blockquote>
+
+<p>Microsoft also offer related propositions in the form of <a href="https://www.foldershare.com/">Foldershare</a> ("create a private peer-to-peer network that will help you to synchronize files across multiple devices and access or share files") and maybe also in the forthcoming <a href="http://www.microsoft.com/livesearch/windowslivesearch/">Windows Live Desktop Search</a> application...</p>
+
+<p><strong>Update:</strong> <a href="http://www.foldershare.com">FolderShare</a> is now integrated in the new release of <a href="http://get.live.com/messenger/overview">Windows Live Messenger</a>, along with VOIP and video chat. Niall Kennedy hints <a href="http://www.niallkennedy.com/blog/archives/2006/06/windows-live-messenger.html">interoperability with Yahoo! Messenger</a> will be in the next release. Meanwhile, Yahoo! have just announced support for <a href="http://developer.yahoo.com/messenger/">plug-ins for Yahoo! Messenger</a>. Exciting times...</p>
+
+<p>(Hmm - Foldershare would be one way of allowing students to synch files across tutor or project groups...how dangerous would that be?! Could this also be a way of getting content from OU servers to students desktops, cf. an <a href="http://blogs.open.ac.uk/Maths/ajh59/005516.html">OU downloader/updater</a> )</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 18, 2006 11:39 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Google Browser Synch";
+ z_post_category="Web 2.OU";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+</body>
+</html>

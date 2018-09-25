@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Grazr and the Question of State</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010056.html" title="Grazring Grazr OPML Uploads: Bookmarklet" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010073.html" title="Scribd and the Role of Open Repositories" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010056.html">&laquo; Grazring Grazr OPML Uploads: Bookmarklet</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010073.html">Scribd and the Role of Open Repositories &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 25, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Grazr and the Question of State</h3>
+
+<p>For a reason I can't quite work out, I woke up this morning wondering how to get state information into Grazr. What is state, you may ask? Think of it as the set of configuration data or information contained within a computer program, or web page. What is state good for? Configuring web forms, for one...</p>
+
+<p>When you load a web page, the page itself is generally stateless. That is to say, the web page itself knows nothing about you. It is generic, although it may be customisable.</p>
+
+<p>How then, do sites like Amazon always manage to know who you are, and serve you a customised page that identifies you explicitly?</p>
+
+<p>One way is to use a <em>cookie</em> (<a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=84854">read about cookies on Openlearn</a>). Cookies are little data records that are stored on your computer by a website. When you first visit a website and enter your personal details, the website collects this information, creates a unique identifier for you and stores that identifier in a cookie on your computer. When you revisit the webpage, it looks for the cookie, sees who you are, and customises the page as a result. Cookies could store your personal details explicitly on your computer rather than a unique identifier, but this is usually a bad idea, for privacy reasons if nothing else.</p>
+
+<p>To make things concrete in the Grazr world, consider the <a href="http://grazr.com/read/psychemedia/deliRolls.opml">deliRolls</a> script that lets you view feeds corresponding to bookmarks tagged in a particular way by particular delicious users.</p>
+
+<p>The form has two customisable inputs - one or more delicious usernames, and one or more tags. As it stands, there is no way I can preconfigure this particular widget (as it stands, and as far as I know...) so that it displays the feeds I was looking at previously each time I reload the page containing the widget.</p>
+
+<p>A cookie would let me do this. A cookie could be used to save the delicious usernames and tags each time I change them, so that the next time I visit the page I see the widget configured as it was the last time I used it with the same browser.</p>
+
+<p>Cookies are set in a browser using Javascript. However, whilst Grazr does support Javascript, the Javascript runs on the Grazr server to build the rendered OPML file, not in your browser. The Grazr widget itself is built using Javascript, but this is not accessible to the user.</p>
+
+<p>So cookies can't be used at the moment to load state data into a Grazr widget (one for the wishlist, maybe? Some cookie handlers?).</p>
+
+<p>Another way of getting state information - such as the delicious username(s) and tag(s) required by the deliRolls widget - is via the URI. This approach is taken by the Yahoo Pipes team: each interface/input element in a Yahoo pipe is exposed as an argument in the URI.</p>
+
+<p>The same approach can easily be achieved in Grazr <em>if</em> it is possible to associate arguments with a GrazrScript URL.</p>
+
+<p>For example, the deliRolls script lives at <em>http://grazr.com/data/psychemedia/deliRolls.opml</em>; the script contains two arguments, corresponding to the input fields: <em>deliName</em> and <em>deliTag</em>. If these could be set via the OPML URL, it would be possible to load a preconfigured deliRolls widget.</p>
+
+<p>For example, loading the Grazr widget with <em>http://grazr.com/data/psychemedia/deliRolls.opml?deliName=psychemedia&deliTag=grazr%20opml</em> should load the form with two feeds from my delicious account: one with items that are tagged "grazr", the other with items that are tagged "opml".</p>
+
+<p>By supporting the passing of arguments "into" GrazrScript OPML files in this way, it would also be possible to write Grazr wrappers that could set and read cookies, and then load in an appropriately configured GrazrScript file <em>without</em> the Grazr widget having to offer cookie support.</p>
+
+<p>The stop gap is to write a GrazrScript generator that does accept URLs and that generates a customised OPML file that gets loaded into the Grazr widget (which is the approach taken for the generators listed in the <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript Generator Studio</a>) but it would be far more elegant if Grazr could handle this directly.</p>
+
+<p>So here's my feature request:</p>
+
+<p> - for every form variable in a GrazrScript file, expose it/handle it as a URL (HTTP GET) argument to the GrazrScript/OPML file.</p>
+
+<p>I guess it would also be handy to be able to run an onload function, too, e.g. to simulate the form submit action so that the arguments passed into the form can be used automatically as a form submit action to preload the Grazr form result node.</p>
+
+<p>PS here's another request too; it's possible to pass the name of a frame you want Grazr links to open in via the <em>linktarget=</em> argument. What would also be handy would be the ability to pass the URL you want to open into a callout function in the browser; for example, in the <a href="http://ouseful.open.ac.uk/stringle">Stringle</a> environment, I'd like to be able to call a function that ensures the correct tab has the focus when a page is loaded from Grazr.<br />
+Without thinking too deeply about it, what I'd like to be able to say is <em>callOut=foo</em> and then, whenever I click on a link in the Grazr widget, call <em>foo(url)</em> in the parent window, where <em>url</em> is the URL I clicked on in the Grazr widget.</p>
+
+<p>PPS hmm, is it possible to run a GrazrScript serverside javascript function from a Grazr link, I wonder? That is, when a link is clicked, call a GSJS function?</p>
+
+<p>PPS hmm, too - (after a msg from Mike) - I wonder if a GSJS <em>onload</em> callback/callout would be useful; that is, the ability to call a parent window Javascript function once the Grazr form has loaded.<br />
+Mike also mentioned a hack that lets you display just the results of running a script in Grazr that I'll have a tinker with over the next few days...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 25, 2007 12:47 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010063.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

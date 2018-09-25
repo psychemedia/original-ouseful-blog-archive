@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Serial Web Feeds via Yahoo Pipes</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009969.html" title="Delicious2Opml Converter with optional deliSearch Tool" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/009993.html" title="GrazrScript Generator Studio" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/009969.html">&laquo; Delicious2Opml Converter with optional deliSearch Tool</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript Generator Studio &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 11, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Serial Web Feeds via Yahoo Pipes</h3>
+
+<p>Todd Slater over at <a href="http://idea.zanestate.edu/">Big IDEA</a> has just started developing a <a href="http://idea.zanestate.edu/archives/2007/03/serial-podcast-feed-generator/">podcast serialiser</a> (and <a href="http://idea.zanestate.edu/archives/2007/03/improved-serial-podcast-feed-generator/">here</a>):<br />
+<blockquote>What if an instructor wants to podcast (subscription model) audio files? He has a few options. He can tell students to subscribe to his blog and then post audio files there on a weekly basis. This is a great option for the first quarter, but what does he do in subsequent quarters? All of the previous posts will be "old" and new students won't see them when they subscribe to the blog in a subsequent quarter. What he needs is something that will update the RSS feed based on the quarter's start date and a determined update interval.</blockquote></p>
+
+<p>(Todd's app is developing apace, so it's worth checking hos blog for more recent posts, such as <a href="http://idea.zanestate.edu/archives/2007/03/podcast-feed-generator-getting-better/">this one</a>. I'm also with you on the abuse of the "podcast" term, Todd, and keep having to fight that battle here...).</p>
+
+<p>This has a lot in common with the ideas I've been working up for <a href="http://blogs.open.ac.uk/Maths/ajh59/009213.html">OpenLearn<em>_daily</em></a>, and has prompted me into a bit of a tinker today.</p>
+
+<p>The original plan was to subscribe to a feed with some user-specific info, like the time of subscription and the way in which they wanted the content delivered. From this info, and the current time stamp whenever the feed is polled, an appropriate number of feed items would be delivered to the user.</p>
+
+<p>Stephen Downes commented in a personal email (I think) about the resource requirements/server load for popular feeds and I've been in several minds about the best way to count of items whenever a personalised feed is polled....</p>
+
+<p>So, I've taken the easy way out, and rather than doing all the work myself (not much work in fact, but anyway....) I've handled the 'count the appropriate number of feed items' task over to <a href="http://pipes/yahoo.com">Yahoo Pipes</a>.</p>
+
+<p>This <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">Feed Serialiser Pipe</a> takes in a couple of arguments - a feed URL and a digit - and simply counts out the corresponding number of feed items.</p>
+
+<p>A form I've been doodling with over the last couple of weeks (and that <em>seriously</em> needs tidying!) provides the interface that allows the user to customise the delivery schedule and generates an appropriate, customised URL to subscribe to: <a href="http://ouseful.open.ac.uk/openlearndaily/feedCycle.php">Serialised feed subscription form</a>.</p>
+
+<p>The form lets you enter <em>any</em> feed URL (err, maybe....?;-) and a schedule according to which you'd like the feed items to be delivered. It then generates a URL for you to subscribe to which will deliver items as and when required. (At the moment, the items are delivered in narrative order, rather than reverse chronological order; when I get a chance, I'll add a switch that lets you select the ordering of your choice).</p>
+
+<p>Some logic located at the customised feed URL then works out how many items are required in the feed whenever it's polled and calls the Yahoo Pipe with the appropriate arguments.</p>
+
+<p>The server's still got work to do - quite a bit in fact, as it's acting as a <a href="http://developer.yahoo.com/javascript/howto-proxy.html#phpproxy">proxy</a> for the Yahoo Pipe feed and doesn't make use of cacheing (oops!) - but I'm hoping that as time goes by the Pipes folks offer more and more functionality and I can pass more and more of the logic over to them and hopefully end up with a purely Pipes based solution :-)</p>
+
+<p>(One thing I'd like to see in the Pipes toolbox, which should be simple, is  a 'reverse the order of items in a feed' block for items that have no timestamp. This isn't anywhere near as complex as the current Sort block, so any chance of it guys? [SOLVED, I think... just using SORT to display descending order on <em>pubdate</em> works (I think), even though there is no pubdate...The question now is - how do I put logic into the Pipe, so I can supply a user argument and reverse sort if a 'reverseOrder' option is set by a user]:-)</p>
+
+<p>Feel free to try the service out, and mail me - or comment - with any problems.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 11, 2007 04:36 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Nice, I hadn't thought of using Pipes. Per your feed subscription form, I have only glanced at the code, but how are you scheduling the updates? Do you test the time it's being hit, and compare that to the start time, and then deliver the appropriate number of items? I see t is the time and p is the update interval. That opens up some possibilities...</p>
+<span class="comments-post">Posted by: <a href="http://idea.zanestate.edu">todd</a> at March 12, 2007 01:02 PM</span>
+</div>
+<div class="comments-body">
+<p>Re the update scheduling, I put the subscription time in the URL and then whenver the feed is polled it is compared to the current time:</p>
+
+<p>The original pseudo-code was:</p>
+
+<p> timeSinceStart=(timeNow-startTime); //startTime is the time in the feed URL </p>
+
+<p> c=timeSinceStart/period;<br />
+  <br />
+ n= (int)c * bundleSize + initSize; //n is the number of items to return in the feed..</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony</a> at March 12, 2007 01:28 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/009972.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

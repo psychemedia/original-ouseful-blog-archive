@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Persistent News Search OPML Feedroll Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" rel="stylesheet" href="monitorThis.css">
+<style type="text/css">
+#page {width: 740px;}
+.sbSysSelect {margin:10px}
+</style>
+  <script type="text/javascript">
+
+function generateFeedURL_custom(user, tagCombination){
+ var path=document.customForm.sbCustomPath.value;
+ var sbSys;
+ for (var i=0;i<document.customForm.sbCustomApp.length;i++)
+  if (document.customForm.sbCustomApp[i].checked==true)
+   sbSys=document.customForm.sbCustomApp[i].value;
+
+ var feedURL=path+sbRegistry[sbSys].feedStub;
+ if (user!='') feedURL+=sbRegistry[sbSys].userStub+user;else feedURL+=sbRegistry[sbSys].noUserStub;
+ if (tagCombination!='') feedURL+=sbRegistry[sbSys].tagStub+tagCombination;
+
+ return feedURL;
+}
+
+function generateFeedURLfromRegistry(sbSys, user, tagCombination){
+ var feedURL=sbRegistry[sbSys].rootURL+sbRegistry[sbSys].feedStub;
+ if (user!='') feedURL+=sbRegistry[sbSys].userStub+user; else feedURL+=sbRegistry[sbSys].noUserStub;
+ if (tagCombination!='') {tagCombination=tagCombination.replace(/%20/g,'+');feedURL+=sbRegistry[sbSys].tagStub+tagCombination;}
+ feedURL+=sbRegistry[sbSys].postStub;
+ return feedURL;
+}
+
+
+var simpyNoUserHack=0;
+/*
+function generateFeedURL_simpy(user, tagCombination){
+ var feedURL='http://www.simpy.com/rss';
+ if (user!='') feedURL+='/user/'+user+'/links';else {if (simpyNoUserHack==0) alert('You need to include a user for Simpy feeds...');simpyNoUserHack=1;return 'NULL';} 
+ if (tagCombination!='') feedURL+='/tags:+'+tagCombination;
+ return feedURL;
+}
+*/
+
+function getProfileName(profileID){
+ var profileName=document.getElementById('profileName').value;
+ if (profileName=='') profileName=profileID;
+ return profileName;
+}
+
+function RegistryItem(sbName, servicePath, imagePath, feedStub, userStub, noUserStub, tagStub, postStub){
+ this.sbName=sbName;
+ this.rootURL=servicePath;
+ this.image=imagePath;
+ this.feedStub=feedStub;
+ this.userStub=userStub;
+ this.noUserStub=noUserStub;
+ this.tagStub=tagStub;
+ this.postStub=postStub;
+}
+
+var sbRegistry=new Array();
+var sbRegistryIndex=new Array();
+function addRegistryItem(sbName, servicePath, imagePath, feedStub, userStub, noUserStub, tagStub, postStub){
+ sbRegistry[sbName]= new RegistryItem(sbName, servicePath, imagePath, feedStub, userStub, noUserStub, tagStub, postStub);
+ sbRegistryIndex[sbRegistryIndex.length]=sbName;
+}
+
+addRegistryItem('MSN News','http://search.msn.com/news/results.aspx?q=','http://search.msn.com/s/msn.ico','','','','','&amp;format=rss&amp;FORM=RSNR');
+addRegistryItem('Yahoo News','http://news.search.yahoo.com/news/rss?p=','http://news.search.yahoo.com/favicon.ico','','','','','&amp;ei=UTF-8');
+addRegistryItem('Google News','http://news.google.com/news?ie=UTF-8&amp;q=','http://news.google.com/favicon.ico','','','','','&amp;output=rss');
+//addRegistryItem('BBC News (via Google)','http://news.google.com/news?ie=UTF-8&amp;q=','http://news.bbc.co.uk/favicon.ico','','','','','+source:bbc_news&amp;output=rss');
+
+addRegistryItem('Hudds_U','http://webcat.hud.ac.uk:4128/perl/opensearch.pl?keyword=','http://webcat.hud.ac.uk/favicon.ico','','','','','');
+addRegistryItem('OU_ROUTES','http://routes.open.ac.uk/routes_xml_search_rss.php?search=','http://www.ouw.co.uk/favicon.ico','','','','','');
+
+//addRegistryItem('delicious','http://del.icio.us/','http://del.icio.us/favicon.ico','rss','/', '/tag','/','');
+//addRegistryItem('connotea','http://www.connotea.org/','connotea.PNG','rss','/user/','','/tag/','');
+//addRegistryItem('citeulike','http://www.citeulike.org/','citeUlike.PNG','rss','/user/', '','/tag/','');
+//addRegistryItem('scuttle','http:://scuttle.org/','http://www.scuttle.org/icon.png','rss.php','/', '/all','/','');
+//addRegistryItem('simpy','http://www.simpy.com/','http://simpy.com/favicon.ico','rss','/user/', 'ERROR','/links/tags:','');
+
+function ProfileRow(profileID){
+ this.users = '';//getUserArray();
+ this.tags = getTagArray();
+ this.services = getSBServiceArray();
+ this.current=true;
+ this.id=profileID;
+ this.profileName=getProfileName(profileID);
+}
+
+var profileNum=0;
+var currProfileID;
+
+function addProfile(){
+ currProfileID='profile'+profileNum; 
+ profileList[currProfileID]= new ProfileRow(currProfileID); 
+ addProfileViewer(currProfileID);
+ profileNum++;
+ return currProfileID;
+}
+
+function addTextInputItem(id,itemArray){
+ var node=document.createElement('input');
+ node.setAttribute('type', 'text');
+ node.setAttribute('id', id);
+ node.setAttribute('value', itemArray);
+ return node;
+}
+
+function addCellContaining(row, cellItem){
+ var cell=document.createElement('td');
+ cell.appendChild(cellItem);
+ row.appendChild(cell);
+}
+
+function addImage(src, alt){
+ var node = document.createElement('img');
+ node.setAttribute('src', src);
+ node.setAttribute('alt', alt);
+ return node;
+}
+
+function createCheckboxImageCell(cbName, cbValue, imgSrc, imgAlt) {
+ var el=addCheckboxItem(cbName,cbValue);
+ var cell=document.createElement('td');
+ cell.appendChild(el);
+ el=addImage(imgSrc,imgAlt+' logo');
+ cell.appendChild(el);
+ el=document.createTextNode(imgAlt);
+ cell.appendChild(el);
+ return cell;
+}
+
+function createCheckboxImageSpan(cbName, cbValue, imgSrc, imgAlt){
+ var el=addCheckboxItem(cbName,cbValue);
+ var cell=document.createElement('span');
+ cell.setAttribute('class','sbSysSelect');
+ cell.appendChild(el);
+ el=addImage(imgSrc,imgAlt+' logo');
+ cell.appendChild(el);
+ el=document.createTextNode(imgAlt);
+ cell.appendChild(el);
+ return cell;
+}
+
+function generateSBSysTable(){
+ var output=document.getElementById('autoSBSysTable');
+ var cell; var row; var el; var odd=1; var sbRegistryItem;
+ row=document.createElement('div');
+ for (var i=0;i<sbRegistryIndex.length; i++) {
+  sbRegistryItem=sbRegistry[sbRegistryIndex[i]];
+  cell=createCheckboxImageSpan('sbApp',sbRegistryItem.sbName, sbRegistryItem.image, sbRegistryItem.sbName);
+  row.appendChild(cell);
+ }
+ //cell=createCheckboxImageSpan('sbApp','custom','','Custom');
+ //row.appendChild(cell);
+ output.appendChild(row);
+}
+
+
+function addCheckboxItem(name, value) {
+ var node=document.createElement('input');
+ node.setAttribute('type','checkbox');
+ node.setAttribute('name', name);
+ node.setAttribute('value', value);
+ //node.setAttribute('checked','checked');
+ return node;
+}
+
+function addProfileViewer(profile){
+ var output = document.getElementById('selTable');
+
+ var row=document.createElement('tr');
+ row.setAttribute('id',profile);
+
+/*
+ var el=addCheckboxItem('bundler','profile+'bundler');
+ addCellContaining(row, el);
+*/
+
+ var profileName=addTextInputItem(profile+'Name',profileList[profile].profileName);
+ addCellContaining(row, profileName);
+
+// var usrUsers=addTextInputItem(profile+'Users',profileList[profile].users);
+// addCellContaining(row,usrUsers);
+
+ var usrTags=addTextInputItem(profile+'Tags',profileList[profile].tags);
+ addCellContaining(row,usrTags);
+
+ for (k=0;k<sbRegistryIndex.length;k++) {
+  el=addCheckboxItem(profile+'sbSys', sbRegistryIndex[k]);
+
+  var sbServiceArray=profileList[profile].services;
+  for (var i=0; i<sbServiceArray.length;i++){
+   if (sbServiceArray[i]==sbRegistryIndex[k])
+    el.setAttribute('checked', 'checked');
+  }
+  addCellContaining(row, el);
+ }
+
+ var URL=getRESTfulURL();
+ if (URL!='NULL')
+ {
+  var link=addLink(URL, 'OPML');
+  link.setAttribute('id',profile+'feedURL');
+  addCellContaining(row, link);
+
+  URL=generatePDFURL(URL);
+  link=addLink(URL, 'PDF');
+  link.setAttribute('id',profile+'pdfURL');
+  addCellContaining(row, link);
+
+  URL=getOptimalBrowserURL();
+  link=addLink(URL, 'Optimal');
+  link.setAttribute('id',profile+'optimalURL');
+  addCellContaining(row, link);
+
+ }
+ else
+ {
+  addCellContaining(row, document.createTextNode(''));
+  addCellContaining(row, document.createTextNode('')); 
+}
+
+ URL=getDelURL(profile);
+ link=addLink(URL,'del')
+ addCellContaining(row, link);
+
+ URL='javascript:generateAndDisplayOPMLfromProfile("'+profile+'")';
+ link=addLink(URL,'display');
+ addCellContaining(row, link);
+
+ output.appendChild(row); 
+}
+
+function delRow(profile){
+ var delTable = document.getElementById('selTable');
+ delTable.removeChild(document.getElementById(profile));
+ profileList[profile].current=false;
+}
+
+function getDelURL(profile){
+ var URL='javascript:delRow("'+profile+'")';
+ return URL;
+}
+
+function addLink(url, linkTxt){
+ var a=document.createElement('a');
+ a.setAttribute('href',url);
+ a.appendChild(document.createTextNode(linkTxt));
+ return a;
+}
+
+function getOptimalBrowserURL(){
+ var tagCombinationArray=getTagArray();
+ //var userArray=getUserArray();
+ var sbServiceArray=getSBServiceArray();
+
+ var tagCombinationList=tagCombinationArray.join(' ');
+ //var userList=userArray.join(' ');
+ var sbServiceList=sbServiceArray.join(' ');
+
+// if ((userList=='')&&(sbServiceArray.indexOf('simpy')!=-1)) sbServiceList=sbServiceList.replace(/ ?simpy/,'');
+
+ var URL='NULL';
+ //if (sbServiceList!='') URL='http://blogs.open.ac.uk/Maths/ajh59/newsOPMLB.php?tags='+escape(tagCombinationList)+'&services='+escape(sbServiceList);
+ var tmpURL='http://blogs.open.ac.uk/Maths/ajh59/newsOPMLB.php?tags='+tagCombinationList+'&services='+sbServiceList;
+ if (sbServiceList!='') URL='http://optimalbrowser.com/optimal.php?url='+escape(tmpURL)+'&submit=Submit';
+ return URL;
+
+}
+
+function getRESTfulURL(){
+ var tagCombinationArray=getTagArray();
+ //var userArray=getUserArray();
+ var sbServiceArray=getSBServiceArray();
+
+ var tagCombinationList=tagCombinationArray.join(' ');
+ //var userList=userArray.join(' ');
+ var sbServiceList=sbServiceArray.join(' ');
+
+// if ((userList=='')&&(sbServiceArray.indexOf('simpy')!=-1)) sbServiceList=sbServiceList.replace(/ ?simpy/,'');
+
+ var URL='NULL';
+ if (sbServiceList!='') URL='http://blogs.open.ac.uk/Maths/ajh59/newsOPMLB.php?tags='+escape(tagCombinationList)+'&services='+escape(sbServiceList);
+ return URL;
+}
+
+function generatePDFURL(opmlURL){
+ var URL='http://rss2pdf.com/index.php?url='+escape(opmlURL)+'&src=opml&title=&img=0';
+ return URL;
+}
+
+function generateRESTfulURL(){
+ var URL=getRESTfulURL();
+
+ var output = document.getElementById('feedURL');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ if (URL!='NULL')
+ {
+  var link = addLink(URL,'OPML Feed');
+  output.appendChild(link); 
+ }
+
+ URL=getOptimalBrowserURL();
+ output = document.getElementById('optimalURL');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ if (URL!='NULL')
+ {
+  link = addLink(URL,'view feed in Optimal');
+  output.appendChild(link); 
+ }
+
+ output = document.getElementById('optimalDisplay');
+ if (URL!='NULL') {URL+='&standalone=1&nohead=1';output.setAttribute('src',URL); }
+
+}
+
+
+function generateFeedURL(sbService, user, tagCombination){
+ var feedURL='';
+ if (sbService!='custom') feedURL=generateFeedURLfromRegistry(sbService, user, tagCombination);
+ else feedURL=generateFeedURL_custom(user, tagCombination);
+ return feedURL;
+}
+
+function generateOPMLItem(sbService, user, tagCombination){
+ var opmlItem;
+ var opmlInfo;
+ var text='Service: '+sbService+';';
+ //alert('sb:'+sbService+'; usr:'+user+'; tag:'+tagCombination+';');
+ //if (user!='') text+=' user: '+user+';';
+ if (tagCombination!='') text+=' tag combination: '+tagCombination+';';
+ opmlInfo=generateFeedURL(sbService, user, tagCombination);
+ if (opmlInfo!='NULL')
+   if (document.feedTerms.suppressOPML.checked!=true) opmlItem='<outline type="rss" text="'+text+'" xmlUrl="'+opmlInfo+'" />\n';
+   else opmlItem=opmlInfo+'\n';
+ else opmlItem='NULL';
+ return opmlItem;
+}
+
+function getUserArray(){
+ var userList=document.getElementById('usr').value;
+ return userList.split(/[ ,]+/);
+}
+
+function getTagArray(){
+ var tagCombinationList=document.getElementById('tag').value;
+ return tagCombinationList.split(/[::]+/);
+}
+
+function getSBServiceArray(){
+ var services=new Array();
+ var sbListRoot=document.getElementById('autoSBSysTable');
+ var sbList=sbListRoot.getElementsByTagName('input');
+ for (var k=0;k<=sbRegistryIndex.length-1;k++) {
+  if (sbList[k].checked==true) services[services.length]=sbList[k].value;
+ // if (document.dataForm.sbApp[k].checked==true) {
+ //  services[services.length]=document.dataForm.sbApp[k].value;
+ // }
+ }
+ return services;
+}
+
+function generateOPMLRow(profile) {
+ var i; var j; var k;
+ var opmlItem;
+ var opmlFeed='';
+
+ var sbService;
+ //var userArray=profileList[profile].users; //getUserArray();
+ var tagCombinationArray=profileList[profile].tags; //getUserArray();
+ var sbServiceArray=profileList[profile].services;  //getSBServiceArray();
+ var searchTerm;
+ for (k=0;k<sbServiceArray.length;k++){
+  sbService=sbServiceArray[k];
+ // for (j=0;j<userArray.length;j++) {
+   for (i=0; i<tagCombinationArray.length;i++){
+    searchTerm=escape(tagCombinationArray[i]);
+    opmlItem = generateOPMLItem(sbService, '', searchTerm);
+    if (opmlItem!='NULL') opmlFeed+=opmlItem;//else return 'There appears to have been an error...';
+   }
+ // }
+ }
+ return opmlFeed;
+}
+
+function generateOPMLfromProfile(profile){
+ var opmlFeed='<opml>\n<head>\n<title>Persistent News Search Feeds</title>\n</head>\n<body>\n';
+ if (document.feedTerms.suppressOPML.checked==true) opmlFeed='';
+ opmlFeed+=generateOPMLRow(profile);
+ if (document.feedTerms.suppressOPML.checked!=true) opmlFeed+='</body>\n</opml>';
+ return opmlFeed;
+}
+
+function displayOPMLfromProfile(opml){
+ var element = document.getElementById('output');
+ element.value=opml;
+}
+
+function generateAndDisplayOPMLfromProfile(profile){
+ var opml=generateOPMLfromProfile(profile);
+ displayOPMLfromProfile(opml);
+}
+
+var profileList=new Array();
+
+function loadopml2(){
+ var profile=addProfile();
+ simpyNoUserHack=0;
+ generateAndDisplayOPMLfromProfile(profile);
+ generateRESTfulURL();
+}
+
+function generateFeedRoll(){
+ var profile;
+ var opml='<opml>\n<head>\n<title>Persistent News Feeds</title>\n</head>\n<body>\n';
+ for (k=0;k<profileNum;k++) {
+ // alert(profileList['profile'+k].current);
+  if (profileList['profile'+k].current) {
+   if (document.feedRoll.suppressFolders.checked!=true) opml+='<outline text="'+profileList['profile'+k].profileName+'">\n'; //"profile'+k+'">\n';
+   opml+=generateOPMLRow('profile'+k);
+   if (document.feedRoll.suppressFolders.checked!=true) opml+='</outline>\n';
+  }
+ }
+ opml+='</body>\n</opml>';
+ displayOPMLfromProfile(opml);
+ var output = document.getElementById('feedURL');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+
+ output = document.getElementById('optimalURL');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+
+}
+</script>
+</head>
+<body>
+<div id="page">
+<h1>Persistent News Search OPML Feedroll Generator</h1>
+<fieldset><legend>select news target(s)</legend>
+<form action="" name='dataForm' id='sbListingForm'>
+
+<div id='autoSBSysTable'>
+</div>
+
+</form></fieldset>
+
+<script type="text/javascript">generateSBSysTable();</script>
+<!--
+<fieldset><legend>define customisable social bookmarking system</legend>
+<form action="" name=customForm>
+<label for="sbCustomPath"> Path (default is for ScuttlEdu): </label></td><td><input style="width: 300px;"
+ id="sbCustomPath" type="text" value="http://blogs.zanestate.edu/mybookmarks/">
+  <table border='0' class='sbCustomApps'>
+<tr><td><input type='radio' name='sbCustomApp' value='delicious' /> del.icio.us-like</td>
+<td><input type='radio' name='sbCustomApp' value='scuttle' checked=true /> Scuttle-like</td>
+<td><input type='radio' name='sbCustomApp' value='connotea' /> Connotea-like</td>
+</tr>
+</table>
+</form></fieldset>
+-->
+
+<fieldset><legend>enter
+feed terms</legend>
+<form name="feedTerms" action="" onsubmit="loadopml2(); return false;">
+
+  <table border='0'>
+<tr><td><label for="profileName"> Profile Name:</label></td><td><input style="width: 150px;"
+ id="profileName" type="text"></td></tr>
+<!--<tr><td><label for="usr"> Username(s):</label></td><td><input style="width: 180px;"
+ id="usr" type="text"></td></tr>-->
+<tr><td><label for="tag"> Search term(s):</label></td><td><input style="width: 200px;"
+ id="tag" type="text"></td></tr>
+<tr>
+ <td></td>
+ <td><input value="generate OPML" class="but" type="submit"> <input type='checkbox' name='suppressOPML'> <label for='suppressOPML'>Suppress OPML (just generate feed URLs)</label></td></tr></table>
+</form>
+</fieldset>
+
+<fieldset><legend>profile selection</legend>
+ <form name='feedRoll' action='' onsubmit='generateFeedRoll(); return false;'>
+  <table border="1">
+   <tbody id='selTable'>
+   <tr>
+   <!-- <td>Roll</td> -->
+   </tr>
+   </tbody>
+  </table>
+  <script type="text/javascript">
+
+  function profileTableHead(){
+   var cell;
+   var output=document.getElementById('selTable');
+   var row=document.createElement('tr');
+   addCellContaining(row, document.createTextNode('Profile'));
+   //addCellContaining(row, document.createTextNode('User'));
+   addCellContaining(row, document.createTextNode('Search Terms'));
+   for (var i=0;i<sbRegistryIndex.length; i++) {
+    cell=addImage(sbRegistry[sbRegistryIndex[i]].image,sbRegistry[sbRegistryIndex[i]].sbName);
+    addCellContaining(row, cell);
+   }
+   addCellContaining(row, document.createTextNode('Feed'));
+   addCellContaining(row, document.createTextNode('PDF'));
+   addCellContaining(row, document.createTextNode('Optimal'));
+   cell=document.createElement('td');
+   cell.appendChild(document.createTextNode('Actions'));
+   cell.setAttribute('colspan','2'); row.appendChild(cell);
+   output.appendChild(row);
+  }
+  profileTableHead();
+  </script>
+  <p>
+   <input value="generate OPML roll" class="but" type="submit"> &nbsp;&nbsp;<input type='checkbox' name='suppressFolders'> <label for='suppressFolders'>Suppress Folders</label>
+  </p>
+ </form>
+</fieldset>
+
+
+<fieldset> <legend>your
+OPML/feed URLs:</legend>
+
+<p>Here is your feed URL: <span id='feedURL'></span></p>
+<p>View in <em>Optimal</em>: <span id='optimalURL'></span></p>
+
+<iframe id='optimalDisplay' width='90%'></iframe>
+
+<form action="">
+  <div><textarea id="output" cols="100" rows="35" style="width: 98%;"></textarea>
+  <br>
+  <br>
+  <input value="select all"
+ onclick="javascript:this.form.output.focus();this.form.output.select();"
+ class="but" type="button"> </div>
+</form>
+</fieldset>
+</div>
+
+
+</body>
+</html>

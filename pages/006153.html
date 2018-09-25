@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: (Social) Bookmark Interoperability</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006142.html" title="Ad Supported Courses" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006160.html" title="Importing OPML into IE7" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006142.html">&laquo; Ad Supported Courses</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006160.html">Importing OPML into IE7 &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 04, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">(Social) Bookmark Interoperability</h3>
+
+<p>Some time ago I posted on the topic of <a href="http://blogs.open.ac.uk/Maths/ajh59/005332.html">Social Bookmarking Interoperability</a>, something I've had cause to look at again several times recently: firstly on the issue of synching bookmarks between users on two different social bookmarking systems (Simpy and delicious); secondly on managing browser bookmark collections, and synching between different browsers and social bookmarking systems; thirdly on the display of bookmark collections in folder based displays.</p>
+
+<p>All these issues got me thinking about some sort of bookmark managing system that would let me organise my bookmarks across and between browsers and social bookmarking systems, within folders and live folders (i.e. tags) and so on - a windows explorer like view, if you like, within which is could  move, syhnch and organise bookmarks to my heart's desire.</p>
+
+<p>So  - can I find the raw ingredients for such a tool?</p>
+
+<p>Well, synching between browser bookmark formats looks to be supported by several tools and scripts that are floating around the web. <a href="http://www.die.net/doc/linux/man/man1/xbel_parse.1.html">xbel_parse</a> is part of a Linux command line tool collection that supports the conversion of Netscape, IE, Opera and links bookmarks to and from <a href="http://pyxml.sourceforge.net/topics/xbel/">XBEL</a> (the XML Bookmark Exchange Language).</p>
+
+<p>In order to achieve the same thing in a pre-built desktop client, <a href="http://bookmarkbridge.sourceforge.net/">BookmarkBridge</a> looks a good bet:</p>
+
+<blockquote>a small, easy to use, multi-platform, GUI-based utility that allows the user to share bookmarks between all their browsers. The user runs it periodically to synchronize between the browsers.</blockquote>
+
+<p><img src="http://bookmarkbridge.sourceforge.net/main_screen.png" alt="bookmarkbridge screenshot" /></p>
+
+<p>Many of the social bookmarking systems now support import/export from/to the major browser bookmark formats (although I heard tales of problems importing into delicious) and so there is a clunky way there for synching bookmarks across systems for those systems that do not allow an import via API calls (simpy for example will happily import delicious bookmarks).</p>
+
+<p>I was going to say that I haven't yet seen a client like BookMarkBridge, for example, that will automatically pull bookmarks down form a social bookmarking system and upload them to another (or import them into a browser) but then I stumbled across <a href="http://sitebar.org/">Sitebar</a> that looks like it may support this sort of functionality, or at least, it supports borwser/XBEL bookmark formats as well as RSS and OPML. The <a href="http://sitebar.org/downloads.php">Sitebar code and server are available as open source</a> so I think I really need to go and check it out... From the <a href="http://sourceforge.net/project/shownotes.php?release_id=308706&group_id=76467">Sitebar version 3.3rc1. release notes</a>:</p>
+
+<blockquote>"Export Bookmarks" reworked and enhanced with feed possibility. SiteBar can now produce feeds in many formats and with many options. Following formats were added: Atom, RDF, RSS, OPML, XBEL. Command "Export Bookmarks" was added to "Maintain Trees" and allows export of all accessible trees. New command "Export Bookmarks Settings" allows to specify some details about feeds. "Import Bookmarks" reworked, import from following formats added Atom, RSS, OPML, RDF, XBEL. XBEL is now the default export/import format for SiteBar.</blockquote>
+
+<p>Hmmm...<br />
+ <br />
+Anyway, one thing that occurred to me that I haven't done for a long time was to think about the various ways I could use <a href="http://www.mozilla.com/firefox/livebookmarks.html">live bookmarks</a> to display my delicious bookmarks, for example, in my browser. This has limited utility though  - for example, I can't build up folder hierarchies (I don't think) using live bookmarks on the toolbar or in the bookmarks sidebar. </p>
+
+<p><img alt="liveBookmarkNew.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/liveBookmarkNew.jpg" width="307" height="239" border="0" /> <img alt="liveBookmarkSiderbar.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/liveBookmarkSiderbar.jpg" width="385" height="295" border="0" /></p>
+
+<p>However, feedreaders that support OPML do let you have folder directories, don't they?;-) Like <A href="http://sage.mozdev.org/">Sage</a> for instance...</p>
+
+<p>Which means that if I construct an appropriate OPML feed, I can import a list of 'folder organised' bookmarks from a social bookmarks feed...</p>
+
+<p>Where to find such a feed, though...? Hmmm - I feel a tweak to the Social Bookmarks OPML Feed Generator coming on. Here's a first attempt - <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPMLFeedBlender-d.html">Social Bookmarks OPML feed generator with directory structure</a>:</p>
+
+<p><img alt="sbOPMLFolder.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sbOPMLFolder.jpg" width="604" height="452" border="0" /></p>
+
+<p>(You'll notice the additional structure can be suppressed via the checkbox. The profiles are numbered as they are becuase I'd previously created, and deleted, a couple of feed profiles. It's easy enough to let a user name a feed profile, but I'd need to change the interface around a bit (I'm running out of room!) In the meantime, folders can be renamed in the bookmark manager.</p>
+
+<p>Anyway, if I now save the OPML and import it into Sage, this is what I get:</p>
+
+<p><img alt="sbOPMLSage.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sbOPMLSage.jpg" width="376" height="561" border="0" /></p>
+
+<p>What I'm wondering now is, should I also support additional structure, for example organising user folders where there are several users in a profile, or social bookmarking system folders where several users are defined?</p>
+
+<p>Any comments? If so, add a comment from the main page or calendar page copy of this post, or mail me...</p>
+
+<p>PS just because, here are a couple of ways of getting bookmarks into multiple social bookmarking systems at the same time. Firstly, the <a href="http://www.onlywire.com/">OnlyWire</a> service and bookmarklet lets you set up a profile containing several social bookmarking system accounts and post to them all with a single bookmarklet. Secondly, there's this <a href="http://cogdogblog.com/code/marklet_maker.php">Multipost Bookmarklet Tool</a> which lets you select a set of social bookmarking systems and generate a bookmarklet that will post to them all. The source is available for this tool - maybe I should find a way of integrating it into my tool?</p>
+
+<p>And finally - for anyone into social bookmarking interoperability, I recommend you sign up to the BIF - Bookmark Interchange Format - Mailing List. Details of where to find it, along with a bit of background, can be found <a href="http://microformats.org/discuss/mail/microformats-discuss/2006-March/003552.html">here</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May  4, 2006 11:16 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006153.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

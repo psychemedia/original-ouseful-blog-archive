@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn Unit Content Feeds via OPML</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010573.html" title="feedshow (feedpresenter) - Shortcut URL Splash Screen" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010582.html" title="Click On Series 2" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010573.html">&laquo; feedshow (feedpresenter) - Shortcut URL Splash Screen</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010582.html">Click On Series 2 &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 17, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn Unit Content Feeds via OPML</h3>
+
+<p>To make it easy to access collections of OpenLearn Unit content feeds (that is, the RSS versions of OpenLearn units), I've started to compile a <a href="http://ouseful.open.ac.uk/openlearn/opml/">list of Openlearn OPML feeds</a> that bundle <a href="http://openlearn.open.ac.uk/course/index.php">OpenLearn Unit Content RSS feeds</a> in various ways...<br />
+<ul><li>OpenLearn Topics (complete listing) - <a href="http://ouseful.open.ac.uk/openlearn/opml/openlearntopics.opml"><em>http://ouseful.open.ac.uk/openlearn/opml/openlearntopics.opml</em></a> (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/openlearntopics.opml">view in Grazr</a>).<br />
+This feed lets you view <em>all</em> the OpenLearn units through a single Grazr widget:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/openlearn/opml/openlearntopics.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?file=http://ouseful.open.ac.uk/openlearn/opml/openlearntopics.opml"></script></div></li>
+<li>Courses organised by OpenLearn Topic - <em>http://ouseful.open.ac.uk/openlearn/opml/topic/KEYWORD</em>
+<ul><li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=science"><em>science</em></a> (or <em>nature</em>) - Science and Nature Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/science">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=arts"><em>art</em></a> (or <em>history</em>) - Arts and History Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/arts">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=business"><em>business</em></a> (or <em>management</em>) - Business and Management Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/business">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=education"><em>education</em></a> - Education Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/education">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=health"><em>health</em></a> (or <em>lifestyle</em>) - Health and Lifestyle Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/health">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=it"><em>IT</em></a> (or <em>computing</em>) - IT and Computing Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/it">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=maths"><em>maths</em></a> (or <em>mathematics</em>, <em>stats</em> or <em>statistics</em>) - Mathematics and Statistics Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/maths">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=languages"><em>languages</em></a> - Modern Languages Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/languages">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=society"><em>society</em></a> - Society Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/society">view in Grazr</a>)</li>
+<li><a href="http://ouseful.open.ac.uk/openlearn/opml/openlearnopml.php?topic=studyskills"><em>studyskills</em></a> (or <em>skills</em>) - Study Skills Courses (<a href="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/openlearn/opml/topic/skills">view in Grazr</a>)</li>
+</ul>
+</li></ul>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September 17, 2007 08:34 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Tony, great article. I was inspired by this and the next two to create my own Grazr widget for one of my modules and I blogged about my experience here: http://crispyj2.blogspot.com/2007/09/building-course-reading-list-in-grazr.html.</p>
+<span class="comments-post">Posted by: <a href="http://eehope.swan.ac.uk/~eechris">Chris Jobling</a> at September 20, 2007 05:49 PM</span>
+</div>
+<div class="comments-body">
+<p>It's really interesting to hear about how you're using opml, delicious'n'grazr.</p>
+
+<p>If you could post again once the course starts about how your students are finding it, that'd be great:-)</p>
+
+<p>One thing you could do might be to aggregate feeds from the students themselves (though this might not fit in with your course design?)</p>
+
+<p>opmlmanager is the tool I tend to use too, that as you guessed, I may move to grazr 2.0.</p>
+
+<p>In the meantime, you can always use the current grazr site to host separate opml feeds under one account (get a grazr account: http://grazr.com/register ). You can then add resources to the account via a Grazr bookmarklet...</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at September 21, 2007 08:43 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010577.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Generic Library Traveller</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008006.html" title="Microsoft Live Search and Domain Based Search Hubs" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008055.html" title="searchfeedr Roundup - Save Your Searches on delicious" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008006.html">&laquo; Microsoft Live Search and Domain Based Search Hubs</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008055.html">searchfeedr Roundup - Save Your Searches on delicious &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 19, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Generic Library Traveller</h3>
+
+<p>Just dusted off some of the Library Traveller code (the Greasemonkey script that adds a floating panel over a page when there's something that looks like an ISBN in the URL, and provides links to your local library, a citation generator, Google books etc. for that book) and tried to make it a little more generic.</p>
+
+<p>The script is still tied to a particular library catalogue, but I've tried to make it easier to customise by "borrowing" some code from Jon Udell's <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookupGenerator.html">Library Lookup bookmarklet generator</a>.</p>
+
+<p>All the user has to do to customise the script is provide three pieces of information:</p>
+
+<p>- the web domain for their library catalogue,;<br />
+- the library's name (actually, this could be dropped too);<br />
+- the type of library catalogue system that is running.</p>
+
+<p>For example, here is the configuration information for the Open University Library Catalogue:<br />
+<blockquote>// ONE     Your library name here<br />
+var libraryName='The Open University Library';  <br />
+// TWO     Your library catalogue web domain here<br />
+var libCatRoot = 'http://voyager.open.ac.uk';<br />
+// THREE   Your library catalogue type<br />
+var libCatType='voyager';/</blockquote></p>
+
+<p>and here is the configuration information for the Keene Public Library:<br />
+<blockquote>// ONE     Your library name here<br />
+var libraryName='Keene Public Library'; <br />
+// TWO     Your library catalogue web domain here<br />
+var libCatRoot = 'http://ksclib.keene.edu'; <br />
+// THREE   Your library catalogue type<br />
+var libCatType='innovative';</blockquote></p>
+
+<p>The script will only tell you if the book is held (i.e. on the records of) the library - at the moment all other library reporting (availability, when the book is due back if it's out on loan etc.) has been removed.</p>
+
+<p>This is because: a) I want the script to be as generic as possible; and b) I want the user to have <em>as little to do as possible</em> when configuring the script.</p>
+
+<p>The 'book is held' information uses the heuristic that, if the catalogue page that is returned from an ISBN lookup contains the first 20 characters of the title of that book, it's held by the library.</p>
+
+<p><img alt="genericLookup.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/genericLookup.jpg" width="675" height="343" border="0" /></p>
+
+<p>You can get hold of the script here: <a href="http://blogs.open.ac.uk/Maths/ajh59/genericTravellerAlpha.user.js">Generic Library  Traveller script</a>.</p>
+
+<p>Comments, issues, successes, failures getting the script to work etc. much appreciated...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 19, 2006 04:53 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008008.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>I install this script and even just leaving the library info at default, it doesn't work. I only get "cite this book" in the traveller box. Wah!</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;user&#64;nopass&#46;com">User</a> at October 31, 2006 09:13 PM</span>
+</div>
+<div class="comments-body">
+<p>Where di you try the script? Are you sure the book was held by the Keene Library, which is the default?<br />
+Try this:<br />
+Harry Potter and the Order of the Phoenix: http://www.amazon.com/Harry-Potter-Order-Phoenix-Book/dp/0439358078/</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony Hirst</a> at October 31, 2006 11:12 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Generic Library Traveller";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

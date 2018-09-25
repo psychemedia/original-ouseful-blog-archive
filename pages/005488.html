@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: WikiMail</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005486.html" title="Innovative Curriculum Development?" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005489.html" title="Scoping Socially Bookmarked Resources Posted to a Group" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005486.html">&laquo; Innovative Curriculum Development?</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005489.html">Scoping Socially Bookmarked Resources Posted to a Group &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">December 15, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">WikiMail</h3>
+
+<p>One issue I keep trying to address is an email box full of old messages that I'm saving until such a time as I can collate them into e.g. a blog post (as I did with an email conversation sometime ago on <a href="http://blogs.open.ac.uk/Maths/ajh59/004000.html">online student engagement</a> (the first para sets the scene; note that it's the STRUCTURE that's important, not the content...)</p>
+
+<p>One approach that may be appropriate is the following simple idea - combine emails and wikis in WikiMail: <a href="http://blogs.open.ac.uk/Maths/ajh59/wikiGmail.html" onclick="window.open('http://blogs.open.ac.uk/Maths/ajh59/wikiGmail.html','popup','width=871,height=623,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">WikiMail mockup #1</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/wikiGmail2.html" onclick="window.open('http://blogs.open.ac.uk/Maths/ajh59/wikiGmail2.html','popup','width=867,height=731,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">WikiMail mockup #2</a>.</p>
+
+<p>The principle is this: the mail wrapper provides the notification that a change has been made and opening the email opens straight into the web application/wiki.</p>
+
+<p>One WikiMail  scenario is for it to work like this:<br />
+<ol><li>I send you a WikiMail, which is a sort of normal email except that when you open it, you open a wiki page in the message window; (NB the initial focus is on browser based email clients, or clients where you can embed a browser or application in the message/edit window.)</li><li>you 'reply' to my email by editing the WikiMail page, e.g. by inserting reply comments where appropriate, and perhaps deleting bits of content; this is equivalent to quoting snippets of my original email in your reply;</li><li>you commit the page which sends me a WikiMail; when I open the WikiMail message, I see the new page, and can if I want look at the history page to see the changes; as well as being able to change the wiki page, it's also possible to use the discussion tab of the page for an aside discussion.</li></ol></p>
+
+<p>Priviliges - the WikiMail privileges are as follows:<br />
+<ul><li>when I send a WikiMail, i get priviliges to rwe (read,write,edit) the page, along with everyone I send the message to;</li><li>bcc people get read only access on a page I cc'd them into, but NOT any future edits;</li><li>bcc'ing someone in a reply doesn't work...</li><li>cc'ing gives people read privs to the original page;</li><li>if the next page edit also cc's the person, they get read privs on the new page;</li><li>the cc'd person gets to see the page in its latest state as long as they are cc'd in to every edit;</li><li>if they are missed out of the cc list for an edit, what they can see is frozen at the previous edit;</li><li>if someone tries to cc someone late in the game, then....perhaps everyone who had edited has to approve them seeing the page?</li></ul></p>
+
+<p>The WikiMail page is therefore private to contributors, although I suppose a mechanism could be included to open it up, or make it public (and frozen, like a blog post - e.g. a wikimail2blog function)</p>
+
+<p>Attractive features to me are:<br />
+<ol><li>notification;</li><li>the ability to see what's changed;</li><li>the client opens a WikiMail message into the wiki, rather than sending a link in an email that i have to click on to go to the wiki page;</li></ol></p>
+
+<p>As well as wikis, the idea - at first glance - appears to translate well to other applications(imagine <em>OfficeMail</em> or <em>AppMail</em> (rather then <em> WikiMail</em>) where an online application/tool such as <a href="http://writely.com/">Writely</a> is embedded in the mail edit window.</p>
+
+<p>The model of OfficeMail is the same as WikiMail (converting your inbox for email into your intray for documents that need working on). Email is used to wrap the application and help you share it naturally with others (naturally in the sense that people are familiar with using email).</p>
+
+<p>Why would this be useful?</p>
+
+<p>Well, at the moment I am crossing emails with MS Word attachments with a collaborator as we tune an abstract for a conference paper. We keep passing a word document containing the most recent version of the abstract as an attachment between us.</p>
+
+<p>What I would like is to be able to receive my "wordmail" message, open it, make changes and send it back, without having to open the email, download the message, make the change, create a new email, upload the document (or perhaps mail it form my wordprocessor - but that doesn't work properly and is no good if Gmail is my mail client, for example), send the email etc. How much easier if we could continue to do this by passing embedded, editable documents in our emails.</p>
+
+<p>Many WP apps allow you to email documents as attachments, and of course you can open these attachments from an email, but the OfficeMail/WordMail approach is far more of an integrated environment...!</p>
+
+<p>Despite its problems - and despite the attractiveness of custom collaborative software - email is a part of many people's lives and it's transactional model is well understood.</p>
+
+<p>So - if the lazyweb Santa is listening, can I have WikiMail or WritelyMail for Christmas, please?</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at December 15, 2005 04:40 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005488.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="WikiMail";
+ z_post_category="Web2.0";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

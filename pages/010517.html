@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Document Views (not) in Electronic Assignment Handling</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010516.html" title="More OU Inspired Institutional Dashboards" />
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010516.html">&laquo; More OU Inspired Institutional Dashboards</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 17, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Document Views (not) in Electronic Assignment Handling</h3>
+
+<p>In my recent post on the <a href="http://blogs.open.ac.uk/Maths/ajh59/010513.html">OpenMark Computer-Assisted Assessment Tool</a>, I described an open source electronic assessment system that has been developed - and is actually used - here at the OU to support our course assessment strategies.</p>
+
+<p>As well as <a href="http://www.open.ac.uk/openmarkexamples/">Open Mark</a>, the OU also hosts an <a href="http://www.open.ac.uk/assessment/pages/tma-submission-methods.php">electronic assignment handling system</a> (the "eTMA system") that allows students to upload electronic copies of Office documents as submissions to an assignment and an eCMA system that provides computer based marking for multiple choice assessments (I haven't checked recently whether this is (still?!;-) based on students completing an OCR form that they have to post in to the OU, whence it is scanned in for electronic marking...)</p>
+
+<p>One problem we have had until now is that as course team members we have been unable to see what our students see when using these assessment systems. For a start, we're staff, with staff authentication and corresponding staff access permissions. Added to which, we're not students registered on the courses we're actually running, so we don't have student permissions or access to the electronic assessment systems... After years of asking, it seems that this year the Technology Short Course Program course teams are going to get access to a dummy student account, which means that for the first time we'll be able to get a valid 'student experience' of our course materials - and hopefully the assessment systems too...</p>
+
+<p>One issue that anecdotally keeps cropping up about the eTMA ad eCMA systems is that there is little feedback provided when you have uploaded an assignment  and it is often difficult to tell whether everything has worked okay (not being a registered student on any of our courses means I haven't been able to personally check this...).</p>
+
+<p>This was brought home to me recently whilst marking a batch of scripts when I opened one script to find it was for the wrong course. (There were - and always are - several half-completed scripts too, and I'm never really sure whether these have been deliberately submitted as a final offering, or were an early, 'holding position' upload that hasn't been replaced by a later resubmission.)</p>
+
+<p>What would be useful, I think, would be a 'preview' facility to show students what they have uploaded - something like the document viewer you find in <a href="http://scribd.com">Scribd</a>, for example:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5099430044050392706"><img src="http://lh4.google.com/tony.hirst/RsTQm2yUBoI/AAAAAAAAAeg/4tTxdEPfAt4/s800/scibd.png" /></a></p>
+
+<p>In fact, this sort of facility would be useful all round, for markers as well as students.</p>
+
+<p>Every time I mark scripts submitted via the eTMA system, I always get one that uses a 'different' document format. I don't remember what sort of submitted filetype it was this time round that I couldn't open on my desktop, but I do know I had to resort to viewing it in Google docs (which presumably breaks all sorts of OU rules?).</p>
+
+<p>Added to the filetype problem (which really should be defended against - we specify the range of 'approved' document types in several places, so why doesn't the eTMA system check for these and warn the student that they have uploaded a file that their marker may not be able to open?) I occasionally wonder about virus issues - does the eTMA system automatically scan all uploaded files? And if so, what does it do if it finds an infection?</p>
+
+<p>Using a system like the one adopted by Scribd, students would be able to check that they had uploaded what they intended to submit for an assignment, and markers could either view the file online, or download it using one of the (common!) supported formats. A commenting system could also be used to allow markers to comment back on the assignment to the learner.</p>
+
+<p>The viewing technology could also be reused in our online course materials, as well as in student portfolios (speaking of which, Guy Carberry is soliciting comments on the <a href="http://conclave.open.ac.uk/guycarberry/?p=192">latest design iteration for MyStuff</a>...).</p>
+
+<p><small>PS That's definitely it for a week or two, now... Let the holiday commence :-)</small></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August 17, 2007 10:12 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010517.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

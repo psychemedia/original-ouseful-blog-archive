@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn Content via RSS?</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008189.html" title="Navigating OpenLearn Open Educational Content" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008321.html" title="Stringle - Towards a String&#39;n&#39;Glue Learning Environment" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008189.html">&laquo; Navigating OpenLearn Open Educational Content</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008321.html">Stringle - Towards a String'n'Glue Learning Environment &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 26, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn Content via RSS?</h3>
+
+<p>One of the great thimgs about the <a href="htttp://openlearn.open.ac.uk">OpenLearn</a> project is that as well as making OU teaching materials available for free via the "OpenLearn VLE", the content can also be obtained in a raw, XML format via the partner <a href="http://labspace.open.ac.uk">LabSpace</a> site.</p>
+
+<p>Each OpenLearn 'course' has a corresponding course in LabSpace. LabSpace is the remix part of the project - users are encouraged to download content, rework it, develop it, maybe augment or remix it with their own content and as a result produce new chunks of learning material.</p>
+
+<p>Most of the work that's being put into the LabSpace site at the moment has to do with developing tools to support collaboration - the <a href="http://blogs.open.ac.uk/Maths/ajh59/007760.html">MSG</a> lite instant messenger , for example, 1-click <a href="http://flashmeeting.com">Flashmeeting</a> and <a href="http://compendium.open.ac.uk">Compendium</a>.</p>
+
+<p>Whilst these apps are all good stuff, my interests at the moment have far more to do with freeing up the flow of the content, and exploring appropriate tools and techniques for moving it around the web and maybe inclduing it in 3rd party sites.</p>
+
+<p>So here's another taster of things I've been tinkering with during midnight hours - an <a href="http://grazr.com/gzpanel.html?font=arial&amp;fontsize=9pt&amp;view=3p&amp;file=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">RSS version of one of the OpenLearn courses</a> displayed using <a href="http://grazr.com">Grazr</a>:</p>
+
+<p><img alt="openlearnRSSinGrazr.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnRSSinGrazr.jpg" width="714" height="474" border="0" /></p>
+
+<p>You can download a copy of the XML from the course page in the <a href="http://labspace.open.ac.uk">LabSpace</a>. I generated <a href="http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">this RSS version of the material</a> using <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearn2rss.xsl">this XSL stylesheet</a>. Note that at the moment it does not transform all the elements defined in the schema used to define the structure of the XML formatted learning materials, and it contains a couple of hacks that tie it to a particular set of materials...</p>
+
+<p>And just because, here's what it looks like in Netvibes... Firstly, just a list of the separate items:</p>
+
+<p><img alt="openlearnNetvibesDemo.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnNetvibesDemo.jpg" width="641" height="380" border="0" /></p>
+
+<p>And here, reading a particular item:</p>
+
+<p><img alt="openlearnNetvibesDemo2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnNetvibesDemo2.jpg" width="735" height="404" border="0" /></p>
+
+<p>This sort of display raises quite a lot of issues regarding presentation, I think, that I need to go away and think about - and maybe post about later - in a lot more depth...</p>
+
+<p>I wonder what sort of questions an embedded Grazr view raises...? Let's ask the question and see (to see this, you'll probably need to visit the actual web page that carries this post):</p>
+
+<div style="height:350px;width:400px;">
+<a href="http://grazr.com/gzpanel.html?view=s&toolbar=off&file=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a>
+<script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=s&amp;toolbar=off&amp;file=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml"></script>
+</div>
+
+<p>Enough for now...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 26, 2006 07:54 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008208.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="OpenLearn Content via RSS?";
+ z_post_category="Open Content";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

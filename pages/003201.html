@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: MyLibraryRecord</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/003152.html" title="More Library Toolbars" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/003231.html" title="Firefox Advanced Search Screencast" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/003152.html">&laquo; More Library Toolbars</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/003231.html">Firefox Advanced Search Screencast &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 03, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">MyLibraryRecord</h3>
+
+<p>One of the obvious improvements to v0.1 of my <a href="http://blogs.open.ac.uk/Maths/ajh59/003041.html">OU Library Toolbar</a> is  to tweak the <a href="http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?DB=local&PAGE=pbLogon"><em>My Library Record</em> bookmark</a> so that instead of opening the 'login' page, it  logs you in automatically.</p>
+
+<p>As I don't have time just at the moment to hack around with the toolbar, I thought I'd prototype this functionality with a Firefox bookmarklet.  There are a couple of issues though.</p>
+
+<p>Firstly, the bookmarklet needs to reveal my surname and library card number. I'm not sure how 'secret' this info is, but assuming I'm not supposed to reveal it (a password widget is used to enter it, after all) means that I can't publish a full working demo of the bookmarklet here...unless the library has a dummy user account I can borrow...;-)</p>
+
+<p>Secondly, the form used to gain access to My Library Record uses an HTTP POST, rather than a GET. GET would be easy - POST is trickier... However, I tracked down a <a href="http://micro-info.blogspot.com/2005/03/bookmarklets-form-post-data-and-more_14.html">workaround for this</a> before, so reusing that approach gives us:</p>
+
+<p> - <a href="javascript:void(d=document);libID='';surname='';uri='http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi';f=d.createElement('form');f.method='post';f.action=uri;i0=d.createElement('select');i0.name='LGNT';i0.value=0;i1=d.createElement('input');i1.type='hidden';i1.name='BC';i1.value=libID;i2=d.createElement('input');i2.name='LN';i2.value=surname;i3=d.createElement('input');i3.type='hidden';i3.name='PAGE';i3.value='pbPatron';i4=d.createElement('input');i4.type='hidden';i4.name='DB';i4.value='local';f.appendChild(i0);f.appendChild(i1);f.appendChild(i2);f.appendChild(i3);f.appendChild(i4);d.body.appendChild(f);f.submit();">a <em>MyLibraryRecord</em> bookmarklet</a>.</p>
+
+<p>This bookmarklet is probably too long for IE, but it works okay in Firefox. To use it:</p>
+
+<p>1) drag it onto your Firefox bookmarks toolbar;<br />
+2) right click on it and go into <em>Properties</em>;<br />
+3) In the <em>Location</em> field, look along the javascript code and insert your <em>Surname</em> and <em>OU Library Card number</em> in the appropriate places (e.g. <em>libID='0310073861';surname='Other'</em>);<br />
+4) Click on <em>Okay</em>.</p>
+
+<p>When you click on this bookmarklet, you should be taken straight to your Library Record page.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June  3, 2005 06:24 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/003201.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="MyLibraryRecord";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

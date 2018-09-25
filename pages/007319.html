@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Two More Library Related Greasemonkey Scripts</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007316.html" title="Course Related Blogging" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007326.html" title="Google As Service Provider Trundles On..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007316.html">&laquo; Course Related Blogging</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007326.html">Google As Service Provider Trundles On... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 18, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Two More Library Related Greasemonkey Scripts</h3>
+
+<p>So the midnight oil has run out and the last for entries to MUTL looms, so here's a couple more scripts that didn't get as far as I wanted, but that do work, after a fashion... </p>
+
+<p>The rationale for offering two scripts up together is that they demonstrate different potential uses for making use of a Greasemonkey script (or Firefox extension derived from a Greasemonkey script using a script2extension converter such as the <a href="http://www.arantius.com/misc/greasemonkey/script-compiler.php">Arantius Greasemonkey script compiler</a>.</p>
+
+<p>Here are the two scripts: <a href="http://blogs.open.ac.uk/Maths/ajh59/mutlBookDetailsForm.user.js">book details form completion</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerAlpha0.2.user.js">OU Traveller</a> (<a href="http://blogs.open.ac.uk/Maths/ajh59/ousefuTravellerLib_0.2.xpi" onclick="InstallTrigger.startSoftwareUpdate('http://blogs.open.ac.uk/Maths/ajh59/ousefuTravellerLib_0.2.xpi');return false;">OU Traveller as a Firefox extension</a>).</p>
+
+<p><strong>Book Details Form Completion</strong><br />
+This script builds on the one described in the <a href="http://blogs.open.ac.uk/Maths/ajh59/007156.html">Lookup book Details</a> script. The original intention was to augment a very basic form that allowed library users to request a book for purchase by the OU library.</p>
+
+<p>The new script (which runs over this <a href="http://blogs.open.ac.uk/Maths/ajh59/demoBookDetailsForm.php">dummy book request form</a>) will complete the form, given an ISBN. Clicking on the 'Get Book Details' link will also create two new links: one to allow the book to be looked up in the OU library catalogue according to title, and another to provide an author look up.</p>
+
+<p>I toyed with the idea of loading a <a href="http://blogs.open.ac.uk/Maths/ajh59/007304.html">Carousel Widget: Similar Books</a> into the page in an iframe (or using the JSON technique described in <a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">Wishlist Carousel</a> to pull the related books info into the page a a list) but time has run out on me for now.</p>
+
+<p>The Greasemonkey script shows how functionality for new services can be trialled without making changes to production systems. In a managed computer environment, such as public access library machines, new functionality can be evaluated on a sample of machines by real users if scripts are installed a selection of public access terminals. </p>
+
+<p>Scripts can also be used to demonstrate mooted new functionality by running it over live production systems...</p>
+
+<p>That the script creates catalogue lookup links when the 'Get book details' link is clicked on rather than installing them at page load time is just to demonstrate how logic/workflow can be built into the script. Ultimately, the aim would be to produce a 'request this book service' that checked the user's requests against books currently in the library, notifiying the user if the book is already held. In addition, the service might optionally look up related books  - particulalry ones held by the library - to see if they would meet the user's needs.</p>
+
+<p>Building the script also revealed several 'issues'.</p>
+
+<p>The author lookup script, reused from another script submitted as an ,a href="http://blogs.open.ac.uk/Maths/ajh59/007292.html">earlier MUTL entry</a>, identified 'issues' in framing author queries on the Voyager catalogue.</p>
+
+<p>The ability to lookup several books with one call to the catalogue is also lacking - for example, it would be handy to be able to obtain a set of URLs (e.g. form xISBN or thingISBN) and pass them all in a single ISBN lookup query to the server, receiving a single result page listing the availability of all the books queried about in the catalogue (even better if the catalogue offered this option natively).</p>
+
+<p><strong>OU Traveller</strong></p>
+
+<p>The OU Traveller script represents the continued development of several <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?search=%22ou%20traveller%22&IncludeBlogs=1149">OU Traveller</a> components, though again it is not as fully developed as I had hoped, particularly in terms of visual design and integration with the <a href="http://blogs.open.ac.uk/Maths/ajh59/005845.html">Voyager Library Catalogue Toolbar</a>.</p>
+
+<p>The functionality offered by the OU Traveller script (which runs when an ISBN like number is found in a URL, as for example on Amazon) includes:<br />
+<ul><li>a lookup of the book in the OU library catalogue, with status report;</li><br />
+<li>different actions dependent on the OU library catalogue report for that item; for example, if the book is not held by the library, then an option is provided to request the book, which calls the dummy library 'request a book' page and prepopulates the fields using information pulled from an Amazon webservice;</li><br />
+<li>a link to cite the current book using a service provided by studentabc;</li><br />
+<li>a lookup of the book on O'Reilly Safari (with a link to the item if it is held there);</li><br />
+<li>a lookup of the item at Google books (with a link to the item if it is held there);</li><br />
+</ul></p>
+
+<p>The look and feel of the panel still leaves something to be desired, as does the way the information is presented on it.</p>
+
+<p>Also, at the current time, if several OU Traveller scripts are running, multiple panels may be created, although typically only one will be populated (withthe result that several scripts all arite results into the same panel). Observing this led me to realise that I should have created a standalone OU Traveller panel javascript library that can be loaded into OU Traveller scripts (or embedded in the OU Traveller Toolbar (forthcoming!)).</p>
+
+<p>This library would check to see if a panel already exists (loaded by another script) before overlaying a panel on the page. If several OU Traveller scripts were loaded, they could all display results on the same OU Traveller panel.</p>
+
+<p>The OU Traveller panel would thus in essence represent a 'widget environment' that could manage the displayed output from one or more OU Traveller scripts. In this way, different combinations of OU Traveller functionality could be assembled by loading different sets of OU Traveller scripts, yet all the reports would be displayed b the same, common interface panel.</p>
+
+<p>If anyone is interested in working this idea up with me further, I would very much appreciate it :-)</p>
+
+<p>As it is, each time I go in to the OU Traveller script, I try to abstract functionality out a little more, hopefully making individual components a little more reusable as I do so. However, a professional coder I am not, so the abstractions may be a little quirky at times and they are unlikely to fully exploit the power of good Javascript practice!</p>
+
+<p>Perhaps more so than the book details lookup script, this script can be used by an individual in their own browser, although as with the other script it could also be preloaded on to public acces machines.</p>
+
+<p><a href="http://technorati.com/tag/MUTL06" rel="tag">MUTL06</a></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August 18, 2006 12:29 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007319.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Two More Library Related Greasemonkey Scripts";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

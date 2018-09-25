@@ -1,0 +1,30 @@
+<html>
+<head><title>Script test</title>
+<script type="text/javascript">
+/*
+function loadLocalCSSFile(filename){
+   var head = document.getElementsByTagName("head")[0];
+   var link = document.createElement('link');
+   link.rel="stylesheet";
+   link.type = 'text/css';
+   link.href = createURL(filename);
+   head.appendChild(link);
+}
+*/
+function testScript(){
+ var testPoint =document.getElementsByTagName('body')[0];
+ var script = document.createElement('script');
+ script.type = 'text/javascript';
+ script.src = document.getElementById('usrJSurl').value;
+ testPoint.appendChild(script);
+ return false;
+}
+</script>
+</head>
+<body>
+<form name="dataForm" action="" onsubmit="testScript();return false;">
+ <label for="usr">Javasript URL:</label> <input style="width: 400;" id="usrJSurl" type="text"> <input value="test Script" type="submit">
+</form>
+</body>
+
+</html>

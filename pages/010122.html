@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Coherent Design Across Web Apps</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010121.html" title="Re:Play - The Future of Sports Gaming? &quot;I&#39;ll Take it From Here...&quot;" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010124.html" title="Openlearn XML Processor" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010121.html">&laquo; Re:Play - The Future of Sports Gaming? "I'll Take it From Here..."</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010124.html">Openlearn XML Processor &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 05, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Coherent Design Across Web Apps</h3>
+
+<p>Andy Rush of the <a href="http://umwdtlt.org/newmedia">UMW New Media Center</a> has just released a consistent style/design across their <a href="http://andheblogs.andyrush.net/?p=244">WordPress blog and MediaWiki wiki</a>:</p>
+
+<p><img src="http://andheblogs.andyrush.net/wp-content/photos/umwnmc.jpg" /></p>
+
+<p>The new site provides the user with a consistent and coherent style/form of navigation across the two apps.</p>
+
+<p>With more and more apps allowing users to define their own skin/theme, the UMW new media site shows how - in principle - unified styling could be achieved across applications emebedded within a <a href="http://ouseful.open.ac.uk/stringle">Stringle</a> container.</p>
+
+<p>This means I really need to: a) start identifying those stringle:tools (apps that work okay in an iframe ;-) that support user themes/styles/skins; and b) start thinking about a simple visual theme that will let me demo a proof of concept, coherent design stringle:profile.</p>
+
+<p>At least two other pieces are required for a fully coherent stringle experience as well, though:</p>
+
+<p>1) single sign on - OpenID may provide a way forward here?</p>
+
+<p>2) interoperability between applications - so documents and content can be passed seemlessly from one app to another.</p>
+
+<p>There are already glimpses of interoperability available, provide by the apps themselves - the ability to bookmark user created/customised pages on delicious for example (what I call 'roundtripping' in stringle - the ability to bookmark a a user created page in such a way that it becomes available in the stringle navigation widget), or the ability to <a href="http://blogs.open.ac.uk/Maths/ajh59/010107.html">open linked to office docs online using Zoho</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April  5, 2007 11:04 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010122.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Local to yOU</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/002674.html" title="Embedding RSS Search..." />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/002692.html" title="SSOL - Screencast Supported Open Learning?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/002674.html">&laquo; Embedding RSS Search...</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/002692.html">SSOL - Screencast Supported Open Learning? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 28, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Local to yOU</h3>
+
+<p>The OU is quite unique in many ways, not least the geographical spread of our students. I've been having a play with the (new) UK version of <a href="http://maps.google.co.uk/">Google Maps</a>, trying to tie it in with autodiscovery of <a href="http://robofesta.open.ac.uk/microinfo/geolocate.html">postcode information embedded in a page &lt;link /&gt; tag</a>, or personal postcode information retrieved from a cookie, for example.</p>
+
+<p>So - what sort of geo-related information might we reasonably want to offer an OU student? Here are a few things off the top of my head (note that <em>local</em> is taken to mean local to a postcode associated with the student OR local to the study centre, say (so the family has something interesting to do while the student is at the tutorial)):</p>
+
+<p>- local academic library with which the OU has reciprocal rights;<br />
+- local study centre;<br />
+- museums, pubs or eateries local to the study (easy enough to do now... here are <a href="http://maps.google.co.uk/maps?q=museums+mk7+6aa">museums local to Walton Hall</a>, for example);<br />
+- local regional centre.</p>
+
+<p>The local study centre is an interesting one, as it offers the OU the possibility of an affiliation with one of the online providers of route planning information, such as <a href="http://www.theaa.com/travelwatch/planner_main.jsp">the AA</a>, <a href="http://rp.rac.co.uk/routeplanner">RAC</a>, <a href="http://www.greenflag.co.uk/routeplanning/index.aspx">Green Flag</a>, <a href="http://www.viamichelin.com/viamichelin/gbr/tpl/hme/MaHomePage.htm">Michelin</a>, or even <a href="http://maps.google.co.uk">Google Maps</a>. So a student presented with directions could be provided with a link to a route planner showing the route from their home (say) to their local study centre. (For example, <a href="http://www.viamichelin.com/viamichelin/gbr/dyn/controller/ItiWGPerformPage?reinit=1&strStartCP=MK7%206AA&strStartCityCountry=EUR&strDestCityCountry=EUR&image.x=17&image.y=3&strDestCP=OX1%205HR">here's a route from Walton Hall to the Oxford regional office</a>).  Just which route planner is used could be the result of an affiliation between the OU and one of the routemap providers, with the payoff being tied to the number of click-throughs, for example.</p>
+
+<p>For the local academic library, it would also be easy enough to provide a personalised <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">library lookup bookmarklet</a>, such as this <a href="javascript:var%20re=/([\/-]|is[bs]n=)(\d{7,9}[\dX])/i;if(re.test(location.href)==true){var%20isbn=RegExp.$2;void(win=window.open('http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?SAB1='+isbn+'&BOOL1=all%20of%20these&FLD1=ISBN%20(ISBN)&DB=local&CNT=25','LibraryLookup','scrollbars=1,resizable=1,width=575,height=500'))};">OU Library lookup bookmarklet</a>.</p>
+
+<p>It would also be sensible to be able to provide local information pulled from the <a href="http://www3.open.ac.uk/contact/events.aspx">OU local event directory</a>. Perhaps if I ask them nicely they'll provide RESTful access to this service and an RSS response? :-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 28, 2005 09:59 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

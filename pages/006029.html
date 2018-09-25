@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Opera Widgets</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006028.html" title="OU Library Amazon Greasemonkey Script" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006030.html" title="Social Bookmarking Workshop at OU Learning and Teaching Conference" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006028.html">&laquo; OU Library Amazon Greasemonkey Script</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006030.html">Social Bookmarking Workshop at OU Learning and Teaching Conference &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 07, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Opera Widgets</h3>
+
+<p>Although I have way too many course writing things to do at the mo, I have managed to wangle a day a week doing things for the Library for 3 months or so, which should be a lot of fun:-)</p>
+
+<p>The job spec is still not totally sorted, but I'm hoping that one payoff will be that I get to promote some of my library related doodles to people who might actually be able to sponsor their use in some way (not that anything I've produced is production stable, of course!) as well as gaining a bit more inside knowledge about the Library's systems (I would <em>love</em> to be able to doodle with an XML front end to the library catalogue, for example...).</p>
+
+<p>Anyway - one thing that has been mooted as something that I might mull over is <em>My Pocket Library</em>, a version of the library website, I guess, that's appropriate for viewing on mobile devices....which is one area I'm way out of my depth in, of course!</p>
+
+<p>Never having got around to building anything in <a href="http://java.sun.com/javame/index.jsp">J2ME</a>, about the only mobile thing I've ever doodled with are a couple of WAP sites built years ago when I was chasing a <a href="http://robofesta.open.ac.uk/microinfo">microinfo/microcontent</a> vibe (one site was a proof of concept/demonstrator for <a href="http://technology.open.ac.uk/tel/cor/t396/wap/index.html"></a>, another for the <a href="http://robofesta.open.ac.uk/microinfo/TSCPwap.html">Technology Short Course/Relevant Knowledge programme</a>).</p>
+
+<p>Anyway, the idea behind My Pocket Library may just be mobile appropriate content/navigation/styling, of course, or it may be more ambitious/application oriented - in which case, serendipity perhaps smiled on me today when I picked up on <a href="http://my.opera.com/community/dev/widgets/">Opera widgets</a> (I don't know where from...?!).</p>
+
+<p>These are very much in the flavour of Yahoo/Konfabulator or Mac Dashboard widgets, Google gadgets(? or is it Microsoft gadgets? I forget now...!) which I skirted around some time ago (e.g. with a <a href="http://blogs.open.ac.uk/Maths/ajh59/004185.html">course news widget</a>), only this time requiring a (still beta) recent version of Opera.</p>
+
+<p>From the odd mobile devices I've seen, Opera seems to be a reasonably widely used mobile browsing platform (also see <a href="http://opengardensblog.futuretext.com/archives/2006/03/mobile_web_20_a_2.html">Mobile Web 2.0</a> and <a href="http://www.russellbeattie.com/notebook/1008953.html">Opera mini</a>, and, even better, this <a href="http://www.opera.com/products/mobile/platform/">Opera AJAX Platform/toolkit</a>), so it may be worth trying to doodle a widget or too (by pillaging the  <a href="http://my.opera.com/community/customize/widgets/">Opera widget gallery</a> probably!) to consume some library services.</p>
+
+<p>There's a secondary payoff too in that any widgets would also run on the desktop Opera browser, which may be interesting if it were installed on some of the public access machines in the library...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April  7, 2006 01:26 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006029.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Opera Widgets";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

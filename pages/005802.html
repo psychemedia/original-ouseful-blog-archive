@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Delicious Reading List Bookmarklet</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005763.html" title="Delicious OPML Link Generator" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005809.html" title="Hiding delicious Links containing a Particular Tag" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005763.html">&laquo; Delicious OPML Link Generator</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005809.html">Hiding delicious Links containing a Particular Tag &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 26, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Delicious Reading List Bookmarklet</h3>
+
+<p>Another quick post picking up again on Danny Ayer's <a title="Raw » del.icio.us Reading Lists" href="http://dannyayers.com/archives/2006/02/07/delicious-reading-lists/">del.icio.us Reading Lists</a> post, where he gives a recipe for creating an OPML reading list from a set of <em>feeds</em> (rather than pages or sites) tagged in delicious, this time to mention a <a href="javascript:void(d=document);void(el=d.getElementsByTagName('link'));for(i=0;i<el.length;i++){if(el[i].getAttribute('rel').indexOf('alternate') != -1){void(p=encodeURIComponent(el[i].getAttribute('href')));void(l='http://www.w3.org/2000/06/webdata/xslt?xslfile='+encodeURIComponent('http://pragmatron.org/xslt/delicious-to-opml.xsl')+'&xmlfile=');location.href=l+p+'&transform=Submit';break;};};">DeliOPML</a> bookmarklet (only tested in Firefox).</p>
+
+<p>Just drag the link onto your bookmark toolbar, visit a  delicious page that contains a list of feeds (e.g. Danny Ayer's example was at <a href="http://del.icio.us/danja/readinglist+tech">danja/readinglist+tech</a>) and click on the bookmarklet. You'll then be taken to an OPML feed of the page...</p>
+
+<p>Here's an example of clicking the OPML link from my delicious feed on a tag that currently has <a href="http://del.icio.uc/rss/psychemedia/OU">two feeds in it</a>:</p>
+
+<p><img alt="opmlExample.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/opmlExample.JPG" width="724" height="305" border="0" /></p>
+
+<p>(Hmm - I notice that not all the feeds are represented in the list...but they aren't in the example from Danny's page either. I haven't looked at the <a href="http://pragmatron.org/xslt/delicious-to-opml.xsl">XSLT</a>, but perhaps there's a switch in there? or at <a href="http://www.w3.org/2001/05/xslt">W3C</a>?) <strong>Update: it seems that the XSLT <em>is</em>limiting the number of links returned in the OPML file</strong>.</p>
+
+<p>The bookmarklet works by looking for &lt;link rel='alternate'/&gt; tags, then pulls the address of the first one and uses it as the target for Danny's XSLT.</p>
+
+<p>PS I've just uploaded a test <a href="http://greasemonkey.mozdev.org/">Greasemonkey script</a> that appends an OPML link to the bottom of del.icio.us links page that will generate an OPML feed from the RSS feed generated for that page. Here it is: <a href="http://blogs.open.ac.uk/Maths/ajh59/deliciousReadingList-test.user.js">delicious OPML feed Greasemonkey script</a>.</p>
+
+<p>This will generate a feed for <em>all</em> the links whether or not they point to an RSS feed, which isn;t ideal. I have a fix in mind for this, which I';ll post along with a supporting bookmarklet for saving feeds to delicious tomorrow.</p>
+
+<p>Then it'll be time to give OPML a rest for a bit, and I can get back to posting random thoughts and doodles!<br />
+</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 26, 2006 01:52 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005802.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

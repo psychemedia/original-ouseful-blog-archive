@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: outreach Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+
+<h2 class="date">July 23, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010494"></a>
+<h3 class="title">Making the Most of Google Maps (or not): Gloucestershire Emergency Water Points</h3>
+
+<p><a href="http://tinyurl.com/2m43m5">Click here for a map of emergency water points in Gloucestershire (as of 18:00 23/7/07)</a></p>
+
+<p>The most recent, official list is here: <a href="http://www.stwater.co.uk/">Severn Trent Water website</a><br />
+<hr /></p>
+
+<p>Well it seems as if we're in the middle of a <a href="http://news.bbc.co.uk/1/hi/england/gloucestershire/6910559.stm">national emergency</a>, so for my 500th OUseful.info post here's something charitable - a Google Map (made the slow way) of <a href="http://maps.google.co.uk/maps/ms?f=q&view=text&hl=en&ie=UTF8&msa=0&msid=109196350919255002936.000435f2d463a0c57cf1b&ll=51.851447,-2.253871&spn=0.477585,1.086273&z=10&om=1">water bowser locations in Gloucestershire</a>, as of <em>Monday 23rd July 1900hrs</em>:</p>
+
+<p>Here's a tinyurl to the map: <a href="http://tinyurl.com/2m43m5">http://tinyurl.com/2m43m5</a></p>
+
+<p>The data is sort of correct as of <em>Monday 23rd July 1900hrs</em>, although the list isn't complete.</p>
+
+<p>The data was taken from the Severn Trent Water website:  <a href="http://www.stwater.co.uk/server.php?show=ConWebDoc.3156"> 	<br />
+Bowser Locations Gloucestershire Monday 23rd July 1900hrs</a></p>
+
+<p>The data is given as a list of locations, of the form:<br />
+<blockquote>Bowser Locations in Abbeydale</p>
+
+<p>NEWSTEAD RD  ON F/P<br />
+ABBEYMEAD AV<br />
+ BROADLEYS RD<br />
+ABBEYMEAD AV<br />
+UPTON LN</blockquote></p>
+
+<p>The site also proudly suggests:<br />
+<em>We recommend you use <a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=gloucestershire&ie=UTF8&ll=51.913779,-2.15332&spn=1.616258,3.702393&z=8&om=1">Google Maps</a> to view your area and locate street locations.</em><br />
+with the link pointing to a Google map over Gloucestershire.</p>
+
+<p>I pondered for a while building a screenscraper and geocoder to plot a map from the data on the page (or cut and paste it into a Google spreadsheet and from there geocode it with the Google maps geocoder API), but in the end I opted for the slow and painful route to try and see what sorts of errors the automated route would choke at.</p>
+
+<p>And so, I created a Google MyMap, cut and pasted the addresses into the map search box, then saved each result to the appropriate MyMap, moving the balloon to the correct location if necessary.</p>
+
+<p>Doing this, I noticed there are quite a few typos/errors in the street names ("Ave" rather than "Rd", for example) but foolishly didn't record them. (I assume these are errors on the Severn Trent site). Locating the points accurately was also difficult (so there may be a few errors).</p>
+
+<p>I also noticed that there are a few 'dated' location names (or do we still have <em>GPO Sorting Offices</em>?).</p>
+
+<p>Some locations appear to be duplicated in the list.</p>
+
+<p>At times, the 'local area' clusters that are used to group location appear to overlap, or drift from the supposed locale.</p>
+
+<p>If the locations change, or more or added, the map will rot badly. If new locations are added, then depneding on how they are added/flagged it may be easy or difficult to update the map.</p>
+
+<p>[UPDATE: 01:00 24/7/07 - the Severn Trent listing appears to have been updated, and now lists bowser locations as of 22:00 on 23/7/07; however, as I suspected might happen, it's not possible to see the changes that were made to the earlier posting, so it's hard for me to update the map... one reason for live scraping, I guess ;-) So how could the Severn Trent folks have helped matters: by adding a [added 22:00, 23/7/07] label to updated items maybe (easy)? Or using a public read only access wiki, with history features enabled? (and maybe a wiki way for people to suggest corrections to incorrect road names, as well as tightening up the <em>actual</em> location of the bowsers?) (harder).]</p>
+
+<p>Anyway - the map is there, and hopefully contributing to Google searches [though now it's out of date and maybe even incorrect...so maybe I should take it down? I wonder, once a bowser location is posted, does that location remain fixed for the duration of the emergency? It would make sense to me if that is the case (i.e. once you've found a water location, you don't need to hunt for it the next time you need it... In which case, the map will only ever show <em>fewer</em> locations than is actually the case.)].</p>
+
+<p>Here's a link to the map again: <a href="http://tinyurl.com/2m43m5">http://tinyurl.com/2m43m5</a><br />
+<hr /><br />
+PS Another thing that came to mind is that in such situations, is there a need for an "IT/web hacker" equivalent to <a href="http://www.raynet-uk.net/">RAYNET, The Radio Amateurs' Emergency Network</a>?</p>
+
+<p>Local council IT practitioners are not necessarily as up-to-speed as members of the Lazyweb, even if local services aren't under the sorts of pressure that an emergency presents...</p>
+
+<p>[UPDATE 01:15 24/7/07 So for an example of the emergency web stratgey, the srwater.co.uk (good URL, huh? Not that I was expecting severntrent.co.uk or anything...(that's the share price and press room website - no emergency info...!)) front page is currently a listing of the water bowser locations, with a small link to the 'normal' website. I don't know how the site normally handles incoming emails but I'm guessing server load has toppled it over:<br />
+<blockquote>An error has occurred</p>
+
+<p>HOST: www.stwater.co.uk<br />
+SCRIPT: /server.php<br />
+QUERY: show=nav.5614<br />
+Message:	Undefined index: currentTemplate<br />
+File:	E:\boxuk\amaxus\private\inc\class\common\XslTransformer.class.php<br />
+Line:	334<br />
+Time:	July 24, 2007, 1:11 am</blockquote>]</p>
+
+<p><br />
+For some time I've been thinking about volunteering activities, but I'm not really that practical away from a keyboard... so maybe I need to look around to see if there is something like a <em>Webnet</em> organisation - "The Web Hackers' and Data Mashers' Emergency Network" - that I could maybe contribute to?</p>
+
+<p>Anyone know of such a thing? I know there have been <em>ad hoc</em> applications created to help out in dire times, but is there a latent, standing group out there who can help out with pulling together information services when necessary?</p>
+
+<p>PPS a couple of examples: <a href="http://www.allthingsdistributed.com/2007/07/wired_on_jim_gray.html">the search for Jim Gray</a>, <a href="http://www.edparsons.com/?p=504">Thames Valley Flood Map</a>.</p>
+
+<p>PPPS Here's an embedded view of the map, (built using an online <a href="http://www.dr2ooo.com/tools/maps/">Embed Google 'My Maps'</a> tool):</p>
+
+<p><iframe src="http://www.dr2ooo.com/tools/maps/maps.php?zoom=10&ll=51.912085,-2.168427&kml=%20http%3A//maps.google.co.uk/maps/ms%3Ff%3Dq%26view%3Dtext%26hl%3Den%26ie%3DUTF8%26om%3D1%26mpnum%3D3%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.000435f2d463a0c57cf1b&ctrl=true&" width="400" height="266"></iframe></p>
+
+<p>Not all the mapped points seem to be displayed, so I guess there must be a limit on either how many points can be listed in a MyMaps KML file or how many the map embedding app can cope with?</p>
+
+<p>PPPS Here are some <a href="http://googlemapsmania.blogspot.com/2007/07/bbcs-interactive-google-my-map-of-flood.html">more flood news related mashups</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010494.html">11:09 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10494" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">May 15, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010305"></a>
+<h3 class="title">Programming, Animation, and Lots and Lots of Fun</h3>
+
+<p>The BBC Technology news site <a href="http://news.bbc.co.uk/1/hi/technology/6647011.stm">just posted</a> about <a href="http://scratch.mit.edu">Scratch</a>, a new initiative from Mitch Resnick, who's moved on from Lego robotics to produce this animation programming environment.</p>
+
+<p>(The site appears to be taking a hit right now - here's an older <a href="http://weblogs.media.mit.edu/llk/scratch/">Scratch project site</a> to be going on with.)</p>
+
+<p>The tool uses an approach reminiscent of the Lego Mindstorms programming environment - users plug instruction blocks together create programme sequences.</p>
+
+<p>What's really neat about scratch, though, is you can create lots of separate program fragments on a single canvas, and test them individually, then plug them together when you have created components you are happy with.</p>
+
+<p>The programmes animate user selected characters (or photos) - as well as audio -  that appear in a split pane in real time; live editing of a programme is also possible.</p>
+
+<p>I can't in to the site to grab the download just now, but the tutorial movies look great - <a href="http://www.youtube.com/watch?v=jxDw-t3XWd0">here's one on youTube</a> - well worth taking a 5 minute coffee break over (watch it right through... demos first, howto second)... just get the way the 'instructions' are delivered :-)</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/jxDw-t3XWd0"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/jxDw-t3XWd0" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>Interactivity is also supported, the implication being you can create your own simple games.</p>
+
+<p>The only issue I have with it is that it's very obviously targeted at kids... although it'd be great for adult education too.</p>
+
+<p>I can see now why Bloomsbury issue the Harry Potter books in adult and child editions, which presumably differ only in their artwork.</p>
+
+<p>But that masks the real problem, though - why shouldn't adults learn from playing with interactive kids' toys  that just weren't around 40, 20, 10, 5, 2, 1 year ago?</p>
+
+<p>I "play" with Lego robots in a schools a lot. The computing power of the RCX brick, and the flexibility of the the 'robot prototyping system' - - hardware and software - would have placed the technology at the cutting edge of robotics research 30 years ago.</p>
+
+<p>So why's it <em>kids' stuff</em> now?</p>
+
+<p>PS I also blogged a similar piece about Scratch on the <a href="http://www.open2.net/blogs/scitechnature/index.php/2007/05/">open2.net Science & Technology blog</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010305.html">10:13 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10305" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 21, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="009707"></a>
+<h3 class="title">Reach Out and Engage</h3>
+
+<p>One of the way too many distractions I sink too much time in to (like this blog, maybe?;-) are <a href="http://robofesta.open.ac.uk">robotics related outreach activities</a>. This week, for example, I'm off to the <a href="http://www.techniquest.org">Techniquest</a> hands-on science centre in <a href="http://maps.google.co.uk/maps?f=l&hl=en&q=techniquest&near=cardiff&ie=UTF8&z=10&ll=51.67,-3.054199&spn=0.069839,1.373291&om=1&iwloc=A">Cardiff Bay</a>, where there's a week of robotics themed activities going on wrapping a robotics show project we're involved with: <a href="http://www.uwe.ac.uk/fas/graphicscience/projects/events/robot_thoughtII.htm">Robot Thought</a> (which in turn is one of the many projects that being championed by the UK Robotics Community pubic engagement network <a href="http://www.walkingwithrobots.com/">Walking With Robots</a>, which we're also part of).</p>
+
+<p>Next week, regional finals of <a href="http://rcj.open.ac.uk">RoboCup<em>Junior</em>-UK</a> (which is organised at a national level by my colleague Ashley Green) are taking place at the OU, with schools competing from all over the place, including the <a href="http://www.ictamber.org.uk/">world class robot dance team from Amberfield School</a>.</p>
+
+<p><img src="http://www.ictamber.org.uk/phoenix/comp2/1.jpg" alt="Flight of the Phantom Phoenixes" /></p>
+
+<p>[Just in passing, I thought it interesting to note how <a href="http://googleblog.blogspot.com/2007/01/fun-with-robotics.html">Google support school robotics competitions</a> (as well as other <a href="http://googleblog.blogspot.com/2007/02/this-is-national-engineers-week.html">science/engineering outreach activities</a>). Is this seen as an appropriate use of 20% time, I wonder, or are extra allowances made for outreach and engagement? And I wonder.... hey GOOG - fancy sponsoring RCJ-UK next year?! :-)]</p>
+
+<p>Also next week we'll be outlining our plans for an <a href="http://www.ics.heacademy.ac.uk/projects/development-fund/fund_details.php?id=89">HE Academy Innovative Teaching Fund project</a> to reversion some robot programming activities from our <a href="http://ouseful.open.ac.uk/t184">Robotics and the Meaning of Life</a> course (taster <a href="http://tscp.open.ac.uk/t184">here</a>) to use <a href="http://msdn.microsoft.com/robotics/">Microsoft Robotics Studio</a> and then release the materials via <a href="http://openlearn.open.ac.uk">OpenLearn</a>.</p>
+
+<p>Outreach and public engagement in the OU is  currently undergoing something of a review in the OU, with the expectation that it will become more formally recognised as an activity that is valued by the institution.</p>
+
+<p>This is something that some of us have been <a href="http://www.slideshare.net/psychemedia/outreach-in-context/">informally banging on about for years</a>, but with the possibility of bidding for £££money$$$ from HEFCE to set up a <a href="http://www.hefce.ac.uk/pubs/hefce/2006/06_49/">Beacon for Public Engagement</a>, the leading role the OU is playing in the organisation of the <a href="http://www.investmiltonkeynes.co.uk/dpdfs/SCIENCE_FAIR.pdf">Milton Keynes Science Festival</a> and a PVC who values outreach and engagement, maybe the times-they-are-a-changing...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009707.html">09:54 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9707" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

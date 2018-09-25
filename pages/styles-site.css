@@ -1,0 +1,159 @@
+BODY {
+	BACKGROUND: #ffffff; MARGIN: 0px 0px 20px;
+}
+A {
+	COLOR: #6699CC; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #6699CC; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #669933
+}
+A:hover {
+	COLOR: #669933
+}
+H1 {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 0px;
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+BLOCKQUOTE {
+	font-style: italic;
+}
+#banner {
+	PADDING-RIGHT: 15px; BORDER-TOP: 4px; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: large; PADDING-BOTTOM: 10px; COLOR: #0066CC; PADDING-TOP: 10px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#banner A {
+	FONT-SIZE: x-large; COLOR: #0076BE; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#banner A:link {
+	FONT-SIZE: x-large; COLOR: #0076BE; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;TEXT-DECORATION: none
+}
+#banner A:visited {
+	FONT-SIZE: x-large; COLOR: #999999; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#banner A:active {
+	FONT-SIZE: x-large; COLOR: #0076BE; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;TEXT-DECORATION: none
+}
+#banner A:hover {
+	FONT-SIZE: x-large; COLOR: #669933; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;TEXT-DECORATION: none
+}
+.description {
+	FONT-SIZE: small; TEXT-TRANSFORM: none; COLOR: #000000; FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#content {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BACKGROUND: #ffffff; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 225px; BORDER-LEFT: #ffffff 1px solid; WIDTH: 70%; MARGIN-RIGHT: 20px; BORDER-BOTTOM: #ffffff 1px solid; POSITION: absolute
+}
+#container {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #fff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+#links {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; BORDER-LEFT: #ffffff 1px solid; WIDTH: 200px; PADDING-TOP: 15px; BORDER-BOTTOM: #ffffff 1px solid
+}
+.blog {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #ffffff; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.blogbody {
+	FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #ffffff; COLOR: #000000; LINE-HEIGHT: 120%; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.blogbody A {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline;COLOR: #0076BE;
+}
+.blogbody A:link {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline;COLOR: #0076BE;
+}
+.blogbody A:visited {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline;COLOR: #999999;
+}
+.blogbody A:active {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline;COLOR: #0076BE;
+}
+.blogbody A:hover {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline; COLOR:#669933
+}
+.title {
+	FONT-SIZE: medium; COLOR: #6699CC; FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#menu {
+	BACKGROUND: #fff; MARGIN-BOTTOM: 15px; TEXT-ALIGN: center
+}
+.date {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: medium;
+	MARGIN-BOTTOM: 5px;
+	COLOR: #FFFFFF;
+	BORDER-BOTTOM:1px solid;
+	FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color:#6699CC;
+	text-indent:5px;
+	
+}
+.posted {
+	FONT-SIZE: x-small; MARGIN-BOTTOM: 25px; COLOR: #000000; FONT-FAMILY: verdana, arial, sans-serif
+}
+.calendar {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; COLOR: #999999; LINE-HEIGHT: 140%; PADDING-TOP: 2px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-ALIGN: left;
+}
+.calendarhead {
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: small;
+	BACKGROUND: #fff;
+	PADDING-BOTTOM: 2px;
+	TEXT-TRANSFORM: uppercase;
+	COLOR: #0076BE;
+	PADDING-TOP: 2px;
+	FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	LETTER-SPACING: 0.3em;
+	TEXT-ALIGN: left;
+	background-color : #D5E1ED;
+	text-indent:3px;
+	
+}
+.side {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; COLOR: #333; LINE-HEIGHT: 130%; PADDING-TOP: 2px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.sidetitle {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 15px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; FONT-SIZE: small; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; TEXT-TRANSFORM: uppercase; COLOR: #0076BE; PADDING-TOP: 2px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;LETTER-SPACING: 0.3em
+}
+.syndicate {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 10px; PADDING-LEFT: 2px; FONT-SIZE: xx-small; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; LINE-HEIGHT: 130%; PADDING-TOP: 2px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.powered {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 50px; PADDING-LEFT: 2px; FONT-SIZE: x-small; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; TEXT-TRANSFORM: uppercase; COLOR: #666; LINE-HEIGHT: 130%; PADDING-TOP: 2px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; LETTER-SPACING: 0.2em
+}
+.comments-body {
+	FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #ffffff; PADDING-BOTTOM: 10px; COLOR: #666666; LINE-HEIGHT: 130%; PADDING-TOP: 10px; BORDER-BOTTOM: #999 1px dotted; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.comments-post {
+	FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #ffffff; COLOR: #666666; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.trackback-url {
+	BORDER-RIGHT: #999 1px dotted; PADDING-RIGHT: 5px; BORDER-TOP: #999999 1px dotted; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; PADDING-BOTTOM: 5px; BORDER-LEFT: #999999 1px dotted; COLOR: #666666; LINE-HEIGHT: 130%; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px dotted; FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.trackback-body {
+	FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #ffffff; PADDING-BOTTOM: 10px; COLOR: #666666; LINE-HEIGHT: 140%; PADDING-TOP: 10px; BORDER-BOTTOM: #999 1px dotted; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
+.trackback-post {
+	FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #ffffff; COLOR: #666666; FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.comments-head {
+	MARGIN-TOP: 20px; FONT-WEIGHT: bold; FONT-SIZE: small; BACKGROUND: #ffffff; COLOR: #666666; BORDER-BOTTOM: #999 1px solid; FONT-FAMILY:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#banner-commentspop {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: large; BACKGROUND: #003366; PADDING-BOTTOM: 5px; BORDER-LEFT: #fff 1px solid; COLOR: #fff; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,1101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: March 2007 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2007_02.html" title="February 2007" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2007_04.html" title="April 2007" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_02.html">&laquo; February 2007</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2007_04.html">April 2007 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">March 31, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010097"></a>
+<h3 class="title">Towards an OpenLearn XML (Re)Publishing System</h3>
+
+<p>This post is place for me to pop down a link or two to some bits and pieces I've been tinkering with over the last couple of days relating to various transfomations of OpenLearn XML. If I get a chance over the Easter break, I intend to reconcile the various tools and approaches and pop them into a small republishing environment...so it's important, I think, to record (albeit briefly) some of the components that will hopefully make such a thing easy to do...</p>
+
+<p><h3>OU OpenLearn XML to RSS</h3><br />
+An <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=0F8Z_y7d2xGkWV9fnkartA">OU xml2rss  pipe</a>: a Yahoo Pipe that lets you enter the URL to an OpenLearn XML file and it will then call the W3C XSLT engine (please don't hammer it) with an XSL file that maps OpenLearn XML onto RSS. OpenLearn RSS is the result.</p>
+
+<p>(You may be able to work out some URLs to OpenLearn XML files by exploring the pipe and looking <a href="http://blogs.open.ac.uk/Maths/ajh59/009142.html">here</a>!)</p>
+
+<p>Demo: <a href="http://pipes.yahoo.com/pipes/pipe.run?xmlurl=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FT180_8_1.0%2FT180_8.xml&_id=0F8Z_y7d2xGkWV9fnkartA&_run=1&_render=rss">T180_8 XML2RSS</a>. Here's the URL: <a href="http://preview.tinyurl.com/2xeoj9">http://preview.tinyurl.com/2xeoj9</a>.</p>
+
+<p><h3>OpenLearn RSS2PDF</h3><br />
+(After a <a href="http://www.scribd.com/doc/19955/Computers-bits-bytes">demo by Stuart Brown</a>, where he used xfruits to produce a PDF version of a course from an RSS feed, which he then uploaded to Scribd).</p>
+
+<p>OpenLearn RSS2PDF: <a href="http://www.rss2pdf.org/rss2pdf/?feed=http://tinyurl.com/2xeoj9">rss2pdf conversion of OpenLearn_RSS</a>.</p>
+
+<p>Combining the original translation and and PDF conversion, here's a Javascript function that takes an OpenLearn XML URL  and pipelines the above mentioned services to produce a PDF version of the materials:</p>
+
+<p><em>function getPDFURL(xmlURL){<br />
+ rssURL="http://pipes.yahoo.com/pipes/pipe.run?xmlurl="+encodeURIComponent(xmlURL)+"&_id=0F8Z_y7d2xGkWV9fnkartA&_run=1&_render=rss";<br />
+ return "http://www.rss2pdf.org/rss2pdf/?feed="+encodeURIComponent(rssURL);<br />
+}</em></p>
+
+<p>Here's a <a href="javascript:(function(){rssURL="http://pipes.yahoo.com/pipes/pipe.run?xmlurl="+encodeURIComponent(location.href)+"&_id=0F8Z_y7d2xGkWV9fnkartA&_run=1&_render=rss";pdfURL="http://www.rss2pdf.org/rss2pdf/?feed="+encodeURIComponent(rssURL);window.location=pdfURL})()">bookmarklet</a> that will generate a PDF from an OpenLearn_XML page.</p>
+
+<p><h3>OpenLearn_XML RSS Asset Stripper</h3></p>
+
+<p>After a brief chat with Laura Dewis from the OpenLearn team yesterday, I came away with the impression that a small script to pull out media assets from an OpenLearn_XML file might be useful.</p>
+
+<p>It only took an hour or so to pull together, even with my limited XSL skills, and here was the result: <a href="http://tinyurl.com/29kvsa">OpenLearn_XML asset stripper</a> (here's the <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnTest/mediaAsset.xsl">OpenLearn XML asset stripper XSL</a>).</p>
+
+<p>I tidied it up a little more today to produce this <a href="http://tinyurl.com/36jqgu">OpenLearn_XML media asset viewer</a>:</p>
+
+<div style="height:400px;width:100%;"><a href="http://grazr.com/gzpanel.html?font=arial&fontsize=9pt&view=o&theme=gloss_silver&file=http://www.w3.org/2005/08/online_xslt/xslt?xslfile=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FopenlearnTest%2FopenlearnAssets.xsl&xmlfile=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FL120_1_1.0%2FL120_1.xml&forward-accept=on&content-type=text%2Fxml&submit=transform" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?font=arial&amp;fontsize=9pt&amp;view=o&amp;theme=gloss_silver&amp;file=http://www.w3.org/2005/08/online_xslt/xslt?xslfile=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FopenlearnTest%2FopenlearnAssets.xsl&amp;xmlfile=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FL120_1_1.0%2FL120_1.xml&amp;forward-accept=on&amp;content-type=text%2Fxml&amp;submit=transform"></script></div>
+
+<p><h3>OpenLearn_XML Audio Asset Stripper</h3><br />
+Marc Eisenstadt pushed for an easy way to grab audio assets. Here's how I took the request:</p>
+
+<p><a href="http://grazr.com/config.html?file=http://tinyurl.com/2uzo8z">OpenLearn_XML audio assets</a></p>
+
+<div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?file=http://tinyurl.com/2uzo8z" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?file=http://tinyurl.com/2uzo8z"></script></div>
+
+<p>Here's the <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnTest/audioAsset.xsl">audio stripper XSL</a> and here's the <a href="http://preview.tinyurl.com/2uzo8z">transformer URL</a>.</p>
+
+<p>This XSL actually produces an RSS feed with an enclosure element that links to each audio asset.</p>
+
+<p><h3>Summary</h3><br />
+It's easy enough to mine the OpenLearn XML for media assets and then re-present them (thanks to <a href="http://suda.co.uk">Brian Suda</a> from way back when for showing me how to use XSL to pull all the nodes of a particular type out of an XML file).</p>
+
+<p>The next step for me is to pull all the above into a single page, where you can supply the URL to an OpenLearn_XML file and generate links to RSS, pdf and asset stripped versions of the content with a single click :-)</p>
+
+<p>PS here's a start: <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnProcessor.php">OpenLearn<em>_xmlProcessor</em></a></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010097.html">08:40 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10097" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 29, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010086"></a>
+<h3 class="title">Yahoo Pipes Just Opened Up Arbitrary XML Input</h3>
+
+<p>No time to play with this just at the mo, but worth reporting I think... A new block has appeared at <a href="http://pipes.yahoo.com">Yahoo Pipes</a>:<br />
+<blockquote><strong>Fetch Data</strong><br />
+This module retrieves any XML or JSON file and tries to extract a list of elements using the provided path parameter.</blockquote></p>
+
+<p><img alt="yahooDataFetch.png" src="http://blogs.open.ac.uk/Maths/ajh59/yahooDataFetch.png" width="504" height="378" border="0" /></p>
+
+<p>The example pipe is empty at the moment: <a href="http://pipes.yahoo.com/pipes/XsuoOujc2xG2GpwezKky6g/">http://pipes.yahoo.com/pipes/XsuoOujc2xG2GpwezKky6g/</a> (21:34, 29/3/07)</p>
+
+<p>However, see a working example here: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=ypEo0_zd2xGgEDTaJhOy0Q">OPML RSS links 2 RSS</a>: "Aggregates all the RSS feeds listed in an online OPML file into a single feed. The title of every item in the aggregated feed is modified to include the title of its source feed. The newest items will appear first in the aggregated feed, and the maximum number of items may be specified (the default is 200). This Pipe! utilizes the new "Fetch Data" source."</p>
+
+<p>There's also another <em>really</em> interesting block listed in the <a href="http://pipes.yahoo.com/pipes/docs?doc=modules">Complete List of Pipes</a>:<br />
+<blockquote><strong>Web Service</strong><br />
+This module posts XML or JSON to an outside REST web service and tries to parse the results.</blockquote><br />
+The example link is to <a href="http://pipes.yahoo.com/pipes/DEEMmujc2xGFlLFtlfXiAA/edit">http://pipes.yahoo.com/pipes/DEEMmujc2xGFlLFtlfXiAA/edit</a> but it currently points to non-existent pipe (21:34, 29/3/07)</p>
+
+<p>So what? So - we can now get arbitrary XML into a pipe with the <em>Fetch Data</em> block, and soon will presumably be able to make complex XML calls to third party webservices.</p>
+
+<p>For example, let's call an Amazon web service (creating the call URL using the <a href="http://www.awszone.com/scratchpads/aws/ecs.us/index.aws">AWS Scratchpad</a>, for example):</p>
+
+<p><img alt="yahooAWS.png" src="http://blogs.open.ac.uk/Maths/ajh59/yahooAWS.png" width="664" height="355" border="0" /></p>
+
+<p>All we need now is the ability to output arbitrary XML... in the meantime, the <a href="http://pipes.yahoo.com/pipes/VvHxcyG92xG60OkCEpPZnA/">Rename</a> module "lets you rename or copy item attributes." Which is a start...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010086.html">09:44 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10086" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 28, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010081"></a>
+<h3 class="title">Pesky RSS Feeds, They Turn into All Sorts...</h3>
+
+<p>A quick ack to <a href="http://conclave.open.ac.uk/openair/">Stuart Brown</a> who's picked up the 'so what can we do with these here OpenLearn content RSS feeds then?' baton and started running like crazy with it...</p>
+
+<p>Today was a heads up to <a href="http://www.scribd.com/doc/19955/Computers-bits-bytes">T171 on Scribd</a>. The route to this upload was an <a href-="http://xfruits.com/">xfruits RSS2PDF</a> conversion. Of course, now the content is in Scribd, it's available as a Word doc (just need the bookmarklet now to open this into Zoho ot Google docs...).</p>
+
+<p><img alt="scribdT171.png" src="http://blogs.open.ac.uk/Maths/ajh59/scribdT171.png" width="1043" height="479" border="0" /></p>
+
+<p>Scribd also offers an audio version of the file, supposedly, but all I get is 'dash dash dash...'</p>
+
+<p>Anyway, that's not really a problem because Stuart also tried the feed in <a href="http://en.blog.vocalfruits.com/">VocalFruits</a> and he mentioned it worked okay (public feeds aren't available yet).</p>
+
+<p>Stuart's also been trying feeds out in various mobile browsers/feed readers, like the (secret) Grazr one and - err - a couple of others I cant find the links to, offhand... I'm not sure if he's tried it out inthe <a href="http://m.netvibes.com/">mobile Netvibes</a> feed reader though (how contrived was that link?!).</p>
+
+<p>Just by the by, the OU has been looking at an XML to whatever production route fro several years now (and I believe have something available that's pretty reliable - at least, for documents written using the OU XML schema (which I guess is pretty close to the one used to release LabSpace XML).</p>
+
+<p>The <em>ad hoc</em>, multi-format publication route described above is probably brittle as anything, but I reckon I could produce readable PDFs, Word docs, MP3s, RTFs, mobile browseable, widget readable versions of any text/image based OpenLearn content in at most an hour or two. Such is the good enough nature of - and widespread support for - RSS...</p>
+
+<p>I'm sure LTS can also do the 'publish in any format' trick, far more reliably, and in a much shorter time than I can, too... (wanna race? ;-) But maybe the point is that it's not that clever in design terms (that is, almost anyone can use a variety of third party tools to achieve a similar effect), it's achieving the required reliability and scaleability that takes the effort.</p>
+
+<p>Finally for today, another weak link: for readers who've been tinkering with OpenLearn materials, maybe even playing with some of the <a href="http://blogs.open.ac.uk/Maths/ajh59/009142.html">OpenLearn course content feeds</a>, there's a call just gone out for the <a href="http://www.open.ac.uk/openlearn/openlearn2007/conference.php">openlearn 2007 conference</a>, taking place on 30-31 October 2007 in Milton Keynes.</p>
+
+<p>The conference is free if you register in time and promise to talk, so I'm thinking maybe I should try and submit something...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010081.html">12:34 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10081" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 27, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010080"></a>
+<h3 class="title">The Fall and Rise of VideOU</h3>
+
+<p>In the beginning, OU courses were backed up television broadcasts that aired in the early hours of the morning on BBC2, and occasionally on Saturday mornings. More recently, course videos have been delivered on video cassette and DVD, with OU/BBC programming focussing more and more on prime time offerings (as you'll know if you've visited the OU/BBC <a hred="http://open2.net">Open2.net</a> website</a> recently; for a full listing of OU broadcasts over the years, check out the <a href="http://blogs.open.ac.uk/Maths/ajh59/006117.html">BBC programme catalogue</a>).</p>
+
+<p>One of the great strengths of OU broadcasts was that they were universally accessible. I'm not sure - historically - how useful students on our courses found the original broadcasts, but they are fondly remembered by a huuuuuuuuge number of people, and provide a great source of inspiration for comedy sketch show writers. For example, spot the spoof OU programme clip from these three (three embedded YouTube videos follow: <a href="http://www.youtube.com/watch?v=PEFd4tCWtvk">option a</a>, <a href="http://www.youtube.com/watch?v=COsIDP1fY90">option b</a> or  <a href="http://www.youtube.com/watch?v=ISaL5HFzEMo">option c</a>;-): </p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/PEFd4tCWtvk"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/PEFd4tCWtvk" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object> <object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/COsIDP1fY90"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/COsIDP1fY90" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object>  <object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/ISaL5HFzEMo"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/ISaL5HFzEMo" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>Did you manage to spot the spoof? Anyway anyway, these are quite a contrast to the latest offerings, such as the BAFTA winning <a href="http://www.open2.net/coast/coast2006series.html">Coast</a> series or the brilliant <a href="http://www.open2.net/marksteel/index.html">Mark Steel lectures</a>.</p>
+
+<p>What prompted this post though, was a webflyer I saw today for an <a href="http://weblogs.elearning.ubc.ca/brian/archives/036718.php">online educational video competition</a>. My immediate thought was: do we have anything we could submit? If so, what? And if not, why not?</p>
+
+<p>The competition in and of itself is not what got me thinking...</p>
+
+<p>Rather, it was the suggestion that the 30 second to 2 minute short is perhaps starting to come of age - just the sort of content that <em>can</em> appear on YouTube (via the web, or - from June - via <a href="http://gigaom.com/2007/03/27/mobile-youtube/">YouTube Mobile</a>) and communicate some useful educational content on demand to the user, or embedded in some course material.</p>
+
+<p>We were so nearly in a position to steal a lead on this sort of content packaging. I remember being at an OU/BBC broadcast meeting several years ago when 'filler' programming - 30s clips to go in-between scheduled broadcasts - was mooted (rather than the extended idents and BBC ads that take up 2-3 minutes of screen time between programmes nowadays). that was pre-blogtime for me, though, so I don't have any records other than a vague memory of that meeting... and no links to examples either...:-)</p>
+
+<p>Anyway - if internal readers know of any shorts that can be showcased in public, feel free to pass me a link... ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010080.html">11:56 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10080" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 26, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010073"></a>
+<h3 class="title">Scribd and the Role of Open Repositories</h3>
+
+<p>Some time ago, the <a href="http://slideshare.net">Slideshare</a> service launched, offering users the opportunity to upload and share Powerpoint presentations, as well as publishing them on the web in a small embedded slideshow player.</p>
+
+<p>More recently, <a href="http://www.scribd.com">Scribd</a> has entered the game, encouraging users to:<br />
+<blockquote><strong>Put your docs online.</strong><br />
+Scribd is a free online library where anyone can upload. Use our embeddable PDF player to publish and view documents right in your web browser. <br />
+Bulk upload now! No need to sign up.<br />
+Formats: .pdf, .doc, .ppt, .xls, .txt, etc.</blockquote></p>
+
+<p>I have to admit to having completely lost the plot now with respect to these "YouTube for arbitraryMedia" services.</p>
+
+<p>But Scribd has got me thinking...</p>
+
+<p>Many universities now run their own research paper repository - <a href="http://oro.open.ac.uk/">Open Research Online</a> in the case of the OU.</p>
+
+<p>But as far as I know, these are all independently hosted - and I don't think there is a federated search across them (?or maybe there is?)</p>
+
+<p>So why don't JISC get it together to provide a Scribd sort of service for the HE community?</p>
+
+<p>Hmm - they do, sort of, don't they, at least for teaching resources: <a href="http://www.jorum.ac.uk/">Jorum</a>:<br />
+<blockquote>Jorum is a free online repository service for teaching and support staff in UK Further and Higher Education Institutions, helping to build a community for the sharing, reuse and repurposing of learning and teaching materials.</blockquote></p>
+
+<p>I'm not sure how widely it's used - certainly I've never used it (but maybe I should...).</p>
+
+<p>And I'm pretty sure that <a href="http://www.open.ac.uk/openlearn">OpenLearn</a>, for example, blanks it completely... (and vice versa).</p>
+
+<p>The problem is, there are just soooooooooooo many places to share content now. And I'm not sure what the solution is? Maybe it's that I keep all my stuff where I want it, and then share it into the communities I want to, and let search engines/harvesters pull it into other communities where it's relevant (maybe letting me know when they do, and giving me the option of stopping them).</p>
+
+<p>Anyway, I think I've worked out what PLEs are - they're the set of web services we each use for our own purposes; and they're personal because the combination we use is unique to each of us (<em>oh, you use Google docs do you - I use Zoho; GTalk? I'm on MSN; flickr? no, Photobucket; Typepad? Wordpress...</em>)</p>
+
+<p>PS personally, I've started to experiment with <a href="http://ouseful.open.ac.uk/stringle">Stringling</a> <em>ad hoc</em> environments together...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010073.html">02:27 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10073" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 25, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010063"></a>
+<h3 class="title">Grazr and the Question of State</h3>
+
+<p>For a reason I can't quite work out, I woke up this morning wondering how to get state information into Grazr. What is state, you may ask? Think of it as the set of configuration data or information contained within a computer program, or web page. What is state good for? Configuring web forms, for one...</p>
+
+<p>When you load a web page, the page itself is generally stateless. That is to say, the web page itself knows nothing about you. It is generic, although it may be customisable.</p>
+
+<p>How then, do sites like Amazon always manage to know who you are, and serve you a customised page that identifies you explicitly?</p>
+
+<p>One way is to use a <em>cookie</em> (<a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=84854">read about cookies on Openlearn</a>). Cookies are little data records that are stored on your computer by a website. When you first visit a website and enter your personal details, the website collects this information, creates a unique identifier for you and stores that identifier in a cookie on your computer. When you revisit the webpage, it looks for the cookie, sees who you are, and customises the page as a result. Cookies could store your personal details explicitly on your computer rather than a unique identifier, but this is usually a bad idea, for privacy reasons if nothing else.</p>
+
+<p>To make things concrete in the Grazr world, consider the <a href="http://grazr.com/read/psychemedia/deliRolls.opml">deliRolls</a> script that lets you view feeds corresponding to bookmarks tagged in a particular way by particular delicious users.</p>
+
+<p>The form has two customisable inputs - one or more delicious usernames, and one or more tags. As it stands, there is no way I can preconfigure this particular widget (as it stands, and as far as I know...) so that it displays the feeds I was looking at previously each time I reload the page containing the widget.</p>
+
+<p>A cookie would let me do this. A cookie could be used to save the delicious usernames and tags each time I change them, so that the next time I visit the page I see the widget configured as it was the last time I used it with the same browser.</p>
+
+<p>Cookies are set in a browser using Javascript. However, whilst Grazr does support Javascript, the Javascript runs on the Grazr server to build the rendered OPML file, not in your browser. The Grazr widget itself is built using Javascript, but this is not accessible to the user.</p>
+
+<p>So cookies can't be used at the moment to load state data into a Grazr widget (one for the wishlist, maybe? Some cookie handlers?).</p>
+
+<p>Another way of getting state information - such as the delicious username(s) and tag(s) required by the deliRolls widget - is via the URI. This approach is taken by the Yahoo Pipes team: each interface/input element in a Yahoo pipe is exposed as an argument in the URI.</p>
+
+<p>The same approach can easily be achieved in Grazr <em>if</em> it is possible to associate arguments with a GrazrScript URL.</p>
+
+<p>For example, the deliRolls script lives at <em>http://grazr.com/data/psychemedia/deliRolls.opml</em>; the script contains two arguments, corresponding to the input fields: <em>deliName</em> and <em>deliTag</em>. If these could be set via the OPML URL, it would be possible to load a preconfigured deliRolls widget.</p>
+
+<p>For example, loading the Grazr widget with <em>http://grazr.com/data/psychemedia/deliRolls.opml?deliName=psychemedia&deliTag=grazr%20opml</em> should load the form with two feeds from my delicious account: one with items that are tagged "grazr", the other with items that are tagged "opml".</p>
+
+<p>By supporting the passing of arguments "into" GrazrScript OPML files in this way, it would also be possible to write Grazr wrappers that could set and read cookies, and then load in an appropriately configured GrazrScript file <em>without</em> the Grazr widget having to offer cookie support.</p>
+
+<p>The stop gap is to write a GrazrScript generator that does accept URLs and that generates a customised OPML file that gets loaded into the Grazr widget (which is the approach taken for the generators listed in the <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript Generator Studio</a>) but it would be far more elegant if Grazr could handle this directly.</p>
+
+<p>So here's my feature request:</p>
+
+<p> - for every form variable in a GrazrScript file, expose it/handle it as a URL (HTTP GET) argument to the GrazrScript/OPML file.</p>
+
+<p>I guess it would also be handy to be able to run an onload function, too, e.g. to simulate the form submit action so that the arguments passed into the form can be used automatically as a form submit action to preload the Grazr form result node.</p>
+
+<p>PS here's another request too; it's possible to pass the name of a frame you want Grazr links to open in via the <em>linktarget=</em> argument. What would also be handy would be the ability to pass the URL you want to open into a callout function in the browser; for example, in the <a href="http://ouseful.open.ac.uk/stringle">Stringle</a> environment, I'd like to be able to call a function that ensures the correct tab has the focus when a page is loaded from Grazr.<br />
+Without thinking too deeply about it, what I'd like to be able to say is <em>callOut=foo</em> and then, whenever I click on a link in the Grazr widget, call <em>foo(url)</em> in the parent window, where <em>url</em> is the URL I clicked on in the Grazr widget.</p>
+
+<p>PPS hmm, is it possible to run a GrazrScript serverside javascript function from a Grazr link, I wonder? That is, when a link is clicked, call a GSJS function?</p>
+
+<p>PPS hmm, too - (after a msg from Mike) - I wonder if a GSJS <em>onload</em> callback/callout would be useful; that is, the ability to call a parent window Javascript function once the Grazr form has loaded.<br />
+Mike also mentioned a hack that lets you display just the results of running a script in Grazr that I'll have a tinker with over the next few days...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010063.html">12:47 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10063" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 23, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010056"></a>
+<h3 class="title">Grazring Grazr OPML Uploads: Bookmarklet</h3>
+
+<p>It's late, I'm in Belfast (taking part in a two day brainstorming session planning the <a href="http://www.w5online.co.uk/ ">W5</a> Robot Thought show (which may make use of the <a href="http://robotamusementpark.pbwiki.com">Robot Amusement Park</a> activity we've been developing elsewhere as one of the schools' launch day activities) and as I probably won't be posting for a day or two, here's a little something to be playing with...</p>
+
+<p>A bookmarklet that opens an OPML file uploaded to Grazr in a <a href="http://blogs.open.ac.uk/Maths/ajh59/008608.html">Grazr navigation window</a>: <a href="javascript:(function(){window.location='http://ouseful.open.ac.uk/grazr/grazrNav.php?u='+location.href.replace(/\/read\//,'/data/')})()">Grazr OPML upload navigator bookmarklet</a>.</p>
+
+<p>That is, if you visit the 'homepage' of an OPML file that has been uploaded to Grazr (such as <a href="http://grazr.com/read/mikepk/jmnf.xml">this one</a>) and click on the bookmarket, it will open the OPML file in a 'navigation sidebar' Grazr widget; clicking on any HTML link within the widget will then open the corresponding page in a neighbouring iframe within the same browser window.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010056.html">01:10 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10056" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 20, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010044"></a>
+<h3 class="title">deliRoll - Scripting Grazr with Javascript</h3>
+
+<p>Yesterday, the folks over at Grazr released serverside support for <a href="http://blog.grazr.com/index.php/2007/03/19/grazrscript-v12-beta/">Javascript contained within GrazrScript OPML files</a>.</p>
+
+<p>What this means is that you can now script the OPML that a Grazr widget displays.</p>
+
+<p>So what, you may say.... so Grazr widgets are now <em>programmable</em>; that is, Grazr can inspect what you have entered into a Grazr form then generate and render an appropriate set of feeds as a result.</p>
+
+<p>I have <em>no time</em> for distractions at the moment but couldn't resist posting a demo, which is actually a minor reworking of some of the code in the rediscovered <a href="http://blogs.open.ac.uk/Maths/ajh59/010032.html">social bookmarking feedroller</a>:</p>
+
+<p><img alt="deliRoll.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliRoll.jpg" width="821" height="457" border="0" /></p>
+
+<p>Enter one or more space separated delicious usernames and/or one or more space separated tag combinations, and a corresponding set of delicious feeds will be automatically generated.<br />
+ <br />
+You can <a href="http://grazr.com/data/psychemedia/deliRolls.opml">view the OPML</a> directly, or view it on the <a href="http://grazr.com/read/psychemedia/deliRolls.opml">deliRoll page</a>.</p>
+
+<p>Or here:</p>
+
+<div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?view=o&file=http://grazr.com/data/psychemedia/deliRolls.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://grazr.com/data/psychemedia/deliRolls.opml"></script></div>
+
+<p>(You can find several other OPML and GrazrScript generators in the <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript Studio</a>.)</p>
+
+<p>The Javascript support is still lacking one or two js features, but there's more than enough support already to start tinkering with.</p>
+
+<p>One thing I'd like to see (and haven't tried yet - so it may already be supported) is a script include - that is, the ability to load in external Javascript files...</p>
+
+<p>...and support for xmlhttprequest too, of course ;-)</p>
+
+<p>But as I said - plenty to play with in there already... good stuff, chaps :-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010044.html">11:46 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10044" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 19, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010032"></a>
+<h3 class="title">More OPML Generators (old ones, restated...!)</h3>
+
+<p>Regular readers probably know from all sorts of sources the Grazr folks are now hosting OPML files. So here's a couple of blasts from the past that may be of some use if you're new to OPML and want to try out some of your own feeds.</p>
+
+<p>(You may also find them useful if you're a feed junky!)</p>
+
+<p><em>Social bookmarking feed roller</em>: enter a list of usernames, a list of tags, select from a list of social bookmarking services and generate an online hosted OPML file that points to corresponding feeds from them all... (that is, for each service, feeds will be generated for each combination of the supplied usernames and tags): <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPMLFeedBlender.html">Social Bookmarking Feed Roller</a>.</p>
+
+<p><em>News feed roller</em>: select one or more internet news providers (Yahoo, Google, MSN), enter a list of search terms and then generate an OPML feed that points to each news service with each search term: <a href="http://blogs.open.ac.uk/Maths/ajh59/newsFeedsOPMLFeedBlenderC.html"> News Feed Roller</a></p>
+
+<p>As well as generating links to online OPML feeds, you can use both services to construct more complex OPML files containing OPML folders that contain feeds generated for different combinations of social bookmarking system/user/tag or news service/search term combinations.</p>
+
+<p>I've also got a set of <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript generators</a> that will generate Grazr forms to search over various services (such as Amazon and OpenLearn) and that integrate with various Yahoo pipes.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010032.html">09:25 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10032" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 16, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010010"></a>
+<h3 class="title">Auto-filtered deliSearch Pipe</h3>
+
+<p>I'm not sure if this is working completely as I'd like it to  - I need to set up a clean delicious account to do some testing - but what it's <em>supposed</em> to do is take in a list of links from delicious, and then search each domain listed with the <em>tags</em> that the corresponding link was bookmarked with...</p>
+
+<p>Try it: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=4jGS1M7T2xGdURL71fC6Jw">deliAutoFilter Pipe</a></p>
+
+<p>That is - what I want to do is use the tags associated with each link as the search terms I search the corresponding domain with...</p>
+
+<p><img alt="deliAutoFilter.png" src="http://blogs.open.ac.uk/Maths/ajh59/deliAutoFilter.png" width="579" height="431" border="0" /></p>
+
+<p>This makes use of the fact that delicious lists all the tags associated with a link in the <em>dc:subject</em> field associated with each feed item.</p>
+
+<p>So what? So you can use delicious to define a custom filtering engine that limits on domains <em>and</em> search/filter terms applied to each domain.</p>
+
+<p>PS this was my 400th <aem>OUseful.info</em> post, apparently... :-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010010.html">03:15 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10010" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010009"></a>
+<h3 class="title">BBC Radio Listen Again: Feeding Grazr Embedded Real Audio</h3>
+
+<p>For some time, Grazr has been able to play MP3 files embedded in RSS feeds, as well as YouTube videos (e.g. using this <a href="http://blogs.open.ac.uk/Maths/ajh59/009897.html">YouTube feed generator</a> to feed in the videos). Now, they also support the playing of streamed Real Audio (<em>if</em> you have a Real Audio plugin installed in your browser, that is...).</p>
+
+<p>This is interesting to me (and the reason I was hassling Mike@Grazr for it (thanks Mike!:-)) because the BBC currently make a large amount of their archived radio programmes available using this format. (Check out the <a href="http://search.bbc.co.uk/cgi-bin/search/results.pl?tab=av&q=computer+security">BBC A/V Search</a> for example (it would be good if you could define audio or video search limits, methinks?)).</p>
+
+<p>At the moment Grazr needs the ram file to be linked to as a feed enclosure. The Beeb doesn't offer this as a service, I don't think, (and I hope I'm not breaking too many T&C?!) but here's a <a href="http://ouseful.open.ac.uk/test/embedRATest.xml">demo feed</a> and here it is <a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/test/embedRATest.xml">in a Grazr widget</a>. For the files to play, you'll need to have a Real Audio plugin installed in your browser.</p>
+
+<p>To show how we might make use of this, I've started stringling resources together around the recent Click On radio programmes and included the Click On listen again feed in the mix: <a href="http://ouseful.open.ac.uk/stringle2.php?t=psychemedia/stringleClickOnDemo&s=http://www.open2.net/clickon&o=http://www.opmlmanager.com/opml/clickonStringleDemo.opml">Click On Stringle Demo</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010009.html">12:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10009" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 15, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010002"></a>
+<h3 class="title">Serialised OPML</h3>
+
+<p>Just a placeholder post this one, to a leave a 'note to self' to take the <a href="http://blogs.open.ac.uk/Maths/ajh59/009972.html">serialised feeds</a> idea a step further and look at producing a <em>serialised OPML</em> scheduler that will take an OPML file and release top level OPML nodes/directories according to a user specified schedule.</p>
+
+<p>The generalised version should also be able to support:</p>
+
+<p>- <em>nested scheduling</em> that will further schedule the release of the contents of subfolders (so for example I could define monthly scheduled folders containing weekly scheduled ones); and</p>
+
+<p>- <em>sub-scheduling</em>, where feedcycled RSS feeds are automatically generated within an OPML folder (so for example when an OPML folder is published, it might contain feedcycles whose schedule/start time is dependent on the release date of the OPML folder that contains it).</p>
+
+<p><a href="http://idea.zanestate.edu/ ">Todd</a>, you interested in bouncing some ideas around relating to this?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010002.html">12:58 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10002" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010000"></a>
+<h3 class="title">searchFeedr Pipes</h3>
+
+<p>A quickie post from a 5 minute hack - a generalisation of the deliSearch pipe so that it will take any feed and search the sites listed in the feed (a searchfeedr style search :-)</p>
+
+<p>Here it is: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=7oJmsIbS2xGu_WLkEpPZnA">searchfeedr Pipe</a>.<br />
+This pipe will search over all the sites that are listed in the supplied feed.</p>
+
+<p>Other <em>searchfeedr</em> pipes include:<br />
+<ul><li>the cloned  <a href="http://pipes.yahoo.com/pipes/iPBz8C242xGV47HKqGIyXQ/">deliSearch Pipe</a> (<a href="http://blogs.open.ac.uk/Maths/ajh59/009301.html">blogged here</a>) that searches the sites listed in a delicious feed when supplied with a delicious username/tag pair;</li><br />
+<li>the <a href="http://pipes.yahoo.com/pipes/zhmqsw_52xG4gUz8e_gC8A/">PageLinks search pipe</a>, that will scrape the links from a page with a particular URL and will limit the search to just those sites.</li><br />
+<li>search sites that <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_Mpu2d_S2xGLBwm_lfXiAA">link to a domain</a>, given its URL;</li><br />
+<li>search sites that are linked to <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=Qo6XlN_S2xGTBK0wjknRlg"><em>from</em> a domain</a>, given its URL. The linkto and linkfrom domain searches are via <a href="http://blogs.msdn.com/livesearch/archive/2006/10/16/search-macros-linkfromdomain.aspx">Live.com search</a>;</ul></p>
+
+<p>There's also this handy <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=iLUPNvq92xGeE5B7r8cPhQ">OPML searchfeedr style pipe</a> from <a href="http://www.chrislott.org/2007/02/16/custom-search-opml">Chris</a> that takes an OPML URL and passes the OPML feed through an OPML2RSS converter, then limits the search to sites contained in the resulting feed.</p>
+
+<p>The searchfeedr search engine at <a href="http://searchfeedr.com">searchfeedr.com</a> is currently cobbled together out of scrappy bits of code, but I'm hoping to rebuild it using Pipework. Here are <a href="">more than a few posts on searchfeedr</a> if you want to see how it evolved.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010000.html">10:44 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10000" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 14, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009993"></a>
+<h3 class="title">GrazrScript Generator Studio</h3>
+
+<p>As an exercise in using <a href="http://ouseful.open.ac.uk/stringle">Stringle</a> to rapidly collect together resources related to a particular theme, I've pulled several of my grazrScript generating tools together into a <a href="http://ouseful.open.ac.uk/grazrStudio">GrazrScript Studio</a> Stringle environment.</p>
+
+<p>The environment collects together examples of my own demo GrazrScript interfaces and GrazrScript generators, as well as a collection of third party best of breed GrazrScript interfaces (please mail me/leave a comment suggesting additions to this list).</p>
+
+<p>At the moment, there are grazrScript generators in there for generating:</p>
+
+<p>- custom Amazon search forms;<br />
+- delicious user/tag link browsing and search;<br />
+- *NEW* blog outlinks search (search sites that are linked to <em>from</em> a particular domain, as well as browsing the feed (and outlinks) from that domain;<br />
+- a generic grazrScript generator for a Yahoo Search Pipe.</p>
+
+<p>Best of breed examples currently include offerings from <a href="http://grazr.com/files/adam">Adam Green</a>, <a href="http://grazr.com/files/CleverClogs">Marjolein Hoekstra</a> and <a href="http://grazr.com/files/jameselee">James E. Lee</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">12:59 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9993" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 11, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009972"></a>
+<h3 class="title">Serial Web Feeds via Yahoo Pipes</h3>
+
+<p>Todd Slater over at <a href="http://idea.zanestate.edu/">Big IDEA</a> has just started developing a <a href="http://idea.zanestate.edu/archives/2007/03/serial-podcast-feed-generator/">podcast serialiser</a> (and <a href="http://idea.zanestate.edu/archives/2007/03/improved-serial-podcast-feed-generator/">here</a>):<br />
+<blockquote>What if an instructor wants to podcast (subscription model) audio files? He has a few options. He can tell students to subscribe to his blog and then post audio files there on a weekly basis. This is a great option for the first quarter, but what does he do in subsequent quarters? All of the previous posts will be "old" and new students won't see them when they subscribe to the blog in a subsequent quarter. What he needs is something that will update the RSS feed based on the quarter's start date and a determined update interval.</blockquote></p>
+
+<p>(Todd's app is developing apace, so it's worth checking hos blog for more recent posts, such as <a href="http://idea.zanestate.edu/archives/2007/03/podcast-feed-generator-getting-better/">this one</a>. I'm also with you on the abuse of the "podcast" term, Todd, and keep having to fight that battle here...).</p>
+
+<p>This has a lot in common with the ideas I've been working up for <a href="http://blogs.open.ac.uk/Maths/ajh59/009213.html">OpenLearn<em>_daily</em></a>, and has prompted me into a bit of a tinker today.</p>
+
+<p>The original plan was to subscribe to a feed with some user-specific info, like the time of subscription and the way in which they wanted the content delivered. From this info, and the current time stamp whenever the feed is polled, an appropriate number of feed items would be delivered to the user.</p>
+
+<p>Stephen Downes commented in a personal email (I think) about the resource requirements/server load for popular feeds and I've been in several minds about the best way to count of items whenever a personalised feed is polled....</p>
+
+<p>So, I've taken the easy way out, and rather than doing all the work myself (not much work in fact, but anyway....) I've handled the 'count the appropriate number of feed items' task over to <a href="http://pipes/yahoo.com">Yahoo Pipes</a>.</p>
+
+<p>This <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">Feed Serialiser Pipe</a> takes in a couple of arguments - a feed URL and a digit - and simply counts out the corresponding number of feed items.</p>
+
+<p>A form I've been doodling with over the last couple of weeks (and that <em>seriously</em> needs tidying!) provides the interface that allows the user to customise the delivery schedule and generates an appropriate, customised URL to subscribe to: <a href="http://ouseful.open.ac.uk/openlearndaily/feedCycle.php">Serialised feed subscription form</a>.</p>
+
+<p>The form lets you enter <em>any</em> feed URL (err, maybe....?;-) and a schedule according to which you'd like the feed items to be delivered. It then generates a URL for you to subscribe to which will deliver items as and when required. (At the moment, the items are delivered in narrative order, rather than reverse chronological order; when I get a chance, I'll add a switch that lets you select the ordering of your choice).</p>
+
+<p>Some logic located at the customised feed URL then works out how many items are required in the feed whenever it's polled and calls the Yahoo Pipe with the appropriate arguments.</p>
+
+<p>The server's still got work to do - quite a bit in fact, as it's acting as a <a href="http://developer.yahoo.com/javascript/howto-proxy.html#phpproxy">proxy</a> for the Yahoo Pipe feed and doesn't make use of cacheing (oops!) - but I'm hoping that as time goes by the Pipes folks offer more and more functionality and I can pass more and more of the logic over to them and hopefully end up with a purely Pipes based solution :-)</p>
+
+<p>(One thing I'd like to see in the Pipes toolbox, which should be simple, is  a 'reverse the order of items in a feed' block for items that have no timestamp. This isn't anywhere near as complex as the current Sort block, so any chance of it guys? [SOLVED, I think... just using SORT to display descending order on <em>pubdate</em> works (I think), even though there is no pubdate...The question now is - how do I put logic into the Pipe, so I can supply a user argument and reverse sort if a 'reverseOrder' option is set by a user]:-)</p>
+
+<p>Feel free to try the service out, and mail me - or comment - with any problems.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009972.html">04:36 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9972" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="009969"></a>
+<h3 class="title">Delicious2Opml Converter with optional deliSearch Tool</h3>
+
+<p>Checking my weekly TechCrunch stats (a couple more people blogging with links into <a href="http://ouseful.info">OUseful.Info</a> and I should break 400 subscribers on a 7-day average ;-) I came across a report of someone clicking through to a delicious2opml converter that I'd written some time ago, <em>and completely forgotten about</em>!</p>
+
+<p>With <a href="http://grazr.com/files/psychemedia">Grazr now hosting OPML files</a> (that you have to upload as a file from your desktop) the cut, paste and save as OPML route followed by the delicious2OPML utility maybe useful at last :-)</p>
+
+<p>At least - it may be useful now in revised form.</p>
+
+<p>Firstly, I've added a couple of heuristics that will try to identify RSS and OPML feeds that have been bookmarked to delicious, and add them to the generated OPML file using an appropriate outline type.</p>
+
+<p>Secondly, I've added the option to add a GrazrScript deliSearch form to the generated OPML. This form provides an interface to a <a href="http://blogs.open.ac.uk/Maths/ajh59/009301.html">deliSearch pipe on Yahoo</a> that will search over the domains listed in the feed generated from the supplied delicious username/tag combination.</p>
+
+<p>Here's the new version:  <a href="http://ouseful.open.ac.uk/blog/deli2opml2.html">Revised delicious2OPML generator (with optional deliSearch)</a>.</p>
+
+<p>You can see an example <a href="http://grazr.com/read/psychemedia/grazrDeliLinkSearch.opml">here</a>:</p>
+
+<div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?fview=o&ile=http://grazr.com/data/psychemedia/grazrDeliLinkSearch.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://grazr.com/data/psychemedia/grazrDeliLinkSearch.opml"></script></div>
+
+<p>(To see how the generated OPML adds value over simply piping a delicious RSS feed into Grazr (aside from the deliSearch feature), compare the above with <a href="http://grazr.com/gzpanel.html?theme=gloss_silver&file=http://del.icio.us/rss/psychemedia/opml+demo">this example</a>.)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009969.html">12:56 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9969" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 09, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009964"></a>
+<h3 class="title">The Firefox Stringle Configuration</h3>
+
+<p>One of the things I need to get around to doing is writing up the Stringle interface design pattern: OPML fed navigation sidebar, RSS fed toolbar, tabbed DHTML content area.</p>
+
+<p>As a step towards that, here's a recipe for demonstrating the pattern in a Firefox web-browser:<br />
+<ol><li>bookmark your navigation OPML file and configure it to 'Open in Sidebar' (you can find instructions <a href='http://eirepreneur.blogs.com/eirepreneur/2006/10/browser_based_c.html'>here</a>, where a pattern very similar to the Stringle pattern is also described); <a href='http://grazr.com'>Grazr</a> have justed started hosting OPML feeds on their site, so I'll post a couple of <a href='http://grazr.com/files/psychemedia'>exemplar feeds</a> in the next few days.</li><br />
+<li>save an RSS feed containing links to your applications as a <a href='http://www.mozilla.com/en-US/firefox/livebookmarks.html'>Live Bookmark</a>; you can launch all the tools contained in the feed into separate tabs by clicking on the live bookmark and selecting 'Open in tabs';</li></ol><br />
+When I get a chance, I will tweak the <a href='http://ouseful.open.ac.uk/stringle/stringleProfileSelect.php'>Stringle Profile Selector</a> page so that it explitly links out to the OPML and RSS files used in the configuration.</p>
+
+<p>PS As well as the free OPML hosting announcement, Grazr just announced a <a href='http://feedonomics.grazr.com/index.php/archives/90'>$1.5M round of financing</a> as well as adding Dan Bricklin (co-creator of VisiCalc) to the Board of Directors. Congrats, chaps :-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009964.html">10:21 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9964" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="009963"></a>
+<h3 class="title">Splashcast Learning Channel Demo</h3>
+
+<p>Having just posted a link to <a href="http://spashcast.net">Spashcast.net</a>, and idled about whether it would be an interesting way of delivering learning content, I thought I better do a quick demo to see how it feels.</p>
+
+<p>So here's a v v quick, rough and ready demo, cobbled together from scraps of content taken from an OpenLearn language course:</p>
+
+<p><embed src="http://web.splashcast.net/go/p/FDAQ2842MC" wmode="transparent" width="640" height="480" type="application/x-shockwave-flash" /></p>
+
+<p>The feeling is very much of a slideshow with slides corresponding to textual, audio or video content (the images don't seem to be working for me at the moment).</p>
+
+<p>When I get a chance I will try to put a proper demo together, maybe including the Splashcast content as the homepage for a Stringle app?</p>
+
+<p>Just in passing, on the topic of educational content packages pulled together from open content material, it's worth checking out this post on <a href="http://opencontent.org/blog/archives/312">Educational Remixes</a>...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009963.html">02:32 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9963" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 08, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009962"></a>
+<h3 class="title">What's on the Web RadiOU?</h3>
+
+<p>... or should that be <em>Web tvOU</em> (<em>tee - voo</em>? <em>tee - vo - you</em> (though that's a bit <em>too</em> like <a href="http://tivo.com">TiVo</a> maybe?)).</p>
+
+<p><a href="http://www.currybet.net/">Martin Belam/currybet dot net</a> posted last week about the <a href="http://feeds.feedburner.com/~r/currybet/~3/98356959/playing_with_the_virgin_radio.php">Virgin Radio Player Beta</a> (we're still waiting for the <a href="http://www.bbc.co.uk/webwise/askbruce/articles/bbc.co.uk/imp_1.shtml">BBC Player</a> too, of course):<br />
+<blockquote>Apart from having the streaming area and radio controls, the player features content areas as well. There is an encouragement to interact with the show on air via email, text and the telephone. It also offers integrated music news headlines, and the opportunity to watch videos as well - yet another example of the internet enabling radio and radio stations to break out of their spectrum scarcity driven audio-only constraints.</blockquote></p>
+
+<p>The reason I think the Virgin player is worth watching is in part because of the <em>other</em> <a href="http://www.virginmedia.com/">Virgin Media</a> play at the moment that is focusing on the four way phone/mobile/broadband/TV approach. As I understand it, Virgin Radio is independent of the Virgin Media group, but the cross-branding opportunities surely must be there? </p>
+
+<p>In a similar vein to the Virgin radio player, I also just discovered a rather neat <a href="http://www.apple.com/downloads/dashboard/radio_podcasts/bbclistenagain.html">BBC Listen Again</a> Dashboard widget*. This widget scrapes BBC 'listen again' pages and then provides links to the streamed audio. After clicking on a program link, the audio stream is played via an embedded Real Audio player.</p>
+
+<p><img alt="listenAgainWidget.png" src="http://blogs.open.ac.uk/Maths/ajh59/listenAgainWidget.png" width="309" height="343" border="0" /></p>
+
+<p>[* Hmm - are there any dashboard2google widget converters out there? Or do the current batch of converters like <a href="http://amnesty.mesadynamics.com/Products.html">Amnesty converter</a> just port stuff <em>into</em> the OS/X Dashboard? The Dashboard increasingly seems like a sink for widgets from other platforms... which is actually a :-(, IMHO]</p>
+
+<p>The 'BBC Listen Again' widget is particularly interesting from an OU perspective because of the large number of co-productions with the BBC that we have been  - and continue to be - involved with. For whatever reason, simple (one-click) <em>listen again</em> links to co-pro broadcasts do not tend to be provided from the Open2.net site though, although with a little mashery (as demonstrated by the BBC Listen Again widget) this is easily rectified...;-)</p>
+
+<p>When I first saw the BBC Listen Again widget, my first thought was 'excellent - we can use this to deliver a set of links to a series of programmes that could add value to an OU course directly to a student's desktop'; secondly, that we could distribute 'promotional widgets' containing samples of different OU/BBC programmes to <em>potential</em> students, as well as to the broader categories of informal, self-motivated learners and general interest audiences; thirdly, that BBC programme bundles could be provided to add value to/augment OpenLearn course units; and finally, that maybe we could start one or more subject (faculty?) related OU channels delivered via customised widgets.</p>
+
+<p>Whether or not the BBC would be <em>happy</em> for this sort of reuse (or at least, this form of republication of links to publicly available content) is moot. For example, all six programmes from the recently broadcast <a href="http://www.bbc.co.uk/radio4/clickon/">Click On</a> series are currently available as 'listen again' content. However, the links are <em>not</em> made available in a simple machine readable format, such as RSS (for that, you have to look here: <a href="http://del.icio.us/rss/psychemedia/clickon+ram">Listen Again to <em>Click On</em></a>), which maybe suggests that the Beeb want people to access the content only via the programme web page?</p>
+
+<p>Anyway, I've started tinkering with the Listen Again widget so that it can consume RSS feeds and extract programme info/links from them. When I get it working, this means I'll be able to use delicious, for example, to compile BBC playlists for playing through the widget. (The availability of the feed also means it will be trivial to access the content in <a href="http://ouseful.open.ac.uk/stringle2.php">Stringle</a> if (when...?!) the Grazr folks get Real Audio player embedding sorted out!;-)</p>
+
+<p>On the topic of custom channels, I guess I should also mention here last week's announcement of a <a href="http://news.bbc.co.uk/1/hi/business/6411017.stm">BBC and YouTube Deal</a> which will see three BBC channels appear on YouTube:<br />
+<ul><li><em>BBC</em> - an advertising free (at least, free of non-BBC ads!) entertainment channel featuring programme trailers and added-value shorts for prime BBC broadcasts;</li><li><em>BBC Worldwide</em> - advertising supported self-contained shorts (3-6 minutes long) based on BBC archival material;</li><li><em>BBC News</em> - a news channel featuring 30 or so news clips per day. [This immediately brings to mind <a href="http://kmi.open.ac.uk/people/index.cfm?id=163">Stefan Ruger</a>'s <a href="http://kmi.open.ac.uk/technologies/anses/">ANSES - Automatic News Summarization and Extraction System</a> and <a href="http://kmi.open.ac.uk/technologies/newsroom/">Newsroom - recording, segmenting and indexing news for you to browse, search, find, read, listen and watch</a> projects currently underway in KMi at the moment. (I really need to do a crit of these projects in the possible context of OU archival material...)]</li></ul></p>
+
+<p>Discussions on how to use BBC/OU content in the context of OpenLearn, as well as more generally in the context of the OU's broadcasting strategy, are whizzing around here at the moment and are looking at issues closely related to the above.</p>
+
+<p>I know one or two people in the OU who are keen to see us getting out legacy content out there even more aggressively than we already are with OpenLearn, so it'll be interesting to see if we pick up on the BBC's lead and start to explore the possiblitiy of an OU YouTube channel, in the same way that we presumably followed the BBC lead in signing up to the <a href="http://open2.net/creativearchive">Creative Archive project</a>.</p>
+
+<p>In the same breath, it maybe also be worth our while considering launching an audio channel on <a href="http://www.apple.com/education/products/ipod/itunes_u.html">iTunesU</a> (the BBC already has channels on iTunes - for example, and several US educational institutions have iTunes U channels).</p>
+
+<p><img alt="itunesBBC.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/itunesBBC.jpg" width="605" height="538" border="0" /></p>
+
+<p>And then of course are the plethora of free digital channels, whether delivered by satellite and/or cable, as well (increasingly) free and subscription on-demand broadband video delivery systems; I now have two broadband on-demand video services installed on my laptop, for example: the free (?) <a href="http://joost.com">Joost</a> (I got my beta invite last week :-) and the largely pay-on-demand based <a href="http://www.channel4.com/4od/">4od</a>.</p>
+
+<p>What is, I think, hard to understand is why the OU - the original 'University of the Air' (and arguably the UK's 'public service educator'?!), with its significant archive of broadcast (and not quite broadcast) quality content, is not <em>obviously</em> making forays into these new areas of online broadcast, and if anything is lagging behind the more adventurous institutions in the sector.</p>
+
+<p>Rights issues act against us, I suppose - I'd imagine that the original rights negotiations did not anticipate the emergence of the web and open content licensing.</p>
+
+<p>On the matter of channels, one of the interesting questions that I think the OpenLearn project has posed is what sort of environment or delivery channel is appropriate for the delivery of open content licensed educational materials to informal and semi-formal learners.</p>
+
+<p>Looking at Martin Belam's review of the Virgin Radio Player, as well as the more limited audio specific offerings of the Listen Again widget, I wonder what sort of role the widget approach can play as part of a <em>platform</em> for the ongoing delivery of subject/topic specific <em>learning channels</em> as well as a self-contained one-shot content giveaways?</p>
+
+<p>In the OpenLearn context, an email thread on related matters with <a href="http://kmi.open.ac.uk/people/sbs/">Simon Buckingham Shum</a> led to him coining (to my hearing at least) the idea of <em>learning widgets</em>.</p>
+
+<p>Although the nature of <em>learning widgets</em> was not really explored at the time, they could perhaps be thought of as micro-courses bundled up in a multimedia serving widget - like a self-contained <em>content widgetLE</em>, perhaps?!</p>
+
+<p>(As an aside to the thread, <a href="http://kmi.open.ac.uk/people/marc/">Marc Eisenstadt</a> suggested I might try to develop a role as a <em>learning widget evangelist</em> (cf. the role of <a href="http://aws.typepad.com/aws/2006/01/jobs_at_amazon_.html">technology evangelist</a>), which also appeals!;-)</p>
+
+<p>To get an idea of how a multimedia learning widget might work, consider <a href="http://splashcast.net">SplashCast</a>. Splashcast allows you to create - and deliver - multimedia programmes via a browser widget. Here's one, for example, from TEDTalks (you'll probably need to visit the actual blog post page to see this - it's unlikely to be displayed in a feed reader):</p>
+
+<p><embed src=http://web.splashcast.net/go/p/AKAA1172DK" wmode="Transparent" width="400" height="300" type="application/x-shockwave-flash" /></p>
+
+<p>There's a broadcast review meeting on at the OU next week. I wonder if anyone will bring up Splashcast? ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009962.html">09:42 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9962" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 03, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009937"></a>
+<h3 class="title">Click Powered Predictions...?</h3>
+
+<p>A week or two ago I posted about the possibility of <a href="http://blogs.open.ac.uk/Maths/ajh59/009726.html">Search Powered Predictions</a> in which I idled about whether might be able to make use of users' search behaviour to try and predict potentially popular new courses.</p>
+
+<p>Today, I came across <a href="http://www.spotplex.com/">Spotplex</a>, which "provides internet users with real-time ranking of blog articles based on actual impression count".</p>
+
+<p>Apparently, it works like this:<br />
+<blockquote>1. A blogger inserts a Spotplex code into their blog.<br />
+2. Whenever an article in the blog is read, the code reports Spotplex server that the article is read.<br />
+3. The article shows up on Spotplex and the view counter reflects the change.</blockquote></p>
+
+<p>Wouldn't it be good if we had an internal version of this running for course pages listed in the <a href="http://www3.open.ac.uk/courses/">OU Course catalogue</a>?</p>
+
+<p>Or how about using page reads as implicit votes in a prediction market for the number of students likely to register on a particular course...</p>
+
+<p>...because apparently students are leaving it later and later to register on our courses (I wonder if they are holding out for sale prices on the course fees? Although I guess if they're Tesco punters they could always use <a href="http://blogs.open.ac.uk/Maths/ajh59/009219.html">Tesco Clubcard vouchers as part payment for their OU course fees</a>?</p>
+
+<p>With the post of <a href="http://www3.open.ac.uk/employment/job-details.asp?id=2902">Director, Learning & Teaching Solutions (LTS)</a> currently being advertised (<em>Salary negotiable</em>, apparently), I wonder just how different things would be internally if a 2.0 type was appointed?<br />
+<blockquote>Employing 490 editors, graphic designers, web designers, audio-visual specialists and software developers, our Learning and Teaching Solutions is responsible for the production and delivery of all our learning materials. Under your direction, the unit will bring to life the creations of our academic specialists, delivering world class print material, CD ROMs, DVDs and web pages, plus cutting-edge Blogs, Wikis, ePortfolios and eAssessment engines to power our Virtual Learning Environment. This will involve constant liaison with academic Faculties and Schools, the Student Services division, the Library and our research institutes to keep us at the forefront of best practice.</p>
+
+<p>To take on this exceptionally influential role, you will require considerable experience of producing distance learning media and deep understanding of new and evolving educational technologies. Joining us at a time of profound change, you will apply your imagination and expertise to shape the educational experiences of thousands of students around the world – and build on our unrivalled reputation.</blockquote></p>
+
+<p>As ever, the above is nothing to do with me (even more so than usual given the relative seniority of the post), but if you do apply etc etc <a href="http://blogs.open.ac.uk/Maths/ajh59/009723.html">normal rules apply</a> (except - as a finders fee - I'd also like 10% of the negotiated salary to buy me a developer for a week or two of agile development time (?!) ... ;-0)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009937.html">11:31 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9937" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 02, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009925"></a>
+<h3 class="title">Stringle Gets a Brush of Paint...</h3>
+
+<p>I've started doodling with <a href="http://ouseful.open.ac.uk/stringle2.php">Stringle</a> so as this blog is the closest thing I have to a lab book, thought I'd better make a catch up post.</p>
+
+<p>Stringle has had a lick of paint, as I start to move the styling over to <a href="http://developer.yahoo.com/yui/">YUI CSS components</a>:</p>
+
+<p><img alt="stringle2demo.png" src="http://blogs.open.ac.uk/Maths/ajh59/stringle2demo.png" width="880" height="579" border="0" /></p>
+
+<p>I've started trying to collect tools together that work within the Stringle iframe (though there are a couple of rogues in the list I need to pull out). You can see the list of tools I've collected so far on the <a href="http://ouseful.open.ac.uk/stringle/stringleToolSelect.php">StringLE Tool Selector</a> page. I'm still working on the categories, as well as annotating the tools I've got (and continually collecting more). If you have suggestions for other tools, drop me a line.</p>
+
+<p>There is also a list of Stringle profiles/configurations on the <a href="http://ouseful.open.ac.uk/stringle/stringleProfileSelect.php">StringLE Profile Selector</a> page. The profiles on this page are in various states of completion/disrepair (in fact, it's probably fair to say that they are all placeholder prfoiles at the moment to a greater or lesser extent), but they'll all be tuned over the next 3-4 weeks.</p>
+
+<p>Stringle profiles, tool configurations and OPML navigation feeds are all bookmarkable via delicious, and reusable within delicious if you use the correct tagging convention: <em>stringle:tool</em> for a tool, <em>stringle:profile</em> for a profile. In addition, a <em>stringle:ToolName</em> tag alongside a <em>stringle:tool</em> tag will cause Stingle to display the tool in the top, tools menu bar with the title <em>ToolName</em>.</p>
+
+<p>The tools page both pull in lists of links from delicious and then use dynamic Javascript/CSS to toggle the various views, so I guess they're AJAX pages? ;-) As ever, I'm only trying the tools out in Firefox 2.0, so bad things may happen in other browsers (drop me a line and bug report if so, along with a screenshot and ideally a fix, and I'll see if I can come up with a patch).</p>
+
+<p>Usability on the tool and profile selectors is still off mark, as it is within Stringle too, but I've started thinking about that... (It surprised me how much more reliable the environment felt when I added the simple styling, even though none of the functionality changed!)</p>
+
+<p>One thing I'm looking at doing is adopting a convention for the similar tagging of profiles, tools and naming of <a href="http://www.opmlmanager.com">OPML Manager</a> navigation feeds. This will enable me to shortcut the set up of a Stringle profile.</p>
+
+<p>I'm also looking at reusable structures for the OPML navigation feed. An emerging model/demo can be seen in the <a href="http://ouseful.open.ac.uk/stringle2.php?t=psychemedia/stringleConfig&s=http://www.open2.net/climatechange/&o=http://www.opmlmanager.com/opml/stringleClimateChangeDemo.opml">stringleClimateChangeDemo</a> (this works in FF on a Mac - not sure about elsewhere. Mail me if it feels/looks broken to you... ;-)</p>
+
+<p><img alt="stringle2Nav.png" src="http://blogs.open.ac.uk/Maths/ajh59/stringle2Nav.png" width="210" height="218" border="0" /></p>
+
+<p>One thing I hope to explore is a 'keyword/search term semantic auto-configuration' route that will generate a canned OPML file according to a common structure when supplied with key terms to act as a starting point for further customisation of that profile on a particular topic. Think of this as a bit like an automatically generated starting point for topic based portal.</p>
+
+<p>In a recent post on <a href="http://www.cetis.ac.uk/members/scott/blogview?entry=20070226132022">Pipes and HyperCard: Interactive vs Connected Media</a>, Scott Wilson commented:<br />
+<blockquote>...<strong>the nature of content itself is changing</strong>. HyperCard, Flash, and the like are indeed tools of interactive media. However, interactive multimedia is no longer in fashion (who needs a "next page" button in a piece of content when we have ubiquitous hypertext? Why embed the movie in Flash when I can just link to YouTube?)</p>
+
+<p>Instead we have entered an era of connected media. Connected media does not contain interaction; instead content items are nodes in a network of connections that are the focus of interaction. The content is inside-out. The hot content today is not interactive - Flickr/Photobucket, YouTube, iTunes, RSS feeds all feature non-interactive content, yet the content is highly connected via layers of interlinked metadata (del.icio.us, technorati, recommendations, hyperlinks, comments...)</blockquote></p>
+
+<p>One thing I'm exploring with Stringle is how we can pull out appropriate,  and small, related content networks and use them to support resource based learning around a topic at the centre of that network.</p>
+
+<p>Once again, I think something like the circular diagram posted within John Breslin's <a href="http://www.johnbreslin.com/blog/2007/03/01/linking-personal-posted-content-across-communities/">Linking personal posted content across communities</a> post could be useful to help me clarify this point/explore it further.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009925.html">06:39 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9925" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="009922"></a>
+<h3 class="title">Personalised Search</h3>
+
+<p>Several weeks ago now, Google started pushing personalised search <em>by default</em> to holders of Google accounts: <br />
+<blockquote>We have two main ways of personalizing your Google experience. First, you can customize products and services like the Google Personalized Homepage. Personalizing your homepage gives you the at-a-glance information that you care about - such as your latest Gmail messages, news headlines, or to-do list = right at your fingertips, just the way you want it.</p>
+
+<p>Second, we offer automatic personalization through things like personalized search and  recommendations. Our goal with these types of technologies is to make your Google search experience better based on what we know about your preferences, without you having to do<br />
+any extra work.</p>
+
+<p>Today, we're taking another step toward making personalization more available to you by combining these two into a single signed-in experience. Now, when you're signed in, you'll have access to a personalized Google - one that combines personalized search results and a<br />
+personalized homepage.</p>
+
+<p>Keep in mind that personalization is subtle - at first you may not notice any difference. But  over time, as the search engine learns your preferences, you'll see it. For example, I (Sep) am an avid Miami Dolphins fan (no joke). Searching for [dolphins] gives me info about my favorite football team, while a marine biologist colleague gets more information about her salt-water friends.</blockquote><em><Ref: <a href="http://googleblog.blogspot.com/2007/02/personally-speaking.html">Official Google Blog</a></em></p>
+
+<p>Danny Sullivan did the first <a href="http://searchengineland.com/070202-224617.php">critique of the new Google personalised search</a> that I saw (no surprise there, then! ;-) which I heartily recommend if this service is new to you and here's another related discussion about <a href="http://searchengineland.com/070216-163236.php">customised search engines</a> for a broader view.</p>
+
+<p>Something I haven't seen raised much, if at all (or maybe I just missed it?) in either the library or e-learning blogs I follow are the implications for education when a large number of people start to regularly use personalised search services.</p>
+
+<p>One of the things I've been thinking around for the last year or so is how we can make better use of search and other content/resource discovery strategies for: a) identifying content we can reuse third party materials in our own course materials; b) automatically pulling relevant content into course materials in a 'live' way; c) helping students discover appropriate resources for themselves in effective, efficient and satisfying ways.</p>
+
+<p>For the purposes of the current post (the rise of personalised search), this third factor - helping out students search more effectively for resources -  is likely to be affected if consistent Google 'ground truth' results are no longer necessarily what everybody sees if instead they are all receiving personalised/tuned results.</p>
+
+<p>Using Google <em>without signing in</em> will return the 'ground truth' organic search results for a particular Google domain, at least for the foreseeable future, but the presence of effectively persistent identifying cookies on user's personal machines that even there is the opportunity to serve customised search results, as well as personalised adverts.</p>
+
+<p>Conceptually, too, will the rise of personalisation affect the way we regard search engines that offer similar results. One of Google's great selling points has been the quality and persistence (consistency) of the results it returns. </p>
+
+<p>So much so, in fact, that many users use search engines for navigation, as well as the basis of recommendations to other people for how to find a particular site ("just google XYZ and it'll be in one of the top three or four results").</p>
+
+<p>Of course, as educators, we want to develop information skills that enable people to use a wider range of search tools that focus, for example, on academic and commercial content collections (as <a href="http://ouseful.open.ac.uk/tu120">Beyond Google</a> does, in part).</p>
+
+<p>But we also need to recognise the fact that, at the current time, most of the people, most of the time, use Google (or one of the other major search engines; but predominantly, I think, Google, if my web stats are anything to go by).</p>
+
+<p>Another aspect of Google's personalised search implementation (as I understand it) is that profiling information gleaned from Google Desktop Search and GMail (where available) can be used to further customise Google Personalised Search results.</p>
+
+<p>Academic customisation is presumably a possibility too for published academics. If for example my Google credentials can be correlated with any published papers I have written (along with papers that I have cited - or that have cited me) then this information can be used in turn to personalise results further on academic searches (such as academic/scholar searches or maybe even the book search).</p>
+
+<p>This is the flipside of expert search, where for example I search for a person who is expert on a topic and use their published output as part of the ranking mechanism.</p>
+
+<p>["Searchers like me" - useful for the enterprise?]</p>
+
+<p>On a final note, I posted some days ago about <a href="http://blogs.open.ac.uk/Maths/ajh59/009692.html">discovered storage</a>, online storage I get 'for free' within any online applications I use. [Here's a link to a graphic the likes of which I wished I'd drawn up to illustrate that post: <a href="http://www.johnbreslin.com/blog/2007/03/01/linking-personal-posted-content-across-communities/">check it out</a>] It strikes me that personal search histories could be seen to represent pre- or auto-populated hidden storage; that is, storage space that is accessible to me on a 'read' basis, and only indirectly on a 'write' basis (that is, whenever I perform a search/click-through to a site from a link on a Google search results page).</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009922.html">12:40 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9922" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 01, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009921"></a>
+<h3 class="title">OU Web Intelligence</h3>
+
+<p>Clearing out my laptop bag this afternoon on my way back from an HE Academy event at <a href="http://local.live.com/?v=2&cid=250F429081C5ABBB!466">Microsoft in London</a> (where I took great pleasure in: a) using my Mac; and b) watching a Vista laptop repeatedly fail to play a Flash movie/crash IE7 ;-), I came across an old (Sept-Oct, 2006) and unread edition of Open House, the OU staff newspaper. There were a couple of things in there that particularly caught my attention (over and above the VC's letter where she praised residential schools, which it's worth pointing are now few and far between...)</p>
+
+<p>First off, a short article mentioning the appointment of a strategic search manager (Vicki Stirling) who was appointed to "oversee web performance figures using tracking software", as well as [paraphrasing] "giving serious attention to listings in search engines such as Google".</p>
+
+<p>Secondly, an article called "Thinking outside the box", which I shall repeat here in full:<br />
+<blockquote>HOW will we decide what courses to offer in future? How can we keep abreast of market trends and look for potential opportunities?<br />
+Traditionally, the OU has used data from HESA, the Higher Education Statistics Agency, which gives information on market size and competitors. But this has its limitations and only offers statistics on the HE market.<br />
+To get a greater understanding of popular trends and areas of growing interest, the product marketing team has subscribed to two new research sources. BARB (Broadcasters' Audience Research Board) collects and analyses data from UK TV audiences; and Nielsen BookScan [which] tracks over 90 per cent of retail and internet book sales in the UK, analysing buying trends and subject categories.<br />
+Aready we have data that confirms our analysis that some traditional subject areas are in popular decline; but other subjects such as criminolgy, parenting and genealogy are growing in popularity. We'll be using this data to help the university look at developments for its curriculum for the future.</blockquote></p>
+
+<p>Good stuff, eh? Sept-Oct 2006, that was.</p>
+
+<p>Last month I gave a talk (mentioned in this post: <a href="http://blogs.open.ac.uk/Maths/ajh59/009231.html">Embracing Hype</a>) on the topic of 'Harnessing the Future', in which I idled on various technologies that are on the up, and mentioned some of data the sources we could tap into to try and help us identify upcoming curriculum areas.</p>
+
+<p><object type="application/x-shockwave-flash" data="https://s3.amazonaws.com:443/slideshare/ssplayer.swf?id=19968&doc=harnessing-new-technologies-1592" width="425" height="348"><param name="movie" value="https://s3.amazonaws.com:443/slideshare/ssplayer.swf?id=19968&doc=harnessing-new-technologies-1592" /></object></p>
+
+<p>In particular, information on search terms used by visitors on search engines that led them to the OU site; and Nielsen BookScan data (as visualised by O'Reilly Research).</p>
+
+<p>BOTH of these sources of information were new to pretty much everyone in attendance (academic representatives of several Technology departments as well as the Computing department).</p>
+
+<p>Now bear in mind that one of the points of the meeting that day was to try and identify future curriculum areas; and that many of the people in attendance were/are active in developing our curricula/degree programmes, as well as individual courses.</p>
+
+<p><em>HOW will we decide what courses to offer in future? How can we keep abreast of market trends and look for potential opportunities?</em></p>
+
+<p>You tell me... Right hand, meet left hand. Left hand, go figure...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009921.html">10:51 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9921" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

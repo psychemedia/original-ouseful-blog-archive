@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>delisearch - proof of concept</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link type="text/css" rel="stylesheet" href="monitorThis.css" />
+
+</head>
+<body>
+<div id="page">
+  <h1>del.icio.us Reading Lists</h1>
+
+  <p>This simple generator will create a URL for a Del.icio.us OPML Reading List, 
+    using a technique suggested by <a href="http://dannyayers.com/archives/2006/02/07/delicious-reading-lists/">Danny 
+    Ayers</a> that I found via Johnt at <a href="http://libraryclips.blogsome.com/2006/02/24/create-reading-lists-in-delicious/">Library 
+    Clips</a>.</p>
+  <p>Just put in your del.icio.us user name and a tag (or set of tags +'d together) 
+    that are associated with bookmarked <em>RSS feed URLs</em>, (not bookmarked 
+    HTML pages...).</p>
+  <fieldset><legend>enter
+search information</legend>
+<form name="dataForm" action="" onsubmit="deliOPML(); return false;">
+
+  <table border='0'>
+ <tr><td><label for="usrUser">Delicious User<br />(required): </label></td><td><input style="width: 200px;"
+ id="usrUser" type="text">
+          (e.g. danja)</td>
+      </tr>
+
+ <tr><td><label for="usrTag">Delicious Tag: </label></td><td><input style="width: 200px;"
+ id="usrTag" type="text">
+          (e.g. readinglist+tech)</td>
+      </tr>
+</table>
+<p>
+      <input value="generate Reading List" class="but" type="submit">
+    </p>
+</form>
+</fieldset>
+
+  <p>Here is your URL: <span id='output'></span></p>
+
+  <p><small>Page layout based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a></small></p>
+</div>
+
+<script type="text/javascript">
+
+function getUsrTagPath(){
+ var usrTagPath;
+ var user= document.getElementById('usrUser').value; 
+ var tag=document.getElementById('usrTag').value; 
+ if (user!='') {
+  user=user.split(' ');
+  if (user[0]!='') {
+   usrTagPath=user[0];
+   if (tag!='') {
+    tag=tag.replace ( / /g, '+' );
+    usrTagPath+='/'+tag;
+   }
+  }
+ } else {
+   usrTagPath='danja';
+   if (tag!='') {
+    tag=tag.replace ( / /g, '+' );
+    usrTagPath+='/'+tag;
+   }
+ }
+ return encodeURIComponent(usrTagPath);
+}
+
+function deliOPML(){
+ var label=getUsrTagPath();
+ var output = document.getElementById('output');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ 
+ displayNewURL();
+}
+
+function loadURL(){
+ var myURL=generateNewURL();
+ window.location=myURL;
+}
+
+
+function displayNewURL() {
+ var link = document.createElement('a');
+ var label=getUsrTagPath();
+ var output = document.getElementById('output');
+ var myURL=generateNewURL();
+
+ link.setAttribute('href', myURL); link.setAttribute('id','myURL');
+ var linkTxt=document.createTextNode('Here is your del.icio.us OPML Reading List based on '+label);
+ link.appendChild(linkTxt);
+ output.appendChild(link); 
+}
+
+function generateNewURL(){
+ var searchString=getUsrTagPath();
+ //alert(searchString);
+// var myURL="http://www.w3.org/2000/06/webdata/xslt?xslfile=http%3A%2F%2Fpragmatron.org%2Fxslt%2Fdelicious-to-opml.xsl&xmlfile=http%3A%2F%2Fdel.icio.us%2Frss%2F"+searchString+"&transform=Submit";
+ var myURL="http://www.w3.org/2000/06/webdata/xslt?xslfile=http%3A%2F%2Fpragmatron.org%2Fxslt%2Fdelicious-to-opml.xsl&xmlfile=http%3A%2F%2Fdel.icio.us%2Frss%2F"+searchString+"&transform=Submit";
+ return myURL;
+ }
+</script>
+</body>
+</html>

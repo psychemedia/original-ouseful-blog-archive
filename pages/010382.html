@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: An Institutional Dashboard Using Pageflakes</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010376.html" title="OU Bloggers - At a Glance" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010394.html" title="Google Gadgets - RSS Feed Powered YouTube Playlist Player" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010376.html">&laquo; OU Bloggers - At a Glance</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010394.html">Google Gadgets - RSS Feed Powered YouTube Playlist Player &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 07, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">An Institutional Dashboard Using Pageflakes</h3>
+
+<p>In the <a href="http://blogs.open.ac.uk/Maths/ajh59/010376.html">previous post</a>, I described a Pageflakes tab that publishes feeds from a variety of OU bloggers who blog about OU related matters. This page is one of a set of shared Pageflakes tabs I popped up some time ago as a pain-free redesign of the <a href="http://ouseful.open.ac.uk">OUseful homepage</a>*. It strikes me these tabs actually represent a basic, example pattern for an institutional information/news dashboard, so here's a brief explanation of how the page was put together.</p>
+
+<p>Firstly - let's look at the setup. I'm actually sharing four tabs: <em>OUseful</em>, <em>OUt There</em>, <em>OU in the News</em> and the aforementioned <em>OU Bloggers</em>. Each of these tabs displays several panels that contain links to web content, including news stories, blog posts, OU press releases and calendar items.</p>
+
+<p>Each panel is loaded <em>live</em> whenever you load the page. This means that when you visit the page, you'll be presented with <em>current</em> (most recent) content, updated automatically on your behalf.</p>
+
+<p>By scanning just these four tabs, you can quickly review live content from thirteen blogs, four saved news searches, four saved social media searches, three institutional news feeds and a calendar feed; that's the equivalent of visiting twenty five different webpages from almost twenty websites in one go...</p>
+
+<p><strong>OUseful</strong> <em>ego page</em></p>
+
+<p>The <em>first</em> tab (<em>OUseful</em>) is largely a personal (ego) page, although it also relays events from the <a href="http://ouseful.open.ac.uk/calendar">OUseful calendar</a>, in which I collect dates of OU talks and events likely to be of interest to OUseful.info readers.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073025135594261298"><img src="http://lh4.google.com/image/tony.hirst/RmcBe5e5SzI/AAAAAAAAADo/D7zfqTImG94/s800/ousefulPageflakesTab1.png" style="border:0" /></a></p>
+
+<p>In the left hand column is an "About" tab that contains links to the 'major' OUseful properties. (I really do need to add some "About" information to this tab!). The <em>Interesting Links</em> are piped in from delicious. Most social bookmarking sites provide feeds for resources tagged by a particular use in a particular way, which means you can run several separate bookmarking panels - each with their own flavour of content - from a single social bookmarking account. (Of course, you can also create panels that display feeds from other people's social bookmark accounts).. There is also a Grazr widget that embeds a search over OpenLearn materials - search results appear in the widget itself (fed from an RSS feed obtained by scraping the OU search engine resutls page with Dapper).</p>
+
+<p>In the centre column is a list of links to the major OUseful sites (again...hmmm - I really need to fix that "About" tab...), a list of the presentations I have uploaded to Slideshare, and a list of my H2O playlists. As and when I start uploading to content to Scribd, I'll probably add a tab of uploaded/shared documents to this column too. </p>
+
+<p>In the right hand column is a feed from my blog, <a href="http://ouseful.info">OUseful.info</a>. The calendar panel takes in a <a href="http://ouseful.open.ac.uk/calendar/">feed from the OUseful calendar</a>, which is actually a public Google Calendar showing upcoming events likely to be of interest to internal <em>OUseful.info</em> readers.. If you run a Google Calendar, it's <a href="http://www.google.com/support/calendar/bin/answer.py?answer=37648">easy enough to find the feed</a>.</p>
+
+<p>Although this first tab is largely feeding ego-related content, the blend of resources does represent a pattern of a sort: <em>About</em> info; a selection of OUseful links and favourite links; links to my uploaded, shared content; 'informal' or 'grass roots' news from my <em>blog</em> feed (in the general case, this could be an aggregated feed from OU bloggers, a feed from the OU Facebook network, for example); and a <em>calendar/events</em> feed.</p>
+
+<p><strong>OUt There</strong> News Feeds<br />
+ <br />
+The <em>second tab</em> (<em>OUt There</em>) contains panels fed by public OU feeds. The aim of this tab is to provide a quick scan of information that the OU is syndicating for public consumption:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073025127004326690"><img src="http://lh6.google.com/image/tony.hirst/RmcBeZe5SyI/AAAAAAAAADg/JFnKaoz6xAA/s800/ousefulPageflakesTab2.png" style="border:0" /></a></p>
+
+<p>In the left hand column is a feed from Sesame, the OU community newspaper. This feed provides headline stories from the <a href="http://www3.open.ac.uk/sesame/">Sesame</a> website.</p>
+
+<p>In the centre column is a panel that displays headlines from the latest <a href="http://www3.open.ac.uk/media/">OU press releases</a>. </p>
+
+<p>In the right hand column is a feed of recent job vacancies. One thing I was considering was to filter the jobs feed (probably using a <a href="http://pipes.yahoo.com">Yahoo! Pipe</a>) so that it only passed jobs likely to be of interest to OUseful readers (e.g. jobs in AACS, the Library, LTS, KMi, as well as wider posts relating to elearning, search, and so on). At the moment, though, the jobs feed is just taken directly from the <a href="http://www.open.ac.uk/employment">OU recruitment website</a>.</p>
+
+<p>The <a href="http://open2.net">Open2.net</a> web team are currently experimenting with BBC/OU broadcast schedule feeds, and as soon as these are officially published I'll pass them through to a panel on the <em>OUt There</em> tab.</p>
+
+<p><strong>OU in the News</strong></p>
+
+<p>The <em>third</em> tab (<em>OU in the News</em>) relays headlines from a variety of news search engines, as well as a blog search and some other social media site searches. The idea behind this tab is to provide an overview of news stories and blogosphere stories relating to the OU. At the moment, all the searches use the same search query term, the phrase <em>"Open University</em> (or, where a tag is required, the tag <em>openuniversity</em>): </p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073025118414392082"><img src="http://lh4.google.com/image/tony.hirst/RmcBd5e5SxI/AAAAAAAAADY/lN9gHXMj3o8/s800/ousefulPageflakesTab3.png" style="border:0" /></a></p>
+
+<p>In the left hand column, the tab displays the top news stories in the UK as returned by Google news (this query uses the <em>location:uk</em> search limit). The panel displays a large number of results under the assumption that OU news stories are most likely to be reported by UK local and national media. On the to do list is a mapped representation of this feed (in which stories would be plotted at appropriate locations on a Google map).</p>
+
+<p>In the centre column are searches on the Google, Yahoo and Microsoft Live news sites. As no search limits are applied to these searches, results will, therefore, include international news stories.</p>
+
+<p>In the right hand column are several searches over social media: a search over YouTube movies where the OU is mentioned (this is actually a domain limited search using Live search, although a tag based feed retrieval might also be appropriate?); a search over blogs using Google blogsearch (I should perhaps also add in a Technorati search here?); and two tag based feeds pulled in from delicious - one on popular links tagged "openuniversity", and the other the most recent links with that tag.</p>
+
+<p>Arguably, I could set up panels for (ar another tab for) "standard web search" searches, to provide an at a glance view of what users searching for "open university" on the Google, Yahoo or Microsoft search properties would see if they made that search. However, unlike the news search, these links are unlikely to change much each time you visit the page.</p>
+
+<p><strong>OU Bloggers</strong></p>
+
+<p>The <em>fourth</em> tab (<em>OU Bloggers</em>) contains feeds from OU bloggers who blog about OU matters in their blogs:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5072857524495534850"><img src="http://lh6.google.com/image/tony.hirst/RmZpCpe5SwI/AAAAAAAAADI/cc3hlWzm-HI/s800/pageflakesOUbloggers.png" style="border:0" /></a></p>
+
+<p>The left and middle columns are dominated at the top by personal blogs - the panels at the bottom of those columns have more of a flavour of "project related" blogs.</p>
+
+<p>In the right hand column are several blogs that are dominated by posts relating to OpenLearn matters.</p>
+
+<p>If the number of OU blogs increases, then it may be appropriate to spread the panels in this tab over several tabs, covering personal, project/work area, course and OpenLearn related topics, perhaps?</p>
+
+<p><em>How it Works</em></p>
+
+<p>Most of the tabs display content fed live in to the page via RSS feeds, demonstrating that <a href"http://blogs.open.ac.uk/Maths/ajh59/010271.html">We Ignore RSS at OUr Peril</a>. There are only two exceptions, both on the first OUseful tab, that actually use static 'note' panels containing fixed, pre-specified links. The feeds are provided natively by the originating services (except the OpenLearn search) although the YouTube feed had to be finessed using a domain specific search from Microsoft Live search.</p>
+
+<p>Feeds can be added individually to the original Pageflakes page, or in bulk via an OPML file. [Added: I actually pulled in the blog feeds via the OPML file from my "OU Bloggers" folder on Bloglines, using this trick: <a href="http://blog.grazr.com/index.php/2006/11/17/grazr-and-bloglines/">using Bloglines as an OPML manager</a>.] I will try to post an OPML generator that creates feed bundles along the lines of the patterns described above in the next week or two.</p>
+
+<p>If you want to set up your own Pageflakes page, it's very easy to do: simply register at <a href="http://pageflakes.com">pageflakes.com</a> and then click on the likely looking links! To add RSS feeds, go to the web pages whose content you'd like to view via Pageflakes and look for the orange RSS feed icons: copy the URLs these link to and then add the URLs to the Pageflakes page via the "Add Feed" option.</p>
+
+<p>It takes 20-30 minutes to put to series of tabs like the ones displayed on <em>http://ouseful.open.ac.uk</em> together. As well as Pageflakes, there are other services that offer similar functionality - and that work in exactly the same way -  most notably <a href="http://www.google.com/ig">Google Personal Pages/iGoogle</a> and <a href="http://netvibes.com">Netvibes</a>. If anyone would like a demo, either for a one-to-one, seminar or workshop format, feel free to get in touch.</p>
+
+<p><em>* To preserve the <em>http://ouseful.open.ac.uk</em> URL in the browser address bar on the OUseful homepage, I use the page <em>http://ouseful.open.ac.uk/index.html</em> which contains a frame into which I load the shared Pageflakes page.</em></p>
+
+<p><tt>&lt;html&gt;&lt;head&gt;&lt;title&gt;OUseful Homepage&lt;/title>&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;iframe src="http://www.pageflakes.com/ouseful.ashx?page=6719564" width='100%' height='1500px' style="border:0;">&lt;/iframe&gt;<br />
+&lt;/body&gt;&lt;/html&gt;</tt></p>
+
+<p><em>You can find the actual shared Pageflakes page at <a href="http://www.pageflakes.com/ouseful.ashx?page=6719564">http://www.pageflakes.com/ouseful.ashx?page=6719564</a>.</em></p>
+
+<p>PS this is relevant too: <a href="http://blogs.open.ac.uk/Maths/ajh59/010296.html">Supporting Enterprise Current Awareness with Web2.0ps</a>. It describes the origins of the news tab I use, and links to  <a href="http://kmi.open.ac.uk/people/marc/2007/05/10/uk-gov-youtube-better-than-yourminis-demo/">Marc Eisenstadt</a>'s behind-the-scenes tell all about how long it takes to put together a 5 min webtop demo...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June  7, 2007 12:40 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010382.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

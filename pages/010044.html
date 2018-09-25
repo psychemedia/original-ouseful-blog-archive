@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: deliRoll - Scripting Grazr with Javascript</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010032.html" title="More OPML Generators (old ones, restated...!)" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010056.html" title="Grazring Grazr OPML Uploads: Bookmarklet" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010032.html">&laquo; More OPML Generators (old ones, restated...!)</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010056.html">Grazring Grazr OPML Uploads: Bookmarklet &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 20, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">deliRoll - Scripting Grazr with Javascript</h3>
+
+<p>Yesterday, the folks over at Grazr released serverside support for <a href="http://blog.grazr.com/index.php/2007/03/19/grazrscript-v12-beta/">Javascript contained within GrazrScript OPML files</a>.</p>
+
+<p>What this means is that you can now script the OPML that a Grazr widget displays.</p>
+
+<p>So what, you may say.... so Grazr widgets are now <em>programmable</em>; that is, Grazr can inspect what you have entered into a Grazr form then generate and render an appropriate set of feeds as a result.</p>
+
+<p>I have <em>no time</em> for distractions at the moment but couldn't resist posting a demo, which is actually a minor reworking of some of the code in the rediscovered <a href="http://blogs.open.ac.uk/Maths/ajh59/010032.html">social bookmarking feedroller</a>:</p>
+
+<p><img alt="deliRoll.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliRoll.jpg" width="821" height="457" border="0" /></p>
+
+<p>Enter one or more space separated delicious usernames and/or one or more space separated tag combinations, and a corresponding set of delicious feeds will be automatically generated.<br />
+ <br />
+You can <a href="http://grazr.com/data/psychemedia/deliRolls.opml">view the OPML</a> directly, or view it on the <a href="http://grazr.com/read/psychemedia/deliRolls.opml">deliRoll page</a>.</p>
+
+<p>Or here:</p>
+
+<div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?view=o&file=http://grazr.com/data/psychemedia/deliRolls.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://grazr.com/data/psychemedia/deliRolls.opml"></script></div>
+
+<p>(You can find several other OPML and GrazrScript generators in the <a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript Studio</a>.)</p>
+
+<p>The Javascript support is still lacking one or two js features, but there's more than enough support already to start tinkering with.</p>
+
+<p>One thing I'd like to see (and haven't tried yet - so it may already be supported) is a script include - that is, the ability to load in external Javascript files...</p>
+
+<p>...and support for xmlhttprequest too, of course ;-)</p>
+
+<p>But as I said - plenty to play with in there already... good stuff, chaps :-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 20, 2007 11:46 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010044.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="deliRoll - Scripting Grazr with Javascript";
+ z_post_category="RSS";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

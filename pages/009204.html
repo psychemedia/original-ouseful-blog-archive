@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: "Through My Eyes" in Second Life</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009196.html" title="Google Picasa Online...hmmmm..." />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/009213.html" title="Delivering Personally Scheduled Web Feeds" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/009196.html">&laquo; Google Picasa Online...hmmmm...</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/009213.html">Delivering Personally Scheduled Web Feeds &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 19, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">"Through My Eyes" in Second Life</h3>
+
+<p>With the recent <a href="http://secondlife.com/developers/opensource/">open sourcing of the Second Life client</a>, it'll be interesting to see what innovations spring from it. One idea I'm quite taken by, and which would provide a good first step on 'coding with the SL client" course or tutorial, is a simple SL viewer widget which would, if the 'owner' was in world, display what the owner was seeing at the time. It's also the sort of widget I could imagine spreading like crazy on sites like MySpace.</p>
+
+<p>The "Through My Eyes" widget (aka "Being Me", after the similarly themed "Being John Malkovich") could also make for an interesting demonstration of presence, methinks?</p>
+
+<p>All sorts of opportunities for frankly pointless fun arise. Users who were happy for others to see the world through their eyes could register their details to a "Through Random Eyes" service, which could provide almost minutes of idle entertainment.</p>
+
+<p>More generally, I wonder to what extent there already are 'attentional presence' widgets out there. For example, widgets that lists the books I am currently reading (may based on a live feed of my library book loans) or the films I am watching (if online DVD rental firms expose that information as a feed, for example), or even books I have just bought. The <a href="http://last.fm">last.fm</a> service exposes the tracks you have just listed to through its API (a feature used to good effect by <a href="http://slevenotez.com">Sleeventoez</a>) so it would be easy enough to feed this information through to a widget.</p>
+
+<p>Related to this, I was toying with the idea of a simple browser plugin that would use the <a href="http://blogs.open.ac.uk/Maths/ajh59/009187.html">statex</a> webservice to display the URL of the last page I loaded into my browser (the code would be trivial - simply update a particular statex global web variable to the URL of the current page*) but I'm not ready yet for revealing that much about myself!</p>
+
+<p>* something like this works as a bookmarklet, for example:<br />
+ javascript: window.location="http://statex.ning.com/updateState.php?id=25&pwd=test&item="+window.location</p>
+
+<p>And finally, on a similar related topic, I was chatting with Ian Martin today about a webtop like departmental display board that could be fed by people's "work related attentional state". This might, for example, list details of the courses or projects people were currently and actively working on, or bids they were preparing, for example. </p>
+
+<p>Instant messaging systems like Google chat (and probably many others - but I have little or no experience of them) let you customise the message that is displayed alongside your presence indicator, so the attentional status board would just elaborate on this.</p>
+
+<p>It may even be interesting to integrate this in some way with a to-do list, e.g. to display the things I am currently doing, or perhaps those that I have 'just done' whenever I tick them off on the list...</p>
+
+<p>Integration with a <a href="http://www.macupdate.com/info.php/id/22582">time tracker</a> widget would also be interesting...</p>
+
+<p>...although the idea that this is essentially the voluntary adoption of personal timesheets (and more than that - actually clocking in and out of tasks) is quite scarey... ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 19, 2007 01:47 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Good idea!!<br />
+Check out my posting today with Vlad's tipoff about  autonomous bots </p>
+<span class="comments-post">Posted by: <a href="http://kmi.open.ac.uk/people/marc/">Marc Eisenstadt</a> at January 25, 2007 04:18 PM</span>
+</div>
+<div class="comments-body">
+<p>URL is http://kmi.open.ac.uk/people/marc/2007/01/25/sl-bots-ii-willmotts-thought-experiment/ </p>
+<span class="comments-post">Posted by: <a href="http://kmi.open.ac.uk/people/marc/">Marc Eisenstadt</a> at January 25, 2007 04:18 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/009204.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

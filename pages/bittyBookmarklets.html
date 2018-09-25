@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Bittybrowser bookmarklets</title>
+<script type="text/javascript">
+function safariLookup(){
+ var bb=document.getElementById('ousefulBB');
+ var url=bb.src;
+ var burl=new RegExp ('http:\(.*)lue=', 'gi') ;
+ url=url.replace(burl,'');
+ url=unescape(url);
+
+ //what follows is pretty much the original bookmarklet posted at http://blogs.open.ac.uk/Maths/ajh59/006569.html
+ var re=/([\/-]|is[bs]n=)(\d{7,9}[\dX])/i;
+ if(re.test(url)==true){
+  var isbn=RegExp.$2;
+  var redirectURL='http://safari.oreilly.com/?XmlId='+isbn;
+  //this is the only bit that differs from the original bookmarklet
+  //rather than reset the browser page location, we reset the bittybrowser page location
+  bb.setAttribute('src',redirectURL);
+ }
+}
+</script>
+</head>
+
+<body>
+<h1>bittybrowser bookmarklets</h1>
+<p>Premise 1: bookmarklets are too hard for most people to use (installation etc.)</p>
+<p>Premise 2: bookmarklets can add useful functionality to a browser or to a web page</p>
+<p>Take the page below, an <em>iframe</em> version of bittybrowser - it links to a book product record in Amazon...
+The URL of this page contains an ISBN, which I can do all sorts of wonderful things with...</p>
+<p>For example, Jon Udell's Library lookup bookmarklets scrape the ISBN out of the URL and 
+send the user off to a library catalogue lookup for that ISBN. I've used the core of the bookmarklet
+for a bookmarklet that looks the book up on O'Reilly's Safari e-bookshelf.</p>
+<p>So here, for example, is a hacked version of the Safari bookmarklet that scans the URL
+of the page loaded into the Bittybrowser, and if it finds an ISBN there it looks up that URL on 
+the O'Reilly Safari bookshelf: <a href="#" onclick="javascript:safariLookup()">do Safari lookup</a></p>
+<p>NB I added an <em>id</em> to the Bittybrowser <em>&lt;iframe&gt;</em> element. This should also work
+for books looked up on other sites where an ISBN is included in the URL.</p>
+
+<!-- BITTY BROWSER : WWW.BITTY.COM : {BEGIN} -->
+<iframe id='ousefulBB' src="http://b1.bitty.com/b2browser/?contenttype=website&contentvalue=http%3A%2F%2Fwww%2Eamazon%2Eco%2Euk%2Fexec%2Fobidos%2FASIN%2F0596009283%2F203%2D2691911%2D6099905" scrolling="no" frameborder="0" style="width:100% !important;height:400px !important;background:#D4D0C8 !important;border:1px solid #999 !important;padding:0px !important;margin:0px !important;"><a href="http://www.bitty.com/">Bitty Browser</a> (iframes required)</iframe>
+<!-- BITTY BROWSER : WWW.BITTY.COM : {END} -->
+
+<p>So first off, it'd be nice to be able to use this sort of bookmarklet functionality 
+within Bittybrowser, although it is relatively straightforward to get the functionality from
+script calls made outside the Bittybrowser frame.</p>
+<p>What I'm guessing is a little harder to achieve from outside the Bittybrowser iframe because
+of browser (IE, FF etc.) security policies is the functionality that bookmarklets in the
+normal sense can apply <em>within</em> a page.</p>
+<p>For example, clicking <a href="javascript:void(d=document);void(l=d.getElementsByTagName('a'));if (l.length!=0){void(ll=d.createElement('ul'));var j=1;for (i=0;i<l.length; i++) {void(r=l[i].getAttribute('href'));if (r) if (r.indexOf('http://')==0) {void(a=' ['+j+']');void(n=d.createTextNode(a));void(l[i].appendChild(n));void(li=d.createElement('li'));void(r='['+j+'] '+r);void(j++);void(lt=d.createTextNode(r));void(li.appendChild(lt));void(ll.appendChild(li));};};void(b=d.getElementsByTagName('body'));void(b[0].appendChild(ll));}">this bookmarklet equivalent</a>
+applied to this page will generate references for the following links:</p>
+<ul><li><a href="http://ouseful.open.ac.uk/blog">OUseful blog</a><li>
+<li><a href="http://bitty.com/">Bittybrowser</a></li>
+</ul>
+<p>I'm guessing that I couldn't provide the same functionality for a page contained
+ within the bitty browser from outside the browser (i.e. annotate and reference links for 
+the page in the bittybrowser on that page), though I could:</p>
+<ol><li>print a copy of the links contained in the bittybrowser page in the page (sic)
+ that contains the biitty browser;
+and </li>
+<li>achieve the required functionality if the 'bookmarklet' were included in the bittybrowser toolbar.</li>
+</ol>
+<p>So I guess what I'm asking for is a way of installing bookmarklets in the bittybrowser toolbar, 
+or generating customised versions of the bittybrowser that contain my predefined bookmarklets.</p>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<html><head><title>delicious2opml</title>
+
+<script type="text/javascript">
+function cleanScript(){
+  if (document.getElementById('myFeedsScript')) document.getElementsByTagName('head')[0].removeChild(document.getElementById('myFeedsScript'));
+}
+
+var popHack=false;
+
+function feedjson2deljson(json_data) {
+   var rtrn = [];
+   for(var i=0; i<json_data.items.length; i++) {
+      obj = {};
+      obj.d = json_data.items[i].title;
+      obj.u = json_data.items[i].link;
+      obj.n = '';
+      if(json_data.items[i].description)
+         obj.n = json_data.items[i].description;
+      if(json_data.items[i].content)
+         obj.n = json_data.items[i].content;
+      rtrn.push(obj);
+   }//end for
+   return rtrn;
+}//end feedjson2deljson
+
+function generateOPMLfromDelicious(){
+ cleanScript();popHack=false;
+ var usrName=document.getElementById('usrName').value;
+ var usrTag=document.getElementById('usrTag').value;
+ if ((usrName=='popular')||(usrName=='')) {popHack=true;myURL="http://psychemediasxoxotools.ning.com/outlineconvert.php?output=json&classes=items&url="+escape('http://del.icio.us/rss/popular/'+usrTag)+"&callback=generateOPML";}
+ else myURL="http://del.icio.us/feeds/json/"+usrName+"/"+usrTag+"?count=100&callback=generateOPML";
+ var script = document.createElement('script');
+ script.id = 'myFeedsScript';
+ script.type = 'text/javascript';
+ script.src=myURL;
+ document.getElementsByTagName('head')[0].appendChild(script);
+}
+  
+function generateOPMLItems(deliLinks){
+ var opmlItem='';
+ for (var i=0, post; post = deliLinks[i]; i++) {
+        var li = document.createElement('li')
+        var a = document.createElement('a')
+        a.style.marginLeft = '5px'
+        var str=post.u;
+        if (str.match(/opml$/)) opmlItem+='<outline type="include" text="'+post.d+'" url="'+post.u+'" />\n';
+        else if ((str.match(/\/rss\//))||(str.match(/xml$/))||(str.match(/rss$/))||(str.match(/rss2$/))||(str.match(/atom$/))) opmlItem+='<outline type="rss" text="'+post.d+'" xmlUrl="'+post.u+'" />\n';
+        else opmlItem+='<outline type="link" text="'+post.d+'" url="'+post.u+'" />\n';
+ }
+    
+ return opmlItem;
+}
+
+function generateOPML(delicious){
+ var search=false;
+ var usrName=document.getElementById('usrName').value; if (usrName=='') usrName='popular';
+ var usrNameTag=usrName+'/'+document.getElementById('usrTag').value;
+ if (document.getElementById('search').checked) search=true;
+ if (popHack) delicious=feedjson2deljson(delicious);
+ var v='1.0';
+ if (search) v='2.0';
+ var opml='<opml version="'+v+'">\n<head>\n<title>Social Bookmarks Feeds</title>\n</head>\n<body>\n';
+ opml+=generateOPMLItems(delicious);
+ if (search) {
+  opml+='<grazr:form name="deliSearchForm">deliSearch';
+  opml+='<input type="text" name="q"/>';
+  opml+='<input type="submit" value="Enter"/>';
+  opml+='</grazr:form>';
+  opml+='<grazr:formtemplate name="deliSearchForm" file="http://pipes.yahoo.com/pipes/pipe.run?_id=iPBz8C242xGV47HKqGIyXQ&amp;query=%q%&amp;username='+encodeURIComponent(usrNameTag)+'&amp;_render=rss"/>';
+  
+  opml+='<grazr:formresult text="deliSearch ('+usrNameTag+'): " name="deliSearchForm"/>';
+ }
+ opml+='</body>\n</opml>';
+ 
+ var element = document.getElementById('output');
+ element.value=opml;
+}
+
+</script>
+
+
+</head><body>
+
+<h2>delicious2OPML</h2>
+<p>Submit a delicious user name/tag and generate an OPML file with items of the form:<br />
+<br />
+<em>&lt;outline type="link" text="mootools%20-%20home" url="http%3A//mootools.net/"/&gt;</em><br />
+<br />
+one for each delicious link item (up to a maximum of 100 links).</p>
+<p>If no user is specified, appropriately tagged <em>popular</em> items will be used instead.</p>
+<p>If you want to use mutliple tags, join them with a <em>+</em> sign (for example, <em>opml+demo</em>).</p>
+<p>The routine uses a couple of possibly dodgy heuristics to try and identify OPML and RSS/Atom feeds. In particular, if a URL ends with 
+<em>opml</em> then it will be given an outline 'link' type; and if the URL contains <em>/rss/</em> or ends with <em>xml</em>, <em>rss</em>, <em>rss2</em> or <em>atom</em> it will be given
+an outline 'rss' type.</p>
+<p>A grazrScript deliSearch form that allows you to search over the domains contained in the feed can optionally be added to the OPML. This utilises a <a href="http://blogs.open.ac.uk/Maths/ajh59/009301.html">deliSearch Yahoo Pipe</a>.</p>
+
+<p>For more fun stuff, check out <a href="http://ouseful.info">OUseful.info</a>.</p>
+<hr />
+<form>
+
+user name <input size="20" id="usrName" type="text"> (Default is <em>popular</em>, example <em>psychemedia</em>)<br />
+tag <input size="20" id="usrTag" type="text"> (for example, <em>opml</em> or <em>opml+demo</em>)<br />
+Add deliSearch GrazrScript form for this user/tag? <input type='checkbox' id='search' name='search' /> (only works in <a href="http://grazr.com">Grazr</a>)<br />
+<input value="generate OPML" onclick="generateOPMLfromDelicious()" type="button"> 
+</form>
+
+
+<form action="">
+  <div><textarea id="output" cols="100" rows="35" style="width: 98%;"></textarea>
+  <br>
+  <br>
+
+  <input value="select all" onclick="javascript:this.form.output.focus();this.form.output.select();" class="but" type="button"> </div>
+</form>
+
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: JSON and Microformats</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007299.html" title="Wishlist Carousel" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007303.html" title="OU New Library Books Bookshelf" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">&laquo; Wishlist Carousel</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007303.html">OU New Library Books Bookshelf &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 04, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">JSON and Microformats</h3>
+
+<p>As well as tinkering with JSON [<a href="http://www.ietf.org/rfc/rfc4627.txt?number=4627">RFC</a>] for the <a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">Amazon wishlist carousel</a>, I've been looking at <a href="http://microformats.org/wiki/cite-brainstorming">citation microformats</a> because I'm itching to try out a <a href="http://weblog.infoworld.com/udell/lc/lc.html">live clipboard</a> doodle.</p>
+
+<p>Anyway, naive observer that I am, I wonder whether it is generally the case that there there should be a trivial translation between any particular microformat (<em>uF</em>) and an almost literal representation of the same data using JSON?</p>
+
+<p>One major issue that comes to mind is where a uF data item is identified using more than one class attribute?</p>
+
+<p>Anyway - it seems that mapping between JSON and microformats is one of those 'in the air' things at the moment: so here's a far better discussion of the issues than I could hope to give posted on the IBM developerWorks site a couple of days ago: <a href="http://www-128.ibm.com/developerworks/library/x-matters46/">Lighter than microformats: Picoformats</a>.</p>
+
+<p>What would be handy would be a set of standard, cross-browser utility functions to produce and consume data as various microformats <em>and</em> their JSON equivalents, a bit like the hWhatever functions developed to make the Live Clipboard easier to use (e.g. <a href="http://weblog.infoworld.com/udell/lc/hCal.js">hCal generator</a>, <a href="http://weblog.infoworld.com/udell/lc/hCard.js">hCard generator</a>. (The originals are linked to from the Microsoft <a href="http://rayozzie.spaces.live.com/editorial/rayozzie/demo/liveclip/liveclipsample/techPreview.html">Live Clipboard developer notes</a>, but the Windows Live Space page they live on appears to be down at the moment....)</p>
+
+<p>And here's something else to add to the mix while I'm on this topic - and an approach that would also benefit from a few demo/standardised <a href="http://esw.w3.org/topic/MicroModels">uF2RDF XSLTs</a> - <a href="http://www.w3.org/2004/01/rdxh/spec">GRDDL</a>:<br />
+<blockquote>a mechanism for Gleaning Resource Descriptions from Dialects of Languages; that is, for getting RDF data out of XML and XHTML documents using explicitly associated transformation algorithms, typically represented in XSLT.</blockquote><br />
+A good overview can be found here: <a href="http://dannyayers.com/2005/08/01/microformats-on-the-grddl/">Microformats on the GRDDL</a>.</p>
+
+<p>A <a href="http://www.w3.org/2001/sw/grddl-wg/">W3C GRDDL working group</a> has just formed to try and progress this approach to data transformation and reuse, which should add even more momentum to the microformat cause as a side-effect.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August  4, 2006 07:37 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007302.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>I think you are definitely searching for the right function. A few months back, Dan Connolly and I were discussion the same issue: roundtripping. We want to go from Microformats to RDF to JSON to XML and any other combination you can think of between those. The idea is to use the profile URL in the microformat to point to the other schemas (i.e. follow our noses) and transformation directives (GRDDL) to get what we want.</p>
+
+<p>http://dig.csail.mit.edu/breadcrumbs/node/133</p>
+
+<p>If you are looking at clipboard stuff, please look at. You'll be delighted.</p>
+
+<p>http://www.sparqlets.org/clipboard/demo</p>
+<span class="comments-post">Posted by: <a href="http://torrez.us/">Elias Torres</a> at August  5, 2006 12:20 PM</span>
+</div>
+<div class="comments-body">
+<p>Hi Elias - </p>
+
+<p>Roundtripping - exactly the concept I'm after...and here's a note to self about it: http://www.dehora.net/journal/2005/08/automated_mapping_between_rdf_and_forms_part_i.html</p>
+
+<p>Thanks for pointing out the sparqlets URL - I actually made a screencast about it here: http://phoenix.open.ac.uk/~tony_hirst/webClipboard </p>
+
+<p>At the time, I also wondered how neat it would be if this sort of functionality could be made available as a Netvibes component (http://blogs.open.ac.uk/Maths/ajh59/007157.html).</p>
+
+<p>tony<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony Hirst</a> at August  5, 2006 12:40 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="JSON and Microformats";
+ z_post_category="semweb";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

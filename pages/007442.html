@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Learn About Feeds</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007441.html" title="OU Library Homepage Heatmap" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007457.html" title="Time for an OpenLearnigg (sic)  Environment?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007441.html">&laquo; OU Library Homepage Heatmap</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007457.html">Time for an OpenLearnigg (sic)  Environment? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 14, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Learn About Feeds</h3>
+
+<p>Through my affiliation with the Library, I was asked beore the summer break to write a couple of guides for a new crib sheet series - <a href="http://kn.open.ac.uk/workspace.cfm?wpid=5868">Learn About...</a> - being put together as a collaborative effort by the Library, IET and LTS. The new guides are an attempt to provide a standard, uniform set of quick guide briefings/mini-training guides that will replace the independent, and often duplicated (in terms of subject matter), offerings that have  been developed by separate units in recent years.</p>
+<p>Many of the guides are still in draft form (though internal readers can see them on the IET Knowledge network) and cover a wide variety of new technologies, from blogs to wikis, web 2.0 to the semantic web, mobile learning to VLEs.</p>
+<p>The guides I was asked to write cover social bookmarking and RSS/web feeds. Partly in response to a couple of other requests I've had recently for a briefing on web feeds, here's a draft  of that mini-guide. Comments, as ever, appreciated...</p>
+<hr/>
+<h2>Learn About: RSS and Web Feeds</h2>
+<h2>What are they?</h2>
+<p>RSS used to stand for something, but it doesn't really any more - a better term is <span style="font-style: italic;">web feed</span>. Web feeds are XML documents that can be used to transport links, HTML content and multimedia resources (audio and video attachments) around the web. Web feeds are machine readable and can be used to introduce content from one site into another.</p>
+
+<p>The presence of a web feed is displayed on a page using this icon: <img src="http://www.feedicons.com/favicon.ico" alt="Feed icon" /></p>
+
+<p>Web feeds were originally popularised as a way of syndicating blog news. Blogs typically publish one or more web feeds that users can subscribe to from either a web based or desktop client. The client regularly checks the feed to see if new content is available - if it is, it is pulled into the feedreader automatically, without the user having to check back with the publishing site themselves.</p>
+
+<p>Podcasts and video feeds, as well as blog posts, are also syndicated using web feeds.</p>
+
+<p>Web feeds are increasingly being used to syndicate lists of weblinks as link blogs - regularly (often daily) - posted annotated lists of new and interesting weblinks, that may be fed into (and merged with) a blog web feed from a social bookmarking service.</p>
+
+<h2>Who's using them?</h2>
+
+<p>Web feeds are produced published by bloggers to support user subscription to a blog. Web feeds are increasingly used to syndicate news and media feeds. The BBC, for example, publishes a wide selection of <a href="http://news.bbc.co.uk/1/hi/help/3223484.stm">news feeds</a>, as well as giving guidance on the selection of a feed reader.</p>
+
+<p>Many academic publishers are also starting to use feeds to syndicate the contents listings of current journals. The British Library maintains a list of these at <a href="http://zetoc.mimas.ac.uk/rssjnllist.html">Zetoc</a>.</p>
+
+<p>Podcast publishers make podcasts available using feeds that support media enclosures/attachments.</p>
+
+<h2>Why are they significant? </h2>
+
+<p>Web feeds can be used to transport content - HTML, weblinks, audio files, movies - around the web in an invisible, machine readable way. Web feeds are a 'push' technology in that users can <span style="font-style: italic;">subscribe </span>to web feeds, releasing them from the need to visit publisher's web sites to check for updates. Unlike incoming email, over which the user has little control, users <span style="font-style: italic;">choose </span>whether or not to subscribe to a web feed in their feedreader, and have personal control over whether or not to accept content from a particular publisher.</p>
+
+<p>Web feeds can be easily subscribed to from bespoke feedreaders and online personal portals/webtops as well as many email clients. Web feeds are readily integrated into tradtional websites using widely availabe feed-to-html services.</p>
+
+<p>Items can be published to web feeds in timecontrolled ways, thus allowing the time managed distribution of content.</p>
+
+<h2>What are the downsides?</h2>
+
+<p>Feed subscriptions add yet another channel of communication - and potentially yet another inbox - to the users online environment and thus place yet another demand on the user's attention.</p>
+
+<h2>Where are they going?</h2>
+
+<p>One good indicator of how feeds might be used to syndicate information is the <a href="http://backstage.bbc.co.uk/data/Data">BBC Backstage project</a>, which lists experimental BBC web feeds.</p>
+
+<p>Many browsers are now capable of detecting the presence of, and subscribing to, a web feed contained in a web page, alerting the user to the fact by displaying a feed logo on the browser address bar.</p>
+
+<p>Feeds are increasingly being used as a transport medium for search queries and search results, using the <a href="http://www.opensearch.org">OpenSearch </a>protocol. Internet Explorer 7 and Firefox are both capable of adding OpenSearch compliant search engines to the browser search tool.</p>
+
+<p>There is an increasing need to manage feeds and transport bundles of feeds. At the moment, the OPML feed protocol is the <em>de facto</em> standard for creating "feeds of feeds".</p>
+
+<h2>What are the implications for teaching and learning?</h2>
+
+<p>Web feeds allow users to opt-in to information provision and subscribe to information they are interested in and that is relevant to them. Examples include subscriptions to influential blogs, news providers, and contents listing of electronic journals.</p>
+
+<p>Web feeds can be used to transport content into environments such as Moodle from other systems - social bookmarking services, library systems and saved (persistent) searches using OpenSearch. Students may also opt to use their own <a href="http://www.rev2.org/2006/09/09/web-based-desktop-pageflakes-revisited/">webtop</a> (web-desktop) to aggregate feeds and services, creating their own <span style="font-style: italic;">personal learning environment</span>.</p>
+
+<p>Web feeds can be used to deliver current content into online course materials, for example feeding links to electronic resources in to a Further Reading or Current News section of online course materials.<br/></p>
+
+<h2>Further reading and resources</h2>
+
+<p>Examples of web feed integration into Moodle can be found on the <a href="http://vledemo.open.ac.uk/course/view.php?id=69">VLE Library Demo</a>.</p>
+
+<p>Creating a current awareness search feed using Google alerts: <a href="http://breeze5.sabahosted.com/GoogleAlert/">screencast</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September 14, 2006 09:58 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007442.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Learn About Feeds";
+ z_post_category="RSS";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

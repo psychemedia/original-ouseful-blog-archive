@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: So What Exactly Are Library Feeds Good For?</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007294.html" title="Jeff Barr - Amazon Web Service Evangelist, KMi Podium" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007298.html" title="The Compleat Grazr/OPML Library Interface, v 0.0.1" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007294.html">&laquo; Jeff Barr - Amazon Web Service Evangelist, KMi Podium</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007298.html">The Compleat Grazr/OPML Library Interface, v 0.0.1 &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 01, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">So What Exactly Are Library Feeds Good For?</h3>
+
+<p>Every day, yet another library seems to proudly boast that it has set up a raft of Library feeds (I myself produly announced this fact several times when the OU library started to open up feeds for all sorts of things). But I found myself wondering last night: why? What good does it do?</p>
+
+<p>And so I set about trying to bundle feeds together so that I could live outside the library pages, just surviving off the feeds the library provides.</p>
+
+<p>One environment within which I could develop my own customised, feed fed library page is Netvibes, of course, and I'll post a demo page or two using that space in a week or two.</p>
+
+<p>But for now, here's a demo of using the <a href="http://grazr.com">Grazr</a> OPML browser as a surrogate library website.</p>
+
+<p>I should at this point say that the demo does not just use OU Library feeds - the OpenSearch feeds from the catalogue are due along anytime, but they're not quite ready yet. So I've borrowed some from elsewhere (from <a href="http://www.hclib.org/pub/search/RSS.cfm">Hennepin County Library</a>, in fact).</p>
+
+<p>So - here then are the feeds that go into the mix:</p>
+
+<p><img alt="grazrLibraryTop.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryTop.jpg" width="402" height="410" border="0" /></p>
+
+<ul><li>My Library Feeds;</li>
+<li>New books in the OU Library;</li>
+<li>S804 (an OU course) <a href="http://myopenlibrary.open.ac.uk">MyOpenLibrary</a> links;</li>
+<li>current contents lists for a selection of journals;</li>
+<li>a couple of saved persistent searches on the Hennepin County Library catalogue;</li>
+<li>recent eprints (from Glasgow - the OU feed is firewalled...)</li>
+</ul>
+
+<p>An example of my library feeds:</p>
+
+<p><img alt="grazrLibraryMyDetails.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryMyDetails.jpg" width="244" height="73" border="0" /></p>
+
+<p>and then:</p>
+
+<p><img alt="grazrLibraryOnLoan.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryOnLoan.jpg" width="407" height="341" border="0" /></p>
+
+<p>Here are some book details:</p>
+
+<p><img alt="grazrLibraryBookDetails.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryBookDetails.jpg" width="413" height="105" border="0" /></p>
+
+<p>(maybe nice if the contents lists, or a summary description were pulled in to this feed, perhaps?). Clicking the link should take you through to the linrary catalgue page for that book (but there's a tiny error in the link at the mo...)</p>
+
+<p>The overdue library books feed works too - oops...:</p>
+
+<p><img alt="grazrLibraryOverdue.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryOverdue.jpg" width="410" height="80" border="0" /></p>
+
+<p><img alt="grazrLibraryNewBooks.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryNewBooks.jpg" width="300" height="77" border="0" /></p>
+
+<p>which are handled just like the books in my library record (clicking on a feed leads to a list of books, and clicking on one of those leads to book details).</p>
+
+<p>The MyOpenLibrary feeds are feeds of resources, sorted by topic, and selected by subject area experts to be relevant to the particular course:</p>
+
+<p><img alt="grazrLibraryMyOLFeeds.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryMyOLFeeds.jpg" width="250" height="122" border="0" /></p>
+
+<p>What's neat about the Journals feed:</p>
+
+<p><img alt="grazrLibraryMyOLJournals.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryMyOLJournals.jpg" width="401" height="205" border="0" /></p>
+
+<p>is that if you click through to a particular journal:</p>
+
+<p><img alt="grazrLibraryMyOLJournalsItem.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryMyOLJournalsItem.jpg" width="391" height="87" border="0" /></p>
+
+<p>when you follow the link you open in a new tab the libezproxied journal page (i.e. you are logged in to it...).</p>
+
+<p>The same should be true with the database links, but I'm not sure they're set up correctly (they still seem to be using athens, which I thought we'd stop using?). Anyway, <em>in principle</em> you should be able to just click through straight into a logged in page on the daatbase site.</p>
+
+<p>The Current Journal Issues feeds are just a few I pulled together from different publishers' sites.</p>
+
+<p><img alt="grazrLibraryJournalIssues.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryJournalIssues.jpg" width="344" height="103" border="0" /></p>
+
+<p>It would be nice to automatically reconcile feeds from <a href="http://zetoc.mimas.ac.uk/">Zetoc</a> with the Journal feeds from MyOL, for example, but I'm not sure if there is an ISSN2feed url service available form Zetoc?</p>
+
+<p>Clicking on a journal gives the current contents list:</p>
+
+<p><img alt="grazrLibraryJournalContents.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryJournalContents.jpg" width="412" height="285" border="0" /></p>
+
+<p>and clicking through to an item displays the abstract:</p>
+
+<p><img alt="grazrLibraryJournalAbstract.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryJournalAbstract.jpg" width="415" height="269" border="0" /></p>
+
+<p>At the moment clicking the link opens up a tab containing the journal web page for that article. Idellay this would be libezproxified first...</p>
+
+<p>The persistent library search feeds are canned searches I predefined when I wrote the OPML fle that drives this Grazr demo:</p>
+
+<p><img alt="grazrLibraryPerSearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryPerSearch.jpg" width="353" height="86" border="0" /></p>
+
+<p>and here are some results:</p>
+
+<p><img alt="grazrLibraryPerSearchResults.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryPerSearchResults.jpg" width="379" height="209" border="0" /></p>
+
+<p>A neat thing about the book details page is the way the book cover image is also pulled in:</p>
+
+<p><img alt="grazrLibraryPerSearchItem.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryPerSearchItem.jpg" width="382" height="198" border="0" /></p>
+
+<p>Finally, the ePrints feed (in this case, borrowed from Glasgow):</p>
+
+<p><img alt="grazrLibraryeprints.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryeprints.jpg" width="256" height="61" border="0" /></p>
+
+<p>again giving results that link through to result item abstracts and if necessary on to the actual report in the eprint repository:</p>
+
+<p><img alt="grazrLibraryeprintsResults.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryeprintsResults.jpg" width="417" height="224" border="0" /></p>
+
+<p>If you want to have a play, I popped a demo (less the My Library feeds which use my library authentication details) at <a href="http://blogs.open.ac.uk/Maths/ajh59/grazrLibraryDemo.html">Library OPML browser demo</a>. </p>
+
+<p>Update: Alternatively, check out this <a href="http://optimalbrowser.com/optimal.php?url=http%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2FousefulLibraryTest.opml&submit=Submit">Optimal browser view</a>:</p>
+
+<p><img alt="optimalOUView.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/optimalOUView.jpg" width="374" height="446" border="0" /></p>
+
+<p>[NB hopefully dummy user details will be available soon to demonstrate the <em>My Library Details</em> feeds.]</p>
+
+<p>You can see a copy of the OPML file <a href="http://blogs.open.ac.uk/Maths/ajh59/ousefulLibraryTest.opml">here</a>.</p>
+
+<p><strong>Note that the only thing that I had to do to create this demo was to write the OPML file (I copied another OPML file to get the structure qnd fiund the feeds URLs wherever) and upload it to a server; I then pasted the URL of the uploaded OPML file into the config box on <a href="http://grazr.com/config.html">http://grazr.com/config.html</a> and copyied the HTML that was generated into a dummy web page. Uploading this to the server provided me with my demo. For reference, I spent far longer blogging the demo than I did crreating it...</strong></p>
+
+<p>PS I'm glad to see that some 'proper' mashups are starting to appear in the Talis Library Mashup competition, such as <a href=" http://www.bibliopage.com/">Bibliopage</a>. But it would also be nice to see simple stuff that any old librarian can use, without them having to know one end of a  client-server script from the other. So I wonder, are simple, simple presentation based mashups that just encourage people to wire up content in neat ways to legacy presentational devices likely to be accepted as valid entries? Any chance of Talis offering Â£100 or a similar token amount (or maybe just an Amazon gift voucher?) for the best use of Netvibes (or similar) for displaying library related feeds?</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August  1, 2006 04:47 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007296.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>"So I wonder, are simple, simple presentation based mashups that just encourage people to wire up content in neat ways to legacy presentational devices likely to be accepted as valid entries?"</p>
+
+<p>Absolutely. Definitely. 100%.</p>
+
+<p>"Any chance of Talis offering £100 or a similar token amount (or maybe just an Amazon gift voucher?) for the best use of Netvibes (or similar) for displaying library related feeds?"</p>
+
+<p>Hmm... Mebbe...</p>
+<span class="comments-post">Posted by: <a href="http://blogs.talis.com/panlibus/">Paul Miller</a> at August  1, 2006 08:33 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="So What Exactly Are Library Feeds Good For?";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

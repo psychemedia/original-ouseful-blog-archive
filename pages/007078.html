@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Dynamic To Do Lists</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007076.html" title="Another Batch of Neat OU Jobs" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007080.html" title="Generic Library Lookup Greasmeonkey Script" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007076.html">&laquo; Another Batch of Neat OU Jobs</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007080.html">Generic Library Lookup Greasmeonkey Script &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 23, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Dynamic To Do Lists</h3>
+
+<p>A fascinating idea at <a href="http://www.higheredblogcon.com/">HigherEd BlogCon</a> by Matthew Winkel on <a href="http://www.higheredblogcon.com/index.php/student-to-do-list-rss-feed/">Student To Do List Feeds</a>:</p>
+
+<blockquote>The College of New Jersey provides an automated "To-Do List" on the "Resources for Students" page which enables our students to quickly navigate to clearly labeled tasks to accomplish (e.g. Calculate your GPA, Visit bookstore for buyback, Apply for federal Pin to complete FAFSA, Pay next student bill by Dec. 14). The "To-Do List" could be targeted to even more specific audiences and even personalized with current portal technology.</blockquote>
+
+<p>This form of "To Do List Navigation" is good example of one of the ways we might use Netvibes (maybe <a href="http://blogs.open.ac.uk/Maths/ajh59/003289.html">sitemaps</a>  or <a href="http://a9.com/-/company/help/siteinfo/">Siteinfo</a>also have a place in the mix somewhere, reusing the idea of <a href="http://micro-info.blogspot.com/2005/09/separating-navigation-from-content-and.html">Separating Navigation from Content and Style</a>).</p>
+
+<p>The post goes on:</p>
+
+<blockquote>An effective higher education portal will guide each user to complete specific tasks required to support the education process. Combining audience and task navigation with a "To-Do List" is an effective way to highlight navigation to important tasks that correspond with the academic calendar year. The "To-Do List" may be targeted to even more specific audiences and even personalized with current portal technology. A college senior could see items required for graduation or a new faculty member could view items required at specific times in the tenure process. Portal users could even add their own items and check off completed items on these personalized lists which they can then download to other browser based personal organizers and RSS aggregators.</blockquote>
+
+<p>What I like the idea is of adaptively generating the to do list for each user, providing links to things users may need as they are likely to need them. The idea of ticking off items (in a manner similar to read and unread feed items) is also interesting.</p>
+
+<p>One of the tools that would be useful in this respect would be a <a href="http://blogs.open.ac.uk/Maths/ajh59/004775.html">paced feed delivery system</a>, an idea Stephen Downes and I were bouncing around when he was over here a couple of weeks ago. (A couple of extra features we came up with were the ability of the publisher <em>or</em> subscriber to set the start date/commencement of a feed, as well as the publication date of/delay interval between the release of subsequent items.)</p>
+
+<p><a href="http://www.feedhoster.com/">FeedHoster</a> seem to offer the rudimentary elements of this sort of service, so maybe I'll check it out (unless anyone has useful reports on this service/other suggestions?):</p>
+
+<blockquote><a href="hhtp://www.feedhoster.com/">FeedHoster</a>: Create serialized RSS feeds! Serial RSS feeds work in a 'chapter a day' style, where subscribers are delivered your messages (individual items) on a schedule you define, regardless of when they first subscribe. For example, Subscriber #1 will get item one today and subsequent items delivered in the following days, but when Subscriber #2 subscribes in a few days time they also start with item one and follow through with subsequent items on the same schedule. Regular RSS feeds can't do this because they can't distinguish one subscriber from another, which is why this is a special feature which we can provide for hosted feeds.</blockquote>
+
+<p>Because always like to try and relate my OUseful posts to an OU context, I had a quick look around a couple of student facing course sites to see what sort of services we could push into a to do list. </p>
+
+<p>Alongside things like continuous assessment submission dates, one interesting possibility was managing groups activities/scheduling tasks within a group. I'm sure I've seen this mentioned in relation to ICT tools that support OU group work (at the <a href="http://intranet.open.ac.uk/curriculum-conference-2006/">OU Curriculum Conference</a> earlier this year I think, but that was before I started live blogging this sort of event:-(</p>
+
+<p>Tutorial dates also seemed a useful thing to be able to feed adaptively to students according to their own personalisation settings:</p>
+
+<p><img alt="ouTutorialFinder.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ouTutorialFinder.jpg" width="642" height="456" border="0" /></p>
+
+<p>(I think I feel a script coming on, maybe as part of  an OU student browser toolbar... Here's a bookmarklet to get my code thinking going... <a href="javascript:function v(n,v){el=d.createElement('input');el.type='text';el.name=n;el.value=v;f.appendChild(el);};void(d=document);void(uri='https://msds.open.ac.uk/tutorial-finder/TutorialResults.aspx?unq=20060620105938364');void(f=d.createElement('form'));void(f.method='post');void(f.action=uri);v('postcode','PO33 2NL');v('dates','3');v('radius','40');v('towns','-1');v('country','-1');d.body.appendChild(f);f.submit();">Predefined OU Tutorial Finder bookmarklet</a>. (I'll build the generator in a day or two...;-) I suspect OU SAMS access is required to see the outcome... here's what you're missing:</p>
+
+<p><img alt="ouTutorialFinderResults.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ouTutorialFinderResults.jpg" width="625" height="424" border="0" /></p>
+
+<p>A lot of the to do items that immediately come to mind are calendar specific to do items, really (i.e. the tutorials fall on a fixed date), which has reminded of a few calendar related items I've been meaning to post. I'll post those thoughts in a day or two, and maybe in turn they'll feed back ideas for dynamically (needs based) created to do items.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 23, 2006 10:04 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007078.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

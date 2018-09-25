@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OPML Powered Dashboards</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010411.html" title="So Just What is a Podcast (or a Blog)...?" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010416.html" title="OPML Powered Dashboard Prototype - sort of..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010411.html">&laquo; So Just What is a Podcast (or a Blog)...?</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010416.html">OPML Powered Dashboard Prototype - sort of... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 14, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OPML Powered Dashboards</h3>
+
+<p>Since posting about the <a href="http://blogs.open.ac.uk/Maths/ajh59/010382.html">OU Institutional Dashboard Using Pageflakes</a>, I&#8217;ve spent quite a bit of time thinking about this sort of surface and how they could be used to both manage and display OPML feeds:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073025135594261298"><img src="http://lh4.google.com/image/tony.hirst/RmcBe5e5SzI/AAAAAAAAADo/D7zfqTImG94/s800/ousefulPageflakesTab1.png" style="border:0" /></a></p>
+
+<p>In the first case - <em>OPML feed management</em> - feeds displayed on a dashboard tab could be made available via a derived OPML feed. (Netvibes allows you to <a href="http://blog.netvibes.com/?2005/10/08/7-opml-export">export your whole feed collection</a>, but not generate an OPML feed corresponding to the panels on a particular tab, I think?)</p>
+
+<p>For example, here&#8217;s a an <a href="http://www.opmlmanager.com/outliner/ounews">OPML version of the OU News tab</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5075873218602552274"><img src="http://lh3.google.com/image/tony.hirst/RnEfzJe5S9I/AAAAAAAAAF8/Bm4Xza_WapA/s800/ouNewsOPMLView.png" /></a></p>
+
+<p>(Here&#8217;s the actual <a href="http://www.opmlmanager.com/opml/ounews.opml">OPML feed</a>; and here&#8217;s one for the <a href="http://www.opmlmanager.com/opml/outthere.opml">OUt There</a> tab.)</p>
+
+<p>This code is derived (handcrafted) from the feed panels contained on the corresponding tab of the <a href="http://ouseful.open.ac.uk/">OUseful Dashboard</a>. It would be nice to see this sort of OPML feed made available from each tab.</p>
+
+<p>I&#8217;ve actually grouped the feed links into folders that represent the columns on the PageFlakes page, to make explicit the intention being that surfaces like PageFlakes should also be able to <em>display</em> OPML files. Round-tripping could then be provided in two ways:</p>
+
+<ol><li>An OPML file could be used to import a set of feed links into a tab. Pageflakes sort of offers this at the moment - an OPML file can be uploaded to a tab, wherein the OPMLd feed links are bookmarked and can then be placed on the tab as individual panels. I suggested to the PageFlakes chaps that as well as OPML file upload, import from an OPML URL should also be supported (as it is in <a href="http://www.opmlmanager.com">OPML Manager</a>, for example), so that may be on the cards some time soon? <img src='http://conclave.open.ac.uk/OUseful/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' />  By exporting as well as importing OPML, this also provides an <em>ad hoc</em> mechanism for grabbing a copy of a particular dashboard tab.</li>
+<li>An OPML file could be used to feed a <em>live</em> set of feed URLs into a tab, turning the tab into an OPML reading list viewer. <a href="http://grazr.com">Grazr</a> already does this, of course, but it doesn&#8217;t offer the dashboard style view that PageFlakes and Netvibes do. Subscribing to an OPML feed could then populate a tab from the OPML feed contents. The feed linked to above shows how it&#8217;s also possible to add a small amount of structure (which column to put each feed panel into) to the feed, albeit in a clumsy, clunky way.
+OPML feeds can also be used to define the contents of <em>several</em> tabs, as this (evolving) <a href="http://grazr.com/config.html?file=http://www.opmlmanager.com/opml/dashboardDemo.opml">OUseful Dashboard OPML  feed (via Grazr)</a> demonstrates.</li></ol>
+
+<div style="height:350px;width:500px;"><a href="http://grazr.com/gzpanel.html?theme=gloss_silver&view=3p&file=http://www.opmlmanager.com/opml/dashboardDemo.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?theme=gloss_silver&view=3p&file=http://www.opmlmanager.com/opml/dashboardDemo.opml"></script></div>
+
+<p>At the moment, I have just used the OPML to transport feed URLs around, but OPML as currently defined also allows you to transport HTML around inside an OPML item. This would be ideal for populating a simple HTML note  panel, for example.</p>
+
+<p>Being able to add <em>functional</em> items to a panel would also be possible by making use of something like <a href="http://docs.grazr.com/script/spec/1.0/">GrazrScript</a>. (For example, GrazrScript is used to define the <a href="http://blogs.open.ac.uk/Maths/ajh59/009224.html">OpenLearn search widget</a> that appears on the first OUseful Dashboard tab.</p>
+
+<p>Now there&#8217;s a thought: PageFlakes and Grazr joining forces...</p>
+
+<p>In the meantime, how hard could it be to generate a panelled display from an OPML feed using something like <a href="http://nexus.zteo.com/2006/12/31/create-your-own-webtop-in-phpjs-in-no-time/">Chris Ravensroft&#8217;s "Create your own WebTop in php/js in no time" approach</a>? ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 14, 2007 12:25 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010415.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

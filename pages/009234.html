@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: FOAFed at last...</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009233.html" title="The OpenLearn_daily Shop" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/009237.html" title="Click On..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/009233.html">&laquo; The OpenLearn_daily Shop</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/009237.html">Click On... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 29, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">FOAFed at last...</h3>
+
+<p>After seeing a blog post just over a week ago with a graphic demonstrating how to <a href="http://fgiasson.com/blog/index.php/2007/01/21/reaching_at_least_600_000_people_with_19">reach at least 600 000 people with 19 contacts</a> via <a href="http://www.foaf-project.org/">FOAF</a> (friend of a friend) connections, I thought I should get round to creating my own FOAF record.</p>
+
+<p>A quick trawl of generators turned up things like <a href="http://www.ldodds.com/foaf/foaf-a-matic.html">FOAF-a-Matic</a>, which I've come across several times before, and which generates a FOAF record from details you provide via a web form. It's then up to you to save this file and host it somewhere.</p>
+
+<p>This is all very well, but what if I don't have anywhere to upload the FOAF record to?</p>
+
+<p>Suppose, for example, that I want to manage my identity - and things that relate to it - from a single, hosted service (albeit one that I can trust)?</p>
+
+<p><a href="http://openid.net">OpenId</a> has been getting a lot of press lately (partly because of this <a href="http://simonwillison.net/2006/openid-screencast/">excellent screencast</a>) and I've been looking at it in the hope it can simplify cross-application working in StringLE. I've been playing with an account at <a href="http://www.myopenid.com">MyOpenID</a>, but it's pretty minimal, just offering OpenID services.</p>
+
+<p><a href="http://idproxy.net/">idproxy.net</a> looks interesting too (I've only just come across it this minute) - this service lets you log in with a Yahoo Id using <a href="http://developer.yahoo.com/auth/">Yahoo's authentication system/API</a>, and then provides OpenId services on top. <a href="http://code.google.com/apis/accounts/AuthForWebApps.html">Google also have an web app authentication API</a>, [5/2/07 - and there's now a <a href="https://connect.microsoft.com/site/sitehome.aspx?SiteID=347">Microsoft passport/identity API</a> too][19/2/07 - and here's <a href="http://www.readwriteweb.com/archives/aol_openid.php">OpenID for AOL users</a>] ] so it'll be interesting to see if <em>idproxy</em> go on to incorporate this, and maybe become the Meebo of open identity systems?! (How much trust would you have to have in <em>that</em> service, I wonder?)</p>
+
+<p>Anyway, it was gratifying to see a new service - <a href="http://videntity.org">videntity.org</a> - that provides OpenID hosting <em>as well as</em> FOAF management and vcard export.</p>
+
+<p>The service is pretty basic at the moment - you can't yet usefully add a link to a friend's FOAF record, only their homepage - but I'm hopeful that the service will develop (automatically <a href="http://www.pingthesemanticweb.com/">pinging the semantic web</a> after every FOAF record update would be handy, I think?)</p>
+
+<p>I've started tentatively, just adding a minimum of personal information and a couple of contacts, to a record stored at <a href="http://psychemedia.videntity.org/foaf.xml">http://psychemedia.videntity.org/foaf.xml</a>.</p>
+
+<p>To browse the record, I've pinched a link I found on <a href="http://kmi.open.ac.uk/people/tom">Tom Heath</a>'s site: <a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http://psychemedia.videntity.org/foaf.xml">browse my FOAF record</a>.</p>
+
+<p>Using a templated, hosted service potentially limits how comprehensive my FOAF record can be, of course (<a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http://kmi.open.ac.uk/people/tom/about/rdf">Tom's FOAF record</a> shows just how wide a range of information the FOAF record can store). If I can't edit the FOAF file directly, I can't add fields to the FOAF record that aren't supported by the editing forms provided by the host.</p>
+
+<p>That said, videntity.org does offer quite a range of form options:</p>
+
+<p><img alt="videntity.png" src="http://blogs.open.ac.uk/Maths/ajh59/videntity.png" width="455" height="333" border="0" /></p>
+
+<p>This service has a nice feature that lets you add new friends to your own FOAF record - sort of; click to add a friend, provide the URL of your current FOAF file, and it will generate you a new FOAF record containing the the details of your new friend (which you can then use to replace your old FOAF file).</p>
+
+<p>What I'd really like to be able ot do, of course, is see the browser sort of functionality incorporated into something like videntity. </p>
+
+<p>Only more so...</p>
+
+<p>Here are two visual editors that would be useful in the context of FOAF management.</p>
+
+<p>Firstly, a FOAF navigating equivalent of <a href="http://www.geni.com/">Geni</a>, the viral, visual family tree editor.<br />
+(What happens when you get this service "interoperating" with FOAF family relationships, I wonder?!)</p>
+
+<p>Secondly, this <a href="http://www.twoantennas.com/projects/delicious-network-explorer/">delicious network explorer</a> (thanks for the link, Mike:-):</p>
+
+<p><img alt="deliciousExplorer.png" src="http://blogs.open.ac.uk/Maths/ajh59/deliciousExplorer.png" width="615" height="472" border="0" /></p>
+
+<p>This tool lets you explore delicious networks. It also displays the number of delicious fans a user has, although this looser network is not browsable. [I wonder how hard it would be to feed my delicious network details into a FOAF manager and automatically have the members of my delicious network added to my FOAF record?]</p>
+
+<p>(Just by the by, I wonder if anyone has built a 'degrees of separation' tool that identifies the connections between and two individuals with delicious users, or the delicious distance between a user and a given URL, or between two URLs?)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 29, 2007 10:13 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/009234.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

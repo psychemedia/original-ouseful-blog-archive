@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>My Library Record Bookmarklet Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-size: 80%;
+	line-height: 160%;
+	font-family: "Bitstream Vera Sans", Verdana, sans serif;
+	color:#000;
+	text-align: center;
+	}
+#page {
+	text-align: left;
+	margin: 0 auto;
+	padding: 20px;
+	width: 600px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+h1 {
+	font-size: 150%;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	color: #666;
+	}
+h2 {
+	font-size: 120%;
+	margin: 10px 0 10px 0;
+}
+form {
+	margin: 10px 0 30px 0;
+	padding: 0;
+}
+ul, ol {
+	margin: 10px 0 20px 20px;
+	padding: 0;
+}
+ul li, ol li {
+	list-style-type: none;
+	color: #777;
+	margin: 3px 0 0;
+	padding: 0;
+}
+ul li:before {
+	content: "\00BB \0020";
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	font-size: 90%;
+	margin: 0;
+	padding: 2px;
+}
+code {
+	font-size: 110%;
+	color: green;
+}
+img, a img {
+	border: none;
+}
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+legend {
+	color: #666;
+}
+
+table.sbApps tr td {
+	width: 200px;
+}
+
+input.but {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+input.but:hover {
+	background: #eee;
+	border: 1px solid #000; 
+}
+a:link, a:visited {
+	color: blue;
+	text-decoration: none; 
+}
+a:hover {
+	color: red;
+	text-decoration: underline; 
+}
+  </style>
+  <script type="text/javascript">
+<!--
+
+function cleanSurname(surname){
+ // var separateFirstChar = /(\w)(\w*)/;
+  //var wordbits = surname.match(separateFirstChar);
+  //surname = wordbits[1].toUpperCase()+wordbits[2].toLowerCase();
+  //surname.toLowerCase();
+  var cleanSurname=surname.substring(0,1).toUpperCase()+surname.substring(1).toLowerCase();
+  return cleanSurname;
+}
+
+function generateMyLibraryRecordBookmarklet(){
+ var surname= document.getElementById('usrSurname').value; surname=cleanSurname(surname);
+ var barcode= document.getElementById('usrBarcode').value;
+ var output = document.getElementById('output');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ 
+ var useCustomPath=(document.customForm.useCustomPath.checked==true)?1:0;
+ var customDomain='open.ac.uk';
+ if (useCustomPath) customDomain=document.getElementById('libraryDomain').value;
+ 
+ var myBookmarklet="javascript:void(d=document);libID='"+barcode+"';surname='"+surname+"';uri='http://voyager."+customDomain+"/cgi-bin/Pwebrecon.cgi';f=d.createElement('form');f.style.visibility='hidden';f.method='post';f.action=uri;i0=d.createElement('select');i0.name='LGNT';i0.value=0;i1=d.createElement('input');i1.type='hidden';i1.name='BC';i1.value=libID;i2=d.createElement('input');i2.name='LN';i2.value=surname;i3=d.createElement('input');i3.type='hidden';i3.name='PAGE';i3.value='pbPatron';i4=d.createElement('input');i4.type='hidden';i4.name='DB';i4.value='local';f.appendChild(i0);f.appendChild(i1);f.appendChild(i2);f.appendChild(i3);f.appendChild(i4);d.body.appendChild(f);f.submit();";
+
+ //Library lookup based on Udell's generator: http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookupGenerator.html
+ var libraryLookupBookmarklet="javascript:var%20re=/([\\/-]|is[bs]n=)(\\d{7,9}[\\dX])/i;if(re.test(location.href)==true){var%20isbn=RegExp.\$2;location.href='http://voyager."+customDomain+"/cgi-bin/Pwebrecon.cgi?SAB1='+isbn+'&BOOL1=all%20of%20these&FLD1=ISBN%20(ISBN)&DB=local&CNT=25','LibraryLookup','scrollbars=1,resizable=1,width=575,height=500'};";
+ var link = document.createElement('a');
+ var linkTxt=document.createTextNode('My Library Record');  
+ link.setAttribute('href', myBookmarklet); link.setAttribute('id','myBookmarklet');
+ link.appendChild(linkTxt);
+ 
+ var lookupLink=document.createElement('a');
+ var lookupLinkTxt=document.createTextNode('Library Lookup');  
+ lookupLink.setAttribute('href', libraryLookupBookmarklet); lookupLink.setAttribute('id','libraryLookupBookmarklet');
+ lookupLink.appendChild(lookupLinkTxt);
+
+
+ var myRSS="http://library2.open.ac.uk/rss/rss_patron_details.php?l_name="+surname+"&barcode="+barcode;
+ 
+ var rssLozenge=document.createElement('img'); rssLozenge.setAttribute('alt','RSS lozenge');rssLozenge.setAttribute('src','http://blogs.open.ac.uk/Maths/ajh59/rss.gif');rssLozenge.setAttribute('border','0');
+ var rssLink = document.createElement('a');
+ rssLink.setAttribute('href', myRSS); rssLink.setAttribute('id','myLoansRSSFeed');
+ rssLink.appendChild(rssLozenge);
+ 
+ var spacer=document.createTextNode(', ');
+ var spacer2 = spacer.cloneNode(true);
+
+ output.appendChild(link);
+ output.appendChild(spacer);
+ output.appendChild(lookupLink);
+ if (!(useCustomPath)) {
+  output.appendChild(spacer2); 
+  output.appendChild(rssLink); 
+ }
+}
+
+-->
+  </script>
+</head>
+<body>
+<div id="page">
+  <h1>My Library Record Bookmarklet Generator (Voyager)</h1>
+  <p>One of the useful features of the Open University Library catalogue is the 
+    ability to <a href="http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?DB=local&PAGE=pbLogon">check your Library record</a> (current loans, etc.) either via a browser interface or RSS, 
+    as well as renew books that you currently have out on loan.</p>
+  <p>This web page application (only tested in Firefox) will create a bookmarklet 
+    that you can add to your browser and that will take you directly to your Library 
+    Record page without having to supply your surname or Library barcode details 
+    again.</p>
+<p>The generator will also create a <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">LibraryLookup bookmarklet (Udell)</a>.
+This bookmarklet will take the user
+from a page with an ISBN number in the URL to a search of their Voyager library catalogue using that ISBN number.</p>  
+  <p>The generator can also be used <a href="#others">with other library catalogues</a>.</p>
+  <fieldset>
+  <legend>enter personal Library information</legend>
+<form name="dataForm" action="" onsubmit="generateMyLibraryRecordBookmarklet(); return false;">
+
+  <table border='0'>
+<tr>
+        <td><label for="usrSurname">Surname:</label></td><td><input style="width: 200px;"
+ id="usrSurname" type="text"></td></tr><tr><td><label for="usrBarcode"> Library barcode 
+          :</label></td><td><input style="width: 200px;"
+ id="usrBarcode" type="text"></td></tr>
+<tr><td></td><td><input value="generate bookmarklets" class="but" type="submit"></td></tr></table>
+</form>
+</fieldset>
+
+  <p>Here is your bookmarklet: <span id='output'></span></p>
+  <p>Once you have created your bookmarklet, save it as a favourite/bookmark, 
+    or drag it onto your browser bookmarks toolbar (Firefox). For more information 
+    on installing bookmarks, see <a href="http://www.bloglines.com/help/easysub">here</a>.</p>
+  <p>The generator also creates a link to the RSS feed (<img alt="RSS lozenge" src="http://blogs.open.ac.uk/Maths/ajh59/rss.gif" />) 
+    for your current library loans. You can subscribe to this link in any RSS 
+    reader, or use it as a Live Bookmark in Firefox (if you aren;t sure how to 
+    do this, look for the section on adding Live Bookmarks manually <a href="http://www.gslis.utexas.edu/technology/tutorials/internet/firefox/08_firefox_bookmarks.html">here</a>).</p>
+  <p><strong>Using the bookmarklet generator with other library catalogues<a name="others" id="others"></a></strong>:</p>
+  <p>The generator creates bookmarklets for use with the Endeavor <a href="http://www.endinfosys.com/prods/voyager.htm">Voyager 
+    library catalogue</a> system. If your library uses this system, then you may 
+    be able to use the generator. From a quick look around the web, it seems that 
+    many of the Voyager catalogue systems, such as the OU's, are located at <em>http://voyager.example.com</em>. 
+    So if your library catalogue has this sort of URL, you may be in luck...</p>
+  <p> Just enter the domain (which would be <em>open.ac.uk</em> for the OU if 
+    I hadn't hardwired it as the default domain for the generator), check the 
+    box, and then use the generator above.</p>
+  <form name="customForm" id="customForm" method="post" action=""><label for='libraryDomain'>Enter domain: <em>http://voyager.</em></em></label><input id='libraryDomain' id='libraryDomain' name="libraryDomain" type="text" />
+    <input type="checkbox" name="useCustomPath" id='useCustomPath' value="useCustomPath" /> 
+  </form>
+  <p>For example, if your catalogue is at <em>http://voyager.example.com</em> 
+    enter <em>example.com</em> in the text box.</p>
+  <p><small>Page layout and design based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a></small></p>
+</div>
+</body>
+</html>

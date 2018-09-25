@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: visualisation Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+
+<h2 class="date">August 07, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010509"></a>
+<h3 class="title">Playing with Many Eyes Data Formats</h3>
+
+<p>Over the weekend, I had a little play with some sample data sets in Many Eyes, just in case I manage to get hold of some real OU course population, retention or student intention data. If I get a chance this week, I'll create some 'plausible'  dummy data and try and post some example visualisations. But in the meantime, here is something a little more abstract... <br /><br />Consider some data that has the form:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095724908934670258"><img src="http://lh3.google.com/tony.hirst/Rremzm4pJ7I/AAAAAAAAAZY/p3Y5Dh_g6o8/s800/manyeyestestdata1.png" /></a><br /><br />(In OU parlance, and in accord with my previous posts on this subject (e.g. <a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">here</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/010499.html">here</a>) courses and modules might corrspond to courses and qualifications.)<br /><br />For each row, there are multiple columns. Numerical data in each column associates a row with a column, and also provides a notion of a 'weight' value between particular row and column values.<br /><br />This sort of layout is typical of many data sets, such as some of the <a href="http://www.ucas.com/figures/index.html">UCAS statistics data</a>. For example, here is some subject data from the <a href="http://www.ucas.com/figures/enq/index.html">UCAS statistics online interactive service</a>:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095718127181309842"><img src="http://lh4.google.com/tony.hirst/Rrego24pJ5I/AAAAAAAAAY8/tAO73tnD1mE/s800/ucasData.png" /></a><br /><br />This information can be thought of as describing a weighted graph by viewing it as an <a href="http://oneweb.utc.edu/%7EChristopher-Mawata/petersen/lesson7.htm">adjacency matrix</a> - if the value of a cell is non-zero, imagine a connection between the row and column items:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713918113359730"><img src="http://lh4.google.com/tony.hirst/Rrecz24pJ3I/AAAAAAAAAYk/UCGInSUs3d8/s800/graphAdjancyMatrix.png" /></a><br /><br />Here, the 1s in the adjacency matrix represent a connection. In this case the graph is undirected (if node a is connected to node b, then node b is connected to node a) and the matrix is symmetrical.<br /><br />I had half-hoped that <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> would be able to see the example data in the format described above as an adjacency matrix and plot the corresponding network diagram, but apparently not (at least, not at the moment...).<br /><br />Instead, the data needed transforming into a format that Many Eyes did like:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095710679708018466"><img src="http://lh6.google.com/tony.hirst/RreZ3W4pJyI/AAAAAAAAAX0/8dAO999Ww6w/s800/manyEyesTestdata2.png" /></a><br /> <br />The network visualisation tool then worked perfectly:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095720734226458530"><img src="http://lh3.google.com/tony.hirst/RrejAm4pJ6I/AAAAAAAAAZI/r-XiyLbIeF8/s800/manyeyesTestdataNetwork.png" /></a><br /><br />(See if you can reconcile this graph with the data in the original format ;-)<br /><br />With the data in this form, Many Eyes can now be used to create a wide variety of visualisations of the data.<br /><br />For example, here is a bubble matrix chart showing the numbers of people on 'courses' that are associated with particular 'modules':<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713879458654002"><img src="http://lh3.google.com/tony.hirst/Rrecxm4pJzI/AAAAAAAAAYE/at_i59CbUbs/s800/manyeyesTestdataMatrix.png" /></a><br /><br />The matrix chart also support a bar chart view - here, we can view the modules (represented via a percentage measure) against courses:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713883753621314"><img src="http://lh4.google.com/tony.hirst/Rrecx24pJ0I/AAAAAAAAAYM/75RvTexA95o/s800/manyeyesTestdataMatrixbar.png" /></a><br /><br />Pie charts are also readily visualised - here is the breakdown of courses:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713896638523218"><img src="http://lh3.google.com/tony.hirst/Rrecym4pJ1I/AAAAAAAAAYU/oKwNr1oUenc/s800/manyeyestestdataPie1.png" /></a><br /><br />And at the flick of a drop down list, a pie chart breakdown of the distribution by module:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713905228457826"><img src="http://lh5.google.com/tony.hirst/RreczG4pJ2I/AAAAAAAAAYc/hXnDNYEqX2A/s800/manyeyesTestdataPie2.png" /></a><br /><br />You might also notice that a particular pie segments can be visually emphasised.<br /></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010509.html">12:11 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10509" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 04, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010505"></a>
+<h3 class="title">More UK Emergency Mapping Opportunites - Foot and Mouth</h3>
+
+<p>[For a Google Map showing the current (as of August 3, 2007) "foot and mouth exclusion zone", try here: <a href="http://maps.google.com/maps?q=http:%2F%2Fwww.edparsons.com%2FFoot_and_Mouth.kml&ie=UTF8&t=h&z=11&om=1">Foot and Mouth Map, as of 3/8/07</a>.]</p>
+
+<p>A couple of weeks ago it was floods, and I put together a Google map mashup of <a href="http://blogs.open.ac.uk/Maths/ajh59/010494.html">clean water bowser locations in Gloucester</a>, and now it's a <a href="http://www.ft.com/cms/s/57bfbb8c-4208-11dc-8328-0000779fd2ac.html">foot and mouth alert</a> (UPDATE: <a href="http://microbiologybytes.wordpress.com/2007/08/04/uk-foot-and-mouth-disease-outbreak/">10 Facts About Foot and Mouth Disease</a>.)</p>
+
+<p>I caught the news as I was driving home tonight, (I wasn't too far from the location of the outbreak at the time!) and when I heard a three kilometer <s>exclusion</s> protection zone and five kilometer surveillance zone had been imposed, my first thought was to wonder how easy it would be to plot some circular map overlays onto a Google map, a visualisation effect I originally saw demonstrated by Eric Meyer's <a href="http://meyerweb.com/eric/tools/gmap/hydesim.html">HYDESim: High Yield Detonation Effects Simulator</a>. </p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094628627122300610"><img src="http://lh3.google.com/tony.hirst/RrPBvm4pJsI/AAAAAAAAAWI/kO3YQ1rA_rA/s800/hydesim.png" /></a></p>
+
+<p>Checking on the <a href="http://www.defra.gov.uk/animalh/diseases/fmd/default.htm"><em>defra</em> Foot and Mouth Disease</a> website, I found they'd already got an interactive map - of sorts - up already, although it's by no means as slick as a Google maps interface.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094624078751934114"><img src="http://lh4.google.com/tony.hirst/RrO9m24pJqI/AAAAAAAAAVw/aoMg7ZjQpoM/s800/footMouthMap1.png" /></a></p>
+
+<p>For example, the map isn't draggable and the pan and zoom effects are quite coarse grained:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094624095931803314"><img src="http://lh4.google.com/tony.hirst/RrO9n24pJrI/AAAAAAAAAV4/SbxJxUgbFOI/s800/footMouthMap2.png" /></a></p>
+
+<p>The <a href="http://news.bbc.co.uk/1/hi/england/6930684.stm">BBC News site</a> has gone for a static map:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094633420305802962"><img src="http://lh3.google.com/tony.hirst/RrPGGm4pJtI/AAAAAAAAAWY/_t1xNs_jE2Y/s800/footMouthBBCmap.png" /></a></p>
+
+<p>(Interestingly, there was no information that I could find on the <a href="http://www.co-ordination.gov.uk/">UK Resilience</a> homepage, even though COBRA had been called. I'd have thought the two would be related, for some reason.)</p>
+
+<p>It's a bit late now to start trying to put together a Google map equivalent of the above (in case it takes longer than I expect!) but as potential building blocks I found this site that uses calls on the Google maps API to plot a circle - <a href="http://maps.forum.nu/gm_clickable_circle.html">Google Maps clickable circle generator</a> - as well as a more general application for creating Google Map overlays - <a href="http://lecturer.eng.chula.ac.th/fsvskk/gglmap2/gmad-v2x.html">Google Maps-API Application for Digitizing (GMAD)</a>.</p>
+
+<p>And here's a script that will <a href="http://www.movable-type.co.uk/scripts/latlong.html">calculate the distance between two latitude/longitude points</a>.</p>
+
+<p>If you come across a foot and mouth exclusion zone Google map, please send me the link :-)</p>
+
+<p>UPDATE: <a href="http://www.edparsons.com/?p=508">Ed Parsons</a> has just posted a <a href="http://www.edparsons.com/Foot_and_Mouth.kml">KML file for the surveillance and protection zones</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094784800723117794"><img src="http://lh6.google.com/tony.hirst/RrRPyG4pJuI/AAAAAAAAAWs/coOjZ_lGu2s/s800/footMouthKML.png" /></a></p>
+
+<p>See it overlayed on a <a href="http://maps.google.com/maps?q=http:%2F%2Fwww.edparsons.com%2FFoot_and_Mouth.kml&ie=UTF8&t=h&z=11&om=1">Google map</a>.</p>
+
+<p>[UPDATE 17/7/07: There have a been a few earthquakes recently, and the mashups that have sprung up around them look like they may contain <a href="http://googlemapsmania.blogspot.com/2007/08/earthquake-google-maps-mashup.html">some reusable circle overlay plotting tricks..?</a>]</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010505.html">01:23 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10505" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 02, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010504"></a>
+<h3 class="title">NASA World Wind - 3D Globe plus NASA Data</h3>
+
+<p>Driving up to Milton Keynes today, I was listening to an <a href="http://www.itconversations.com/shows/detail1811.html">IT Conversations podcast from Where 2.0 about NASA Worldwind</a> that mentioned the <a href="http://worldwind.arc.nasa.gov/index.html">NASA World Wind</a> app, a 3D globe that can be used to visualise Earth related data as well as the Moon, Mars, Venus and Jupiter.</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206620815664690"><img src="http://lh6.google.co.uk/tony.hirst/RrJB7m4pJjI/AAAAAAAAAUo/HyztNsbMlKM/s800/worldwindLandsatGeoCover.jpg" /></a></p>
+
+<p>As well as providing a 3D visualisation of the globe (along with 3D relief) World Wind provides overlays for many scientific visualisations, including animations.</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206625110632002"><img src="http://lh3.google.co.uk/tony.hirst/RrJB724pJkI/AAAAAAAAAUw/oYq8XD6MPmU/s800/worldwindScienceViz.jpg" /></a></p>
+
+<p>As mentioned, World Wind is not just about the Earth. Here's Mars:</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206633700566610"><img src="http://lh5.google.co.uk/tony.hirst/RrJB8W4pJlI/AAAAAAAAAU4/OB_3U_pVECI/s800/worldwindMars.jpg" /></a></p>
+
+<p>Mars in relief (you only really get the feel for it when interacting with the globe):</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206637995533922"><img src="http://lh6.google.co.uk/tony.hirst/RrJB8m4pJmI/AAAAAAAAAVA/tu_heu50vJk/s800/worldwindMars2.jpg" /></a></p>
+
+<p>Mars in colour relief:</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206642290501234"><img src="http://lh3.google.co.uk/tony.hirst/RrJB824pJnI/AAAAAAAAAVI/bv3sHXBm1KA/s800/worldwindMarsColourRelief.jpg" /></a></p>
+
+<p>Also mentioned in the questions at the end of the podcast was <a href="http://www.shatters.net/celestia/">Celestia</a>, a "free space simulation that lets you explore our universe in three dimensions.... Unlike most planetarium software, Celestia doesn't confine you to the surface of the Earth. You can travel throughout the solar system, to any of over 100,000 stars, or even beyond the galaxy. "</p>
+
+<p>But just for a taste, here's a view of part of our own solar system - Saturn:</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206646585468546"><img src="http://lh4.google.co.uk/tony.hirst/RrJB9G4pJoI/AAAAAAAAAVQ/UOaNMBvz-1Y/s800/celestiaSaturn.jpg" /></a></p>
+
+<p>And something man-made - the Hubble Space Telescope (with constellations mapped out in the background).</p>
+
+<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206650880435858"><img src="http://lh5.google.co.uk/tony.hirst/RrJB9W4pJpI/AAAAAAAAAVY/le2F7X-GsLs/s800/worldwindHubble.jpg" /></a></p>
+
+<p>I don't think OpenLearn has any astronomy units up yet, but a question occurs to me... How can we use OpenLearn to support learning around applications such as World Wind or Celestia, <em>if</em> there aren't any related OpenLearn units available?</p>
+
+<p>I guess the only way at the moment is to upload the basics of a <em>new</em> unit to <a href="http://labspace.open.ac.uk">LabSpace</a>?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010504.html">09:52 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10504" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 31, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010502"></a>
+<h3 class="title">Visualising OpenLearn Course Listings</h3>
+
+<p>In the previous post (<a href="http://blogs.open.ac.uk/Maths/ajh59/010501.html">Visualising OpenLearn Course Listings: Prequel</a>) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be uploaded to the <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> visualisation tool.</p>
+
+<p>In this post, I'll quickly demonstrate several possible visualisations, leaving a fuller discussion of the pros, cons, mertis and otherwise of each technique to a series of later posts.</p>
+
+<p>If you want to create your own visualisations, you can find the data here: <a href="http://services.alphaworks.ibm.com/manyeyes/data/SO2G2IsOtha6f-UCD1p2I2-">OpenLearn unit listing data (as of 28/7/07)</a>.<br />
+<hr><br />
+<h2>OpenLearn Treemap</h2><br />
+Treemaps provide a powerful way of visualising hierarchical data. This view shows how we can navigate organise <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6j-Ure3r2I2-">OpenLearn Units by Subject area</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292437026710690"><img src="http://lh5.google.com/tony.hirst/Rq8CfG4pJKI/AAAAAAAAAQI/x8VfivYuqlU/s800/openlearnManyEyesTreemap1.png" /></a></p>
+
+<p>The labels of each of the smallest inner boxes correspond in this case to OpenLearn unit codes.</p>
+
+<p>You might also notice a further level of structure, specifically boxed groupings of courses <i>within</i> a Subject area (groups of cells bounded by a purple(?) or grey(?) line, rather than the white lines separating individual cells). These represent groupings at the level of the <em>originating</em> Open University course (in many cases, several OpenLearn units are derived from a single Open University course).</p>
+
+<p>The following tree map explores the relationship between originating courses and OpenLearn Units in a clearer way:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292424141808786"><img src="http://lh6.google.com/tony.hirst/Rq8CeW4pJJI/AAAAAAAAAQA/Qe6pJoDW3P8/s800/openlearnManyEyesTreemap2.png" /></a></p>
+
+<p>(To generate new views on the Treemap, just reorder the column headings.)</p>
+
+<p><h2>OpenLearn Matrix View</h2><br />
+The <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha600kvfUt2I2-">OpenLearn Units matrix view</a> can be used to illustrate how many units a particular course has contributed to OpenLearn, ordered by subject area. This view is useful for revealing how originating courses may actually contribute to several different subject areas:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292368307233890"><img src="http://lh5.google.com/tony.hirst/Rq8CbG4pJGI/AAAAAAAAAPo/InhLdiaXCVs/s800/openlearnManyEyesMatrix.png" /></a></p>
+
+<p>The number in each circle is a count of how many units carry each originating course code label.</p>
+
+<p><br />
+<h2>OpenLearn Units Network Diagrams</h2><br />
+Netowork diagrams can be used to show up relationships between elements of the data set. This view shows the relationship between <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6cB-BlHt4I2-">Subject Areas and content analysis generated tags</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292449911612594"><img src="http://lh4.google.com/tony.hirst/Rq8Cf24pJLI/AAAAAAAAAQQ/HOjU0P_mZ_0/s800/openlearnManyEyesNetwork2.png" /></a></p>
+
+<p>Unlike the Treemap visulisation, in which different views can be obtained form a single visualisation widget, different network maps must created as different visualisations by selecting attribute pairs:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292454206579906"><img src="http://lh5.google.com/tony.hirst/Rq8CgG4pJMI/AAAAAAAAAQY/WBdVmhBgkUU/s800/openlearnManyEyesNetworkSelect.png" /></a></p>
+
+<p>This view shows <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6u-EgZQr2I2-">unit titles arranged around subject areas</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292406961939586"><img src="http://lh6.google.com/tony.hirst/Rq8CdW4pJII/AAAAAAAAAP4/jjlDmIscu-I/s800/openlearnManyEyesNetwork1.png" /></a></p>
+
+<p>Although network diagrams can get cluttered, they can reveal interesting relationships. If OpenLearn users were allowed to tag units, a visualisation of connections between user tags and courses or user tags and subject areas could prove informative.</p>
+
+<p><h2>OpenLearn Tag Cloud</h2><br />
+The Many Eyes Tag Cloud visualisation parses processed input text to procude a tag cloud of the most frequently occuring terms. For example, here is a <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha63_kPTZr2I2-">tag cloud of OpenLearn content analysis tags</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292394077037682"><img src="http://lh3.google.com/tony.hirst/Rq8Ccm4pJHI/AAAAAAAAAPw/yXqKteimKWY/s800/openlearnManyEyesTagcloud.png" /></a></p>
+
+<p>The same visualisation widget can also be used to display clouds for other data fields.</p>
+
+<p>Unfortunately, the tag cloud cannot be used to link to external pages or pop-up large blocks of text (for example, complete unit descriptions would be useful in this case).</p>
+
+<p><hr /><br />
+I'm not sure that the idea behind Many Eyes was to prototype website navigation tools, but if you consider templated websites - like OpenLearn - as big databases, I think it follows naturally!</p>
+
+<p>Time allowing, I'll pop up a series of separate posts, one per visualisation, looking at each view in a little more detail.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010502.html">11:23 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10502" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+	
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

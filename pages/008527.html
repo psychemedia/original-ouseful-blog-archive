@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Read/Write Email with Wikimail</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008496.html" title="Amazon Search Widget in Grazr" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008545.html" title="Sending Wikimail Messages in Gmail" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">&laquo; Amazon Search Widget in Grazr</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008545.html">Sending Wikimail Messages in Gmail &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 07, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Read/Write Email with Wikimail</h3>
+
+<p>A couple of things over the weekend brought the idea of <a href="http://blogs.open.ac.uk/Maths/ajh59/005488.html">Wikimail</a> - <em>Read/Write email</em> back to mind, so a half hour hack on Saturday and a chat with the handily online <a href="http://suda.co.uk">Brian Suda</a> (who suggested the Read/Write Email moniker) mean there's a basic demo now available...</p>
+
+<p>For those who don't want to click thru to the past for the background, the idea behind wikimail was to use email to pass a wiki backwards and forwards. Instead of reading an email message and replying to it, what I wanted for certain classes of email exchange was a more collaborative writing space, and a wiki seemed to offer an appropriate solution.</p>
+
+<p>At this point, it's worth explaining that I work from home a lot, and I take part in way too many conversations that aren't really suited to email (part of the reason for trying to move some of them to chat/IM conversations).</p>
+
+<p>In particular, one class of conversation that I think the structure of email exchanges often gets in the way of  is an ongoing discussion, in which an informal document (maybe even a proto-blog post) is constructed over several email exchanges in the same thread. The conversants reply to replies, insert new comments within the flow of quoted text from previous emails, and maybe delete chunks portions of previously quoted text too.</p>
+
+<p>So that's the itch behind the wikimail scratch: rather than developing a conversation through multiple levels of quotation and 'reply with quote' trauma, conversants could develop an idea via the wiki in their email space. The important thing was not to move the players out of their email client - the exchange should proceed within the email environment.</p>
+
+<p>But first - what were things that brought it to mind this time round?</p>
+
+<p>Firstly, I was looking for a free wiki that I could display in the tools frame of <a href="http://ouseful.open.ac.uk/stringle2.php">StrinGLE</a> . When I first toyed with the idea of wikimail I tried embedding a Mediawiki wiki in an frame in Gmail - but it wanted to go to the top of the window, so I went on to playing with other things. Over the weekend, I came across a couple of  free wikis that seemed to suit the bill  - <a href="http://www.pbwiki.com/">PBwiki</a> and <a href="http://wikidot.com">Wikidot</a>...</p>
+
+<p>Secondly, I've started wondering about the extent to which Gmail can act as the single interface to a lot of my online activity. I use the mail tools daily, GTalk instant messaging too, and although I've got the <a href="http://persistent.info/archives/2006/10/13/google-reader-redux">Google Reader in Gmail Greasemonkey script</a> installed, I don't actually use it (I'm still on Bloglines, and wondering whether to switch to Google Reader...):</p>
+
+<p><img alt="gReaderInGmail.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gReaderInGmail.jpg" width="423" height="225" border="0" /></p>
+
+<p>Thirdly was the news that <a href="http://googleblog.blogspot.com/2006/10/spot-on.html">Google had bought Jotspot</a>, and I started wondering what hey were going to do with it... Jotspot wikis allow users to email comments in, with the mail comments appear at the bottom of the wiki page, if I remember correctly, but that all seemed a bit clunky when I played with it ages ago...</p>
+
+<p>So - the time was right, and it took less than ten minutes to hack an old Greasemonkey script that would search the body of an open email message in Gmail for a keyphrase (like <em>wikimail:wikimaildemo.pbwiki</em>) and replace it with an iframe containing the wiki - <em>http://wikimaildemo.pbwiki.com</em>, for example.</p>
+
+<p>There were significant usability problems with the initial, ultimately crude script (and I'm afraid I haven't addressed most of them yet, Brian...! Nor have I had a chance to play with Backpack...) and the application is not, as yet, very portable... i.e. it's restricted at the mo to Firefox and Gmail.</p>
+
+<p>One major issue with the original script was that it was impossible to reply to a wikimail message, although I have fixed that problem, after a fashion...</p>
+
+<p>Anyway - here's the demo; if you have <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> installed in <a href="http://getfirefox.com">Firefox</a> and you want to try it out, install the <a href="http://ouseful.open.ac.uk/wikimail2.user.js">wikimail4gmail Greasemonkey script</a> and have a play...</p>
+
+<p>Alternatively, there's a <a href="http://ouseful.open.ac.uk/gmailwikimail.xpi">Firefox wikimail extension</a> generated via <a href="http://arantius.com/misc/greasemonkey/script-compiler">this Greasemonkey compiler</a>.</p>
+
+<p>The wikimial script/extension will rewrite wikimail addresses as follows:</p>
+
+<p>- <em>wikimail:some.domain</em> is rewritten as <em><strong>http://</strong>some.domain<strong>.com</strong></em> <br />
+- <em>wikimail:some.domain/path</em> is rewritten as <em><strong>http://</strong>some.domain<strong>.com</strong>/path</em> (which means it can address subpages in a wiki)</p>
+
+<p>Follow the cribs in the screenshots to find some demo/test wikis. The wikidot one allows anonymous access...</p>
+
+<p>For example, here's a message in Gmail:</p>
+
+<p><img alt="wikimail1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail1.jpg" width="461" height="239" border="0" /></p>
+
+<p>See the <em>Show/hide wikimail</em> over on the right? The wikimail script put that there (if anyone can give me a better graphic, that would be appreciated ;-). Here's what happens if you click it:</p>
+
+<p><img alt="wikimail2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail2.jpg" width="423" height="338" border="0" /></p>
+
+<p>(Err - the URL for the GM script is incorrect in that screenshot - I've corrected it in the wiki though ;-)</p>
+
+<p>A wiki appears. In this case, you will need to login (if you haven't already). That wiki is set up to allow guests in with password 'demo', so you can try it out if you want. Of course, you could always link to a private wiki (i.e. on ewith restricted access).</p>
+
+<p>If you click on the <em>Show/hide wikimail</em> link again, the wiki will close.</p>
+
+<p>It is sometimes sort of possible to link to a wiki that doesn't exist yet:</p>
+
+<p><img alt="wikimail3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail3.jpg" width="620" height="195" border="0" /></p>
+
+<p>Sort of:</p>
+
+<p><img alt="wikimail4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail4.jpg" width="785" height="369" border="0" /></p>
+
+<p>Here's a wiki on another site:</p>
+
+<p><img alt="wikimail5.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail5.jpg" width="242" height="100" border="0" /></p>
+
+<p>This one is set up for anonymous access, so anyone can go in and play - and also create new pages:</p>
+
+<p><img alt="wikimail6.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail6.jpg" width="565" height="324" border="0" /></p>
+
+<p>This shows how to set up a wikimail link to point to a subpage:</p>
+
+<p><img alt="wikimail8.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail8.jpg" width="307" height="114" border="0" /></p>
+
+<p>This means you can use the email thread to construct a conversation over serveral wikimail pages; or use one wiki for wikimail, with different pages for each wikimal thread:</p>
+
+<p><img alt="wikimail7.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail7.jpg" width="418" height="236" border="0" /></p>
+
+<p>There are still a few issues with closing wikimail frames in long reply threads, but a page refresh will usually sort that out if it's too annoying...</p>
+
+<p>If you don't grok it from this description, try the script out ;-)</p>
+
+<p>And if you do give it a spin, please let me know how you get on...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November  7, 2006 11:50 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008527.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

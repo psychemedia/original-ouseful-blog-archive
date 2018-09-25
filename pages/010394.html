@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Google Gadgets - RSS Feed Powered YouTube Playlist Player</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010382.html" title="An Institutional Dashboard Using Pageflakes" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010400.html" title="ICT Resource Digger - fOUndit" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010382.html">&laquo; An Institutional Dashboard Using Pageflakes</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010400.html">ICT Resource Digger - fOUndit &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 08, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Google Gadgets - RSS Feed Powered YouTube Playlist Player</h3>
+
+<p>Some time ago, I posted a bookmarklet that created a <a href="http://blogs.open.ac.uk/Maths/ajh59/009897.html">YouTube Playlist RSS feed</a> by scraping a playlist page and calling a feed generating service with the IDs for the movies in that playlist.</p>
+
+<p>Although YouTube provides RSS feeds for many services, playlists is not (currently) one of them. For example feeds by user, tag, most recently viewed, most favourited and so on (see the <a href="http://www.youtube.com/rssls">full list of YouTube RSS feeds/feed URL patterns</a>).</p>
+
+<p>One problem with the bookmarklet approach was that a static feed was created for movies listed on the playlist at the time the feed was created. If the playlist changed, the changes would not be propagated to the feed.</p>
+
+<p>So here's a temporary stopgap - a minimal, Dapper created <a href="http://www.dapper.net/dapp-howto-use.php?dappName=youtubePlaylistscraper">YouTube Playlist RSS feed</a>. Given a YouTube playlist ID, the Dapp scrapes the actual YouTube playlist page and generates a feed. The link element in each feed item points to the YouTube page for each movie described in the playlist.</p>
+
+<p>The Dapp actually creates a feed with an additional empty link on the end (bad scraping design on my part). Rather than tidy the feed in the Dapp, I thought I'd create a Yahoo! Pipe that would clean the Dapp feed and only pass on links that genuinely referred to a YouTube movie page: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=TEM_6l0Q3BG6fZjojknRlg">clean YouTube playlist feed pipe</a>.</p>
+
+<p>Having generated this feed, I thought I should provide a player for it. The feed items don't contain enough information to power a <a href="http://splashcastmedia.com">Splashcast</a> channel - each feed item is limited to a title and a link at the current time - so I thought I'd try to find a way of wiring the feed into  another widget platform, in this case Google Gadgets.</p>
+
+<p>For inspiration (i.e. code I could reuse ;-), I had a look at the Google create your own  <a href="http://www.google.com/ig/gmcreator?moduleurl=gm_youtube.xml">YouTube Channel gadget</a> and a simple RSS viewing gadget (I've lost the reference for this at the mo :-(.</p>
+
+<p>(To simplify the internals of the gadget, which actually feeds off the tidied Yahoo pipes filtered version of the scraped Youtube playlist feed, I use a good old fashioned URL rewrite, which takes URLs of the form <em>http://searchfeedr.com/youTubePlaylistFeed/FEEDURL</em> and rewrites them to the Yahoo pipe URL, which has the form <em>http://pipes.yahoo.com/pipes/pipe.run?_id=TEM_6l0Q3BG6fZjojknRlg&_render=rss&_run=1&textinput1=FEEDURL</em>.)</p>
+
+<p>Here's the result: a <a href="http://www.google.com/ig/directory?root=%2Fig&dpos=top&num=24&url=http://www.searchfeedr.com/gadgets/youTubePlaylistGadget.xml">Google RSS Feed Powered YouTube Playlist Player gadget for iGoogle</a>, <a href="http://www.google.com/ig/directory?synd=open&num=24&url=http://www.searchfeedr.com/gadgets/youTubePlaylistGadget.xml">Google RSS Feed Powered YouTube Playlist Player gadget for your webpage</a> . (If you want the code, you can find it here: <a href="http://www.searchfeedr.com/gadgets/youTubePlaylistGadget.xml">Google Gadget - Youtube Playlist video player code</a>.)</p>
+
+<p><script src="http://gmodules.com/ig/ifr?url=http://www.searchfeedr.com/gadgets/youTubePlaylistGadget.xml&amp;up_mtitle=youTube%20Playlist%20Player&amp;up_mfeed=http%3A%2F%2Fwww.youtube.com%2Fview_play_list%3Fp%3D398D1C0A2DC0ED05&amp;synd=open&amp;w=320&amp;h=290&amp;title=YouTube+Playlist+Player&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script></p>
+
+<p>This gadget can be added to your <a href="http://google.com/ig">Google iGoogle Personal page</a>, or embedded in your own blog or social network personal page, in the normal way. <a href="http://fusion.google.com/ig/add?synd=open&source=ggyp&moduleurl=http://www.searchfeedr.com/gadgets/youTubePlaylistGadget.xml" ><img src="http://gmodules.com/ig/images/plus_google.gif" style="border:0" alt="Add Google Youtube playlist player gadget" /></a></p>
+
+<p>By default, the gadget is subscribed to a demo <a href="http://www.youtube.com/view_play_list?p=398D1C0A2DC0ED05">OUseful Media Futures YouTube Video Playlist</a>.</p>
+
+<p>[UPDATE: if you don't want to use a Google Gadget, here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/010419.html">live youTube playlist feed video playing Grazr widget</a>]</p>
+
+<p>To customise the gadget to use a YouTube playlist of your own (or your own choosing), simply go to the gadget customisation panel and paste in the URL of the YouTube playlist page you want to subscribe to:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073653261676399426"><img src="http://lh5.google.com/image/tony.hirst/Rmk8wpe5S0I/AAAAAAAAAD4/cZ-PnjhtdVM/s800/youtubeGadgetConfig.png" style="border:0" /></a> <a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073654069130251090"><img src="http://lh5.google.com/image/tony.hirst/Rmk9fpe5S1I/AAAAAAAAAEE/-eqBA-DfTFM/s800/youtubeGadgetHtmlConfig.png" style="border:0" /></a></p>
+
+<p>In retrospect, a far more efficient way of creating the gadget would be to simply use the gadget to scrape the YouTube playlist page directly rather than letting Dapp do this. I shouldn't really be using the extra URL rewrite step either, but it's a trick that can help speed up prototyping, so in that sense it's worth recording here. The gadget based scraper on my to do list, by the way, but way down there at the moment. (If you beat me to it, please post me a link. ;-)</p>
+
+<p>Rather more pressing is the need to improve the gadget interface a little. What I have in mind is displaying a list of movie titles as the initial gadget view (simply reusing the simple feed gadget code). An additional <em>Menu</em> control item between the <em>Next</em> and <em>Previous</em> controls would link back to this list. Clicking on any menu item would play the corresponding movie in the gadget.</p>
+
+<p>As to why would I want to access playlist feed? Partly because it provides an easy way of allowing users to programme an embedded YouTube player from a personally managed control panel, thus getting round the problem of subscribing a tag based feed that is open to spam attacks via the tags (that is, third parties injecting content into the tag feed by tagging movies in that way).</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June  8, 2007 12:30 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Interesting, but this approach seems hellishly complicated.<br />
+The info on YouTube is only really going to be leveraged when YT creates RSS fees for keyword-specific searches in the way that Google News does.</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at June  8, 2007 01:02 PM</span>
+</div>
+<div class="comments-body">
+<p>The approach is very convoluted - yes... it was just the way things evolved, a rambling wander through web APIs as I looked around for things to wire toegther - not how I'd do it now, knowing that I wanted a Google Gadget YouTube Playlist player...;-) </p>
+
+<p>In use it's easy though - just grab the gadget and past in a YouTube playlist url taken straight from any youtube playlist page - if you use/find a relevant playlist that is...</p>
+
+<p>One of the things I keep exploring is using rss to pipe around managed STATIC content, rather than live search feeds for example. This means I can control the content, and manage it on one location (eg a youtube playlist) and not have to worry about updating it at point of use/publication (in a gadget on a blog, or on iGoogle, or on my Google desktop, for example)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at June  8, 2007 02:30 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010394.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

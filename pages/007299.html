@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Wishlist Carousel</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007298.html" title="The Compleat Grazr/OPML Library Interface, v 0.0.1" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007302.html" title="JSON and Microformats" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007298.html">&laquo; The Compleat Grazr/OPML Library Interface, v 0.0.1</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007302.html">JSON and Microformats &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 02, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Wishlist Carousel</h3>
+
+<p>A few weeks ago, a really neat trick appeared on the <a href="http://www.kokogiak.com/default.asp">Kokogiak blog</a> showing how to go about <a href="http://www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html">Consuming Amazon's Web API Directly with Javascript (via JSON and XSLT)</a>.</p>
+
+<p>I've been looking for a reason to try that technique out ever since then, and had half a mind that I'd like to use the approach to develop some sort of personally hosted <a href="http://blogs.open.ac.uk/Maths/ajh59/007181.html">bookshelf interface</a> for my Amazon wishlist, as a precursor to trying out the same thing for OU Library new books listings (I was thinking of something along the lines of a homebrew version of the <a href="http://blogs.open.ac.uk/Maths/ajh59/007105.html">Blogbridge Library</a> interface).</p>
+
+<p>So when the rather neat <a href="http://billwscott.com/carousel/">Carousel component</a> extension to the Yahoo user interface (YUI) tools appeared, I realised the ideal opportunity had arrived.</p>
+
+<p>So much so in fact that I had to take today off as holiday so I could spend some guilt free time tinkering with code;-) And the result?</p>
+
+<p><img alt="amazonXSLTcarousel.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/amazonXSLTcarousel.jpg" width="470" height="172" border="0" /></p>
+
+<p>...or see a demo here: <a href="http://blogs.open.ac.uk/Maths/ajh59/wishlistCarousel.html">Carousel and Amazon2JSON Wishlist demo</a></p>
+
+<p>The script at the moment is a bit crude and needs tidying/fully reconciling against the YUI libraries. However, it does demonstrate quite a few things:</p>
+
+<ul>
+<li>the use of an Amazon webservice to pull down my wishlist information: <a href="http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium">Amazon wishlist feed</a></li>
+<li>the use of  an Amazon webservice powered XSLT against <a href="http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl">this XSL file</a> to produce <a href="http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium&Style=http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback">this JSON feed</a>;</li>
+<li>how to pull in a JSON feed to a file and then consume it (cribbed from Kokogiak; this actually needs revising to just use YUI components, which will make the code a bit tidier);</li>
+<li>the use of Bill Scott's <a href="http://billwscott.com/carousel/">YUI carousel component</a> to display the images.</li>
+</ul>
+
+<p>One of the main reasons I like this approach is that the solution can be managed completely on the client side. That is, no need for server access (assuning you can pull the necessary YUI files in from somewhere) or browser jiggery pokery trying to get around the browser cross-site XML security policies.</p>
+
+<p>That said, the next demo I have in mind for the carousel component - using it to display new books in the library by consuming the new books feeds - I think I will do on a server. Using <a href="http://ning.com">Ning</a>, maybe? Then others can play along too even if they don't have access to a server of their own...</p>
+
+<p><strong>Update 14/8/06:</strong>: here's another demonstration of using JSON to populate the widget with book covers, a <a href="http://exlibris.ath.cx/?p=90">new books</a> carousel. This also adds a reflection of the book cover, which is a neat effect.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August  2, 2006 05:25 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007299.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

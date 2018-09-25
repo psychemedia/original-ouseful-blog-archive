@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenMark Computer-Assisted Assessment Tool</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010512.html" title="Three Takes on a Google Suggest Animated Demo" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010514.html" title="Wii Observations" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010512.html">&laquo; Three Takes on a Google Suggest Animated Demo</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010514.html">Wii Observations &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 14, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenMark Computer-Assisted Assessment Tool</h3>
+
+<p>For some time now, the OU has been running a "computer-assisted assessment system" on some of our courses using an in-house system known as <em>OpenMark</em>. The project is actually made available as an open source project, which you can find at <a href="https://openmark.dev.java.net/">https://openmark.dev.java.net/</a>.<br />
+<blockquote>OpenMark differs from traditional CAA systems in:<br />
+    * The emphasis we place on feedback. All Open University students are distance learners and within the university we emphasise the importance of giving feedback on written assessments. The design of OpenMark assumes that feedback, perhaps at multiple levels, will be included.<br />
+    * Allowing multiple attempts. OpenMark is an interactive system, and consequently we can ask students to act on feedback that we give 'there and then', while the problem is still in their mind. If their first answer is incorrect, they can have an immediate second, or third, attempt.<br />
+    * The breadth of interactions supported. We aim to use the full capabilities of modern multimedia computers to create engaging assessments.<br />
+    * The design for anywhere, anytime use. OpenMark assessments are designed to enable students to complete them in their own time in a manner that fits with normal life. They can be interrupted at any point and resumed later from the same location or from elsewhere on the internet.</blockquote><br />
+You can see an example of OpenMark in action at <a href="http://www.open.ac.uk/openmarkexamples/">http://www.open.ac.uk/openmarkexamples/</a>.</p>
+
+<p>OpenMark is capable of serving a variety of question formats, including:<br />
+<ul><li><em>generative, numeric response type</em> questions that use random numbers to provide unique questions of a given form and can accept answers as integers, floating point numbers or numbers in scientific format (with or without units):<br />
+<a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5098609610834126834"><img src="http://lh4.google.com/tony.hirst/RsHmbW4pJ_I/AAAAAAAAAbA/v_hPDeyembA/s800/openMarkNumeric.png" /></a></li><br />
+<li><em>text response type</em> questions, either closed (that is, "designed to elicit a single, closely defined, response") or "that appear to be 'open', encouraging the student to enter a phrase or sentence", with assessment based on keyword/phrase matching;</li><br />
+<li>variations on multiple choice questions, including single or multiple response questions, drag and drop words onto images or words within words question types:<br />
+<a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5098609619424061442"><img src="http://lh6.google.com/tony.hirst/RsHmb24pKAI/AAAAAAAAAbI/Eh8yPjgpTrQ/s800/openMarkMultiGuess.png" /></a> <br />
+<a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5098609602244192226"><img src="http://lh6.google.com/tony.hirst/RsHma24pJ-I/AAAAAAAAAa4/r4JF0Eb1naU/s800/openMarkDragDrop.png" /></a></li><br />
+<li><em>"2D response"</em> questions, where the student can interact with a 2D graphical component as part of the question, whether by placing markers, drawing simple lines or even manipulating molecular models:<br />
+<a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5098609632308963346"><img src="http://lh5.google.com/tony.hirst/RsHmcm4pKBI/AAAAAAAAAbQ/q2H5niuly-k/s800/openMark2d.png" /></a></li></ul></p>
+
+<p>OpenMark is built using Java and "is based around two servlets: the question engine and the test navigator. The test navigator deals with all direct communication with students, handles authentication, and handles details of tests - which question comes when, any explanatory information, and so on. Question engines deal only with the actual processing behind questions and do not communicate directly with the user or with the database that records user actions. All the question code runs on question engines.<br />
+"A [third] question author servlet, installed on the author's machine, allows them to compile and test questions [without the need for an IDE]."</p>
+
+<p>Questions are defined using XML according to a bespoke XML schema, with Java code determining the required feedback and score calculation.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August 14, 2007 06:39 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Cool, free publicity! Thanks for highlighting our work Tony.</p>
+
+<p>--Tim, on of the OpenMark developers.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;T&#46;J&#46;Hunt&#64;open&#46;ac&#46;uk">Tim Hunt</a> at August 15, 2007 10:29 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010513.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

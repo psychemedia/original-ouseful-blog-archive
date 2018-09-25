@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Voyager Library Catalogue Toolbar</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005818.html" title="Delicious Reading Lists Made Easy" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005864.html" title="OU libezproxy Bookmarklet" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005818.html">&laquo; Delicious Reading Lists Made Easy</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005864.html">OU libezproxy Bookmarklet &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 02, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Voyager Library Catalogue Toolbar</h3>
+
+<p>Having worked out how to include an Options/Preferences dialogue in a Firefox extension (I'll post a tutorial if I get a chance), I've updated the OUseful OU Library toolbar for Firefox so that a user can now store their Library card details and click through&nbsp; to their Library record with a single click from the toolbar.</p>
+
+<p><img alt="libraryToolbarOptions1_3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbarOptions1_3.JPG" width="217" height="409" border="0" /></p>
+
+<p>I've also changed the look of the toolbar back to all text buttons, rather than images. </p>
+
+<p><img alt="libraryToolbar1_3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbar1_3.JPG" width="761" height="32" border="0" /></p>
+
+<p>This is in part taking a lead from the Library official library website, which has been redesigned to be more in keeping with out current brand guidelines and which has&nbsp; dropped the large yellow icon used previously to identify the <em>Librarian On Call</em> instant messaging service.</p>
+
+<p>The <em>Library Lookup</em> uses a version of <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookupGenerator.html">Udell's library lookup bookmarklet</a> to extract an ISBN number from the URL of a currently loaded page (for example, an Amazon book page) and search the OU Voyager library for that book.</p>
+
+<p>I believe that another OU Library front page redesign is on the cards, so it maybe worth my time doodling a few thoughts about how it may be improved here, just in case anyone from the library happens to subscribe to the OUseful feed!;-)</p>
+
+<p>(If you haven't see the <a href="http://library.open.ac.uk">OU Library homepage</a>, check out the link. In my opinion, it's a bit cluttered? The first thing I think I'd do would be to make the most of any currently set authentication cookies (which identify my role - staff, student etc.) and only offer me links that are relevant on the front page.)</p>
+
+<p>Anyway, back to the topic of my unofficial toolbar, several shortcuts are provided via a dropdown list to OU Library related webpages. I'm still not sure what should go on this list:</p>
+
+<p><img alt="libraryToolbarLinks1_3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbarLinks1_3.JPG" width="154" height="169" border="0" /></p>
+
+<p>The Searches menu allows you to make a search using a selected collection/index. The Voyager button also forces a search using the term(s) in the search text vbox, on the OU <a href="http://voyager.open.ac.uk">Voyager Library catalogue</a>.</p>
+
+<p><img alt="libraryToolbarSearchButtons1_3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbarSearchButtons1_3.JPG" width="378" height="82" border="0" /></p>
+
+<p>The user customisation dialogue:</p>
+
+<p><img alt="libraryToolbarConfig1_3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbarConfig1_3.JPG" width="603" height="191" border="0" /></p>
+
+<p>enables an automatic login to <em>My Library Record</em> without the user having to manually fill in the required <a href='http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?DB=local&PAGE=pbLogon'>login form</a> (the button completes and submits the form automatically).</p>
+
+<p><img alt="libraryToolbarMyButtons1_3.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryToolbarMyButtons1_3.JPG" width="202" height="33" border="0" /></p>
+
+<p>The <em>My Open Library</em> link makes use of the OU's common SAMS authentication scheme to take the user to the correct My Open Library page.</p>
+
+<p>If you want to try out the extension, you can install it from <a href="http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.13.xpi" onclick="InstallTrigger.startSoftwareUpdate('http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.13.xpi');return false;">here</a>.</p>
+
+<p>Next on the to do list for the toolbar are a couple more personalisation tools which will allow a user to add links to an additional library website - most OU students make use of an academic library near to them for book loans, and the OU library for access to online collections, ebooks etc. A couple of switches would allow this address to be used as the primary address for a library catalogue search or <em>Library Lookup</em>.</p>
+
+<p>(If you are an OU student, and you do try out the toolbar, please get in touch and let me know what you think about it - for good or bad...)</p>
+
+<p>This additional customisation will also pave the way for a generic library toolbar which will allow the user to configure the toolbar for use with their own Library system. </p>
+
+<p>What I'm thinking off at the moment are options to: define 3 or four links in the dropdown links menu; customise two drop down search options, the primary library catalogue search button and the target for the <em>Library Lookup</em>; customise the <i>Librarian On Call</i> contact button; customise the My Library Record Link (this may depend on the particular catalogue system). The <i>My Open Library</i> button would go.</p>
+
+<p>In the meantime, if you are interested in trying out a customised version for your own library, please email me with details of the links/services you'd like included - especially if they differ markedly from my generalisation/customisation thoughts above - and I'll see what I can do in terms of getting a customised toolbar to you (feel free to hack the extension code yourself, of course - but please let me know if you do:-). This information will also help me work out just what to put into a generic, user customised toolbar.</p>
+
+<p><strong>Update</strong>: laterst version is <a href="http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.131.xpi">OU Library 1.3.1</a>; install it from <a href="http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.131.xpi" onclick="InstallTrigger.startSoftwareUpdate('http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.131.xpi');return false;">here</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March  2, 2006 12:44 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005845.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Voyager Library Catalogue Toolbar";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

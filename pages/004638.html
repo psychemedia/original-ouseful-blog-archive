@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Keeping Course Homepages Current With 'Related News' Feeds</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/004456.html" title="Toolbars as Mindgrab?" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/004775.html" title="Paced Content Delivery via RSS" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/004456.html">&laquo; Toolbars as Mindgrab?</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/004775.html">Paced Content Delivery via RSS &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 15, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Keeping Course Homepages Current With 'Related News' Feeds</h3>
+
+<p>A quick note on a minor breakthrough a couple of weeks ago: the T184 course homepage now consumes a feed from one of mt del.iocio.us tags, which allows me to get robotics related news items onto the course homepage without having to negotiate any OU systems.</p>
+
+<p>The Robot News feed actually uses a <a href="http://del.icio.us/doc/feeds/js/">deli.cio.us linkroll</a> Javascript include to pull in a javascript->html rendering of my last 3 delicious bookmarks tagged as 'T184 news'. This means I can now add links to robot related news stories (in the case of T184) very easily indeed.</p>
+
+<p><img alt="T184tagNews.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/T184tagNews.jpg" width="355" height="717" border="0" /></p>
+
+<p>Why bother? Well, it adds an element of currency that I'd like to think might contribute to our students' experience of the course in several possible ways, such as:</p>
+
+<p>- by providing content that's bang upto date, and might potentiall seed conference discussions;</p>
+
+<p>- by adding a bit of colour and a wider context to the course material, especially for students who don't in to the conferences.</p>
+
+<p>You might also notice in the above screenshot a glimpse of some of 'pacing guidance' that students get on the home page in the form of <strong>Do</strong> and <strong>Read</strong> instructions that guide students to the areas of study for the current week.</p>
+
+<p>It struck me that if we also published keywords/tags for the current week, then over time - if any of our students get into social bookmarking and tagging - this might be one way of providing a way in to student identified relevant items.</p>
+
+<p>Ideally, we'd offer something like a  Connotea or del.icio.us service to all our students, and encourage them to use it for the purposes of saving and tagging links to resources relevant to their courses.</p>
+
+<p>On an issue related to this, I've been tagging links to resources identified by T184 students in the July, 2005, cohort provided as part of an answer to one of their ECA (end-of-course assessment) questions:</p>
+
+<p><em>Imagine that you work for a technology research and consultancy company that is regularly approached to produce reports on advances in modern technology. You have been asked by a magazine publisher to write some short commentaries on the following potential robot technologies.</p>
+
+<p>Your answers should consist of a short commentary including any major issues that are likely to arise (for example, safety or public acceptance) and how you think the public might react to them. Include in each answer at least two references, either to the course materials or to websites that you have found.</em></p>
+
+<p>The topics to be addressed, and the links that I remembered to bookmark, were <a href="http://del.icio.us/psychemedia/eca05G+t184+assistive">assistive robotics</a>, and <a href="http://del.icio.us/psychemedia/eca05G+t184+rights">robot rights</a>.</p>
+
+<p>This was an interesting exercise for me, though I'm still trying to articulate why I think it's useful... I'm also wondering how I can get students to bookmark and tag the links themselves as part of the assessment process (and what the attendant learning objective/outcome would be, unless it was just requested as part of the assessment administrivia...)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 15, 2005 06:49 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/004638.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

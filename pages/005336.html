@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Distributed Social Bookmarking</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005332.html" title="Social Bookmarking Interoperability" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005475.html" title="How OUseful are iPods? Immediate Impressions" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005332.html">&laquo; Social Bookmarking Interoperability</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005475.html">How OUseful are iPods? Immediate Impressions &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 25, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Distributed Social Bookmarking</h3>
+
+<p>Over the last few weeks I've chatted to several people who run social bookmarking applications about the potential for using such systems in a <a href="http://blogs.open.ac.uk/Maths/ajh59/005107.html">managed environment</a>.</p>
+
+<p>One of the main discussion points has been on the topic of how splitting a userbase into discrete non-sharing groups will potentially weaken the usefulness of the system. I am not so sure - but this may be because the scale I think of is the scale  of courses the <a href="http://www.open.ac.uk">OU</a> runs (500-1000 students), which is typically an order of magnitude larger than the numbers of students on a particular course in a traditional university.</p>
+
+<p>Related to this is the question of whether <em>additional</em> benefits can be accrued by allowing <em>different</em> social bookmarking installations to co-operate in a distributed social bookmarking environment.</p>
+
+<p>So what might such a system look like? I do not anticipate answering this question in this post, but hopefully I'll be able to identify some of the issues...</p>
+
+<p><strong>Distributed social bookmarking</strong><br />
+Several scenarios immediately suggest themselves to me:<ol><li>Sharing between different users or different groups defined within a single social bookmarking system;</li><li>Sharing bookmarks between different installations of the <em>same</em> environment. For example, I could quite easily imagine different academic research groups in the same organisation installing their own version of Connotea, and at some later date wanting to share information across those installations whilst retaining them all as independent installations;</li><li>Sharing bookmarks between <em>different</em> applications, for example between del.icio.us and Connotea. An example of this scenario may be an academic researcher who maintains their own social bookmarking account to provide continuity as they more from post to post, institution to institution, and yet would like to share this resource with the institutional social bookmarking service at their host instituion. Another example might be <em>ad hoc</em> groups that form across social bookmarking applications, e.g. amongst attendees at a workshop or collaborators on a particular project.</li></ol> </p>
+
+<p>This latter example - of being able to form <em>ad hoc</em> groups within, between and across social bookmarking systems, and freely share and search resources amongst the group members - would seem to provide an excellent test case for three aspects if interoperability in the distributed social bookmarking environment mentioned above.</p>
+
+<p>To make the idea more concrete, imagine the following scenario: five partners are involved in an international project. Each partner has access to their own social bookmarking environment which each is keen to continue using. Two of the partners are at the same institution, using the same system (a local installation of Connotea, for example), one is using a local installation of Connotea at another institution, one uses the public NPG hosted version of Connotea and one uses del.icio.us. In order to both protect confidentiality of certain personal bookmarks, and minimise the number of irrelevant links shared between group members, there is a suggestion that an <em>ad hoc</em> private group is set-up across the individual bookmarking systems.</p>
+
+<p>Discuss...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 25, 2005 07:27 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Tony, see xfolk - http://microformats.org/wiki/xfolk<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://www.simpy.com/">Otis Gospodnetic</a> at November 29, 2005 04:22 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005336.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

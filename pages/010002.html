@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Serialised OPML</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010000.html" title="searchFeedr Pipes" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010009.html" title="BBC Radio Listen Again: Feeding Grazr Embedded Real Audio" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010000.html">&laquo; searchFeedr Pipes</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010009.html">BBC Radio Listen Again: Feeding Grazr Embedded Real Audio &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 15, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Serialised OPML</h3>
+
+<p>Just a placeholder post this one, to a leave a 'note to self' to take the <a href="http://blogs.open.ac.uk/Maths/ajh59/009972.html">serialised feeds</a> idea a step further and look at producing a <em>serialised OPML</em> scheduler that will take an OPML file and release top level OPML nodes/directories according to a user specified schedule.</p>
+
+<p>The generalised version should also be able to support:</p>
+
+<p>- <em>nested scheduling</em> that will further schedule the release of the contents of subfolders (so for example I could define monthly scheduled folders containing weekly scheduled ones); and</p>
+
+<p>- <em>sub-scheduling</em>, where feedcycled RSS feeds are automatically generated within an OPML folder (so for example when an OPML folder is published, it might contain feedcycles whose schedule/start time is dependent on the release date of the OPML folder that contains it).</p>
+
+<p><a href="http://idea.zanestate.edu/ ">Todd</a>, you interested in bouncing some ideas around relating to this?</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 15, 2007 12:58 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Just want to say that I really appreciate the kind of stuff you're doing. If you're interested in releasing feeds on a particular date (or range of dates) then Dabble DB is ace -- I use it for distributing seminar info, for example. Provided your data is public, there is a freebie option.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;pmiller&#64;liv&#46;ac&#46;uk">Peter Miller</a> at March 15, 2007 05:15 PM</span>
+</div>
+<div class="comments-body">
+<p>Sounds interesting, but I'm not sure I have a good enough grasp of what you can do with OPML. Can you give a basic usage scenario?</p>
+<span class="comments-post">Posted by: <a href="http://idea.zanestate.edu">todd</a> at March 21, 2007 08:58 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010002.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Bookmark Synching, Bookmark Searching...</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005494.html" title="Future of Web Apps Conference" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005499.html" title="del.icio.us OPML Generator" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005494.html">&laquo; Future of Web Apps Conference</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005499.html">del.icio.us OPML Generator &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 03, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Bookmark Synching, Bookmark Searching...</h3>
+
+<p>Just a few days in to the New Year, and my year has already been made by the discovery of several neat, though possibly longstanding!, interoperability features on a couple of social bookmarking systems that I have been rather neglecting...</p>
+
+<p>In a recent post ("<a href="http://blogs.open.ac.uk/Maths/ajh59/005336.html">Distributed Socail Bookmarking</a>") I doodled a few thoughts about social bookmarking interoperability.</p>
+
+<p>That post led, in part, to me joining a <a href="http://www.simpy.com/group/64">Social software</a> group on <a href="http://www.simpy.com/">Simpy</a>, with the intention, in part, that we could use that group to track some of the work that is going on in the area of social software interoperability (<em>distributed social software</em>?).</p>
+
+<p>But that's not what this post is about...(it's just for your reference, dear reader, to try and get you to have a look at Simpy if you haven't been over there for a bit :-)</p>
+
+<p>No - what this post is about is the fun I've been having over the last hour synching my <a href="http://del.icio.us/psychemedia">del.icio.us</a> bookmarks with other social bookmarking systems, in particular:<br />
+<ul><li><a href="http://simpy.com">Simpy</a></li><li><a href="http://www.spurl.net/">Spurl</a></li><li><a href="http://wink.com/">Wink</a></li></ul><br />
+I've mentioned <a href="http://blogs.open.ac.uk/Maths/ajh59/005493.html">before</a> , in the context of it as a people-powered search engine ("<em>Search the Web - Powered by People</em>"). That is, the top search results from a query relate to sites that have been recommneded (in the sense that they have been bookmarked, and possibly 'starred') by Wink subscribers.</p>
+
+<p>One of the features that appealed to me at first was the del.icio.us import facility, which meant I could import all the sites I have bookmarked there, and make them available for search.</p>
+
+<p>One thing I had assumed - but which does not appear to be possible on Wink - was that I would be able to search my bookmarked sites. This would be really handy for rediscovery of resources, of course, as well as providing a <a href="http://rollyo.com/">Rollyo</a> type service that I've dreamed about <a href="http://micro-info.blogspot.com/2005/11/rollyo-portable-pagelinks-search.html">here</a> (and implicitly(?! - but not so you'd notice!) <a href="http://micro-info.blogspot.com/2005/12/tooltip-links.html">here</a>, too).</p>
+
+<p>However, I don't think Wink let's you search your own bookmarked sites, in the same way that <a href="http://zniff.com/">Zniff</a> doesn't.</p>
+
+<p><em>Zniff</em>??? This was doing the rounds some time ago in the blogosphere (e.g. on <a href="http://libraryclips.blogsome.com/2005/04/10/zniff-clusters/"Library clips</a>) as a human powered search engine (this time powered by <a href="http://www.spurl.net">Spurl</a>).</p>
+
+<p>What's interesting about Zniff, however, is that you can use it on Spurl to search just your <em>Spurl</em>ed resources...</p>
+
+<p>And what makes it even better is that Spurl supports the import - and two-way synching (I think - though I have yet to check it out in practice) - of bookmarks with del.icio.us.</p>
+
+<p>Another service that supports synching with del.icio.us (and they're looking for more third party sites to synch with if anyone has any suggestions...) is <a href="http://simpy.com">Simpy</a>. For a long time, Simpy has provided one of the best <a href="http://www.simpy.com/simpy/FAQ.do#search">search interfaces</a> in a social bookmarking system, and now I realise I can use it to search through my bookmarked resources...hmm, I wonder, can I use it to just search those sites I have bookmarked to a particular group, I wonder...? (Does anyone know of a good "Simpy search" tutorial, per chance?)</p>
+
+<p>With Yahoo!'s puchase of del.icio.us (which I really can't be bothered to link to again...) del.icio.us powered searches - perhaps through <a href="http://myweb2.search.yahoo.com/">Yahoo!'s MyWeb 2.0</a> service (or even <a href="http://yq.search.yahoo.com">Y!Q context sensitive search</a>, somehow (perhaps tag-context sensitive?)) - or Yahoo! powered del.icio.us search - will possibly leapfrog some of the competition...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January  3, 2006 10:49 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Here is a good place that describes the power of Simpy's search: http://www.simpy.com/simpy/FAQ.do#search</p>
+
+<p>The 4 questions and answers below it also address search and should be read as one unit.</p>
+
+<p>As for searching Simpy Groups - that is certainly possible.  Each Group has a search field right in the middle of the top of the Group page.  Everything that you can do with search against your Links or Notes, you can do with Groups.  In addition, with Groups you can also make use of the "user" field (e.g. +user:otis +bookmarks)<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://www.simpy.com/">Otis Gospodnetic</a> at January  4, 2006 07:33 AM</span>
+</div>
+<div class="comments-body">
+<p>On Simpy, if I was searching My Links, is there a way I can filter on a Group  - for example, +group:"Social software"?</p>
+
+<p>I assume your point, Otis, about the user: filter in a group is that it means I can search over only those links submitted by that particular user to that particular group?</p>
+
+<p>One thing that struck me about the search box at the top right hand of the screen is that when I view another user's links (outside of a group - e.g. when I'm at the Simpy homepage), I get an option in the drop down list to the left of the search query text box offering me a search over that user's links. However, when I view a group's links, the group does not appear as an option in that list...</p>
+
+<p>Also, am I right in thinking I can only search when I am logged in?<br />
+ </p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony Hirst</a> at January  4, 2006 02:37 PM</span>
+</div>
+<div class="comments-body">
+<p>Tony, some answers (best asked on simpy-user list, if you are interested):</p>
+
+<p>- +group:... in the top-right search box - no, but that's a good idea, so I might implement it.</p>
+
+<p>- About user:... filtering - the way you understood it is correct, yes! :)</p>
+
+<p>- group search form is in the top-center of each group's page.  The top-right search form doesn't search groups.</p>
+
+<p>- link searching is always really available, you just need to use URIs like the search URIs described here: http://blog.simpy.com/blojsom/blog/2005/11/04/Sexy-URIs.html</p>
+
+<p>So you can search any user's links that way, including your own.  Of course, since you are incognito when not logged in, even searching of your own links will search only your public links.</p>
+
+<p>Group searching is always available through the grou form.</p>
+
+<p>I hope this helps.</p>
+<span class="comments-post">Posted by: <a href="http://www.simpy.com/">Otis Gospodnetic</a> at January  4, 2006 07:03 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005497.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

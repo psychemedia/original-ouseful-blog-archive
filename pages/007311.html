@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Displaying New Library Books</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007310.html" title="When Your Past Comes to Haunt You" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007312.html" title="Searching for Blog Posts That Contain a Particular Link" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007310.html">&laquo; When Your Past Comes to Haunt You</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007312.html">Searching for Blog Posts That Contain a Particular Link &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 10, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Displaying New Library Books</h3>
+
+<p>Many libraries are starting to make feeds of their new books available, but few make any further attempts to either exploit these feeds, or help others exploit them.</p>
+
+<p>In an earlier<a href="http://www.talis.com/tdn/competition">MUTL</a> entry (<em><a href="http://blogs.open.ac.uk/Maths/ajh59/007298.html">The Compleat Grazr/OPML Library Interface, v 0.0.1</a></em>), I doodled one way in which a new books feed could be mixed with other library feeds in an OPML feed bundle that could provide a wide ranging view of library feeds within a single, OPML fed browser widget.</p>
+
+<p>That exercise, in conjunction with the one described in this post, also led me to realise <a href="http://blogs.open.ac.uk/Maths/ajh59/007305.html">how ropey</a> many feeds produced by libraries - including the OU - actually are. mainly, I suspect, because they are produced in a rush of 'What can we feed? Err, I know, new books" enthusiasm and then left published but untested on a public page that no-one ever uses.</p>
+
+<p>In the post <a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">Wishlist Carousel</a> I showed how a JSON feed could be used to feed book data into a carousel widget  that would display the resource linked book covers in a space efficient way, an approach I then developed in <a href="http://blogs.open.ac.uk/Maths/ajh59/007304.html">Carousel Widget: Similar Books</a>, which accepted an ISBN as part of a URL and then displayed a carousel of related books (as defined by an Amazon webservice call).</p>
+
+<p>A later post (<a href="http://blogs.open.ac.uk/Maths/ajh59/007303.html">OU New Library Books Bookshelf</a>) showed how a server based application hosted on <a href="http://ning.com">Ning</a>) (a free application development and hosting site) could be used to consume a new books feed and push it into a carousel widget.</p>
+
+<p>I finally managed to get a couple of hours in tonight finishing that demo, so here it is, YAOMUTLE (yet another OUseful MUTL Entry). This one is hosted on Ning, so you should be able to see the (small amount of) PHP code by signing up and cloning the app. There are a few other litterlike files around, but I don't have time to tidy up right now. I do have ideas about how to make this a proper social and shareable app, but no time to even blog them, let alone execute them. (If anyone wants to lend me a coder for a week or two, or even a day or two, please get in touch!;-)</p>
+
+<p>MUTL entry: <a href="http://ouseful.ning.com/">Consuming library new books feeds</a>.</p>
+
+<p><img alt="ounewbooksfeedinterpret.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ounewbooksfeedinterpret.jpg" width="438" height="399" border="0" /></p>
+
+<p>There is a little bit of interpretation on the site linked to above, but points to note are:<br />
+<ol><li>the original source feed is parsed server side and used to populate the carousel widget;</li><br />
+<li>hovering over an image in the carousel widget causes several sorts of content to be loaded into the various tab display panels, which all contain <em>iframes</em>;</li><br />
+<li>the book info, contents, author notes and excerpt are delivered as HTML pages from Syndetics; the related items come from an XSLT applied to a RESTful,  XML returning webservice call to Amazon webservices.</li></ol></p>
+
+<p>The entry reuses (not necessarily mashes!):<br />
+<ol><li>Bill Scott's <a href="http://billwscott.com/carousel/">Carousel component</a>;</li><br />
+<li>Patrick Fitzgerald's <a href="http://www.barelyfitz.com/projects/tabber/index.php">tabber script</a>;</li><br />
+<li>Alan Taylor's <a href="http://www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html">Amazon2JSON xslt</a></li><br />
+<li>an Amazon webservice (<a href="http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemLookup&ContentType=text%2Fxml&SubscriptionId=0DK8EWAWVKXSH8SEMVR2&ItemId=0596009208&ResponseGroup=Similarities">similar items lookup</a>;</li><br />
+<li>Syndetics 'catalog enrichment' content.</li></ol></p>
+
+<p>The stuff's out there, folks, you just have to put it together in new ways...</p>
+
+<p>So lobby the management to give you more playtime...</p>
+
+<p>And if they ask 'why?', say the Corporate Fool said so...</p>
+
+<p><a href="http://technorati.com/tag/MUTL06" rel="tag">MUTL06</a></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August 10, 2006 12:25 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007311.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Displaying New Library Books";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

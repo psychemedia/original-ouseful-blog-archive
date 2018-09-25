@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Google Timeline and Map Search Results Views</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010307.html" title="OUseful Jobs Round Up, May 2007" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010324.html" title="Announcement Round Up" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010307.html">&laquo; OUseful Jobs Round Up, May 2007</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010324.html">Announcement Round Up &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 17, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Google Timeline and Map Search Results Views</h3>
+
+<p>Just over a month ago, I posted about <a href="http://blogs.open.ac.uk/Maths/ajh59/010163.html">Visualising Geo-temporal RSS Feeds</a>, in which I pondered on various mashup interfaces that could be used to display data contained in an RSS feed on a split view containing a timeline visualisation of the feed items, as well as a map view depicting the geo-location of each item, like this <a href="http://www.oe-files.de/gmaps/usgseq.html">Earthquake mashup</a> by Jörn Clausen which combines a <a href="http://simile.mit.edu/timeline/">Simile</a> timeline with <a href="http://maps.google.com">Google map</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5066041327687193202"><img alt="Google map and MIT Simile Timeline Mashup" src="http://lh4.google.com/image/tony.hirst/Rk4xvxo-UnI/AAAAAAAAAAw/kLPrMYC6M_E/s800/gmapsimilemashup.png" /></a></p>
+
+<p>Something I didn't really explore in that post was the application of timelines and maps to search results (the only time-based search engine I know of so far is <a href="http://www.timesearch.info/timesearch/">TimeSearch</a>, but there may be others..for the geo view, I'm not talking about local search; I'm really considering fact based searches, which may already be possible via <a href="http://blog.pipes.yahoo.com/2007/05/02/pipes-adds-interactive-yahoo-maps-kml-support-and-more/">Yahoo pipes map mashups</a>).</p>
+
+<p>Anyway, Google's recent flurry of <a href="http://searchengineland.com/070516-121057.php">search related announcements</a> included a pointer to <a href="http://www.google.com/experimental/">Google Experimental Search</a>, which is to Google's Search interface what <a href="http://labs.google.com">Google Labs</a> is to applications - that is, a listing of all the stuff Google are playing with in public, but is yet to make the Google front page.</p>
+
+<p>A couple of the items on the <em>Experimental</em> page relate closely to geo-temporal visualisation, although as yet there is no split screen view.  However, what there is is this....</p>
+
+<p>Consider a search on <em>english civil war battle</em>, for instance...</p>
+
+<p>Search for <a href="http://www.google.com/views?q=english+civil+war+battle+view:timeline&vws=-127050&vwe=-125125&sa=N&ct=tlhist">english civil war battle</a> with the experimental <em>view:timeline</em> limit:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5066041344867062402"><img alt="Google Experimental Timeline Search results page" src="http://lh4.google.com/image/tony.hirst/Rk4xwxo-UoI/AAAAAAAAAA4/xozMwBZFxwI/s800/gxTimeline.png" /></a></p>
+
+<p>Search for <a href="http://www.google.com/views?q=english+civil+war+battle+view:map&sa=N&ct=map">english civil war battle</a> with the experimental <em>view:map</em> limit:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5066041374931833490"><img alt="Google Experimental Maps Search results page" src="http://lh3.google.com/image/tony.hirst/Rk4xyho-UpI/AAAAAAAAABA/Sdly32P6S0U/s800/gxMap.png" /></a></p>
+
+<p>When I get a chance, I'll do a split view with each of these results in a separate iframe, driven from the same original search query. [UPDATE: here it is - <a href="http://blogs.open.ac.uk/Maths/ajh59/010366.html">Google maps'n'timelines side-by-side</a>]</p>
+
+<p>What would be handy, of course, would be an RSS version of these results, with the geo- and temporal data explicitly included somewhere. The aforementioned "geo-temporal feeds" post mentions a couple of (probably not very good) ideas for carrying the temporal data by usurping each item's posting time to carry the date the result applies to - such as the date of the first moon landing for a search on that term* - rather than the time the query was made, or the timestamp of the page returned as a result, for example.</p>
+
+<p>I don't know if the Google SOAP interface is still working for those of us who have keys (I haven't checked for a bit), but if it does, I wonder if these search limits work with it?</p>
+
+<p>*Hmm - I wonder if the <em>view:map</em> interface will end up displaying results using <a href="http://moon.google.com/">http://moon.google.com/</a> or <a href="http://google.com/mars">http://google.com/mars</a> if they are more relevant?! (It doesn't appear to at the moment - I checked ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May 17, 2007 09:37 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010319.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

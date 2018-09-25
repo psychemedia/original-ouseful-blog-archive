@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OU Library Traveller - Title Lookup</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008638.html" title="Online OPML Feed Management" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008701.html" title="Collecting Third Party Website Statistics (like Yahoo&#39;s) with Google Analytics" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008638.html">&laquo; Online OPML Feed Management</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008701.html">Collecting Third Party Website Statistics (like Yahoo's) with Google Analytics &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 16, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OU Library Traveller - Title Lookup</h3>
+
+<p>A couple of people have got in touch recently about the <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?search=traveller&IncludeBlogs=1149">OU Library Traveller Scripts</a> that pop up library info panels on Amazon et al. book pages (I'll mail you soon - I promise...;-) and it prompted me to dust off a script I started to doodle with a bit ago to deal with the multiple ISBN problem...</p>
+
+<p>...you know the one - where the book you're looking at on Amazon is held by the library, but in a different format or edition, and hence under a different ISBN, which is used to key the script.</p>
+
+<p>Jon Udell posted a Greasemonkey script that will <A href="http://weblog.infoworld.com/udell/2006/01/30.html">search the catalogue using xISBNs</a> - that is, equivalent ISBN numbers for a particular book identified via OCLC's <a href="http://www.oclc.org/research/projects/xisbn/">xISBN</a> service (he could also have used the <a href="http://www.librarything.com/blog/2006/06/thingisbn-librarythings-first-api.php">LibraryThing ThingISBN service</a>).</p>
+
+<p>But that's all a bit too much like hard work for lazy old me... </p>
+
+<p>Now, AI is (or used to be) my background, and in AI we use all sorts of heuristics (rules of thumb) and shortcuts for getting things to work, and sometimes they even work to a "good enough" QoS level;-) I haven't started on an AI solution yet (! - and don't intend to...;-), but here's a crude heuristic - <em>if the library holds the book under a different ISBN, maybe it'll find it if I search by title?</em></p>
+
+<p>The OU Traveller scripts are intended to work on sites wherever there is an ISBN in the URL, so scraping the title off an arbitrary site is hard. That's not a problem, though, because we can use an Amazon web service to look up the title of a book from its ISBN, which is what the new script does.</p>
+
+<p>If a book can't be found in your library catalogue using the ISBN, the script then offers to do a title (or author) search. (The next time I revisit this script I will build the title lookup to run automatically and report holding status back via the Traveller panel):</p>
+
+<p><img alt="ouTravellerTitle1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerTitle1.jpg" width="663" height="283" border="0" /></p>
+
+<p>Clicking on the appropriate link then runs the relevant search on the library catalogue:</p>
+
+<p><img alt="ouTravellerTtile2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerTtile2.jpg" width="502" height="180" border="0" /></p>
+
+<p>If you want to give the script a run on your own catalogue, the ISBN lookup will worth with very minor modifications (see <a href="http://blogs.open.ac.uk/Maths/ajh59/008008.html">Generic Library Traveller</a> for more info) but you will need to dig around in the script  - and play with URLs from your own library catalogue - to work out the title or author lookup. Mail me if you do this and we can collect customisations on a wiki somewhere.</p>
+
+<p>Maybe, if there is enough (any?!) interest, I'll look at ways of making the title lookup generic for different vendor catalogues on a case by case basis.</p>
+
+<p>Anyway - enough of that: the script is here: <a href="http://blogs.open.ac.uk/Maths/ajh59/genericTravellerAlphaTitleLookup.user.js">Generic Library Traveller with OU Book Title lookup</a>.</p>
+
+<p>There are potential conflicts with previous installations/versions of the Library Traveller scripts, so you may have to pay a visit to the Greasemonkey control panel in your browser to disable previous versions.</p>
+
+<p>If you are trusting of compiled Greasemonkey scripts (that is, Firefox extensions generated from Greasemonkey scripts), and/or would rather not install Greasemonkey, feel free to create your own extension from the script (e.g. using the <a href="http://arantius.com/misc/greasemonkey/script-compiler">Arantius Greasemonkey compiler</a>).</p>
+
+<p>I do not accept any liability whatsoever if anything goes wrong, of course ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 16, 2006 01:51 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008658.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="OU Library Traveller - Title Lookup";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

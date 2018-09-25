@@ -1,0 +1,29 @@
+<opml version="1.0">
+<head>
+<title>Ouseful Library OPML</title>
+</head>
+<body>
+<outline text="New books">
+<outline type="rss" text="New books: ICT" xmlUrl="http://library2.open.ac.uk/rss/ict.xml" />
+<outline type="rss" text="New books: Adult and Continuing Education" xmlUrl="http://library2.open.ac.uk/rss/adultconted.xml" />
+</outline>
+<outline text="S804 MyOL">
+<outline type="rss" text="S804: ROUTES" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_routes.php?course=S804" />
+<outline type="rss" text="S804: Reference Shelf" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_reference.php?course=S804" />
+<outline type="rss" text="S804: Journals" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_ejournals.php?course=S804" />
+<outline type="rss" text="S804: Databases" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_databases.php?course=S804" />
+</outline>
+<outline text="Journal Current Issues">
+<outline type="rss" text="The Computer Journal" xmlUrl="http://comjnl.oxfordjournals.org/rss/current.xml" />
+<outline type="rss" text="IEEE Pervasive Computing" xmlUrl="http://csdl.computer.org/rss/pervasive.xml" />
+<outline type="rss" text="International Journal of High Performance Computing Applications" xmlUrl="http://hpc.sagepub.com/rss/current.xml" />
+</outline>
+<outline text="Persistent Library Searches (via Hennepin County Library)">
+<outline type="rss" text="HCL: search for 'computer science'" xmlUrl="http://hzapps.hclib.org/pub/ipac/XML/GetXML.cfm?term=computer+science&amp;index=.GW&amp;uindex=&amp;aspect=subtab13&amp;menu=search&amp;ri=2&amp;uri=link=direct&amp;hits=311&amp;ultype=&amp;uloper=&amp;ullimit=" />
+<outline type="rss" text="HCL: search for 'artificial intelligence'" xmlUrl="http://hzapps.hclib.org/pub/ipac/XML/GetXML.cfm?term=artificial+intelligence&amp;index=.GW&amp;uindex=&amp;aspect=subtab13&amp;menu=search&amp;ri=3&amp;uri=link=direct&amp;hits=164&amp;ultype=&amp;uloper=&amp;ullimit=" />
+</outline>
+<outline text="Recent ePrints">
+<outline type="rss" text="Glasgow University: latest eprints" xmlUrl="http://eprints.gla.ac.uk/perl/latest_tool?output=rss" />
+</outline>
+</body>
+</opml>

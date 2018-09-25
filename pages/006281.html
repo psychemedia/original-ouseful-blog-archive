@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: The Scarey World of Search...</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006280.html" title="OU Library Google Books Lookup Script" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006362.html" title="An Aside on SOAP vs. REST" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006280.html">&laquo; OU Library Google Books Lookup Script</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006362.html">An Aside on SOAP vs. REST &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 12, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">The Scarey World of Search...</h3>
+
+<p>A couple of days ago, I wanted to find a podcast on <a href="http://itconversations.com"></a> that I'd heard earlier in the week and downloaded automatically via my <a href="http://www.podnova.com">PodNova</a> client.</p>
+
+<p>The podcast was by Tim O'Reilly, and in it he mentioned how he had spoken about von Kempelen's Mechanical Turk in a presentation at Amazon, and riffed about how people inside the software machine could be likened to the Mechanical Turk in some ways (he also idly wondered whether this in any way informed the naming of the <a href="http://www.amazon.com/gp/browse.html/102-5391039-6545756?node=15879911">Amazon Mechanical Turk</a>).</p>
+
+<p>Anyway - I didn't have a link for the podcast, just the knowledge that it came from IT Conversations. the only problem is, if you search for Tim O'Reilly there, you get loads of hits - and I didn't know which one was the one I wanted. </p>
+
+<p>But it seems that the IT conversations has a new search button alongside the 'search text' link - <em>search audio</em> - so I searched for <em>mechanical turk</em> and was rewarded with <a href="http://www.podscope.com/search.php?q=mechanical+turk&sourceID=19&sa.x=16&sa.y=17">a perfect, unique hit</a>.</p>
+
+<p>Gulp....</p>
+
+<p>(Just in passing, I also noticed that IT Conversations let you link from a <a href="http://www.itconversations.com/shows/detail142.html">show page</a> to up to two minute excerpts from their content: so here's <a href="http://www.itconversations.com//clip.php?showid=142&start=12:45&stop=14:00">Tom O'Reilly on the Mechanical Turk</a>.)</p>
+
+<p>(In a weird twist, many podcast subscription services use the Mechanical Turk to <a href="http://www.broadcasting20.org/2006/03/15/podcast-transcripts-and-the-mechanical-turk/">pay people to transcribe podcasts</a> (here's <a href="http://aws.typepad.com/aws/2005/12/walking_through.html">how it works</a>).</p>
+
+<p>So why's this scarey? I was just suddenly taken aback by what we can now search for. Podcasts are increasingly becoming searchable,as the above shows (as well as things like <a href="http://www.podzinger.com/">Podzinger</a>).</p>
+
+<p>And as a colleague -Jon Rosewell  - pointed out, the Podscope search is itself quite scarey, drawing as it does on a service provided by <a href="http://www.tveyes.com/">TVeyes</a>:</p>
+
+<blockquote><strong>Real Time Radio & TV Monitoring</strong>
+
+<p>TVEyes is the first company to deliver real-time TV and Radio search across multiple languages on an international platform. Services are provided to a wide range of users in both consumer and professional markets including Government and Law Enforcement Agencies. The company uses a range of proprietary technologies to index audio feeds that allow Radio and TV to be searched by keyword - just as you would use a search engine for text.<br />
+[...]<br />
+The technology underlying the Company's products involve a combination of proprietary software, third party products and customized hardware used to capture, index, analyze, archive and distribute in real - time content captured from television and radio broadcasts.<br />
+The process of broadcast capture, analysis and distribution is achieved virtually in real time.<br />
+The underlying technology can also be applied to any audio signal or archive allowing for its deployment in the field of telephony.</blockquote></p>
+
+<p>Add in something like <a href="http://www.shazam.com/music/portal/">Shazam</a>:</p>
+
+<blockquote>In the UK, Shazam operates under it's own brand, and allows customers to dial 2580 on their mobile phone and identify any track using their mobile handset. Users hold their phone to the music for 10 to 15 seconds while Shazam identifies the track using a process based on unique 'fingerprints' and immediately sends the user an SMS with the name of the artist and song title.
+
+<p>Having received the music recognition result, users can then choose to buy associated products (ringtones, full track music, wallpapers etc), find out more about the track or artist on the WAP portal, or simply store the text message for future reference.</p>
+
+<p>To use Shazam's music recognition service, customers do not need any additional hardware or software for their mobile phone, and no user registration is required. Shazam works in the UK across all operators (Vodafone, Orange, T-Mobile, O2, Virgin and 3), and on all handsets.</blockquote></p>
+
+<p>and even more of the audible world becomes searchable.</p>
+
+<p>And then there are things like <a href="http://riya.com/">Riya</a>:</p>
+
+<blockquote>Our face recognition technology automatically tags people in photos so you can search for just the photo you want. In your albums. In your friends' albums. In our public albums.</blockquote>
+
+<p>and <a href="http://www.imgseek.net/">imgseek</a>, "a photo collection manager and viewer with content-based search... quer[ies are] expressed either as a rough sketch painted by the user or as another image you supply (or an image in your collection)."</p>
+
+<p><strong>Update:</strong> August '06 <a href="http://www.searchenginejournal.com/?p=3728">Google, Neven Vision and Image Search</a>: Google acquire "a key player in face and image recognition biometrics, Neven Vision". The post gives a review of the patents Neven Vision holds. Maybe over the next few months we'll be seeig search-within-the-image search (in both stills and movies/video) coming to a major search engine near you, at least in a personalised search context?</p>
+
+<p>And is this where we're heading?</p>
+
+<p><img src="http://www.slibe.com/images/74093e76-googlein20years_.jpg" /></p>
+
+<p>or <a href="http://www.nytimes.com/imagepages/2005/10/10/opinion/1010opart.html">here</a> perhaps?</p>
+
+<p>Possibly - in the <a href="http://www.itconversations.com/shows/detail717.html">Internet of Things</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May 12, 2006 02:00 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006281.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

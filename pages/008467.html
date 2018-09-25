@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: (Library Catalogue) Search Forms in Grazr</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008423.html" title="SPARQLing OUseful Info" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008496.html" title="Amazon Search Widget in Grazr" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008423.html">&laquo; SPARQLing OUseful Info</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">Amazon Search Widget in Grazr &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 05, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">(Library Catalogue) Search Forms in Grazr</h3>
+
+<p>One of the things I've been trying to figure out for Stringle is how to get search forms into the OPML fed navigation widget. RSS feeds can carry form elements, which was how I was going to try and address the problem.</p>
+
+<p>But no need - because today <a href="http://blog.grazr.com/index.php/2006/11/03/grazrscript-beta/">Grazr announced GrazrScript</a>, "a programming language for feeds".<br />
+<blockquote>At its core GrazrScript runs against a web service that parses the special GrazrScript directives embedded in the files to do interesting things and returns valid OPML or Feed files. GrazrScript 1.0 allows the embedding of XHTML forms, and a 'search and replace' template that, while relatively simple, enables all sorts of interesting applications.</blockquote></p>
+
+<p>Here's a v quick demo, in StrinGLE, of using GrazrScript to provide a search in Grazr over the <a href="http://www.hclib.org/pub/">Hennepin County Library</a>, which has an OpenSearch/RSS interface to its Library Catalogue - <a href="http://ouseful.open.ac.uk/stringle2.php?s=http%3A//blog.grazr.com/index.php/2006/11/03/grazrscript-beta/&o=http%3A//ouseful.open.ac.uk/grazrScriptDemo1.opml">GrazrScript library catalogue search in StrinGLE</a>.</p>
+
+<p>Here's the top level navigation - you can see the link to the library catalogue search area:</p>
+
+<p><img alt="grazrScript1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrScript1.jpg" width="706" height="262" border="0" /></p>
+
+<p>Here's the search box:</p>
+
+<p><img alt="grazrScript2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrScript2.jpg" width="247" height="171" border="0" /></p>
+
+<p>Make a search - note you can also click through to get the result in the main web window:</p>
+
+<p><img alt="grazrScript3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrScript3.jpg" width="525" height="298" border="0" /></p>
+
+<p>If you prefer, check out the search result in the Grazr widget:</p>
+
+<p><img alt="grazrScript4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/grazrScript4.jpg" width="394" height="325" border="0" /></p>
+
+<p>It'll be interesting to see how GrzrScript develops, but this is a really good start :-)</p>
+
+<p>Now I wonder, is there a SPARQL results to RSS stylesheet out there anywhere?</p>
+
+<p>PS I just pinched the code for a more complex (job search) form involving several form elements, including drop down lists, from the <a href="http://eirepreneur.blogs.com/eirepreneur/2006/11/feed_applicatio.html">Eirepreneur</a> blog,  and added it to the demo...</p>
+
+<p>Job ads are potentially a good fit for open educational sites (targeted at adult learners) that need to pay their way with advertising, or affiliate/commission/referral fees, I think...? (Though note that that's not how they're being used here...)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November  5, 2006 06:31 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008467.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="(Library Catalogue) Search Forms in Grazr";
+ z_post_category="RSS";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: February 2007 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2007_01.html" title="January 2007" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2007_03.html" title="March 2007" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_01.html">&laquo; January 2007</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2007_03.html">March 2007 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">February 27, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009897"></a>
+<h3 class="title">Grazring YouTube Favourites Playlists</h3>
+
+<p>I was just having a look at the RSS feeds that YouTube provides - and that Grazr can consume - and it seems that RSS feeds of individual playlists aren't provided.</p>
+
+<p>[UPDATE - this post has largely been superseded by this one: <a href="http://blogs.open.ac.uk/Maths/ajh59/010394.html">Google Gadgets - RSS Feed Powered YouTube Playlist Player</a> which describes a live feed scraped from a YouTube playlist, and a way of publishing it via a Google Gadget.]</p>
+
+<p>[UPDATE 2: here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/010419.html">live youTube playlist feed video playing Grazr widget</a>]</p>
+
+<p>As a stopgap, here's a bookmarklet that will <a href="javascript:(function(){d=document;b=d.getElementsByTagName('body')[0];function ss(src){s=d.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src',src);b.appendChild(s);};ss('http://blogs.open.ac.uk/Maths/ajh59/youTubeItems.js');})()">generate an RSS feed from a YouTube playlist page</a> (viewed either from one of your personal playlists or from a public playlist).</p>
+
+<p>Pop the bookmarklet onto your browser bookmarks toolbar, visit a YouTube playlist page (like <a href="http://www.youtube.com/view_play_list?p=E341B7BCBE832CA0">this one</a> for example) and fire off the bookmarklet to go to a URL for an RSS feed based on that page.</p>
+
+<p>Here's an <a href="http://blogs.open.ac.uk/Maths/ajh59/youTubeOPMLPlaylist.php?id2=Xabm8hRyXrk;Zoho%20Notebook%20Announcement,nsa5ZTRJQ5w;Web%202.0,6gmP4nk0EOE;Web%202.0%20...%20The%20Machine%20is%20Us/ing%20Us,">example feed</a> (generated from this <a href="http://www.youtube.com/view_play_list?p=CA23DDFA84A2ACC9">OUseful YouTube playlist</a>) and here's what happens when you view it in a Grazr widget:</p>
+
+<div style="height:450px;width:400px;"><a href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=s&theme=gloss_silver&file=http://blogs.open.ac.uk/Maths/ajh59/youTubeOPMLPlaylist.php?id2=Xabm8hRyXrk;Zoho%20Notebook%20Announcement,nsa5ZTRJQ5w;Web%202.0,6gmP4nk0EOE;Web%202.0%20...%20The%20Machine%20is%20Us/ing%20Us," target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?font=arial&amp;fontsize=12pt&amp;view=s&amp;theme=gloss_silver&amp;file=http://blogs.open.ac.uk/Maths/ajh59/youTubeOPMLPlaylist.php?id2=Xabm8hRyXrk;Zoho%20Notebook%20Announcement,nsa5ZTRJQ5w;Web%202.0,6gmP4nk0EOE;Web%202.0%20...%20The%20Machine%20is%20Us/ing%20Us,"></script></div>
+
+<p>You might also notice that Grazr is now CSS customisable and that a wide variety of different canned themes are available.</p>
+
+<p>The"API" such as it is is as follows:</p>
+
+<p> - ROOT URL: <em>http://blogs.open.ac.uk/Maths/ajh59/youTubeOPMLPlaylist.php</em> (the final resting place will be somewhere on the ouseful.open.ac.uk site, but I can't get in there via VPN to upload stuff at the mo :-(<br />
+ - ARGUMENTS: *either* <em>id=</em> for a comma separated (no spaces) list of YouTube clip identifiers (e.g. <em>id=GQ3AcPEPbH0,D4upvi5ytFI,</em>, *or* <em>id2=</em> for a list of comma separated (no spaces) list of <em>semicolon delimited </em> YouTube clip identifiers and escaped clip descriptions (e.g. <em>d2=Xabm8hRyXrk;Zoho%20Notebook%20Announcement,nsa5ZTRJQ5w;Web%202.0,6gmP4nk0EOE;Web%202.0%20...%20The%20Machine%20is%20Us/ing%20Us,</em>).</p>
+
+<p>This is ropey as anything of course (I expect it will break if a semicolon or comma appears in the title for example), but it's okay as proof of concept and for use in (constrained) rapid prototyping reuse of YouTube playlist feeds...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009897.html">07:50 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9897" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 22, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009751"></a>
+<h3 class="title">Browser, desktop client or widget?</h3>
+
+<p>Earlier this week, Techcrunch reported on the <a href="http://www.techcrunch.com/2007/02/15/new-myspace-focused-browser-launched/">Buddywave MySpace browser</a>, a "a stripped down version of Internet Explorer 7, with some additional MySpace-specific functionality added".</p>
+
+<p>Today, Read/Write Web posts about the <a href="http://www.readwriteweb.com/archives/songbird_desktop_browser_blends.php">Songbird music browser</a>, which appears to be "a mixture of a music player and the web browser. Built on top of the open-source Mozilla code base, this desktop application lets you manage your local music collection, search for new music online as well as instantly play any music on blogs and web sites."</p>
+
+<p>Hmmm... so do we want an OU client side app?</p>
+
+<p>Or would it be possible to build a comprehensive OUniversal widget (or maybe a set of smaller, single function widgets (<em>how</em> do I get <em>OU</em> into "widget" or "gadget"?!)) maybe built using the planned <a href="http://blogs.business2.com/business2blog/2007/02/netvibes_and_th.html">Netvibes universal widget API</a>?</p>
+
+<p>As to why the Netvibes announcement is interesting, <a href="http://www.techcrunch.com/2007/02/21/netvibes-promises-cross-platform-widget-compatibility/">Techrunch</a> comments: "Once launched, any widget created for Netvibes ... will work on the Vista, Google, Mac and Opera platforms as well. Support for Yahoo Widgets and other platforms will follow soon after."</p>
+
+<p>Universal ways of working already exist in workaround fashion (such as using the various <a href="http://google-code-updates.blogspot.com/2007/02/convert-google-gadgets-to-other-widget.html">Amnesty widget converters</a> to convert widgets built on one platform to run on another, or <a href="http://www.google.com/apis/gadgets/index.html">Google Universal gadgets</a> that run across the Google Desktop, personalised home page etc.), but this looks like it'll be an altogether cleaner approach.</p>
+
+<p>PS if widgets'n'gadgets are new to you, this post on the <a href="http://widgets.yahoo.net/blog/?p=16">Yahoo widgets blog</a> gives a good overview of the whole area and here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/007645.html">vision of Universal widgets</a>...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009751.html">01:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9751" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 21, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009745"></a>
+<h3 class="title">Tool of the Futurists' Trade: Population Forecasts</h3>
+
+<p>I've recently started to take an interest in the various tools used by futurists and foresight analysts to help them scope out possible futures.</p>
+
+<p>As with all new learning exercises, getting to grips with the vocabulary is the first hurdle, so I'm starting out by disambiguating in my own mind some of the "obvious things, such as <a href="http://www.b2binternational.com/whitepapers15.html">forecasting and scenario planning</a> (also see <a href="http://www.netmba.com/strategy/scenario/">here</a>).</p>
+
+<p>I've also been trying to locating some of the more 'robust' statistical forecasting tools - like population forecasts and visualisations  of economic trends.</p>
+
+<p>As far as UK population data goes (both historical and forecast data) there's a <a href="http://www.statistics.gov.uk/populationestimates/svg_pyramid/ew/index.html">nice animation showing male/female population data broken down into age-based bins over the period 1961 to 2074</a> from the <a href="http://www.statistics.gov.uk">UK National Statistics website</a>.</p>
+
+<p>Static <a href="http://www.statistics.gov.uk/census2001/pyramids/pages/uk.asp">population pyramids from the 2001 UK census</a> are also available from the same site:</p>
+
+<p><img src="http://www.statistics.gov.uk/census2001/pyramids/images/UK.gif" alt="example population pyramid from the 2001 UK census" /></p>
+
+<p><br />
+As far as visualising economic data goes, my base reference tool will probably be the <a href="http://tools.google.com/gapminder">Gapminder</a>/UN economic data visualisation tool demoed so beautifully by <a href="http://video.google.com/videoplay?docid=2670820702819322251#3m24s">Hans Rosling at TED Talks</a> in 2006.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009745.html">11:28 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9745" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="009726"></a>
+<h3 class="title">Search Powered Predictions</h3>
+
+<p>Something I've only really noticed over the last couple of years is how difficult many people find it to 'have ideas', whereas I spend all my time trying <em>not</em> to get sidetracked with chasing harebrained 'how about this...' schemes... Maybe it's because I used to spend my days a child reading books by Edward de Bono and Tony Buzan?</p>
+
+<p>Whatever...</p>
+
+<p>A couple of the techniques I use more or less unconsciously are 'idea accelerators' and 'idea collider' (think: particle accelerators ;-)</p>
+
+<p>The <em>idea accelerator</em> (or <em>meme accelerator</em>) is related to <em>reductio ad absurdum</em> - take an idea and run with it as far and as fast as you can (the important thing is to keep momentum up). This is a bit like a longitudinal brainstorm, where you just have to keep pushing a meme forward, rather than bringing in completely new ideas.</p>
+
+<p>The <em>idea collider</em> (or <em>meme collider</em>) just requires you place two ideas/techniques/applications together (I try to hold them in the same breath...) and see what comes of them. Cross-fertilisation of ideas, sort of...</p>
+
+<p>Anyway, anyway, there are some things that have been clunking around in my mind for some time that are just begging to be fused in some way, but I haven't been able to make time to think them through at all, let alone completely. So I'm hoping that by posting the germ here, I'll commit some dog walking/commute thinking time to the matter as a result...</p>
+
+<p>The trigger for the post, by the way, is the <a href="http://www.dellideastorm.com/">Dell Idea Storm</a>, a <a href="http://digg.com/">Digg</a> like clone where users can "submit ideas for a new Dell product or service" and then vote on each other's ideas <em>a la</em> Digg. [I need to sort out an accented font, don't I?]</p>
+
+<p>Anyway, anyway - the germ of the collision is this: take one <a href="http://en.wikipedia.org/wiki/Prediction_market">prediction market</a> framework (something like <a href="http://betocracy.com/">Betocracy</a> for example), add possible successful course predictions in place of the bets and combine it with something like the <em>search engine referrers</em> stats from a web analytics package (like <a href="http://google.com/analytics">Google Analytics</a> for example) to feed automated bets into the system...</p>
+
+<p>Ok, ok, the thinking is garbled, and I'm not totally sure how the prediction market bit would work, but the Digg/Dell Idea Storm model shows the way forward. In an OU 'what courses should we be providing?' sense, imagine something like the following:</p>
+
+<p><em>Example 1</em>:<br />
+<ol><li>Descriptions of potential courses are posted as 'stories';</li><li>students vote on the ones they like.</li></ol><br />
+Result: potentially popular courses float to the top.</p>
+
+<p><em>Example 2</em>:<br />
+<ol><li>Descriptions of potential courses are posted as 'stories';</li><li>search terms used by students on the OU course catalogue are treated as votes that can be cast;</li><li>a vote is given to a story/proposed course if a search term that would lead to the story/proposed course is used on the course catalogue.</li></ol><br />
+Result: predicted potentially popular courses float to the top.</p>
+
+<p><em>Example 3</em><br />
+As <em>Example 2</em>, except that votes are only cast if the proposed course would be returned as one of the top three (?) ranking results <em>if</em> it were included in a live/real search.<br />
+Result: a more robust version of 2, assuming people only click through the top few hits!</p>
+
+<p><em>Example 4</em><br />
+As <em>Example 2</em>, except that votes are only counted if a student clicks through to request further materials (or even better, actually clicks through th <em>register</em>) on a real course after using search terms that would have turned up the proposed course (maybe as one of the top three (?) ranking results if you want to tighten things up further) <em>if</em> it were included in a live/real search.<br />
+Result: predicted potentially popular courses that people might actually register on float to the top.</p>
+
+<p>What I'm leading towards here is the idea of 'invisible vote casting' (predictive marketing?!) used to help identify courses that might appeal to students ont he basis of their course descriptions.</p>
+
+<p>I suspect the approach could also be used as a basis of forecasting the number of students who might register on a proposed course (<em>search powered forecasting</em>!)?</p>
+
+<p>I'm still not clear on how the prediction market variant would work though! ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009726.html">02:17 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9726" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="009723"></a>
+<h3 class="title">OU Job Ads Roundup...</h3>
+
+<p>A part of me is a little bit reluctant to keep making this sort of post quite so frequently, but seeing the jobs that are being advertised in the OU is quite a good indicator of where various priorities were a couple of months ago (when the posts were presumably secured...;-)</p>
+
+<p>So let's see what's currently open that may be of interest to <a href="http://ouseful.info">OUseful.info</a> readers... As ever, I have absolutely nothing to do with the appointment of any of the below:<br />
+<ul><li><a href="http://www3.open.ac.uk/employment/job-details.asp?id=2869"> Business Systems Analysts / Application Developers, Academic & Administrative Computing Services</a>: "Many of our projects are to deliver business change, and we are particularly interested in hearing from analysts with business process design experience. A flexible approach is essential. While Microsoft.net is our main development platform, we also support a wide variety of legacy systems and use packaged software, including Siebel's Customer Relationship Management and Documentum's Enterprise Content Management software."</li><br />
+<li><a href="http://www3.open.ac.uk/employment/job-details.asp?id=2870&ref=ext"> Media Developer - Editing (possible trainee position), Learning & Teaching Solutions (LTS)</a>: "we are looking for an experienced editor from book, journal or online publishing to contribute to the production and delivery of distance learning materials. You will edit learning materials from our Faculty of Mathematics & Computing. Our editors, working as media developers, make a critical contribution to the quality of our courses, collaborating closely with academics and other specialists to deliver world-class learning materials across a wide range of media and disciplines."</li><br />
+<li><a href="http://www3.open.ac.uk/employment/job-details.asp?id=2826&ref=ext">ICT Development Officer (Faculty of Education and Language Studies)</a>: "An internal secondment has provided the opportunity for someone who is able to formulate ICT systems and web policies to join us on a fixed-term contract. As the Faculty's principal source of advice and expertise in these areas, you will design, manage and evaluate support systems and web projects."</li><br />
+<li><a href="http://www3.open.ac.uk/employment/job-details.asp?id=2825&ref=ext">Systems and Network Administrator, Creating The Next Generation Web, Knowledge Media Institute</a>: "The Open University's Knowledge Media Institute has an opening for a Systems & Network Administrator who will join the IT & Systems Team and support the day to day Linux and Windows network services. You should have a good track record of working with and supporting Linux in the context of a large organization."</li><br />
+<li><a href="http://www3.open.ac.uk/employment/job-details.asp?id=2886&ref=ext">Two Research Fellows: Audio-visual Content Analysis and Search Engines (Knowledge Media Institute)</a>: "The Open University's Knowledge Media Institute has an opening for two Postdoctoral Research Fellows to undertake research in within the context of an EU/IST-funded integrated project, PHAROS, which is the main IP funded by the EU in a recent call on audio-visual search technologies. The PHAROS project aims to build a next generation audiovisual search platform, to be designed, developed and applied jointly by a consortium consisting of leading academic and industrial players with proven track records in innovation and commercial success. The Multi-Media Information systems group of the KMi is the key player in developing core search technologies within this project including advanced content-based visual search engine and visual content analysis."</li></ul><br />
+There's also this post, I notice:</p>
+
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=2860&ref=ext"> Head of Directorate, Marketing and Sales</a>: this one seems to come up regularly (or maybe I'm just confused...?). If so, then presumably career marketeers are only good for one project per organisation to keep their CV ticking over. Achieving things like a rebranding exercise, for example, or <a href="http://blogs.open.ac.uk/Maths/ajh59/009219.html">establishing a relationship with a large affiliate scheme</a>;-)</p>
+
+<p>On the marketing front, I hope that whoever gets the <a href="http://www3.open.ac.uk/employment/job-details.asp?id=2868&ref=ext">Online Marketing Manager (Marketing and Sales)</a> post talks to any appointed <a href="http://www3.open.ac.uk/employment/job-details.asp?id=2884&ref=ext">Assistant Alumni Manager (Open University Business School)</a> about linking at least a few of the 2 million+ OU alumni into to some sort of social network...</p>
+
+<p>[If you go for any of the above posts, please mention that you saw it mentioned on <em>OUseful.info</em> (or perhaps it's better that you don't??? ;-). I also expect a coffee in your first couple of weeks of taking up any post :-)]</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009723.html">01:15 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9723" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="009707"></a>
+<h3 class="title">Reach Out and Engage</h3>
+
+<p>One of the way too many distractions I sink too much time in to (like this blog, maybe?;-) are <a href="http://robofesta.open.ac.uk">robotics related outreach activities</a>. This week, for example, I'm off to the <a href="http://www.techniquest.org">Techniquest</a> hands-on science centre in <a href="http://maps.google.co.uk/maps?f=l&hl=en&q=techniquest&near=cardiff&ie=UTF8&z=10&ll=51.67,-3.054199&spn=0.069839,1.373291&om=1&iwloc=A">Cardiff Bay</a>, where there's a week of robotics themed activities going on wrapping a robotics show project we're involved with: <a href="http://www.uwe.ac.uk/fas/graphicscience/projects/events/robot_thoughtII.htm">Robot Thought</a> (which in turn is one of the many projects that being championed by the UK Robotics Community pubic engagement network <a href="http://www.walkingwithrobots.com/">Walking With Robots</a>, which we're also part of).</p>
+
+<p>Next week, regional finals of <a href="http://rcj.open.ac.uk">RoboCup<em>Junior</em>-UK</a> (which is organised at a national level by my colleague Ashley Green) are taking place at the OU, with schools competing from all over the place, including the <a href="http://www.ictamber.org.uk/">world class robot dance team from Amberfield School</a>.</p>
+
+<p><img src="http://www.ictamber.org.uk/phoenix/comp2/1.jpg" alt="Flight of the Phantom Phoenixes" /></p>
+
+<p>[Just in passing, I thought it interesting to note how <a href="http://googleblog.blogspot.com/2007/01/fun-with-robotics.html">Google support school robotics competitions</a> (as well as other <a href="http://googleblog.blogspot.com/2007/02/this-is-national-engineers-week.html">science/engineering outreach activities</a>). Is this seen as an appropriate use of 20% time, I wonder, or are extra allowances made for outreach and engagement? And I wonder.... hey GOOG - fancy sponsoring RCJ-UK next year?! :-)]</p>
+
+<p>Also next week we'll be outlining our plans for an <a href="http://www.ics.heacademy.ac.uk/projects/development-fund/fund_details.php?id=89">HE Academy Innovative Teaching Fund project</a> to reversion some robot programming activities from our <a href="http://ouseful.open.ac.uk/t184">Robotics and the Meaning of Life</a> course (taster <a href="http://tscp.open.ac.uk/t184">here</a>) to use <a href="http://msdn.microsoft.com/robotics/">Microsoft Robotics Studio</a> and then release the materials via <a href="http://openlearn.open.ac.uk">OpenLearn</a>.</p>
+
+<p>Outreach and public engagement in the OU is  currently undergoing something of a review in the OU, with the expectation that it will become more formally recognised as an activity that is valued by the institution.</p>
+
+<p>This is something that some of us have been <a href="http://www.slideshare.net/psychemedia/outreach-in-context/">informally banging on about for years</a>, but with the possibility of bidding for £££money$$$ from HEFCE to set up a <a href="http://www.hefce.ac.uk/pubs/hefce/2006/06_49/">Beacon for Public Engagement</a>, the leading role the OU is playing in the organisation of the <a href="http://www.investmiltonkeynes.co.uk/dpdfs/SCIENCE_FAIR.pdf">Milton Keynes Science Festival</a> and a PVC who values outreach and engagement, maybe the times-they-are-a-changing...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009707.html">09:54 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9707" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 20, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009692"></a>
+<h3 class="title">ePortfolios, Distributed Storage and Personal Repository Caches</h3>
+
+<p>A couple of weeks ago, Chris Pegler mailed me asking if I had any ideas for a talk she was giving about technology enabled 'new learning activities' for adult learners over the next 2-3 years. The theme of the event was something to do with ePortfolios, which provides the context for the rest of this post. I'm not sure if the talk has been posted anywhere yet - or how it turned out - but the germ of the following came out of my ramblings at the time.</p>
+
+<p>So here it is  - a ramble around possible futures relating to online storage and e-portfolios...</p>
+
+<p>One of my favourite quotes is William Gibson's 'the future is already here; it's just not evenly distributed yet'. Predicting short term technology futures - like predicting the weather - is often safest if you take the line that 'the weather tomorrow will be like the weather today'. The problem is, that while day to day changes are barely noticeable, continual incremental changes can result in major changes. Rome may not have been built in a day, but it was built one brick (column(?!)) at a time.</p>
+
+<p>Some of the greatest changes in technology enabled learning activities will, I think, arise from the mainstreaming of stuff that is already out there and helping people 'grok' how to use some of the 'new'  technologies.</p>
+
+<p>To drive uptake, I think the users firstly need to see how they might gain personal benefit from new technologies <em>today</em>, in the context of how they already use related technologies.</p>
+
+<p>An example here might be dragging a link from a web page or browser address line onto the browser bookmark toolbar, to encourage the use of bookmarking; and then showing how users who use <em>different</em> browsers might benefit from social bookmarks or bookmark synching.</p>
+
+<p>Another example might be the use of online word processors such as <a href="http://docs.google.com">Writely/Google docs</a> or <a href="http://writer.zoho.com">Zoho Writer</a>: alternatives to applications that users already use that offer some benefits over those currently used tools.</p>
+
+<p>As well as offering personally beneficial (more convenient?) alternatives to current tools, many web applications also support sharing and/or collaborative features. These features provide 'personal benefit <em>plus</em>' - enhanced personal benefits arising from either the network effects afforded by social technologies, or the collaborative models afforded by being able to share your content in ways you determine.</p>
+
+<p>Giving users easy control over the access permissions assigned to their web-reachable content is becoming a widespread model in web applications and one that may lead to expectations from users with respect to: a) the features they expect from a portfolio; b) the ways in which they can collaborate with others - either in a commenting way, co-production of documents way etc.</p>
+
+<p><em>How</em> users organise their content is also potentially "subject to change". If you know how to create folders/directories on a Windows machine (and I'm prepared to believe there are many users who <em>don't</em> know how to do this) then the odds are that you have a complex hierarchy of folders on your computer, with each file stored in a single location.</p>
+
+<p>Increasingly, however, as users collect files and folders on their personal machine, I suspect that more and more of them (in unacknowledged deference to the Google way of working) <em>search</em> for content on their computer, rather than navigating/browsing to it via a folder hierarchy.</p>
+
+<p><em>Search based navigation</em>  - or content rediscovery - will become increasingly common as desktop search becomes as fast as Google search (which is the case in Vista). How this will affect the way in which users mentally organise their content is unclear to me... ;-)</p>
+
+<p>Search will also increasingly provide a loop back to flat directory based organisation by means of "active folders", directories that contain the contents of a live, saved search on particular search terms. (So for example, I could associate a saved search for 'desktop search' with a directory, and the contents of that directory will be the results of that search.) It will be interesting to see how widely adopted this becomes - it is already possible on some platforms (such as Mac OS/X) and I believe it is also supported in Vista.</p>
+
+<p>Organisation using tagging schemes is also likely to benefit from increased support and user uptake, perhaps in tacit response to more and more widespread use of clustered search results (such as in search engines (like <a href="http://clusty.com">Clusty</a>) or online stores (think Amazon)).</p>
+
+<p>As far as (online) storage goes in a personal as well as an educational setting - for this latter concern, think personal repositories or e-portfolios - I get the feeling that storage <em>per se</em> will not be the determining factor in the solutions that the users prefer. Just having online <em>storage</em> is all very well, but users will increasingly expect to have editors - as well as effective search tools - associated with each content type that can be stored in the repository - e.g. Zoho's recent announcements of integration first with <a href="http://blogs.zoho.com/general/omnidrive-becomes-perfect-with-zoho/">Omnidrive</a> and then <a href="http://blogs.zoho.com/general/boxnet-integrates-zoho/">box.net</a>.</p>
+
+<p>It's also worth considering how users will react to the continuing rise of cheap, affordable, or free <em>seemless</em> application related online storage. I'm thinking here of the free storage you get implicitly when you register for online applications. For example, Google Mail famously gives you over 2 gigabytes of storage, Zoho gives you free storage with its apps, and so on.</p>
+
+<p>This is leading to a world where we each maintain <em><strong>distributed</strong> personal digital object repositories</em> locally organised around particular applications:<br />
+<ul><li>word docs on Google docs/Zoho Writer;</li><br />
+<li>photos on flickr;</li><br />
+ <li>movies on motionbox etc.</li></ul></p>
+
+<p>The desktop correlate here is akin to only ever accessing files from the 'recently opened' menu in an application, rather than launching hte application by first discovering the file...</p>
+
+<p><h3>"Found repositories"</h3><br />
+<blockquote>The term found art - more commonly found object (French: objet trouve</em>) or readymade - describes art created from the undisguised, but often modified, use of objects that are not normally considered art, often because they already have a mundane, utilitarian function.</blockquote> Ref: <a href="http://en.wikipedia.org/wiki/Found_art">Wikipedia: <em>Found art</em></a></p>
+
+<p>In some respects, the 'local application based storage' may be thought of as 'found storage' in the sense that it "describes storage provided implicitly by application providers that are not normally considered storage providers".</p>
+
+<p>When content organisation tools (such as tagging) and additional application helpers are provided alongside the storage, we might even go so far as to argue that system offers enough functionality to be regarded as a 'found repository'.</p>
+
+<p>Local storage contrasts with services like Omnidrive, which offer storage first and <em>then</em> editing tools as an additional service and services offered as a consequence of the wider commoditisation of online storage (I'm thinking of things like BT's <a href="http://www.btdigitalvault.bt.com/">Digital Vault</a> here). </p>
+
+<p>And with an always on broadband connection, why not use online storage as your main drive - especially if it looks just like another drive on your PC (<a href="http://www.xdrive.com/access.jsp">XDrive</a>).</p>
+
+<p>Another feature of online storage solutions is their "collaborative" nature, insofar as they typically let users define access privileges over stored items - which means you can share different documents stored in the same repository with different closed groups...</p>
+
+<p>Whether users will prefer to go to a single storage place from where they access and edit files, or go to an app from where they open locally stored copies of the files they are working on, I don't know. Maybe there are reports out there that will shed light on how this might play out that compare the behaviour of users who go to My Docs and open a .doc file into Word, with users who open Word and navigate for 'recently used' files?</p>
+
+<p>[Just by the by, it's worth bearing in mind that online services like Zoho Writer offer toolbar integration with Microsoft Word, as well as letting users open web links to .doc documents directly into the online applications.]</p>
+
+<p>I'd also argue that the scope of the distributed/discovered repository goes even further than application related storage. In a very real sense, we are starting to see the emergence of <em>Personal Repository Caches</em> almost everywhere we look:<br />
+<ul><li>digital PVRs (personal video recorders);</li><br />
+<li>iPod/MP3 players (as well as caching subscription services, like iTunes);</li><br />
+<li>digital media centres/home media hubs;</li><br />
+<li>portable storage devices/USB drives etc.</li></ul></p>
+
+<p>Finally, by opening up their APIs, storage companies and application providers can <em>both</em> play off each other's strengths. The recent publication of the <a href="http://code.google.com/apis/notebook/gdata.html">Google Notebook API</a>, and the forthcoming <a href="http://www.zoho.com/notebook/">Zoho Notebook</a> (which will presumably also have an API if other Zoho apps are anything to go by) are likely to provide many opportunities for integrating online content capture and organisation tools with both online storage tools and online applications.</p>
+
+<p>When compared to the rapid pace of development by small start-ups focusing on online storage, online apps, or the integration of the two, it's worth reflecting on the extent to which e-portfolio developers in the educational sector can keep up.</p>
+
+<p>In a follow on to this post, I'll look at how search and discovery can be supported in this emerging world, such as using tags to help users organise and index content *across* distributed, found/discovered repositories.</p>
+
+<p>Things I'll consider include the extent to which we'll need to help people organise their distributed repositories and whether we can help students articulate the skills they use to manage their stuff across multiple digital object stores to help them manage their own learning resources.</p>
+
+<p>We also need to ask whether we can learn from some of our younger students (i.e. those who are well versed in the ways of the web) better ways of managing knowledge. In particular, how and why do users a) partition their stuff to support rediscovery, (e.g. separating holiday photos from birthday photos, or simply keeping different parts of their life separate (work/home)); b) reconcile stuff across different digital object stores (e.g. bank statements from different online banks, e.g. movies on motionbox and photos on flickr recording the same Christmas dinner).</p>
+
+<p>I'll leave a consideration of the possible future of search as it relates both to search over personal resources and personalised search over arbitrary web resources - as well as a consideration of the extent to which a user's (search) history becomes part of their implicit/discovered/found repository - to another post...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009692.html">09:54 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9692" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 19, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009670"></a>
+<h3 class="title">Automatically Generated Grazr UI for Yahoo Search Pipes</h3>
+
+<p>Following a brief email chat with <a href="http://grazr.com">Grazr</a>'s Adam <div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?addbar=on&file=http://ouseful.open.ac.uk/grazr/grazrSearchPipeOPML.php?u=http%253A//pipes.yahoo.com/pipes/pipe.run%253F_id%253D0mwRk4O72xGtSjMVl7okhQ%2526searchInput%253DGRAZRMAGIC%2526_render%253Drss&t=Google%20and%20Yahoo" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?addbar=on&amp;file=http://ouseful.open.ac.uk/grazr/grazrSearchPipeOPML.php?u=http%253A//pipes.yahoo.com/pipes/pipe.run%253F_id%253D0mwRk4O72xGtSjMVl7okhQ%2526searchInput%253DGRAZRMAGIC%2526_render%253Drss&amp;t=Google%20and%20Yahoo"></script></div><br />
+[<s>For some reason, when you try to create the embed code from the actual widget, the <a href="http://grazr.com/config.html">Create a Grazr</a> page loses the escaping on the URL in the embedding code, which breaks the widget.</s> 21/2/07:FIXED (thanks, Mike)]</p>
+
+<p>If I get a chance, I'll see if I can knock up a bookmarklet/GM script to automatically add a 'Grazr UI for this Pipe' link to appropriate Pipe run pages...</p>
+
+<p>...or maybe the Pipes team will reveal their UI solution? (I wonder, are there any generic/easily customisable widgets out there that do this already?)<br />
+ <br />
+You can find the Grazr interface generator <a href="http://ouseful.open.ac.uk/grazr/gPipeTest2.php">here</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009670.html">10:52 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9670" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 10, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009318"></a>
+<h3 class="title">Amazon Book Search Pipe</h3>
+
+<p>I have *no* time to post anything for a day or two, so here's a screenshot of a pipe that took me less than five mins to make, reusing an Amazon book search feed strategy I'd generated some time ago to build my <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">Grazr/Amazon book search widget</a>.</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pNFdjQO52xGqy6fWe_gC8A/">Amazon-UK Books Search Pipe</a> (or here's an <a href="http://pipes.yahoo.com/pipes/oD5DywO52xG6Rp2GjwtvUw/">Amazon.com Books Search Pipe</a>).</p>
+
+<p><img alt="amazonPipe.png" src="http://blogs.open.ac.uk/Maths/ajh59/amazonPipe.png" width="576" height="550" border="0" /></p>
+
+<p>All this is really doing is putting a URL to an RSS feed into the pipes environment (with a single search term argument in this case).</p>
+
+<p>This demo identifies for me a couple of things I'd like to see the <a href="http://pipes.yahoo.com">pipes</a> environment offer.</p>
+
+<p>- a listbox/select input option;<br />
+- a simple API for automatically creating a pipe on the fly from a URL; this could reuse ideas used in Grazrscript. </p>
+
+<p>Picking up on that last point a bit more, here's an example growing out of the URL used in both the Grazr search form and the pipe mentioned above:</p>
+
+<p><em>&lt;grazr:formtemplate name="amznform" file="http://xml-%country%.amznxslt.com/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemSearch&ContentType=text/xml&SubscriptionId=0P7A6QBN369NCGYXWBR2&AssociateTag=robofestauk-21&SearchIndex=%searchtype%&Keywords=%search%&ResponseGroup=Small,Images&Style=http://ouseful.open.ac.uk/amznSearch2RSS.xsl"/&gt;</em></p>
+
+<p>What I'm thinking is  - would it be useful to be able to submit pipes to the community using something like:</p>
+
+<p><em>http://pipes.yahoo.com/?newFeedPipeName=Amazon%20Search<br />
+&newFeedPipeURL=http://xml-%country%.amznxslt.com/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemSearch&ContentType=text/xml&SubscriptionId=0P7A6QBN369NCGYXWBR2&AssociateTag=robofestauk-21&SearchIndex=%searchtype%&Keywords=%search%&ResponseGroup=Small,Images&Style=http://ouseful.open.ac.uk/amznSearch2RSS.xsl</em></p>
+
+<p>and have the pipe generate a simple feed wrapper pipe, like the above, and auto-generate user input text boxes for the %delimited% arguments? (Okay, so it would be handy to be able to enumerate the %country% argument too, maybe with something like <em>&_country=uk,us,ca</em>?)</p>
+
+<p>PS here's a <A href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=3p&file=http://ouseful.open.ac.uk/amazonUKPipe.opml">Grazr fronted Amazon UK book search pipe</a>:</p>
+
+<div style="height:350px;width:300px;">
+<a href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=s&file=http://ouseful.open.ac.uk/amazonUKPipe.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a>
+<script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?font=arial&amp;fontsize=12pt&amp;view=s&amp;file=http://ouseful.open.ac.uk/amazonUKPipe.opml"></script>
+</div>
+
+<p> </p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009318.html">01:47 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9318" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 09, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009301"></a>
+<h3 class="title">deliSearch Pipe</h3>
+
+<p><a href="http://pipes.yahoo.com">Yahoo! Pipes</a> are back, and already there are some interesting pipelications (?!) appearing.</p>
+
+<p>One that particularly interested me was this <a href="http://pipes.yahoo.com/pipes/5BiciiOz2xGc28CWpRr.og/">del.icio.us flavored web search</a>, that lets you run a site limited search over the domains listed in a delicious bookmarks feed.</p>
+
+<p>A <a href="http://blogs.open.ac.uk/Maths/ajh59/007387.html">deliSearch</a> pipe, no less... already ...</p>
+
+<p>Here's what it looks like (and here's a clone I've taken and renamed: <a href="http://pipes.yahoo.com/pipes/iPBz8C242xGV47HKqGIyXQ/">deliSearch pipe</a>).</p>
+
+<p><img alt="pipesDeliSearch.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipesDeliSearch.png" width="710" height="586" border="0" /></p>
+
+<p>I've started thinking about a wider set of <a href="http://searchfeedr.com">searchfeedr</a> pipes, but not had a chance to build any of them yet (maybe there are some equivalents <em>already</em> on the Pipes site?).</p>
+
+<p>Update 10/2/07: here's a <a href="http://pipes.yahoo.com/pipes/zhmqsw_52xG4gUz8e_gC8A/">pageLinks Search Pipe</a>: supply a URL and a search query, and a search will be performed over the domains linked to <em>from</em> the specified page.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009301.html">11:25 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9301" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 08, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009285"></a>
+<h3 class="title">Let's Get Wiring - Yahoo Pipes</h3>
+
+<p>So I assume everyone's seen THE most beautiful piece of poetry-in-motion digital storytelling that is the <a href="http://www.youtube.com/watch?v=6gmP4nk0EOE">Web 2.0  ... The Machine is Us/ing Us </a> movie?</p>
+
+<p>Well the beautiful stuff just keeps on rolling.... welcome <a href="http://pipes.yahoo.com">Yahoo! pipes</a> (should'a been <a href="http://www.youtube.com/watch?v=EtOoQFa5ug8">tubes</a> though... ;-)</p>
+
+<p>(Ok - there's probably a way to go with the service yet, but there's a heck of a lot of playing can be done with what's there... as you'll see...)</p>
+
+<p>In a nutshell <em>pipes</em> offers a visual feed wiring tool</em>; check out <a href="http://radar.oreilly.com/archives/2007/02/pipes_and_filte.html">Tim O'Reilly's ad for pipes</a> for the overview and below for my first quick foray...</p>
+
+<p>A couple of weeks (?) ago, I posted about <a href="http://blogs.open.ac.uk/Maths/ajh59/009224.html">searching OpenLearn anywhere</a> by creating a "Dapp" to scrape <a href="http://www.dappit.com/dapp-howto-use.php?dappName=OpenLearnSearch">OpenLearn Search Results</a>.</p>
+
+<p>This application offers - among other things - an RSS feed of results from a search over <a href="http://openlearn.open.ac.uk">OpenLearn</a> content. (OpenLearn doesn't offer this natively, of course, but the results are clean enough to scrape reliably, which is what things like <a href="http://www.dappit.com">Dapper</a> were invented for, right? Web service intermediation for people who don't do web services.)</p>
+
+<p>I showed in the post how to use the dapp feed to create an OpenLearn/Grazr search widget using <a href="http://blogs.open.ac.uk/Maths/ajh59/grazrOpenLearnSearch.opml">this bit of Grazrscript</a>. And here's how to use in <em>pipes</em> - an <a href="http://pipes.yahoo.com/pipes/uHUU3Gq32xGtaUcNphr_og">OpenLearn search pipe</a>:</p>
+
+<p><img alt="pipes1.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipes1.png" width="894" height="513" border="0" /></p>
+
+<p>As has been commented on elsewhere, this interface is very <a href="http://ning.com"><em>Ning</em>-like</a> - the pipe/application is both useable and cloneable - so you can clone (and then edit) someone else's pipe.</p>
+
+<p>Ok, so that's what you see when you 'run' a pipe. Here's how you build it:</p>
+
+<p><img alt="pipeOpenLearn.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeOpenLearn.png" width="666" height="478" border="0" /></p>
+
+<p>The tool is quite easy to get to grips with, at least at this simple level. As you can see, the Dapp URL has several arguments. Although I typed this in, I soon realised you can just past a whole URL for a feed returning webservice into the URL box, and it will pull out the arguments for you (something I hope you'll soon be able to do with Grazr... although maybe there's no need now...?)</p>
+
+<p>What I particularly like about this example is that it demonstrates how feed outputs from <em>different</em> web services can potentially be wired together...</p>
+
+<p>Okay - so that's just one feed, being searched. It's trivial to add another - so I'll use the <a href="http://blogs.open.ac.uk/Maths/ajh59/006057.html">OU ROUTES search</a>, which does have an RSS output:</p>
+
+<p><img alt="pipeOLandROUTES1" src="http://blogs.open.ac.uk/Maths/ajh59/pipeOLandROUTES1.png" width="1094" height="576" border="0" /></p>
+
+<p>It's easy to merge feeds, limit them, sort them and so on (which I've yet to explore in anything other than cursory depth). In the above demo, I just take the first five items from each search and combine them in an <a href="http://pipes.yahoo.com/pipes/uqZK1Wy32xGZLdgUt5qdmw">OpenLearn and ROUTES combined search</a> output feed.</p>
+
+<p>The above shows how quickly feed wiring diagrams could get complicated, so rather than cloning and growing pipe applications, as I did in the above case, it's more advisable to reuse pre-existing pipes, if appropriate. So for example, I already had the OpenLearn Search pipe, so I can reuse it in a <a href="http://pipes.yahoo.com/pipes/8lJH_G232xGBfqL5XqIxGw/">modified combined OpenLearn and ROUTES search pipe</a>:</p>
+
+<p><img alt="pipeOLandROUTES2" src="http://blogs.open.ac.uk/Maths/ajh59/pipeOLandROUTES2.png" width="946" height="568" border="0" /></p>
+
+<p>Of course, I could create a <a href="http://pipes.yahoo.com/pipes/0lVSCHC32xGtUeAfphr_og/">ROUTES search pipe</a> and then just <a href="http://pipes.yahoo.com/pipes/yszyG3C32xG_P1Mgt5qdmw/">wire the ROUTES and the OpenLearn Search pipes together</a>...</p>
+
+<p><img alt="pipeROUTES.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeROUTES.png" width="444" height="548" border="0" /></p>
+
+<p>The pipes wiring interface is really easy to use, and I think it's going to be a lot of fun playing with it over the coming weeks and months.</p>
+
+<p>The question is, how <em>ouseful</em> is wiring and filtering feeds likely to be for us and/or OUr students?</p>
+
+<p>PS Pipes seems to be down at the mo - so I can't check to see if this works - but here's a guess at a <a href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=3p&file=http://blogs.open.ac.uk/Maths/ajh59/openlearnROUTESgrazrSearch.opml">Grazr front end</a> to a the combined OpenLearn/ROUTES piped search described above... [was originally broken, now fixed; heh, heh - a Dapp fed pipe inside another pipe, with a user interface provided via a Grazr widget... Good stuff :-)</p>
+
+<p>Technorati Tags: <a class="performancingtags" href="http://technorati.com/tag/pipes" rel="tag">pipes</a>, <a class="performancingtags" href="http://technorati.com/tag/rss" rel="tag">rss</a></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009285.html">01:53 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9285" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 06, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009267"></a>
+<h3 class="title">Getting into Gaming</h3>
+
+<p>Gaming is flavour of the day in several areas of the OU at the moment.</p>
+
+<p><a href="http://digilab.open.ac.uk/">Digilab</a> opened in the Library to act as a space to playfully engage with technology (a Wii is on the way, apparently ;-)</p>
+
+<p>A couple of us are exploring a possible first level short course (with Abertay) on interactive multimedia and game design.</p>
+
+<p>A small team in the Computing are exploring the possibility of a course in which students create a course on computer gaming in Java  which could then, in principle, provide the basis for a course that could be delivered to another cohort:<br />
+<blockquote>The Computing Department of the OU is in the process of starting up a project which will get students to develop an OU course on a particular topic that the department does not currently teach; the course will use the OUâ€™s VLE Moodle. The course will teach material on e-learning, teaching, clear writing and distributed working. It is envisaged that students would work as an OU course team in groups of five and at a certain point would work singly to develop a unit.<br />
+Our hope is that we can take the best of the material that has been produced and convert it into a presentable OU e-learning course. <br />
+This highly experimental course is a response to projects such as Wikipedia, WikiUniversity and activities such as blogging. It is highly experimental since it challenges many of the expectations that we have about course development at the OU...</blockquote></p>
+
+<p>(Rumours also tell of another approach to a student-generated course that is being explored in Social Sciences, this time using a model in which students must identify their own learning resources for use in a course in a rapidly changing area (such as climate change).)</p>
+
+<p>And finally on the topic of games, there's a fulltime PhD postion going in <a href="http://iet.open.ac.uk">IET</a> for a project on <a href="http://kn.open.ac.uk/public/index.cfm?wpid=5649">Seventh Generation Games for Education</a>:<br />
+<blockquote>The latest games consoles and handhelds hold exciting possibilities for rapid development of working games. But do such games offer anything new in educational terms? This studentship offers an opportunity to explore this question in relation to any curriculum area of your choosing, and any educational level of your choosing, from pre-school to university. Your proposal must outline an idea for an original game of innovative educational potential that you could prototype in no more than 8 weeks and with £2000 for equipment. During the MRes year, you would develop this prototype but you must also be prepared to spend six months learning about quantitative and qualitative research methods so that you can develop a robust plan for a formal educational evaluation of the prototype. You would conduct the evaluation over four weeks, identifying exactly what users learn.  You would also need to write a well-referenced masters dissertation of at least 12,000 words that relates your research to the history of the educational evaluation of games and to common pedagogical frameworks. Progression from the MRes to the PhD is dependent on the quality of the dissertation and on the realistic educational potential of the idea.</blockquote><br />
+I wonder what would be said if I applied for that post? ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009267.html">01:34 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9267" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 02, 2007</h2>
+
+
+<div class="blogbody">
+<a name="009239"></a>
+<h3 class="title">Adding a Grazr Widget to a Moodle Journal Page</h3>
+
+<p>Whilst the Moodle environment lets users add simple HTML within personal journal or blog pages, it is typically locked down to the extent that users <em>cannot</em> add javascript or iframes within the HTML; nor can users avail themselves of personally included javascript embedded within the <em>href</em> attribute of an anchor tag.</p>
+
+<p>So here's a bookmarklet workaround, in the first instance to let you add a Grazr widget to a Moodle journal page. The hack is to add an <em>anchor</em> named in a particular way:</p>
+
+<p><img alt="anchorHack.png" src="http://blogs.open.ac.uk/Maths/ajh59/anchorHack.png" width="525" height="394" border="0" /></p>
+
+<p>When the page is saved, the URL appears in the page, but hidden in the HTML code that is used to display the text the anchor has the attribute <em>name="ousefulHack"</em></p>
+
+<p><img alt="embedded.png" src="http://blogs.open.ac.uk/Maths/ajh59/embedded.png" width="287" height="127" border="0" /></p>
+
+<p>Clicking on the bookmarklet loads a Grazr browser with the URL used to create the anchor:</p>
+
+<p><img alt="moodlegrazr1.png" src="http://blogs.open.ac.uk/Maths/ajh59/moodlegrazr1.png" width="373" height="294" border="0" /></p>
+
+<p>Grazr actually supports autodiscovery of web feeds. In the above case, I gave the URL to the OUseful blog, and Grazr has autodetected its RSS feed, allowing me to view the feed in the Grazr widget that is now embedded in the Moodle journal page:</p>
+
+<p><img alt="moodlegrazr2.png" src="http://blogs.open.ac.uk/Maths/ajh59/moodlegrazr2.png" width="402" height="277" border="0" /></p>
+
+<p>At the moment, the bookmarklet will only embed a single Grazr widget. Potential extensions to the script would include autodetection of things like YouTube URLs (in which case, a corresponding YouTube movie player could perhaps be embedded in the page rather than a Grazr widget?) as well as the embedding of all appropriately <em>name</em>d anchors present in the page.</p>
+
+<p>If you want to try the bookmrklet out, here it is: <a href="javascript:(function(){var d=document; var i=d.getElementsByName('ousefulHack')[0];var u=i.firstChild.nodeValue;var f=d.createElement('iframe');f.width='300px';f.height='450px';f.src='http://grazr.com/gzpanel.html?file='+u;i.appendChild(f);i.removeChild(i.firstChild);})()">Moodle Grazr ousefulHack</a> (only tested in Firefox...)</p>
+
+<p>Embedding the bookmarklet code in a Greasemonkey script or browser extension would allow Grazr widgets to be automatically embedded within Moodle journal or blog pages wherever the <em>ousefulHack</em> name is used as an  anchor attribute.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009239.html">01:18 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9239" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

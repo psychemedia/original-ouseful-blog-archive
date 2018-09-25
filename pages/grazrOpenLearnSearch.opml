@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0" xmlns:grazr="http://docs.grazr.com/script/spec/1.0">
+<head>
+  <title>OpenLearn Search</title>
+</head>
+<body>
+  <grazr:form name="OpenLearnSearchForm">
+    OpenLearn Search <input type="text" name="q" /> 
+    <input type="submit" value="Enter" /> 
+  </grazr:form>
+
+  <grazr:formtemplate name="OpenLearnSearchForm" 
+    file="http://www.dappit.com/transform.php?dappName=OpenLearnSearch&amp;transformer=RSS&amp;variableArg_0=%q%&amp;extraArg_title=OpenLearn_Search_Result&amp;extraArg_link=OpenLearn_Search_Result%40href" />
+
+  <grazr:formresult text="OpenLearn Search:" name="OpenLearnSearchForm" />
+
+</body>
+</opml>

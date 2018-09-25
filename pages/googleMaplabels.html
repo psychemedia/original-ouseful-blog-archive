@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Google Maps Label Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-size: 80%;
+	line-height: 160%;
+	font-family: "Bitstream Vera Sans", Verdana, sans serif;
+	color:#000;
+	text-align: center;
+	}
+#page {
+	text-align: left;
+	margin: 0 auto;
+	padding: 20px;
+	width: 600px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+h1 {
+	font-size: 150%;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	color: #666;
+	}
+h2 {
+	font-size: 120%;
+	margin: 10px 0 10px 0;
+}
+form {
+	margin: 10px 0 30px 0;
+	padding: 0;
+}
+ul, ol {
+	margin: 10px 0 20px 20px;
+	padding: 0;
+}
+ul li, ol li {
+	list-style-type: none;
+	color: #777;
+	margin: 3px 0 0;
+	padding: 0;
+}
+ul li:before {
+	content: "\00BB \0020";
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	font-size: 90%;
+	margin: 0;
+	padding: 2px;
+}
+code {
+	font-size: 110%;
+	color: green;
+}
+img, a img {
+	border: none;
+}
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+legend {
+	color: #666;
+}
+
+table.sbApps tr td {
+	width: 200px;
+}
+
+input.but {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+input.but:hover {
+	background: #eee;
+	border: 1px solid #000; 
+}
+a:link, a:visited {
+	color: blue;
+	text-decoration: none; 
+}
+a:hover {
+	color: red;
+	text-decoration: underline; 
+}
+  </style>
+  <script type="text/javascript">
+<!--
+
+function doASCIIChars( s )
+{
+  s = s.replace ( / /g, '%20' );
+  return s;
+} 
+
+function generateURL(){
+ var postcode= document.getElementById('usrPostcode').value;
+ var label= document.getElementById('usrLabel').value;
+
+/* for (var k=0;k<document.dataForm.usrMapType.length;k++) 
+  if (document.dataForm.usrMapType[k].checked==true) 
+   mapType=document.dataForm.sbApp[k].value;
+*/
+ var output = document.getElementById('output');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ var link = document.createElement('a');
+ var myURL='http://maps.google.com/maps?f=q&hl=en&q='+escape(postcode)+'+('+escape(label)+')';
+ link.setAttribute('href', myURL); link.setAttribute('id','myURL');
+ var linkTxt=document.createTextNode(myURL);
+ link.appendChild(linkTxt);
+ output.appendChild(link); 
+ 
+}
+
+-->
+  </script>
+</head>
+<body>
+<div id="page">
+  <h1>Google Maps Label Generator</h1>
+  <p>Generate a link to a location (via a UK postcode) on a Google map with a customised popup label. For example, try 
+entering <em>MK7 6AA</em> as the postcode, and <em>OU campus</em> as the label...</p>
+  <fieldset><legend>enter
+location information</legend>
+<form name="dataForm" action="" onsubmit="generateURL(); return false;">
+
+  <table border='0'>
+<tr>
+        <td><label for="usr">Postcode:</label></td><td><input style="width: 200px;"
+ id="usrPostcode" type="text"></td></tr><tr><td><label for="q"> Label:</label></td><td><input style="width: 200px;"
+ id="usrLabel" type="text"></td></tr>
+<!-- <tr>
+        <td>Map style:</td>
+        <td><table border='0'><tr><td><input type='radio' name='usrMapType' value='normal' />
+            Normal </td>
+<td><input type='radio' name='usrMapStyle' value='satellite' checked=true />
+            Satellite</td>
+<td><input type='radio' name='usrMapStyle' value='hybrid' />
+            Hybrid </td>
+</tr>
+</table></td></tr>-->
+<tr><td></td><td><input value="generate URL" class="but" type="submit"></td></tr></table>
+</form>
+</fieldset>
+
+  <p>Here is your URL: <span id='output'></span></p>
+  <p><small>Page layout, design and script based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a></small></p>
+</div>
+</body>
+</html>

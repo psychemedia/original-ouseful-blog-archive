@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: deliShow: A del.icio.us RSS Slide Show</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006040.html" title="Rich Client, Poor Client" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006044.html" title="Offline Web Search" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006040.html">&laquo; Rich Client, Poor Client</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006044.html">Offline Web Search &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 10, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">deliShow: A del.icio.us RSS Slide Show</h3>
+
+<p>A year ago now I wrote a script  to run a slide show form a delicious RSS feed. For some reason,  I never posted it anywhere, possibly because it needed tidying up/styling.</p>
+
+<p>Anyway - time has moved on, I still haven't styled the control panel, and I want to get this posted so I can refer to it... So: </p>
+
+<p>If you want to run a slideshow or presentation of web pages, fed from a delicous RSS feed, here's a way to do it:</p>
+
+<p>http://ouseful.open.ac.uk/deliShow/<em>deliciousUsername/deliciousTag</em></p>
+
+<p>A control panel will appear:</p>
+
+<p><img alt="deliShow.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/deliShow.JPG" width="648" height="181" border="0" /></p>
+
+<p>and a slide show of the pages listed in the corresponding delicious RSS feed (http://del.icio.us/rss/<em>deliciousUsername/deliciousTag</em>) will start after a short delay.</p>
+
+<p>There are a couple of other arguments that can be added to the show:</p>
+
+<p><em>&amp;num= </em> sets the number of 'slides' in the show before repeating;</p>
+
+<p><em>&amp;td=</em> sets the delay (in seconds; default =10) between each 'slide' in the show.</p>
+
+<p>Here's an example:</p>
+
+<p>OUseful Blog <em>feedthru</em> links: <a href="http://ouseful.open.ac.uk/deliShow/psychemedia/feedthru">http://ouseful.open.ac.uk/deliShow/psychemedia/feedthru</a></p>
+
+<p>UPDATE 30/7/07: <a href="http://www.fichey.com/">fichey.com</a> (<a href="http://anerroroccurredwhileprocessingthisdirective.com/2007/07/26/fichey-is-out/">fichey blog</a>) has all but the personalisation bit up and running in a slick interface... at the moment, it uses feeds from delicious, digg, reddit etc. If personalised feed sources are enabled, I'll be using this tool for OUseful workshops...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 10, 2006 09:10 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>The URL used in the appearing window uses MagPie...<br />
+http://ouseful.open.ac.uk/magpierss/scrollerCont2.php?q=psychemedia/feedthru&num=5&td=10&sbs=delicious</p>
+
+<p>but my simple http://del.icio.us/rss/BillyG/Vanity<br />
+just pulls up an XML version. I'm still grabbing your feed though, any ideas what the problem is? It sure seems useful for screencasts, tutorials, collaborating, sharing... all that W2 stuff lol. TIA.</p>
+<span class="comments-post">Posted by: <a href="http://billy-girlardo.com/WP/">BillyG</a> at April 15, 2006 03:08 AM</span>
+</div>
+<div class="comments-body">
+<p>To view a slideshow, use e.g.:<br />
+http://ouseful.open.ac.uk/deliShow/psychemedia/feedthru<br />
+instead of<br />
+http://del.icio.us/rss/psychemedia/feedthru<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony Hirst</a> at April 18, 2006 01:35 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006041.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Collecting Third Party Website Statistics (like Yahoo's) with Google Analytics</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008658.html" title="OU Library Traveller - Title Lookup" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008748.html" title="Are PLEs Actually Social or Collaborative Learning Environments?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/008658.html">&laquo; OU Library Traveller - Title Lookup</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/008748.html">Are PLEs Actually Social or Collaborative Learning Environments? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 19, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Collecting Third Party Website Statistics (like Yahoo's) with Google Analytics</h3>
+
+<p>Did you know you can collect web stats for any site - not just sites you 'own' - using <a href="http://google.com/analytics">Google Analytics</a>? Well with a little bit of Greasemonkey magic (or a suitable browser extension) it seems you can.</p>
+
+<p>Idly wondering whether I could set up my own shadow research project to study OpenLearn user behaviour, I knocked up a very simple Greasemonkey script to add a Google Analytics tracking script onto the bottom of any OpenLearn pages I visited:<br />
+<blockquote>// ==UserScript==<br />
+// @name           Openlearn tracker<br />
+// @namespace      http://ouseful.open.ac.uk/blog<br />
+// @description    Adds tracking to openlearn pages<br />
+// @include        http://openlearn.open.ac.uk/*</p>
+
+<p>// ==/UserScript==</p>
+
+<p>(function() {</p>
+
+<p> var b=document.getElementsByTagName('body');<br />
+ var s=document.createElement('script');<br />
+ s.setAttribute('src','http://www.google-analytics.com/urchin.js');<br />
+ s.setAttribute('type','text/javascript');<br />
+ b[0].appendChild(s);<br />
+ s=document.createElement('script');<br />
+ s.setAttribute('type','text/javascript');<br />
+ var t=document.createTextNode('_uacct = "UA-******-*";urchinTracker();');<br />
+ s.appendChild(t);<br />
+ b[0].appendChild(s);<br />
+})();</blockquote></p>
+
+<p>It's easy enough to put this script into an extension format - for example using a Greasemonkey compiler.</p>
+
+<p>Setting up the tracking on Google Analytics was easy enough too:</p>
+
+<p><img alt="googleAnalytics1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics1.jpg" width="485" height="145" border="0" /></p>
+
+<p>... as you can see:</p>
+
+<p><img alt="googleAnalytics2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics2.jpg" width="480" height="83" border="0" /></p>
+
+<p>For example, the first few stats:</p>
+
+<p><img alt="googleAnalytics3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics3.jpg" width="715" height="480" border="0" /></p>
+
+<p>I did wonder whether I was getting away with this almost legitimately because I have properly installed tracking on the OUseful blog, which lives on the <em>open.ac.uk</em> domain.</p>
+
+<p>So I tried on a domain I have absolutely no formal relationship with (except for a handful of search API developer tokens!)  - Yahoo.</p>
+
+<p>A very minor tweak to the Greasemonkey script allows the Google tracking script to be added to the bottom of any page on the yahoo.com domain:</p>
+
+<p><img alt="googleAnalytics9.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics9.jpg" width="479" height="193" border="0" /></p>
+
+<p>Setting up the Google Analytics account - and obtaining a tracking code - is easy enough:</p>
+
+<p><img alt="googleAnalytics4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics4.jpg" width="489" height="139" border="0" /></p>
+
+<p>And as you can see, tracking is working:</p>
+
+<p><img alt="googleAnalytics5.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics5.jpg" width="481" height="63" border="0" /></p>
+
+<p>Here are some results:</p>
+
+<p><img alt="googleAnalytics6.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics6.jpg" width="511" height="381" border="0" /></p>
+
+<p>You can see from the results above - and the header below - how the Google tracker script even manages to capture dynamic (search query) content:</p>
+
+<p><img alt="googleAnalytics7.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics7.jpg" width="352" height="190" border="0" /></p>
+
+<p>[The search queries in the graphical view over multiple sites (<em>p=plone+(site:www...</em> etc.) are actually generated using the <a href="http://searchfeedr.com">searchfeedr</a> search intermediary, which is rapidly becoming my search interface of choice.]</p>
+
+<p>What this means - among other things - is that if I can get you to install my extension, I can track your behaviour over my competitors' websites.</p>
+
+<p>I can't really understand why Google Analytics doesn't at least check that you have installed the script on at least one particular page on the domain being tracked and which Google can poll when it feels like to check that the tracking is still officially sanctioned. I wonder if this is mentioned at all in the <a href="http://www.amazon.co.uk/gp/product/0470053852?tag=robofestauk-21">Google Analytics book</a>?</p>
+
+<p>Because it seems to me that there is no such check.</p>
+
+<p>Now it may well be that I am in breach of Google Analytics Terms and Conditions, but people will play...</p>
+
+<p>Just a couple of other things to note in passing - when the Google tracker script fires, it also seems to tell Google blogsearch what's going on:</p>
+
+<p><img alt="googleAnalytics8.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/googleAnalytics8.jpg" width="225" height="188" border="0" /></p>
+
+<p>And for OU internal readers, you can see a glimpse of the sorts of results that the <a href="http://www.site-intelligence.co.uk/">Site Intelligence</a> <a href="http://www.netliancecorp.com/webanalytics.html">VBIS</a>  web analytics package gives for OpenLearn visitors <a href="http://intranet.open.ac.uk/open-content/p7.shtml">here</a>. [Background: <a href="http://www.site-intelligence.co.uk/PressReleases/SiteIntelligenceAppointedbyTheOpenUniversity.htm">OU adopts Site Intelligence web analytics tool</a>]</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 19, 2006 01:18 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008701.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

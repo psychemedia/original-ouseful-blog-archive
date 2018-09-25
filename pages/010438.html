@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn Unit Link Map</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010437.html" title="OPML Dashboard: Filtered RSS Feed Display" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010439.html" title="Mapping OpenLearn XML, Pass 2" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010437.html">&laquo; OPML Dashboard: Filtered RSS Feed Display</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010439.html">Mapping OpenLearn XML, Pass 2 &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 22, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn Unit Link Map</h3>
+
+<p>My feedreader seemed to be full this morning with posts about <a href="http://www.wikimindmap.org/viewmap.php?wiki=en.wikipedia.org&topic=Open_educational_resources">wikimindmap</a>, which produces a mindmap view of Wikipedia content.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5078845825597656066"><img src="http://lh3.google.com/image/tony.hirst/RnuvXpe5TAI/AAAAAAAAAG0/oqlGshPj3nc/s800/wikiMindMap.png" /></a></p>
+
+<p>At first I thought this was doing something <em>really</em> clever, but a tiny bit of digging suggests they're just link scraping (and exploiting a bit of structure - like "See also" information) and then using a (really neat) third party tool - the <a href="http://fb.stikipad.com/fb/show/HomePage">Flash Browser for FreeMind mind maps</a> - to display the results:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5078845855662427154"><img src="http://lh6.google.com/image/tony.hirst/RnuvZZe5TBI/AAAAAAAAAG8/OvCqv3e70_U/s800/wikipediaOER.png" /></a></p>
+
+<p>One thing I will take away from the WikiMindMap, though, is the way it provides a really "gentle" navigational display for the links contained on a page (and one I may reuse in a <a href="http://searchfeedr.com">searchfeedr</a> context).</p>
+
+<p>After a quick "View Source", I just had to knock up a demo link viewer for the links in an OpenLearn Unit, slightly modifying the <a href="http://blogs.open.ac.uk/Maths/ajh59/010193.html">OpenLearn XML Unit link scraper</a> that I built some time ago.</p>
+
+<p>Anyway - here's a demo of the links contained in T180_8: <a href="http://ouseful.open.ac.uk/openlearnplayground/demo/openLearnLinkMapper.html">OpenLearn Unit link mapper demo</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5078845868547329058"><img src="http://lh5.google.com/image/tony.hirst/RnuvaJe5TCI/AAAAAAAAAHE/XJjzIEXvFGM/s800/openlearnLinkMapDemo.png" /></a></p>
+
+<p>Some basic <a href="http://ouseful.open.ac.uk/openlearnplayground/demo/openLearnMindMapper.xsl">link scraping XSL</a> generates a crude FreeMind XML file which is then passed to the flash FreeMind viewer.</p>
+
+<p>If I get a chance over the weekend, I'll generalise the viewer and add it to the <a href="http://blogs.open.ac.uk/Maths/ajh59/010097.html">Towards an OpenLearn XML (Re)Publishing System</a>, providing a map view to arbitrary OpenLearn Units (or at least the ones for which I have URL powered access to the XML...).</p>
+
+<p>I also need to have a think about putting a bit of structure into the links view (maybe extracting links by section [UPDATE: demoed here - <a href="http://blogs.open.ac.uk/Maths/ajh59/010439.html">Mapping OpenLearn XML, Pass 2</a>], and maybe even trying to use something like the Yahoo content analyser to add a few relevant tags) and exploring how I might add media assets scraped from OpenLearn Units into the map view.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 22, 2007 12:22 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Erm:<br />
+http://scienceoftheinvisible.blogspot.com/2007/06/holiday-destination.html</p>
+
+<p>!</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at June 22, 2007 01:51 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010438.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

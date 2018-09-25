@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Scoping Socially Bookmarked Resources Posted to a Group</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005488.html" title="WikiMail" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005493.html" title="People-powered Search" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005488.html">&laquo; WikiMail</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005493.html">People-powered Search &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">December 15, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Scoping Socially Bookmarked Resources Posted to a Group</h3>
+
+<p>In a social bookmarking system that supports groups, such as <a href="http://simpy.com">Simpy</a> or <a href="http://connotea/org/">Connotea</a>, it is possible for a user to bookmark and tag a resource and commit it to the group. Just for the record, how should we  scope the resource in such a case? (By scope, I mean under what views should we be able to see the resource.)</p>
+
+<p>For sake of argument, let us imagine that user U is in group G, and tags a resource R with tag T1. </p>
+
+<p>Under what conditions should we be able to lookup the resource?</p>
+
+<p>For convenience, I shall use an implied URL with explicit argument passing inspired by the one used in <a href="http://acmqueue.com/modules.php?name=Content&pa=showpage&pid=344&page=5">IBM's Dogear social bookmarking service</a>, where for example we identify tags, users, groups and resources explicitly using the arguments <em>tag</em>, <em>group</em>, <em>user</em> and <em>resource</em> respectively.</p>
+
+<p>Using the variables X and Y as part of a request is to be regarded as making a query on the tags, groups, or users and returning satisficing results within X. </p>
+
+<p>The distinguished term <em>whatever=E</em> should be read as 'for all whatevers Y that exist, run this query with <em>whatever=Y</em> and aggregate the results'. An additional term  - <em>submittedBy</em> -  is required to identify which user submitted a resource to a particular group.</p>
+
+<p>The following list describes a 'could offer' categorisation, rather a recommendation of what the scope should or must be. Note that some of the queries may not be desirable, or even useful!</p>
+
+<p>Resource Listings:</p>
+
+<ol><li>A list of resources bookmarked to the group (e.g. %PATH%?resource=X&group=G)</li><li>A list of resources bookmarked with a particular tag (e.g. %PATH%?resource=X&tag=T)</li><li>A list of resources bookmarked by a particular user (e.g. %PATH%?resource=X&user=U)</li><li>A list of resources bookmarked to the group with a particular tag (e.g. %PATH%?resource=X&group=G&tag=T)</li><li>A list of resources bookmarked by a particular user with a particular tag (e.g. %PATH%?resource=X&user=U&tag=T)</li><li>A list of resources bookmarked by a particular user to a particular group (e.g. %PATH%?resource=X&submittedBy=U&group=G)</li><li>In some cases, it may be interesting to compare the results of the previous query with a list of resources bookmarked by a particular user that have also be submitted to particular group (e.g. %PATH%?resource=X&user=U&group=G)</li><li>A list of resources bookmarked by a particular user with a particular tag to a particular group (e.g. %PATH%?resource=X&submittedBy=U&tag=T&group=G)</li><li>In some cases, it may be interesting to compare the results of the previous query with a list of resources bookmarked by a particular user with a particular tag that have also be submitted to particular group (e.g. %PATH%?resource=X&user=U&tag=T&group=G)</li><li>A list of resources submitted by a particular user to any group (e.g. %PATH%?resource=X&submittedBy=U)</li></ol>
+
+<p>Who bookmarked this resource?</p>
+
+<ol><li>Which groups have bookmarked this resource (e.g. %PATH%?resource=R&group=X)?</li><li>Which users have bookmarked this resource (e.g. %PATH%?resource=R&user=X)?</li></ol>
+
+<p>How is this resource tagged?</p>
+
+<ol><li>How has this resource been tagged (e.g. %PATH%?resource=R&tag=X)?</li><li>How has this resource been tagged by a particular user (e.g. %PATH%?resource=R&user=U&tag=X)?</li><li>How has this resource been tagged by a particular group (e.g. %PATH%?resource=R&group=G&tag=X)?</li><li>How has this resource been tagged by a particular user in a particular group (e.g. %PATH%?resource=R&user=U&group=G&tag=X)?</li></ol>
+
+<p>Who is active within a group?</p>
+
+<ol><li>Who has posted resources to a group (e.g. %PATH%?resource=E&group=G&submittedBy=X)?</li><li>Which groups has a user posted to (e.g. %PATH%?resource=E&group=X&submittedBy=U)?</li><li>Which groups has a user posted a particular resource to (e.g. %PATH%?resource=R&group=X&submittedBy=U)?</li><li>Which users have posted a particular resource to a particular group (e.g. %PATH%?resource=R&group=G&submittedBy=X)?</li></ol>
+
+<p>Who might be worth inviting to the group?</p>
+
+<ol><li>Who has posted a resource that is also posted within a particular group (e.g. %PATH%?resource=E&group=G&user=X)? Note the results of this query need to be compared to the subscribers of the group (e.g. with an additional term &!submittedBy=X).</li></ol>
+
+<p>Several questions come to mind from this exercise:<br />
+<ol><li>What happens if multiple users post the same resource to a particular group? Do they both get some 'credit' for contributing the resource to the group?</li><li>Should a user be prevented from trying to post a resource to a group where the resource is already listed?</li><li>Should a user in some way inherit resources posted to groups that the user is a member of?</li><li>If a user does post a resource to a group that already lists that resource, how should the user be notified?</li></ol></p>
+
+<p>In measuring the relevance of a group to a particular user, do we also need to support a term that captures information resources that a user has bookmarked having had it brought to their attention as a result of seeing it in the group, personalisedBy for example. This is an active form of taking an interest in the resource, as opposed to bubbling up resources to a personal resource collection by virtue of inheriting the resource from a group a user is a member of.</p>
+
+<p>We can then ask further questions along the lines of:</p>
+
+<ol><li>Which users have personalised a particular resource added to a particular group  (e.g. %PATH%?resource=R&group=G&personalisedBy=X)?</li><li>Which users have personalised resources tagged in a particular way  (e.g. %PATH%?resource=E&tag=T&personalisedBy=X)?</li><li>Which resources in a particular group have been personalised (e.g. %PATH%?resource=X&group=G&personalisedBy=E)?</li></ol>
+
+<p>Personalisation can equally apply to the bookmarking of a resource from seeing it in a listing of resources identified through a tag or user search. By mining personalisedBy and submittedBy data, there is ample opportunity for a social bookmarking system used in an enterprise, for example, to add value by identifying users who should perhaps be introduced to each other on the basis of shared interests. That is, the mining of social bookmarks within an enterprise for unfulfilled or unrecognised relationships is potentially valuable in knowledge management terms.  </p>
+
+<p>For example:</p>
+
+<ol><li>if we have two users U1 and U2, who tag similar resources (with or without similar tags) independently of each other, should the system effect an introduction for them? (This is one of the ways users themselves seek out potential relationships with a social bookmarking environment?</li><li>if we have two users U1 and U2, who use similar tags (bookmarking the same or different resources) independently of each other, should the system effect an introduction for them?</li></ol>
+
+<p>Related to the notion of personalisation of bookmarks that appear in a group a user is a member of is the question: should users be notified whenever there is a new posting to a group they are a member of: a) if they have not already got a personal copy of that resource; or b) if they have a personal copy of that resource but did not see fit to post it to the group.</p>
+
+<p>A follow on question then arises: if two users in the same group bookmark the same resource, perhaps even with the same tag and neither user posts the resource to the group, should a recommendation be made to them that they do post the resource to the group? This recommendation is likely to be even more compelling if the tag used to describe the resource is also a tag used heavily within the group.</p>
+
+<p>More generally, if a user who is a member of a group bookmarks a resource with a tag that is used within the group, but does not submit the resource to the group, can the user be regarded as keeping a secret from the rest of the group.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at December 15, 2005 04:49 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005489.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>I started out in Connotea over the summer, and I see it as handy for use in collaboration, especially with remote collaborators (e.g., Florida with Singapore).  Right now I am trying to learn about how groups work etc.  Your "could offer" list is interesting to collaborators.</p>
+
+<p>However, for the people who design Connotea, with a global view, this question strikes me as huge:</p>
+
+<p>"Which groups have bookmarked this resource (e.g. %PATH%?resource=R&group=X)?"</p>
+
+<p>That is, peering over the shoulders of a group at work is good, but even more useful would be to see the targets of MANY groups.  Would <br />
+'R=Connotea bookmark 176 on H5N1' be of interest to a large and diverse collection of groups or only to a narrow collection of biologists?  What about 'R=Connotea bookmark 21 on asteroids' as an occasion of connecting groups?  If astronomer collaborations AND biologist collaborations are both thinking about asteroids, it would be worth knowing.</p>
+
+<p>Another question you have asked is, "Should a user be prevented from trying to post a resource to a group where the resource is already listed?" That has got to be sticky.  I would not want to write the software to make sure double posting does not occur!</p>
+
+<p>Thanks for this posting!  I teach undergraduate physics and astronomy to large lecture groups (hundreds of students) in a large state university if Florida.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;john_q_physics&#64;mail&#46;ucf&#46;edu">Thomas Q. Physics</a> at December 20, 2005 08:48 PM</span>
+</div>
+<div class="comments-body">
+<p>Thanks for your comment (I tried to mail a reply too, but it bounced...and your departmental website seems to have lots of broken links..!) I agree with what you say about the potential for connecting groups, but wonder how this would feel in practice eg if the system started recommending to people that they get in touch with each other proactively, as opposed to, say, users in a group looking to see who else had bookmarked the same post (either individuals or other groups..)</p>
+
+<p>In fact, the idea of 'group X bookmarked this resource' is an interesting one if you see the *group* as conferring some sort of authority on the post by proxy.</p>
+
+<p>Suppose you have a high profile research group that is keenly watched, and a lowly new postgrad posts a dubious resource to the group...hmm - should groups moderate themselves eg insofar as who posts to them?</p>
+
+<p>Perhaps duplicate - or 'I concur' - bookmarks SHOULD be used within groups and then the bookmark is only released as group bookmark (as opposed to an individual bookmark posted to a group) IF a quorum of 'votes' for the bookmark is reached...</p>
+
+<p>How are you finding connotea as a sharing tool, btw? Are you using it to share resources *within* a group, or are you mining connotea to see who's bookmarking what you're bookmarking, and then checking out their links...</p>
+
+<p>I've not started thinking too deeply about what nature may be hoping to get out of Connotea (though i have chatted to them briefly). It would be intersting if they could use the knowledge contained within Connotea to identify emerging trends/for horizon scanning, or perhaps helping them target the subject area of forthcoming special issues, or find editors for the same?!</p>
+
+<p>I wonder too if this sort of academic bookmarking service could in some way provide an element of peer review for open access publications?</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony Hirst</a> at December 20, 2005 10:11 PM</span>
+</div>
+<div class="comments-body">
+<p>To me the interesting thing is the global view of groups hunting and valuing resources..  like grizzly bears and bald eagles BOTH congregating where the salmon run. </p>
+
+<p>Tony, I am not sure yet about forming a group.  I formed a test group yesterday just to see how it worked.  Both members are ME, under different user names and browsers (Safari and Firefox), so at least I can argue with myself in my neat Connotea group. ;)</p>
+
+<p>However, for a real group, one needs real friends, and I am afraid that all my physics friends are not at the advanced stage of nerdliness to take much interest in Connotea.</p>
+
+<p>I hope by summer to have a few people with which to collaborate on my current teaching interest, which is writing assignments for undergraduate science students.</p>
+
+<p>I will try to send you an email directly.  I hate posting it out in the open.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;brains&#64;physics&#46;ucf&#46;edu">Thomas Q Physics</a> at December 21, 2005 09:41 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Scoping Socially Bookmarked Resources Posted to a Group";
+ z_post_category="socialBookmarking";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

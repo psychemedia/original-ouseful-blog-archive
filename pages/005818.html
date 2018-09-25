@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Delicious Reading Lists Made Easy</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005817.html" title="Making Something OUseful Out of RSS2Email" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005845.html" title="Voyager Library Catalogue Toolbar" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005817.html">&laquo; Making Something OUseful Out of RSS2Email</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005845.html">Voyager Library Catalogue Toolbar &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 27, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Delicious Reading Lists Made Easy</h3>
+
+<p>I hate it when an idea takes shape, 'cos it means I can't sleep... The thing that's been keeping me up tonight is the idea of <a href="http://dannyayers.com/archives/2006/02/07/delicious-reading-lists/">delicious reading lists</a>...(If you need a briefing on reading lists, <a href="http://www.reallysimplesyndication.com/2005/10/13#a1032">here's where it started</a>.) Here's my first attempt at making 'em easy...</p>
+
+<p>Fist off, we need a way of bookmarking <em>feeds</em> to del.cio.us. One way to do this is to bookmark whatever's pointed to by the first &lt;link rel='alternate' /&gt; on a page, and tag it with, for example, <em>usr:feed</em>. (I have saked the delicious guys, via the developer mailing list, if a system:feed tag is on the cards).</p>
+
+<p>If you need just such a bookmark, here's one I think works in Firefox: <a href="javascript:void(d=document);void(el=d.getElementsByTagName('link'));for(i=0;i<el.length;i++){if(el[i].getAttribute('rel').indexOf('alternate') != -1){void(p=encodeURIComponent(el[i].getAttribute('href')));location.href='http://del.icio.us/psychemedia?v=3&url='+p+'&title='+encodeURIComponent(document.title)+'&tags=usr:feed';};};">+ feed 2 del.icio.us</a></p>
+
+<p>The next thing we need to do is add an OPML feed generator link to a delicious page <em>if</em> there is at least one feed on it (e.g. at least one thing tagged <em>usr:feed</em>).</p>
+
+<p>I've knocked up a  <a href="http://blogs.open.ac.uk/Maths/ajh59/deliciousReadingList.user.js">del.icio.us OPML feed</a> <em>Greasemonkey script</em> to do this, but it's a bit clunky at the moment. For example, it'll only work if you're looking at a page of the form <em>http://del.icio.us/someThing/someTag</em>, because it pulls out the feed for the page (e.g. <em>http://del.icio.us/rss/someThing/someTag</em>) and adds <em>+usr:feed</em> to it... </p>
+
+<p>Here's how I provide a link to the generated OPML file:</p>
+
+<p><img alt="deliOPML.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/deliOPML.JPG" width="410" height="144" border="0" /></p>
+
+<p>If the page doesn't point to a page that relates specifically to tagged items (such as a user's del.icio.us 'homepage') be warned that (at the moment) the script won't work (if there's enough interest, I may try to fix this).</p>
+
+<p>Also, if there's nothing tagged 'usr:feed' on the page, the feed link is not added. Furthermore, the feed link will only make use of items tagged <em>usr:feed</em> in the OPML file (that's all that's passed to the feed generator).</p>
+
+<p>So for example, in the above screenshot, the feed link was generated because of this:</p>
+
+<p><img alt="deliusrfeedTag.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/deliusrfeedTag.JPG" width="244" height="76" border="0" /></p>
+
+<p>Here's an example of clicking the OPML link from my delicious feed on a tag that currently has <a href="http://del.icio.uc/rss/psychemedia/OU">two feeds in it</a>:</p>
+
+<p><img alt="opmlExample.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/opmlExample.JPG" width="724" height="305" border="0" /></p>
+
+<p>Btw - I hope I'm allowed to make use of the OPML-TM gif?! Mail me if not...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 27, 2006 02:46 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005818.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Delicious Reading Lists Made Easy";
+ z_post_category="socialBookmarking";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Web-based Presentations</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006074.html" title="Customer Participation at Amazon.com" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006080.html" title="L &amp; T conf Keynote - Mike Sharples - Beyond Mobile Learning" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006074.html">&laquo; Customer Participation at Amazon.com</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006080.html">L & T conf Keynote - Mike Sharples - Beyond Mobile Learning &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 24, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Web-based Presentations</h3>
+
+<p>I just picked up on <a href="http://www.teamslide.com">Teamslide</a>, a (commercial) web based presentation system (via <a href="http://ajaxian.com">Ajaxian</a>) that lets you give a presentation remotely over the web, and it got me wondering about <a href="http://www.meyerweb.com/eric/tools/s5/">S5</a>, Eric Meyer's "standards-based slide show system".</p>
+
+<p>If you haven't come across S5 before, here's a brief description:</p>
+
+<blockquote>a slide show format based entirely on XHTML, CSS, and JavaScript. With one file, you can run a complete slide show and have a printer-friendly version as well. The markup used for the slides is very simple, highly semantic, and completely accessible. Anyone with even a smidgen of familiarity with HTML or XHTML can look at the markup and figure out how to adapt it to their particular needs. Anyone familiar with CSS can create their own slide show theme. It's totally simple, and it's totally standards-driven.</blockquote>
+
+<p>So - given that, I was wondering how easy it would be to write a simple AJAX based IM like system that would let me present an S5 presentation at a distance?</p>
+
+<p>Everyone watching the presentation would connect to the same chatroom (presentation room) and download the whole presentation (a single file, remember) into the presentation/IM client. The person giving the presentation would send the 'next slide/previous slide' commands to the presentation room, as if sending a message into the chat room. For everyone else watching the presentation, their client would poll the chat room every few seconds to see if there is a new message' (i.e. presentation command). If there is, the command would be pulled down and used to step on (or back) a bullet point/slide etc., as required. </p>
+
+<p>These seems like it should be easy to do - after all, IM is supposed to be an <a href="http://www.ajaxprojects.com/ajax/tutorialdetails.php?itemid=9">Ajax 101 project</a>, so this can't be all that much harder...?</p>
+
+<p>If only I had half-a-day or two free to try it and see...</p>
+
+<p>PS <a href="http://s5presents.com/">S5 Presents</a> looks like it may provide an easy way in to writing S5 presentations.</p>
+
+<p>PPS another online HTML presentation solution - the comprehensive <a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a> (via <a href="http://suda.co.uk/">Brian Suda</a>)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 24, 2006 06:44 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006075.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>> after all, IM is supposed to be <br />
+> an Ajax 101 project</p>
+
+<p>Obviously, the core idea of teamslide took only a brief time to implement as a proof of concept. Most "ideas" are like that. But it took another four months to turn it into a real product. All the difference in the world between the two.</p>
+
+<p>Patrick<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://www.teamslide.com">Patrick Thomas</a> at April 25, 2006 06:24 AM</span>
+</div>
+<div class="comments-body">
+<p>>>Obviously, the core idea of teamslide took only<br />
+>>a brief time to implement as a proof of concept.<br />
+>>Most "ideas" are like that. But it took another<br />
+>>four months to turn it into a real product. All<br />
+>>the difference in the world between the two.</p>
+
+<p>I appreciate that (and do think that Teamslide is a nifty product) - I was just expressing a bit of personal amazement that I couldn't easily find a hacked implementation of an S5 remote presentation player...</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony</a> at April 26, 2006 09:18 PM</span>
+</div>
+<div class="comments-body">
+<p>> personal amazement that I couldn't easily <br />
+> find a hacked implementation of an S5 <br />
+> remote presentation player</p>
+
+<p>Yeah, had the same experience :-) On the other hand, I believe we are just at the starting gate. Look at all the great web app developments out there, fascinating.</p>
+
+<p>Our approach is radically different though as we want to empower the user and encourage him/her to use his webserver/webspace (who is bored stiff) for more than hosting webpages: Install Online Software, benefit from anywhere, anytime computing but keep control and don't turn all your personal data to Google or WebEx by subscribing to an Online Service.</p>
+
+<p>Why pay a subscription of 500 US$ each year to use Online Software I could buy and "own" for, say, 200 US$. Instead of buying software licenses to run on PCs, we will see an upsurge of Online Software licenses to run on personal webservers.</p>
+
+<p>Challenges? Lots of people don't even know they have unused webspace, others have no idea what "install on your webserver" means...can't blame them. The big secret: installing Online Software is actually easier than installing desktop applications - upload and run. How ironic. Ok...sorry, I am getting off path...all the best.</p>
+<span class="comments-post">Posted by: <a href="http://www.teamslide.com">Patrick Thomas</a> at April 27, 2006 02:31 PM</span>
+</div>
+<div class="comments-body">
+<p>>>Our approach is radically different though as we<br />
+>>want to empower the user and encourage him/her to<br />
+>>use his webserver/webspace (who is bored stiff)<br />
+>>for more than hosting webpages: Install Online<br />
+>>Software, benefit from anywhere, anytime computing<br />
+>>but keep control and don't turn all your personal<br />
+>>data to Google or WebEx by subscribing to an<br />
+>>Online Service.</p>
+
+<p>YEah - thanks for making that explicit - I think the model is a neat one although I think it does still potentially raise questions for 'ordinary users' about getting apps installed on a server that hosts their webpage.</p>
+
+<p>More and more services are offering easy to use file storage, but as yet there aren't many that havbe an 'install here' button as well as an 'upload here' button. One issue&lt; i guess, is traffic, server load, an unsillingness to run apps that may get stuck in a loop and tracsh the server, security etc.</p>
+
+<p>The Ning model is an intersting one I think - I wonder when we'll see a service that hosts apps such as yours, within which users can pay to buy it, and then have it automatically installed (the site essentially acting as a reseller, installer and host).</p>
+
+<p>Or perhaps having hosting sites with B2B APIs that require a signature from a known provider who is allowed to install software onto a hosted account via an API. So the user buys the software off you, gives you their host details and account name, you go through the host's API and install the software into the user's account.</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony</a> at April 27, 2006 06:58 PM</span>
+</div>
+<div class="comments-body">
+<p>"...within which users can pay to buy it, and then have it automatically installed (the site essentially acting as a reseller, installer and host)... Or perhaps having hosting sites with B2B APIs that require a signature from a known provider who is allowed to install software onto a hosted account via an API."</p>
+
+<p>Excellent. This simply shouts for an (open?) standard to PHP-based installation scripts and application packaging, and is certainly an opportunity waiting to be grabbed. Overdue, IMHO. And we get rid of this FTP uploading nonsense. Maybe some guys with high visibility could take an open standard-setting lead, say 37signals, if they decide that they would also support a non-subscription approach to Online Software.</p>
+<span class="comments-post">Posted by: <a href="http://www.teamslide.com">Patrick Thomas</a> at April 27, 2006 11:33 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Web-based Presentations";
+ z_post_category="projects";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

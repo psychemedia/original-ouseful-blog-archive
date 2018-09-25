@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Openlearn XML Processor</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010122.html" title="Coherent Design Across Web Apps" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010163.html" title="Visualising Geo-temporal RSS Feeds" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010122.html">&laquo; Coherent Design Across Web Apps</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010163.html">Visualising Geo-temporal RSS Feeds &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 05, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Openlearn XML Processor</h3>
+
+<p>Okay folks, I'm gonna have to trust you to be nice with this one, because every time you play with, it hits someone else's server...</p>
+
+<p>What is it? My first attempt at an <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnProcessor.php">OpenLearn XML Processor</a> "solution", that's what...</p>
+
+<p>Now before Stephen Downes hollers about the server hits (;-) this is a proof of concept thing, okay? A demo. To act as something I can pick apart in front of people to try and show them how it's put together...</p>
+
+<p>So what's it do?</p>
+
+<p>Well - put in the URL to an OpenLearn XML file (you can host them on your own server after downloading them from <a href="http://labspace.open.ac.uk">LabSpace</a>, which requires you to register for the course and blah de blah de blah...) - or just stick in the unit code to one of the files I've alredy liberated - and the processor will (if it's working ;-):<br />
+<ul><li>generate a link to a URL that uses a script to generate an OPML file that lists the media assets contained in the unit (L120_1 is a good demo of this (as reported previously in this post on  <a href="http://blogs.open.ac.uk/Maths/ajh59/010097.html">OpenLearn Asset Stripping</a>); a link to a Grazr view of the file is also generated;</li><br />
+<li>generate a link to an RSS version of the course unit (as well as a link to a Grazr previewer); the <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearn2rss.xsl">stylesheet</a> is still a bit ropey, but it's good enough for (some) demos; I'm having all sorts of problems with the character set, so if someone can tell me what I'm doing wrong, that'd be much appreciated (it's something I've never really looked at).  The translation works by passing the XML file URL to a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=0F8Z_y7d2xGkWV9fnkartA">Yahoo pipe</a> that runs the XML through the W3C XML processor using the previously mentioned style sheet to generate the RSS output;</li><br />
+<li>generate a link to a PDF version of the unit. This is achieved by plugging the URL for the OUXML2RSS Yahoo pipe (which has the  course XML URL as an argument, of course) into the <a href="http://www.rss2pdf.org">RSS2PDF.org</a> web service. The steps to generate the PDF, then, are: provide the URL of the XML, use a Yahoo pipe to send this to the W3C XSL processor with an appropriate style file, take the resulting RSS output from the Yahoo pipe and shove it into rss2pdf; (it should then be possible to pass this to a pdf2audio service, etc;-);</li><br />
+<li>wire the live created RSS file into my <a href="http://blogs.open.ac.uk/Maths/ajh59/009972.html">serialised feeds service</a>. This service takes the serialised feed delivery configuration information provided via a web form, and uses that information - along with the current  time stamp - to work out how many items to deliver to the user. The service passes this required item count, along with a URL to the unit XML file to the Yahoo OUXML2RSS pipe that runs the XML through the W3C XSL processor along with a supplied XSL file), and then passes <em>this</em> generated feed to a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">feed serialiser pipe</a> (which is nothing of the sort really - all it does it count out a required nubner of feed items). Simple. :-) and stupid - because the W3C processor has to run every time the feed is polled.</li></ul></p>
+
+<p>Okay - so maybe I need to work on the delivery of that explanation a little... and draw some pictures;-)</p>
+
+<p>Or maybe write it up using the new draft proposal for <a href="http://www.w3.org/TR/xproc/">XProc: An XML Pipeline Language</a>. Because as I'm sure you all know, "[a]n XML Pipeline specifies a sequence of operations to be performed on one or more XML documents, producing one or more XML documents as output."</p>
+
+<p>Also when I get a chance, I'll write an OpenLearn RSS Exploiter that uses a pre-generated/saved version of the RSS files to play around with the RSS (converting it to PDFs, audio, etc., as well as providing badges to one-click it into Netvibes, Google Personal, etc.).</p>
+
+<p>But not today - I need to pack - going away for a week (so there'll be no posts for a bit...)...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April  5, 2007 10:26 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>> Now before Stephen Downes hollers about the server hits...</p>
+
+<p>LOL</p>
+
+<p>Tested with A103 and got errors in both the OPML links.</p>
+
+<p>Other people would be critical - but I spent all day fighting with Google's dysfunctional API. I am more than sympathetic.</p>
+
+<p>Neat idea - I wish you coded in perl so we could share.</p>
+
+<p><br />
+</p>
+<span class="comments-post">Posted by: <a href="http://www.downes.ca">Stephen Downes</a> at April  6, 2007 09:21 PM</span>
+</div>
+<div class="comments-body">
+<p>OK, a few pieces of feedback from the OpenLearn technical team...</p>
+
+<p>Our export in Moodle format is the complete course, but when you import into your own Moodle install you can pick and choose which bits you want to take.</p>
+
+<p>There is great concern in the openlearn programme team about how to encourage remixing.  Usecases and examples are one way forward that is being actively considered.  Unfortunately its not in my remit to write them, so we'll wait and see.</p>
+
+<p>We’re also working to offer RSS feeds in various shapes and sizes.  </p>
+
+<p>With the funding application for year 2 there is a little less emphasis on target hours, although targets still exist.  There are wider ranging debates about the future of the labspace – should it be a wiki, or just a file sharing system, or something else entirely?  God only knows where all that will end up! Stephen Bradley is organising a workshop to kickstart things.</p>
+
+<p> Also, BTW Labspace tools such as compendium, MSG and Flashmeeting will be introduced to learningspace over the summer.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;j&#46;m&#46;gray&#64;open&#46;ac&#46;uk">Jenny Gray</a> at April 16, 2007 12:15 PM</span>
+</div>
+<div class="comments-body">
+<p>"Tested with A103 and got errors in both the OPML links."</p>
+
+<p>That's because the code is A103_1, maybe? </p>
+
+<p>Or because there are vey few media assets in that unit, and I don't yet trap out for no assets in a particular media type, lack of caption info etc.</p>
+
+<p>*If* the units were correctly marked up, and *if* there were assets of each media type in the unit, it'd be ok... I think ;-)</p>
+
+<p>L120_1 is a better one to try out.</p>
+
+<p>"I wish you coded in perl so we could share."</p>
+
+<p>I barely code at all, hence PHP and javascript ;-)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony</a> at April 19, 2007 10:05 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010124.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

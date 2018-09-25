@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: deliSearch Widget on widgetbox</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007379.html" title="deliSearch on delicious" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007391.html" title="Mashing the Library Mashup Compeition? Compleat Grazr on Google ig" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007379.html">&laquo; deliSearch on delicious</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007391.html">Mashing the Library Mashup Compeition? Compleat Grazr on Google ig &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 10, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">deliSearch Widget on widgetbox</h3>
+
+<p>Keeping up the deliSearch momentum prompted by my previous post on <a href="http://blogs.open.ac.uk/Maths/ajh59/007379.html">embedding deliSearch in a delicious links page</a>, here's a way of embedding deliSearch in your own blog using a <a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">deliSearch widget</a>:</p>
+
+<p><img alt="wb_deliSearchPreview.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wb_deliSearchPreview.jpg" width="278" height="443" border="0" /></p>
+
+<p>The widget shows a list of links corresponding to a feed from a particular tag combination on a particular delicous user account. A quety can be entered into the search box and applied over the pages listed in the corresponding bookmark feed, or the domains those pages are served from.</p>
+
+<p>I opted to distribute the deliSearch widget through <a href="http://www.widgetbox.com/">widgetbox</a>, which presents the user with a customisation panel prior to download that allows you to customise the settings of the widget:</p>
+
+<p><img alt="wb_deliSearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wb_deliSearch.jpg" width="643" height="450" border="0" /></p>
+
+<p>You can <a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">download the deliSearch widget here</a>.</p>
+
+<p>A second widget (pending - <a href="http://www.widgetbox.com/widget/428c5b41-b6fd-46bc-9d64-22b870d28996">tag aware deliSearch widget</a>) will make use of the widgetbox <a href="http://forums.widgetbox.com/viewtopic.php?pid=18">tag awareness tool</a>,  which  will extract tag information from a blog page and pass it automatically to the widget.</p>
+
+<p>My intention here is to allow users to tag blog posts in such a way that the <a href="http://www.widgetbox.com/widget/428c5b41-b6fd-46bc-9d64-22b870d28996">tag aware deliSearch widget</a> can automatically make use of tag information embedded in a blog post to pull in the correct delicious feed for deliSearch.</p>
+
+<p>If you <a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">download the deliSearch widget</a> and try it out on your own pages, I'd appreciate hearing how you get on with it (and with <a href="http://www.widgetbox.com">widgetbox</a>), and the use cases you're putting to :-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September 10, 2006 11:10 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007387.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,1568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Web2.0 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+
+<h2 class="date">June 14, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010415"></a>
+<h3 class="title">OPML Powered Dashboards</h3>
+
+<p>Since posting about the <a href="http://blogs.open.ac.uk/Maths/ajh59/010382.html">OU Institutional Dashboard Using Pageflakes</a>, I&#8217;ve spent quite a bit of time thinking about this sort of surface and how they could be used to both manage and display OPML feeds:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5073025135594261298"><img src="http://lh4.google.com/image/tony.hirst/RmcBe5e5SzI/AAAAAAAAADo/D7zfqTImG94/s800/ousefulPageflakesTab1.png" style="border:0" /></a></p>
+
+<p>In the first case - <em>OPML feed management</em> - feeds displayed on a dashboard tab could be made available via a derived OPML feed. (Netvibes allows you to <a href="http://blog.netvibes.com/?2005/10/08/7-opml-export">export your whole feed collection</a>, but not generate an OPML feed corresponding to the panels on a particular tab, I think?)</p>
+
+<p>For example, here&#8217;s a an <a href="http://www.opmlmanager.com/outliner/ounews">OPML version of the OU News tab</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5075873218602552274"><img src="http://lh3.google.com/image/tony.hirst/RnEfzJe5S9I/AAAAAAAAAF8/Bm4Xza_WapA/s800/ouNewsOPMLView.png" /></a></p>
+
+<p>(Here&#8217;s the actual <a href="http://www.opmlmanager.com/opml/ounews.opml">OPML feed</a>; and here&#8217;s one for the <a href="http://www.opmlmanager.com/opml/outthere.opml">OUt There</a> tab.)</p>
+
+<p>This code is derived (handcrafted) from the feed panels contained on the corresponding tab of the <a href="http://ouseful.open.ac.uk/">OUseful Dashboard</a>. It would be nice to see this sort of OPML feed made available from each tab.</p>
+
+<p>I&#8217;ve actually grouped the feed links into folders that represent the columns on the PageFlakes page, to make explicit the intention being that surfaces like PageFlakes should also be able to <em>display</em> OPML files. Round-tripping could then be provided in two ways:</p>
+
+<ol><li>An OPML file could be used to import a set of feed links into a tab. Pageflakes sort of offers this at the moment - an OPML file can be uploaded to a tab, wherein the OPMLd feed links are bookmarked and can then be placed on the tab as individual panels. I suggested to the PageFlakes chaps that as well as OPML file upload, import from an OPML URL should also be supported (as it is in <a href="http://www.opmlmanager.com">OPML Manager</a>, for example), so that may be on the cards some time soon? <img src='http://conclave.open.ac.uk/OUseful/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' />  By exporting as well as importing OPML, this also provides an <em>ad hoc</em> mechanism for grabbing a copy of a particular dashboard tab.</li>
+<li>An OPML file could be used to feed a <em>live</em> set of feed URLs into a tab, turning the tab into an OPML reading list viewer. <a href="http://grazr.com">Grazr</a> already does this, of course, but it doesn&#8217;t offer the dashboard style view that PageFlakes and Netvibes do. Subscribing to an OPML feed could then populate a tab from the OPML feed contents. The feed linked to above shows how it&#8217;s also possible to add a small amount of structure (which column to put each feed panel into) to the feed, albeit in a clumsy, clunky way.
+OPML feeds can also be used to define the contents of <em>several</em> tabs, as this (evolving) <a href="http://grazr.com/config.html?file=http://www.opmlmanager.com/opml/dashboardDemo.opml">OUseful Dashboard OPML  feed (via Grazr)</a> demonstrates.</li></ol>
+
+<div style="height:350px;width:500px;"><a href="http://grazr.com/gzpanel.html?theme=gloss_silver&view=3p&file=http://www.opmlmanager.com/opml/dashboardDemo.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?theme=gloss_silver&view=3p&file=http://www.opmlmanager.com/opml/dashboardDemo.opml"></script></div>
+
+<p>At the moment, I have just used the OPML to transport feed URLs around, but OPML as currently defined also allows you to transport HTML around inside an OPML item. This would be ideal for populating a simple HTML note  panel, for example.</p>
+
+<p>Being able to add <em>functional</em> items to a panel would also be possible by making use of something like <a href="http://docs.grazr.com/script/spec/1.0/">GrazrScript</a>. (For example, GrazrScript is used to define the <a href="http://blogs.open.ac.uk/Maths/ajh59/009224.html">OpenLearn search widget</a> that appears on the first OUseful Dashboard tab.</p>
+
+<p>Now there&#8217;s a thought: PageFlakes and Grazr joining forces...</p>
+
+<p>In the meantime, how hard could it be to generate a panelled display from an OPML feed using something like <a href="http://nexus.zteo.com/2006/12/31/create-your-own-webtop-in-phpjs-in-no-time/">Chris Ravensroft&#8217;s "Create your own WebTop in php/js in no time" approach</a>? ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010415.html">12:25 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10415" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">May 28, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010355"></a>
+<h3 class="title">Facebook News Mixing Desk</h3>
+
+<p>So the Facebook Platform has got me looking around their site a bit more... and just now I found this <a href="http://www.facebook.com/feed_prefs.php">feed mixing desk</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5069664836976005874"><img style="border:0" src="http://lh5.google.com/image/tony.hirst/RlsRTxo-UvI/AAAAAAAAACo/7zbSw5L00-A/s800/facebookNewsmastering.png" /></a></p>
+
+<p>Just like the <a href="http://blogs.open.ac.uk/Maths/ajh59/010341.html">Facebook Platform</a> encapsulates the idea of application embedding that inspired my <a href="http://ouseful.open.ac.uk/stringle">String'n'Glue Learning Environment</a>, so this content mixing desk embodies something that's been on my wishlist for a long time...</p>
+
+<p>Now I did think I'd written about this sort of thing before, on my original (now defunct) blog, <a href="http://micro-info.blogspot.com">Micro Info</a> - but apparently not (unless the search is broken...)</p>
+
+<p>The closest I can find is this: <a href="http://micro-info.blogspot.com/2005/07/rss-feed-annotation-streams.html">RSS Feed annotation Streams</a> (as well as this OUseful post on <a href="http://blogs.open.ac.uk/Maths/ajh59/005963.html">Integrating Ad Hoc and Formal Communities</a>). The implication here were patches for mixing in additional content to augment a particular target feed (more recently I've come to think of this in the particular context of elaborating an OpenLearn RSS course unit with additional materials).</p>
+
+<p>The original idea, however, was more general and based on the idea of a mixing desk - taking in different feeds, 'amplifying' them a certain amount, adding in effects (annotations) or filtering them further, and so on to produce a final output feed mix.</p>
+
+<p>[Update: found some of my thoughts on this topic on a mailing list archive: <a href="http://www.mail-archive.com/backstage@lists.bbc.co.uk/msg00447.html">random thoughts on a feed mixing desk</a>]</p>
+
+<p>Anyway - Facebook have an implementation of sorts of this sort of model. Time to go play...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010355.html">06:42 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10355" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">May 26, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010340"></a>
+<h3 class="title">Popfly Openlearn Movie Player</h3>
+
+<p>Just had a v quick play with <a href="http://popfly.ms">Popfly</a> and put together with a couple of blocks a youTube feed powered movie player. It's very simple - just wire a feed input block to a movie player block:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5068905022901605026"><img src="http://lh6.google.com/image/tony.hirst/RlheQxo-UqI/AAAAAAAAABk/s_45qNe6UoU/s800/popflyMovieDemo.png" /></a></p>
+
+<p>When you inspect inside a block, context awareness allows the block to pick up on various things that are being piped into the block. In the case of the movie player block fed by a feed, it has picked up on all the feed item elements:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5068910000768701138"><img src="http://lh5.google.com/image/tony.hirst/Rlhiyho-UtI/AAAAAAAAACI/ebPcb_f_7V8/s800/popflyVideoPlayer.png" /></a></p>
+
+<p><s>If you visit this page on my actual blog site (not through a feed reader) you should see the movie player embedded below... (or maybe not, if it requires Silverlight? or if it doesn't work in public yet? or if I've done something wrong? [Works for me on IE7 but nothing else...])</s></p>
+
+<p>[UPDATE: embedded popfly player removed for a bit  - it doesn't seem to be offering a good user experience just at the moment...]</p>
+
+<p><!-- <iframe style='width:100%; height:100%;' src='http://www.popfly.ms/users/psychemedia/movieplayerdemo1.small' frameborder='no'></iframe> --></p>
+
+<p>Here's a screenshot of the player in preview form, just in case:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5068908321436488386"><img src="http://lh6.google.com/image/tony.hirst/RlhhQxo-UsI/AAAAAAAAAB8/O6UX40XfBhU/s800/popflyMovePreview.png" /></a></p>
+
+<p>One other thing to note - when you want to share a mashup, several options are presented to you: <em>Embed It  |   Download as Gadget  |   Add to Windows Live Spaces</em>. The <em>Embed it</em> option provides HTML embed code as well as options to post it to Typepad or a blog that supports the MetaBlog API.</p>
+
+<p>I did want to go and tinker with the feed, but Popfly has bugged out on me again and keeps hanging when I try to open the editor (Firefox on XP under Parallels).</p>
+
+<p>Ho hum, early days....</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010340.html">05:25 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10340" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+
+<a name="010338"></a>
+<h3 class="title">MicroSoft Popfly - Mashups for the Masses?</h3>
+
+<p>Okay - it's late, but I just spotted my invite to <a href="http://popfly.ms">Microsoft's PopFly</a> mashup tool in alpha... anyone else been playing?</p>
+
+<p>The interface suggests I have invites - but I don't? I assume blogging about the tool is ok, similarly posting screenshots, but I'm going to hold off for a bit*, at least until I get to knock up a demo or two (things are a little unstable on my machine at the mo ;-)</p>
+
+<p>In the meantime, here are a couple of youTube movies - a <a href="http://www.youtube.com/watch?v=hkTdJAYb--M">3 minute video overview of Popfly</a> and a longer <a href="http://www.youtube.com/watch?v=8-lYVLuxICk">twenty minute video demo of Popfly</a>:</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/hkTdJAYb--M"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/hkTdJAYb--M" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>Suffice to say - the app is web based - though you do have to install the Silverlight beta. This seemed to install okay for Firefox on OS/X, Macbook Pro (and also onto XP Pro under Parallels - although Parallels doesn't offer 3D support so I don't know how many of the graphical UI blocks in Popfly will work?).</p>
+
+<p>* Okay - maybe a couple of quick comments about the app: the idea is much like Pipes - wire together functional/process blocks and UI blocks, setting internal parameters where necessary. There are a few functional/computational blocks - like regular expressions - which means you can get your hands a little dirty if you want to/have to. Of the third party apps, Yahoo had quite a few tools in the 'official' blocks toolbar (which also has space for user created blocks) but of Google support, there was no sign... Hmmm... ;-) [It seems <a href="http://feeds.feedburner.com/~r/Techcrunch/~3/119776240/">TechCrunch noticed this too</a>:-)]</p>
+
+<p><br />
+With the <a href="http://blogs.open.ac.uk/Maths/ajh59/010305.html">Scratch educational programming'n'animation tool</a> coming on to the scene last week, and the <a href="http://blogs.open.ac.uk/Maths/ajh59/009285.html">Yahoo Pipes web feed mashup tool</a> three months or so ago, there's now quite a spectrum of drag'n'drop, plug'n'play mashup editors out there in the wild...</p>
+
+<p>... not to mention point'n'click screenscrapers like <a href="httpp://dappit.com">Dapper</a> and intuitive online movie editors like <a href="http://www.scenemaker.net/">Scenemaker</a> (which lets you tag clipped segments within youTube - and other online video sites - movies) and multimedia players like <a href="http://splashcastmedia.com">Splashcast</a> for compiling multimedia assets in 'shows' and 'channels' that you can publish to your own site.</p>
+
+<p>And here's one from the BBC that sneaked out quietly - <a href="http://www.bbc.co.uk/radio4/science/findlistenlabel/index.shtml?programme=allinthemind20070501&ssorl=1179766447&ssoc=forgotten_password">find / listen / label - annotatable audio</a> (more info <a href="http://www.bbc.co.uk/radio4/science/findlistenlabel/help.html">here</a>):<br />
+<blockquote>This is a tool for adding notes to radio programmes. You can split the programme into smaller sections, called snippets, and then add a Label.</p>
+
+<p>Radio programmes can be split into snippets, like chapters. These may be associated with articles in the programme, like interviews, or just mark out interesting bits. The purpose of dividing the programmes like this is to make it easier for everyone to Find and Listen to specific parts of the programme.</blockquote></p>
+
+<p>So there you go, a few more tools to add to the list that show how <a href="http://education.guardian.co.uk/schools/comment/story/0,,1984347,00.html">ICT education is getting left behind</a>...</p>
+
+<p> ...and in case you haven't noticed, it's not just mutterings about ICT "education" that are getting louder - if you haven't already seen it, you could do a <em>lot</em> worse than taking 40 minutes out to listen to Sir Ken Robinson asking: <a href="http://www.ted.com/talks/view/id/66">Do schools kill creativity?</a>.</p>
+
+<p>If you think the answer is "yes", then what are you gonna do about it?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010338.html">01:34 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10338" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">April 18, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010183"></a>
+<h3 class="title">Time for TechCrunch, Academic?</h3>
+
+<p>Earlier this week, <a href="http://www.techcrunch.com/2007/04/15/fotowoosh-will-turn-any-picture-into-3d-image/">TechCrunch</a> reported on <a href="http://fotowoosh.com/">fotowoosh</a>, a service that "will turn any picture into a 3D image".</p>
+
+<p>I blogged about this a bit ago whilst it was known as the <a href="http://blogs.open.ac.uk/Maths/ajh59/007032.html">popup project</a>, a research project developed by Derek Hoiem out of CMU.</p>
+
+<p>(Microsoft are also developing something similar - <a href="http://labs.live.com/photosynth/">PhotoSYnth</a>.)</p>
+
+<p>Replying to comments on one of his <a href="http://www.downes.ca/cgi-bin/page.cgi?post=39831">own posts</a>, Stephen Downes writes:<br />
+<blockquote>Having been around enough to have seen some history (and still a bit surprised to be in such a position) I would suggest that most of the 'innovations' brought to us by Google, Apple, Yahoo, Microsoft, YouTube etc. originated in academic environments and were copied by the corporations in question. In some cases, the corporation itself had its genesis in an academic environment.</blockquote></p>
+
+<p>I quite agree... and with the commoditisation of web scalable infrastructure that you pay for as you use it (think Amazon web sevices, <a href="http://zimki.com">Zimki</a> and so on) I wonder whether the trend will be towards increasing numbers of academic projects spinning out of the lab (or maybe even course project work?) and into beta?</p>
+
+<p>So  - maybe there's scope for a <em>TechCrunch Academic</em>, that can cover neat stuff going on in academic research labs and help out with academics' often neglected public engagement and knowledge transfer activities.</p>
+
+<p><em>Yes</em>, of course some of this stuff gets talked about and demoed at academic conferences, but often it languishes at project's end.</p>
+
+<p>Who knows, maybe a bit of techbuzz at the right time could spur on academic innovation and entrepeneurship, as well as pure research?</p>
+
+<p>PS have you seen the new, <a href="http://kmi.open.ac.uk/people/marc/2007/04/17/msg-now-with-google-maps-moodle-options/">Google maps presence enhanced MSG messaging client</a>?</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/j_GAkMIK6Cc"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/j_GAkMIK6Cc" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>Get <a href="http://kmi.open.ac.uk/technologies/msg/about/">MSG - the world's simplest instant messenger</a> (open source, web-based lite Jabber instant messaging client).</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010183.html">07:38 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10183" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">April 02, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010107"></a>
+<h3 class="title">Viewing Powerpoint on the Web</h3>
+
+<p>Living as a I do now a) on a Mac, and b) usually online, I get fed up when people send me MS Office docs that I don't necessarily have viewers for or links to docs that I have to download and open...</p>
+
+<p>...because being an untidy sort, my desktop and download areas - like my mailbox - are frequently cluttered with docs that I've downloaded so that I could use a desktop app to open and view them...</p>
+
+<p>So henceforth I've giving up a little bit more of my life to an online solution: <a href="http://writer.zoho.com/public/help/zohoquickread/fullpage">Zoho Quickread</a>.</p>
+
+<p><img alt="zohoOpen.png" src="http://blogs.open.ac.uk/Maths/ajh59/zohoOpen.png" width="326" height="235" border="0" /></p>
+
+<p>This browser plugin lets you open most office docs that are linked to from a public web page in the appropriate (online) Zoho app. No account necessary - I think?</p>
+
+<p>Google do something similar, of course, with .doc docs in GMail, but  Zoho is the more complete solution... at the moment...</p>
+
+<p>[UPDATE 12/7/07 - As well as opening .doc and .xls attachments in GMail, GMail now <a href="http://mail.google.com/mail/help/about_whatsnew.html">also opens powerpoint .ppt presentation files</a>, a precursor announcement to the <a href="http://www.techcrunch.com/2007/04/17/googles-office-suite-complete-google-powerpoint-confirmed/">imminent  gPresenter app</a>, I suspect..?]</p>
+
+<p>There are bound to be issues, of course - like Zoho only being able to display <em>public</em> files (and not ones that require authentication to view them); and maybe some copyright issues - I'm not sure if Zoho maintain a copy of files you view, for example (or whether you can import them directly into your Zoho account).</p>
+
+<p>In fact - the Zoho toolbar doesn't really solve the problem of opening emailed document attachments at all (whereas the Google solution does)...</p>
+
+<p>...but it's a start...and it means I'll probably end up viewing more online presentations (that aren't <a href="http://slideshare.net">slideshared</a>) than I currently do...</p>
+
+<p>PS hmm - I wonder - Zoho have pretty effective APIs for all their apps; and Yahoo just opened up their <a href="http://developer.yahoo.com/mail/">Yahoo mail API</a>... I wonder???</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010107.html">05:28 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10107" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 22, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="009751"></a>
+<h3 class="title">Browser, desktop client or widget?</h3>
+
+<p>Earlier this week, Techcrunch reported on the <a href="http://www.techcrunch.com/2007/02/15/new-myspace-focused-browser-launched/">Buddywave MySpace browser</a>, a "a stripped down version of Internet Explorer 7, with some additional MySpace-specific functionality added".</p>
+
+<p>Today, Read/Write Web posts about the <a href="http://www.readwriteweb.com/archives/songbird_desktop_browser_blends.php">Songbird music browser</a>, which appears to be "a mixture of a music player and the web browser. Built on top of the open-source Mozilla code base, this desktop application lets you manage your local music collection, search for new music online as well as instantly play any music on blogs and web sites."</p>
+
+<p>Hmmm... so do we want an OU client side app?</p>
+
+<p>Or would it be possible to build a comprehensive OUniversal widget (or maybe a set of smaller, single function widgets (<em>how</em> do I get <em>OU</em> into "widget" or "gadget"?!)) maybe built using the planned <a href="http://blogs.business2.com/business2blog/2007/02/netvibes_and_th.html">Netvibes universal widget API</a>?</p>
+
+<p>As to why the Netvibes announcement is interesting, <a href="http://www.techcrunch.com/2007/02/21/netvibes-promises-cross-platform-widget-compatibility/">Techrunch</a> comments: "Once launched, any widget created for Netvibes ... will work on the Vista, Google, Mac and Opera platforms as well. Support for Yahoo Widgets and other platforms will follow soon after."</p>
+
+<p>Universal ways of working already exist in workaround fashion (such as using the various <a href="http://google-code-updates.blogspot.com/2007/02/convert-google-gadgets-to-other-widget.html">Amnesty widget converters</a> to convert widgets built on one platform to run on another, or <a href="http://www.google.com/apis/gadgets/index.html">Google Universal gadgets</a> that run across the Google Desktop, personalised home page etc.), but this looks like it'll be an altogether cleaner approach.</p>
+
+<p>PS if widgets'n'gadgets are new to you, this post on the <a href="http://widgets.yahoo.net/blog/?p=16">Yahoo widgets blog</a> gives a good overview of the whole area and here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/007645.html">vision of Universal widgets</a>...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009751.html">01:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9751" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 10, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="009318"></a>
+<h3 class="title">Amazon Book Search Pipe</h3>
+
+<p>I have *no* time to post anything for a day or two, so here's a screenshot of a pipe that took me less than five mins to make, reusing an Amazon book search feed strategy I'd generated some time ago to build my <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">Grazr/Amazon book search widget</a>.</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pNFdjQO52xGqy6fWe_gC8A/">Amazon-UK Books Search Pipe</a> (or here's an <a href="http://pipes.yahoo.com/pipes/oD5DywO52xG6Rp2GjwtvUw/">Amazon.com Books Search Pipe</a>).</p>
+
+<p><img alt="amazonPipe.png" src="http://blogs.open.ac.uk/Maths/ajh59/amazonPipe.png" width="576" height="550" border="0" /></p>
+
+<p>All this is really doing is putting a URL to an RSS feed into the pipes environment (with a single search term argument in this case).</p>
+
+<p>This demo identifies for me a couple of things I'd like to see the <a href="http://pipes.yahoo.com">pipes</a> environment offer.</p>
+
+<p>- a listbox/select input option;<br />
+- a simple API for automatically creating a pipe on the fly from a URL; this could reuse ideas used in Grazrscript. </p>
+
+<p>Picking up on that last point a bit more, here's an example growing out of the URL used in both the Grazr search form and the pipe mentioned above:</p>
+
+<p><em>&lt;grazr:formtemplate name="amznform" file="http://xml-%country%.amznxslt.com/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemSearch&ContentType=text/xml&SubscriptionId=0P7A6QBN369NCGYXWBR2&AssociateTag=robofestauk-21&SearchIndex=%searchtype%&Keywords=%search%&ResponseGroup=Small,Images&Style=http://ouseful.open.ac.uk/amznSearch2RSS.xsl"/&gt;</em></p>
+
+<p>What I'm thinking is  - would it be useful to be able to submit pipes to the community using something like:</p>
+
+<p><em>http://pipes.yahoo.com/?newFeedPipeName=Amazon%20Search<br />
+&newFeedPipeURL=http://xml-%country%.amznxslt.com/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemSearch&ContentType=text/xml&SubscriptionId=0P7A6QBN369NCGYXWBR2&AssociateTag=robofestauk-21&SearchIndex=%searchtype%&Keywords=%search%&ResponseGroup=Small,Images&Style=http://ouseful.open.ac.uk/amznSearch2RSS.xsl</em></p>
+
+<p>and have the pipe generate a simple feed wrapper pipe, like the above, and auto-generate user input text boxes for the %delimited% arguments? (Okay, so it would be handy to be able to enumerate the %country% argument too, maybe with something like <em>&_country=uk,us,ca</em>?)</p>
+
+<p>PS here's a <A href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=3p&file=http://ouseful.open.ac.uk/amazonUKPipe.opml">Grazr fronted Amazon UK book search pipe</a>:</p>
+
+<div style="height:350px;width:300px;">
+<a href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=s&file=http://ouseful.open.ac.uk/amazonUKPipe.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a>
+<script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?font=arial&amp;fontsize=12pt&amp;view=s&amp;file=http://ouseful.open.ac.uk/amazonUKPipe.opml"></script>
+</div>
+
+<p> </p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009318.html">01:47 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9318" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 22, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="008779"></a>
+<h3 class="title">Netvibes Search and the Pageflakes Browser</h3>
+
+<p>Over the last few week, <a href="http://netvibes.com">Netvibes</a> and <a href="http://pageflakes.com">Pageflakes</a> have both gone up a version and <a href="http://excite.co.uk">Excite.co.uk</a> has released its own <a href="http://mix.excite.co.uk/">Excite webtop/startpage</a> as a beta ("European grown all the way!!" apparently - which seems to be the way of a lot of this display surfaces?). Paying a visit today to Pageflakes and Nettvibes (seeing how they handle a <a href="http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">course content feed</a> derived from an <a href="http://labspace.open.ac.uk">OpenLearn LabSpace</a> course) a couple of new (to me at least) features caught my eye.</p>
+
+<p>Firstly, Netvibes has a search filter that is applied over the feeds coming into a tab (the search is over link text and item description text, I think?):</p>
+
+<p><img alt="netvibesFilter1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/netvibesFilter1.jpg" width="657" height="245" border="0" /></p>
+
+<p>The filter also highlights the search/filter terms in the feed item description:</p>
+
+<p><img alt="netvibesFilter2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/netvibesFilter2.jpg" width="669" height="366" border="0" /></p>
+
+<p>In Pageflakes, there is the option of opening links (fin the example I'm using, from a delicious RSS feed) in a floating, pop-up browser within the Pageflakes environment:</p>
+
+<p><img alt="pageflakesOpenLinks1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/pageflakesOpenLinks1.jpg" width="292" height="233" border="0" /></p>
+
+<p>I like the feel of this interaction - it's reminiscent of the <a href="http://blogs.open.ac.uk/Maths/ajh59/007632.html">"Now follow this link" lightbox</a> pattern I doodled with a month or two ago.</p>
+
+<p>Ideally, though, this pop-up embedded/floating browser requires a large screen resolution to allow the pop-up window to render the linked to page sensibly, yet still retain the Pageflakes context:</p>
+
+<p><img alt="pageflakesOpenLinks2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/pageflakesOpenLinks2.jpg" width="720" height="415" border="0" /></p>
+
+<p>If you don't use either of these applications regularly, or you use one and not the other, it's worth popping back every so often, I think, to see what new innovations they have come up.</p>
+
+<p>And finally, just to recap on how these services display the OpenLearn course content feed, here are a couple of screenshots. </p>
+
+<p>First, Pageflakes:</p>
+
+<p><img alt="ccFeedPageflakes.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ccFeedPageflakes.jpg" width="809" height="453" border="0" /></p>
+
+<p>And here's the same feed in Netvibes:</p>
+
+<p><img alt="ccFeedNetvibes.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ccFeedNetvibes.jpg" width="617" height="451" border="0" /></p>
+
+<p>If you want to try out the feed, here are a couple of links:</p>
+
+<p><a href="http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">Sample OpenLearn Course Content Feed</a> <a href="http://www.pageflakes.com/subscribe.aspx?url=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml"><img alt="RSS Feed - Pageflakes" src="http://www.pageflakes.com/subscribe2.gif" border="0" /></a> <a href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FT180_8_rss.xml"><img src="http://www.netvibes.com/img/add2netvibes.gif" width="91" height="17" alt="Add to Netvibes" /></a> <a href="http://www.bloglines.com/sub/http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml"><img src="http://www.bloglines.com/images/sub_modern9.gif" alt="Subscribe with Bloglines" border="0" /></a> </p>
+
+<p>It's also worth checking out the feed directly in Firefox and IE7...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008779.html">10:16 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8779" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 09, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="008545"></a>
+<h3 class="title">Sending Wikimail Messages in Gmail</h3>
+
+<p>Yesterday, I posted details about  <a href="http://blogs.open.ac.uk/Maths/ajh59/008527.html">Wikimail</a> and linked to a Greasemonkey script that embedded a wiki in a Gmail message on receipt of a wikimail message. For today's post, I've extended the script so that its easy to post - and create - wikimail messages in Gmail.</p>
+
+<p>As before, I've produced both a Greasemonkey script and a Firefox extension: <a href="http://ouseful.open.ac.uk/wikimail2.user.js">wikimail Greasemonkey script</a>, <a href="http://ouseful.open.ac.uk/gmailwikimail.xpi">wikimail Firefox extension</a>.</p>
+
+<p>To send a wikimail from one Gmail account to another, click on the 'Compose Mail' link in the normal way. The compose toolbar in the send form is augmented with a text box and a link to 'Create wikimail'. Enter the name of the wiki page you want to send in the text box using the same syntax as described previously.</p>
+
+<p>For example: <em>wikimaildemo.wikidot</em> or <em>wikimaildemo.wikidot/newWikiMessage</em>:</p>
+
+<p><img alt="wikimailSend1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimailSend1.jpg" width="852" height="246" border="0" /></p>
+
+<p>Click on the link and the corresponding wiki opens within Gmail:</p>
+
+<p><img alt="wikimailSend2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimailSend2.jpg" width="707" height="299" border="0" /></p>
+
+<p>If the wiki page already exists, it will be opened for editing. For a wikidot wiki, if the wiki page does not exist you will be offered the opportunity to create it. The wikimaildemo.wikidot wiki has been set up to allow anonymous access, so if you want to try out using wikimail, feel free to use that wiki and create your own wiki page.<br />
+ <br />
+Edit the wiki and commit the changes.</p>
+
+<p>When the wiki was opened, awikimail link to the wiki that was created (if it was a new wiki) or opened (if it already existed) is automatically added to the body of the message that wil actually be sent. Note that if you have already typed something into the body of the message, it will be lost.</p>
+
+<p><img alt="wikimailSend3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimailSend3.jpg" width="282" height="73" border="0" /></p>
+
+<p>Now all you have to do is send the message to another Gmail user (if you want to add additional text to the body of the message, now's the time to do it):</p>
+
+<p><img alt="wikimailSend4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimailSend4.jpg" width="595" height="70" border="0" /></p>
+
+<p>When the recipient opens the message, they will see the wikimail link and any other text you added to the body of the message.</p>
+
+<p><img alt="wikimailSend5.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimailSend5.jpg" width="640" height="195" border="0" /></p>
+
+<p>Clicking the <em>Show/hide wikimail</em> link will open the wiki:</p>
+
+<p><img alt="wikimailSend6.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimailSend6.jpg" width="498" height="211" border="0" /></p>
+
+<p>So there we have it - an end to end wikimail solution in Gmail :-)</p>
+
+<p>If you want to try it and you don't have a Gmail account, mail me - I still have a few invites left.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008545.html">12:05 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8545" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 07, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="008527"></a>
+<h3 class="title">Read/Write Email with Wikimail</h3>
+
+<p>A couple of things over the weekend brought the idea of <a href="http://blogs.open.ac.uk/Maths/ajh59/005488.html">Wikimail</a> - <em>Read/Write email</em> back to mind, so a half hour hack on Saturday and a chat with the handily online <a href="http://suda.co.uk">Brian Suda</a> (who suggested the Read/Write Email moniker) mean there's a basic demo now available...</p>
+
+<p>For those who don't want to click thru to the past for the background, the idea behind wikimail was to use email to pass a wiki backwards and forwards. Instead of reading an email message and replying to it, what I wanted for certain classes of email exchange was a more collaborative writing space, and a wiki seemed to offer an appropriate solution.</p>
+
+<p>At this point, it's worth explaining that I work from home a lot, and I take part in way too many conversations that aren't really suited to email (part of the reason for trying to move some of them to chat/IM conversations).</p>
+
+<p>In particular, one class of conversation that I think the structure of email exchanges often gets in the way of  is an ongoing discussion, in which an informal document (maybe even a proto-blog post) is constructed over several email exchanges in the same thread. The conversants reply to replies, insert new comments within the flow of quoted text from previous emails, and maybe delete chunks portions of previously quoted text too.</p>
+
+<p>So that's the itch behind the wikimail scratch: rather than developing a conversation through multiple levels of quotation and 'reply with quote' trauma, conversants could develop an idea via the wiki in their email space. The important thing was not to move the players out of their email client - the exchange should proceed within the email environment.</p>
+
+<p>But first - what were things that brought it to mind this time round?</p>
+
+<p>Firstly, I was looking for a free wiki that I could display in the tools frame of <a href="http://ouseful.open.ac.uk/stringle2.php">StrinGLE</a> . When I first toyed with the idea of wikimail I tried embedding a Mediawiki wiki in an frame in Gmail - but it wanted to go to the top of the window, so I went on to playing with other things. Over the weekend, I came across a couple of  free wikis that seemed to suit the bill  - <a href="http://www.pbwiki.com/">PBwiki</a> and <a href="http://wikidot.com">Wikidot</a>...</p>
+
+<p>Secondly, I've started wondering about the extent to which Gmail can act as the single interface to a lot of my online activity. I use the mail tools daily, GTalk instant messaging too, and although I've got the <a href="http://persistent.info/archives/2006/10/13/google-reader-redux">Google Reader in Gmail Greasemonkey script</a> installed, I don't actually use it (I'm still on Bloglines, and wondering whether to switch to Google Reader...):</p>
+
+<p><img alt="gReaderInGmail.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gReaderInGmail.jpg" width="423" height="225" border="0" /></p>
+
+<p>Thirdly was the news that <a href="http://googleblog.blogspot.com/2006/10/spot-on.html">Google had bought Jotspot</a>, and I started wondering what hey were going to do with it... Jotspot wikis allow users to email comments in, with the mail comments appear at the bottom of the wiki page, if I remember correctly, but that all seemed a bit clunky when I played with it ages ago...</p>
+
+<p>So - the time was right, and it took less than ten minutes to hack an old Greasemonkey script that would search the body of an open email message in Gmail for a keyphrase (like <em>wikimail:wikimaildemo.pbwiki</em>) and replace it with an iframe containing the wiki - <em>http://wikimaildemo.pbwiki.com</em>, for example.</p>
+
+<p>There were significant usability problems with the initial, ultimately crude script (and I'm afraid I haven't addressed most of them yet, Brian...! Nor have I had a chance to play with Backpack...) and the application is not, as yet, very portable... i.e. it's restricted at the mo to Firefox and Gmail.</p>
+
+<p>One major issue with the original script was that it was impossible to reply to a wikimail message, although I have fixed that problem, after a fashion...</p>
+
+<p>Anyway - here's the demo; if you have <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> installed in <a href="http://getfirefox.com">Firefox</a> and you want to try it out, install the <a href="http://ouseful.open.ac.uk/wikimail2.user.js">wikimail4gmail Greasemonkey script</a> and have a play...</p>
+
+<p>Alternatively, there's a <a href="http://ouseful.open.ac.uk/gmailwikimail.xpi">Firefox wikimail extension</a> generated via <a href="http://arantius.com/misc/greasemonkey/script-compiler">this Greasemonkey compiler</a>.</p>
+
+<p>The wikimial script/extension will rewrite wikimail addresses as follows:</p>
+
+<p>- <em>wikimail:some.domain</em> is rewritten as <em><strong>http://</strong>some.domain<strong>.com</strong></em> <br />
+- <em>wikimail:some.domain/path</em> is rewritten as <em><strong>http://</strong>some.domain<strong>.com</strong>/path</em> (which means it can address subpages in a wiki)</p>
+
+<p>Follow the cribs in the screenshots to find some demo/test wikis. The wikidot one allows anonymous access...</p>
+
+<p>For example, here's a message in Gmail:</p>
+
+<p><img alt="wikimail1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail1.jpg" width="461" height="239" border="0" /></p>
+
+<p>See the <em>Show/hide wikimail</em> over on the right? The wikimail script put that there (if anyone can give me a better graphic, that would be appreciated ;-). Here's what happens if you click it:</p>
+
+<p><img alt="wikimail2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail2.jpg" width="423" height="338" border="0" /></p>
+
+<p>(Err - the URL for the GM script is incorrect in that screenshot - I've corrected it in the wiki though ;-)</p>
+
+<p>A wiki appears. In this case, you will need to login (if you haven't already). That wiki is set up to allow guests in with password 'demo', so you can try it out if you want. Of course, you could always link to a private wiki (i.e. on ewith restricted access).</p>
+
+<p>If you click on the <em>Show/hide wikimail</em> link again, the wiki will close.</p>
+
+<p>It is sometimes sort of possible to link to a wiki that doesn't exist yet:</p>
+
+<p><img alt="wikimail3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail3.jpg" width="620" height="195" border="0" /></p>
+
+<p>Sort of:</p>
+
+<p><img alt="wikimail4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail4.jpg" width="785" height="369" border="0" /></p>
+
+<p>Here's a wiki on another site:</p>
+
+<p><img alt="wikimail5.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail5.jpg" width="242" height="100" border="0" /></p>
+
+<p>This one is set up for anonymous access, so anyone can go in and play - and also create new pages:</p>
+
+<p><img alt="wikimail6.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail6.jpg" width="565" height="324" border="0" /></p>
+
+<p>This shows how to set up a wikimail link to point to a subpage:</p>
+
+<p><img alt="wikimail8.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail8.jpg" width="307" height="114" border="0" /></p>
+
+<p>This means you can use the email thread to construct a conversation over serveral wikimail pages; or use one wiki for wikimail, with different pages for each wikimal thread:</p>
+
+<p><img alt="wikimail7.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/wikimail7.jpg" width="418" height="236" border="0" /></p>
+
+<p>There are still a few issues with closing wikimail frames in long reply threads, but a page refresh will usually sort that out if it's too annoying...</p>
+
+<p>If you don't grok it from this description, try the script out ;-)</p>
+
+<p>And if you do give it a spin, please let me know how you get on...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008527.html">11:50 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8527" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 06, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="008496"></a>
+<h3 class="title">Amazon Search Widget in Grazr</h3>
+
+<p>One of the great things about the <a href="http://docs.grazr.com/script/spec/1.0/">GrazrScript form elements</a> is that they turn Grazr from being 'just' a feed reading and navigation widget into a platform for feed based widget development. If you can find a hackable feed URL, then you can probably do something interesting with it in Grazr :-)</p>
+
+<p>So  - here's my proper first effort (apart from the Hennepin County Library Catalogue search that is demoed in <a href="http://ouseful.open.ac.uk/stringle2.php">Stringle</a>, of course...) - a couple of Amazon Search Widgets (I'll provide screen shots first, then embed the demos at the end of the post; I suspect this won't show up in a feedreader, so to see them you may have to click through to the full post on <a href="http://feeds.feedburner.com/ouseful">Feedburner</a> or at the <a href="http://ouseful.open.ac.uk/blog">OUseful blog</a>).</p>
+
+<p>I actually produced two separate widgets that demonstrate the <em>inline</em> and <em>outline</em> ('federated') approaches that the current version of GrazrScript forms support.</p>
+
+<p>Firstly, the 'outline' approach - a search widget that lets you search over several categories at once.</p>
+
+<p>Here's the basic interface:</p>
+
+<p><img alt="gAmazonMulti1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazonMulti1.jpg" width="305" height="350" border="0" /></p>
+
+<p>You can select the locale/Amazon shop by country:</p>
+
+<p><img alt="gAmazonMulti2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazonMulti2.jpg" width="227" height="205" border="0" /></p>
+
+<p>When you've entered the search (in this case for "space ritual" ;-) the search is run over several different Amazon categories:</p>
+
+<p><img alt="gAmazonMulti3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazonMulti3.jpg" width="274" height="175" border="0" /></p>
+
+<p>I want the <em>music</em> result:</p>
+
+<p><img alt="gAmazonMulti4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazonMulti4.jpg" width="286" height="212" border="0" /></p>
+
+<p>Nice one :-)</p>
+
+<p><img alt="gAmazonMulti5.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazonMulti5.jpg" width="303" height="234" border="0" /></p>
+
+<p>Secondly - the inline approach. In this case, we are just going to pull in a single result feed. The main interface is similar to the previous one, except that now you can select the item category as well:</p>
+
+<p><img alt="gAmazon1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazon1.jpg" width="304" height="216" border="0" /></p>
+
+<p>Here are the options I put in to start with:</p>
+
+<p><img alt="gAmazon2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazon2.jpg" width="241" height="256" border="0" /></p>
+
+<p>Here's a search over electrical goods:</p>
+
+<p><img alt="gAmazon3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazon3.jpg" width="272" height="211" border="0" /></p>
+
+<p>And here's the result:</p>
+
+<p><img alt="gAmazon4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gAmazon4.jpg" width="288" height="223" border="0" /></p>
+
+<p>Creating these widgets was easy, once I'd cobbled together an XSL stylesheet that transformed the Amazon webservice search results into RSS.</p>
+
+<p>There was also a GrazrScript gotcha that got me (you can read about it on the <a href="http://forums.grazr.com/forum.php?id=2">GrazrScript forums</a>).</p>
+
+<p>Anyway - feel free to have a play, and maybe even try out one of these widgets on your own site.</p>
+
+<p>Firstly, here's the multisearch widget (<a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/grazrAmazonMulti.opml">GrazrScript powered Amazon search widget over multiple categories</a>):</p>
+
+<div style="height:350px;width:300px;">
+<a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/grazrAmazonMulti.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a>
+<script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?file=http://ouseful.open.ac.uk/grazrAmazonMulti.opml"></script>
+</div>
+
+<p>Then the inline search (<a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/grazrAmazon.opml">GrazrScript powered Amazon search widget</a>):</p>
+
+<div style="height:350px;width:300px;">
+<a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/grazrAmazon.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a>
+<script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?file=http://ouseful.open.ac.uk/grazrAmazon.opml"></script>
+</div>
+
+<p>It's easy to embed these search widgets in your own page - just follow the link(s) above and then look for the <em>Add to your page</em> link that Grazr kindly provides :-)</p>
+
+<p>PS here's a quick way of customising a Grazr/Amazon search widget to let you 'hardwire' the locale and product type for the search. There are two buttons in the form  - one uses Javascript, the other doesn't:<br />
+<script type="text/javascript">function createGrazr(){var countryNode=document.getElementById("country");var country=countryNode.options[countryNode.selectedIndex].value;var searchtypeNode=document.getElementById("searchtype");var searchtype=searchtypeNode.options[searchtypeNode.selectedIndex].value;window.location="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/grazr/grazrAmazonOPML.php?country="+country+"&searchtype="+searchtype;}</script><form name="amznform" action="http://ouseful.open.ac.uk/grazr/grazrAmazonRedirect.php" method="GET">Amazon Search:<br />
+Locale: <select name="country" id="country"><option value="uk">Amazon.co.uk</option><option value="ca">Amazon.ca</option><option value="us">Amazon.com</option><option value="de">Amazon.de</option><option value="jp">Amazon.jp</option><option value="fr">Amazon.fr</option></select><br />
+Shop: <select name="searchtype" id="searchtype"><option value="Books">Books</option><option value="Classical">Classical Music</option><option value="DVD">DVD</option><option value="Electronics">Electronics</option><option value="Software">Software</option><option value="Music">Music</option><option value="SoftwareVideoGames">Software &amp; Games</option><option value="Toys">Toys &amp; Games</option></select><br />
+Javascript: <input type="button" value="Grazr It!" onclick="createGrazr()" /><br />
+Form Action: <input type="submit" value="Grazr It!" /></form></p>
+
+<p>If the form doesn't appear in you feedreader, you can find one here: <a href="http://ouseful.open.ac.uk/grazr/grazrAmazonConfig.html">Amazon/Grazr search widget customiser</a></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">06:03 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8496" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 30, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007326"></a>
+<h3 class="title">Google As Service Provider Trundles On...</h3>
+
+<p>Reported widely (<a href="http://news.bbc.co.uk/1/hi/business/5292168.stm">this from the BBC</a> is typical, and <a href="http://www.informationweek.com/software/showArticle.jhtml?articleID=192300431">this from Information Week</a> analyses the move in relation to Microsoft Live), Google are now hosting office like services for businesses: <a href="https://www.google.co.uk/a/">Google Apps for Your Domain</a> (Gmail, Talk, Calendar and Page Creator at the mo, but presumably more to follow?).</p>
+
+<p>And the offering is not just apps for businessy businesses, at that:</p>
+
+<p><img alt="gEdApps.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/gEdApps.jpg" width="214" height="164" border="0" /></p>
+
+<p>As you might expect, the Google monster has trundled on from from <a href="http://blogs.open.ac.uk/Maths/ajh59/006073.html">Outsourcing Email in Higher Education</a> to providing the whole range of <a href="https://www.google.co.uk/a/edu/">Google Apps for Education</a> ...</p>
+
+<p>Another interesting announcement that happened while I was away on holiday (darn it - I got an invite, but the beta is now closed...) was for Amazon's <a href="http://www.amazon.com/ec2">Elastic Compute Cloud (EC2)</a>:<br />
+<blockquote>... a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale computing easier for developers.</p>
+
+<p>Just as Amazon Simple Storage Service (Amazon S3) enables storage in the cloud, Amazon EC2 enables "compute" in the cloud. Amazon EC2's simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon's proven computing environment.</blockquote><br />
+(For a quick review, here's the <a href="http://www.techcrunch.com/2006/08/24/exclusive-amazon-readies-utility-computing-service/">Techcrunch take on EC2</a>.)</p>
+
+<p>Sun have been offering this sort of service with the <a href="http://www.sun.com/service/sungrid/overview.jsp">Sun Grid Compute Utility</a> for some time, but Amazon's move is another step towards providing a complete set of web app backend services.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007326.html">06:27 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7326" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 06, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007304"></a>
+<h3 class="title">Carousel Widget: Similar Books</h3>
+
+<p>As part of another project, I've had a need for a little routine that will populate a <a href="http://billwscott.com/carousel/">carousel widget</a> with 'related books' (as defined by Amazon!) given a particular ISBN.</p>
+
+<p>The routine can be found at <a href="http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php">http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php</a>.</p>
+
+<p>It come with a couple of arguments (to date):<br />
+<ul><li><em>isbn</em> - the ISBN of the book you want to find related items for;</li><br />
+<li><em>size</em> - the "width" (i.e. number of book covers displayed at any one time) in the carousel.</li></ul></p>
+
+<p>For example, <a href="http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php?isbn=0131401602&size=3">http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php?isbn=0131401602&size=3</a> gives:</p>
+
+<p><img alt="relatedCarousel.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/relatedCarousel.jpg" width="338" height="154" border="0" /></p>
+
+<p>If you do make use of this widget, and you have your own Amazon affiliate/associate ID you want to use with it, I'd appreciate it if you'd add a little function that makes 1 in 10  at random referrals using the ID provided in the script in a <em>click sharing</em> sort of way.</p>
+
+<p>This is something I will add anyway in the next week or two if I get a chance (I'll also factor in the ID of Bill Scott - author of the carousel widget  - if he has one and I can get hold of it...). But if I don't get a chance to make this hack, and you can figure out how to <em>make it so</em> yourself, please do so... (It's late now and I need to go to bed...)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007304.html">01:57 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7304" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 02, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007299"></a>
+<h3 class="title">Wishlist Carousel</h3>
+
+<p>A few weeks ago, a really neat trick appeared on the <a href="http://www.kokogiak.com/default.asp">Kokogiak blog</a> showing how to go about <a href="http://www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html">Consuming Amazon's Web API Directly with Javascript (via JSON and XSLT)</a>.</p>
+
+<p>I've been looking for a reason to try that technique out ever since then, and had half a mind that I'd like to use the approach to develop some sort of personally hosted <a href="http://blogs.open.ac.uk/Maths/ajh59/007181.html">bookshelf interface</a> for my Amazon wishlist, as a precursor to trying out the same thing for OU Library new books listings (I was thinking of something along the lines of a homebrew version of the <a href="http://blogs.open.ac.uk/Maths/ajh59/007105.html">Blogbridge Library</a> interface).</p>
+
+<p>So when the rather neat <a href="http://billwscott.com/carousel/">Carousel component</a> extension to the Yahoo user interface (YUI) tools appeared, I realised the ideal opportunity had arrived.</p>
+
+<p>So much so in fact that I had to take today off as holiday so I could spend some guilt free time tinkering with code;-) And the result?</p>
+
+<p><img alt="amazonXSLTcarousel.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/amazonXSLTcarousel.jpg" width="470" height="172" border="0" /></p>
+
+<p>...or see a demo here: <a href="http://blogs.open.ac.uk/Maths/ajh59/wishlistCarousel.html">Carousel and Amazon2JSON Wishlist demo</a></p>
+
+<p>The script at the moment is a bit crude and needs tidying/fully reconciling against the YUI libraries. However, it does demonstrate quite a few things:</p>
+
+<ul>
+<li>the use of an Amazon webservice to pull down my wishlist information: <a href="http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium">Amazon wishlist feed</a></li>
+<li>the use of  an Amazon webservice powered XSLT against <a href="http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl">this XSL file</a> to produce <a href="http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium&Style=http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback">this JSON feed</a>;</li>
+<li>how to pull in a JSON feed to a file and then consume it (cribbed from Kokogiak; this actually needs revising to just use YUI components, which will make the code a bit tidier);</li>
+<li>the use of Bill Scott's <a href="http://billwscott.com/carousel/">YUI carousel component</a> to display the images.</li>
+</ul>
+
+<p>One of the main reasons I like this approach is that the solution can be managed completely on the client side. That is, no need for server access (assuning you can pull the necessary YUI files in from somewhere) or browser jiggery pokery trying to get around the browser cross-site XML security policies.</p>
+
+<p>That said, the next demo I have in mind for the carousel component - using it to display new books in the library by consuming the new books feeds - I think I will do on a server. Using <a href="http://ning.com">Ning</a>, maybe? Then others can play along too even if they don't have access to a server of their own...</p>
+
+<p><strong>Update 14/8/06:</strong>: here's another demonstration of using JSON to populate the widget with book covers, a <a href="http://exlibris.ath.cx/?p=90">new books</a> carousel. This also adds a reflection of the book cover, which is a neat effect.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">05:25 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7299" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 01, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007157"></a>
+<h3 class="title">A Neat Live Clipboard Demo</h3>
+
+<p>I like the idea of <a href="http://spaces.msn.com/editorial/rayozzie/demo/liveclip/liveclipsample/clipboardexample.html">Live Clipboard</a> a lot, though I've yet to build anything that makes us of the functionality. And I think I like it even more after playing with this <a href="http://www.sparqlets.org/clipboard/home">web clipboard</a> demo today.</p>
+
+<p>The <a href="http://www.sparqlets.org/clipboard/demo">web clipboard demo</a> shows a listing of blog post headers that can be cut from a web page and pasted to other parts of the page (in the same - or different - window, browser, etc.)</p>
+
+<p>Two landing sites (pasting points) are defined on the page - one that pulls in the actual post content from offsite and displays it in the page, the other that displays a description of the resource. For the blog post item, the content of the post is actually pulled in from outside when the resource link is pasted to that landing site.</p>
+
+<p>This is poorly explained, I'm sorry, (it's late here...) so go an play. Or check out this 2MB movie I made earlier to show the functionality off to a couple of other people: <a href="http://phoenix.open.ac.uk/~tony_hirst/webClipboard">silent web clipboard screencast</a>. Note that the main action takes place in Firefox, although I bring in IE at the end to show how items can be cut from a page displayed in one browser and pasted into a page loaded in another browser altogether.</p>
+
+<p>There's a whole load of stuff going on under the bonnet in there that I don't know much about (and won't really, until I have a proper play and build one or two things myself) but as this demo shows, the web clipboard stuff is getting easier to do with each iteration of the thinking behind it.</p>
+
+<p>The big question for me is - how can we make use of this stuff??? E-portfolios?</p>
+
+<p><strong>Update:</strong> walking the dog this afternoon, I wondered whether the web clipboard code could be used in a custom <a href="http://eco.netvibes.com">Netvibes</a> tab. This required including necessary styling - and all javascript - in the file (rather than using file includes/style imports) and recasting the onload function to the Netvibes equivalent (NV_ONLOAD). <em>However</em>, while it all worked in simulation, I couldn't get the landing image to load in the live Netvibes panel. Maybe this is easily fixed, maybe it isn't, but I don't have any more time today to spend on this, and other projects beckon for the next week at least. However, I do think that adding webclipboard functionality to <a href="http://netvibes.com">Netvibes</a> would be really handy, and provide and excellent playground for tinkering with the idea of the live/web clipboard. If anyone gets a demo of this working in Netvibes, please let me know:-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007157.html">12:40 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7157" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 19, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007032"></a>
+<h3 class="title">Popup Project  (= Fotowoosh) - 3D Images from 2D photos (with Google Earth potential...)</h3>
+
+<p>Stephen Downes has just <a href="http://www.downes.ca/cgi-bin/page.cgi?post=34789">posted</a> a link to <a href="http://tim.lauer.name/archives/004733.html">this demo</a> of how "Google Maps has added the ability to overlay information files created in the Google Earth format", which is something I'm going to have to try out.... But it also reminds me about the <a href="http://www.cs.cmu.edu/~dhoiem/projects/popup/index.html">Popup project</a> I came across the other other day which I haven't had a chance to explore yet, but the idea of which got me really excited...</p>
+
+<p>The <a href="http://www.cs.cmu.edu/~dhoiem/projects/popup/index.html">Popup Project</a>, created by Derek Hoiem (et al. (?)) at CMU, <em>automatically constructs simple "pop-up" 3D models, like those one would find in a children's book, out of a single outdoor image</em> (i.e. a photograph). (There's a write-up from last year's ACM Sigraph about it <a href="http://www.cs.cmu.edu/~dhoiem/publications/popup.pdf">here</a>.) The 3D model is provided as a VRML file.</p>
+
+<p><img src="http://www.cs.cmu.edu/~dhoiem/projects/popup/CMU.gif" alt="popup image" /></p>
+
+<p>[UPDATE (16/4/07): it looks like pop-up is at the heart of a new online service, <a href="http://fotowoosh.com/">fotowoosh</a>, that will take your photos and create 3D VRML models from them.]</p>
+
+<p>As I stumbled across this just before a dog walk, it was natural for me to idle awhile on the popup project as we went trudging through the woods (the bluebells have all gone now:-( And the idea that fired me up was how neat it would be if you could take an outdoor photograph, run it through the popup engine, generate a VRML file and somehow import this into <a href="http://earth.google.com/">Google Earth</a>.</p>
+
+<p>Now I know from Google's acquisition last year (?) of <a href="http://sketchup.google.com/">Sketchup</a> ("a simple but powerful tool for quickly and easily creating, viewing and modifying your 3D ideas") that it's possible to create 3D designs and import them into Google Earth. But I don't think I've ever seen mention of a VRML import option into that environment, which could be a problem...</p>
+
+<p><img src="http://sketchup.google.com/images/SC_Free.jpg" alt="Google sketchup image" /></p>
+
+<p>Anyway, I did a bit of digging and turned up one <a href="http://cic.nist.gov/vrml/cis2.html#SKETCHUP">interesting looking possibility</a>: <em>The Google SketchUp model was created by translating the CIS/2 file to VRML. The VRML was converted to DXF with <a href="http://www.righthemisphere.com/products/dexp/">Deep Exploration</a>  and then imported to Google Sketchup</em>.</p>
+
+<p>Ah - so maybe there is a way.. Can  you imagine just imagine it - taking an outdoor photo of a building, chug chug clunk clunk computing with it for a bit, and then importing it as a 3D model into Google Earth ;-) (Yes,yes, I know it wont be that simple, and the conversion routines probably won't respect each other properly, but can you imagine it?:-)</p>
+
+<p>I wonder too if any of the online gaming environments like <a href="http://secondlife.com">Second Life</a> can import VRML files directly...;-)</p>
+
+<p>PS Deep Exploration has a 30 day free trial/download offer, and I've managed to get hold of a Matlab runtime environment so I can run the Popup code, so maybe if I get a spare day or two (to allow for problem time!) I'll try and get the packages running together and have a play...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007032.html">10:30 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7032" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 14, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="006969"></a>
+<h3 class="title">Flock Released in Beta - Is It a PLE? </h3>
+
+[Problems with a slow server meant this post was originally posted several times as I misintepreted a Flock error message...]
+
+<p>The <a href="http://flock.com">Flock browser is now available in beta</a>...</p>
+
+<p>With full <a href="http://www.flock.com/tour/blogging">blogging integration</a> (I'm writing this post in the Blog Post tool, which supports wysiwyg or code views), <a href="http://www.flock.com/tour/photos">photoservice integration</a> (flickr, photobucket), <a href="http://www.flock.com/tour/news">feed reader</a> (fully integrated with feed autodetection), <a href="http://www.flock.com/tour/favorites">bookmark service integration</a> (delicios and shadows), enhanced <a href="http://www.flock.com/tour/search">search</a> (live search over local favourites, history and your search engine of preference) and an in-built notepad(drag text or images to it for later use), this is a seriously neat browser:-)</p>
+
+<p><img src="http://i57.photobucket.com/albums/g202/psychemedia/th_moz-screenshot.jpg" /></p>
+
+<p>The photo-integration/photo-publishing is particularly clever. I pasted a clipboard copy of the above image in the blog tool and the browser uploaded it for me to my photo-sharing service account, then dropped the link to the image in to the post.</p>
+
+<p>This integrated content consumind <i>and </i>content publishing environemnt is just the sort of thing that was being talked about at last week's CETIS PLE events (and also in <a href="http://stadium.open.ac.uk/stadia/preview.php?s=29&amp;whichevent=798">Stephen Downe's talk here at the OU</a>) [I've still to blog my thoughts about these.]</p>
+
+<p>In particular, during those events, Stephen gave a quick demo of <a href="http://www.downes.ca/editor/writr.htm">writr</a>, a minmal (and very effective) browser based authoring environment, and <a href="http://www.cetis.ac.uk/members/scott">Scott Wilson</a> demoed Plex a couple of times (I reviewed it briefly <a href="http://blogs.open.ac.uk/Maths/ajh59/006023.html">here</a>, but now I've seen what it can do, I think I need to revisit it).</p>
+
+<p>I wonder how well a FLock demo would have gone down too???? More on Flock when I've had a chance to play with it a bit more...<br/>
+</p>
+
+<strong>PS</strong> There's a good review of Flock's new features over at <a href="http://www.solutionwatch.com/441/whats-new-with-flock/">Solution Watch</a>.
+
+<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">technorati tags:<a href="http://technorati.com/tag/flock" rel="tag">flock</a>, <a href="http://technorati.com/tag/ple" rel="tag">ple</a></p><!-- technorati tags end --><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com" title="Flock" target="_new">Flock</a></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/006969.html">07:57 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=6969" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">May 04, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="006140"></a>
+<h3 class="title">Talis Silkworm Library 2.0 Platform</h3>
+
+<p><strong>Update:</strong> documentation for the Talis Platform<br />
+ (Library 2.0) API is now starting to appear on the <a href="http://www.talis.com/tdn/">Talis Developer Network</a> at <a href="http://www.talis.com/tdn/platform/">Talis Platform API</a>.</p>
+
+<p>A week or so ago, a public draft of the Talis Community Licence appeared in <a href="http://iandavis.com/blog/2006/04/announcing-the-talis-community-licence">this blog post</a>.  <br />
+ It came with the following claim:</p>
+
+<blockquote>[This licence] is going to play a key role in [the Talis Silkworm] technology platform. It gives users and contributors of all kinds of platform data some fundamental rights with one important restriction. Basically it:
+
+<p>    * Grants the freedom to use the data for any purpose<br />
+    * Grants the freedom to modify and mix the data<br />
+    * Grants the freedom to redistribute copies<br />
+    * Prevents any attempt to deny those freedoms to others</p>
+
+<p>We're expecting the Talis platform to manage and make available under this licence a huge variety of data ranging from MARC to RDF and everything in-between - that's 4 decades of data formats!</p>
+
+<p>The licence has its roots in the GPL and includes the same sort of redistribution...</blockquote></p>
+
+<p>I mailed this announcement to a select few, with the comment that it seemed to signal the imminent arrival of an open APIs to the <a href="http://silkworm.talis.com/">Silkworm platform</a>, something that had been hinted at when <a href="http://blogs.talis.com/panlibus/">Paul Miller</a>, the Talis <em>technology evangelist</em> spoke at the OU <a href="http://blogs.open.ac.uk/Maths/ajh59/006028.html">a couple of weeks ago</a>.</p>
+
+<p>Well - you'll be glad to know the first phase of the Talis Library 2.0 platform duly arrived in the form of the <a href="http://directory.talis.com/ui/ ">Silkworm directory</a> last week (blogged about <a href="http://informationtakesover.co.uk/archives/2006/04/27/talis-platform-silkworm/">here</a>).</p>
+
+<p>A few of us had had a sneak preview (much appreciated, thanks) beforehand, which is partly why I've held off blogging about it - I'm a little guilty that I haven't found the time to knock up some sort of OU/Silkworm mashup (I was hoping to find an hour (that may have turned into four - you know how it goes!) to put something together, but other things are afoot at the moment that have got in the way of anything that might turn into open ended play time...)</p>
+
+<p>Anyway, the first <a href="http://directory.talis.com/ui/">Silkworm Direcroty interface</a> is now open to play with, and I'm assured API details are on the way.</p>
+
+<p>As some details are out now, and more due any time,  I think it's probably ok to pass on some of the details that Ian Davies originally mailed out:</p>
+
+<blockquote>Technically the directory runs off an RDF store using Jena and Joseki, fronted by a thin web app written in ASP.NET and XSLT. The directory stores descriptions of collections, physical locations and electronic services. [e.g. here's a description of the <a href="http://api.talis.com/1/dir/sparql?query=describe+%3Chttp%3A%2F%2Fdirectory.talis.com%2Fres%2Fdddconv-rlg1418%23self%3E">Open University collection</a>] We'll be introducing grouping of resources, descriptions of organisations and relationships between collections soon. The services are described in detail as RDF so we can programatically build queries into them.
+...
+There are a number of other RDF-based services .... Each primary resource in the directory
+links to its RDF representation via a little blue icon beside its title. These point to our <a href="http://api.talis.com/1/dir/sparql">sparql endpoint</a>
+
+<p>For the sparql service we plan on not allowing GRAPH/FROM queries<br />
+either, certainly not from day one. As we scale the service out we might<br />
+enable it.</p>
+
+<p>We're using Joseki for the Sparql stuff. All the pages you see at http://directory.talis.com/ui/ are generated using XSLT on RDF/XML coming out of Joseki.</blockquote></p>
+
+<p>Collection information is alo published as HTML as this page describing the <a href="http://directory.talis.com/ui/ViewService.aspx?id=http://directory.talis.com/res/dddconv-rlg1418-svc%23self">OU Library OPAC</a> demonstrates (the enabled search over the catalogue even works, too:-)</p>
+
+<p>Some of the URLs look as if they are going to be hackable, generatable(?), which is handy. For example, this URL: <em>http://api.talis.com/1/node/items/ad9.sw/bib?title=rdf</em> is described as follows:</p>
+
+<blockquote>We have a public service that uses the service information to automatically link into the OPAC. For example, on that page above you can see the generated identifier for Bath University is "ad9.sw". You can plug that into a URL like this and search for RDF.
+
+<p>The [URL] syntax is a custom one based on what we know we can support for the majority of our service descriptions. It currently supports isbn, title and author parameters. Full documentation is coming :) We plan to support "real" protocols like SRU and OAI and map them to the  capabilities of the target OPAC. These will have URLs like:</p>
+
+<p>http://api.talis.com/1/node/items/ad9.sw/sru</blockquote></p>
+
+<p>An RDF returning search is also supported, taking the form <em>http://api.talis.com/1/dir/collections?api_key=?????&search=open</em>:</p>
+
+<p><img alt="silkwormRDF.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/silkwormRDF.jpg" width="663" height="420" border="0" /></p>
+
+<p>One thing I'm keen to explore is how the library location lookup service can be used to augment the <a href="http://library.open.ac.uk/libraries/update/access_acdem.html">OU 'Libraries Near You' service</a> which provides an ugly interface to a 'library by postcode' lookup service augmented with information about lending rights for OU students, as well as library opening times and other administrative information.</p>
+
+<p>In contrast, the Silkworm version goes for a Google maps mashup:</p>
+
+<p><img alt="silkwormMap.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/silkwormMap.jpg" width="699" height="452" border="0" /></p>
+
+<p>At the moment though, the OU data is far more reliable (and maintained). The Talis approach appears to be <a href="http://directory.talis.com/ui/GetInvolved.aspx">appealing to community support/maintenance of the library information database</a>, something the OU has done centrally (by phoning people up and hassling them, I guess!)</p>
+
+<p>One thing I'm keen to explore is how we can work with Talis on maintaining this sort of information, and guaranteeing its correctness, for mutual benefit. (I should qualify that - I am 'outside the system' and so restricted to buolding proof of concept demonstrators that othe people would have to decide to adopt...)</p>
+
+<p>If you want to keep up with what Talis are doing, I believe more announcements are due throughout May on the <a href="http://www.talis.com/tdn/">Talis Developer Network</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/006140.html">12:52 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=6140" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">April 28, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="006098"></a>
+<h3 class="title">Live Blogging with Instant Messaging, Plus?</h3>
+
+<p>The live blogging that I was trying out at the <a href="http://kn.open.ac.uk/workspace.cfm?wpid=4589">OU Learning and Teaching Conference</a> over the last couple of days has given me a lot to think about, and I'll be posting my reflections on that topic in the next couple of days, but one thing I want to mention before I forget(!) is that it was not really <em>live</em>.</p>
+
+<p>The way I was blogging was to take session notes (in <a href="http://performancing.com/firefox">Performancing for Firefox</a>) and then post these to the OUseful blog at the end (or thereabouts) of each session.</p>
+
+<p>To be really live, I would have had to be posting (and editing) the blog post every few seconds. There is a certain hassle factor associated wth this of course...how much neater if I could sign on to a blogchat room and use an IM client to post straight into a blog post, real time (or near as makes no difference).</p>
+
+<p>That is, imagine a blog post to be a chat room transcript, updated in realtime.</p>
+
+<p>I'm sure there are systems that already provide much of this functionality (I'm not really up on IM) but I don;t think I've ever stumbled across anything that explicitly claims to provide an <em>IM blogging solution</em>.</p>
+
+<p>As to whether it's desirable or not, that's another matter (e.g. I always do a quick scan of my blog posts before publishing to try and root out the worst of the typos - although many still get through (I really should sort out a blogging client spellchecker!). This error checking would perhaps not be supportable ina trivial blogIM client...)</p>
+
+<p>Just while I'm thinking about enhanced IM facilities, I'd like to mention a service I've yet to play with but have read many favourable reviews of: 37 Signals' <a href="http://www.campfirenow.com/">Campfire</a> small business chatroom cleint. One of the features that makes me want to try this service out is the ability to easily upload files to a chat room and refer to them (via a link) from within a message. This use of IM to discuss a document seems to be a very powerful feature.</p>
+
+<p>The problem with IM is that is doesn;t readily support multiple threads (i.e. the flow is a linear one) although the ability to use chat rooms for both synchronous and asynchronous communications more than makes up for this, I think. </p>
+
+<p>So - two IM, Plus services  - one available now (Campfire, with file uploading (perhaps other IM solutions offer this too? I think some allow file transfer between conversants, for example?)) and one not, as far as I know (blogIM).</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/006098.html">03:13 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=6098" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">April 10, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="006038"></a>
+<h3 class="title">URL Pipes</h3>
+
+<p>This post is just a marker to get me thinking in idle time about about using web services and RESTful URLs like <a href="http://www.cf.ac.uk/psych/CullingJ/pipes.html">Unix pipes</a>. For those of you who have never used Unix, pipes allow you to use the output of one command as the input to another - so for example I could 'pipe' ('|') a directory listing (<em>ls</em>) straight to my printer (<em>lpr</em> using the command line statement: <em>ls | lpr</em>.</p>
+
+<p>In the same way, consider the following:</p>
+
+<p>- in a post on <a href="http://blogs.open.ac.uk/Maths/ajh59/005952.html">DOI and OpenURL Resolution</a> I showed a neat trick from Tim Wales that took the output of a DOI lookup and use it as the input to the OU's libezproxy service:<br />
+<em>http://libezproxy.open.ac.uk/login?url=http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?&id=doi:10.1016/S0040-1625(03)00072-6</em><br />
+Here, <em>http://openurl.open.ac.uk/lfp/LinkFinderPlus/Display?</em> takes a DOI and returns a URL for it in a service the OU subscribes to; then <em>http://libezproxy.open.ac.uk/login?</em> takes this information and provides the user with an OU authenticated way in to that service (so the user can read the whole paper, for example).</p>
+
+<p>- or how about this:</p>
+
+<p><em><a href="http://www.optimalbrowser.com/optimal.php?url=http%3A%2F%2Fouseful.open.ac.uk%2Fpagelinks2opml.php%3Furl%3Dhttp%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2F006023.html&submit=Submit">http://www.optimalbrowser.com/optimal.php?url=http%3A%2F%2Fouseful.open.ac.uk%2Fpagelinks2opml.php%3Furl%3Dhttp%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2F006023.html&submit=Submit</a> </em> which takes an output from a <a href="http://blogs.open.ac.uk/Maths/ajh59/006027.html">pagelinks2opml service</a> - <em>http://ouseful.open.ac.uk/pagelinks2opml.php?</em> - and uses it as the input to <em>http://www.optimalbrowser.com/optimal.php?</em>.</p>
+
+<p>In the latter case, note that the 'argument' url has been escaped - '/' are replaced by %2F, their ASCII code number in hexadecimal, as have ':', '?' and '=' for example. This in part helps get round the problem of the <em>optimal.php</em> script knowing which arguments belong to it and which belong to the <em>pagelinks2opml</em> service.</p>
+
+<p>So, the question I want to mull over is - to what extent can web services with RESTful APIs  including <em>url=</em> terms be viewed as <em>URL pipes</em> equivalent to Unix pipes, and how can long pipelines (with more than two services) be supported <em>without</em> any ambiguity as to which argument(s) relate to which service.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/006038.html">10:53 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=6038" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 25, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="006003"></a>
+<h3 class="title">Gabbly Chatting To Myself About The OUseful Blog...</h3>
+
+<p>Snippets of a <a href="http://gabbly.com">gabbly</a> chat with myself (how sad is that...?!) about the medium at <a href="http://gabbly.com/ouseful.open.ac.uk/blog">http://gabbly.com/ouseful.open.ac.uk/blog</a>...</p>
+
+<p><img alt="gabblyOUseful.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/gabblyOUseful.JPG" width="729" height="276" border="0" /></p>
+
+<blockquote>gabber546: I don't think they can be edited or moderated, which is a possibly an issue.
+
+<p>The comments do seem to persiost over several days. I'm not sure how the RSS feed works thugh? A daily digest in each item perhaps, rather than one item per chat comment?</p>
+
+<p>I wonder if group chats would be possible, whereby I have a gabbly account with closed groups I am a member of that i could post to? That would get around the spam problem .</p>
+
+<p>Hmm - there seems to be a word/character limit on how much you can post at once</p>
+
+<p>gabber728: re groups - you could make a user sign in, and then choose which group they wanted to post to on each page</p>
+
+<p>If you were logged in then you probably wouldn't need to change your name in the client</p>
+
+<p>If I go to anew website, do we start a new conversation?</p>
+
+<p>Tony: hmm- i went off to gabbly chat at ouseful.open.ac.uk, and nothing was recorded here.</p>
+
+<p>It would perhaps be nice if when i left I could set the client to add 'Tony has just gone of to chat about ouseful.open.ac.uk'</p>
+
+<p>ALso, i came back here from the ouseful.open.ac.uk chat. Again, it would be nice if i could set the client up to say 'Tony has just arrived from a chat at ouseful.open.ac.uk'</p>
+
+<p>If gorups were supported, you could also have an option to display if any other groups members are gabbling at the mo, and if so, where...</p>
+
+<p>You'd probably need to be allowed to set your own presence settings though, and have secret chats or hide the fact your are chatting, or waht page you are on</p>
+
+<p>What happens if I 'change'...?</p>
+
+<p>I see...</p>
+
+<p>hmmmm - how do i leave? it would be nice to be able to 'say bye' and reload the page from http://gabbly.com/ouseful.open.ac.uk/blog to http://ouseful.open.ac.uk/blog with a single gabbly client click</p>
+
+<p>ooh - links are linkified</p>
+
+<p>in fact, they become gabbly linkified</p>
+
+<p>so where will gabbly.com/ouseful.open.ac.uk/blog go if the linkifier prepended gabbly.com?</p>
+
+<p>Welcome to Gabbly!</p>
+
+<p>Tony2 has joined.</p>
+
+<p>Tony2: I have in fact joined as myself (must be a cookie?) in a new tab opened buy clicking thedouble gabbly link...(it worked out not to chat on the chat page)</p>
+
+<p>Tony2 is now Tony</p>
+
+<p>Tony: I wonder who i am now - tony in one client and tony2 in another...what's my cookie set as?;-)</blockquote></p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/006003.html">08:38 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=6003" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 24, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="005988"></a>
+<h3 class="title">OU Course Catalogue Takes Lead from Amazon?</h3>
+
+<p>Whilst I was chatting to someone the other day about the <a href="http://www.open.ac.uk/courses">OU courses</a> page, where potential students can search through our course offerings, they mentioned that some of the pages now have links to taster material.</p>
+
+<p>We've done this ourselves in Faculty hosted pages before (for example, here are some links to tasters for courses in the <a href="http://tscp.open.ac.uk/courses.htm">Relevant Knowledge Programme</a> (I look after T184 :-)), but this was the first I'd heard of  it being done on a more formal basis.</p>
+
+<p>Here's how the link appears on the <a href="http://ouseful.open.ac.uk/l310">courses page for L310</a>, a final year undergraduate equivalent French language course:</p>
+
+<p><img alt="courseTasterLink.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/courseTasterLink.JPG" width="541" height="355" border="0" /></p>
+
+<p><strong>Look Inside the Course</strong></p>
+
+<p>Following the link takes you to a more detailed page that allows you to essentially leaf through the course - there's an a image of the course text, links to the course description and course guide, and of course links to sample course teaching materials as well as assessment materials. </p>
+
+<p><img alt="courseTaster.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/courseTaster.JPG" width="657" height="350" border="0" /></p>
+
+<p>So here then we essentially have a formalised way of presenting a 'look inside the course', which I think is an excellent idea. </p>
+
+<p>Going back to the main courses page, there are a few other interesting things about it that have appeared over the last few months.</p>
+
+<p><strong>Required Books</strong></p>
+
+<p>Firstly, a list of the set books the student is required to purchase for the course:</p>
+
+<p><img alt="setBookToBuy.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/setBookToBuy.JPG" width="576" height="196" border="0" /></p>
+
+<p>Now I'm not sure where the information to generate this section of the page comes from, but it's exactly the sort of end point I had in mind for the <a href="http://ouseful.open.ac.uk">OUseful booksearch</a> web service (<a href="http://ouseful.open.ac.uk/search.php?searchTerm=l310&submitSearch=Search&searchType=coursecode">L310 on OUseful Books</a>, or as <a hre="http://ouseful.open.ac.uk/courseSearchRSS.php?CFSearch=l310">RSS</a>), so it would be interesting to see if that's the approach they went down (I suspect it isn't).</p>
+
+<p>There are affiliate fees to be had here!</p>
+
+<p><strong>Course Reviews</strong></p>
+
+<p>A bit further down the page are a couple of course reviews.</p>
+
+<p><img alt="OUCourseReviews.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/OUCourseReviews.JPG" width="585" height="223" border="0" /></p>
+
+<p>These are pulled in from the <a href="http://www3.open.ac.uk/coursereviews/">course reviews site</a>, where currently registered students can also submit reviews. (I'm not sure if this is locked down so that only students who have been registered as starting a course are allowed to post a review?).</p>
+
+<p>One thing that appears to be lacking from the reviews are numerical/star ratings - I'd be interested to hear what factors were taken into account when that decision was made.</p>
+
+<p><strong>Students Who Studied This Course Also Studied...</strong></p>
+
+<p>This is an interesting section, and I'm not sure how it's created.</p>
+
+<p><img alt="OUCourseAlsoStudied.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/OUCourseAlsoStudied.JPG" width="565" height="224" border="0" /></p>
+
+<p>Elsewhere on the page are listings of the programmes/qualifications the course belongs to (so for example a student on a particular degree programme will have to take at least the set of courses that are required for that degree) and of course you'd expect a large overlap between the 'courses also studied' and the courses listed in a particular degree programme.</p>
+
+<p>That's now of course.</p>
+
+<p>It's rather a shame that 'people who studied this also studied that' technology is only now becoming useable in a scalebale way, becuase more and more the OU is moving to named degree programmes with specified course profiles.</p>
+
+<p>Historically, the OU was a little bit more <em>laissez faire</em> and really pushed the 'Combined Studies' idea, in which students could - with guidance - create their own degree profiles (i.e. eassentially choose their own degree make-up).</p>
+
+<p>If that was still the model in any significant sense, then making 'students who studied this also studied that' information would be one way of identifying student created emergent degree profiles (or degree pathways) that reflected student's course needs as perceived by them in volume.</p>
+
+<p><strong>Postscript</strong></p>
+
+<p>The new course pages have a lot in common with emerging models of e-tailing: 'look inside' features (i.e. browse the product), reviews, crowd preferences and so on. There isn't a chatlink or phonelink for a student to be able to chat to a course adviser  yet, but maybe that's coming?</p>
+
+<p>We do already sell <a href="http://www.open.ac.uk/vouchers/">gift vouchers</a> for some courses, but these aren't electronic yet (I don't think you can redeem them as part of an online registration process, which is a shame). I don;t think the vouchers are available commercially yet, either, though I'd love to see one on Amazon!</p>
+
+<p>And finally, as a URL hacker (that is, someone who uses URLs to navigate) there are a couple of things worth commenting on about this site. the course taster material for L310 appears at <em>http://www.open.ac.uk/courses/tasters/l310/</em> which is all very sensible.</p>
+
+<p>So sensible you might expect the course decription to live at <a href="http://www.open.ac.uk/courses/l310/">http://www.open.ac.uk/courses/l310/</a>:</p>
+
+<p><img alt="OUsorry.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/OUsorry.JPG" width="663" height="252" border="0" /></p>
+
+<p>Oops... the actual address is the far from friendly <em>http://www3.open.ac.uk/courses/bin/p12.dll?C01l310</em> which really should be tidied up. (I always use a <a href="http://ouseful.open.ac.uk/l310">OUseful redirect: <em>http://ouseful.open.ac.uk/l310</em></a>).</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005988.html">02:18 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5988" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 20, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="005976"></a>
+<h3 class="title">Is Web 2.0 just like Hollywood Blockbuster 2.0?</h3>
+
+<p>This is interesting  - just as AJAX essentially reinvented a technology that had been around for ages and breathed new life into it, <a href="http://www.russellbeattie.com/notebook/">Russell Beattie</a> has <a href=""http://www.russellbeattie.com/notebook/1008901.html>rediscovered</a> another old Microsoft technology - <a href="http://msdn.microsoft.com/workshop/author/hta/overview/htaoverview.asp">HTML Applications (HTAs)</a> (Russell's find is also reported with a brief commentary at <a href="http://ajaxian.com/archives/ms-html-applications">Ajaxian</a>.)</p>
+
+<p>The technique can take a single page browser app and turn it into a 'proper' Windows like app, presumably along with the ability to manipulate files (as long as you're on a Windows box that is)...</p>
+
+<p>If only I had time to explore this a little...if I can use HTAs to save arbitrary text strings to a file, it'd be a handy way of saving web page app generated OPML file like the one created by my <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPML.html">social bookmarking OPML feed generator</a></p>
+
+<p>Interesting how Javascript, once much maligned for not being a 'proper' programming language is continuing to find its way out of the browser and onto the desktop (which reminds me, I've not had a look at what's going on in <s>Konfabulator</s> <a href="http://widgets.yahoo.com/">Yahoo! widgets</a> land for a bit...</p>
+
+<p>And interesting how a lot of stuff coming out of Web 2.0 has been around for years (DHTML, anybody?).</p>
+
+<p>So is Web 2.0 a remake of Web 1.0, or a sequel?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005976.html">07:28 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5976" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 19, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="005705"></a>
+<h3 class="title">What Next After PageRank? ClickFrom?</h3>
+
+<p>This was originally a longer post about an interesting couple of graphcis posted by Matt McAlister in <a title="Matt McAlister :: What will be the next PageRank?" href="http://www.mattmcalister.com/blog/_archives/2006/2/16/1766344.html">What will be the next PageRank?</a> but Firefox crashed out on me just as I was about to post, so I lost everything...</p>
+
+<p>Anyway, the gist of that now lost post was picking up on the question of what could come after PageRank as the number of failed searches grows in the face of an increasing volume of information and a worsening useful:useless information ratio (by the by, FF crashed just as I google 'PageRank algorithm' so I could give a link to the original paper...if you want the link, go find it;-)</p>
+
+<p>Matt comments:</p>
+
+<blockquote>The click is much more potent than the existence of a link.  Even more potent than clicks are tags, ratings, comments and emailed URLs.  A hyperlink is still a vote, but seeing some form of human action gives me much more confidence that a source has value.</blockquote>
+
+<p>Picking up on the first part of that quote put me in mind of the <a href="http://attentiontrust.org/">Attention Trust</a>. If we record all our interdomain clicks, anonymise and aggregate this information, then are we a step along the road to a ClickRank inspired search engine?</p>
+
+<p>NB I also wonder how the various <a href="http://blogs.open.ac.uk/Maths/ajh59/005493.html">people powered search engines (PeopleRank?) are gonna fare this year? Perhaps information about sites included in user-specified <a href="http://blogs.open.ac.uk/Maths/ajh59/005679.html">searchrolls</a> or <a href='http://opensearch.a9.com'>OpenSearch</a> profiles can also be used to provide intelligence about the sites people really rate as information sources.</p>
+
+<p>This is exactly the sort of question I'd be asking if I was a library 2.0 person, I think...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005705.html">10:40 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5705" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 13, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="005614"></a>
+<h3 class="title">Roll On Loose Coupling...</h3>
+
+<p>I've been thinking a lot about what OU 2.0 (?!) could look like lately, and how if we were going to make a play for e-learning world player status - which I think is one of the scenario planning dreams, I suspect - we'd need to get something going with someone like Google (after all, if there's <a href="http://www.google.com/ig/dell">a Dell portal on Google</a>, why not an OU one in the UK, or even better, Africa, to help with the open content drive there? (It'd be even better if we could get buy in to the Google downloader/updater so we can <a href="http://blogs.open.ac.uk/Maths/ajh59/005516.html">ship our software through their channel</a>?)).</p>
+
+<p>Anyway - I just saw this, which is not the same thing at all:</p>
+
+<blockquote>San José City College (SJCC) has embarked on a technology improvement program, and for the first time will be offering student email accounts. ... [Google are] testing a new service with the school by hosting Gmail accounts with SJCC domain addresses (like student@jaguars.sjcc.edu), plus admin tools for efficient account management. <a title="Official Google Blog: Big mail on campus" href="http://googleblog.blogspot.com/2006/02/big-mail-on-campus.html"><strong>Official Google Blog: Big mail on campus</strong></a></blockquote>
+
+<p>although it did, for some reason, also remind me of <a href="http://domains.live.com/">Microsoft's custom domains</a>, which is completely different again...</p>
+
+<p>[Added 23/02 - Microsoft also offer <a href="http://www.imagine-wl.com/Education/">MSN email hosting for education</a>]</p>
+
+<p>And this is completely different too: </p>
+
+<blockquote>iTunes U* is a free, hosted service for colleges and universities that provides easy access to your educational content, including lectures and interviews 24 hours a day, 7 days a week. <a href="http://www.apple.com/education/solutions/itunes_u/"><strong>iTunes University</strong></a></blockquote>
+
+<p>They both made me think though... not least because it's more stuff not-without-precedent for the mix...</p>
+
+<p>And they're also very 2.0, in the sense that the universities seem to be being encouraged to outsource services to the very services that their students are likely to be using anyway (or which those services would like the students to be using just anyway if they aren't already using them)...</p>
+
+<p>So it makes sense, doesn't it, in a backscratchy sort of way, especially if you see the online services as lifestyle services making a grab for hearts and minds in an oh, so helpful way...</p>
+
+<p>(I guess the various bookscanning projects will soon remove the need for our academic libraries, for example... <a href="http://scilib.typepad.com/science_library_pad/2006/02/is_the_research.html">or not...</a>.)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005614.html">12:40 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5614" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+
+<a name="005613"></a>
+<h3 class="title">AJAX Doesn't Stand for Anything...</h3>
+
+<p>At the <a href="http://www.carsonworkshops.com/summit/">Carson Web 2.0 Summit</a> last week (annotated <a href="http://blogs.nature.com/wp/nascent/2006/02/carson_summit_on_the_future_of.html">here</a>, tag: <a href="http://technorati.com/search/futureofwebapps">futureofwebapps</a>), several speakers repeated the message that what AJAX is <em>supposed</em> to stand for (specifically, <em><strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML</em>) is actually a misnomer, as the only thing that's actually required is the <em>asynchronous</em> bit (and I'd take issue with that were it not for the fact that Javascript is only single threaded (at least, <a href="http://ajaxian.com/archives/multi-threaded-javascript"><em>for the moment</em></a>)).</p>
+
+<p>So  - what does it stand for? Some combination of DOM Manipulation, CSS and remote scripting, mashed together to give a rich browser based app, I reckon...</p>
+
+<p>What can't be denied, however, was that <a href="http://www.adaptivepath.com/publications/essays/archives/000385.php">coinng the AJAX moniker</a> <em>did</em> give momentum to the popular uptake of the AJAX way of doing things, along with a few widely cited - and experienced  - AJAX apps (the GMails, and the rest).</p>
+
+<p>So - what does AJAX stand for? Neat web app interfaces, I'd say, rather than <a href="http://en.wikipedia.org/wiki/Ajax_(Sophocles)">someone out of a Greek tragedy</a>, <a href="http://en.wikipedia.org/wiki/Ajax_(automobile)">a series of doomed automobiles</a> or <a href="http://en.wikipedia.org/wiki/AJAX">Asynchronous JavaScript And XML</a>.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005613.html">12:15 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5613" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">January 15, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="005521"></a>
+<h3 class="title">Annotated Google Map References</h3>
+
+<p>Whenever I have to email people directions for a meeting, say, or other gathering, I tend to use an <a title="Micro-info: Easy Peasy Google Maps Labels" href="http://micro-info.blogspot.com/2005/08/easy-peasy-google-maps-labels.html">Easy Peasy Google Maps Label</a>.</p>
+
+<p>These are easy enough to generate if you're an everyday URL hacker, but mulling over the question of <a href="http://blogs.open.ac.uk/Maths/ajh59/005508.html">who web 2.0 is <em>for</em></a> I realised that not everyone is necessarily comfortable doing this. So here's my <a href="http://blogs.open.ac.uk/Maths/ajh59/googleMaplabels.html">Google Maps labelled location URL generator</a>...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005521.html">02:17 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5521" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">January 10, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="005508"></a>
+<h3 class="title">Web 2.0 for Who?</h3>
+
+<p>I note with interest this announcement by Stephen Downes of a forthcoming <a title="Stephen's Web ~ by Stephen Downes ~" href="http://www.downes.ca/cgi-bin/page.cgi?post=33198">MyGlu</a>, which:<br />
+<blockquote>performs the functionality of SuprGlu - that is, it brings together different RSS feeds into a single display - does it in such a way as to allow you to put your Glu on your own site, allows you to use feeds other than your own, and lets you filter the output.</blockquote><br />
+In addition, Stephen will<br />
+<blockquote>make the script available (and it's pretty simple to run). And don't have to use my site - or SuprGlu's - at all.</blockquote><br />
+The rationale?<br />
+<blockquote>Web 2.0 is supposed to be all about empowering the user and distributing content, not the manifestation of some eyeball-driven business plan. I wish more coders (and pundits) would recognize that.</blockquote><br />
+Now I agree with those sentiments wholeheartedly, but I think it's fair to ask the question: Web 2.0 allows <em>who</em> to do all this neat remixing and mashing stuff?</p>
+
+<p>I think there are three broad ways of making the most of Web2.0 in an interoperability/mashing sense (rather than a content co-creation sense):<br />
+<ul><li>Web site users who can make use of the services offered by SuprGlu, are happy adding content feeds to google/ig or netvibes etc., can possibly work out how to pull a feed from one place and consume it in another, and so on. Tese users proibably also need the site to be well designed in terms of usability, and probably also prefer a friendly visual design, bright colour theme etc etc. For the sake of argument, let's also suppose these users have never seen a bit of html or javascript and wouldn't know what to do with it if they did.</li><li>Client side, web page developers, who can tinker with html and at least reuse/call on other people's Javscript functions, even if they don't know how to write Javascript (i.e. they can di a script include); at the other end of the spectrum in this category are experienced Javascript developers who can write their own elaborate Javascripted pages and develop, from scratch, complex web page application (i.e. web pages that embed functionality on the client side using script). Client side developers don't have access to servers, can't mount PHP scripts etc.</li><li>Server side developers, that again spread across quite a wide spectrum, from users who can ask a friendly sys admin to put up a script, users who can install a script but wouldn't know what to do if it failed to work, and can only administer it through a provided web page interface, that ideally handles configuration too, users who can install a script off the web and are happy to cutomise it, and users who can write complex scripts from scratch etc.</li></ul><br />
+(Okay - okay, so things like Ning will perhaps change all this - opening up the ability to reuse complex server side) functionality through a free web page interface...but I don't think we're there quite yet in terms of (naive) users knowing what services there are out there that they can make use of.)</p>
+
+<p>So - while I'm looking forward to making use of Stephen's script, I also think that services such as SuprGlu do - and will continue - to provide the most accessible/usable service for the majority of  web users.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005508.html">12:22 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5508" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">December 21, 2005</h2>
+
+
+<div class="blogbody">
+
+<a name="005494"></a>
+<h3 class="title">Future of Web Apps Conference</h3>
+
+<p>I just picked up an announcement about a <a title="Carson Workshops Summit - The Future of Web Apps" href="http://www.carsonworkshops.com/summit/">Carson Workshops Summit - The Future of Web Apps</a> that <a href="http://kmi.open.ac.uk/people/marc/index.php">Marc Eisenstadt</a> sent to a <a href="http://kmi.open.ac.uk">KMi</a> mailing list:<br />
+<blockquote>This one-day conference <em><strong>[Wednesday, February 8, 2006, 10am — 6pm, Kensington Conference Centre, London, £75+vat]</strong></em> brings together those pioneers in the web development industry who are setting the agenda for tomorrow's apps. They will be discussing how Web 2.0 technologies are changing the way we interact and how you can use these to build powerful, next generation tools. So whether you're a business owner, developer or entrepreneur this day will help you choose the right technology for your next web-based application.</blockquote></p>
+
+<p>Speakers include:<br />
+<ul><li>Joshua  Schacter (del.icio.us)</li><li>David Heinemeier Hansson (37 Signals)</li><li>Eric Costello (Flickr)</li><li>Tom Coates (Yahoo!)</li><li>Steve Crossan (Google)</li><li>Steve Olechowski (Feedburner)</li></ul><br />
+so this promises to be a really memorable event...</p>
+
+<p>If anyone who reads this list wants to chat around  social bookmarking interoperability - or other matters - over coffee, or in the bar afterwards, I hope to make it to this event...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005494.html">06:49 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5494" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">December 15, 2005</h2>
+
+
+<div class="blogbody">
+
+<a name="005488"></a>
+<h3 class="title">WikiMail</h3>
+
+<p>One issue I keep trying to address is an email box full of old messages that I'm saving until such a time as I can collate them into e.g. a blog post (as I did with an email conversation sometime ago on <a href="http://blogs.open.ac.uk/Maths/ajh59/004000.html">online student engagement</a> (the first para sets the scene; note that it's the STRUCTURE that's important, not the content...)</p>
+
+<p>One approach that may be appropriate is the following simple idea - combine emails and wikis in WikiMail: <a href="http://blogs.open.ac.uk/Maths/ajh59/wikiGmail.html" onclick="window.open('http://blogs.open.ac.uk/Maths/ajh59/wikiGmail.html','popup','width=871,height=623,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">WikiMail mockup #1</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/wikiGmail2.html" onclick="window.open('http://blogs.open.ac.uk/Maths/ajh59/wikiGmail2.html','popup','width=867,height=731,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">WikiMail mockup #2</a>.</p>
+
+<p>The principle is this: the mail wrapper provides the notification that a change has been made and opening the email opens straight into the web application/wiki.</p>
+
+<p>One WikiMail  scenario is for it to work like this:<br />
+<ol><li>I send you a WikiMail, which is a sort of normal email except that when you open it, you open a wiki page in the message window; (NB the initial focus is on browser based email clients, or clients where you can embed a browser or application in the message/edit window.)</li><li>you 'reply' to my email by editing the WikiMail page, e.g. by inserting reply comments where appropriate, and perhaps deleting bits of content; this is equivalent to quoting snippets of my original email in your reply;</li><li>you commit the page which sends me a WikiMail; when I open the WikiMail message, I see the new page, and can if I want look at the history page to see the changes; as well as being able to change the wiki page, it's also possible to use the discussion tab of the page for an aside discussion.</li></ol></p>
+
+<p>Priviliges - the WikiMail privileges are as follows:<br />
+<ul><li>when I send a WikiMail, i get priviliges to rwe (read,write,edit) the page, along with everyone I send the message to;</li><li>bcc people get read only access on a page I cc'd them into, but NOT any future edits;</li><li>bcc'ing someone in a reply doesn't work...</li><li>cc'ing gives people read privs to the original page;</li><li>if the next page edit also cc's the person, they get read privs on the new page;</li><li>the cc'd person gets to see the page in its latest state as long as they are cc'd in to every edit;</li><li>if they are missed out of the cc list for an edit, what they can see is frozen at the previous edit;</li><li>if someone tries to cc someone late in the game, then....perhaps everyone who had edited has to approve them seeing the page?</li></ul></p>
+
+<p>The WikiMail page is therefore private to contributors, although I suppose a mechanism could be included to open it up, or make it public (and frozen, like a blog post - e.g. a wikimail2blog function)</p>
+
+<p>Attractive features to me are:<br />
+<ol><li>notification;</li><li>the ability to see what's changed;</li><li>the client opens a WikiMail message into the wiki, rather than sending a link in an email that i have to click on to go to the wiki page;</li></ol></p>
+
+<p>As well as wikis, the idea - at first glance - appears to translate well to other applications(imagine <em>OfficeMail</em> or <em>AppMail</em> (rather then <em> WikiMail</em>) where an online application/tool such as <a href="http://writely.com/">Writely</a> is embedded in the mail edit window.</p>
+
+<p>The model of OfficeMail is the same as WikiMail (converting your inbox for email into your intray for documents that need working on). Email is used to wrap the application and help you share it naturally with others (naturally in the sense that people are familiar with using email).</p>
+
+<p>Why would this be useful?</p>
+
+<p>Well, at the moment I am crossing emails with MS Word attachments with a collaborator as we tune an abstract for a conference paper. We keep passing a word document containing the most recent version of the abstract as an attachment between us.</p>
+
+<p>What I would like is to be able to receive my "wordmail" message, open it, make changes and send it back, without having to open the email, download the message, make the change, create a new email, upload the document (or perhaps mail it form my wordprocessor - but that doesn't work properly and is no good if Gmail is my mail client, for example), send the email etc. How much easier if we could continue to do this by passing embedded, editable documents in our emails.</p>
+
+<p>Many WP apps allow you to email documents as attachments, and of course you can open these attachments from an email, but the OfficeMail/WordMail approach is far more of an integrated environment...!</p>
+
+<p>Despite its problems - and despite the attractiveness of custom collaborative software - email is a part of many people's lives and it's transactional model is well understood.</p>
+
+<p>So - if the lazyweb Santa is listening, can I have WikiMail or WritelyMail for Christmas, please?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005488.html">04:40 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5488" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

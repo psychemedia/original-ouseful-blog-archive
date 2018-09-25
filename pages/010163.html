@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Visualising Geo-temporal RSS Feeds</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010124.html" title="Openlearn XML Processor" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010164.html" title="Structured Bookmarking: From MicroFormats to Machine Tags" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010124.html">&laquo; Openlearn XML Processor</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010164.html">Structured Bookmarking: From MicroFormats to Machine Tags &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 15, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Visualising Geo-temporal RSS Feeds</h3>
+
+<p>After a week away from the web (:-) I thought I'd have a quick play with some new 'visualisations' of geo-coded RSS feeds using Yahoo and Google maps presented in the same browser view as a <a href="http://simile.mit.edu/timeline/">timeline</a> of the associated feed, in part prompted by some of <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/04/technological_e.html">Martin Weller's sideways reflections on using Google maps in education</a>.</p>
+
+<p>The demo app I had in mind was to show a simple travel blog with dual visualisations - mapped and timelined using split screen iframes, the timeline in the top third, the map in the bottom two thirds - BUT I couldn't find a geo-coded, timestamped feed that would work in the timeline and mapping apps...</p>
+
+<p>So until I manage to cobble my own demo feed together (which won't actually take that long to do, but you know how it goes...!), here's what I have in mind:</p>
+
+<p>Given a geo-coded RSS feed, visualise it using either the <a href="http://developer.yahoo.com/maps/georss/index.html">Yahoo geoRSS2map API</a> or the <a href="http://googlemapsapi.blogspot.com/2007/03/kml-and-georss-support-added-to-google.html">Google geoRSS2map API</a> (the <a href="http://www.acme.com/GeoRSS/about.html">ACME GeoRSS Map Viewer</a> will generate map links for both of these services when passed a GeoRSS URL).</p>
+
+<p>Using the same feed, visualise it temporally using the <a href="http://simile.mit.edu/timeline/">Simile timeline widget</a> via something like the <a href="http://timeline.to/">Universal [RSS to] Timeline Generator</a> or this customisable service from <a href="http://www.mytimelines.net/create-a-timeline/">My Timelines</a> (who also have an <a href="http://www.mytimelines.net/create-an-icalendar-timeline/">experimental iCal feed to timeline generator</a>). These services actually use the timestamp of each feed item to locate the item title along the timeline (I think), which is why I thought of using a travel blog for the demo - my assumptions about travelblog postings being that they are posted <em>at or near the time of event recorded</em> as well as being <em>appropriately geotagged</em>.</p>
+
+<p>Several opportunities for tying the geo and temporal interfaces together also suggest themselves.</p>
+
+<p>For example, if items on the displayed timeline are colour coded along a red/blue spectrum, say, along the timeline, then corresponding map markers could be similarly color coded, giving you on the map a 2+1D representation (space + time), with a cross reference back to the timeline.</p>
+
+<p>The Yahoo map interface is interesting in that only text links to items in the current geo view are listed (allowing you to navigate items by the map view). A similar control could be added to the timeline so that only items in the current timeline view are displayed on the currently displayed displayed map. (With maybe options for only displaying in the timeline items on the current geo view - and various combinations thereof).</p>
+
+<p>Hovering over items on the map/timeline might also cause the corresponding item on the timeline/map to be highlighted.</p>
+
+<p>Using these tools in combination with each other thus offers the potential for a powerful <em>visual</em> interface using historical and/or spatial context.</p>
+
+<p>What's really needed then, of course, would be a third window (or pop-up window, maybe in a <a href="http://blogs.open.ac.uk/Maths/ajh59/007632.html">lightbox</a>?) to display the description text for a particular feed item when it is selected either from the map <em>or</em> the timeline.</p>
+
+<p>On the to do list is a Yahoo pipe that will take a <em>geotagged</em> social bookmarking feeds (using the <em>geo:lat=* geo:long=*</em>) strategy, and produce a valid geoRSS feed as a result. In addition, the Pipe should also be able to handle a <em>datetime=*</em> tag applied to each bookmark and then rewrite the feed item timestamp with <em>this</em> time... So for example I could <em>datetime=</em> or <em>dt=</em> tag an article relating to an English Civil War battle with the date of the battle, have the feed rewritten with this datetime as the item posting time, and <em>then</em> have the feed items displayed appropriately on a timeline (unless the timeline widget could consume a datetime tag directly, that is).</p>
+
+<p>It's maybe also worth mentioning that the Microsoft Windows Live empire also has various forms of GeoRSS support, as this post on <a href="http://virtualearth.spaces.live.com/blog/cns!2BBC66E99FDCDB98!8495.entry">Live Search Maps</a> describes.</p>
+
+<p>In particular, the Microsoft service lets you 'bookmark' collections of locations (a bit like the new <a href="http://maps.google.com/help/maps/userguide/index.html">Google MyMaps</a> service, I guess), and publish a public, geoRSS feed from these collections. (Note that this is a <em>take home</em> point: <em>Windows Live Search maps lets you create location collections with geoRSS feeds</em>).</p>
+
+<p>As far as consuming geoRSS, the <a href="http://dev.live.com/virtualearth/default.aspx?app=virtual_earth">Virtual Earth Map Control</a> is happy with this sort of input, but I think it only works on a Windows O/S with 3D support (i.e. not on Windows under <a href="http://www.parallels.com/">Parallels</a> on a Mac...).</p>
+
+<p>PS Okay - so someone has sort of done this before: the <a href="http://www.oe-files.de/gmaps/usgseq.html">USGS Live Earthquake mashup</a>:</p>
+
+<p><img alt="gmaptimeline.png" src="http://blogs.open.ac.uk/Maths/ajh59/gmaptimeline.png" width="732" height="502" border="0" /></p>
+
+<p>This approach (timeline+maps) seems to me like a powerful strategy for collecting resources whilst researching an essay topic, for example, with the added advantages that: a) the visualisation may help structure/organise the essay; b) used to illustrate the topic and maybe even provide a visual navigation scheme through it...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 15, 2007 01:54 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010163.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

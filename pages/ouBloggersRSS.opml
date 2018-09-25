@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+    <title>Bloglines Subscriptions</title>
+    <dateCreated>Mon, 23 Jan 2006 17:29:18 GMT</dateCreated>
+    <ownerName/>
+</head>
+<body>
+  <outline title="Subscriptions">
+    <outline title="OU Bloggers">
+        <outline title="Graphic Update" htmlUrl="http://blogs.open.ac.uk/LTS/csn47/" type="rss" xmlUrl="http://blogs.open.ac.uk/LTS/csn47/index.rdf"/>
+        <outline title="Library Issues - The Technology Faculty Library News Blog" htmlUrl="http://libraryissues.blogspot.com" type="rss" xmlUrl="http://libraryissues.blogspot.com/atom.xml"/>
+        <outline title="Memex 1.1" htmlUrl="http://memex.naughtons.org" type="rss" xmlUrl="http://memex.naughtons.org/feed/atom/"/>
+        <outline title="Micro-info" htmlUrl="http://micro-info.blogspot.com" type="rss" xmlUrl="http://micro-info.blogspot.com/atom.xml"/>
+        <outline title="My Dog II" htmlUrl="http://kmi.open.ac.uk/people/marc" type="rss" xmlUrl="http://kmi.open.ac.uk/people/marc/wordpress/wp-atom.php"/>
+        <outline title="My Research Journal" htmlUrl="http://prejudice.tripod.com/blogs/" type="rss" xmlUrl="http://prejudice.tripod.com/blogs/rss.xml"/>
+        <outline title="Neil Benn - Passenger's Log" htmlUrl="http://kmi.open.ac.uk/people/benn/blog" type="rss" xmlUrl="http://kmi.open.ac.uk/people/benn/blog/?feed=rss2"/>
+        <outline title="OUseful Info" htmlUrl="http://blogs.open.ac.uk/Maths/ajh59/" type="rss" xmlUrl="http://feeds.feedburner.com/ouseful"/>
+        <outline title="Pete Mitton" htmlUrl="http://blogs.open.ac.uk/LTS/prm96/" type="rss" xmlUrl="http://blogs.open.ac.uk/LTS/prm96/index.rdf"/>
+        <outline title="Peter Scott's Blog" htmlUrl="http://sixfields.open.ac.uk/rostra/news.php?r=54" type="rss" xmlUrl="http://news.kmi.open.ac.uk/rostra/rss2.php?r=54"/>
+    </outline>
+    <outline title="OU News">
+        <outline title="OU News" htmlUrl="http://www.open.ac.uk/sesame" type="rss" xmlUrl="http://www3.open.ac.uk/sesame/ounewsrss.aspx"/>
+    </outline>
+</outline>
+</body>
+</opml>

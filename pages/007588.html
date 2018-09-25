@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Search Over pages or Domains that Link to You</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007576.html" title="searchfeedr, pageSearch and deliSearch Combined Interface" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007632.html" title="Interaction Design - &quot;Now Follow This Link&quot;" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007576.html">&laquo; searchfeedr, pageSearch and deliSearch Combined Interface</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007632.html">Interaction Design - "Now Follow This Link" &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 01, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Search Over pages or Domains that Link to You</h3>
+
+<p>A quick post to log a quick, two line hack to the searchfeedr code to demonstrate how it can be used to search over pages that link to a given URL. Here's the demo: <a href="http://blogs.open.ac.uk/Maths/ajh59/linkSearch.php">linkSearch</a>.</p>
+
+<p>The service works by taking a supplied URL and using the <a href="http://developer.yahoo.com/search/siteexplorer/V1/inlinkData.html">Yahoo! SiteExplorer API</a> to find all the pages that link to it.</p>
+
+<p>These links are then used to limit the search, along with an additional limit that excludes the target URL from the search results.</p>
+
+<p><img src="http://www.gliffy.com/pubdoc/1078412/L.jpg" /></p>
+
+<p>Now what other search limiting sources are there out there, I wonder?</p>
+
+<p><strong>PS</strong>: how about searching over links <em>related</em> to a particular page? Here's an example - <a href="http://blogs.open.ac.uk/Maths/ajh59/relatedSearch.php">relatedSearch</a>. This makes use of the delicious related links service, as exposed by <a href="http://similicio.us/">similicio.us</a>. I then pipe the similicious results through a Dappit app (<a href="http://www.dappit.com/dapp-howto-use.php?dappName=deliciousrelateditemsviasimilicious">here</a>) to get an RSS feed that I convert to JSON via the <a href="http://xoxotools.ning.com">xoxotools rss2json</a> service; (I couldn't parse the Dapper JSON output for some reason?).<br />
+These links  - i.e. the ones related to the given URL (as suggested by delicious)  - are then used to limit the search :-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October  1, 2006 12:57 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007588.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

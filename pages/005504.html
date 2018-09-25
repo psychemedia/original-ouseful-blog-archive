@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: More on SOcial Bookmark Synching...</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005503.html" title="Synching Social Bookmarking Systems" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005505.html" title="OPML Generator With Customisable Feeds" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005503.html">&laquo; Synching Social Bookmarking Systems</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005505.html">OPML Generator With Customisable Feeds &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 07, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">More on SOcial Bookmark Synching...</h3>
+
+<p>A few more late night thoughts on social bookmark synching, as I take time out from an end-of-course assignment marking marathon :-(</p>
+
+<p>The immediate setting comes from a couple of posts I just stumbled across (Todd on <a title="Big IDEA » Social bookmarking: one account, multiple profiles" href="http://idea.zanestate.edu/archives/2006/01/social-bookmarking-one-account-multiple-profiles/">Social bookmarking: one account, multiple profiles</a>, Stephen on some forthcoming <a href="http://www.downes.ca/cgi-bin/page.cgi?post=33176">RSS synching services coming to Edu-RSS</a>) and my first look at the del.icio.us daily blog (you can get the idea of what it's about from <a href="http://www.commoncraft.com/archives/001028.html">here</a>, but basically it's a scheduled post from delicious to a blogging service of your links for the day...)</p>
+
+<p>So - What's the Story (Morning Glory;-)?</p>
+
+<p>The problem is this - how to synch from one social bookmarking system to another?</p>
+
+<p>Let's refine that a little - how can we synch a <em>subset</em> of bookmarks, corresponding to a (set of) tag(s) from one bookmarking system to another on a regualr basis?</p>
+
+<p>Now it seems to me that there are two obvious ways of getting the bookmarks from system A into system B:</p>
+
+<p>1) system B subscribes to a feed <em>from</em> system A, and polls it on a regular basis;</p>
+
+<p>2) system A pushes links <em>to</em> system B on a regular basis (for example, using a system like del.icio.us' daily blog, with filters attached).</p>
+
+<p>At the current time, I don't think that any social bookmarking systems will let you subscribe to a feed (RSS in the single case, OPML for an RSS bundle), or that del.ico.us allows you to push anything other than all of the day's links to a blog.  But with either of these features in place, I think it would be another step or two along the road to a striaghtforward mashup of a distributed, synched social bookmarking system...</p>
+
+<p>I'm not too sure, admittedly, about how happy Joshua (or the Yahoo! paymasters!;-) would be about pushing links on a regular basis into a rival bookmarking system, though...</p>
+
+<p>However, I do think it would be interesting if something like Simpy, or developers for something like Scuttle, were to implement a bloglike API that could spoof a real blogging system's API and act as the target for a del.ico.us daily blog post (I wonder if rival social bookmarking system URLs would be blocked if they tried to do this?).</p>
+
+<p>If a social bookmarking were so enabled, then it would be possible to make us of the del.icio.us daily blog feature.</p>
+
+<p>Assuming that del.ico.us only continues to push <em>all</em> a user's daily postings, rather than allowing the daily blog to be filtered by tag or tag combination, for example, it would also be useful if the blogSpoof API had some filters attached so that only posts relating to certain tags or tag combinations were passed through... </p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January  7, 2006 12:47 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Del.icio.us does do RSS feeds (see, for example, the (admittedly minimal) feed from my own del.icio.us account: http://del.icio.us/rss/Downes </p>
+
+<p>That gives us a way to get content out of del.icio.us (and similar services).</p>
+
+<p>If you look at Edu_RSS 1 (and shortly, 2), you will notice topic-based filtering: http://www.downes.ca/cgi-bin/xml/topics.cgi</p>
+
+<p>These topics are defined as user-generated regular expressions and can be very precise (much more precise than tags, though it's always possible to scale back a bit).</p>
+
+<p>So now we have a way of getting content out of del.icio.us and into topic-specific feeds.</p>
+
+<p>No big deal to make them user specific. No big deal to mix and match them with other feeds from the same user (and even on the same topic). No big deal to export the result as a web page (which will be the first iteration) or RSS feed.</p>
+
+<p>I have also been working with the Blogger api and can upload the output from one process (automatically, even) as a blog post (heck, that's what splogs do every day).</p>
+
+<p>Sounds good?<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://www.downes.ca">Stephen Downes</a> at January  7, 2006 02:13 AM</span>
+</div>
+<div class="comments-body">
+<p>sounds good...</p>
+
+<p>I certainly need to check out the edu-rss services i think:-)</p>
+
+<p>on my to do list was (is) a post clarifying my thoughts on interoperability, eg at the level of:<br />
+-web page user (can only do what the basic web page/user interfaces provide)<br />
+-client side developer - someone who can write js and mash things together in a  client based web page application<br />
+-server side devleoper - who has access to a server, whatever scripting language takes their fancy etc;</p>
+
+<p>APIs for example, are attractive to developers, rss feeds are going to become usable by page users as people get to grips with consuming rss eg with ig, live, netvibes etc as well as feed readers - but i think there is a difference between feed reading for news, and syndicated link display, which is what the mylibrary meme on this blog is more about</p>
+
+<p><br />
+I didn't clarify this at all - even in my own mind - when I started doodling about synching etc, but I am starting to now and will develop different threads re:\ interoperability on each of these levels.</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony Hirst</a> at January  8, 2006 01:28 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005504.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

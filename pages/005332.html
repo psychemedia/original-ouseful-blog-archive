@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Social Bookmarking Interoperability</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005330.html" title="Course Links OPML Generator" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005336.html" title="Distributed Social Bookmarking" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005330.html">&laquo; Course Links OPML Generator</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005336.html">Distributed Social Bookmarking &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 25, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Social Bookmarking Interoperability</h3>
+
+<p>With an increasing number of social bookmarking systems now available, to what extent would it be useful if it were possible to share bookmarks across these systems?</p>
+
+<p>If social bookmarking systems are to become loosely coupled components in a distributed virtual learning environment (VLE), then conforming to common interface standards would allow different systems to be swapped in an out of such an environment without breaking other components.</p>
+
+<p>One particular question I'd like to raise in this post - and to which I expect to return quite frequently as I work through and follow the technical issues - is whether or not there is any benefit in standardising some elements of social bookmarking applications.</p>
+
+<p>What I am particularly interested in it terms of payoff is:<br />
+a) the ability to swap different social bookmarking systems in and out of a hybrid environment (e.g. a VLE or social software suite containig different applications - blogs, wikis, social bookmarking etc.);<br />
+b) the ability to create a <a href="http://blogs.open.ac.uk/Maths/ajh59/005336.html">distributed social bookmarking service</a>.</p>
+
+<p>So what elements might we consider standardising?</p>
+
+<p>There are several that immediately come to mind:<ol><li>URL structure for referring to user tags</li><li>RSS structure, for syndicating linkrolls;</li><li>the structure of tag groups;</li><li>the structure of user groups;</li><li>open APIs;</li><li>bookmarklets.</li></ol></p>
+
+<p>I'm not going to focus on all these issues in this post, but I would like to look at the first two. If you run a social bookmarking service, please feel free to chip in with comments and corrections. If I had access to a public wiki, I'd actually post there, because I think this topic would benefit from a community discussion, but for now I'll stick with the blog. I also think this sort of discussion could usefully add to the excellent comparative work done on social bookmarking by <a href="http://www.irox.de/roxomatic/856">Torsten Rox</a>.</p>
+
+<p>I'm also going to limit myself in this post to comparing just two social bookmarking services - <a href="http://del.icio.us">del.icio.us</a> and <a href="http:/connotea.org">Connotea</a>. This will let me try and work out some just what sorts of comparisons I want to make and how I'm going to make them. If I can sort some sort of methodology out, (and find some time somewhere) perhaps I'll work on this as a proper research project...:-)</p>
+
+<p><strong>URL structure</strong><br />
+Let's look at some examples, first:</p>
+
+<p><strong><em><a href="http://del.icio.us/help/navigation">del.icio.us</a> navigation:</em></strong><br />
+http://del.icio.us/{rss/}[tag/ OR <em>username</em>/ OR url/][<em>tag</em> {+<em>tag</em>} ? <em>URL</em>]<br />
+where [] denotes a <em>required</em> element and {} denotes an <em>optional</em> element. <em>Emphasized</em> elements are placeholders. <em>?</em> denotes context sensitive.</p>
+
+<p>For example, <ul><li>Reference by <em>user</em>: <a href="http://del.icio.us/psychemedia">del.icio.us/psychemedia/</a></li><li>Reference by <em>tag</em>: <a href="http://del.icio.us/tag/socialbookmarking">del.icio.us/tag/socialbookmarking</li><li>Reference by <em>user</em> <strong>and</strong> <em>tag</em>: <a href="http://del.icio.us/psychemedia/socialbookmarking">del.icio.us/psychemedia/socialbookmarking</a></li><li>Reference by two tags: <a href="http://del.icio.us/tag/socialbookmarking+folksonomy">del.icio.us/tag/socialbookmarking+folksonomy</a></li><li>Reference by URL: <a href="http://del.icio.us/url/7e16126ee5fe4f320852b731206c2eac">del.icio.us/url/7e16126ee5fe4f320852b731206c2eac</a></li></ul></p>
+
+<p><strong><em><a href="http://connotea.org">Connotea</a> navigation:</em></strong><br />
+http://www.connotea/{rss/}[tag/ OR name/ OR uri/][<em>tag</em>{+<em>tag</em>} ? <em>username</em> ? <em>URI</em>]{?tag/<em>tag</em>{+<em>tag</em>}}</p>
+
+<p>For example, <ul><li>Reference by <em>user</em>: <a href="http://www.connotea.org/user/ben">www.connotea.org/user/ben</a></li><li>Reference by <em>tag</em>: <a org/tag/socialbookmarking</li><li>Reference by user <strong>and</strong> tag: <a href="http://www.connotea.org/user/ben/tag/connotea">www.connotea.org/user/ben/tag/connotea</a></li><li>Reference by two tags: <a href="http://www.connotea.org/">www.connotea.org/tag/socialbookmarking+folksonomy</a></li><li>Reference by URI:<a href="http://www.connotea.org/uri/7e16126ee5fe4f320852b731206c2eac">www.connotea.org/uri/7e16126ee5fe4f320852b731206c2eac</a></li></ul></p>
+
+<p><strong>Comparison of del.icio.us and Connotea URLs></strong></p>
+
+<p>Reference by <em>tag</em> is handled the same way in both services: $DOMAIN$/tag/<em>tag</em>{+<em>tag</em>}</p>
+
+<p>Reference by <em>user</em> is handled differently: del.icio.us goes straight to the username ($DOMAIN$/<em>username</em>) whereas Connotea interposes a <em>user</em> path element ($DOMAIN$/user/<em>username</em>).</p>
+
+<p>Reference by URI/URL differs in the pathname only ($DOMAIN$/url/ in del.icio.us, $DOMAIN$/uri in Connotea).</p>
+
+<p>What was interesting - at least for the single URI/URL bookmark comparison I made - was the the encoding of the same page (<a href="http://blogs.open.ac.uk/Maths/ajh59/005136.html">Seven Ways of Using Social Bookmarking - http://blogs.open.ac.uk/Maths/ajh59/005136.html</a>)  resulted in the same encoded reference (7e16126ee5fe4f320852b731206c2eac).</p>
+
+<p>Reference by use <em>and</em> tag is in my opinion better managed in del.icio.us ($DOMAIN$/<em>username</em>/<em>tag</em>) than Connotea ($DOMAIN$/user/<em>username</em>/tag/<em>tag</em>).</p>
+
+<p>The differences between URL naming schemes is minor, and if consistency were really necessary could be addressed using <a href="http://www.yourhtmlsource.com/sitemanagement/urlrewriting.html">URL rewrites</a>.</p>
+
+<p>Finally, both services provide an RSS feed by the simple insertion of an <em>rss</em> path element immediately after the domain ($DOMAIN$/rss/<em>etc.</em>).</p>
+
+<p>Which leads nicely into the next comparison - how alike are the RSS feeds from del.icio.us and Connotea?</p>
+
+<p><strong>RSS feed structure</strong></p>
+
+<p>First, a snippet from del.icio.us:<br />
+<tt>&lt;item rdf:about="http://arxiv.org/ftp/cs/papers/0508/0508082.pdf"&gt;<br />
+&lt;title>The Structure of Collaborative Tagging Systems&lt;/title&gt;<br />
+&lt;link>http://arxiv.org/ftp/cs/papers/0508/0508082.pdf&lt;/link&gt;<br />
+&lt;dc:creator>psychemedia&lt;/dc:creator&gt;<br />
+&lt;dc:date>2005-11-25T16:21:39Z&lt;/dc:date&gt;<br />
+&lt;dc:subject&gt;bookmarking dynamics social&lt;/dc:subject&gt;<br />
+&lt;taxo:topics&gt;<br />
+  &lt;rdf:Bag&gt;<br />
+    &lt;rdf:li resource="http://del.icio.us/tag/dynamics" /&gt;<br />
+    &lt;rdf:li resource="http://del.icio.us/tag/social" &gt;<br />
+    &lt;rdf:li resource="http://del.icio.us/tag/bookmarking" /&gt;<br />
+  &lt;/rdf:Bag&gt;<br />
+&lt;/taxo:&gt;<br />
+&lt;/item&gt;</tt></p>
+
+<p>And one from Connotea:<br />
+<tt>&lt;item rdf:about="http://www.connotea.org/user/tonyh/uri/a59e3122ddb15bd4c1f64bee65b78662"&gt;<br />
+ &lt;title&gt;The Structure of Collaborative Tagging Systems&lt;/title&gt;<br />
+ &lt;link&gt;http://www.connotea.org/user/tonyh/uri/a59e3122ddb15bd4c1f64bee65b78662&lt;/link&gt;<br />
+ &lt;description&gt;Posted by tonyh to bookmarking dynamics Social on Fri Nov 25 2005&lt;/description&gt;<br />
+ &lt;dc:creator>tonyh&lt;/dc:creator&gt;<br />
+ &lt;dc:date>2005-11-25T16:21:05Z&lt;/dc:date&gt;<br />
+ &lt;dc:subject>bookmarking&lt;/dc:subject&gt;<br />
+ &lt;dc:subject>dynamics&lt;/dc:subject&gt;<br />
+ &lt;dc:subject>Social&lt;/dc:subject&gt;<br />
+ &lt;slash:comments>0&lt;/slash:comments&gt;<br />
+ ...<br />
+ &lt;connotea:uri&gt;<br />
+  &lt;dcterms:URI rdf:about="http://arxiv.org/ftp/cs/papers/0508/0508082.pdf"&gt;<br />
+   &lt;dc:title&gt;0508082.pdf (application/pdf Object)&lt;/dc:title&gt;<br />
+  &lt;/dcterms:URI&gt;<br />
+ &lt;/connotea:uri&gt;<br />
+ &lt;annotate:reference rdf:resource="http://www.connotea.org/comments/uri/a59e3122ddb15bd4c1f64bee65b78662" /&gt;<br />
+&lt;/item&gt;</tt></p>
+
+<p>Let's go through them a line at a time:</p>
+
+<p>D: &lt;item rdf:about="http://arxiv.org/ftp/cs/papers/0508/0508082.pdf"&gt;<br />
+C: &lt;item rdf:about="http://www.connotea.org/user/tonyh/uri/a59e3122ddb15bd4c1f64bee65b78662"&gt;<br />
+del.icio.us makes the post about the actual resource, Connotea makes it about the Connotea reference to the resource.</p>
+
+<p>D: &lt;title&gt;The Structure of Collaborative Tagging Systems&lt;/title&gt;<br />
+C: &lt;title&gt;The Structure of Collaborative Tagging Systems&lt;/&gt;<br />
+Coherence :-)</p>
+
+<p>D: &lt;link&gt;http://arxiv.org/ftp/cs/papers/0508/0508082.pdf&lt;/link&gt;<br />
+C: &lt;link&gt;http://www.connotea.org/user/tonyh/uri/a59e3122ddb15bd4c1f64bee65b78662&lt;/link&gt;<br />
+Again - a difference in what we are actually referring to...</p>
+
+<p>Connotea then has a description tag that contains the same info as the following Dublin Core tags:<br />
+C:  &lt;description&gt;Posted by tonyh to bookmarking dynamics Social on Fri Nov 25 &lt;/&gt;</p>
+
+<p><em>D: &lt;dc:creator&gt;psychemedia&lt;/dc:creator&gt;<br />
+D: &lt;dc:date&gt;2005-11-25T16:21:39Z&lt;/dc:date&gt;<br />
+D: &lt;dc:subject&gt;bookmarking dynamics social&lt;/dc:subject&gt;<br />
+C: &lt;dc:creator&gt;tonyh&lt;/dc:creator&gt;<br />
+C: &lt;dc:&gt;2005-11-25T16:21:05Z&lt;/dc:date&gt;<br />
+C: &lt;dc:subject&gt;bookmarking&lt;/dc:subject&gt;<br />
+C: &lt;dc:subject&gt;dynamics&lt;/dc:subject&gt;<br />
+C: &lt;dc:subject&gt;Social&lt;/dc:subject&gt;</em><br />
+The main difference here is in the way the subject tag is used. del.icio.us space separates the tags in a single subject line, whereas Connotea uses a separate subject line for each, which it is absolutely allowed to do. The Connotea approach is a little cleaner, I think.</p>
+
+<p>D:&lt;taxo:topics&gt;<br />
+D:  &lt;rdf:Bag&gt;<br />
+D:   &lt;rdf:li resource="http://del.icio.us/tag/dynamics" /&gt;<br />
+D:   &lt;rdf:li resource="http://del.icio.us/tag/social" &gt;<br />
+D:   &lt;rdf:li resource="http://del.icio.us/tag/bookmarking" /&gt;<br />
+D:  &lt;/rdf:Bag&gt;<br />
+D: &lt;/taxo:&gt;<br />
+Here, del.icio.us provides an alernative way of accessing the tags by exploiting the <a href="http://web.resource.org/rss/1.0/modules/taxonomy/">RSS Taxonomy namespace</a>.</p>
+
+<p>C: &lt;connotea:uri&gt;<br />
+C:  &lt;dcterms:URI rdf:about="http://arxiv.org/ftp/cs/papers/0508/0508082.pdf"&gt;<br />
+C:   &lt;dc:title&gt;0508082.pdf (application/pdf Object)&lt;/dc:title&gt;<br />
+C:  &lt;/dcterms:URI&gt;<br />
+C: &lt;/connotea:uri&gt;<br />
+In contrast, Connotea offers an additional alternative way of accessing the URI of the resource, using the <a href="http://www.connotea.org/2005/01/schema#"">connotea namespace</a> (although bear in mind that the &lt;link&gt; reference in Connotea was to the Connotea reference of that URI). The Connotea RDF feed also references the Taxonomy namespace, although it doesn't use it.</p>
+
+<p>The use of the Dublin Core <em>subject</em> field is increasingly accepted as the correct place to record tag information, although as the above demonstrates it is still possibly to use this tag inconsistently. The Connotea approach does seem clearer, as it allows for more direct manipulation (using the DOM) of the user's tags.</p>
+
+<p>The other major difference is in the use of the &lt;link&gt; field. The del.icio.us approach - of referring directly to bookmarked URL, offers an immediate link to the resource. The COnnotea approach, however, uses a level of indirection through the Connotea reference for that resource, which allows for the bookarking system to track click-thrus more comprehensively.</p>
+
+<p>The indirection affroded by the Connotea approach also allows for alternative references for the resource to be used in an invisible way (e.g. where a resource may be ssotgred in several different locations, there is a many-one relationship between locations the resource can be found and the resource itedlef. The Connotea approach, of encouring users to go via the Connotea representation of the resource location, potentially accommodates this many-one mapping by masking the actuial address from which the resource is served.)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 25, 2005 03:50 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Hi Tony,</p>
+
+<p>Regarding URL structure: this is one case where you should not use del.icio.us as an example of good URL structure.  Joshua himself once admitted he made some mistakes with it.  If you think about that URL structure and think ahead a little bit, you'll quickly see the problem.  I didn't examine Connotea's URL structure, but here is what Simpy supports: http://blog.simpy.com/blojsom/blog/2005/11/04/Sexy-URIs.html (sorry, couldn't get the blog sw to hyperlink this).</p>
+<span class="comments-post">Posted by: <a href="http://www.simpy.com/">Otis Gospodnetic</a> at November 29, 2005 04:29 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005332.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

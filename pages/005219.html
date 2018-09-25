@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: MyOpenLibrary 2.0</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005136.html" title="Seven Ways of Using Social Bookmarking" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005227.html" title="More OU Library XML Feeds" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005136.html">&laquo; Seven Ways of Using Social Bookmarking</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005227.html">More OU Library XML Feeds &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 14, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">MyOpenLibrary 2.0</h3>
+
+<p>There have been a few posts recently (such as <a title="dave's blog: Creating a Personalized "My Library" page with no sweat" href="http://daweed.blogspot.com/2005/11/creating-personalized-my-library-page.html">dave's blog: Creating a Personalized "My Library" page with no sweat</a>) commenting on how <a href="http://www.netvibes.com"> Netvibes</a> can be used as a MyLibrary style portal.</p>
+
+<p>I've been compiling a 'report' on this in my stolen time, and while it's not finished yet I think it may be appropriate to add a few thoughts to the conversation.</p>
+
+<p><strong>MyOpenLibrary</strong></p>
+
+<p>With the growing number of electronic resources available to OU students, several approaches have been used across OU systems to provide students with semi-customisable links pages, such as the <a href="http://student.open.ac.uk/>student homepage</a> which leads to a personalised page when the user passes through the common authentication service, or the OU Library <a href="http://myopenlibrary.open.ac.uk/">MyOpenLibrary </a> service.</p>
+
+<p>The <a href="http://myopenlibrary.open.ac.uk/">MyOpenLibrary</a> service offers a significant degree of personalisation via a customisable page that allows users to link to electronic resources on particular themes:  E-journals, <a href="http://routes.open.ac.uk/">ROUTES</a> Links, a Reference Shelf, E-books, Help and Support, Open University Links, Personal Links.</p>
+
+<p><img alt="myOpenLibrary.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/myOpenLibrary.jpg" width="490" height="410" border="0" /></p>
+
+<p>(The styling is wayward because the page was designed to take into account the quirks of Internet Explorer, rather than conform to common standards, as used in browsers such as Firefox (shown here) or Opera.)</p>
+
+<p>All the panels offer a link to an about page, and a user customisation page that allows the user to add links to a panel from a set of pre-selected links relevant to the theme of the panel.</p>
+
+<p><em>Search Options</em></p>
+
+<p>In addition, users are able to select a search engine from among a predefined set. For my account, a choice of three search engines were offered as a default: Internet (Google); OU Library catalogue (all items); OU Library catalogue (electronic items).</p>
+
+<p>From the customisation link, users can choose to add additional search engines to their list of options (though not <a href="http://rollyo.com">Rollyo</a> as yet. Rather surprisingly, (for what is presumably in my case a ‘Technology’ default profile), the <a href="http://www.eevl.ac.uk">EEVL</a> search engine was not offered as an option.</p>
+
+<p>The benefits of offering the search option from MyOpenLibrary are arguable for students who typically access the internet from the same browser on the same computer, compared for example with the ability to customise the search engines used from the browser toolbar (or from bespoke, user installed toolbars). Not only must the user open their MyOpenLibrary page in the browser, they must also log in through the OU authentication system to do so.</p>
+
+<p><em>Topic Panels</em></p>
+
+<p>The topic panels provided on the MyOpenLibrary page categorise links according to themes to help the user as they browse the page find the single link they need quickly on a page filled with links. The separate configurability of each panel allows the user willing to invest time in this customisation process to tune the MyOpenLibrary page to suit their own needs. If an expected link is not available as a default in the panel, the customise link takes the user to a page that contains additional related links.</p>
+
+<p>One possible problem with this approach is the stranglehold that the MyOpenLibrary administrators on deciding what links are allowed in what topic panel. Whilst there is obvious value in collating good quality links on individual topics, there is also a lack of flexibility:<ol><li>with respect to adding new links;</li><li>with respect to identifying new topics.</li></ol></p>
+
+<p>When I rediscovered the MyOpenLibrary page (having not visited it for several weeks), I was immediately struck how it would be possible to use the structure of the page as a viewer for tagged bookmarks with each panel displaying links associated with a particular tag or combination of tags.</p>
+
+<p>This approach also suggests how ‘userConfig’ tags might be used to help display links - or not - from a social bookmarking service such as <a href="http://www.connotea.org">Connotea</a> or <a href="http://del.icio.us">del.icio.us</a> marked with a particular tag.</p>
+
+<p>Most social bookmarking services provide an RSS feed of links corresponding to one or more particular users, tags, or any combination thereof. For example:</p>
+
+<p><script type="text/javascript" src="http://del.icio.us/feeds/js/psychemedia/livelinks?title=my%20del.icio.us;icon"></script><br />
+<noscript><a href="http://del.icio.us/psychemedia/livelinks">my del.icio.us</a></noscript></p>
+
+<p>(The above livelinks could easily have been styled in a MyOpenLibrary like table - just no time at the moment!)</p>
+
+<p>Now, imagine I have three bookmarks tagged as ‘library’ but only want to display two of them (although I do want them all bookmarked. The setting of user preferences as to which of a set of relevant links are displayed now becomes as simple as adding a ‘MOL:display’ tag, for example, and then displaying links tagged as <em>library+MOL:display</em></p>
+
+<p>If the user does not want a link they have tagged as ‘library’ displayed, then all they have to do is remove the MOL:display tag. Note that this could be done seamlessly via a bookmarklet (‘remove’ this link, for example).</p>
+
+<p>Just as a list of relevant links for a topic were made available via the customisation pages, so a similar approach may be made in a social bookmarking scheme, where for example links associated with a particular tag are listed along with a bookmarklet to add the link to the student’s bookmark list and set the MOL:display tag.</p>
+
+<p>In a social bookmarking system, note that related links may be displayed in panels that identify the provenance of a link – for example, whether it was suggested by the library,  the course team for a particular course, from ROUTEs, one or more students, or academics, and so on. So by introducing a general bookmarking system – and in particular a social bookmarking system – we are able to go from MyOpenLibrary to OUrOpenLibrary…</p>
+
+<p>It is also possible to identify which tags should be used as the basis for display panels. For example, imagine bookmarking the RSS feed for a particular tag (or tag combination) for a particular user and tagging it as MOL:displayPanel. A server script based on the following pseudo-code could then render the appropriate panels:</p>
+
+<p>For each tag feed tagged with MOL:displayPanel:<br />
+ - Create Panel<br />
+ - Add Panel Title<br />
+ - For each link in tag feed<br />
+ - - Render Link</p>
+
+<p><strong>‘Free’ Customisable Links Pages on the Web.</strong></p>
+
+<p>One extreme form of customisable links ‘page’ corresponds to a users personal page within a social bookmarking system. There are many examples of social bookmarking services available, but I shall concentrate on del.icio.us as it is, at the time of writing, one of the most popular – and well used – services. </p>
+
+<p>The simple styling of the del.icio.us interface, which has been copied in part by several other social bookmarking schemes, provides a straightforward list of bookmarks, ordered by time, with the most recent bookmark at the top of the first page. A tag selection panel allows the user to view the links associated with a particular tag, or combination of tags.</p>
+
+<p>As it stands, the del.icio.us interface does not allow the user to configure a number of panels, cf. the MyOpenLibrary interface, with each panel containing links for a corresponding tag, for example. A MyOpenLibrary style interface could be implemented using scripts that pull the RSS feed for particular (combinations of) tags into distinct panels using an RSS to javascript service, or server based RSS display script, to give a similar layout to the MyOpenLibrary interface. However, as it stands, the multiple, almost concurrent requests that would be made to del.icio.us whenever the page is loaded would (I think) contravene the del.icio.us user API guildelines (too many requests in a short period of time) and consequently some of the requests may be denied by del.icio.us.</p>
+
+<p><strong>Using Netvibes as a public MyOpenLibrary Equivalent</strong></p>
+
+<p>A recently launched service – <a href="http://www.netvibes.com">Netvibes</a> – allows users to configure any number of user created panels with any number of links. If the user always accesses the page from the same browser (e.g. always from the same machine ??or from a portable browser on a USB memory stick, for example) then the user’s customised page is displayed whenever the user visits the site. More general access to the user’s customised page is guaranteed by creating an account on the system and customising the page when logged in.</p>
+
+<p><img alt="netvibes.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/netvibes.jpg" width="472" height="422" border="0" /></p>
+
+<p>Recent customisable, personal page services announced by <a href="http://www.google.com/ig">Google</a> and <a href="http:/live.com">Microsoft</a> can also be used to display links provided as RSS feeds:</p>
+
+<p><img alt="google_ig.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/google_ig.jpg" width="472" height="422" border="0" /></p>
+
+<p><strong>A Way Forward for the OU?</strong></p>
+
+<p>When considering the design of a links page, there are several factors that need to be taken into account:<br />
+<ul><li>Aesthetics/page design</li><br />
+<li>Degree of customisation</li><br />
+<li>Provision of ‘seed’ links</li><br />
+<li>Recommendations for additional customised links</li><br />
+</ul></p>
+
+<p>It is also worth considering the separation of link tables (that is, the collection of links displayed in a particular panel as a distinct set of links) and their presentation, particularly insofar as other systems might be used display any link table independently of the others.</p>
+
+<p>For example, one might imagine a MyOpenLibrary-like display acting as a link aggregator, with different panels containing links relevant to different courses. The course related link tables that provide content for each of the display panels might also be used to feed a single panel in a course specific page.</p>
+
+<p>[Extracted from notes for a 'proper' report (in preparation)...]</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 14, 2005 10:54 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005219.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

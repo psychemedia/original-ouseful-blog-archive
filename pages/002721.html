@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Managing Bookmarks</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/002710.html" title="Open Content Issues" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/002742.html" title="Online Courses - ePhemeral or Persistent?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/002710.html">&laquo; Open Content Issues</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/002742.html">Online Courses - ePhemeral or Persistent? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 02, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Managing Bookmarks</h3>
+
+<p>With an increasing number of OU courses referring to websites outside the OU, and increasingly information literate students who are bookmarking websites related to a course but discovered by themselves, bookmark management is potentially one area of value added service that an eOU could be supporting.</p>
+
+<p>Another collection of bookmarks is maintained by the OU Library Resources for Open University TEachers and Students (<a href="http://routes.open.ac.uk/">ROUTES</a>) service, which <em>"provid[es] access to selected quality-assessed Internet resources for Open University courses. Resources are selected by course teams and the Library's Information Specialists."</em></p>
+
+<p>Just how students are expected to use links to external websites in their study is still open to debate. Many links are embedded in the body of course material, and not necessarily repeated in a bibliography. Students may or may not be online when they come across the links, for example, if they are working offline from a course CD-ROM or captured version of the website, or indeed from printed versions of electronic course materials. I discussed some of these issues, and more, some time ago in the <a href="http://robofesta.open.ac.uk/microinfo/">Web Bookmarks</a> section of my now deprecated <em>Micro- and Appropriate Format Information Services</em> webpage.</p>
+
+<p>One way of providing links to students is to supply them with an additional bookmark folder that they can inport into their own browser. As OU course materials will be increasingly written in a structured format using XML, extraction of external links from the body of course materials can be readily automated through XSL transformations. Bookmark files customised for student's preferred browsers can easily be achieved, providing students with an ordered set of bookmarks orgainsed in folders relating to Study Guide chapters for example. Having a list of external links is also useful in website management terms, as it simplifies the process of link liveness checking.</p>
+
+<p>For enlightened students using the <a href="http://www.mozilla.org/products/firefox/">Firefox browser</a>, <a href="http://www.mozilla.org/products/firefox/live-bookmarks.html">Live Bookmarks</a> can directly feed bookmarks to the student's browser via an RSS feed.</p>
+
+<p>If we accept that link management is likely to become a significant issue for an increasingly online University, then now is perhaps an appropriate time to consider ways of managing this area. The risie in popularity of <a href="http://www.dlib.org/dlib/april05/hammond/04hammond.html ">social bookmarking</a> suggests one possible way forward.</p>
+
+<p>One of the most popular social bookmarking tools is <a href="http://del.icio.us/">del.icio.us</a>. This web-based tool allows individuals to save personal bookmarks and associate them with one of more <a href="http://en.wikipedia.org/wiki/Tags">tags</a> that are meaningful to the user. Bookmarks from other users sharing the same tag can be readily explored, and the number of other users who have bookmarked the same site can also be inspected (useful when rating the quality of a site).</p>
+
+<p>Course teams could easily provide an <em>official</em> list of bookmarks for a particular course, tageed with the course code (such as <a href="http://del.icio.us/psychemedia/t184">http://del.icio.us/psychemedia/t184</a>), and perhaps the study guide chapter, as well as with more content directed labels.</p>
+
+<p>Students could also use the tool to bookmark sites they have found. This would potentially provide a useful form of research for course teams considering updates to course material, for example, or interested into what sorts of sites the students are particulalry looking for to supplement their studies. For example, if a significant number of students bookmarked a particular tutorial site, it might suggest to the CT that the exposition of a particular topic was lacking in some respect. Augmenting the tool with a <em>Rate this link</em> feature would also provide useful feedback to the CT, particularly with respect to the perceived usefulness or relevance of links provided by the CT in the formal content of the course to the students.</p>
+
+<p>At the current time, del.icio.us is a free service supported by a single individual using closed source code. As such, it is probably not appropriate for use a an integral part of an OU course. Building a social bookmarking environemnt from scratch is not too major a challenge and as such an OU social bookmarking facility could be constructed without too much effort. However, it's always easier to start from soemthing than nothing, and the <a title="Code for de.lirio.us" href="http://de.lirio.us/code/">de.lirio.us</a> open source del.icio.us clone could be one such starting point.</p>
+
+<p><strong>Update (20/5/05):</strong><br />
+I have started adding week-by-week bookmarks to del.icio.us for T184 (<a href="http://del.icio.us/psychemedia/t184-lesson1">Chapter 1</a>, <a href="http://del.icio.us/psychemedia/t184-lesson2">Chapter 2</a>). More to follow...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May  2, 2005 01:25 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/002721.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

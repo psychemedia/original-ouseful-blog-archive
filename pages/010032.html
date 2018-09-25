@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: More OPML Generators (old ones, restated...!)</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010010.html" title="Auto-filtered deliSearch Pipe" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010044.html" title="deliRoll - Scripting Grazr with Javascript" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010010.html">&laquo; Auto-filtered deliSearch Pipe</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010044.html">deliRoll - Scripting Grazr with Javascript &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 19, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">More OPML Generators (old ones, restated...!)</h3>
+
+<p>Regular readers probably know from all sorts of sources the Grazr folks are now hosting OPML files. So here's a couple of blasts from the past that may be of some use if you're new to OPML and want to try out some of your own feeds.</p>
+
+<p>(You may also find them useful if you're a feed junky!)</p>
+
+<p><em>Social bookmarking feed roller</em>: enter a list of usernames, a list of tags, select from a list of social bookmarking services and generate an online hosted OPML file that points to corresponding feeds from them all... (that is, for each service, feeds will be generated for each combination of the supplied usernames and tags): <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPMLFeedBlender.html">Social Bookmarking Feed Roller</a>.</p>
+
+<p><em>News feed roller</em>: select one or more internet news providers (Yahoo, Google, MSN), enter a list of search terms and then generate an OPML feed that points to each news service with each search term: <a href="http://blogs.open.ac.uk/Maths/ajh59/newsFeedsOPMLFeedBlenderC.html"> News Feed Roller</a></p>
+
+<p>As well as generating links to online OPML feeds, you can use both services to construct more complex OPML files containing OPML folders that contain feeds generated for different combinations of social bookmarking system/user/tag or news service/search term combinations.</p>
+
+<p>I've also got a set of < ahref="http://blogs.open.ac.uk/Maths/ajh59/009993.html">GrazrScript generators</a> that will generate Grazr forms to search over various services (such as Amazon and OpenLearn) and that integrate with various Yahoo pipes.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 19, 2007 09:25 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010032.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Thanks for this Tony.  I fell bad I haven't commented more or given more linkage, as I am following your recent experiments along these lines avidly.  I was just thinking about the need I had to revisit the whole OPML thing, in large part due to Stringle, etc...</p>
+
+<p>Hopefully more substantive comments soon.  But do please keep it up.  Your blog is replete with quark, strangeness and charm.</p>
+
+<p>FYI.. the comments field does not appear on my machine (Intel Mac running Firefox) when I go directly to an entry from my RSS reader.  I got this field by going to your main page.</p>
+<span class="comments-post">Posted by: <a href="http://weblogs.elearning.ubc.ca/brian">Brian</a> at March 19, 2007 09:22 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="More OPML Generators (old ones, restated...!)";
+ z_post_category="RSS";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

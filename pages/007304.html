@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Carousel Widget: Similar Books</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007303.html" title="OU New Library Books Bookshelf" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007305.html" title="In Need of Standardisation: Library Feeds (New Books)" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007303.html">&laquo; OU New Library Books Bookshelf</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007305.html">In Need of Standardisation: Library Feeds (New Books) &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">August 06, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Carousel Widget: Similar Books</h3>
+
+<p>As part of another project, I've had a need for a little routine that will populate a <a href="http://billwscott.com/carousel/">carousel widget</a> with 'related books' (as defined by Amazon!) given a particular ISBN.</p>
+
+<p>The routine can be found at <a href="http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php">http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php</a>.</p>
+
+<p>It come with a couple of arguments (to date):<br />
+<ul><li><em>isbn</em> - the ISBN of the book you want to find related items for;</li><br />
+<li><em>size</em> - the "width" (i.e. number of book covers displayed at any one time) in the carousel.</li></ul></p>
+
+<p>For example, <a href="http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php?isbn=0131401602&size=3">http://blogs.open.ac.uk/Maths/ajh59/similarCarousel.php?isbn=0131401602&size=3</a> gives:</p>
+
+<p><img alt="relatedCarousel.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/relatedCarousel.jpg" width="338" height="154" border="0" /></p>
+
+<p>If you do make use of this widget, and you have your own Amazon affiliate/associate ID you want to use with it, I'd appreciate it if you'd add a little function that makes 1 in 10  at random referrals using the ID provided in the script in a <em>click sharing</em> sort of way.</p>
+
+<p>This is something I will add anyway in the next week or two if I get a chance (I'll also factor in the ID of Bill Scott - author of the carousel widget  - if he has one and I can get hold of it...). But if I don't get a chance to make this hack, and you can figure out how to <em>make it so</em> yourself, please do so... (It's late now and I need to go to bed...)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at August  6, 2006 01:57 AM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007304.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Good stuff but have you ever managed to make any money out of Amazon affiliates?! I think I grossed about 20 pence in a year on sites with plenty of visitors</p>
+<span class="comments-post">Posted by: <a href="http://www.cornwalls.co.uk/">Chris Cornwall</a> at March 24, 2007 09:08 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="Carousel Widget: Similar Books";
+ z_post_category="Web2.0";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

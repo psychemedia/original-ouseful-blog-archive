@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Talks Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+
+<h2 class="date">July 27, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007294"></a>
+<h3 class="title">Jeff Barr - Amazon Web Service Evangelist, KMi Podium</h3>
+
+<p>[Scrappy notes from a presentation earlier this week by Jeff Barr to the Open University on Amazon webservices]</p>
+
+<p>(Amazon now has 57 million active customers worldwide.)</p>
+
+<p>AWS started to become reaility 2002.</p>
+
+<p>Amazon is a technology consumer (25 TB of business/historical data, 21 fufillment centres worldwide) as well as a technology provider - to Amazon Associates (1, 080, 000 active sellers) as well as s/w developers (160, 000 signed up for ws).</p>
+
+<p><strong>Programmable website</strong></p>
+
+<p>- support for industry standards<br />
+- provide remote access to data and functionality via apis<br />
+- decouple data and presentation<br />
+- means to leverage technology investment</p>
+
+<p><a href="http://aws.amazon.com/">AWS</a>  -</p>
+
+<p>- building block web services (storage, queuing)<br />
+- ecommerce capability<br />
+- new business models<br />
+- customer created content</p>
+
+<p>8 public web services<br />
+- Mechanical Turk<br />
+- AWIS - alexa web info service - crawl every 2 month, data acquired via Alexa toolbar (300TB of data), 3 types of crawl data: current, historic, new crawl<br />
+- AHP - amazon historical pricing - e.g. mine historical data to idenitfy seasonal trends<br />
+- SQS - simple queue service - FIFO<br />
+- Alexa top sites - top sites by alexa traffic rank<br />
+- AWSP - alexa web search platform - roll your own search engine<br />
+- ECS - ecommerce service (includes similarity data (?) - people who bought this also bought that)<br />
+- S3 - simple storage system</p>
+
+<p>[No mention of <a href="http://www.awszone.com/">AWSZone Scratchpads</a>?]</p>
+
+<p>Each web service seen as a separate business; developers are an important new  customer segment for Amazon; some services for free (because business comes back to Amazon); some services are paid for (e.g. S3);</p>
+
+<p>Business model associated with each web service</p>
+
+<p><strong>3 business models</strong></p>
+
+<p>1) free access, 1 call per second, traffic back to amazon; e.g. ECS; data in exchange for sales; developers can also earn money e.g. through amazon associate program; alse need business model for developer<br />
+2)  monthly fee - e.g. historical pricing service<br />
+3) usage/resource based charging model e.g. Amazon S3, alexa services, SQS, Mechanical Turk<br />
+- can pay for this using personal amazon account.</p>
+
+<p><strong>ECS</strong></p>
+
+<p>Now in 4th major release</p>
+
+<p>Complete access to amazon product catalogue<br />
+Reviews<br />
+Shopping cart - checkout on amazon property, tho' cart can be filled on any site<br />
+wishlists</p>
+
+<p><a href="http://del.icio.us/psychemedia/barr@kmi+ecs">examples....</a></p>
+
+<p>e.g. <em>click sharing</em>  [I like that:-)] (innovative business model) as seen at <a href="http://www.associate-o-matic.com/">http://www.associate-o-matic.com/</a>  - Amazon store builder in which developer takes commission from 1 in 10 transactions</p>
+
+<p>Specialised sites tend to be vertical in nature, more focussed e.g. in terms of market segment.</p>
+
+<p><strong>S3</strong><br />
+Pay as you go/pay only for what you use<br />
+15 cents per gigabyte month<br />
+20 cents per G to access data<br />
+Private and public storage<br />
+scalable, reliable, cost-effective, simple for developer<br />
+800M objects stored to date<br />
+Throw any amount of data at it, and that's fine :-)<br />
+Web scaleable, automatic replication<br />
+4 9s reliable<br />
+Same storage facility is used for Amazon product catalogue<br />
+Amazon don't peek inside stored data - user encryption okay<br />
+Anonymous storage not possible - user must register to be able to use service (so they can be billed...)<br />
+Linear cost scaling (cf. having to over-invest in your own servers against predicted grwoth of your web business)<br />
+Data - 1 byte to 5GB<br />
+REST or soap api; unique URL for each object in s3</p>
+
+<p><a href="http://www.mturk.com">Amazon Mechanical Turk</a><br />
+Tasks that are "easy for a human, tough for a computer"<br />
+"people on demand"<br />
+Make the most of latent labour workforce.<br />
+Looks like a machine, but actually relies on human information processing inside ("human inside", "person inside") - artificial artificial intelligence; human in the loop; HITs - Human intelligence tasks<br />
+Developer can put a qualification step in the workflow e.g. to test the worker is qualified to performn the task.<br />
+May get the same job done by several people, then if 2 from 3, 3 from 5 etc give the same answer you have some sort of reliability guarantee over quality of the work<br />
+Reputation is tracked - number of HITs applied for and number of hits accepted on worker side; number of hits completed and number of HITs accepted on job allocation side</p>
+
+<p>Qn: 1-click as paypal alternative? not as far as aware</p>
+
+<p>REST vs SOAP  - as of a year ago, about 80% REST , 20% SOAP</p>
+
+<p>I meant to ask: "Amazon ECS in SL?" but didn't get a chance. However, it seems <a href="http://aws.typepad.com/aws/2006/07/life2life_ecspo.html">someone has just hacked the search part...</a></p>
+
+<p>Extensions - e.g. <a href="http://bookburro.org/">book burro</a> on Jeff's Amazon catalogue pages...<br />
+Okay for browser extensions like book burro if Amazon stands a chance of getting some traffic back as a result.<br />
+[??is this the same for using webservices? e.g book details completion on OU library catalogue?  - maybe put a link to 'buy this book on Amazon.]</p>
+
+<p>All in all, an interesting overview (particulalry some of the numbers and the three business models for ws decomposed) and good to see someone I read via the <a href="http://aws.typepad.com/">Amazon web services blog</a> in the flesh.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007294.html">10:59 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7294" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

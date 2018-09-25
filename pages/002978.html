@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OU Firefox Search Plugins </title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/002885.html" title="Who&#39;s Saying What About the OU?" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/003008.html" title="Scoping an OU Library Firefox Toolbar" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/002885.html">&laquo; Who's Saying What About the OU?</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/003008.html">Scoping an OU Library Firefox Toolbar &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 20, 2005</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OU Firefox Search Plugins </h3>
+
+<p><script type="text/javascript" src="http://blogs.open.ac.uk/Maths/ajh59/searchplugin.js"></script></p>
+
+<p>Some people, it seems, just don't get Firefox... Presumably they didn't get the idea of Mosaic when it came out either, and steadfastly refused to use any search client other than Veronica. I can just imagine them arguing instead that  <a href="http://www-personal.si.umich.edu/~calz/gopherpaper.htm">gopher</a> would never be replaced by fly-by-night protocols such as <em>http</em>, for example...</p>
+
+<p>Anyway...one of the reasons <em>I</em> like Firefox is that it allows me to muck around with the browser, as well as the web pages. As soon as I get my head round writing XUL plugins, I'll have a go at an OU Firefox toolbar... But that'll take a bit of learning time, I think, so here's something simple to start with - a couple of plugins to the Firefox search tool.</p>
+
+<p>The Firefox search tool provides a text box that allows you to fire off a query to your search engine of choice. The default is probably Google:</p>
+
+<p><img src="http://mycroft.mozdev.org/images/fbshot04.png" alt="Firefox search tool" /></p>
+
+<p>You'll also notice that you can add alternative search engines as the focus of your search.  The <a href="http://mycroft.mozdev.org/">Mycroft</a> project has dozens of examples (though not the OU - yet ;-)</p>
+
+<p>The <em>Mycroft</em> site also provides a wealth of information about getting started with writing Firefox search tool extensions, so I thought I'd knock a couple up that link into the OU search engine andf the OU LIbrary catalogue. And here they are:</p>
+
+<p>- <a href="javascript:addEngine('ousearch','png','Academic')">Open University Search Engine</a></p>
+
+<p>- <a href="javascript:addEngine('ouLibsearch','png','Academic')">Open University Library Catalogue</a></p>
+
+<p>If you follow either of the above links in Firefox, you should be offered the chance to add the corresponding search engine to the list...  However, the plugin may not appear until you shut Firefox dwon and then restart it...</p>
+
+<p>Next stop - an OU toolbar (or should that be <em>tOUlbar</em>?! ;-)</p>
+
+<p><br />
+<strong>Update 20/5/05</strong><br />
+Another search plugin - <a href="javascript:addEngine('ouPublicKNsearch','png','Academic')">Open University Knowledge Network (Public Site)</a></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May 20, 2005 01:48 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/002978.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - DHTML Load (Bounded)</title>
+<script src="http://ouseful.ning.com/yui/yahoo.js"></script> 
+<script src="http://ouseful.ning.com/yui/event.js"></script> 
+<script src="http://ouseful.ning.com/yui/container_core.js"></script> 
+<script src="http://ouseful.ning.com/yui/connection.js"></script> 
+<script src="http://ouseful.ning.com/yui/dom.js"></script> 
+<script src="http://ouseful.ning.com/yui/animation.js"></script>
+
+<script src="http://ouseful.ning.com/yui/carousel.js"></script>
+
+<link href="http://ouseful.ning.com/yui/fonts.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/grids.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/sample.css" rel="stylesheet" type="text/css">
+<link href="http://ouseful.ning.com/yui/carousel.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.carousel-component .carousel-list li { 
+	margin:4px 4px 0px 4px;
+}
+
+.carousel-component .carousel-list li { 
+	width:81px; /*75 + 2 + 2 + 1 + 1 */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:2px solid #e2edfa;
+	outline:none;
+	-moz-outline:none; 
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 2px solid #87bf4e; 
+}
+
+.carousel-component .carousel-list li.active a { 
+	border:2px solid #708fc7; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}
+
+.carousel-component .carousel-list li strong { 
+	display:block; 
+}
+									
+#prev-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	left:5px; 
+}
+
+#next-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	right:5px; 
+}
+</style>
+<script type="text/javascript">
+
+// dummy data (images are randomly chosen from this array)
+
+var fmtItem = function(imgUrl, url, title) {
+
+  	var innerHTML = 
+  		'<a href="' + 
+  		url + 
+  		'"><img src="' + 
+  		imgUrl +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		title + 
+  		'</a>';
+  
+	return innerHTML;
+	
+}
+
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+
+	load(this, start, last);	
+}
+
+var loadNextItems = function(type, args) {	
+
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+}
+
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+}     
+
+var load = function(carousel, start, last) {
+
+	for(var i=start; i<=last; i++) {
+		carousel.addItem(i,fmtItem(bookInfoArray[i-1].bookCover,bookInfoArray[i-1].bookLink,bookInfoArray[i-1].bookTitle));
+	}
+}
+
+
+
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "http://ouseful.ning.com/yui/left-enabled.gif";		
+	} else {
+		leftImage.src = "http://ouseful.ning.com/yui/left-disabled.gif";	
+	}
+	
+}
+
+var handleNextButtonState = function(type, args) {
+
+//this.debugMsg("handleNextButtonState");
+	var enabling = args[0];
+	var rightImage = args[1];
+	if(enabling) {
+		rightImage.src = "http://ouseful.ning.com/yui/right-enabled.gif";	
+	} else {
+		rightImage.src = "http://ouseful.ning.com/yui/right-disabled.gif";
+	}
+	
+}
+
+var pageLoad = function(cSize) 
+{
+	var carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:    .8,
+			animationMethod:   YAHOO.util.Easing.easeBoth,
+			scrollInc:         3,
+			navMargin:         40,
+			size:              cSize,
+			loadInitHandler:   loadInitialItems,
+			prevElementID:     "prev-arrow",
+			nextElementID:     "next-arrow",
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+	
+}
+
+
+//the amazon bit from: www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html
+
+// AJH - need to swap these out for YUI equivalents
+// JSON ScriptBuilder Function and Prototype, from Jason Levitt of Yahoo!
+// code found here: http://devx.com/webdev/Article/30860/1954
+	function JSONscriptRequest(fullUrl) {
+	  this.fullUrl = fullUrl;
+	  this.noCacheIE = '&noCacheIE=' + (new Date()).getTime();
+	  this.headLoc = document.getElementsByTagName("head").item(0);
+	  this.scriptId = 'azScriptId' + JSONscriptRequest.scriptCounter++;
+	}
+	JSONscriptRequest.scriptCounter = 1;
+	JSONscriptRequest.prototype.buildScriptTag = function () {
+	  this.scriptObj = document.createElement("script");
+	  this.scriptObj.setAttribute("type", "text/javascript");
+	  this.scriptObj.setAttribute("src", this.fullUrl + this.noCacheIE);
+	  this.scriptObj.setAttribute("id", this.scriptId);
+	}
+	JSONscriptRequest.prototype.removeScriptTag = function () {
+	  this.headLoc.removeChild(this.scriptObj);
+	}
+	JSONscriptRequest.prototype.addScriptTag = function () {
+	  this.headLoc.appendChild(this.scriptObj);
+	}
+
+	var bookInfoArray=new Array();
+	function bookInfoItem(bookCover,bookLink,bookTitle){
+		this.bookCover=bookCover;
+		this.bookLink=bookLink;
+		this.bookTitle=bookTitle;
+	}
+	function addBookInfoItem(bookCover,bookLink,bookTitle){
+		bookInfoArray[bookInfoArray.length]=new bookInfoItem(bookCover,bookLink,bookTitle);
+	}
+
+// Callback function referenced by the JSON script, This teases the
+// JSON object out into DOM Nodes, and appends them to 'searchResults' DIV)
+	var amzJSONCallback = function(tmpData){
+		var upperLimit=tmpData.ItemSet.Item.length-1;
+		var count=0;
+
+		for(var i=0; i<upperLimit; i++){
+			var tmpItem = tmpData.ItemSet.Item[i]
+			if (tmpItem.imageURL!="") {
+				addBookInfoItem(tmpItem.imageURL,tmpItem.url,tmpItem.title);
+				count++;
+			}
+		}
+		if(count!=0){
+			pageLoad(count);
+		}
+
+	}
+
+//Make use of aws: webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium
+// Search function - creates, builds, and adds remote JSON script
+// to the page, which in turn calls amzJSONCallback
+	var amazonSearch = function(){
+			var request = 'http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium&Style=http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback';
+			aObj = new JSONscriptRequest(request);
+			aObj.buildScriptTag();
+			aObj.addScriptTag();
+	}
+
+	YAHOO.util.Event.addListener(window, 'load', amazonSearch);
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+
+   <div id="hd">
+		<h1>Carousel and Amazon2JSON demo</h1>
+   </div>
+<div id="bd">
+<p>An array of images is viewed sequentially. The images are cover art from the titles in my Amazon wishlist. The Carousel's size according ot the numbner of items in the Wishlist that have cover art.</p>
+<p>This demo draws on:</p>
+<ul>
+<li>Bill Scott's <a href="http://billwscott.com/carousel/">Carousel component</a>;</li>
+<li>Alan Taylor's (?) demo at <a href="http://www.kokogiak.com/default.asp">Kokogiak</a> about <a href="http://www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html">Consuming Amazon's Web API Directly with Javascript (via JSON and XSLT)</a>.</li>
+</ul>
+<p>I have tweaked the Amazon XSLT demo to use the Amazon UK webservice and pull down my <a href="http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium">wishlist</a>.
+This <a href="http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl">XSLT file</a> converts the webservice result to JSON,
+which is then pulled in to this page. A variant of the Kokogiak script then builds various 
+arrays related to my wishlist items which are used by the carousel component to display the results.</p>
+<!-- Carousel Structure -->
+<div id="dhtml-carousel" class="carousel-component">
+	<div><img id="prev-arrow" class="left-button-image" src="http://ouseful.ning.com/yui/left-enabled.gif"/></div>
+	<div><img id="next-arrow" class="right-button-image" src="http://ouseful.ning.com/yui/right-enabled.gif"/></div>
+
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#">
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+
+
+</div>
+</div> 
+
+</body>
+</html>

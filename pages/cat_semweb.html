@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: semweb Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+
+<h2 class="date">June 29, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010462"></a>
+<h3 class="title">Making Sense of the Web - Semantic Search Optimisation</h3>
+
+<p>A jumble of thoughts as I ease into the day, starting with a phrase that occurred to me walking the dog last night...</p>
+
+<p>I'd just picked up an email from <a href="http://downes.ca">Stephen</a> relating to <a href="http://wikimindmap.com">wikimindmap</a>, which I'd rehashed to display an <a href="http://blogs.open.ac.uk/Maths/ajh59/010443.html">OpenLearn Unit navigation in mindmap format</a> .</p>
+
+<p>Stephen commented that a tension arises when displaying a link collection scraped from a page in a simple hierarchy, because not all links are equal: "Two links look the same to a wiki, but to a concept map one is a major link while the other is minor, subsidiary."</p>
+
+<p>I agree with this, but still think there's mileage in starting <em>somewhere</em> and then seeing how we can improve matters through structure, or cunning...</p>
+
+<p>The semantic web <a href="http://www.readwriteweb.com/archives/semantic_web_road.php">may</a> or <a href="http://radar.oreilly.com/archives/2007/03/the_future_of_w_1.html">may not</a> be just around the corner.</p>
+
+<p>What struck me whilst walking the dog was where the semantics could be applied. I've just read David Weinberger's <a href="http://www.amazon.co.uk/Everything-Miscellaneous-Power-Digital-Disorder/dp/0805080430/?tag=ouseful-21">Everything is Miscellaneous</a>, where he writes at length about <em>sorting on the way out</em> rather than <em>indexing on the way in</em>.</p>
+
+<p>You can listen to an <a href="http://www.itconversations.com/shows/detail1838.html">interview with David Weinberger on IT Conversations</a> (how come IT Conversations <em>don't</em> having sharing/embed code??),  see the <a href="http://video.google.com/videoplay?docid=2159021324062223592&hl=en">book tour presentation at Google TechTalks</a>:</p>
+
+<p><embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=2159021324062223592&hl=en" flashvars=""> </embed></p>
+
+<p>or see <a href="http://video.yahoo.com/video/play?vid=514373">David Weinberger in conversation with Bradley Horowitz</a> via the YUI Theatre:</p>
+
+<p><embed src='http://us.i1.yimg.com/cosmos.bcst.yahoo.com/player/media/swf/FLVVideoSolo.swf' flashvars='id=2686298&emailUrl=http%3A%2F%2Fvideo.yahoo.com%2Futil%2Fmail%3Fei%3DUTF-8%26vid%3D514373&imUrl=http%253A%252F%252Fvideo.yahoo.com%252Fvideo%252Fplay%253Fei%253DUTF-8%2526vid%253D514373&imTitle=A%2BConversation%2Bwith%2BDavid%2BWeinberger&searchUrl=http://video.yahoo.com/video/search?p=&profileUrl=http://video.yahoo.com/video/profile?yid=&creatorValue=ZXJpY21pcmFnbGlh&vid=514373' type='application/x-shockwave-flash' width='425' height='350'></embed></p>
+
+<p>"Sorting on the way out, rather than indexing on the way in..."</p>
+
+<p>It struck me that if we get regular expressions in search queries (as in Google code search), then it becomes possible to write quite complex filters that over time will give some approximation to semantic search, whilst being incrementally useful.</p>
+
+<p>So for example, with regular expression for a postcode or zipcode applied as a search limit, I could narrow down on "where is" type queries (in the US and UK at least!).</p>
+
+<p>For some time, many of the search engines have been supporting question asking/fact returning queries (for example: <a href="http://www.google.com/search?q=population+of+england">population of England</a> or <a href="http://www.google.com/search?q=capital+of+france">capital of france</a> (see more examples on the <a href="http://h2obeta.law.harvard.edu/106431"><em>In Search of Google</em> playlist</a>)).</p>
+
+<p>It seems to me that  by providing regular expressions, as well as search limits that employ <a href="http://en.wikipedia.org/wiki/Proximity_search_(text)">proximity search</a> (that is, looking for terms that are near each other), expert users will be increasingly able to issue "semantic queries", albeit phrased in arcane language and specifying the <em>form</em> or <em>structure</em> of the desired answer.</p>
+
+<p>Like looking in the library for books with a blue spine... we put the shape of the answer we want into the query...</p>
+
+<p>Now I know only too well that even today's advanced search tools are not that widely used (one reason we put the <a href="http://ouseful.open.ac.uk/tu120">TU120 Beyond Google information literacy course</a> together), but using services like Yahoo pipes, it would be possible to produce a set of custom built 'semantic' filters that can be invoked using simple, hopefully easy to remember search limits. (Try typing just the word <a href="http://www.google.com/search?q=movies">movies</a> into Google, for example: the first hit will be a list of movies showing near you (once you have provided a 'home' postcode...)</p>
+
+<p>This is where <em>semantic search optimisation</em> comes in - optimising the text on the page so that it becomes amenable to "semantic" search filters, and allows searchers to write query filters that pick up on the desired shape of the results page - like the constraint it contains a zip code.</p>
+
+<p>These are all baby steps I'm talking about - incremental innovations that may or may not (probably are) part of search engine voodoo magic - but things that can be picked up on by individuals and incorporated in their searches (if they know how.... hmmm... ;-)</p>
+
+<p>Formally structured (standardised) URLs are also relevant in this context, not only for indexing and navigation via the address line, but also supporting the definition of advanced queries limited by URL structure (this is already partly possible using things like <em>filetype:</em>, page and domain search limits).</p>
+
+<p>Read/Write Web picked up on this today: <a href"http://www.readwriteweb.com/archives/standard_urls_proposal.php">Standard URLs - Proposal for a Web with Less Search</a>, suggesting that "if there was a standard way to turn things into URLs, then finding information would be a lot easier".</p>
+
+<p>They propose widespread adoption of standardised URL structures, but I'm not sure how plausible this is, unless publishing system developers get on bard (I could imagine a "blog standard URL structure", for example) or "URL protocols" along the lines of <a href="http://www.exlibrisgroup.com/sfx_openurl.htm">OpenURL</a>.</p>
+
+<p>I could see a role for an intermediary URL rewriting service, however, that publishes a standard URL format, with an element specifiying a particular 'target' website, that rewrites URLs appropriately:</p>
+
+<p>Users could then write URL 'queries' along the lines of : http://easypeasyurl.net/<strong>amazon</strong>/books/j-k-rowling/harry-potter-and-the-goblet-of-fire</em></p>
+
+<p>In the library world, <a href="http://blogs.open.ac.uk/Maths/ajh59/005864.html">libezproxy</a> provides a good example of a widely used URL rewriting service.</p>
+
+<p>(And don't forget the <a href="http://ouseful.open.ac.uk/redirects.php">OUseful Redirects</a> page, or my suggestion for <a href="http://blogs.open.ac.uk/Maths/ajh59/009144.html">standardised OpenLearn URLs</a> ;-)</p>
+
+<p><br />
+PS Just by the by, whilst trying to track down a link I knew I'd visited today, it struck me how a <em>branching forward</em> listing would be useful in my browser; in one tab, I had gone <em>forward</em> from a delicious links page to a site (call it 'A' ;-), <em>back</em> to the links page, then forward to another delicious links page and on down another path.</p>
+
+<p>When I wanted to revisit site 'A', I couldn't reach it via forward and back browser buttons (though I could go back to the branch point and see from clicked through links which one it was). What would be really neat would be for the forward and back browser buttons to implement at least a tree navigator for the whole of the session in that tab... or maybe even a fully blown graph navigator (that somehow depicts how you moved from one tree branch to another in a single step, for example...).</p>
+
+<p>I need to sketch a mockup, don't I? ;-)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010462.html">11:43 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10462" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 12, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010404"></a>
+<h3 class="title">Simile Exhibit Library Catalogue Browser?</h3>
+
+<p>Just a quickie - I've just had a look at this post on <a href="http://www.semanticblogging.org/semblog/blog/default/?permalink=D6D0E3701EE05BBB4085CB338D27D354.html">Fun with SIMILE Exhibit</a>, which takes a BibTex bibliography file and displays it as a <a href="http://simile.mit.edu/exhibit/">Simile Exhibit</a>.</p>
+
+<p>Here's the result: a <a href="http://www.hpl.hp.com/personal/Steve_Cayzer/publications2.htm">semantically browsable publications page</a>. Go check it out...</p>
+
+<p>Why's this interesting? Well, it strikes me that the Simile Exhibit code could be used to provide a client for the BibTex data (or the JSON formatted data that Simile actually feeds off)... so how about if a search on a library catalogue was to expose the results via BibTex, and a Simile Exhibit client was then used to provide the user interface/display?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010404.html">10:02 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10404" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+
+<a name="010403"></a>
+<h3 class="title">Embedded Media Autodiscovery</h3>
+
+<p>Thinking about the approach I'm using in <a href="http://blogs.open.ac.uk/Maths/ajh59/010401.html">delicious Feed Enhancer - Auto-Enclosures</a> - using web page URLs to generate the URL for media items embedded in  - or linked to from - a page, it strikes me that one way of opening up the page so that it reveals the media items embedded in it would be to use some form of media autodiscovery.</p>
+
+<p>This could work in much the same way as <a href="http://www.rssboard.org/rss-autodiscovery">(RSS) feed autodiscovery</a>. That is, a link tag is added to the head of an HTML document that points to the embedded media resource/linked to media resource/associated feed.</p>
+
+<p>An enclosure tag for web pages, in other words...</p>
+
+<p>As well as making it easy to scrape significant embedded media elements from a page, this approach could also be used to help browsers identify and opportunistically prefetch large media items associated with a particular webpage?</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010403.html">09:30 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10403" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">April 15, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010164"></a>
+<h3 class="title">Structured Bookmarking: From MicroFormats to Machine Tags</h3>
+
+<p>Increasingly, I've found I'm using my delicious social bookmarking accounts as simple place for collecting resources that I can then annotate with 'functionally useful' tags - such as <em>geotags</em> that let me <a href="http://blogs.open.ac.uk/Maths/ajh59/010163.html">plot feed items onto a Google or Yahoo map</a>.</p>
+
+<p>But as I find I want to do more and more from my delicious account, I think I need to look around to see what's been happening (if anything) in the emergence of 'semantic' tagging standards. Here are my starting points:</p>
+
+<ul><li><a href="http://www.flickr.com/groups/api/discuss/72157594497877875/">flickr machine tags</a>;</li>
+<li><a href="http://microformats.org/">microformats</a> - if possible, I think it would be a "Good Thing" if machine tags/semantic tags/microtags?/structured tags?/tagformats? closely resembled microformats...;</li>
+<li><a href="http://structuredblogging.org/">structured blogging</a>.</li></ul>
+
+<p>As it's been some time since I looked round the state of the art in terms of social bookmarking services, I also need to do a quick survey to see whether any of the services are offering 'structured bookmarking' forms that facilitate the data entry of structured tags (if not, I guess I need to write some bookmarklets;-)</p>
+
+<p>So, if you of any services that already support structured bookmarking, please drop me a line...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010164.html">02:17 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10164" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">January 29, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="009234"></a>
+<h3 class="title">FOAFed at last...</h3>
+
+<p>After seeing a blog post just over a week ago with a graphic demonstrating how to <a href="http://fgiasson.com/blog/index.php/2007/01/21/reaching_at_least_600_000_people_with_19">reach at least 600 000 people with 19 contacts</a> via <a href="http://www.foaf-project.org/">FOAF</a> (friend of a friend) connections, I thought I should get round to creating my own FOAF record.</p>
+
+<p>A quick trawl of generators turned up things like <a href="http://www.ldodds.com/foaf/foaf-a-matic.html">FOAF-a-Matic</a>, which I've come across several times before, and which generates a FOAF record from details you provide via a web form. It's then up to you to save this file and host it somewhere.</p>
+
+<p>This is all very well, but what if I don't have anywhere to upload the FOAF record to?</p>
+
+<p>Suppose, for example, that I want to manage my identity - and things that relate to it - from a single, hosted service (albeit one that I can trust)?</p>
+
+<p><a href="http://openid.net">OpenId</a> has been getting a lot of press lately (partly because of this <a href="http://simonwillison.net/2006/openid-screencast/">excellent screencast</a>) and I've been looking at it in the hope it can simplify cross-application working in StringLE. I've been playing with an account at <a href="http://www.myopenid.com">MyOpenID</a>, but it's pretty minimal, just offering OpenID services.</p>
+
+<p><a href="http://idproxy.net/">idproxy.net</a> looks interesting too (I've only just come across it this minute) - this service lets you log in with a Yahoo Id using <a href="http://developer.yahoo.com/auth/">Yahoo's authentication system/API</a>, and then provides OpenId services on top. <a href="http://code.google.com/apis/accounts/AuthForWebApps.html">Google also have an web app authentication API</a>, [5/2/07 - and there's now a <a href="https://connect.microsoft.com/site/sitehome.aspx?SiteID=347">Microsoft passport/identity API</a> too][19/2/07 - and here's <a href="http://www.readwriteweb.com/archives/aol_openid.php">OpenID for AOL users</a>] ] so it'll be interesting to see if <em>idproxy</em> go on to incorporate this, and maybe become the Meebo of open identity systems?! (How much trust would you have to have in <em>that</em> service, I wonder?)</p>
+
+<p>Anyway, it was gratifying to see a new service - <a href="http://videntity.org">videntity.org</a> - that provides OpenID hosting <em>as well as</em> FOAF management and vcard export.</p>
+
+<p>The service is pretty basic at the moment - you can't yet usefully add a link to a friend's FOAF record, only their homepage - but I'm hopeful that the service will develop (automatically <a href="http://www.pingthesemanticweb.com/">pinging the semantic web</a> after every FOAF record update would be handy, I think?)</p>
+
+<p>I've started tentatively, just adding a minimum of personal information and a couple of contacts, to a record stored at <a href="http://psychemedia.videntity.org/foaf.xml">http://psychemedia.videntity.org/foaf.xml</a>.</p>
+
+<p>To browse the record, I've pinched a link I found on <a href="http://kmi.open.ac.uk/people/tom">Tom Heath</a>'s site: <a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http://psychemedia.videntity.org/foaf.xml">browse my FOAF record</a>.</p>
+
+<p>Using a templated, hosted service potentially limits how comprehensive my FOAF record can be, of course (<a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http://kmi.open.ac.uk/people/tom/about/rdf">Tom's FOAF record</a> shows just how wide a range of information the FOAF record can store). If I can't edit the FOAF file directly, I can't add fields to the FOAF record that aren't supported by the editing forms provided by the host.</p>
+
+<p>That said, videntity.org does offer quite a range of form options:</p>
+
+<p><img alt="videntity.png" src="http://blogs.open.ac.uk/Maths/ajh59/videntity.png" width="455" height="333" border="0" /></p>
+
+<p>This service has a nice feature that lets you add new friends to your own FOAF record - sort of; click to add a friend, provide the URL of your current FOAF file, and it will generate you a new FOAF record containing the the details of your new friend (which you can then use to replace your old FOAF file).</p>
+
+<p>What I'd really like to be able ot do, of course, is see the browser sort of functionality incorporated into something like videntity. </p>
+
+<p>Only more so...</p>
+
+<p>Here are two visual editors that would be useful in the context of FOAF management.</p>
+
+<p>Firstly, a FOAF navigating equivalent of <a href="http://www.geni.com/">Geni</a>, the viral, visual family tree editor.<br />
+(What happens when you get this service "interoperating" with FOAF family relationships, I wonder?!)</p>
+
+<p>Secondly, this <a href="http://www.twoantennas.com/projects/delicious-network-explorer/">delicious network explorer</a> (thanks for the link, Mike:-):</p>
+
+<p><img alt="deliciousExplorer.png" src="http://blogs.open.ac.uk/Maths/ajh59/deliciousExplorer.png" width="615" height="472" border="0" /></p>
+
+<p>This tool lets you explore delicious networks. It also displays the number of delicious fans a user has, although this looser network is not browsable. [I wonder how hard it would be to feed my delicious network details into a FOAF manager and automatically have the members of my delicious network added to my FOAF record?]</p>
+
+<p>(Just by the by, I wonder if anyone has built a 'degrees of separation' tool that identifies the connections between and two individuals with delicious users, or the delicious distance between a user and a given URL, or between two URLs?)</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009234.html">10:13 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9234" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 03, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="008423"></a>
+<h3 class="title">SPARQLing OUseful Info</h3>
+
+<p>I've just started wondering (for which, read: 'asking naive questions of people who know about this stuff') how to mark up content in a semantic learning environment (and what such an environment might look like), particularly if it was built out of bits of string'n'glue, so the OUseful posts are quite likely to be littered with basic semantic web exploratory doodles over the next few weeks.</p>
+
+<p>For starters, I think I need to find out what I can do around the search tool front, using SPARQL to query RDF stores. At the moment, I haven't got an RDF version of any OpenLearn content up (maybe I'll do a minimal XSLT over the weekend?) so the next best(?) thing (in that I'm familiar with the content of it) is the RDF feed out of the OUseful blog.</p>
+
+<p>The SPARQL  processor I'm going to use at first is <a href="http://sparql.org/sparql.html">SPARQLer</a>. Here's an example query using it:</p>
+
+<p><img alt="sparql1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sparql1.jpg" width="704" height="462" border="0" /></p>
+
+<p>and an <a href="http://sparql.org/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+rss%3A+%3Chttp%3A%2F%2Fpurl.org%2Frss%2F1.0%2F%3E%0D%0ASELECT+%3Ftitle+%0D%0AWHERE+%7B+%3Fitem+rdf%3Atype+rss%3Aitem+.%0D%0A+++++++%3Fitem+rss%3Atitle+%3Ftitle+.%0D%0A+++++++%3Fitem+rss%3Adescription+%3Fdescription+.%0D%0A+++++++FILTER+regex%28%3Ftitle%2C+%22OpenLearn%22%29+%7D&default-graph-uri=http%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2Findex.rdf&stylesheet=xml-to-html.xsl">example result</a>:</p>
+
+<p><img alt="sparql2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sparql2.jpg" width="450" height="215" border="0" /></p>
+
+<p>SPARQLer can apply an arbitrary stylesheet to the results, or a JSON results feed (<a href="http://sparql.org/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+rss%3A+%3Chttp%3A%2F%2Fpurl.org%2Frss%2F1.0%2F%3E%0D%0ASELECT+%3Ftitle+%3Fdescription%0D%0AWHERE+%7B+%3Fitem+rdf%3Atype+rss%3Aitem+.%0D%0A+++++++%3Fitem+rss%3Atitle+%3Ftitle+.%0D%0A+++++++%3Fitem+rss%3Adescription+%3Fdescription+.%0D%0A+++++++FILTER+regex%28%3Ftitle%2C+%22OpenLearn%22%29+%7D%0D%0A&default-graph-uri=http%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2Findex.rdf&stylesheet=xml-to-html.xsl&output=json">example</a>), as well as the pure XML result.</p>
+
+<p>Which actually (by default) popped up this 'error' dialogue in my browser:</p>
+
+<p><img alt="sparqlMime.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sparqlMime.jpg" width="451" height="341" border="0" /></p>
+
+<p>Hmm - might it be handy if I could provide a web application URL that would take 'this sort' of document and display it via a third party website? </p>
+
+<p>Anyway, that's off topic :-) Time to go and learn how to speak SPARQL, I think...</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008423.html">03:46 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8423" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 19, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007477"></a>
+<h3 class="title">Microformats and URL Pipelines</h3>
+
+<p>Just before I went on holiday, I was having an email/GTalk chat with <a href="http://suda.co.uk/">Brian Suda</a> about various things and he showed me the neatest <a href="http://blogs.open.ac.uk/Maths/ajh59/006045.html">pipelined URL</a> that I've seen so far, recalled here from the wonderful chat archive thing(?!) that <a href="http://mail.google.com/mail/help/chat.html">chat in Gmail</a> offers.</p>
+
+<p><a href="http://maps.google.com/maps?f=q&hl=en&q=http://suda.co.uk/projects/microformats/geo/get-geo.php%3Furi%3Dhttp%253A%252F%252Fcgi.w3.org%252Fcgi-bin%252Ftidy%253FdocAddr%253Dhttp%25253A%25252F%25252Fbabelfish.altavista.com%25252Fbabelfish%25252Ftrurl_pagecontent%25253Flp%25253Den_de%252526url%25253Dhttp%25253A%25252F%25252Fsuda.co.uk%25252Fpublications%25252FEuroOSCON06%25252F">Brian Suda's crazy URL pipeline, escaped umpteen times...</a>.</p>
+
+<p>The pipeline starts with <a href="http://suda.co.uk/publications/EuroOSCON06/">http://suda.co.uk/publications/EuroOSCON06/</a> which deails the conference presentation Brian was demoing this sort of technique.</p>
+
+<p>That post is then <a href="http://babelfish.altavista.com/babelfish/trurl_pagecontent?lp=en_de&url=http%3A%2F%2Fsuda.co.uk%2Fpublications%2FEuroOSCON06%2F">translated into German</a> using the Altavista babelfish service (err...why - just showing off?!;-)</p>
+
+<p>The German version of the page is then tidied up using the <a href="http://cgi.w3.org/cgi-bin/tidy?docAddr=http%3A%2F%2Fbabelfish.altavista.com%2Fbabelfish%2Ftrurl_pagecontent%3Flp%3Den_de%26url%3Dhttp%253A%252F%252Fsuda.co.uk%252Fpublications%252FEuroOSCON06%252F">W3 HTML Tidy service</a> to ensure it is well formed XHTML.</p>
+
+<p><em>This</em> document is then parsed by a routine of Brian's that <a href="http://suda.co.uk/projects/microformats/geo/get-geo.php?uri=http%3A%2F%2Fcgi.w3.org%2Fcgi-bin%2Ftidy%3FdocAddr%3Dhttp%253A%252F%252Fbabelfish.altavista.com%252Fbabelfish%252Ftrurl_pagecontent%253Flp%253Den_de%2526url%253Dhttp%253A%252F%252Fsuda.co.uk%252Fpublications%252FEuroOSCON06%252F">makes a KML file from the scraped geotag info</a>.</p>
+
+<p>Finally, the KMl file is <a href="http://maps.google.com/maps?f=q&hl=en&q=http://suda.co.uk/projects/microformats/geo/get-geo.php%3Furi%3Dhttp%253A%252F%252Fcgi.w3.org%252Fcgi-bin%252Ftidy%253FdocAddr%253Dhttp%25253A%25252F%25252Fbabelfish.altavista.com%25252Fbabelfish%25252Ftrurl_pagecontent%25253Flp%25253Den_de%252526url%25253Dhttp%25253A%25252F%25252Fsuda.co.uk%25252Fpublications%25252FEuroOSCON06%25252F">piped into a google map</a>.</p>
+
+<p>Phew...! One of the big tricks I picked up from this is the use of multiple escapes (which I realised is a trick that solves quite a few problems I've been having with deliSearch handling of URLs that need escaping...:-)</p>
+
+<p>Anyway, apart from posting that megalink, what I'm really posting about is Brian's new <a href="http://www.oreilly.com/catalog/microformats/">O'Reilly PDF book on microformats</a>... one to get added to the OU SafariU account, I think...</p>
+
+<p>Microformats will have a lot of traction over the next 18 months or so, I think, and for all their downsides, I think they'll help the <em>ad hoc</em> semantic web reach some sort of critical mass. So much so, I think we'll see enough of an uptake in microformats to prompt a flurry of services in the same way that there are all manner of feed based services exploiting a rich enough feed ecosystem for them to be (almost...) viable.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007477.html">12:12 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7477" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 04, 2006</h2>
+
+
+<div class="blogbody">
+
+<a name="007302"></a>
+<h3 class="title">JSON and Microformats</h3>
+
+<p>As well as tinkering with JSON [<a href="http://www.ietf.org/rfc/rfc4627.txt?number=4627">RFC</a>] for the <a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">Amazon wishlist carousel</a>, I've been looking at <a href="http://microformats.org/wiki/cite-brainstorming">citation microformats</a> because I'm itching to try out a <a href="http://weblog.infoworld.com/udell/lc/lc.html">live clipboard</a> doodle.</p>
+
+<p>Anyway, naive observer that I am, I wonder whether it is generally the case that there there should be a trivial translation between any particular microformat (<em>uF</em>) and an almost literal representation of the same data using JSON?</p>
+
+<p>One major issue that comes to mind is where a uF data item is identified using more than one class attribute?</p>
+
+<p>Anyway - it seems that mapping between JSON and microformats is one of those 'in the air' things at the moment: so here's a far better discussion of the issues than I could hope to give posted on the IBM developerWorks site a couple of days ago: <a href="http://www-128.ibm.com/developerworks/library/x-matters46/">Lighter than microformats: Picoformats</a>.</p>
+
+<p>What would be handy would be a set of standard, cross-browser utility functions to produce and consume data as various microformats <em>and</em> their JSON equivalents, a bit like the hWhatever functions developed to make the Live Clipboard easier to use (e.g. <a href="http://weblog.infoworld.com/udell/lc/hCal.js">hCal generator</a>, <a href="http://weblog.infoworld.com/udell/lc/hCard.js">hCard generator</a>. (The originals are linked to from the Microsoft <a href="http://rayozzie.spaces.live.com/editorial/rayozzie/demo/liveclip/liveclipsample/techPreview.html">Live Clipboard developer notes</a>, but the Windows Live Space page they live on appears to be down at the moment....)</p>
+
+<p>And here's something else to add to the mix while I'm on this topic - and an approach that would also benefit from a few demo/standardised <a href="http://esw.w3.org/topic/MicroModels">uF2RDF XSLTs</a> - <a href="http://www.w3.org/2004/01/rdxh/spec">GRDDL</a>:<br />
+<blockquote>a mechanism for Gleaning Resource Descriptions from Dialects of Languages; that is, for getting RDF data out of XML and XHTML documents using explicitly associated transformation algorithms, typically represented in XSLT.</blockquote><br />
+A good overview can be found here: <a href="http://dannyayers.com/2005/08/01/microformats-on-the-grddl/">Microformats on the GRDDL</a>.</p>
+
+<p>A <a href="http://www.w3.org/2001/sw/grddl-wg/">W3C GRDDL working group</a> has just formed to try and progress this approach to data transformation and reuse, which should add even more momentum to the microformat cause as a side-effect.</p>
+
+
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007302.html">07:37 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7302" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+	
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

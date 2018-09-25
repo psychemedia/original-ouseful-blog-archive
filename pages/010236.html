@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Disaggregating an MIT OpenCourseware Course into Separate RSS Feeds</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010211.html" title="An MIT OpenCourseWare Course via an OPML Feed" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010271.html" title="We Ignore RSS at OUr Peril" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010211.html">&laquo; An MIT OpenCourseWare Course via an OPML Feed</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010271.html">We Ignore RSS at OUr Peril &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 25, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Disaggregating an MIT OpenCourseware Course into Separate RSS Feeds</h3>
+
+<p>Picking up on a couple of points raised in <a href="http://blogs.open.ac.uk/Maths/ajh59/010211.html">An MIT OpenCourseWare Course via an OPML Feed</a>, I've atomised the MIT OpenCourse Course <a href="http://ocw.mit.edu/OcwWeb/Comparative-Media-Studies/CMS-610Spring-2006/CourseHome/index.htm">CMS.610 / CMS.922 Media Industries and Systems, Spring 2006</a>  a little further and replaced some of the OPML items with RSS feeds.</p>
+
+<p>In particular, I've replaced the list of video games with a feed containing those items pulled from an <a href="http://www.amazon.co.uk/MITOCW-CMS610-Games/lm/R2356SXQHQ8XBJ/">Amazon Listmania list</a> via a <a href="http://www.edazzle.net/amazon/">third party Listmania2RSS service</a> (which I've used before in a similar context: <a href="http://blogs.open.ac.uk/Maths/ajh59/009154.html">OpenLearn/OCW Reading Lists</a>).</p>
+
+<p>I've also created a <a href="http://www.youtube.com/view_play_list?p=1751CECCEFC5615C">youTube channel</a> with trailers/reviews of some of the example video games mentioned in the course. Applying the bookmarklet mentioned in <a href="http://blogs.open.ac.uk/Maths/ajh59/009897.html">Grazring YouTube Favourites Playlists</a> to the youTube channel page creates a static snapshot (i.e. not live:-( RSS feed of the playlist, which can also be mixed into the <a href="http://ouseful.open.ac.uk/mitocwplayground/mitocwDemo2.opml">course OPML</a> (or <a href="http://grazr.com/gzpanel.html?addbar=on&view=3p&theme=gloss_silver&file=http://ouseful.open.ac.uk/mitocwplayground/mitocwDemo2.opml">view the course via grazr</a>):</p>
+
+<p><img alt="mitocwdemo2.png" src="http://blogs.open.ac.uk/Maths/ajh59/mitocwdemo2.png" width="794" height="579" border="0" /></p>
+
+<p>Finally, I added another Listmania list, this time for the books cited in the course.</p>
+
+<p>..and as an afterthought, a link to a delicious feed pointing to a list of bookmarks of the books on the reading list that appear in Google Books. [Latency on replicating bookmarks across the delicious servers is really becoming an issue, methinks?]</p>
+
+<p>Whilst I haven't done this (yet!), it's trivial to pipe the Listmania lists into an <a href="http://blogs.open.ac.uk/Maths/ajh59/009233.html">online shop</a>, courtesy of something like Amazon aStores.</p>
+
+<p>This incremental disaggregation approach (?!) is a route I'm keen on exploring further as a way of identifying patterns that can be used <em>in reverse</em> as <a href="http://blogs.learningparty.net/brian/2007/04/25/just-try-it-mister/">exemplar mashup strategies</a>, by aggregating content from reusable raw components, rather than disaggregating it into reusable component parts.</p>
+
+<p>The disaggregation step does, however, have the beneficial side effect  of producing reusable components from effectively closed (i.e. not trivially mashable or remixable) open content ;-)</p>
+
+<p>PS for another take on educational mashup activity, check out the <a href="http://openconnectedsocial.learningparty.net/wiki/page/Mashups">Open, Connected, and Social: mashups</a> wiki page.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 25, 2007 11:39 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Interesting article.</p>
+
+<p>Nice variation of a mashup for e-learning</p>
+
+<p>Lal</p>
+<span class="comments-post">Posted by: <a href="http://lallylogic.startitup.net">Brendan Lally</a> at May  8, 2007 04:34 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010236.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

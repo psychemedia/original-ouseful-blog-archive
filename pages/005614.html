@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Roll On Loose Coupling...</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/005613.html" title="AJAX Doesn&#39;t Stand for Anything..." />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/005676.html" title="Scriptaculous Slider Code Generator" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/005613.html">&laquo; AJAX Doesn't Stand for Anything...</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/005676.html">Scriptaculous Slider Code Generator &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 13, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Roll On Loose Coupling...</h3>
+
+<p>I've been thinking a lot about what OU 2.0 (?!) could look like lately, and how if we were going to make a play for e-learning world player status - which I think is one of the scenario planning dreams, I suspect - we'd need to get something going with someone like Google (after all, if there's <a href="http://www.google.com/ig/dell">a Dell portal on Google</a>, why not an OU one in the UK, or even better, Africa, to help with the open content drive there? (It'd be even better if we could get buy in to the Google downloader/updater so we can <a href="http://blogs.open.ac.uk/Maths/ajh59/005516.html">ship our software through their channel</a>?)).</p>
+
+<p>Anyway - I just saw this, which is not the same thing at all:</p>
+
+<blockquote>San José City College (SJCC) has embarked on a technology improvement program, and for the first time will be offering student email accounts. ... [Google are] testing a new service with the school by hosting Gmail accounts with SJCC domain addresses (like student@jaguars.sjcc.edu), plus admin tools for efficient account management. <a title="Official Google Blog: Big mail on campus" href="http://googleblog.blogspot.com/2006/02/big-mail-on-campus.html"><strong>Official Google Blog: Big mail on campus</strong></a></blockquote>
+
+<p>although it did, for some reason, also remind me of <a href="http://domains.live.com/">Microsoft's custom domains</a>, which is completely different again...</p>
+
+<p>[Added 23/02 - Microsoft also offer <a href="http://www.imagine-wl.com/Education/">MSN email hosting for education</a>]</p>
+
+<p>And this is completely different too: </p>
+
+<blockquote>iTunes U* is a free, hosted service for colleges and universities that provides easy access to your educational content, including lectures and interviews 24 hours a day, 7 days a week. <a href="http://www.apple.com/education/solutions/itunes_u/"><strong>iTunes University</strong></a></blockquote>
+
+<p>They both made me think though... not least because it's more stuff not-without-precedent for the mix...</p>
+
+<p>And they're also very 2.0, in the sense that the universities seem to be being encouraged to outsource services to the very services that their students are likely to be using anyway (or which those services would like the students to be using just anyway if they aren't already using them)...</p>
+
+<p>So it makes sense, doesn't it, in a backscratchy sort of way, especially if you see the online services as lifestyle services making a grab for hearts and minds in an oh, so helpful way...</p>
+
+<p>(I guess the various bookscanning projects will soon remove the need for our academic libraries, for example... <a href="http://scilib.typepad.com/science_library_pad/2006/02/is_the_research.html">or not...</a>.)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 13, 2006 12:40 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/005614.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

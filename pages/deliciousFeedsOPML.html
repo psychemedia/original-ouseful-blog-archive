@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>del.icio.us Feeds OPML Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-size: 80%;
+	line-height: 160%;
+	font-family: "Bitstream Vera Sans", Verdana, sans serif;
+	color:#000;
+	text-align: center;
+	}
+#page {
+	text-align: left;
+	margin: 0 auto;
+	padding: 20px;
+	width: 600px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+h1 {
+	font-size: 150%;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	color: #666;
+	}
+h2 {
+	font-size: 120%;
+	margin: 10px 0 10px 0;
+}
+form {
+	margin: 10px 0 30px 0;
+	padding: 0;
+}
+ul, ol {
+	margin: 10px 0 20px 20px;
+	padding: 0;
+}
+ul li, ol li {
+	list-style-type: none;
+	color: #777;
+	margin: 3px 0 0;
+	padding: 0;
+}
+ul li:before {
+	content: "\00BB \0020";
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	font-size: 90%;
+	margin: 0;
+	padding: 2px;
+}
+code {
+	font-size: 110%;
+	color: green;
+}
+img, a img {
+	border: none;
+}
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+legend {
+	color: #666;
+}
+input.but {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+input.but:hover {
+	background: #eee;
+	border: 1px solid #000; 
+}
+a:link, a:visited {
+	color: blue;
+	text-decoration: none; 
+}
+a:hover {
+	color: red;
+	text-decoration: underline; 
+}
+  </style>
+  <script type="text/javascript">
+<!--
+function loadopml2() {
+ var q =document.getElementById('q').value;
+ var usrDet='';
+ var delUsr='/';
+ delUsr+=document.getElementById('usr').value.split(' ')[0];
+ if (delUsr=='/') delUsr='';  else usrDet="User:"+document.getElementById('usr').value.split(' ')[0];
+ var qSplit=q.split(' ');
+ var delFeeds=''; var tagDet=''; var tagStub='Tag:';
+ for (var i=0; i<qSplit.length; i++) {
+  if (usrDet!='') tagStub='; tag:'; if (qSplit[i]!='') tagDet+=tagStub+qSplit[i];
+  delFeeds+='<outline text="'+usrDet+tagDet+'" xmlUrl="http://del.icio.us/rss'+delUsr+'/'+qSplit[i]+'" />\n';
+ }
+ var element = document.getElementById('output');
+ var opmlOut='<opml>\n<head>\n<title>'+q+' deliciousFeeds</title>\n</head>\n<body>\n';
+
+ opmlOut+=delFeeds;
+ opmlOut+='</body>\n</opml>';
+
+ element.value=opmlOut;
+}
+-->
+  </script>
+</head>
+<body>
+<div id="page">
+<h1>del.icio.us RSS
+Feeds - OPML Generator</h1>
+<p><em style='color:red'>This web page application has now been deprecated - please replace your bookmarks with a link to <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPML.html">http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPML.html</a></em></p>
+<p>Generate an OPML file of
+<a href="http://del.icio.us/">del.icio.us</a> RSS feeds so you can use <a href="http://netvibes.com/">Netvibes</a>
+as a <em>Tagged Resource Display Environment</em>.</p>
+<p>Enter one or more space separated tag, tag combination, del.icio.us username or username/tag combination and click the 'make monitor.opml' button to get a list of RSS feeds in OPML.</p>
+<fieldset><legend>enter
+feed terms</legend>
+<form action="" onsubmit="loadopml2(); return false;">
+  <table border='0'><tr><td><label for="usr"> del.icio.us username:</label></td><td><input style="width: 200px;"
+ id="usr" type="text"></td></tr><tr><td><label for="q"> Tag(s):</label></td><td><input style="width: 200px;"
+ id="q" type="text"></td></tr>
+<tr><td></td><td><input value="make deliciousFeeds.opml" class="but" type="submit"></td></tr></table>
+</form>
+</fieldset>
+<fieldset> <legend>your
+deliciousFeeds.opml:</legend>
+<form action="">
+  <div><textarea id="output" cols="100" rows="35" style="width: 98%;"></textarea>
+  <br>
+  <br>
+  <input value="select all"
+ onclick="javascript:this.form.output.focus();this.form.output.select();"
+ class="but" type="button"> </div>
+</form>
+</fieldset>
+<h2>Usage:</h2>
+<p>Select all, copy and paste it
+into a new file (<code>deliciousFeeds.opml</code>)
+and import it into <a href="http://netvibes.com">Netvibes</a>.</p>
+<small>Page layout, design and
+script based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a>&nbsp;</small>
+</div>
+</body>
+</html>

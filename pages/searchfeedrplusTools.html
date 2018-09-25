@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>searchfeedr Tools</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css" >
+  body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-size: 80%;
+	line-height: 160%;
+	font-family: "Bitstream Vera Sans", Verdana, sans serif;
+	color:#000;
+	text-align: center;
+	}
+#page {
+	text-align: left;
+	margin: 0 auto;
+	padding: 20px;
+	width: 650px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+h1 {
+	font-size: 150%;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	color: #666;
+	}
+h2 {
+	font-size: 120%;
+	margin: 10px 0 10px 0;
+}
+
+ul, ol {
+	margin: 10px 0 20px 20px;
+	padding: 0;
+}
+ul li, ol li {
+	list-style-type: none;
+	color: #777;
+	margin: 3px 0 0;
+	padding: 0;
+}
+ul li:before {
+	content: "\00BB \0020";
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	font-size: 90%;
+	margin: 0;
+	padding: 2px;
+}
+img, a img {
+	border: none;
+}
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+legend {
+	color: #666;
+}
+
+a:link, a:visited {
+	color: blue;
+	text-decoration: none; 
+}
+a:hover {
+	color: red;
+	text-decoration: underline; 
+}
+  </style>
+
+</head>
+<body>
+<div id="page">
+  <h1><a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrlabs.php" style="text-decoration:none">searchfeedr</a> Tools</h1>
+
+  <p>Why not make the most of searchfeedr using some of the following searchfeedr integration tools?</p>
+  
+  <fieldset><legend>searchfeedr</legend>
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrlabs.php">searchfeedr</a> is a Yahoo! Search powered search engine that obtains search limits from 
+<em>any</em>* web feed, web page, or delicious user's tagged bookmark list (*in principle...).</p>
+<p><em>searchfeedr+</em> allows you to limit your search to results from a given set of pages, or domains, that you trust.</p>
+</fieldset>
+
+  <fieldset><legend>del.icio.us, Technorati and H2O Playlist integration</legend>
+ <p><a href="javascript:(function(){d=document;b=d.getElementsByTagName('body')[0];function ss(src){s=d.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src',src);b.appendChild(s);};ss('http://blogs.open.ac.uk/Maths/ajh59/searchfeedrLabsPanel.js');})()">searchfeedr+ bookmarklet</a> (IE7 and Firefox):
+simply drag the bookmarklet onto your browser toolbar and use it to add searchfeedr+ to:</p>
+<ul><li>any user's tagged bookmark page on <a href="http://del.icio.us">del.icio.us</a>,</li>
+<li>any <a href="http://technorati.com/tag">Technorati tag page</a> (simply click on a tag link and search the top feeds;</li>
+<!--<li>any user's link collection on <a href="http://wink.com/--collections">Wink</a>;</li>-->
+<li>any <a href="">H2O playlist</a></li></ul>
+<p><em>Automatically</em> add the searchfeedr+ searchbox to these pages using the <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrLabsPanel.user.js">searchfeedr+ Greasemonkey script</a> (requires Firefox with Greasemonkey extension).</p>
+  </fieldset>
+
+<!--  <fieldset><legend>widgets</legend>
+<p><a href="http://www.widgetbox.com/widget/7d56b2e8-98e3-45cc-8e73-cc1087f93f60">Embeddable deliSearch widget</a>: embed a deliSearch widget in your own blog. Configure the required delicious user name and tags from the widgetbox control panel. Download available from <a href="http://www.widgetbox.com">Widgetbox</a>.</p>
+<p><a href="http://www.widgetbox.com/widget/428c5b41-b6fd-46bc-9d64-22b870d28996">Tag aware embeddable deliSearch widget</a>: embed a deliSearch widget in your own blog. Configure the required delicious user name and tags from the widgetbox control panel, and automatically detect appropriate tags from your blog page. Download available from <a href="http://www.widgetbox.com">Widgetbox</a>.</p>
+  </fieldset>
+-->
+
+<fieldset><legend>user tips</legend>
+<p>Tag links you want to include in a searchroll with a particular tag (we're working on doing clever things with links tagged as <em>usr:searchfeedr</em>).</p>
+</fieldset>
+
+<fieldset><legend>searchfeedr blog</legend>
+<p>There is no dedicated searchfeedr blog at the current time. In the meantime, you can keep up to date by searching for <em>searchfeedr</em> on the <a href="http://ouseful.open.ac.uk/blog">OUseful blog</a>.</p>
+</fieldset>
+
+<fieldset><legend>how searchfeedr works</legend>
+<p><img src="http://www.gliffy.com/pubdoc/1073001/L.jpg" alt="searchfeedr architecture" /></p>
+<p><em>pageSearch</em> (a derivative application that identifies the links on a given web page and feeds them into searchfeedr) and <em>deliSearch</em>, a searchfeedr optimisation specifically for searching deliciious bookmark feeds, are based on a similar principle.</p></fieldset>
+
+<script type="text/javascript">
+//<![CDATA[
+  document.write('<scr'+'ipt src="http://crazyegg.com/pages/scripts/29217.js?'+(new Date()).getTime()+'" type="text/javascript"></'+'script>');
+//]]>
+</script>
+
+</body>
+</head>

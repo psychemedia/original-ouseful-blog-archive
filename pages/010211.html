@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: An MIT OpenCourseWare Course via an OPML Feed</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010202.html" title="Innovating from the Inside, Outside" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010236.html" title="Disaggregating an MIT OpenCourseware Course into Separate RSS Feeds" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010202.html">&laquo; Innovating from the Inside, Outside</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010236.html">Disaggregating an MIT OpenCourseware Course into Separate RSS Feeds &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 22, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">An MIT OpenCourseWare Course via an OPML Feed</h3>
+
+<p>Over the weekend, I noticed that MIT OpenCourseWare courses were offering a "Download this Course" option. Intrigued, I immediately grabbed a copy of the <a href="http://ocw.mit.edu/OcwWeb/Comparative-Media-Studies/CMS-610Spring-2006/CourseHome/index.htm">CMS.610 / CMS.922 Media Industries and Systems, Spring 2006</a> course and had a poke around inside it.</p>
+
+<p>The download bundle is - I guess(?!) - a standard (?) IMS  - err - package? (can you tell I'm not up on educational material interoperability standards?!;-)</p>
+
+<p>That is to say, the zip archive file opens into a set of nested directories with an <em>imsmanifest.xml</em> document.  The archive file also contained copies of the HTML pages used on the <a href="http://ocw.mit.edu/OcwWeb/Comparative-Media-Studies/CMS-610Spring-2006/CourseHome/index.htm">course website</a> as well as the PDF versions of the course lecture notes.</p>
+
+<p>What I <em>had</em> been hoping for was a 'clean' XML version of the course webpages (i.e. a single source document from which they had been generated). Some hope!</p>
+
+<p>Anyway, my initial enthusiasm curbed somewhat, I felt there was still some mileage to be made in RSSifiying the course, for three main reasons.</p>
+
+<p>Firstly to see if what came out was "sensible" - i.e. whether a feed based version of the course could be sensibly viewed in a <a href="http://grazr.com">Grazr</a> or <a href="http://ouseful.open.ac.uk/stringle">Stringle</a> environment, for example.</p>
+
+<p>Secondly, to get a feeling for how to decompose a feed-delivered version of the course into separate component feeds.</p>
+
+<p>Thirdly, to see whether those component feeds could be automatically generated from the IMS manifest, or scraped from the MIT OpenCourseware web pages.</p>
+
+<p>The course - as published on the MIT OpenCourseWare website - is structured according to the course syllabus, readings, lecture notes, projects (i.e. group and individual activities) and related resources.</p>
+
+<p><img alt="mitHTML.png" src="http://blogs.open.ac.uk/Maths/ajh59/mitHTML.png" width="802" height="316" border="0" /></p>
+
+<p>As a first pass, I have generated an OPML version of the course that follows a similar structure. At the moment, this OPML feed is - to all intents and purposes - a monolithic feed. Over the coming weeks I intend to disaggregate it into separate component feeds that can be reaggregated in an OPML feed that pulls in separate OPML and RSS component feeds.</p>
+
+<p>You can view the OPML version of the course here: <a href="http://grazr.com/gzpanel.html?addbar=off&view=3p&theme=gloss_silver&file=http://ouseful.open.ac.uk/mitocwplayground/mitocwDemo.opml">MIT OCW CMS610 Spring, 2006, Comparative Media (via Grazr)</a>.</p>
+
+<p><img alt="mitOPML.png" src="http://blogs.open.ac.uk/Maths/ajh59/mitOPML.png" width="911" height="317" border="0" /></p>
+
+<p>Note that at the current time, some of the links (to New York Times) resources require a NYT login. I will patch these as and when I can. In addition, the links to audio-visual resources should really be made available via an embedded player, as well as link to the original site.</p>
+
+<p>A cursory scan of the OpenCourseWare site suggests that the way individual web pages are composed across different courses is rather arbitrary, which will make scraping the site to automate feed production somewhat tricky.</p>
+
+<p>I should be thankful for small mercies in the way OpenLearn content is bundled as XML I suppose!</p>
+
+<p>PS <a href="http://blogs.learningparty.net/brian/2007/04/25/resistance-is-fertile/">this is spot on</a>.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 22, 2007 11:04 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Nice to see you tackling another Open CourseWare provider as well as OpenLearn!!</p>
+
+<p>I had a quick look, and yes they are using a "standard IMS" way of sharing content.  This one is the IMS Content Packaging (CP) standard.  See http://www.imsglobal.org/content/packaging/index.html</p>
+
+<p>You may be interested to know that the SCORM standard and the IMS new thing "Common Cartridge" both use a similar method (html files and an imsmanifest.xml) to share content.  Common Cartridge (CC) hasn't been publicly released yet.</p>
+
+<p>I've been involved recently in hand-crafting a few OpenLearn units into CC.  Joel Greenberg presented them at the IMS Learning Impact Conference, and they were very well received!  We (OpenLearn) will be looking at offering SCORM, IMS CP and IMS CC download formats later this year.  </p>
+
+<p>They are useful formats if you want to take content and stick it in another VLE, but I think your RSS feed from OU XML is more useful from an automatic scraping point of view.  The drawback of sharing just HTML is that you completely loose the structure, which makes it a nightmare to do anything automatic with it.  <br />
+</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;j&#46;m&#46;gray&#64;open&#46;ac&#46;uk">Jenny Gray</a> at April 23, 2007 09:28 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010211.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

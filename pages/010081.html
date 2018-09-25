@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Pesky RSS Feeds, They Turn into All Sorts...</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010080.html" title="The Fall and Rise of VideOU" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010086.html" title="Yahoo Pipes Just Opened Up Arbitrary XML Input" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010080.html">&laquo; The Fall and Rise of VideOU</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010086.html">Yahoo Pipes Just Opened Up Arbitrary XML Input &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 28, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Pesky RSS Feeds, They Turn into All Sorts...</h3>
+
+<p>A quick ack to <a href="http://conclave.open.ac.uk/openair/">Stuart Brown</a> who's picked up the 'so what can we do with these here OpenLearn content RSS feeds then?' baton and started running like crazy with it...</p>
+
+<p>Today was a heads up to <a href="http://www.scribd.com/doc/19955/Computers-bits-bytes">T171 on Scribd</a>. The route to this upload was an <a href-="http://xfruits.com/">xfruits RSS2PDF</a> conversion. Of course, now the content is in Scribd, it's available as a Word doc (just need the bookmarklet now to open this into Zoho ot Google docs...).</p>
+
+<p><img alt="scribdT171.png" src="http://blogs.open.ac.uk/Maths/ajh59/scribdT171.png" width="1043" height="479" border="0" /></p>
+
+<p>Scribd also offers an audio version of the file, supposedly, but all I get is 'dash dash dash...'</p>
+
+<p>Anyway, that's not really a problem because Stuart also tried the feed in <a href="http://en.blog.vocalfruits.com/">VocalFruits</a> and he mentioned it worked okay (public feeds aren't available yet).</p>
+
+<p>Stuart's also been trying feeds out in various mobile browsers/feed readers, like the (secret) Grazr one and - err - a couple of others I cant find the links to, offhand... I'm not sure if he's tried it out inthe <a href="http://m.netvibes.com/">mobile Netvibes</a> feed reader though (how contrived was that link?!).</p>
+
+<p>Just by the by, the OU has been looking at an XML to whatever production route fro several years now (and I believe have something available that's pretty reliable - at least, for documents written using the OU XML schema (which I guess is pretty close to the one used to release LabSpace XML).</p>
+
+<p>The <em>ad hoc</em>, multi-format publication route described above is probably brittle as anything, but I reckon I could produce readable PDFs, Word docs, MP3s, RTFs, mobile browseable, widget readable versions of any text/image based OpenLearn content in at most an hour or two. Such is the good enough nature of - and widespread support for - RSS...</p>
+
+<p>I'm sure LTS can also do the 'publish in any format' trick, far more reliably, and in a much shorter time than I can, too... (wanna race? ;-) But maybe the point is that it's not that clever in design terms (that is, almost anyone can use a variety of third party tools to achieve a similar effect), it's achieving the required reliability and scaleability that takes the effort.</p>
+
+<p>Finally for today, another weak link: for readers who've been tinkering with OpenLearn materials, maybe even playing with some of the <a href="http://blogs.open.ac.uk/Maths/ajh59/009142.html">OpenLearn course content feeds</a>, there's a call just gone out for the <a href="http://www.open.ac.uk/openlearn/openlearn2007/conference.php">openlearn 2007 conference</a>, taking place on 30-31 October 2007 in Milton Keynes.</p>
+
+<p>The conference is free if you register in time and promise to talk, so I'm thinking maybe I should try and submit something...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 28, 2007 12:34 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010081.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ISBN Links Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-size: 80%;
+	line-height: 160%;
+	font-family: "Bitstream Vera Sans", Verdana, sans serif;
+	color:#000;
+	text-align: center;
+	}
+#page {
+	text-align: left;
+	margin: 0 auto;
+	padding: 20px;
+	width: 600px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+h1 {
+	font-size: 150%;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	color: #666;
+	}
+h2 {
+	font-size: 120%;
+	margin: 10px 0 10px 0;
+}
+form {
+	margin: 10px 0 30px 0;
+	padding: 0;
+}
+ul, ol {
+	margin: 10px 0 20px 20px;
+	padding: 0;
+}
+ul li, ol li {
+	list-style-type: none;
+	color: #777;
+	margin: 3px 0 0;
+	padding: 0;
+}
+ul li:before {
+	content: "\00BB \0020";
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	font-size: 90%;
+	margin: 0;
+	padding: 2px;
+}
+code {
+	font-size: 110%;
+	color: green;
+}
+img, a img {
+	border: none;
+}
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+legend {
+	color: #666;
+}
+
+table.sbApps tr td {
+	width: 200px;
+}
+
+input.but {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+input.but:hover {
+	background: #eee;
+	border: 1px solid #000; 
+}
+a:link, a:visited {
+	color: blue;
+	text-decoration: none; 
+}
+a:hover {
+	color: red;
+	text-decoration: underline; 
+}
+  </style>
+  <script type="text/javascript">
+<!--
+
+function doASCIIChars( s )
+{
+  s = s.replace ( / /g, '%20' );
+  return s;
+} 
+
+function addLinkItem(id,URL, linkText){
+ var li=document.createElement('li');
+ var link=document.createElement('a');
+ var myURL=URL;
+ link.setAttribute('href', myURL); link.setAttribute('id',id);
+ linkTxt=document.createTextNode(linkText);
+ link.appendChild(linkTxt);
+ li.appendChild(link);
+ return li;
+}
+
+function generateISBNURLs(){
+ var isbn= document.getElementById('usrISBN').value;
+
+ var output = document.getElementById('output');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ 
+ var li=addLinkItem('googleURL','http://books.google.com/books?ie=UTF-8&vid=ISBN'+isbn,'Google "Look Inside"');
+ output.appendChild(li);
+
+ li=addLinkItem('amazonSearchURL','http://www.amazon.co.uk/gp/reader/'+isbn,'Amazon "Search Inside"');
+ output.appendChild(li);
+
+ li=addLinkItem('amazonPageURL','http://www.amazon.co.uk/exec/obidos/ASIN/'+isbn+'/robofestauk-21','Amazon.co.uk sales page (with affiliate code)');
+ output.appendChild(li);
+
+ li=addLinkItem('amazonInfoURL','http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&Version=2005-03-23&Operation=ItemLookup&ContentType=text%2Fxml&SubscriptionId=0DK8EWAWVKXSH8SEMVR2&ItemId='+isbn+'&ResponseGroup=Images,ItemAttributes','Amazon Web Service Item Info');
+ output.appendChild(li);
+
+
+ li=addLinkItem('ouVoyagerURL','http://ouseful.open.ac.uk/voyager/isbn/','OU Library catalogue lookup');
+ output.appendChild(li);
+
+ li=addLinkItem('OCLCaudienceLevelURL', 'http://researchprojects.oclc.org/al/al.xml?oclcno='+isbn,'OCLC Audience Level');
+ output.appendChild(li);
+
+ li=addLinkItem('xISBNURL', 'http://labs.oclc.org/xisbn/'+isbn,'Alternative ISBNs (OCLC xISBN)');
+ output.appendChild(li);
+
+ li=addLinkItem('thingISBNURL', 'http://www.librarything.com/api/thingISBN/'+isbn,'Alternative ISBNs (Library Thing thingISBN)');
+ output.appendChild(li);
+
+ li=addLinkItem('thingCFxISBNURL', 'http://www.librarything.com/api/thingISBN/'+isbn+'&compare=1','Compare xISBN and thingISBN');
+ output.appendChild(li);
+
+ li=addLinkItem('thingISBNlookup', 'http://www.librarything.com/isbn/'+isbn,'Lookup a book by ISBN at LibraryThing');
+ output.appendChild(li);
+
+ li=addLinkItem('ISBNInfoURL', 'http://www.isbn.org.uk/html/isbn.php?isbn='+isbn,'ISBN Book Info (isbn.org.uk)');
+ output.appendChild(li);
+
+ li=addLinkItem('ISBNInfoURLXML', 'http://www.isbn.org.uk/xml/isbn.php?isbn='+isbn,'ISBN Book Info (isbn.org.uk) (XML)');
+ output.appendChild(li);
+
+ li=addLinkItem('webservicexURL', 'http://www.webservicex.net/isbn.asmx/GetISBNInformation?Code='+isbn,'A (not quite working) web service');
+ output.appendChild(li);
+
+ li=addLinkItem('ISBNdbfullURL', 'http://isbndb.com/search-all.html?kw='+isbn,'ISBNdb.com (full record)');
+ output.appendChild(li);
+
+ li=addLinkItem('ISBNdbURL', 'http://isbndb.com/api/books.xml?access_key=6M8F563N&index1=isbn&value1='+isbn,'ISBNdb.com (XML Info)');
+ output.appendChild(li);
+
+ li=addLinkItem('openworldCatURL', 'http://worldcatlibraries.org/wcpa/isbn/'+isbn,'Open WorldCat Info');
+ output.appendChild(li);
+
+ li=addLinkItem('openworldCatDetailsURL', 'http://worldcatlibraries.org/wcpa/isbn/'+isbn+'&tab=details','Open WorldCat Info (book details)');
+ output.appendChild(li);
+
+ li=addLinkItem('openworldCatDetailsURL', 'http://worldcatlibraries.org/wcpa/isbn/'+isbn+'&tab=editions','Open WorldCat Info (book editions)');
+ output.appendChild(li);
+
+ li=addLinkItem('oreillysafariURL','http://safari.oreilly.com/?XmlId='+isbn,"O'Relly Safari");
+ output.appendChild(li);
+
+ li=addLinkItem('oreillysafariOUURL','http://proquest.safaribooksonline.com.libezproxy.open.ac.uk/?XmlId='+isbn,"O'Relly Safari (OU proxied)");
+ output.appendChild(li);
+
+ li=addLinkItem('syndeticsURL','http://syndetics.com/hw7.pl?isbn='+isbn+'/INDEX.HTML&client=ouuka', "Syndetics Book Info (OU proxied?)");
+ output.appendChild(li);
+
+ li=addLinkItem('syndeticsURL','http://syndetics.com/hw7.pl?isbn='+isbn+'/TOC.HTML&client=ouuka', "Syndetics Table of Contents (OU proxied?)");
+ output.appendChild(li);
+
+ li=addLinkItem('syndeticsURL','http://syndetics.com/hw7.pl?isbn='+isbn+'/SUMMARY.HTML&client=ouuka', "Syndetics Book Summary (OU proxied?)");
+ output.appendChild(li);
+
+ li=document.createElement('li');
+ var image=document.createElement('img');
+ var myURL='http://images.amazon.com/images/P/'+isbn+'.01.THUMBZZZ';
+ image.setAttribute('src', myURL);
+ li.appendChild(image);
+ image=document.createElement('img');
+ myURL='http://images.amazon.com/images/P/'+isbn+'.01.TZZZZZZZ';
+ image.setAttribute('src', myURL);
+ li.appendChild(image);
+ image=document.createElement('img');
+ myURL='http://images.amazon.com/images/P/'+isbn+'.01.MZZZZZZZ';
+ image.setAttribute('src', myURL);
+ li.appendChild(image);
+ output.appendChild(li);
+
+ li=document.createElement('li');
+ image=document.createElement('img');
+ myURL='http://worldcatlibraries.org/wcpa/servlet/DCARead?standardNo='+isbn+'&standardNoType=1';
+ image.setAttribute('src', myURL);
+ li.appendChild(image);
+ output.appendChild(li);
+ }
+
+-->
+  </script>
+</head>
+<body>
+<div id="page">
+  <h1>ISBN Links Generator</h1>
+  <p>Generate various links keyed by an ISBN.</p>
+  <fieldset><legend>enter ISBN information</legend>
+<form name="dataForm" action="" onsubmit="generateISBNURLs(); return false;">
+
+  <table border='0'>
+<tr>
+        <td><label for="usrISBN">ISBN:</label></td><td><input style="width: 200px;"
+ id="usrISBN" type="text" value="0849304563"></td></tr>
+<tr><td></td><td><input value="generate links" class="but" type="submit"></td></tr></table>
+</form>
+</fieldset>
+
+  <p>Here are your URLs: </p><ul id='output'></ul>
+  <p><small>Page layout and design based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a></small></p>
+</div>
+</body>
+</html>

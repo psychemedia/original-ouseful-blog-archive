@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: searchFeedr Pipes</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009993.html" title="GrazrScript Generator Studio" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010002.html" title="Serialised OPML" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/009993.html">&laquo; GrazrScript Generator Studio</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010002.html">Serialised OPML &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 15, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">searchFeedr Pipes</h3>
+
+<p>A quickie post from a 5 minute hack - a generalisation of the deliSearch pipe so that it will take any feed and search the sites listed in the feed (a searchfeedr style search :-)</p>
+
+<p>Here it is: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=7oJmsIbS2xGu_WLkEpPZnA">searchfeedr Pipe</a>.<br />
+This pipe will search over all the sites that are listed in the supplied feed.</p>
+
+<p>Other <em>searchfeedr</em> pipes include:<br />
+<ul><li>the cloned  <a href="http://pipes.yahoo.com/pipes/iPBz8C242xGV47HKqGIyXQ/">deliSearch Pipe</a> (<a href="http://blogs.open.ac.uk/Maths/ajh59/009301.html">blogged here</a>) that searches the sites listed in a delicious feed when supplied with a delicious username/tag pair;</li><br />
+<li>the <a href="http://pipes.yahoo.com/pipes/zhmqsw_52xG4gUz8e_gC8A/">PageLinks search pipe</a>, that will scrape the links from a page with a particular URL and will limit the search to just those sites.</li><br />
+<li>search sites that <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_Mpu2d_S2xGLBwm_lfXiAA">link to a domain</a>, given its URL;</li><br />
+<li>search sites that are linked to <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=Qo6XlN_S2xGTBK0wjknRlg"><em>from</em> a domain</a>, given its URL. The linkto and linkfrom domain searches are via <a href="http://blogs.msdn.com/livesearch/archive/2006/10/16/search-macros-linkfromdomain.aspx">Live.com search</a>;</ul></p>
+
+<p>There's also this handy <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=iLUPNvq92xGeE5B7r8cPhQ">OPML searchfeedr style pipe</a> from <a href="http://www.chrislott.org/2007/02/16/custom-search-opml">Chris</a> that takes an OPML URL and passes the OPML feed through an OPML2RSS converter, then limits the search to sites contained in the resulting feed.</p>
+
+<p>The searchfeedr search engine at <a href="http://searchfeedr.com">searchfeedr.com</a> is currently cobbled together out of scrappy bits of code, but I'm hoping to rebuild it using Pipework. Here are <a href="">more than a few posts on searchfeedr</a> if you want to see how it evolved.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 15, 2007 10:44 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010000.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

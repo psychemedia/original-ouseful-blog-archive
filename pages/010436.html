@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn Content via a Wiki</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010432.html" title="OPML Dashboard View: A Glanceable Display of Recent Social Bookmarks" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010437.html" title="OPML Dashboard: Filtered RSS Feed Display" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/010432.html">&laquo; OPML Dashboard View: A Glanceable Display of Recent Social Bookmarks</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/010437.html">OPML Dashboard: Filtered RSS Feed Display &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 20, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn Content via a Wiki</h3>
+
+<p>When OpenLearn first launched, one of the things I fully expected the playful folk out there to do was to migrate the content into a wiki - <em>just because they could...</em>. As far as I can tell, this hasn't happened yet...</p>
+
+<p>We're now several months in to the first phase of the OpenLearn project, and content migration of OU course units into the OpenLearn environment is carrying on apace. However, my reading of the (lack of) activity in <a href="http://labspace.open.ac.uk">LabSpace</a>, where the project team were hoping to see reversioned content uploads, is that: a) no-one is really sure what the license allows, and what sorts of things you could possibly do that constitute a <em>remix</em>; b) the process of getting content <em>out</em> of LabSpace, doing stuff to it, and then getting content <em>back in</em> to LabSpace is just too hard...</p>
+
+<p>The OpenLearn team, too, are maybe having second thoughts about how they see the LabSpace working for content remix: <a href="http://conclave.open.ac.uk/openair/?p=93">Long live LabSpace or RIP?</a>.</p>
+
+<p>So as I wait for the 'official' release of OpenLearn course content RSS feeds (due over the summer, I believe), I thought I'd take a break from my own <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?search=openlearn%20rss&IncludeBlogs=1149">RSS OpenLearn tinkerings</a> and have a play with wikifying OpenLearn content, just to see how it feels...</p>
+
+<p>So last night I spent and hour or so cutting and pasting content from an OpenLearn unit - <a href="http://openlearn.open.ac.uk/course/view.php?id=1544">Exploring distance time graphs (MU120_3)</a> - into a wiki: <a href="http://openlearn.pbwiki.com/MU120_3">MU120_3 Wiki</a>... just to see: a) how it felt; and b) what immediate issues came to mind.</p>
+
+<p>So here's the quickest of quick summary of points that first came to my mind:<br />
+<ol><li>How should I style the content? <em>As simply as possible...</em></li><br />
+<li>How should I map content from the course to the wiki? <em>Course page to wiki page.</em></li><br />
+<li>How should I name pages on the wiki? <em>Sensibly, to give some chance of URL hacking working... I opted for OpenLearn unit page number to course page number. E.g. from a root "http://openlearn.pbwiki.com/MU120_3" the n'th page would be "http://openlearn.pbwiki.com/MU120_3<strong>_n</strong>".</em></li><br />
+<li>How should navigation between pages be handled? <em>I opted for simplicity - previous/next links and a link back to the course contents page.</em></li><br />
+<li>How should activities, images etc. be handled? <em>As simply as possibly, with easy to achieve style changes (boxes, bold font) where it was important to identify a particular sort of content (figure caption or description, for example, or activity disussion).</em></li></ol></p>
+
+<p>Having cut'n'pasted a sample of material I asked the OpenLearn team how they felt about it. Deliberately,  I didn't put attribution or licensing detail up, in contravention of the license. This was noticed, and a member of the team rectified the situation by adding a licensing link to the top of the first page.</p>
+
+<p>Looking over the wiki structure - I opted for <a href="http://pbwiki.com">pbwiki</a> - I noticed that within a pbwiki subdomain the editable sidebar appears on each wiki page. As such, this is an ideal place for a licensing/attribution statement. Once added, the attribution will now appear in the sidebar on each newly created wiki page. [Added: I also added a link in the sidebar back to the OpenLearn forum associated with the course, something I also tried to remember to do in the <a href="http://ouseful.open.ac.uk/openlearndaily">OpenLearn<em>_daily</em></a> feeds.]</p>
+
+<p><img src="http://ouseful.open.ac.uk/blogpics/openlearnWiki.png" alt="Openlearn wiki sidebar" /></p>
+
+<p>One major issue that came to my mind was loss of tracking data if people consume the course material via the wiki rather than from the OpenLearn site. This can be mitigated by adding tracking to the wiki pages - so I added a Google analytics tracking code to the sidebar. If anyone uses the wiki, the usage becomes trackable (user edits to content will of course be tracked by the wiki itself).</p>
+
+<p>As far as 'ease of use for remixing' goes, I know which I would prefer over making changes to the wiki or editing OpenLearn XML and resubmitting it...</p>
+
+<p><em>Even as I was cutting and pasting content into the wiki</em>, I made a couple of additions to the material: firstly to add a (relevant) link to an online graph paper generator (on <a href="http://openlearn.pbwiki.com/MU120_3_3">this page</a>) and secondly to add a (missing) description to an image.</p>
+
+<p>Does this count as a remix, I wonder? If nothing else, it's a least a minor revision... One thing I do know for sure, I won't be submitting the changes - small as they are - back to the LabSpace via the OpenLearn XML (re)submission route.</p>
+
+<p>And if I make <em>major</em> changes to the content, I won't be submitting it back to OpenLearn/LabSpace via that route either - the conversion into the XML format from the wikitext (or WYSIWYG) view would be just too time consuming...</p>
+
+<p>So I guess the current - and any future - changes to this material are lost to OpenLearn?</p>
+
+<p>Ho hum - if you want to tinker with the content, it's at <a href="http://openlearn.pbwiki.com/MU120_3">http://openlearn.pbwiki.com/MU120_3</a>; at the moment an easy to guess password is required to get in to edit it, though anyone can see the content.</p>
+
+<p>Mail me if you want to play and can't guess the (case sensitive...) password...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 20, 2007 08:15 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>So just on the off chance that you hadn't seen it before (though somehow this seems unlikely) I'd point to Send2Wiki (http://www.send2wiki.com/index.php/Main_Page) by David Wiley's group in Utah as a useful addendum here aimed at solving the same problem, easier re-mixing by automagically wikifying OER content. Seems focused on mediawiki specifically, but may be worth a look.</p>
+<span class="comments-post">Posted by: <a href="http://www.edtechpost.ca/wordpress/">Scott Leslie</a> at June 20, 2007 10:45 PM</span>
+</div>
+<div class="comments-body">
+<p>I'd completely forgotten about that - thanks for the reminder :-)</p>
+
+<p>I think I did have a go at using it in the past - and tried again just now - and stuff isn't getting through (OpenLearn is returning an OpenLearn index page rather than contentful pages to the wiki - I don't have time to check just now (it's late....) if its the bookmarklet or OpenLearn that's not playing properly...)</p>
+
+<p>What I am hoping for down the line is for wikis to offer RSS imports, with simple html2wikitext conversion. Native OpenLearn RSS support for OpenLearn course units is on the way, so that side of things will (should) be in place within the next month or two.</p>
+
+<p>PBWiki has a developer API, so maybe that's the next midnight oil task I should set myself ;-)</p>
+
+<p>I think that the OpenLearn Labspace could do a lot worse than providing a wiki backbone to OpenLearn, with OpenLearn presenting forzen snapshaots of particular edit versions of LabSpace/wikitext, but then, that's just a personal opinion...<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at June 21, 2007 12:04 AM</span>
+</div>
+<div class="comments-body">
+<p>To get SendtoWiki to work there has to be something on the wiki end to receive and handle output appropriately - you can't just send to any old wiki.  Apparently (from David Whiley in person though, so I guess he should know!).</p>
+
+<p>We've thought about this for OpenLearn, but want to go a bit further into in-site editing.  That's my research project for the next few months!!</p>
+
+<p>BTW if you want to share back the revisions, the least you could do would be to post in the forum on the LabSpace unit to give the wiki url.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;j&#46;m&#46;gray&#64;open&#46;ac&#46;uk">Jenny Gray</a> at June 21, 2007 01:06 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010436.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

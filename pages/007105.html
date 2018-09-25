@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: BlogBridge Library</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007080.html" title="Generic Library Lookup Greasmeonkey Script" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007121.html" title="Feed Subscription with Contact Details" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/007080.html">&laquo; Generic Library Lookup Greasmeonkey Script</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/007121.html">Feed Subscription with Contact Details &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 26, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">BlogBridge Library</h3>
+
+<p>Last week, I managed to get a <a href="http://blogbridge.com/trial1/">trial user account</a> on the new BlogBridge Library, which I briefly posted about <a href="http://blogs.open.ac.uk/Maths/ajh59/007024.html">here</a>  when the demo was launched.</p>
+
+<p>The BlogBridge Library provides you with a space to manage feeds using a metaphor I described previously as akin to a bookshelf. What really appeals to me is how this sort of display might be useful in managing the display of contents feeds from online journals.  In use, I imagine myself to be stood in the library by the journals collection, leafing through print journals, scanning their contents lists and perhaps flicking through an abstract or two...</p>
+
+<p><img alt="journalBookshelf.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/journalBookshelf.JPG" width="548" height="163" border="0" /></p>
+
+<p>Each shelf display 4 titles at a time, with up to 4 sets of 4 titles being supported on the bookshelf at any one time. </p>
+
+<p>One feature that might be useful here would be the ability to choose the image that should be displayed as the bookshelf graphic. (At the moment, the image is an image of the webpage that hosts the target feed, obtained as an <a href="http://pages.alexa.com/exec/faqsidos/help/index.html?index=126">Alexa site thumbnail image</a>.)</p>
+
+<p>For collections containing more than 4 x 4 = 16 titles, clicking through the bookshelf title bar reveals all the titles on the bookshelf:</p>
+
+<p><img alt="bblFullShelf.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/bblFullShelf.jpg" width="520" height="494" border="0" /></p>
+
+<p>The above shelf image (i.e. the singlerow of 4 titles) shows the result of importing an OPML file  of feeds <em>live from the web</em> (from <a href="http://www.oxfordjournals.org/help/oxfordjournals.opml.xml">here</a>, in this case) into the BBLibrary.</p>
+
+<p>Although you can see an OPML feed of the uploaded feeds is available, feeds from the individual journals are not, which I take to be a bug, as this other bookshelf (representing an upload of an OPML fiel from my hard drive, generated by my <a href="http://blogs.open.ac.uk/Maths/ajh59/courseLinksOPML.html">course OPML generator</a>) suggests:</p>
+
+<p><img alt="bblS804.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/bblS804.jpg" width="530" height="188" border="0" /></p>
+
+<p>Nested folders on a shelf are also supported, as this <a href="http://npg.nature.com/pdf/newsfeeds.opml">OPML list of Nature Publishing Group journal feeds</a> (see <a href="http://npg.nature.com/npg/servlet/Content?data=xml/02_newsfeed.xml&style=xml/02_newsfeed.xsl">here</a>) demonstrates:</p>
+
+<p><img alt="bblNested.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/bblNested.jpg" width="537" height="160" border="0" /></p>
+
+<p>Clicking throught the bookshelf title bar takes you to a 'sub' bookshelf containing shelves for each nested bundle of feeds:</p>
+
+<p><img alt="bblNestedFull.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/bblNestedFull.jpg" width="534" height="533" border="0" /></p>
+
+<p>One thing that would be neat here would be for the system to generate a separate OPML file for each shelf in this collection, and provide a link to this file both from these 'sub'bookshelfs, but also from the folder view.</p>
+
+<p>Again, I think there may be a minor bug in the sysitem here becuase some folders <em>do</em> also carry OPML feed links for their contents as both this folder view shows:</p>
+
+<p><img alt="bblFolderFeed.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/bblFolderFeed.jpg" width="530" height="165" border="0" /></p>
+
+<p>and it's correpsonding sub-bookshelf rack:</p>
+
+<p><img alt="bblFolderFeed2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/bblFolderFeed2.jpg" width="526" height="467" border="0" /></p>
+
+<p>One thing I'd quite like to see is a preview of the contents of each feed (something I believe may be on the way...).</p>
+
+<p>In terms of design, the approach followed in Netvibes for previewing feeds may be reusable here. For example, here's a Netvibes feed title preview, along with a description (Journal abstract?) preview:</p>
+
+<p><img alt="ieeeTitlePreview.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/ieeeTitlePreview.jpg" width="331" height="204" border="0" /></p>
+
+<p>Netvibes also lets you look at the whole description text in feedreader style panel:</p>
+
+<p><img alt="ieeePostNV.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/ieeePostNV.JPG" width="787" height="417" border="0" /></p>
+
+<p>but I believe that the intention of the BlogBridge Library folks is not to move into feedreader territory, although feed previews are very much on their to do list.</p>
+
+<p>Form a library point of view, wether than being able to click through from a  feed item link to a feed reader view of that item, it would be neat to be able to configure my view of the bookshelf to let me click straight through to the full text of a journal article via an inserted <a href="http://blogs.open.ac.uk/Maths/ajh59/005864.html">libezproxy</a> link...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 26, 2006 09:29 PM
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007105.html" type="text/javascript" charset="utf-8"></script>
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="BlogBridge Library";
+ z_post_category="Library";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-571814-1";
+urchinTracker();
+</script>
+</body>
+</html>

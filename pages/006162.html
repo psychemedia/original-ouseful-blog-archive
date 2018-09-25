@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: delicious URL Rewrites</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006160.html" title="Importing OPML into IE7" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006173.html" title="Formula One Live Data" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/006160.html">&laquo; Importing OPML into IE7</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/006173.html">Formula One Live Data &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">May 05, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">delicious URL Rewrites</h3>
+
+<p>A little while ago, I posted a Firefox bookmarklet to hide items on a delicious links page that bore a particular tag (<a href="http://blogs.open.ac.uk/Maths/ajh59/005809.html">deliHide</a>). Here's another quick delicious bookmarklet that will do a URL rewrite for you...</p>
+
+<p>What do I mean? Well, if you look at my <a href="http://ouseful.open.ac.uk/redirects.php">OUseful Redirects</a> page, you'll see a whole load of shortcuts that I dangle off the <em>ouseful.open.ac.uk</em> path that I can use to take me quickly (and via a memeorable URL) to pages that are hard to remember the location of.</p>
+
+<p>For example, the easy <em>http://ouseful.open.ac.uk/txr174</em> will take me straight to the course catalogue page for TXR174 (<em>http://www3.open.ac.uk/courses/bin/p12.dll?C01txr174</em>) which has a less than memorable URL.</p>
+
+<p>The key to this is a <a href="http://www.yourhtmlsource.com/sitemanagement/urlrewriting.html">URL rewrite</a>. The only problem is that I need to get to the server to be able to add more of these.</p>
+
+<p><a href="http://tinyurl.com/">TinyURL</a> does something similar, although the focus here is on providing a short - if cryptic - URL in place of a long one. You often see TinyURLs in newspaper and magazine articles, for example.</p>
+
+<p>Anyway, tonight's quick hack is a kludged Firefox bookmarklet that will look for a link on a page that is tagged with <em>usr:redirect</em>. As soon as it finds one, it will extract the URL of that <em>usr:redirect</em> tagged page and load it in to the browser window.</p>
+
+<p>Now I know this is an abuse of the tagging system - it encourages single use tags, for example. But it does demonstrate another way of using a social bookmarking system! ;-)</p>
+
+<p>Anyway - for what it's worth - here's my <a href="javascript:(function(){d=document.body;void(el=d.getElementsByTagName('div'));for(i=0;i<el.length;i++){if(el[i].getAttribute('class')){if(el[i].getAttribute('class').indexOf('meta')!=-1){tl=el[i].getElementsByTagName('a');for(j=0;j<tl.length;j++){if(tl[j].firstChild.nodeValue=='usr:redirect'){t1=el[i].parentNode.childNodes[1].childNodes[0];window.location=t1.getAttribute('href')}};};};};})();">deliURLreWrite</a> bookmarklet.</p>
+
+<p>The real idea, of course, is that this function would be useful in a Greasmonkey script, but I leave that as an exercise for the reader (or until I get another spare quarter of an hour!). Couldn't resist... here it is: <a href="http://blogs.open.ac.uk/Maths/ajh59/GMdeliReWrite.user.js">delicious URL rewrite Greasemonkey script</a>. NB you may also want to lock the script down to your delicious username... and remember, if you have a link with a >em>url:redirect</em> tag listed on a page, that's where the page will go as soon as it's loaded (which is actually a bit clunky...) I wonder whether, if there are several <em>usr:redirect</em> tagged links on a page <em>all</em> of them should be opened in separate windows/tabs?</p>
+
+<p>And the purpose of the script? So I could write something like <em>http://del.icio.us/psychemedia/thisPage</em> and get taken (redirected) straight to whatever page (with its horrible and unmemorable URL) I had tagged as <em>thisPage</em>.</p>
+
+<p>So maybe I need a new delicious account turned over solely to URL rewrites? ;-)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at May  5, 2006 08:31 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+ z_post_title="delicious URL Rewrites";
+ z_post_category="projects";
+</script>
+<script id="stats_script" type="text/javascript" src="http://metrics.performancing.com/mt.js"></script>
+</body>
+</html>
