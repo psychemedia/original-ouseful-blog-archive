@@ -6,13 +6,13 @@
 
 <title>OUseful Info: The Three Faces of Grazr</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008559.html" title="Making the Most of Links from Online Course Materials to External Websites" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./008559.html" title="Making the Most of Links from Online Course Materials to External Websites" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008638.html" title="Online OPML Feed Management" />
+<link rel="next" href="./008638.html" title="Online OPML Feed Management" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/008559.html">&laquo; Making the Most of Links from Online Course Materials to External Websites</a> |
+<a href="./008559.html">&laquo; Making the Most of Links from Online Course Materials to External Websites</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/008638.html">Online OPML Feed Management &raquo;</a>
+<a href="./">Main</a>
+| <a href="./008638.html">Online OPML Feed Management &raquo;</a>
 
 </div>
 
@@ -118,7 +118,7 @@ function forgetMe (f) {
 
 <h3 class="title">The Three Faces of Grazr</h3>
 
-<p>I've been playing with Grazr quite a bit lately (doodling with an <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">Amazon Grazr search widget</a>, for example, as well as <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a>) and here are three distinct ways I've found of using it:<br />
+<p>I've been playing with Grazr quite a bit lately (doodling with an <a href="./008496.html">Amazon Grazr search widget</a>, for example, as well as <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a>) and here are three distinct ways I've found of using it:<br />
 <ol><li>for navigation - links can be fed into a Grazr sidebar widget configured to open clicked links in a named frame (typically a large central panel), using a <em>linktarget</em> argument in the Grazr URL; the script at <em>http://ouseful.open.ac.uk/grazr/grazrNav.php</em> takes two arguments - <em>s=</em> sets the URL for the 'splash' page that is displayed in the central panel when the page loads; the <em>u=</em> argument is the URL for the feed that is loaded into the Grazr widget; <a href="http://ouseful.open.ac.uk/grazr/grazrNav.php?s=http://ouseful.open.ac.uk/searchfeedr&u=http://del.icio.us/rss/psychemedia/opml">Grazr <em>navigation</em> example</a>;</li><br />
 <li>reading content - a Grazr widget can be used as a feed reader; just pass the Grazr widget the URL of the feed you want to read; <a href="http://grazr.com/gzpanel.html?font=arial&fontsize=9pt&view=3p&file=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">Grazr <em>feedreading</em> exmple</a>;</li><br />
 <li>as a (search) widget - the introduction of GrazrScript means that Grazr can make use of form elements to create customised, feed generating URLs; for search engines and catalogues that <a href="http://grazr.com/gzpanel.html?file=http://ouseful.open.ac.uk/grazrAmazon.opml">Grazr <em>form based (search) widget</em> example</a> (Amazon search); it is also possible to create a search engine widget if you can get search results into an RSS format, like this <a href="http://ouseful.open.ac.uk/grazr/grazrNav.php?u=http://ouseful.open.ac.uk/grazr/grazrGoogleOPML.php">Google search Grazr widget</a>;</li></ol></p>
@@ -129,7 +129,7 @@ function forgetMe (f) {
 
 <p>Looks like StringLE will now be able to do audio ;-)</p>
 
-<p>PS I just added this as a PS to the <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">Amazon Grazr widget post</a>, but I know how rarely I read reposts, so I'm going to post it here too:</p>
+<p>PS I just added this as a PS to the <a href="./008496.html">Amazon Grazr widget post</a>, but I know how rarely I read reposts, so I'm going to post it here too:</p>
 
 <p>Here's a quick way of customising a Grazr/Amazon search widget to let you 'hardwire' the locale and product type for the search. There are two buttons in the form  - one uses Javascript, the other doesn't:<br />
 <script type="text/javascript">function createGrazr(){var countryNode=document.getElementById("country");var country=countryNode.options[countryNode.selectedIndex].value;var searchtypeNode=document.getElementById("searchtype");var searchtype=searchtypeNode.options[searchtypeNode.selectedIndex].value;window.location="http://grazr.com/config.html?file=http://ouseful.open.ac.uk/grazr/grazrAmazonOPML.php?country="+country+"&searchtype="+searchtype;}</script><form name="amznform" action="http://ouseful.open.ac.uk/grazr/grazrAmazonRedirect.php" method="GET">Amazon Search:<br />
@@ -144,7 +144,7 @@ Form Action: <input type="submit" value="Grazr It!" /></form></p>
 
 
 <span class="posted">Posted by ajh59 at November 13, 2006 12:42 AM
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008608.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./008608.html" type="text/javascript" charset="utf-8"></script>
 <!--
 
  

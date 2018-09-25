@@ -6,13 +6,13 @@
 
 <title>OUseful Info: Navigating OpenLearn Open Educational Content</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/008183.html" title="An Introduction to Social Networking" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./008183.html" title="An Introduction to Social Networking" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/008208.html" title="OpenLearn Content via RSS?" />
+<link rel="next" href="./008208.html" title="OpenLearn Content via RSS?" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/008183.html">&laquo; An Introduction to Social Networking</a> |
+<a href="./008183.html">&laquo; An Introduction to Social Networking</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/008208.html">OpenLearn Content via RSS? &raquo;</a>
+<a href="./">Main</a>
+| <a href="./008208.html">OpenLearn Content via RSS? &raquo;</a>
 
 </div>
 
@@ -134,13 +134,13 @@ function forgetMe (f) {
 
 <p>So, leaving all the good things that I could say unsaid (because hopefully that stuff will all be being posted elsewhere ;-), here's my first hack,  an exploration of an alternative to the lousy in-course navigation:</p>
 
-<p><img alt="openlearnCourseNav.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnCourseNav.jpg" width="770" height="595" border="0" /></p>
+<p><img alt="openlearnCourseNav.jpg" src="./openlearnCourseNav.jpg" width="770" height="595" border="0" /></p>
 
 <p>The hack is to generate an OPML file of links from the course index page (such as <a href="http://openlearn.open.ac.uk/course/view.php?id=1284"></a>) and feed these into an <a href="http://www.optimalbrowser.com">Optimal OPML browser</a> to provide a tree based naviagtional widget. You can try one out <a href="http://ouseful.open.ac.uk/openlearnplayground/navigate.php?cid=1284">here</a>;</p>
 
 <p>Here's what it looks like:</p>
 
-<p><img alt="openlearnOPMLnavigation.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnOPMLnavigation.jpg" width="1108" height="526" border="0" /></p>
+<p><img alt="openlearnOPMLnavigation.jpg" src="./openlearnOPMLnavigation.jpg" width="1108" height="526" border="0" /></p>
 
 <p>To simplify matters, the following bookmarklet will redirect you to my OPML navigator wrapper for a course - if it exists - from a course index page on <em>openlearn.open.ac.uk</em> (e.g. you can try it out on the index page for <a href="http://openlearn.open.ac.uk/course/view.php?id=1284">Living with the internet: keeping it safe</a> ): <a href="javascript:void(h='http://ouseful.open.ac.uk/openlearnplayground/navigate.php?cid=');void(h+=location.href.split('=')[1]);window.location=h;">Redirect OpenLearn</a> bookmarklet.</p>
 
@@ -152,7 +152,7 @@ function forgetMe (f) {
 
 <p>If you want to give it a go, you need to apply it to a course index page - the OPML will be appended to the bottom of the page: <a href="javascript:void(d=document);void(l=d.getElementsByTagName('a'));if (l.length!=0){void(ll=d.createElement('pre'));void(t=d.getElementsByTagName('title'));void(tv=t[0].firstChild.nodeValue);void(o='<opml version=%221.0%22>\n<head>\n<title>'+tv+'</title>\n</head>\n<body>\n<outline text=%22'+tv.split('-')[0]+'%22>\n');void(n=d.createTextNode(o));ll.appendChild(n);void(c=1);for (i=0;i<l.length; i++) {void(r=l[i].getAttribute('href'));if ((r.indexOf('view')!=-1)&&(r.indexOf('user')==-1)) if (r.indexOf('http://')==0) {void(t=l[i].firstChild.nodeValue);void(s='');if (t.charAt(0)==c.toString()){if (t.charAt(0)!=%221%22) s=%22</outline>\n%22; s+='<outline text=%22Section '+c+'%22>\n';c++};if ((c>1)&&(%22123456789%22.indexOf(t.charAt(0))==-1)) {void(c=0);s=%22</outline>\n%22;};void(r=s+'<outline text=%22'+t+'%22 type=%22link%22 url=%22'+r+'%22/>\n');void(lt=d.createTextNode(r));void(ll.appendChild(lt));};};void(o='</outline>\n</body>\n</opml>\n\n');void(n=d.createTextNode(o));ll.appendChild(n);void(b=d.getElementsByTagName('body'));void(b[0].appendChild(ll));}">OPMLify OpenLearn</a></p>
 
-<p><img alt="openlearnOPML.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnOPML.jpg" width="734" height="323" border="0" /></p>
+<p><img alt="openlearnOPML.jpg" src="./openlearnOPML.jpg" width="734" height="323" border="0" /></p>
 
 <p>If the section numbering is omitted, the script will not correctly create section folders, so you may have to repair the OPML by hand if: a) that's the case; and b) you want the section based navigation.</p>
 
@@ -162,7 +162,7 @@ function forgetMe (f) {
 
 
 <span class="posted">Posted by ajh59 at October 25, 2006 09:38 PM
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/008189.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./008189.html" type="text/javascript" charset="utf-8"></script>
 <!--
 
  

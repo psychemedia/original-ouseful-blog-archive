@@ -6,13 +6,13 @@
 
 <title>OUseful Info: (Social) Bookmark Interoperability</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006142.html" title="Ad Supported Courses" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./006142.html" title="Ad Supported Courses" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006160.html" title="Importing OPML into IE7" />
+<link rel="next" href="./006160.html" title="Importing OPML into IE7" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/006142.html">&laquo; Ad Supported Courses</a> |
+<a href="./006142.html">&laquo; Ad Supported Courses</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/006160.html">Importing OPML into IE7 &raquo;</a>
+<a href="./">Main</a>
+| <a href="./006160.html">Importing OPML into IE7 &raquo;</a>
 
 </div>
 
@@ -118,7 +118,7 @@ function forgetMe (f) {
 
 <h3 class="title">(Social) Bookmark Interoperability</h3>
 
-<p>Some time ago I posted on the topic of <a href="http://blogs.open.ac.uk/Maths/ajh59/005332.html">Social Bookmarking Interoperability</a>, something I've had cause to look at again several times recently: firstly on the issue of synching bookmarks between users on two different social bookmarking systems (Simpy and delicious); secondly on managing browser bookmark collections, and synching between different browsers and social bookmarking systems; thirdly on the display of bookmark collections in folder based displays.</p>
+<p>Some time ago I posted on the topic of <a href="./005332.html">Social Bookmarking Interoperability</a>, something I've had cause to look at again several times recently: firstly on the issue of synching bookmarks between users on two different social bookmarking systems (Simpy and delicious); secondly on managing browser bookmark collections, and synching between different browsers and social bookmarking systems; thirdly on the display of bookmark collections in folder based displays.</p>
 
 <p>All these issues got me thinking about some sort of bookmark managing system that would let me organise my bookmarks across and between browsers and social bookmarking systems, within folders and live folders (i.e. tags) and so on - a windows explorer like view, if you like, within which is could  move, syhnch and organise bookmarks to my heart's desire.</p>
 
@@ -142,21 +142,21 @@ function forgetMe (f) {
  <br />
 Anyway, one thing that occurred to me that I haven't done for a long time was to think about the various ways I could use <a href="http://www.mozilla.com/firefox/livebookmarks.html">live bookmarks</a> to display my delicious bookmarks, for example, in my browser. This has limited utility though  - for example, I can't build up folder hierarchies (I don't think) using live bookmarks on the toolbar or in the bookmarks sidebar. </p>
 
-<p><img alt="liveBookmarkNew.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/liveBookmarkNew.jpg" width="307" height="239" border="0" /> <img alt="liveBookmarkSiderbar.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/liveBookmarkSiderbar.jpg" width="385" height="295" border="0" /></p>
+<p><img alt="liveBookmarkNew.jpg" src="./liveBookmarkNew.jpg" width="307" height="239" border="0" /> <img alt="liveBookmarkSiderbar.jpg" src="./liveBookmarkSiderbar.jpg" width="385" height="295" border="0" /></p>
 
 <p>However, feedreaders that support OPML do let you have folder directories, don't they?;-) Like <A href="http://sage.mozdev.org/">Sage</a> for instance...</p>
 
 <p>Which means that if I construct an appropriate OPML feed, I can import a list of 'folder organised' bookmarks from a social bookmarks feed...</p>
 
-<p>Where to find such a feed, though...? Hmmm - I feel a tweak to the Social Bookmarks OPML Feed Generator coming on. Here's a first attempt - <a href="http://blogs.open.ac.uk/Maths/ajh59/sbFeedsOPMLFeedBlender-d.html">Social Bookmarks OPML feed generator with directory structure</a>:</p>
+<p>Where to find such a feed, though...? Hmmm - I feel a tweak to the Social Bookmarks OPML Feed Generator coming on. Here's a first attempt - <a href="./sbFeedsOPMLFeedBlender-d.html">Social Bookmarks OPML feed generator with directory structure</a>:</p>
 
-<p><img alt="sbOPMLFolder.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sbOPMLFolder.jpg" width="604" height="452" border="0" /></p>
+<p><img alt="sbOPMLFolder.jpg" src="./sbOPMLFolder.jpg" width="604" height="452" border="0" /></p>
 
 <p>(You'll notice the additional structure can be suppressed via the checkbox. The profiles are numbered as they are becuase I'd previously created, and deleted, a couple of feed profiles. It's easy enough to let a user name a feed profile, but I'd need to change the interface around a bit (I'm running out of room!) In the meantime, folders can be renamed in the bookmark manager.</p>
 
 <p>Anyway, if I now save the OPML and import it into Sage, this is what I get:</p>
 
-<p><img alt="sbOPMLSage.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/sbOPMLSage.jpg" width="376" height="561" border="0" /></p>
+<p><img alt="sbOPMLSage.jpg" src="./sbOPMLSage.jpg" width="376" height="561" border="0" /></p>
 
 <p>What I'm wondering now is, should I also support additional structure, for example organising user folders where there are several users in a profile, or social bookmarking system folders where several users are defined?</p>
 
@@ -193,7 +193,7 @@ Anyway, one thing that occurred to me that I haven't done for a long time was to
 
 </div>
 </div>
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006153.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./006153.html" type="text/javascript" charset="utf-8"></script>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">

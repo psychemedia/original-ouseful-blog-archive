@@ -6,13 +6,13 @@
 
 <title>OUseful Info: Improved OU Library Lookup Greasemonkey Script</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006101.html" title="Social Bookmarking OPML Feed Roller" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./006101.html" title="Social Bookmarking OPML Feed Roller" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006110.html" title="RefWorks from Google Scholar" />
+<link rel="next" href="./006110.html" title="RefWorks from Google Scholar" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/006101.html">&laquo; Social Bookmarking OPML Feed Roller</a> |
+<a href="./006101.html">&laquo; Social Bookmarking OPML Feed Roller</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/006110.html">RefWorks from Google Scholar &raquo;</a>
+<a href="./">Main</a>
+| <a href="./006110.html">RefWorks from Google Scholar &raquo;</a>
 
 </div>
 
@@ -120,21 +120,21 @@ function forgetMe (f) {
 
 <p>Last weekend, I stumbled across a <a href="http://silkworm.talis.com/examples/index.html">Talis Silkworm Greasemonkey script</a> which offered a nice way of inlining results (in Firefox only, of course) for various ISBN lookup and linking services (the script automatically creates links to Amazon, xISBN and so on). If you haven't see the effect of running this sort of script before, they also have a screencast showing their script in action.</p>
 
-<p>Anyway, I couldn't resist tweaking the script so that it was locally OUseful, so here it is: <a href="http://blogs.open.ac.uk/Maths/ajh59/isbnEnrichment.user.js">OUseful ISBN enrichment Greasemonkey script</a>.</p>
+<p>Anyway, I couldn't resist tweaking the script so that it was locally OUseful, so here it is: <a href="./isbnEnrichment.user.js">OUseful ISBN enrichment Greasemonkey script</a>.</p>
 
 <p>And here's what it'll do to an ISBN in a web page. Firstky, it'll find ISBN numbers, highlight them, and  add a 'window open' button:</p>
 
-<p><img alt="isbnAugmentLink.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/isbnAugmentLink.jpg" width="561" height="200" border="0" /></p>
+<p><img alt="isbnAugmentLink.jpg" src="./isbnAugmentLink.jpg" width="561" height="200" border="0" /></p>
 
 <p>When you click on the '+' sign, the ISBN will be used to pull a book cover down from Amazon, the ISBN will be passed to the xISBN service to see if there are alternative versions of the book (with different ISBN numbers) available, and all related ISBNs will be used to seed links to the OU library catalogue, the OU library ebook subscription catalogue and, and the Google and Amazon look inside services.</p>
 
-<p><img alt="isbnAugmentView.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/isbnAugmentView.jpg" width="797" height="524" border="0" /></p>
+<p><img alt="isbnAugmentView.jpg" src="./isbnAugmentView.jpg" width="797" height="524" border="0" /></p>
 
 <p>Note that at the moment, the links that are generated are done so without heed as to whether or not the book in in the OU library, the book is available for search/look inside at Amazon or Google, the the book is subscribed to in ebook form.</p>
 
 <p>A fully working version of the script would therefore:  </p>
 
-<p>1) display whether or not the book is in the OU library (e.g. akin to the functionality provided by this <a href="http://blogs.open.ac.uk/Maths/ajh59/006028.html">Amazon/OU library lookup script</a>);</p>
+<p>1) display whether or not the book is in the OU library (e.g. akin to the functionality provided by this <a href="./006028.html">Amazon/OU library lookup script</a>);</p>
 
 <p>2) display a link to the ebook directly, if it exists. An XML based search response should be easy enough to knock up, if this <a href="http://library.open.ac.uk/resources/ebookresult.php?search_term=intelligent+systems&search_field=title">query  for e-books</a> is anything to go by. (Searching for ebooks via the custom <a href="http://library.open.ac.uk/resources/ebooks.html">ebook search form</a> is certainly a lot easier than going via the Voyager catalogue.</p>
 
@@ -146,7 +146,7 @@ function forgetMe (f) {
 
 <p>There are a couple of things worth remarking on about that page. Firstly, it's not maintained by the OU library, nor is the information provided by the OU library. (In fact, it's quite difficult getting <em>just</em> course book information out of the Voyager catalogue in an easy way (if at all), something that I believe is being looked at at the moment). Secondly, all the course book information is provided on a single monolithic page, with a drop down list but no search box to find the book information for a particular course - even with my limited talents, I'd love to have a go at redesigning this page just using CSS and a tiny bit of Javascript so the displayed area fits on a single screen with no scrolling. It'd be a really nice theme for a simple AJAX exercise too;-)</p>
 
-<p>To that extent (AJAXifying the page) I whether the database that was used to generate the cocourse books info page is the one that feeds the course book information into the courses web pages (as reviewed in this post: <a href="http://blogs.open.ac.uk/Maths/ajh59/005988.html">OU Course Catalogue Takes Lead from Amazon?</a>) and whether the information (and perhaps ebook links) are also fed into student's personal course pages? (Does ROUTES have links for ebook version of course books where avaialble, I wonder? I suspect not...).</p>
+<p>To that extent (AJAXifying the page) I whether the database that was used to generate the cocourse books info page is the one that feeds the course book information into the courses web pages (as reviewed in this post: <a href="./005988.html">OU Course Catalogue Takes Lead from Amazon?</a>) and whether the information (and perhaps ebook links) are also fed into student's personal course pages? (Does ROUTES have links for ebook version of course books where avaialble, I wonder? I suspect not...).</p>
 
 <p>Making course book information available in machine readable form through a simple URL directly (as well as via various simple URL based searches) would be a very handy way of transporting course book information around the OU and may also lead to interesting ways of using that info.</p>
 
@@ -160,7 +160,7 @@ with <em>expander.addEventListener("click", doExpander, true);</em><br />
 
 
 <span class="posted">Posted by ajh59 at April 29, 2006 12:59 PM
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006103.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./006103.html" type="text/javascript" charset="utf-8"></script>
 <!--
 
  

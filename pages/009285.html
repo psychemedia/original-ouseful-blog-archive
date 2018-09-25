@@ -7,13 +7,13 @@
 
 <title>OUseful Info: Let's Get Wiring - Yahoo Pipes</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/009267.html" title="Getting into Gaming" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./009267.html" title="Getting into Gaming" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/009301.html" title="deliSearch Pipe" />
+<link rel="next" href="./009301.html" title="deliSearch Pipe" />
 
 
 <script type="text/javascript" language="javascript">
@@ -92,7 +92,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -101,10 +101,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/009267.html">&laquo; Getting into Gaming</a> |
+<a href="./009267.html">&laquo; Getting into Gaming</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/009301.html">deliSearch Pipe &raquo;</a>
+<a href="./">Main</a>
+| <a href="./009301.html">deliSearch Pipe &raquo;</a>
 
 </div>
 
@@ -127,43 +127,43 @@ function forgetMe (f) {
 
 <p>In a nutshell <em>pipes</em> offers a visual feed wiring tool</em>; check out <a href="http://radar.oreilly.com/archives/2007/02/pipes_and_filte.html">Tim O'Reilly's ad for pipes</a> for the overview and below for my first quick foray...</p>
 
-<p>A couple of weeks (?) ago, I posted about <a href="http://blogs.open.ac.uk/Maths/ajh59/009224.html">searching OpenLearn anywhere</a> by creating a "Dapp" to scrape <a href="http://www.dappit.com/dapp-howto-use.php?dappName=OpenLearnSearch">OpenLearn Search Results</a>.</p>
+<p>A couple of weeks (?) ago, I posted about <a href="./009224.html">searching OpenLearn anywhere</a> by creating a "Dapp" to scrape <a href="http://www.dappit.com/dapp-howto-use.php?dappName=OpenLearnSearch">OpenLearn Search Results</a>.</p>
 
 <p>This application offers - among other things - an RSS feed of results from a search over <a href="http://openlearn.open.ac.uk">OpenLearn</a> content. (OpenLearn doesn't offer this natively, of course, but the results are clean enough to scrape reliably, which is what things like <a href="http://www.dappit.com">Dapper</a> were invented for, right? Web service intermediation for people who don't do web services.)</p>
 
-<p>I showed in the post how to use the dapp feed to create an OpenLearn/Grazr search widget using <a href="http://blogs.open.ac.uk/Maths/ajh59/grazrOpenLearnSearch.opml">this bit of Grazrscript</a>. And here's how to use in <em>pipes</em> - an <a href="http://pipes.yahoo.com/pipes/uHUU3Gq32xGtaUcNphr_og">OpenLearn search pipe</a>:</p>
+<p>I showed in the post how to use the dapp feed to create an OpenLearn/Grazr search widget using <a href="./grazrOpenLearnSearch.opml">this bit of Grazrscript</a>. And here's how to use in <em>pipes</em> - an <a href="http://pipes.yahoo.com/pipes/uHUU3Gq32xGtaUcNphr_og">OpenLearn search pipe</a>:</p>
 
-<p><img alt="pipes1.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipes1.png" width="894" height="513" border="0" /></p>
+<p><img alt="pipes1.png" src="./pipes1.png" width="894" height="513" border="0" /></p>
 
 <p>As has been commented on elsewhere, this interface is very <a href="http://ning.com"><em>Ning</em>-like</a> - the pipe/application is both useable and cloneable - so you can clone (and then edit) someone else's pipe.</p>
 
 <p>Ok, so that's what you see when you 'run' a pipe. Here's how you build it:</p>
 
-<p><img alt="pipeOpenLearn.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeOpenLearn.png" width="666" height="478" border="0" /></p>
+<p><img alt="pipeOpenLearn.png" src="./pipeOpenLearn.png" width="666" height="478" border="0" /></p>
 
 <p>The tool is quite easy to get to grips with, at least at this simple level. As you can see, the Dapp URL has several arguments. Although I typed this in, I soon realised you can just past a whole URL for a feed returning webservice into the URL box, and it will pull out the arguments for you (something I hope you'll soon be able to do with Grazr... although maybe there's no need now...?)</p>
 
 <p>What I particularly like about this example is that it demonstrates how feed outputs from <em>different</em> web services can potentially be wired together...</p>
 
-<p>Okay - so that's just one feed, being searched. It's trivial to add another - so I'll use the <a href="http://blogs.open.ac.uk/Maths/ajh59/006057.html">OU ROUTES search</a>, which does have an RSS output:</p>
+<p>Okay - so that's just one feed, being searched. It's trivial to add another - so I'll use the <a href="./006057.html">OU ROUTES search</a>, which does have an RSS output:</p>
 
-<p><img alt="pipeOLandROUTES1" src="http://blogs.open.ac.uk/Maths/ajh59/pipeOLandROUTES1.png" width="1094" height="576" border="0" /></p>
+<p><img alt="pipeOLandROUTES1" src="./pipeOLandROUTES1.png" width="1094" height="576" border="0" /></p>
 
 <p>It's easy to merge feeds, limit them, sort them and so on (which I've yet to explore in anything other than cursory depth). In the above demo, I just take the first five items from each search and combine them in an <a href="http://pipes.yahoo.com/pipes/uqZK1Wy32xGZLdgUt5qdmw">OpenLearn and ROUTES combined search</a> output feed.</p>
 
 <p>The above shows how quickly feed wiring diagrams could get complicated, so rather than cloning and growing pipe applications, as I did in the above case, it's more advisable to reuse pre-existing pipes, if appropriate. So for example, I already had the OpenLearn Search pipe, so I can reuse it in a <a href="http://pipes.yahoo.com/pipes/8lJH_G232xGBfqL5XqIxGw/">modified combined OpenLearn and ROUTES search pipe</a>:</p>
 
-<p><img alt="pipeOLandROUTES2" src="http://blogs.open.ac.uk/Maths/ajh59/pipeOLandROUTES2.png" width="946" height="568" border="0" /></p>
+<p><img alt="pipeOLandROUTES2" src="./pipeOLandROUTES2.png" width="946" height="568" border="0" /></p>
 
 <p>Of course, I could create a <a href="http://pipes.yahoo.com/pipes/0lVSCHC32xGtUeAfphr_og/">ROUTES search pipe</a> and then just <a href="http://pipes.yahoo.com/pipes/yszyG3C32xG_P1Mgt5qdmw/">wire the ROUTES and the OpenLearn Search pipes together</a>...</p>
 
-<p><img alt="pipeROUTES.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeROUTES.png" width="444" height="548" border="0" /></p>
+<p><img alt="pipeROUTES.png" src="./pipeROUTES.png" width="444" height="548" border="0" /></p>
 
 <p>The pipes wiring interface is really easy to use, and I think it's going to be a lot of fun playing with it over the coming weeks and months.</p>
 
 <p>The question is, how <em>ouseful</em> is wiring and filtering feeds likely to be for us and/or OUr students?</p>
 
-<p>PS Pipes seems to be down at the mo - so I can't check to see if this works - but here's a guess at a <a href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=3p&file=http://blogs.open.ac.uk/Maths/ajh59/openlearnROUTESgrazrSearch.opml">Grazr front end</a> to a the combined OpenLearn/ROUTES piped search described above... [was originally broken, now fixed; heh, heh - a Dapp fed pipe inside another pipe, with a user interface provided via a Grazr widget... Good stuff :-)</p>
+<p>PS Pipes seems to be down at the mo - so I can't check to see if this works - but here's a guess at a <a href="http://grazr.com/gzpanel.html?font=arial&fontsize=12pt&view=3p&file=./openlearnROUTESgrazrSearch.opml">Grazr front end</a> to a the combined OpenLearn/ROUTES piped search described above... [was originally broken, now fixed; heh, heh - a Dapp fed pipe inside another pipe, with a user interface provided via a Grazr widget... Good stuff :-)</p>
 
 <p>Technorati Tags: <a class="performancingtags" href="http://technorati.com/tag/pipes" rel="tag">pipes</a>, <a class="performancingtags" href="http://technorati.com/tag/rss" rel="tag">rss</a></p>
 
@@ -195,7 +195,7 @@ function forgetMe (f) {
 
 </div>
 </div>
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/009285.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./009285.html" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write("\<script src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'>\<\/script>" );

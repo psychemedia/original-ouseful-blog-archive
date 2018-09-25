@@ -6,13 +6,13 @@
 
 <title>OUseful Info: deliSearch on delicious</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007371.html" title="Using iframes in a Tab Widget to Support Web Page Comparison" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./007371.html" title="Using iframes in a Tab Widget to Support Web Page Comparison" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007387.html" title="deliSearch Widget on widgetbox" />
+<link rel="next" href="./007387.html" title="deliSearch Widget on widgetbox" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/007371.html">&laquo; Using iframes in a Tab Widget to Support Web Page Comparison</a> |
+<a href="./007371.html">&laquo; Using iframes in a Tab Widget to Support Web Page Comparison</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/007387.html">deliSearch Widget on widgetbox &raquo;</a>
+<a href="./">Main</a>
+| <a href="./007387.html">deliSearch Widget on widgetbox &raquo;</a>
 
 </div>
 
@@ -118,21 +118,21 @@ function forgetMe (f) {
 
 <h3 class="title">deliSearch on delicious</h3>
 
-<p>With Em at the <a href="http://www.bestival.net/">Bestival</a>, I thought I'd take the opportunity to have another tinker with some <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a> derivatives this weekend, so here's the first offering: <em>deliSearch tools for del.icio.us</em>.</p>
+<p>With Em at the <a href="http://www.bestival.net/">Bestival</a>, I thought I'd take the opportunity to have another tinker with some <a href="./deliSearch.html">deliSearch</a> derivatives this weekend, so here's the first offering: <em>deliSearch tools for del.icio.us</em>.</p>
 
 <p>The standard delicious search offerings are to search delicious, your <a href="htpp://del.icio.us">delicious</a> links or the web:</p>
 
-<p><img alt="deliciousSearch.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliciousSearch.jpg" width="362" height="102" border="0" /></p>
+<p><img alt="deliciousSearch.jpg" src="./deliciousSearch.jpg" width="362" height="102" border="0" /></p>
 
-<p>As regular readers will know, I have been tinkering with various feed limited searches for some time now (most recently with <a href="http://blogs.open.ac.uk/Maths/ajh59/007309.html">searchfeedr</a>), typically using the pages listed in a feed - or the domain those pages are served from - to limit a search.</p>
+<p>As regular readers will know, I have been tinkering with various feed limited searches for some time now (most recently with <a href="./007309.html">searchfeedr</a>), typically using the pages listed in a feed - or the domain those pages are served from - to limit a search.</p>
 
-<p>As its name hopefully suggests, <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a> uses a feed from delicious to limit a search. [<em><a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.php">new AJAX deliSearch interface in testing...</a></em> ]</p>
+<p>As its name hopefully suggests, <a href="./deliSearch.html">deliSearch</a> uses a feed from delicious to limit a search. [<em><a href="./deliSearch.php">new AJAX deliSearch interface in testing...</a></em> ]</p>
 
 <p>Services like <a href="http://rollyo.com">Rollyo</a> do similar things in terms of letting users construct their own search engines, but for all their prettiness I do wonder why we need these extra services when we can overload them on something like delicious?</p>
 
-<p>So - here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearchPanel.user.js">deliSearch Greasemonkey script</a> and a <a href="javascript:(function(){d=document;b=d.getElementsByTagName('body')[0];function ss(src){s=d.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src',src);b.appendChild(s);};a=location.href; a=a.replace('http://del.icio.us/','http://del.icio.us/feeds/json/');ss(a);ss('http://blogs.open.ac.uk/Maths/ajh59/deliSearchPanelX.js');})()">deliSearch bookmarklet</a> (Firefox and IE7 at least) that will add (another) search box to a delicious links page and let the user search over either those links <em>or</em> the domains from which they are served.</p>
+<p>So - here's a <a href="./deliSearchPanel.user.js">deliSearch Greasemonkey script</a> and a <a href="javascript:(function(){d=document;b=d.getElementsByTagName('body')[0];function ss(src){s=d.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src',src);b.appendChild(s);};a=location.href; a=a.replace('http://del.icio.us/','http://del.icio.us/feeds/json/');ss(a);ss('./deliSearchPanelX.js');})()">deliSearch bookmarklet</a> (Firefox and IE7 at least) that will add (another) search box to a delicious links page and let the user search over either those links <em>or</em> the domains from which they are served.</p>
 
-<p><img alt="deliSearchGM.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/deliSearchGM.jpg" width="547" height="133" border="0" /></p>
+<p><img alt="deliSearchGM.jpg" src="./deliSearchGM.jpg" width="547" height="133" border="0" /></p>
 
 <p>Like Rollyo, deliSearch uses Yahoo to construct OR'd <em>site:</em> or <em>url:</em> search limits, demonstrating how major search engines can be mashed with just a little imagination.</p>
 
@@ -142,7 +142,7 @@ function forgetMe (f) {
 
 
 <span class="posted">Posted by ajh59 at September  9, 2006 09:29 PM
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007379.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./007379.html" type="text/javascript" charset="utf-8"></script>
 <!--
 
  

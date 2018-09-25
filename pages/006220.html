@@ -6,13 +6,13 @@
 
 <title>OUseful Info: Testing Javascript Includes...</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/006204.html" title="If We Really Had Global Pretensions for Web2.OU..." />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./006204.html" title="If We Really Had Global Pretensions for Web2.OU..." />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/006260.html" title="TIme for a New Game? Google Trend Match" />
+<link rel="next" href="./006260.html" title="TIme for a New Game? Google Trend Match" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description">In Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/006204.html">&laquo; If We Really Had Global Pretensions for Web2.OU...</a> |
+<a href="./006204.html">&laquo; If We Really Had Global Pretensions for Web2.OU...</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/006260.html">TIme for a New Game? Google Trend Match &raquo;</a>
+<a href="./">Main</a>
+| <a href="./006260.html">TIme for a New Game? Google Trend Match &raquo;</a>
 
 </div>
 
@@ -131,9 +131,9 @@ function forgetMe (f) {
 
 <p>Well, here are a couple of attempts:</p>
 
-<p> - a <a href="http://blogs.open.ac.uk/Maths/ajh59/jsIncludeTest.html">simple web page</a> that lets you put in the URL of a Javascript include, like <em>http://metaatem.net/spell.php?picsize=t&string=OUseful</em>, for example, and it'll then load the script into the browser for you so you can try it out. It sort of works (but now how I wanted it to). Instead, I prefer:</p>
+<p> - a <a href="./jsIncludeTest.html">simple web page</a> that lets you put in the URL of a Javascript include, like <em>http://metaatem.net/spell.php?picsize=t&string=OUseful</em>, for example, and it'll then load the script into the browser for you so you can try it out. It sort of works (but now how I wanted it to). Instead, I prefer:</p>
 
-<p> - an <a href="javascript:d=document;t=d.selection?d.selection.createRange().text:d.getSelection();void(window.open('http://blogs.open.ac.uk/Maths/ajh59/jsIncludeTest.php?js='+escape(t)))">insert this JS</a> bookmarklet that will let you highlight a URL that is used within a Javascript include file, (like <em>http://metaatem.net/spell.php?picsize=t&string=OUseful</em> or <em>http://del.icio.us/feeds/js/psychemedia/opml</em>)  and which will then load a test page that includes that file. (For some reason, this bookmarklet doesn't appear to work from inside the page (i.e. by clicking on the link in this page) - you need to actually use it as a bookmarklet from the browser toolbar for it to work.)</p>
+<p> - an <a href="javascript:d=document;t=d.selection?d.selection.createRange().text:d.getSelection();void(window.open('./jsIncludeTest.php?js='+escape(t)))">insert this JS</a> bookmarklet that will let you highlight a URL that is used within a Javascript include file, (like <em>http://metaatem.net/spell.php?picsize=t&string=OUseful</em> or <em>http://del.icio.us/feeds/js/psychemedia/opml</em>)  and which will then load a test page that includes that file. (For some reason, this bookmarklet doesn't appear to work from inside the page (i.e. by clicking on the link in this page) - you need to actually use it as a bookmarklet from the browser toolbar for it to work.)</p>
 
 <p>The bookmarklet makes a call to a script which in minimal from looks like this:</p>
 
@@ -153,7 +153,7 @@ if (isset($_GET['js']) )<br />
 
 
 <span class="posted">Posted by ajh59 at May  9, 2006 03:39 PM
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/006220.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./006220.html" type="text/javascript" charset="utf-8"></script>
 <!--
 
  

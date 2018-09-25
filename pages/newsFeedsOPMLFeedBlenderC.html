@@ -265,8 +265,8 @@ function getOptimalBrowserURL(){
 // if ((userList=='')&&(sbServiceArray.indexOf('simpy')!=-1)) sbServiceList=sbServiceList.replace(/ ?simpy/,'');
 
  var URL='NULL';
- //if (sbServiceList!='') URL='http://blogs.open.ac.uk/Maths/ajh59/newsOPMLB.php?tags='+escape(tagCombinationList)+'&services='+escape(sbServiceList);
- var tmpURL='http://blogs.open.ac.uk/Maths/ajh59/newsOPMLB.php?tags='+tagCombinationList+'&services='+sbServiceList;
+ //if (sbServiceList!='') URL='./newsOPMLB.php?tags='+escape(tagCombinationList)+'&services='+escape(sbServiceList);
+ var tmpURL='./newsOPMLB.php?tags='+tagCombinationList+'&services='+sbServiceList;
  if (sbServiceList!='') URL='http://optimalbrowser.com/optimal.php?url='+escape(tmpURL)+'&submit=Submit';
  return URL;
 
@@ -284,7 +284,7 @@ function getRESTfulURL(){
 // if ((userList=='')&&(sbServiceArray.indexOf('simpy')!=-1)) sbServiceList=sbServiceList.replace(/ ?simpy/,'');
 
  var URL='NULL';
- if (sbServiceList!='') URL='http://blogs.open.ac.uk/Maths/ajh59/newsOPMLB.php?tags='+escape(tagCombinationList)+'&services='+escape(sbServiceList);
+ if (sbServiceList!='') URL='./newsOPMLB.php?tags='+escape(tagCombinationList)+'&services='+escape(sbServiceList);
  return URL;
 }
 

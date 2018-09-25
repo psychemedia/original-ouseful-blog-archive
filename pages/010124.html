@@ -6,13 +6,13 @@
 
 <title>OUseful Info: Openlearn XML Processor</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/010122.html" title="Coherent Design Across Web Apps" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010122.html" title="Coherent Design Across Web Apps" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/010163.html" title="Visualising Geo-temporal RSS Feeds" />
+<link rel="next" href="./010163.html" title="Visualising Geo-temporal RSS Feeds" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/010122.html">&laquo; Coherent Design Across Web Apps</a> |
+<a href="./010122.html">&laquo; Coherent Design Across Web Apps</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/010163.html">Visualising Geo-temporal RSS Feeds &raquo;</a>
+<a href="./">Main</a>
+| <a href="./010163.html">Visualising Geo-temporal RSS Feeds &raquo;</a>
 
 </div>
 
@@ -127,10 +127,10 @@ function forgetMe (f) {
 <p>So what's it do?</p>
 
 <p>Well - put in the URL to an OpenLearn XML file (you can host them on your own server after downloading them from <a href="http://labspace.open.ac.uk">LabSpace</a>, which requires you to register for the course and blah de blah de blah...) - or just stick in the unit code to one of the files I've alredy liberated - and the processor will (if it's working ;-):<br />
-<ul><li>generate a link to a URL that uses a script to generate an OPML file that lists the media assets contained in the unit (L120_1 is a good demo of this (as reported previously in this post on  <a href="http://blogs.open.ac.uk/Maths/ajh59/010097.html">OpenLearn Asset Stripping</a>); a link to a Grazr view of the file is also generated;</li><br />
+<ul><li>generate a link to a URL that uses a script to generate an OPML file that lists the media assets contained in the unit (L120_1 is a good demo of this (as reported previously in this post on  <a href="./010097.html">OpenLearn Asset Stripping</a>); a link to a Grazr view of the file is also generated;</li><br />
 <li>generate a link to an RSS version of the course unit (as well as a link to a Grazr previewer); the <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearn2rss.xsl">stylesheet</a> is still a bit ropey, but it's good enough for (some) demos; I'm having all sorts of problems with the character set, so if someone can tell me what I'm doing wrong, that'd be much appreciated (it's something I've never really looked at).  The translation works by passing the XML file URL to a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=0F8Z_y7d2xGkWV9fnkartA">Yahoo pipe</a> that runs the XML through the W3C XML processor using the previously mentioned style sheet to generate the RSS output;</li><br />
 <li>generate a link to a PDF version of the unit. This is achieved by plugging the URL for the OUXML2RSS Yahoo pipe (which has the  course XML URL as an argument, of course) into the <a href="http://www.rss2pdf.org">RSS2PDF.org</a> web service. The steps to generate the PDF, then, are: provide the URL of the XML, use a Yahoo pipe to send this to the W3C XSL processor with an appropriate style file, take the resulting RSS output from the Yahoo pipe and shove it into rss2pdf; (it should then be possible to pass this to a pdf2audio service, etc;-);</li><br />
-<li>wire the live created RSS file into my <a href="http://blogs.open.ac.uk/Maths/ajh59/009972.html">serialised feeds service</a>. This service takes the serialised feed delivery configuration information provided via a web form, and uses that information - along with the current  time stamp - to work out how many items to deliver to the user. The service passes this required item count, along with a URL to the unit XML file to the Yahoo OUXML2RSS pipe that runs the XML through the W3C XSL processor along with a supplied XSL file), and then passes <em>this</em> generated feed to a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">feed serialiser pipe</a> (which is nothing of the sort really - all it does it count out a required nubner of feed items). Simple. :-) and stupid - because the W3C processor has to run every time the feed is polled.</li></ul></p>
+<li>wire the live created RSS file into my <a href="./009972.html">serialised feeds service</a>. This service takes the serialised feed delivery configuration information provided via a web form, and uses that information - along with the current  time stamp - to work out how many items to deliver to the user. The service passes this required item count, along with a URL to the unit XML file to the Yahoo OUXML2RSS pipe that runs the XML through the W3C XSL processor along with a supplied XSL file), and then passes <em>this</em> generated feed to a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">feed serialiser pipe</a> (which is nothing of the sort really - all it does it count out a required nubner of feed items). Simple. :-) and stupid - because the W3C processor has to run every time the feed is polled.</li></ul></p>
 
 <p>Okay - so maybe I need to work on the delivery of that explanation a little... and draw some pictures;-)</p>
 
@@ -212,7 +212,7 @@ function forgetMe (f) {
 
 </div>
 </div>
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/010124.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./010124.html" type="text/javascript" charset="utf-8"></script>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">

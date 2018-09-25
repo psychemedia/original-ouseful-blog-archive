@@ -6,13 +6,13 @@
 
 <title>OUseful Info: Scoping an OU Library Firefox Toolbar</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/002978.html" title="OU Firefox Search Plugins " />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./002978.html" title="OU Firefox Search Plugins " />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/003041.html" title="OUseful Firefox Library Toolbar 0.1" />
+<link rel="next" href="./003041.html" title="OUseful Firefox Library Toolbar 0.1" />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/002978.html">&laquo; OU Firefox Search Plugins </a> |
+<a href="./002978.html">&laquo; OU Firefox Search Plugins </a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/003041.html">OUseful Firefox Library Toolbar 0.1 &raquo;</a>
+<a href="./">Main</a>
+| <a href="./003041.html">OUseful Firefox Library Toolbar 0.1 &raquo;</a>
 
 </div>
 
@@ -118,14 +118,14 @@ function forgetMe (f) {
 
 <h3 class="title">Scoping an OU Library Firefox Toolbar</h3>
 
-<p>Having blogged about <a href="http://blogs.open.ac.uk/Maths/ajh59/002978.html">adding the OU Voyager library catalogue as a Firefox search option</a>, I started reflecting on the other library tools and services I've doodled with in the past, with a view to scoping out what might go in to an OU Library toolbar. So what follows is a short, incomplete, and time-hopping history, followed by some thoughts on what I'm going to put into my first Firefox toolbar...</p>
+<p>Having blogged about <a href="./002978.html">adding the OU Voyager library catalogue as a Firefox search option</a>, I started reflecting on the other library tools and services I've doodled with in the past, with a view to scoping out what might go in to an OU Library toolbar. So what follows is a short, incomplete, and time-hopping history, followed by some thoughts on what I'm going to put into my first Firefox toolbar...</p>
 
 <p>Way back when, before I got my head round Firefox extensions, I tried to simplify the way I accessed the OU library catalogue by setting up the URL rewrite:<br />
  http://ouseful.open.ac.uk/library/<em>keyword</em<br />
 to search the OU voyager library catalogue for a particular keyword.</p>
 
 <p>(By the by, here's the Apache snippet that does the rewriting:<br />
-  <em>RewriteRule library/(.*) http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?Search_Arg=$1&Search_Code=FT*&CNT=22 </em>. If you want to know more about the make up of the actual search URL, I blogged about it here: <a title="Tony Hirst: Hacking Voyager URIs" href="http://blogs.open.ac.uk/Maths/ajh59/002775.html">Hacking Voyager URIs</a>. If the whole concept of URL rewriting is new to you, then check out this posting by <a href="http://www.yourhtmlsource.com/sitemanagement/urlrewriting.html">Russ Shannon on <em>URL Rewriting</em></a>.)</p>
+  <em>RewriteRule library/(.*) http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?Search_Arg=$1&Search_Code=FT*&CNT=22 </em>. If you want to know more about the make up of the actual search URL, I blogged about it here: <a title="Tony Hirst: Hacking Voyager URIs" href="./002775.html">Hacking Voyager URIs</a>. If the whole concept of URL rewriting is new to you, then check out this posting by <a href="http://www.yourhtmlsource.com/sitemanagement/urlrewriting.html">Russ Shannon on <em>URL Rewriting</em></a>.)</p>
 
 <p>I seem to remember the actual rewrite was inspired by <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">Jon Udell's <em>Library Lookup</em> bookmarklet</a> which lets you look up a book in your local library if its ISBN appears in the URL of the web page you're looking at (as it does, for example, when you are looking at a book on Amazon).   For your covenience, here's a copy of the OU Library lookup bookmarklet if you don't already have it: <a href="javascript:var%20re=/([\/-]|is[bs]n=)(\d{7,9}[\dX])/i;if(re.test(location.href)==true){var%20isbn=RegExp.$2;void(win=window.open('http://voyager.open.ac.uk/cgi-bin/Pwebrecon.cgi?SAB1='+isbn+'&BOOL1=all%20of%20these&FLD1=ISBN%20(ISBN)&DB=local&CNT=25','LibraryLookup','scrollbars=1,resizable=1,width=575,height=500'))};">OU Library Lookup Bookmarklet</a>. Just drag the link onto your bookmark toolbar, then clck it when you're looking at a book on Amazon, for example...</p>
 
@@ -178,7 +178,7 @@ to search the OU voyager library catalogue for a particular keyword.</p>
 
 </div>
 </div>
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/003008.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./003008.html" type="text/javascript" charset="utf-8"></script>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">

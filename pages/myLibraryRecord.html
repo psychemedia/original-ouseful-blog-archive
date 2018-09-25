@@ -136,7 +136,7 @@ function generateMyLibraryRecordBookmarklet(){
 
  var myRSS="http://library2.open.ac.uk/rss/rss_patron_details.php?l_name="+surname+"&barcode="+barcode;
  
- var rssLozenge=document.createElement('img'); rssLozenge.setAttribute('alt','RSS lozenge');rssLozenge.setAttribute('src','http://blogs.open.ac.uk/Maths/ajh59/rss.gif');rssLozenge.setAttribute('border','0');
+ var rssLozenge=document.createElement('img'); rssLozenge.setAttribute('alt','RSS lozenge');rssLozenge.setAttribute('src','./rss.gif');rssLozenge.setAttribute('border','0');
  var rssLink = document.createElement('a');
  rssLink.setAttribute('href', myRSS); rssLink.setAttribute('id','myLoansRSSFeed');
  rssLink.appendChild(rssLozenge);
@@ -188,7 +188,7 @@ from a page with an ISBN number in the URL to a search of their Voyager library 
   <p>Once you have created your bookmarklet, save it as a favourite/bookmark, 
     or drag it onto your browser bookmarks toolbar (Firefox). For more information 
     on installing bookmarks, see <a href="http://www.bloglines.com/help/easysub">here</a>.</p>
-  <p>The generator also creates a link to the RSS feed (<img alt="RSS lozenge" src="http://blogs.open.ac.uk/Maths/ajh59/rss.gif" />) 
+  <p>The generator also creates a link to the RSS feed (<img alt="RSS lozenge" src="./rss.gif" />) 
     for your current library loans. You can subscribe to this link in any RSS 
     reader, or use it as a Live Bookmark in Firefox (if you aren;t sure how to 
     do this, look for the section on adding Live Bookmarks manually <a href="http://www.gslis.utexas.edu/technology/tutorials/internet/firefox/08_firefox_bookmarks.html">here</a>).</p>

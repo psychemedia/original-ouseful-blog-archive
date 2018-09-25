@@ -6,13 +6,13 @@
 
 <title>OUseful Info: Two More Library Related Greasemonkey Scripts</title>
 
-<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
-<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
-<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/007316.html" title="Course Related Blogging" />
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./007316.html" title="Course Related Blogging" />
 
-<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/007326.html" title="Google As Service Provider Trundles On..." />
+<link rel="next" href="./007326.html" title="Google As Service Provider Trundles On..." />
 
 
 <script type="text/javascript" language="javascript">
@@ -91,7 +91,7 @@ function forgetMe (f) {
 <body>
 
 <div id="banner">
-<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
@@ -100,10 +100,10 @@ function forgetMe (f) {
 <div class="blog">
 
 <div id="menu">
-<a href="http://blogs.open.ac.uk/Maths/ajh59/007316.html">&laquo; Course Related Blogging</a> |
+<a href="./007316.html">&laquo; Course Related Blogging</a> |
 
-<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
-| <a href="http://blogs.open.ac.uk/Maths/ajh59/007326.html">Google As Service Provider Trundles On... &raquo;</a>
+<a href="./">Main</a>
+| <a href="./007326.html">Google As Service Provider Trundles On... &raquo;</a>
 
 </div>
 
@@ -122,14 +122,14 @@ function forgetMe (f) {
 
 <p>The rationale for offering two scripts up together is that they demonstrate different potential uses for making use of a Greasemonkey script (or Firefox extension derived from a Greasemonkey script using a script2extension converter such as the <a href="http://www.arantius.com/misc/greasemonkey/script-compiler.php">Arantius Greasemonkey script compiler</a>.</p>
 
-<p>Here are the two scripts: <a href="http://blogs.open.ac.uk/Maths/ajh59/mutlBookDetailsForm.user.js">book details form completion</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/ouTravellerAlpha0.2.user.js">OU Traveller</a> (<a href="http://blogs.open.ac.uk/Maths/ajh59/ousefuTravellerLib_0.2.xpi" onclick="InstallTrigger.startSoftwareUpdate('http://blogs.open.ac.uk/Maths/ajh59/ousefuTravellerLib_0.2.xpi');return false;">OU Traveller as a Firefox extension</a>).</p>
+<p>Here are the two scripts: <a href="./mutlBookDetailsForm.user.js">book details form completion</a> and <a href="./ouTravellerAlpha0.2.user.js">OU Traveller</a> (<a href="./ousefuTravellerLib_0.2.xpi" onclick="InstallTrigger.startSoftwareUpdate('./ousefuTravellerLib_0.2.xpi');return false;">OU Traveller as a Firefox extension</a>).</p>
 
 <p><strong>Book Details Form Completion</strong><br />
-This script builds on the one described in the <a href="http://blogs.open.ac.uk/Maths/ajh59/007156.html">Lookup book Details</a> script. The original intention was to augment a very basic form that allowed library users to request a book for purchase by the OU library.</p>
+This script builds on the one described in the <a href="./007156.html">Lookup book Details</a> script. The original intention was to augment a very basic form that allowed library users to request a book for purchase by the OU library.</p>
 
-<p>The new script (which runs over this <a href="http://blogs.open.ac.uk/Maths/ajh59/demoBookDetailsForm.php">dummy book request form</a>) will complete the form, given an ISBN. Clicking on the 'Get Book Details' link will also create two new links: one to allow the book to be looked up in the OU library catalogue according to title, and another to provide an author look up.</p>
+<p>The new script (which runs over this <a href="./demoBookDetailsForm.php">dummy book request form</a>) will complete the form, given an ISBN. Clicking on the 'Get Book Details' link will also create two new links: one to allow the book to be looked up in the OU library catalogue according to title, and another to provide an author look up.</p>
 
-<p>I toyed with the idea of loading a <a href="http://blogs.open.ac.uk/Maths/ajh59/007304.html">Carousel Widget: Similar Books</a> into the page in an iframe (or using the JSON technique described in <a href="http://blogs.open.ac.uk/Maths/ajh59/007299.html">Wishlist Carousel</a> to pull the related books info into the page a a list) but time has run out on me for now.</p>
+<p>I toyed with the idea of loading a <a href="./007304.html">Carousel Widget: Similar Books</a> into the page in an iframe (or using the JSON technique described in <a href="./007299.html">Wishlist Carousel</a> to pull the related books info into the page a a list) but time has run out on me for now.</p>
 
 <p>The Greasemonkey script shows how functionality for new services can be trialled without making changes to production systems. In a managed computer environment, such as public access library machines, new functionality can be evaluated on a sample of machines by real users if scripts are installed a selection of public access terminals. </p>
 
@@ -139,13 +139,13 @@ This script builds on the one described in the <a href="http://blogs.open.ac.uk/
 
 <p>Building the script also revealed several 'issues'.</p>
 
-<p>The author lookup script, reused from another script submitted as an ,a href="http://blogs.open.ac.uk/Maths/ajh59/007292.html">earlier MUTL entry</a>, identified 'issues' in framing author queries on the Voyager catalogue.</p>
+<p>The author lookup script, reused from another script submitted as an ,a href="./007292.html">earlier MUTL entry</a>, identified 'issues' in framing author queries on the Voyager catalogue.</p>
 
 <p>The ability to lookup several books with one call to the catalogue is also lacking - for example, it would be handy to be able to obtain a set of URLs (e.g. form xISBN or thingISBN) and pass them all in a single ISBN lookup query to the server, receiving a single result page listing the availability of all the books queried about in the catalogue (even better if the catalogue offered this option natively).</p>
 
 <p><strong>OU Traveller</strong></p>
 
-<p>The OU Traveller script represents the continued development of several <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?search=%22ou%20traveller%22&IncludeBlogs=1149">OU Traveller</a> components, though again it is not as fully developed as I had hoped, particularly in terms of visual design and integration with the <a href="http://blogs.open.ac.uk/Maths/ajh59/005845.html">Voyager Library Catalogue Toolbar</a>.</p>
+<p>The OU Traveller script represents the continued development of several <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?search=%22ou%20traveller%22&IncludeBlogs=1149">OU Traveller</a> components, though again it is not as fully developed as I had hoped, particularly in terms of visual design and integration with the <a href="./005845.html">Voyager Library Catalogue Toolbar</a>.</p>
 
 <p>The functionality offered by the OU Traveller script (which runs when an ISBN like number is found in a URL, as for example on Amazon) includes:<br />
 <ul><li>a lookup of the book in the OU library catalogue, with status report;</li><br />
@@ -175,7 +175,7 @@ This script builds on the one described in the <a href="http://blogs.open.ac.uk/
 
 
 <span class="posted">Posted by ajh59 at August 18, 2006 12:29 AM
-<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/007319.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=./007319.html" type="text/javascript" charset="utf-8"></script>
 <!--
 
  

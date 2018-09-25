@@ -9,7 +9,7 @@ function safariLookup(){
  url=url.replace(burl,'');
  url=unescape(url);
 
- //what follows is pretty much the original bookmarklet posted at http://blogs.open.ac.uk/Maths/ajh59/006569.html
+ //what follows is pretty much the original bookmarklet posted at ./006569.html
  var re=/([\/-]|is[bs]n=)(\d{7,9}[\dX])/i;
  if(re.test(url)==true){
   var isbn=RegExp.$2;
