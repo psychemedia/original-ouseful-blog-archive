@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Course Analytics, Part 1 - Visitor Behaviour</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010953.html" title="Video Response to OU Campus Movie...? ;-)" />
+
+<link rel="next" href="./010973.html" title="Course Analytics, Part 2 - When Are Our Students Online?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010953.html">&laquo; Video Response to OU Campus Movie...? ;-)</a> |
+
+<a href="./">Main</a>
+| <a href="./010973.html">Course Analytics, Part 2 - When Are Our Students Online? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 25, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Course Analytics, Part 1 - Visitor Behaviour</h3>
+
+<p>In <a href="./010927.html">Course Analytics - Prequel</a> I set the scene for a couple of posts about student behaviour in an online course, as viewed through a <a href="http://google.com/analytics">Google Analytics</a> lens.</p>
+
+<p>To clarify things a little further before I start, I'm not really interested at this stage in reporting course grades or identifying individual students who maybe about to drop out, or need some sort of additional support, (although outlier data points may points towards the existence of such individuals). In short I'm not really interested in <a href="http://connect.educause.edu/library/abstract/AcademicAnalytics/45275">Academic Analytics</a>.</p>
+
+<p>For the moment, what I am interested in is how website analytics can be used applied to online course websites in order to gain a better understanding of online study habits and the bahaviour of students taking an online course.</p>
+
+<p>The potential disconnect between this view of <em>online-course analytics</em> and <em>academic analytics</em> is something I may explore later - just not here, and not yet... (That said, finding ways of correlating/reconciling online-course and academic analytics (to create a fusion "elearning analytics"?!) to gain a more comprehensive view of individual performance on the one hand, and course performance in all its senses on the other, would I'm sure be an interesting exercise.)</p>
+
+<p>One final disclaimer - the data shown here is partial data collected as a pilot exercise over the last 8 weeks or so from 10 week, online course, in the context of no other web stats reports.</p>
+
+<p>The course is split into 10 one-week sessions, with assessment in weeks 5 and week 10. The online study materials amount to a nominal 2 to 4 hours of study per week (the course also includes reading from two supplied set books, and completing a series of practical activities using a desktop application, for which instructional material is provided via a set of downloadbale PDF documents and a desktop application launcher.</p>
+
+<p>The intention of the exercise was to gain familiarity of Google Analytics in a familiar context, and identify meaningful course analytics that could inform a course analytics reporting strategy for future presentations of the course, and help identify appropriate conversion "goals" for a course website.</p>
+
+<p>In this post I shall describe several reports relating to general visitor behaviour. In further posts I'll show reports on daily behaviour/weekly cycles, as well as activity surrounding assessment submission dates and user search behaviour from within the course materials.</p>
+
+<p>Data that was not collected includes  - printing behaviour (whether students printed out copies of the online course materials) and outlink click-thru behaviour (whether students followed links to external web resources.</p>
+
+<p>Unique visitors are identified by Google Analytics alone; that is, although individual students logged in to the course using their own credentials, those credentials - or the individual students' login identities - played no part in the collection of the analytics data. As such, we would expect the number of unique visitors over the period to be in excess of the number of students registered on the course if students access the course materials from more than one browser configuration.</p>
+
+<p><h3>Visitor Loyalty</h3>The <em>Visitor Loyalty</em> report describes how often each visitor accessed the course materials over the 8 week data collection period.</p>
+
+<p>The absolute number of unique visitors (not shown) is way in excess of the number of students registered on the course, so this report must be taken with a pinch of salt (the actual number of logins per student over the course period should be obtainable from "offiical" learning system reporting tools).</p>
+
+<p><img src="http://farm3.static.flickr.com/2183/1745710516_85396eda43.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="481" width="490" /></p>
+
+<p>The report would seem to indicate that students are accessing the site multiple times (at least 50% of them more than 10 times).</p>
+
+<p>(I actually find the above report confusing - does it read: "Of N visits, the visitors who made those visits visited Number-of-Visits times"? If so, the Number-of-Visits has dimensions "visits per visitor", in which case isn't the Visits divided by the Number-of-Visits the Number-of-Visitors, which should be an integer value?!)</p>
+
+<p><h3>Length of Visit</h3>The <em>Length of Visit</em> report describes the amount of time a visitor spent on the site in a particular session. I would hazard a guess that computers left switched on, mid-session, overnight would report a long length of visit.</p>
+
+<p><img src="http://farm3.static.flickr.com/2008/1744858419_4b28b1da14.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="306" width="500" /></p>
+
+<p>The distribution suggests that the majority of students are logging in for more than 5 minutes at a time, with a significant proportion spending at least, of the order of, half an hour online.</p>
+
+<p>The granularity of reporting is obviously geared to sites where long sessions are atypical. I need to check whether I can get better resolution data for longer durations/lengths of visit.</p>
+
+<p><h3>Depth of Visit</h3>The <em>Depth of Visit</em> report shows how many pages a visitor accessed on each visit. As with the <em>Length of Visit</em> report, short visits are not so interesting (except insofar as we might wonder what a visitor is doing on a short a visit?!)</p>
+
+<p><img src="http://farm3.static.flickr.com/2121/1744857941_44a0d522b2.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="500" width="346" /></p>
+
+<p>What is far more interesting is the long tail, and the significant percentage of visits in which students are engaged with the online course materials for a long period of time. As a guide, each week's study is approximately 20 HTML pages of material, accessed from the course index page or course calendar.</p>
+
+<p>Once again, the low resolution reporting for "deep" visits means it works against us, although it is tempting to draw the conclusion that some students might study the week's material in a single session.</p>
+
+<p><h3>Summary</h3>The above reports suggest that a significant proportion of students spend a significant amount of time studying the online materials. As a heuristic, designing materials in "chunks" that can be studied within a 30 minute online study session would seem to be reasonable.<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/analytics" rel="tag">analytics</a>, <a href="http://technorati.com/tag/course%20analytics" rel="tag">course analytics</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 25, 2007 03:25 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Good stuff, Tony. Maybe I missed it in one of your lead-up posts, but does GA work behind a "wall" like Blackboard? IOW, is it smart enough to know that a course is a single site?</p>
+<span class="comments-post">Posted by: <a href="http://ceitl.zanestate.edu/blog/">todd</a> at October 25, 2007 03:56 PM</span>
+</div>
+<div class="comments-body">
+<p>"is it smart enough to know that a course is a single site"</p>
+
+<p>I'm tracking within a domain and down a path:<br />
+http://example.com/foo/bar/*</p>
+
+<p>The course content is all behind authentication, but the GA tracking script that is embedded at the bottom of each page pings the Goog through the firewall...</p>
+
+<p>Err - maybe I shouldn't have said that out loud... ;-)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at October 25, 2007 04:16 PM</span>
+</div>
+<div class="comments-body">
+<p>BTW - if you can't get access to course HTML source to add the tracking code, but you do have techie students, they can add tracking for you in the browser using a Greasemonkey script or browser extension...</p>
+
+<p>Collecting Third Party Website Statistics (like Yahoo's) with Google Analytics:<br />
+./008701.html</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at October 25, 2007 04:28 PM</span>
+</div>
+<div class="comments-body">
+<p>It's a shame GA doesn't seem to give any information on 'most common path' - it would be interesting to see if students follow material in any particular order, which might help you know if you were structuring the material correctly? I think I've seen this with some other (paid) web analytic tools</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;owen&#46;patel&#64;gmail&#46;com">Owen Stephens</a> at October 25, 2007 05:01 PM</span>
+</div>
+<div class="comments-body">
+<p>" It's a shame GA doesn't seem to give any information on 'most common path' "</p>
+
+<p>It will do goal tracking for up to four goals; I'll post a reflection on that somewhere down the line...</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at October 25, 2007 10:14 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

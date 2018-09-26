@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: (Almost) Embedding Feeds in a Hosted Wordpress Blog Post...</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013846.html" title="gCalMap - Embed Code Generator For Google Calendar Maps" />
+
+<link rel="next" href="./013891.html" title="&quot;Playing&quot; at Soliciting Learner Generated Content" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013846.html">&laquo; gCalMap - Embed Code Generator For Google Calendar Maps</a> |
+
+<a href="./">Main</a>
+| <a href="./013891.html">"Playing" at Soliciting Learner Generated Content &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 11, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">(Almost) Embedding Feeds in a Hosted Wordpress Blog Post...</h3>
+
+<p>One of the stumbling blocks I've come up against with Wordpress is the inability to embed Grazr widgets, or even better, javascript, in the body of a post using the hosted Wordpress servce.</p>
+
+<p>One short term workaround is to embed an image representation of the feed, e.g. using the <a href="http://www.rss2image.com/">RSS2image</a> service:</p>
+
+<p><a href="http://www.rss2image.com/feed/291"><img src="http://www.rss2image.com/image/291/image.png" border="0" /></a></p>
+
+<p>It strikes me that I've explored workarounds to this before, way back when, for example in <a href="./007429.html">They Stole OUr Learning Environment - Now We're Stealing It Back</a> and <a href="./009239.html">Adding a Grazr Widget to a Moodle Journal Page</a></p>
+
+<p>In those cases, the trick was to use a Greasmonkey script - or a bookmarklet - to scan the page for a particular HTML element ID and then inject a widget into the page at that location.</p>
+
+<p>By parsing the contents of an element - for example, extracting the URL pointed to from a link via the element's href attribute - the injected widget/code can re-present the content.</p>
+
+<p>In the above RSS2image case, it would be possible to pull out the feed URL from the link that encloses the image, and replace the image with the embedded live feed.</p>
+
+<p>(It would be easier for tinkering if the rss2image service actually allowed you to call an image by feed url - e.g. <em>http://rss2image.com?url=http://feed.example.com/foo/bar</em> It would also be handy if you could control the size of the image, and maybe a little bit more of what's displayed? A version for twitter would accept the full character limit, and a version for delicious might display the link title, description, and a tiinyurl reference to the bookmarked page itself?*)</p>
+
+<p>The problem remains, though, that this is a <em>client side</em> fix, and so beyond what's appropriate for the majority of users.</p>
+
+<p>*picking up on that, I wonder if this library offers a quick way in to such a tool? <a href="http://www.webvideodoctor.com/web-video-tips/how-to-embed-your-twitter-status-in-you-ustream/">How to Embed Your Twitter Status in You Ustream</a>, which links to a PHP library that egnerates an image from a twitter stream...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/greasemonkey" rel="tag">greasemonkey</a>, <a href="http://technorati.com/tag/bookmarklet" rel="tag">bookmarklet</a>, <a href="http://technorati.com/tag/%20wordpress" rel="tag"> wordpress</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 11, 2008 11:46 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>One of the happy "accidents" of the past few years has been my decision to blog on multiple platforms (rather than doing any real work :-)<br />
+And while I hugely prefer WordPress to Blogger, the hosted version at WordPress.com can be frustrating at time, so thanks for pointing RSS2Image out:<br />
+http://tinyurl.com/2eenp9<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at March 11, 2008 12:30 PM</span>
+</div>
+<div class="comments-body">
+<p>Dude, it should not be so hard. RSS via images works yes, but what an end around.</p>
+
+<p>I love WP.com as a platform, but the lack of support for dynamic content such as this is lame.</p>
+
+<p>At least Blogger lets you put javascript at least in sidebar widgets, though not posts.</p>
+
+<p>PS There is no link to the comment posting form on your individual post templates.</p>
+<span class="comments-post">Posted by: <a href="http://cogdogblog.com/">Alan Levine</a> at March 13, 2008 03:18 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

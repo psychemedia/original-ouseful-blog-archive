@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Moods and Trends</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010718.html" title="Slider Widgets Around the Web" />
+
+<link rel="next" href="./010741.html" title="My RadiOBU Confusion..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010718.html">&laquo; Slider Widgets Around the Web</a> |
+
+<a href="./">Main</a>
+| <a href="./010741.html">My RadiOBU Confusion... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 12, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Moods and Trends</h3>
+
+<p>Whilst having a little look around for sites that explore the "mood of the web" last night, I came across <a href="http://ilps.science.uva.nl/MoodViews/">MoodViews</a>, "a collection of tools for tracking the stream of mood-annotated text made available by LiveJournal."</p>
+
+<p>I'm not a LiveJournal user, but it seems that when you post to LiveJournal, you can associate a mood icon with it - <a href="http://www.livejournal.com/moodlist.bml">LiveJournal Moods - Mood Theme Previews</a>.</p>
+
+<p>The MoodViews app aggregates this information to produce a mood of the web report.  Some of the 'moods' show periodicity:</p>
+
+<p><img src="http://ilps.science.uva.nl/MoodViews/Moodgrapher/CyclicEvents/awake.graph.png" alt="moodview - periodicity"/></p>
+
+<p>Some anticipate forthcoming events:</p>
+
+<p><img src="http://ilps.science.uva.nl/MoodViews/Moodgrapher/GlobalEvents/christmas2005-excited.png" alt="moodview - christmas excitement" /></p>
+
+<p>It's also worth noting that <a href="./006260.html">Google Trends</a> in search terms also reveal similar dynamic features - when do you think people search for <a href="http://google.com/trends?q=toys">toys</a> for example, or <a href="http://google.com/trends?q=equinox">equinox</a>?</p>
+
+<p>The <a href="http://ilps.science.uva.nl/MoodViews/Moodsignals/">MoodSignals</a> service is partuicularly interesting - large changes in mood can be seen to correspond to particular events.</p>
+
+<p>It'd be interesting to see how well these Mood Signals correlate to particular events as signalled by changes in particular Google searches using Google trends?</p>
+
+<p>Unfortunately, I don't think either service offers an API at the moment?</p>
+
+<p>PS what I meant to mention in this post was how the MoodView scanning approach could be extended out from Live Journal to other status services, like Facebook or Twitter. Prompted buy: Andy Powell commenting on using Twitter to update Facebook status entries - <a href="http://efoundations.typepad.com/efoundations/2007/10/andy-is.html">Andy is...</a></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 12, 2007 06:41 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

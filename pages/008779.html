@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Netvibes Search and the Pageflakes Browser</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./008748.html" title="Are PLEs Actually Social or Collaborative Learning Environments?" />
+
+<link rel="next" href="./008847.html" title="The Electronic Provision of Course Content" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./008748.html">&laquo; Are PLEs Actually Social or Collaborative Learning Environments?</a> |
+
+<a href="./">Main</a>
+| <a href="./008847.html">The Electronic Provision of Course Content &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 22, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Netvibes Search and the Pageflakes Browser</h3>
+
+<p>Over the last few week, <a href="http://netvibes.com">Netvibes</a> and <a href="http://pageflakes.com">Pageflakes</a> have both gone up a version and <a href="http://excite.co.uk">Excite.co.uk</a> has released its own <a href="http://mix.excite.co.uk/">Excite webtop/startpage</a> as a beta ("European grown all the way!!" apparently - which seems to be the way of a lot of this display surfaces?). Paying a visit today to Pageflakes and Nettvibes (seeing how they handle a <a href="http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">course content feed</a> derived from an <a href="http://labspace.open.ac.uk">OpenLearn LabSpace</a> course) a couple of new (to me at least) features caught my eye.</p>
+
+<p>Firstly, Netvibes has a search filter that is applied over the feeds coming into a tab (the search is over link text and item description text, I think?):</p>
+
+<p><img alt="netvibesFilter1.jpg" src="./netvibesFilter1.jpg" width="657" height="245" border="0" /></p>
+
+<p>The filter also highlights the search/filter terms in the feed item description:</p>
+
+<p><img alt="netvibesFilter2.jpg" src="./netvibesFilter2.jpg" width="669" height="366" border="0" /></p>
+
+<p>In Pageflakes, there is the option of opening links (fin the example I'm using, from a delicious RSS feed) in a floating, pop-up browser within the Pageflakes environment:</p>
+
+<p><img alt="pageflakesOpenLinks1.jpg" src="./pageflakesOpenLinks1.jpg" width="292" height="233" border="0" /></p>
+
+<p>I like the feel of this interaction - it's reminiscent of the <a href="./007632.html">"Now follow this link" lightbox</a> pattern I doodled with a month or two ago.</p>
+
+<p>Ideally, though, this pop-up embedded/floating browser requires a large screen resolution to allow the pop-up window to render the linked to page sensibly, yet still retain the Pageflakes context:</p>
+
+<p><img alt="pageflakesOpenLinks2.jpg" src="./pageflakesOpenLinks2.jpg" width="720" height="415" border="0" /></p>
+
+<p>If you don't use either of these applications regularly, or you use one and not the other, it's worth popping back every so often, I think, to see what new innovations they have come up.</p>
+
+<p>And finally, just to recap on how these services display the OpenLearn course content feed, here are a couple of screenshots. </p>
+
+<p>First, Pageflakes:</p>
+
+<p><img alt="ccFeedPageflakes.jpg" src="./ccFeedPageflakes.jpg" width="809" height="453" border="0" /></p>
+
+<p>And here's the same feed in Netvibes:</p>
+
+<p><img alt="ccFeedNetvibes.jpg" src="./ccFeedNetvibes.jpg" width="617" height="451" border="0" /></p>
+
+<p>If you want to try out the feed, here are a couple of links:</p>
+
+<p><a href="http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml">Sample OpenLearn Course Content Feed</a> <a href="http://www.pageflakes.com/subscribe.aspx?url=http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml"><img alt="RSS Feed - Pageflakes" src="http://www.pageflakes.com/subscribe2.gif" border="0" /></a> <a href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fouseful.open.ac.uk%2Fopenlearnplayground%2FT180_8_rss.xml"><img src="http://www.netvibes.com/img/add2netvibes.gif" width="91" height="17" alt="Add to Netvibes" /></a> <a href="http://www.bloglines.com/sub/http://ouseful.open.ac.uk/openlearnplayground/T180_8_rss.xml"><img src="http://www.bloglines.com/images/sub_modern9.gif" alt="Subscribe with Bloglines" border="0" /></a> </p>
+
+<p>It's also worth checking out the feed directly in Firefox and IE7...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 22, 2006 10:16 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

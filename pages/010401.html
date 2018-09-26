@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: delicious Feed Enhancer - Auto-Enclosures</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010400.html" title="ICT Resource Digger - fOUndit" />
+
+<link rel="next" href="./010403.html" title="Embedded Media Autodiscovery" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010400.html">&laquo; ICT Resource Digger - fOUndit</a> |
+
+<a href="./">Main</a>
+| <a href="./010403.html">Embedded Media Autodiscovery &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 12, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">delicious Feed Enhancer - Auto-Enclosures</h3>
+
+<p>One of the nifty things about the <a href="http://grazr.com">Grazr</a> feed processing widget is that it scans RSS feeds for media enclosures and embeds an appropriate player in the widget, wherever possible:</p>
+
+<div style="height:400px;width:450px;"><a href="http://grazr.com/gzpanel.html?theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=pt9RkEcY3BG1VsdyJphxuA&_render=rss" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=pt9RkEcY3BG1VsdyJphxuA&amp;_render=rss"></script></div>
+
+<p>For example, if a Flash movie (<em>.swf</em> file) or audio file (<em>.mp3</em> or <em>.ram</em> (Real Audio)) are available as feed item enclosures, the Grazr widget will embed an appropriate video or audio flash player (see the above Grazr widget for a demo).</p>
+
+<p>What this means is that <em>if</em> you can easily generate a feed with enclosures, you can easily create a multimedia channel.</p>
+
+<p>This is exactly what <a href="http://splashcastmedia.com">Splashcast</a> does: it provides an environment in which you can create multimedia playlists that feed a really nifty player widget (here's an example of a crude <a href="./009963.html">Splashcast learning channel demo</a>). Splashcast can also scrape the content s of an RSS feed in search of media assets, and will provide a player for those, although I don't think it (yet) acts as a player for media enclosures (which I'd suggest is something of an oversight...)</p>
+
+<p>However, the approach suggested here is to use a Yahoo pipe to <em>automatically</em> augment an RSS feed from the delicious social bookmarking tool with appropriate media file enclosures - a feed enrichment pipe, in other words.</p>
+
+<p>That is, users should be able to bookmark pages that may themselves contain embedded media resources, and then the pipe should be able to generate an enclosure link to the embedded resource from the bookmarked URL.</p>
+
+<p>The reason why you'd want to bookmark the page containing the media resource rather than the resource itself is because the link to the resource is not necessarily very useful and is not the thing users are likely to naturally bookmark...</p>
+
+<p>This allows you to create a social bookmarking RSS feed to act as the source of the media channel programme information, and then use Grazr to automatically embed an appropriate player for the media enclosures:</p>
+
+<blockquote><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=pt9RkEcY3BG1VsdyJphxuA">deliEnclosures</a> - augment an RSS feed from delicious with media enclosures.</blockquote>
+
+<p>In particular, the pipe will augment bookmarked links from delicious with the following media enclosures:</p>
+
+<p>- bookmarked mp3 files with an MP3 file enclosure;<br />
+- bookmarked ram (real audio) files with an ram file enclosure;<br />
+- bookmarked swf (Flash) files with a swf file enclosure;<br />
+- bookmarked youTube movie web pages with a swf video file enclosure.<br />
+- bookmarked show pages from <a href="http://itconversations.com">IT Conversations</a> with an MP3 audio file enclosure for that show.</p>
+
+<p>The example Grazr player referred to above (available <a href="http://grazr.com/gzpanel.html?file=http://pipes.yahoo.com/pipes/pipe.run?_id=pt9RkEcY3BG1VsdyJphxuA&_render=rss">here</a>) is "playing" a pipe augmented feed from <a href="http://del.icio.us/psychemedia/demo:feedEncl">del.icio.us/psychemedia/demo:feedEncl</a>. (The pipe also works if you link straight to the RSS feed: <a href="http://del.icio.us/rss/psychemedia/demo:feedEncl">http://del.icio.us/rss/psychemedia/demo:feedEncl</a>.)</p>
+
+<p>At the moment, the pipe is set up to consume a list of links from delicious. With only a slight modification to the top of the pipe, it could be used to augment <em>any</em> feed when provided with its URL and so provide a general purpose feed augmentation pipe.</p>
+
+<p>The pipe is also easily extensible in the sense that if media resource URLs can be easily derived from bookmarked page URLs (as in the case of youTube movies, for example), the pipe can be extended to process these URLs and add an appropriate media enclosure.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5075080715532061586"><img src="http://lh5.google.com/image/tony.hirst/Rm5PBZe5S5I/AAAAAAAAAFA/Eo1mZ0ZhATg/s800/feedMediaEncl.png" /></a></p>
+
+<p><s>(Not showing IT conversations augmentation...)</s></p>
+
+<p>Here, the pipe filters the feed on items that can be augmented with media enclosures, and then processes items that can be directly augmented with an enclosure pointing straight to the bookmarked resource by simply copying the bookmarked URLs (like bookmarked links to MP3 files) straight to the enclosure. The next stage performs more complex mappings, in this case rewriting bookmarked youTube movie pages to the appropriate youTube movie file URL.</p>
+
+<p>Unfortunately, <a href="http://slideshare.net">SlideShare</a> is not so well behaved in the way it formulates the URLs for the Flash movie associated with uploaded slideshows - an effectively arbitrary number is appended to file information contained within the URL of bookmarkable pages associated with each SlideShow. For example, the slideshow at <em>http://www.slideshare.net/psychemedia/social-bookmarking-sort-of/</em> is published via the Flash movie at <em>https://s3.amazonaws.com:443/slideshare/ssplayer.swf?doc=social-bookmarking-sort-of-12110</em>. The identifier <em>12110</em> is effectively unique, and can only be identified by scraping the resource web page.</p>
+
+<p>If you know of other media sites - like youTube - that afford a mapping from a usefully bookmarkable(?) URL to a media resource URL. let me know and I'l add them to the pipe...</p>
+
+<p>See also: <a href="./010419.html">YouTube Playlist RSS Feeds With Video Enclosures (Grazring YouTube Favourites Playlists Redux)</a></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 12, 2007 12:58 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

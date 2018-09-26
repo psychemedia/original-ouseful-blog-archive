@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Progressive Enhancement - Some Examples</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014013.html" title="Raising Expectations via Progressive Enhancement" />
+
+<link rel="next" href="./014016.html" title="People You May Know - Time to Dig Out Some Graph Theory Books..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014013.html">&laquo; Raising Expectations via Progressive Enhancement</a> |
+
+<a href="./">Main</a>
+| <a href="./014016.html">People You May Know - Time to Dig Out Some Graph Theory Books... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 28, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Progressive Enhancement - Some Examples</h3>
+
+<p>This post complements the previous rant (<a href="./014013.html">Raising Expectations via Progressive Enhancement</a>) by providing a couple of examples of how progressive enhancement can be used to improve a user's experience of a web page if their browser is capable of it...</p>
+
+<p>In many of the cases, progressive enhancement builds on good basic design principles, design for accessibility, and increasingly, semantically sensitive design (e.g. though the use of microformats and semantic design markup).</p>
+
+<p><h3>Progressively Enhancing Data Tables</h3><br />
+The first example is one regular readers will already be familiar with - the idea of an 'accessible chart' (as described in <a href="./013114.html">RESTful Image Generation - When Text Just Won't Do</a>.</p>
+
+<p>In this case, tabular data included in a web page can be progressively enhanced to display a graphical view of the data. Good examples can be found at <a href="http://yuiblog.com/blog/2008/01/17/tables-and-charts/">Automatic conversion from simple, accessible data tables to YUI Charts</a>, <a href="http://www.wait-till-i.com/2008/01/08/generating-charts-from-accessible-data-tables-using-the-google-charts-api/">Generating charts from accessible data tables using the google charts API</a> and <a href="http://www.filamentgroup.com/lab/creating_accessible_charts_using_canvas_and_jquery/">Creating accessible charts using canvas and jQuery (<em>filament group</em>)</a>.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2368701002/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2057/2368701002_13e365a02f.jpg" width="419" height="286" alt="Charts from tables" style="border:0"/></a></p>
+
+<p>If the table is marked up appropriately, an included Javascript file will automatically enhance the table with a graphical view.</p>
+
+<p>The filament group library will actually generate a whole range of chart types from a table - pie charts, line charts, area charts, bar charts and stacked bar charts.</p>
+
+<p>Data tables themselves can be progressivley enhanced to make tables skinnable, <a href="http://developer.yahoo.com/yui/examples/datatable/dt_clientsorting.html">sortable by columns,</a> <a href="http://developer.yahoo.com/yui/examples/datatable/dt_rowselect.html">selectable by rows</a> (or <a href="http://developer.yahoo.com/yui/examples/datatable/dt_cellselect.html">cell</a>), <a href="http://developer.yahoo.com/yui/examples/datatable/dt_colshowhide_source.html">reorderable</a>, <a href="http://developer.yahoo.com/yui/examples/datatable/dt_cellediting.html">editable</a> and so on.  If table rows and columns are marked up appropriately, controls like the <a href="http://developer.yahoo.com/yui/datatable/">YUI DataTable</a> will add the progressive enhancements <em>for free</em> with the inclusion of a single Javascript file (check out the YUI DataTable examples to see just what's possible).</p>
+
+<p><h3>Progressively Enhancing Forms</h3><br />
+The accessible slider is a progressive enhancement of a drop down, enumerated list.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2367888065/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2142/2367888065_e49ab2c858.jpg" width="422" height="253" alt="Accessible slider" style="border:0"/></a></p>
+
+<p>For an example,  visit: <a href="http://www.filamentgroup.com/lab/developing_an_accessible_slider/">Developing an accessible slider</a>.</p>
+
+<p>Other form elements are amenable to progressive enhancement too. For example, radio button lists (via <a href="http://somedirection.com/2008/03/24/jquery-ratings-a-progressive-enhancement-approach/">jQuery Ratings - A Progressive Enhancement Approach</a>):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2367897895/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3128/2367897895_6bb1f127bb.jpg" width="500" height="161" alt="2008-03-28_1137" style="border:0"/></a></p>
+
+<p>Although not available as a progressive enhancement library, it should be possible to extend the <a href="http://developer.yahoo.com/yui/slider/">YUI slider control</a> library so that it could progressively enhance radio button lists with a YUI slider.</p>
+
+<p>If you have a text entry box on your form, wouldn't it be nicer to use something like this?</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2368050419/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2408/2368050419_cc085d11d3.jpg" width="500" height="288" alt="YUI text editor" style="border:0"/></a></p>
+
+<p>More details at <a href="http://blog.webdistortion.com/2008/03/09/9-of-the-best-rich-text-editors-reviewed/">9 of the best Rich Text editors Reviewed</a>.</p>
+
+<p><h3>Progressively Enhancing Links</h3><br />
+Finally, a return to something I've been going on about for ages (<a href="./007632.html">Interaction Design - "Now Follow This Link"</a>), the use of lightboxes to view linked pages and embedded movies.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2368753544/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3109/2368753544_8400b219ac.jpg" width="500" height="440" alt="lightbox preview" style="border:0"/></a></p>
+
+<p>(See the original page beneath the semi-transparent black layer?) One of the nicest libraries I've seen to achieve this effect can be found, complete with a range of demos, at <a href="http://mjijackson.com/shadowbox/">Shadowbox.js by Michael J. I. Jackson</a>. </p>
+
+<p>(Related are page previewers like <a href="http://cooliris.com/site/flock/tutorial_cp_flock.php">Cool Iris</a> and the annoying <a href="http://www.snap.com/">Snap previewer</a>.)</p>
+
+<p>Finally, link enhacement in terms of linked to resources - and Scribd. Using a scribd progressive enhancement library, PDF document links found within a page can be rewritten to either link to a Flash preview of the document on scribd, or embedded withing the page directly using Scribd iPaper:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2367927459/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3167/2367927459_982be9c061.jpg" width="500" height="471" alt="scribd ipaper" style="border:0"/></a></p>
+
+<p>(See also <a href="./013371.html">No More PDF Reader Hell? Hello iPaper - You Taking Note...?</a> and <a href="./013390.html">Scribd iPaper Bookmarklets and Greasemonkey Script</a> and my iPaper utilities page: <a href="http://ouseful.open.ac.uk/iPaper/">OUseful Scribd iPaper Tools</a>.)</p>
+
+<p><h3>Programming Code</h3><br />
+Styling programming code in online materials can be an issue. But it is possible to progressively enhance code in a language sensitive way, using colour coding techniques found in the majority of code editors. Here's an example:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2368037471/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3013/2368037471_c9a275b1cd.jpg" width="500" height="167" alt="Code view progressive enhancement" style="border:0"/></a></p>
+
+<p>All that's included in the page is this:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2368040433/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2105/2368040433_87d5b32850.jpg" width="500" height="113" alt="progressive enhancement - code markup" style="border:0"/></a></p>
+
+<p>The bounding box, menu options, line numbering and code coloring are all progressive enhancements using the <a href="http://code.google.com/p/syntaxhighlighter/">SyntaxHighlighter</a> code library.</p>
+
+<p><h3>Summary</h3><br />
+This post has reviewed several examples of progressive enhancement in action. Some of the rationale for using progressive enhancement as a way of rolling out user interface innovations is described in <a href="./014013.html">Raising Expectations via Progressive Enhancement</a>.</p>
+
+<p>See also: <a href="http://www.alistapart.com/articles/accessibledatavisualization">Accessible Data Visualization with Web Standards</a><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/progressiveenhancement" rel="tag">progressiveenhancement</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 28, 2008 12:07 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

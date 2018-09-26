@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Scribd iPaper Bookmarklets and Greasemonkey Script</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013371.html" title="No More PDF Reader Hell? Hello iPaper - You Taking Note...?" />
+
+<link rel="next" href="./013504.html" title="Opening the Box..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013371.html">&laquo; No More PDF Reader Hell? Hello iPaper - You Taking Note...?</a> |
+
+<a href="./">Main</a>
+| <a href="./013504.html">Opening the Box... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 20, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Scribd iPaper Bookmarklets and Greasemonkey Script</h3>
+
+<p>One of the neat features about the Scribd iPaper platform is the way it provides you <a href="http://www.scribd.com/platform/documentation/quickswitch">QuickSwitch</a>, a <em>single</em> javascript include that, when added to a page, will convert all the document links to embedded, or online viewable, versions of the document.</p>
+
+<p>So you can get a feel for what this may be like in practice, I've put together a couple of demo bookmarklets. One will convert all the document links to links through to a page that will display the document using iPaper; the other will embed all the documents contained in the page within the page using iPaper.</p>
+
+<p>To use the bookmarklets, drag them on to your bookmarks toolbar (Firefox/Flock - I'm not sure what the process is with IE nowadays?) and then click one of them, when your on a likely suspect page (e.g. try this page from MIT OpenCourseware: <a href="http://ocw.mit.edu/OcwWeb/hs/calculus/d/1/1.htm">Continuity</a>).</p>
+
+<p>- <a href="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';var t=d.createTextNode('var scribd_publisher_id = \'pub-64160908907150939988\';var scribd_type = 1;var scribd_keep_private = 0;var scribd_keep_original_link = 0;');s.appendChild(t);db.appendChild(s);s=d.createElement('script');s.src='http://www.scribd.com/javascripts/auto.js';db.appendChild(s);})()">iPaper  this (link)</a> bookmarklet: converts document download links to iPaper viewer links; (really, this should optionally open in a lightbox, maybe with the option to open in a new window from there?)</p>
+
+<p>- <a href="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';var t=d.createTextNode('var scribd_publisher_id = \'pub-64160908907150939988\';var scribd_type = 2;var scribd_keep_original_link = 0;var scribd_ipaper_params = [];scribd_ipaper_params[\'public\'] =true;');s.appendChild(t);db.appendChild(s);s=d.createElement('script');s.src='http://www.scribd.com/javascripts/auto.js';db.appendChild(s);})()">iPaper this (embed)</a> bookmarklet: scans the page for document links and replaces them with the embedded version of each document.</p>
+
+<p>[UPDATE: <s>I've had a comment from Scribd pointing out that whenever anyone uses the bookmarklets, the files get uploaded to my Scribd account. So the above bookmarklets will now only work if you drag them on to your toolbar <em>and then edit them to replace YOUR_PUB-ID with your own Scribd publisher ID (available from <a href='http://www.scribd.com/platform/home'>Scribd Platform</a> (it's free...;-)</em>.</s></p>
+
+<p>LATEST NEWS - chatting with the Scribd folks again, I've sacrificed my original Scribd account so that the bookmarklet can be re-released with a publisher code embedded - so it should work for anyone, out of the can. The publisher code is the same one I originally used, so any bookmarklets out there should continue to work. Apologies to the few hundred people who's docs I deleted from the account a couple of days ago...</p>
+
+<p>So.... if you want to keep a safely bookmarked copy of the documents you're viewing in iPaper, you should get your own iPaper publisher ID and create your own, personalised  bookmarklet. To generate your own custom bookmarklets painlessly, I've created a bookmarklet generator: <a href="./scribdBookmarkletGenerator.html">iPaper bookmarklet generator utility</a>. Provide your Scribd Platform publisher ID and it will generate your own bookmarklets for you... To anyone who used the original bookmarklet: you may find the files have disappeared, because I've deleted them...sorry about that... (Scribd folks - any chance of resetting my pub-id, and you taking over the original one? ;-)]</p>
+
+<p><a href="http://content.screencast.com/media/21f7590c-b915-4e41-aef2-cceddf3ef5ca_6b0ae803-4931-45fa-a2a2-8c3fe3d4c884_static_0_0_2008-02-20_1136.png"><img src="http://content.screencast.com/media/21f7590c-b915-4e41-aef2-cceddf3ef5ca_6b0ae803-4931-45fa-a2a2-8c3fe3d4c884_static_0_0_2008-02-20_1136.png" width="563" height="530" border="0" /></a></p>
+
+<p>What could be easier? ;-)</p>
+
+<p>PS you should change the publisher-id in the bookmarklet to your own publisher id - you can get one for free from the <a href="http://www.scribd.com/platform/home">scribd developer site</a>. Use this: <a href="./scribdBookmarkletGenerator.html">iPaper bookmarklet generator utility</a>.</p>
+
+<p>PPS a couple of people requested a Greasemonkey script based on the bookmarklets. I'm not convinced the embed bookmarklet is appropriate for a GM script, but the linkifier one is.... so for those who asked, here's a <a href="./iPaperLinky.user.js">iPaper linkifier Greasmonkey script</a>. If you install this script, it will convert all document links in a page to 'view in iPaper' links. As a default, the script is set up to only run on http://ocw.mit.edu/OcwWeb/* . If you want the script to run on all pages, go to the Greasemonkey 'Manage User Scripts' menu item (browser Tools menu, I think?), select the <em>Scribd iPaper linkify</em> script and then add <em>http://*</em> to the allowed sites. (It may also be worth adding <em>https://*</em> to the disallowed sites... And remember, all docs viewed with the script will be uploaded to an account I have access to on Scribd... If you want the docs to be uploaded to <em>your</em> account, you will need to edit the Greasemonkey script to replace my <em>pub-id</em> with yours...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 20, 2008 11:23 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Finished a marking batch, so I had a play.  Is there a file size limit here.  I tried it on the AQA site to scan through past papers, but it failed for every one.<br />
+:-(</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;ks4243&#64;tutor&#46;open&#46;ac&#46;uk">Kate</a> at February 20, 2008 12:31 PM</span>
+</div>
+<div class="comments-body">
+<p>Hmmm - not sure about the that; I guess the only thing to do is use the link bookmarklet, then if it doesn't convert at least you can link through to the original pdf?</p>
+
+<p>Maybe worth mailing scribd and giving them the heads up?</p>
+
+<p>Or maybe my script doesn't work properly on sites where I haven't declared the site URL as one I want to use my scribd a/c on?</p>
+
+<p>(To get the code you need to register; and inthe setup you declare URLs you want the converter to work with; i didnlt declare MIT open courseware site though, and that seemed to work okay?)</p>
+
+<p>I wonder if licensing metadata might play a role, now or in the future? e.g. like robots.txt on a site can be used to stop well behaved search engines trawling a site, maybe rights info could stop scribd displaying a page.</p>
+
+<p>I didn't check the aqa aite to see if the links to the PDFs were declared as nofollow? Scribd might respect that too, and not upload/convert/render nofollow linked docuuments? </p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at February 20, 2008 01:12 PM</span>
+</div>
+<div class="comments-body">
+<p>You might want to be careful about publishing bookmarklets with your Scribd API publisher ID. This way, anyone can upload documents as you, which could lead to some potential problems.</p>
+
+<p>People should sign up for their *own* Scribd API ID (it's free), and then paste that into the bookmarklet in place of yours.</p>
+<span class="comments-post">Posted by: <a href="http://scribd.com">Jason Bentley</a> at February 20, 2008 07:38 PM</span>
+</div>
+<div class="comments-body">
+<p>I tried your example of http://ocw.mit.edu/OcwWeb/hs/calculus/a/1/1.htm and simply obtained Unable to load document - Unable to reach provided URL, and I have my own Pub ID.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;jyensen&#64;langara&#46;bc&#46;c">Jack Yensen</a> at February 20, 2008 11:25 PM</span>
+</div>
+<div class="comments-body">
+<p>I was just reading about scribd and iPaper in G reader and wondering how it would work inside an LMS. I'll have to try it inside of Blackboard. Thanks for the bookmarklet.</p>
+
+<p>BTW, any chance of adding the comment link to your single-post template?</p>
+<span class="comments-post">Posted by: <a href="http://ceitl.zanestate.edu/blog/">todd</a> at February 21, 2008 12:53 AM</span>
+</div>
+<div class="comments-body">
+<p>I can't get it to work either .. I've tried on the site that I added as my URL in the list of sites, and i@ve tried with & without the "pub" at the start of the publisher number. </p>
+
+<p>By the way, I agree with Todd about the lack of comment field in a single post view. </p>
+<span class="comments-post">Posted by: <a href="http://userweb.port.ac.uk/~duke-wie/blog">Emma</a> at February 22, 2008 01:35 PM</span>
+</div>
+<div class="comments-body">
+<p>The bookmarklet has been rolled back to a version that includes a publisher ID, so the ones currently on the page should work out of the can.</p>
+
+<p>If you edit the bookmarklet to add your own pub-id, you need to be careful that the backslashes that escape the various quote marks aren't deleted.</p>
+
+<p>if you use the bookmarklet generatr, it should work?</p>
+
+<p>If you have any more prblems, mail me a copy of the broken bookmarklet and i'll have a look at it.</p>
+
+<p>As far as comments go - this is a v old blog engine and I don't have permissions to install extensions. Disabling page level comments was the only way i could manage spam...</p>
+
+<p>I really should move the blog, but that would take time i donlt have...</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at February 22, 2008 02:57 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

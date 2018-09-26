@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: No More PDF Reader Hell? Hello iPaper - You Taking Note...?</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013308.html" title="Heads Up - Embeddable Google Charting" />
+
+<link rel="next" href="./013390.html" title="Scribd iPaper Bookmarklets and Greasemonkey Script" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013308.html">&laquo; Heads Up - Embeddable Google Charting</a> |
+
+<a href="./">Main</a>
+| <a href="./013390.html">Scribd iPaper Bookmarklets and Greasemonkey Script &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 19, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">No More PDF Reader Hell? Hello iPaper - You Taking Note...?</h3>
+
+<p>My day's been made again - my dead Mac only has a dead power supply (the pins in the end-of-cable adapter have mechanically failed - maybe dropping the end of the lead in a full cup of hot, sweet coffee didn't help?), so the sooner I can get a replacement and get away from PC/XP hell the better; and <a href="http://scribd.com">Scribd </a>made an announcement...</p>
+
+<p>...about something they're calling  <a style="font-style: italic;" href="http://www.scribd.com/ipaper">iPaper</a> (what is it with <span style="font-style: italic;">i</span>Everything?).</p>
+
+<p>iPaper is flash powered, like the previous Scribd embeds (which rendered uploaded files in a flash container within a browser), but with some extra features "including full text search, copy/paste functionality, view modes, and zoom." It'll be interesting to see how it fares on the accessibility stakes, both in terms of screen readers, but also on mobile devices.</p>
+
+<p>iPaper will render a whole range of document formats, including Microsoft and Open Office documents, presentations and spreadsheet, PDF and postscript (remember that?).</p>
+
+<p>Anyway, I love it when webco's make zero day mashups <em>apparently</em> so easy to achieve (even though my publisher key isn't being recognised at the mo... :-( another zero day feature? ;-) [I mailed them to give a heads up on the problem and they mailed straight back, saying it was wider(?) problem on their end and quarter of an hour should do it; 10 mins was all it took...]</p>
+
+<p>Along with the iPaper announcement, Scribd announced a developer API, as well as a <a href="http://www.scribd.com/platform/documentation">developer API</a>, and a neat little javascript include that will turn all the docs in your page to iPaper docs painlessly...</p>
+
+<p>I don't know if the doc has to been on the same domain for this to work though?</p>
+
+<p>(I think the Javascript should follow the grazr approach, and default with a slurp  link that gets removed if the embed is available? <a href="http://www.scribd.com/slurp?scribd_publisher_id=pub-64160908907150939988&display_mode=scribd&public=true&url=http://ocw.mit.edu/NR/rdonlyres/hs/calculus/a/18_01_fall_2005_lecture_15.pdf">example doc...</a>)</p>
+
+<p><script type="text/javascript" src='http://www.scribd.com/javascripts/view.js'></script>     <div id='embedded_flash'  ><a href='http://www.scribd.com/doc/2095898/18-01-fall-2005-lecture-6'>18 01 fall 2005 lecture 6</a></div> <script type="text/javascript"> var scribd_doc = new scribd.Document(2095898, 'key-1ov21agyf2iderko48p9');  scribd_doc.addParam('height', 500);   scribd_doc.addParam('width', 450);   scribd_doc.addParam('page', 1);  scribd_doc.write('embedded_flash'); </script></p>
+
+<p><br />
+To convert all the docs in a page to iPaper, just add a javascript include to the bottom of the page. To convert your site to iPaper, just put the script in your footer template (that's what it's for, right? ;-)</p>
+
+<p>To see it in action - here are some <a href="http://www.scribd.com/platform/documentation/resources">demo movies</a>.</p>
+
+<p>If you're a bit more technically inclined, there's a 'proper' Scribd API too, along with a lightweight javascript iPaper API.</p>
+
+<p>Box.net were quick off the mark to integrate the service ("<a href="http://blog.box.net/?p=125" rel="bookmark" title="Permanent Link: Scribd launches iPaper; OpenBox services on shared pages">Scribd launches iPaper; OpenBox services on shared pages</a>"), reinforcing their position as best-of-breed online-storage/do-something-with-your-stuff/just-tell-me-why-it-isn't-an-eportfolio-then service (IMVHO, of course...)</p>
+
+<p>And finally - iPaper can embed ads, in a far neater way than the <a href="./012090.html">Adobe/Yahoo PDF ad-includes</a>. If Google ads can be added in to a doc, think what you could do with an internal ad server piping contemporary content into iPaper docs containing otherwise static content, (a bit like the way the Conversations Network podcast engine works, I think, adding fresh ads at the top and tail of archived audio content? &lt;- can anyone confirm that? Is there a white paper on their architecture anywhere?).</p>
+
+<p>I've been taking issue in various comments around the web lately about the way many "open"courseware initiatives use closed PDFs (I don't have a PDF plugin in my browser and don't want one...and I like the Adobe reader about as much as Real player (does Adobe still require a PC restart when you install Acrobat Reader?)</p>
+
+<p>So - any bets on when OU MyStuff/ePortfolio will make use of iPaper? Or any of the Open Repositories (<a href="http://dfflanders.wordpress.com/">Flanders</a>, I dare ya... first round'll be on me ;-)? Or any of the OER sites?</p>
+
+<p>PS what Scribd really need to do, of course, is allow a link to raise an iPaper doc in a <a href="http://mjijackson.com/shadowbox/">lightbox</a>. I'm convinced this interaction style is good for maintaining flow and I love to see it being trialled a bit more to see if that is indeed the case...</p>
+
+<p>PPS I've done a couple of bookmarklets and a Greasemonkey script that will either embed iPaper previews of documents linked to from any web page, or rewrite those links so they point to iPaper previews of the documents: <a href="./013390.html">Scribd iPaper Bookmarklet</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a>, but it's the first time from a PC and the styling is all broken... crappy Windows...</p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ipaper" rel="tag">ipaper</a>, <a href="http://technorati.com/tag/scribd" rel="tag">scribd</a>, <a href="http://technorati.com/tag/%20hahaAdobe" rel="tag"> hahaAdobe</a>, <a href="http://technorati.com/tag/pdf" rel="tag">pdf</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 19, 2008 07:42 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Cool!  Lots of fun.</p>
+
+<p>My one main worry ...</p>
+
+<p>"accessibility stakes, both in terms of screen readers, but also on mobile devices."</p>
+
+<p>Flat doesn't work on iPod touch/iPhone - no native Flash, y'see.  Same as all the embedded Flash tools.</p>
+
+<p>Accessibility is always going to suffer here, unless iPaper takes off sufficiently to be a format of interest in its own right.  Lots of long, hard work has been done on accessibility of things like Word docs and PDFs.  Very little has been done on iPaper.  Converting widely-used formats to a little-used one isn't an obvious instant big win for ubiquity of access.</p>
+
+<p>I still don't like Flash.  Although I like PDF plug-ins even less. :-)</p>
+<span class="comments-post">Posted by: <a href="http://dougclow.wordpress.com">Doug Clow</a> at February 20, 2008 11:55 AM</span>
+</div>
+<div class="comments-body">
+<p>I think the problem with flash ubiquity is their sdk has only be release up to flash - err - old version (this iw what i have read on Wii noticeboards - the wii only supports an old version of flash).</p>
+
+<p>Re: accessibility - good design can take care of some accessibility issues, but sometime the tech does get in the way, admittedly... </p>
+
+<p>However, I would argue that for most people, that's not an issue; I think it is misguided to *not* use interaction styles/interfaces that are fit for purpose by most people, even if they aren't accessible. Okay - we need to find an alternative where access is an issue, but for most people, using the most common desktop browsers, who cares?</p>
+
+<p>If we always have to go to lowest common denominator in the accessibility stakes, I guess there wouldn't be any stairs?</p>
+
+<p>Also - if the price of accessibility is intrusion, which is how i feel about acrobat (it's intrusive and aggressive in its installation and updating), then as long as i don't need their accessibility features, I don't see why I should be forced to use that product (same with real player).</p>
+
+<p>And remember that iPaper is new out of the box. Were word and pdf accessible from day one?</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at February 20, 2008 12:19 PM</span>
+</div>
+<div class="comments-body">
+<p>Oh, I'm totally against lowest common denominator approaches.  If you do that you not only don't have stairs, you don't have lifts. :-)</p>
+
+<p>Very good point about newness - pretty much everything gets better over time.  </p>
+
+<p>And fundamentally iPaper should be able to make documents more accessible: you'll have the originals to fall back on if you can't grok the iPaper version, so you can get iPaper ease-of-use (in many circumstances) on top of the original, not instead.</p>
+<span class="comments-post">Posted by: <a href="http://dougclow.wordpress.com">Doug Clow</a> at February 20, 2008 01:04 PM</span>
+</div>
+<div class="comments-body">
+<p>i - everything ... much like Windows XP has "My" everything. I know it's "My" computer! Whose else would it be??</p>
+<span class="comments-post">Posted by: <a href="http://userweb.port.ac.uk/~duke-wie/blog">Emma</a> at February 21, 2008 05:12 PM</span>
+</div>
+<div class="comments-body">
+<p>Yesterday, when I checked Scribd, all the papers I randomly looked at were converted to iPaper. Today I've looked for a particular one, which I know was in Flash format a while ago. It's now just in Powerpoint, and it says that they're converting it. GUess it's an ongoing process! </p>
+<span class="comments-post">Posted by: <a href="http://userweb.port.ac.uk/~duke-wie/blog">Emma</a> at February 22, 2008 11:41 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

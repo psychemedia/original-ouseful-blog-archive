@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OU Open Sources Moodle ePortfolio - But What Flavour is the API?</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./011825.html" title="Search for Ads, by Google" />
+
+<link rel="next" href="./011879.html" title="iFuture" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./011825.html">&laquo; Search for Ads, by Google</a> |
+
+<a href="./">Main</a>
+| <a href="./011879.html">iFuture &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 16, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OU Open Sources Moodle ePortfolio - But What Flavour is the API?</h3>
+
+<p>Niall Sclater has been bigging up the <a href="http://sclater.com/blog/?p=46">OU MyStuff ePortfolio</a> (it's a devil to find on the OU network if you don't know where it is, so here's a <a href="http://ouseful.open.ac.uk/mystuff">OUseful shortcut to MyStuff</a>).</p>
+
+<p>If you run Moodle, you can <a href="http://www.open.ac.uk/mystuff/?page_id=4">download and install the MyStuff ePortfolio</a>.</p>
+
+<p>For a history of sorts of the interface design, Guy Carberry blogged elements of the <a href="http://conclave.open.ac.uk/guycarberry/index.php?s=mystuff">MyStuff interface design process</a> as it evolved...</p>
+
+<p>I'll try to post a review of MyStuff over the next week or two, but I need to play with it properly a bit first - first impression notables are the calendar, filetype and tag-based displays of uploaded files, plus the ability to share files with other users (but only if you know their user ID - hmm....?!)</p>
+
+<p>However, something that isn't immediately obvious to me is how I can get my content out; that is, there is no obvious <em>Export</em> capability. Or maybe I just missed it?</p>
+
+<p>If we were recommending a third party storage solution to students, we'd be sure to tell them to make sure they can easily export all their files in case the service looks like it might disappear. As best practice suggests that this advice should apply equally to using services from well funded enterprises like Google and Amazon, as well as 'fly-by-night' web 2.0 startups, I guess it should also apply to <a href="http://www.open.ac.uk/vice-chancellor/News_3A00_Insights/News-2007/ELQ_Briefing_Note.html">public insitutions like the OU that look set to lose huge chunks of their funding</a>?</p>
+
+<p>The developer notes for the app suggest that data migration is possible using public APIs. What these are isn't clear to me, though I'd guess it's something Moodle related. For the user, I'm not sure how this would work? (Hmm - I wonder - is MyStuff one of the components of <a href="http://sclater.com/blog/?p=43">Moodle on a Stick</a>? And if so, does the synching work efficiently?)</p>
+
+<p>The API issue for ePortfolios is something that I'd like to think will be shaken up by the announcement by online storage company Box.net of their <a href="http://www.box.net/info/openbox">OpenBox API</a> (see the product announcement reviews on <a href="http://www.techcrunch.com/2007/11/13/boxnet-releases-openbox-platform-for-integration-of-web-applications/">TechCrunch</a> and <a href="http://www.rev2.org/2007/11/16/boxnets-openbox-revolution-in-online-file-storage/">Rev2</a> ). </p>
+
+<p>Earlier this year, Box.net integrated their online file storage system with the ability to <a href="http://blogs.zoho.com/general/boxnet-integrates-zoho/">open word documents from Box.net into the Zoho docs online wordprocessor</a>.</p>
+
+<p>OpenBox generalises their Zoho integration serivce by providing a storage platform that application developers can plug in to. I had something similar to this in mind when I wrote <a href="./009692.html">ePortfolios, Distributed Storage and Personal Repository Caches</a>, where I described the current situation whereby multiple applications all offer their own local storage solution.</p>
+
+<p>The Box.net vision now appears to be that OpenBox becomes the filesystem for the web. So for example, if you have an image file stored on Box.net, you can open it in the  <a href="http://picnik.com">Picnik online photo editor</a>, or for a word doc, edit it using the <a href="http://zoho.com">Zoho online word processor</a> or publish it using <a href="http://scribd.com">Scribd</a>.</p>
+
+<p>Presumably being able to save all your images, documents or whatever from the partner services back onto Box.net is only a matter of time, if that service isn't already being offered?</p>
+
+<p>Needless to say, this sort of feature is not part of the MyStuff proposition - you need desktop apps to create, edit and maybe even view the documents you have uploaded to it.</p>
+
+<p>One of the attractions of having a centralised file store is that your files can by shared in various combinations. The <a href="http://www.box.net/info/widget">Box widget</a>, for example, "lets you share files by publishing your photos, documents, audio, or video in a user-friendly form. You can even upload additional content at any time directly from the widget, without having to visit Box!". It'll be interesting to see if they opt in to the OpenSocial API to give the widget even further reach.</p>
+
+<p>I have to admit I don't recall seeing an 'export all' option in Box.net, but I'm sure if they looked like they were in difficulty someone would build an 'export all' application pretty quickly on top of their API.</p>
+
+<p>So, given the choice of using MyStuff or OpenBox, which would <em>you</em> go for?<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/eportfolio" rel="tag">eportfolio</a>, <a href="http://technorati.com/tag/online%20storage" rel="tag">online storage</a>, <a href="http://technorati.com/tag/%20mystuff" rel="tag"> mystuff</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 16, 2007 11:40 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

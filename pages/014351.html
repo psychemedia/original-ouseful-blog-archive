@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: TweetSpeech - Twitter to Speech Pipe</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014347.html" title="Embedding Single OpenLearn Unit Pages in an Arbitrary Blog Post" />
+
+<link rel="next" href="./014352.html" title="Single Item RSS Feeds from OpenLearn Pages" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014347.html">&laquo; Embedding Single OpenLearn Unit Pages in an Arbitrary Blog Post</a> |
+
+<a href="./">Main</a>
+| <a href="./014352.html">Single Item RSS Feeds from OpenLearn Pages &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 25, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">TweetSpeech - Twitter to Speech Pipe</h3>
+
+<p>I don't know what prompted it, but yesterday I started looking for a registration free RSS2speech service that I could use to produce and audio version of a Twitter feed. I did find <a href="http://say.expressivo.com/dQVkF60M">Expressivo</a>, which sort of lets you create audio messages for text strings up to a couple of characters long:</p>
+
+<p><a href="http://say.expressivo.com/dQVkF60M" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2261/2439965071_1fe43bd0c1.jpg" alt="expressivo" style="border: 0pt none ;" height="134" width="500" /></a></p>
+
+<p>If you want to see the result, scroll down to the end fo the post - the bit in the middle is the techie "how to do it "detail... ;-)</p>
+
+<p>What I had been hoping for was a 10 minute hack to get an audio file enclosure added to a twitter stream, by using something like:<br />
+<em>http://mp3generator.expressivo.com?say=say%20this%20out%20loud</em><br />
+to get an MP3 file I could use to augment the twitter stream...</p>
+
+<p>But it didn't look that simple... so I <a href="http://twitter.com/psychemedia/statuses/796260681">tweeted</a>, <a href="http://twitter.com/dfflanders/statuses/796261728">David Flanders replied</a>, and I thought 'what the heck...'</p>
+
+<p>So here was the problem - go to an Expressivo page with a particular message, <a href="http://say.expressivo.com/dQVkF60M">like this one</a>.</p>
+
+<p>The audio plays from the page. At the bottom of the page is a link to the audio file:</p>
+
+<p><a href="http://say.expressivo.com/dQVkF60M" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2214/2440804094_c337bac0da.jpg" alt="expressivo share" style="border: 0pt none ;" height="249" width="410" /></a></p>
+
+<p>The download URL is not nice though... <a href="http://say.expressivo.com:8080/media/37/72/3772bb468373baab54bc2a17adc2c33dd.mp3"><em>http://say.expressivo.com:8080/media/37/72/3772bb468373baab54bc2a17adc2c33dd.mp3</em></a></p>
+
+<p>Which isn't so much of a problem - I can pull the page into a Yahoo pipe and just scrape it to pull the URL out, right...? (Yahoo pipes can be used as rudimentary screen scrapers.)</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2440807356/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3264/2440807356_46e3fa924c.jpg" alt="expressivo js" style="border: 0pt none ;" height="44" width="500" /></a></p>
+
+<p>Wrong - the link is generated by a Javascipt/AJAX function...</p>
+
+<p>Hmm...</p>
+
+<p>Well, if I can recreate the AJAX call, I can then parse the URL out of what's returned from the MP3 file url generating service...  One quick way of finding out what AJAX call the page is making is to watch the header traffic flowing through my browser:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2439991723/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3196/2439991723_10ff341488.jpg" alt="expressivo header" style="border: 0pt none ;" height="366" width="363" /></a></p>
+
+<p>So I can recreate a call to the Expressivo MP3 generatr, and hopefully get a response back containing ther URL of the MP3 file.</p>
+
+<p>Here's a pipe to test that bit out - <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=LGwAnE0S3RG1rNPn6UjTQA">Expressivo MP3 Test pipe</a></p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=LGwAnE0S3RG1rNPn6UjTQA" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3136/2440814754_846a631f27.jpg" alt="expressivo MP3 pipe" style="border: 0pt none ;" height="347" width="500" /></a></p>
+
+<p>What this pipe does is produce a single item RSS feed that contains an enclosure corresponding to an MP3/spoken version of the message that is passed in to the pipe.</p>
+
+<p>So now, all I have to do to get a Twitter2speech service running is to embed this pipe in another pipe that pulls in a Twitter feed, pass it each tweet, and attach the appropriate MP3 file attachment as an enclosure to the Twitter stream - <a href="http://pipes.yahoo.com/ouseful/tweetspeech">TweetSpeech pipe</a>:</p>
+
+<p><a href="http://pipes.yahoo.com/ouseful/tweetspeech" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2010/2440000831_166e4c441a.jpg" alt="tweetspeech pipe" style="border: 0pt none ;" height="358" width="500" /></a></p>
+
+<p>So to recap - the output of the TweetSpeech pipe is a twitter friends stream for a particular Twitter user, with each item augmented with an MP3 file as an enclosure that speaks the tweet aloud...<br />
+  <br />
+The result is most easily viewed/listened to in a Grazr widget:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/read?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=vrgoRE4S3RGiW_RVmLokhQ&amp;_render=rss&amp;id=dfflanders"><img alt="Grazr" src="http://static.grazr.com/images/grazrbadge.png" style="border: medium none ;" /></a><script defer="defer" type="text/javascript" src="http://static.grazr.com/gzloader.js?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=vrgoRE4S3RGiW_RVmLokhQ&amp;_render=rss&amp;id=dfflanders"></script></div>
+
+<p>Just click on any item and you should get an embedded player that will play the tweet aloud... (at least, until Expressivo maybe decide they don't like this hack!;-)</p>
+
+<p>PS I have received reassurances from Grazr that the widget will continue to be supported, as a free service: "NOTHING will change with the widget or any existing feature. Whatever is there will remain there. Whatever is free now will remain free always."<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/grazr" rel="tag">grazr</a>, <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/%20tweetspeech" rel="tag"> tweetspeech</a>, <a href="http://technorati.com/tag/%20expressivo" rel="tag"> expressivo</a>, <a href="http://technorati.com/tag/twitter2speech" rel="tag">twitter2speech</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 25, 2008 11:39 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Not quite sure it's what you want Tony, but have you looked at Utterz? You can record audio from your phone, and the link goes straight to twitter.</p>
+<span class="comments-post">Posted by: <a href="http://edtechie.net">Martin</a> at May  5, 2008 12:58 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

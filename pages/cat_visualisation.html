@@ -6,7 +6,7 @@
 
 <title>OUseful Info: visualisation Archives</title>
 
-<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
 <script language="javascript" type="text/javascript">
@@ -28,13 +28,878 @@ function OpenTrackback (c) {
 <body>
 
 <div id="banner">
-<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
 <div id="container">
 
 <div class="blog">
+
+
+<h2 class="date">July 10, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014984"></a>
+<h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 2</h3>
+
+Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in Visualising CoAuthors in Open Repostory Online Papers, Part 1, to give a graphic which isn't really that useful or interesting (too cluttered), I...
+<!--
+<p>Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">Visualising CoAuthors in Open Repostory Online Papers, Part 1</a>, to give a graphic which isn't really <em>that</em> useful or interesting (too cluttered), I thought I'd try out a couple of network visualisations using Many Eyes and Graphviz.</p>
+
+<p>It's possible to construct graphs using both these tools by organising the data in pairs - so for each reference in a collection of references (for example, all the papers produced by a particular unit, or all the references returned from a title/abstract search on a particular query term), I pulled out every possible pairwise combination of authors. (So for exampple, a paper authored by A, B, C and D generates (A, B), (A, C), (A, D), (B, C), (B, D), (C, D) as all the possible pairwise coathor relations for that reference.) For convenience (i.e. as a result of laziness), I allowed duplicate pairs into the list (so if A and B had coauthored mutliple papers, their pairwise cauthor relation would appear many times in the data set.</p>
+
+<p>So what's the result? Well here's a Many Eyes view over references produced from the <a href="http://oro.open.ac.uk/view/faculty_dept/fels-cepm.html">Academic Unit/Department: Educational Policy, Leadership and Lifelong Learning</a>:</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w%7EP2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3255/2654724721_c671ccb974.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="468" width="493" /></a></p>
+
+<p>It's possible to zoom in to the display and highlight or search for individual authors, and see who they have co-authored with:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2655552986/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3148/2655552986_533a0edb56.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="210" width="324" /></a></p>
+
+<p>As it seems that Many Eyes now allows visualisations to be embedded, let's see what happens if I try to embed the above.</p>
+
+<p><script type="text/javascript" src="http://services.alphaworks.ibm.com/manyeyes/api/v1/snapshot/89ade5ae1afd68ea011b03c2f1b103e9.js?width=400&amp;height=350"></script></p>
+
+<p>At a high level, this visualisation allows us to pick out clusters of what we might refer to as different co-authoring teams within the unit. If we were visualising references returned from a search on a particular topic, the result might allow us to detect different groups working in a similar who don't author with each other, or different domains that use the same term but in completely different senses.</p>
+
+<p>There are also a few  things to notice in the detail about the Many Eyes network visualisation. Firstly, ambiguity in naming has a visual effect: <em>WoodsPA</em> and <em>WoodsP</em> are the same person I think, so their different representation creates an artificial degree of separation in the visualisation. Secondly, the node size reflects the degree of (I think) each author node - that is, the number of coauthors are connected to. I'm not sure if it also represents the absolute number of times the name appeared in the uploaded data set? Which leads neatly to the third point: the repeated occurrence of the same coauthor pairs are not apparently visualised.</p>
+
+<p>If we now look at a fragment of a Graphviz directed graph (the direction goes from authors who appear earlier in the reference list to authors who appear later) we see that repeated co-author pairings are displayed - the number of connections between two authors represents the number of references they have coauthored:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2652732682/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3274/2652732682_d92a70a1fe.jpg" alt="(null)" height="218" width="500" /></a></p>
+
+<p>Visualising the results of a search (e.g. a <a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search over ORO for  the term "mobile"</a>) reveals far more structure - here's a significant fragment of a Graphviz visualisation of couthors on references returned from just such a search:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3048/2654746483_eb6504469e.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="150" width="500" /></a></p>
+
+<p>Here's a more detailed view of part of the above:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3074/2654750561_0bde106452.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="271" width="500" /></a></p>
+
+<p>So what? So nothing really... it just seemed like a good idea at the time, another way of trying to identify professional networks and teams based on their outputs... and it was relatively trivial (and quick) to do... ;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20graphviz" rel="tag"> graphviz</a>, <a href="http://technorati.com/tag/%20many%20eyes" rel="tag"> many eyes</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">11:26 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14984" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 09, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014979"></a>
+<h3 class="title">Visualising CoAuthors in Open Repostory Online Papers, Part 1</h3>
+
+In ORO Search by Name Pipes Interface I described a Yahoo pipe for extracting author information from papers listed in the OU's open repository, and outlined some of the potential author naming ambiguities that arise when using ORO reference data...
+<!--
+<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014965.html">ORO Search by Name Pipes Interface</a> I described a Yahoo pipe for extracting author information from papers listed in the OU's open repository, and outlined some of the potential author naming ambiguities that arise when using ORO reference data as author metadata. In this post, I'll describe my initial attempt at visualising co-author relations using the Moowheel javascript visualisation library. In a couple of follow on posts, I look at some rather more 'correct' visualisations using both Moowheel and Many Eyes.</p>
+
+<p>If you're not familiar with it, Moowheel constructs a circular display of points that are connected to each other by some relation when provided with a set of data organised in an appropriate way. For example, in <a href="http://blogs.open.ac.uk/Maths/ajh59/014570.html">delicious Tags'n'users Wheel</a> I used Moowheel to show the tags used by different users who had bookmarked a particular URL on delicious.</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/"><img src="http://farm3.static.flickr.com/2351/2498112816_d6915d716d.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="468" width="500" /></a></p>
+
+<p>Hovering over a username highlights the tags they used to bookmark the original link.</p>
+
+<p>In Moowheel v0.1 at least, the data must be supplied in a form similar to: (a, b, c), (c, a, d), (b, c, e), (d, a), (e). To construct the circle, each item (a, b, c, d, e) must be present as the first item in a set; each set describes the items that are connected to each other in some way.) Links are highlighted to members of a set when the first item in the set is hovered over.</p>
+
+<p>So here's how I first thought to try to visualise the co-authors of an ORO paper - the source is a results listing for a <a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search on ORO by author "pillinger"</a>:</p>
+
+<p>- construct a list of unique authors and use this to create the unique items on the circle: (author1), (author2), (author3), ..., (authorN).<br />
+- construct sets of the form: (author1, author2), (author1, author2), ..., (author3, author1, authorN) - where the first set are the authors of paper1, the second set are the authors of paper2, and so on.</p>
+
+<p>My hope was that the Moowheel would then plot out the connections between all the authors who had ever coauthored a paper together that had also included a "pillinger" as an author. Here's a sample result:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2009/2651292446_7dca7662d6.jpg" alt="moowheel oro authors 1" height="478" width="500" /></a></p>
+
+<p>You'll see that some authors are depicted multiple times, but with no connections. What Moowheel v0.1, at least, seems to be doing is only display the connections for a non-singleton set where the first term in the set occurs with other set members for the first time(?) (There was also originally some ambiguity in actual author names; for example, "PIllinger, CT", "Pillinger, C" and "Pilinger, Colin" all appear in the results list - see <a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">Dirty Name Data in the OU Open Repository Online</a> for a discussion about this; in the above demo, I went overboward and just used the surname, which combined results fro "Pillinger, C" and "Pillinger, J"...;-)</p>
+
+<p>If you want to have a play with the Moowheel, you can find it here: <a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php?author=pillinger">ORO viz demo 1</a>.</p>
+
+<p>In order to cope with authors appearing multiple times along the outside edges of the graph, I guessed that I needed to construct non-singleton sets that were started with a unique identifier, so I added a level of indirection that related authors with the papers that had contributed to:</p>
+
+<p>- construct a list of unique authors;<br />
+- construct sets headed by unique authors, and the papers they had contributed to, and use this to create the unique items on the circle: (author1, paper1, paper2), (author2, paper1), (author3, paper2, paperN), ..., (authorN, paper2).<br />
+- construct sets for each paper listing the authors who had contributed to that paper: (paper1, author1, author2), (paper2, author1, author3), ..., (paperN, author3).</p>
+
+<p>Here's the result (<a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php?author=pillinger">ORO viz demo 2</a> NB there's a niggle somewhere in the code which means that for some few results listings, the wheel doesn't display... Also, the pipe canlt cope with overlong results listings Ideally, ORO would produce it's own RSS/JSON output...:-(:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3058/2651308026_eac86efc3d.jpg" alt="oro author papers" height="467" width="500" /></a></p>
+
+<p>This time, if you hover over the name of an author, the links to the papers they contributed to will be highlighted. If you hover over a paper reference, the authors who contributed to it will be highlighted.</p>
+
+<p>In order to see which authors had coauthored with whom, I guess I'd need to hack the Moowheel code so that if I hovered over an author, the links to papers they had contributed to would be highlighted, and the 'activated' papers would then in turn highlight the links to the authors who had contributed to those papers...</p>
+
+<p>Whilst I haven't tried that approach, I did find another way of visualising who had coauthored with whom - as I'll describe in my next post... :-)<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20moowheel" rel="tag"> moowheel</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">10:43 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14979" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 23, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014902"></a>
+<h3 class="title">Visualising Audio</h3>
+
+A couple of weeks ago, I spent the week writing posts on the Visual Gadgets uncourse blog, one of which focused on ways of visualising audio transcripts: Visual Interfaces for Audio/Visual Transcripts. Over the weekend, a couple of BBC R...
+<!--
+<p>A couple of weeks ago, I spent the week writing posts on the <a href="http://visualgadgets.blogspot.com/">Visual Gadgets uncourse blog</a>, one of which focused on ways of visualising audio transcripts: <a href="http://visualgadgets.blogspot.com/2008/06/visual-interfaces-for-audiovisual.html">Visual Interfaces for Audio/Visual Transcripts</a>.</p>
+
+<p>Over the weekend, a couple of BBC R &amp; D folks at the Mashed 08 event posted another take on this, a visualisation tool for audio files: <a href="http://mashed08.backnetwork.com/event/?articleid=26">Audio visualisation</a>.</p>
+
+<p><a href="http://mashed08.backnetwork.com/event/?articleid=26" title="BBC audio visualisation, Mashed 08"><img src="http://farm4.static.flickr.com/3191/2603017257_78ee3cc32a.jpg" alt="BBC audio visualisation, Mashed 08" height="75" width="500" /></a>.</p>
+
+<p>As they suggest: "Finding your way to a particular item in a recording of a radio programme can be difficult. Fast-forward and rewind functions aren't always very effective, especially in on-demand, on-line use. We are researching the presentation of audio recordings as visible timelines, with different colours or textures used to represent different characterics of the audio, like genre, speaker, tempo, key or rhythm - all extracted automatically".</p>
+
+<p>Again, a week or two ago, I also discovered the 'enhanced podcast' (which I used to create the image synch for <a href="http://blip.tv/file/972770/">remix 2: play, create (Blur, featuring Sir Ken Robinson)</a>, described in <a href="http://blogs.open.ac.uk/Maths/ajh59/014760.html">remix 2: Blur, featuring Sir Ken Robinson...</a>). This allows synching of imagery to audio (something that SMIL almost sorted a long time ago...).</p>
+
+<p>Enhanced podcasts were also picked up on by some of the BBC folks, particularly in this example of <a href="http://mashed08.backnetwork.com/event/?articleid=25">Hack Moyles - Audio segmentation with RTMP</a>. The post describes a technique for segmenting MP3 files so that each segment can be marked up with data, such as text, or images. Here's a demo: <a href="http://willcox.welcomebackstage.com:5080/20080404.html">RTMP Segmented Audio Player</a>.</p>
+
+<p>This is something that could be really good for us, I think?</p>
+
+<p>PS sort of but not really related, ages ago I came across the rather wonderful <a href="http://schillmania.com/projects/soundmanager2/">SoundManager 2</a> javascript libraries. I rediscovered it again a week or two ago, around about the time I discovered that audio files from ITConversations could (once again) be deep linked into... (<a href="http://www.gardnercampbell.net/blog1/?p=610">Excerpting audio from ITConversations</a>).</p>
+
+<p>So I posted a demo (via twitter) that allows the user to 'trigger' one or more audio files from an HTML 'trigger pad'.</p>
+
+<p><a href="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" title="Audio sample trigger pad"><img src="http://farm4.static.flickr.com/3070/2603884098_0d9631db69.jpg" alt="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" height="500" width="466" /></a></p>
+
+<p>The audio sample triggered from each pad is actually pulled in from an XML file - as the following shows, the target URL for the file can actually be an <a href="http://itc.conversationsnetwork.org/">IT Conversations</a> 'deep link' URL.</p>
+
+<p><a href="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3141/2603895898_a5c02b69f7.jpg" alt="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" height="194" width="500" /></a></p>
+
+<p>When I get a chance, I'll see if I can make this sample pad delicious powered... I was also wondering whether I should try to trigger the display of a flickr image whenever a pad is pressed? (When two audio sampels are triggered, they both play - what's the equivalent for displaying mulitple images? Fade one in over the other, show them both as semi-transparent?)<br />
+ <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/audio" rel="tag">audio</a>, <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/%20samples" rel="tag"> samples</a>, <a href="http://technorati.com/tag/%20itconversations" rel="tag"> itconversations</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014902.html">10:16 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14902" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 16, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014843"></a>
+<h3 class="title">More Trendspotting: Jobs Trends</h3>
+
+In several previous posts ((I'll let you find them for yourself ;-), I've posted about various tools for plotting trends in search engine queries, twitter posts and so on. In today's roundup, here are some job trend plotting services -...
+<!--
+<p>In several previous posts ((I'll let you find them for yourself ;-), I've posted about various tools for plotting trends in search engine queries, twitter posts and so on. In today's roundup, here are some job trend plotting services - 'cos at the endof the day, formal education is about getting people prepared for, and into, work... right?</p>
+
+<p>So here are a few services I've found (if you're reading this through a feedreader, you'll probably need to click through to read this post on the OUseful.info blog if you want to see the embedded graphs...):</p>
+
+<p><a href="http://www.indeed.com/jobtrends?q=cisco%2C+microsoft%2C+linux&l=">Indeed job trends</a>: trends over the US job market, I think?</p>
+
+<div style="width:540px">
+<a href="http://www.indeed.com/jobtrends?q=cisco%2C+microsoft%2C+linux" title="cisco, microsoft, linux Job Trends">
+<img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=cisco%2C+microsoft%2C+linux" border="0" alt="cisco, microsoft, linux Job Trends graph">
+</a>
+<table width="100%" cellpadding="6" cellspacing="0" border="0" style="font-size:80%"><tr>
+<td><a href="http://www.indeed.com/jobtrends?q=cisco%2C+microsoft%2C+linux">cisco, microsoft, linux Job Trends</a></td>
+<td align="right"><a href="http://www.indeed.com/jobs?q=cisco">cisco jobs</a> - <a href="http://www.indeed.com/jobs?q=microsoft">microsoft jobs</a> - <a href="http://www.indeed.com/jobs?q=linux">linux jobs</a></td>
+</tr></table>
+</div>
+
+<p><a href="http://www.simplyhired.com/a/jobtrends/home">Simply Hired job trends</a> (US again, I think?):</p>
+
+<p><!-- BEGIN TREND GRAPH --><div style="width: 540px;" class="chart"><img src="http://www.simplyhired.com/a/jobtrends/graph/q-cisco,+microsoft,+linux/t-line/embed" alt="Cisco, Microsoft, Linux trends" /><table width="100%" style="font-size: 80%;"><tr><td width="2%">&nbsp;</td><td align="left"><a href="http://www.simplyhired.com/a/jobtrends/trend/q-cisco,+microsoft,+linux">Cisco, Microsoft, Linux trends</a></td><td align="right"><a href="http://www.simplyhired.com/a/jobs/list/q-cisco">Cisco jobs</a> | <a href="http://www.simplyhired.com/a/jobs/list/q-microsoft">Microsoft jobs</a> | <a href="http://www.simplyhired.com/a/jobs/list/q-linux">Linux jobs</a></td><td width="2%">&nbsp;</td></tr></table></div><!-- END TREND GRAPH --></p>
+
+<p><a href="http://www.workhound.co.uk/trend/?query=cisco%2C+microsoft%2C+linux&submit=Search+Trends">Workhound job trends</a> (UK, I think?)</p>
+
+<p><script type="text/javascript" src="http://www.workhound.co.uk/trend/trend.php?query=cisco%2C+microsoft%2C+linux"><br />
+</script><br />
+<noscript><a href="http://www.workhound.co.uk/trend/trend.php?query=cisco%2C+microsoft%2C+linux">Job trends</a> by Workhound</noscript></p>
+
+<p>And a sector/industry specific one: <a href="http://www.itjobswatch.co.uk/default.aspx?page=1&sortby=5&orderby=1&q=cisco%2c+microsoft%2c+linux&id=0&lid=2618">IT jobs watch</a>. This service doesn't have a comparison trends service, but you can plot graphs that show how wages and numbers of job postings trend over time for a specific job category.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/trendspotting" rel="tag">trendspotting</a>, <a href="http://technorati.com/tag/emplyment%20trends" rel="tag">emplyment trends</a>, <a href="http://technorati.com/tag/%20recruitment%20trends" rel="tag"> recruitment trends</a>, <a href="http://technorati.com/tag/%20trends" rel="tag"> trends</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014843.html">06:52 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14843" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 05, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014726"></a>
+<h3 class="title">eduPunk Chatter...</h3>
+
+Building off the back of the 'social life of a URL' thinking I've been doing lately, I started tinkering with what 'the social life of eduPunk' might look like... So here's an early glimpse of a work in progress, a...
+<!--
+<p>Building off the back of the 'social life of a URL' thinking I've been doing lately, I started tinkering with what 'the social life of eduPunk' might look like... So here's an early glimpse of a work in progress, a quick view of who's twittering about 'edupunk', and who's using the <a href="http://del.icio.us/tag/edupunk"><em>edupunk</em> tag on the delicious social bookmarking site</a>.</p>
+
+<p>I'll add in technorati tag/blogsearch branches in too, because I'm guessing that the twitter subtree will start to wither before long?</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk socialtag: top level view"><img src="http://farm4.static.flickr.com/3194/2553524570_2ca9976260.jpg" alt="edupunk socialtag" height="432" width="500" /></a><br />
+  <br />
+The first node in each category (delicious or twitter) is the name/id of the person who posted the tweet/bookmark:</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk twitterers"><img src="http://farm4.static.flickr.com/3075/2553529076_62a7071c4e.jpg" alt="edupunk twitterers" height="442" width="500" /></a></p>
+
+<p>The leaves are the title of the post bookmarked or the content of the tweet...</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk tweets"><img src="http://farm4.static.flickr.com/3281/2552707773_aa1af9e4f8.jpg" alt="edupunk tweets viz" height="323" width="500" /></a></p>
+
+<p>Over time, it'll be interesting to see if thebookmark subtree grows... (bearing in mind that I'm using a delicious limited API call at the moment, rather than necessarily accessing <em>all</em> the bookmarked items tagged 'edupunk'.</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk bookmarks"><img src="http://farm4.static.flickr.com/3275/2552709837_14f91bf19d.jpg" alt="edupunk bookmarks" height="439" width="500" /></a></p>
+
+<p>With the blog search view/technorati view (not shown) where the author is not necessarily known, what should I use as the 'author'? The blog URL? Maybe in time I'll be able to reconcile identities using e.g. friendfeed?</p>
+
+<p>i also need to work out what sort of connected graph views to explore... For example, it may be that different people are bookmarking or twittering about the same URL, which could be shown. For the blog posts, posts that link out to other URLs that appear in the display could also be connected?</p>
+
+<p>I guess at the end of the day, all I'm doing is muddling my way towards a URL or tag focused meme tracker visualisation? Hmm....<br />
+<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/edupunk" rel="tag">edupunk</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014726.html">11:51 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14726" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">May 19, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014570"></a>
+<h3 class="title">delicious Tags'n'users Wheel</h3>
+
+Over the weekend, I posted a couple of visualisation demos that displayed the history of a URL as it has been bookmarked on delicious (delicious URL History - Hyperbolic Tree Visualisation and More Hyperbolic Tree Visualisations - delicious URL History:...
+<!--
+<p>Over the weekend, I posted a couple of visualisation demos that displayed the history of a URL as it has been bookmarked on delicious (<a href="http://blogs.open.ac.uk/Maths/ajh59/014544.html">delicious URL History - Hyperbolic Tree Visualisation</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/014547.html">More Hyperbolic Tree Visualisations - delicious URL History: Users by Tag</a>).</p>
+
+<p>I also had a play with the <a href="http://www.unwieldy.net/moowheel/">Moowheel javacscript visualisation library</a> that plots connections between nodes on a wheel. Once again, I used the delicious URL history to plot the users who had bookmarked a particular URL, along with the tags they used:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/"><img src="http://farm3.static.flickr.com/2351/2498112816_d6915d716d.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="468" width="500" /></a></p>
+
+<p>This representation essentially 'flattens' the hierarchy displayed using the hyperbolic tree visualisations. Both tags and usernames are plotted on the wheel. Hovering over one of the labels (user or tag) highlights the connectsions from that label (so you can see who used what tags, or what tags a particular person used).</p>
+
+<p>The demo can be found at <a href="http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/">http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/</a></p>
+
+<p>The <em>url</em> argument identifies the URL whose delicious history you want to plot.</p>
+
+<p>As with the hyperbolic tree visualisations, delicious history data is pulled into the page from delicious via a URL pipe. A small amount of javascript processing within the page puts it into the format required by the moowheel visualisation library.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/moowheel" rel="tag">moowheel</a>, <a href="http://technorati.com/tag/visualisation%20delicious" rel="tag">visualisation delicious</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014570.html">12:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14570" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">May 16, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014547"></a>
+<h3 class="title">More Hyperbolic Tree Visualisations - delicious URL History: Users by Tag</h3>
+
+Building on from the previous post (delicious URL History - Hyperbolic Tree Visualisation), where I showed how the JavaScript Information Visualization Toolkit (JIT) could be used to visualise the delicious history of a URL, showing each user who had bookmarked...
+<!--
+<p>Building on from the previous post (<a style="text-decoration: none;" href="http://blogs.open.ac.uk/Maths/ajh59/014544.html">delicious URL History - Hyperbolic Tree Visualisation</a>), where I showed how the <a href="http://blog.thejit.org/?page_id=14">JavaScript Information Visualization Toolkit (JIT)</a> could be used to visualise the delicious history of a URL, showing each user who had bookmarked a particulalr URL, and then, for each user, the tags they had used, I've just put together a script that will do the opposite...</p>
+
+<p>That is, it will show all the tags used to describe a particular URL, and for each of those tags, it will show the users who used them:</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/hypertree-demo2.php?mode=tag" title="delicious URL History - Hyperbolic Tree Visualisation"><img src="http://farm3.static.flickr.com/2350/2497988230_b4bd08f432.jpg" alt="2008-05-16_2132" height="458" width="500" /></a></p>
+
+<p>You can find the demo here: <a href="http://ouseful.open.ac.uk/jit/examples/hypertree-demo2.php?mode=tag&amp;url=http://spotlight.reuters.com/">http://ouseful.open.ac.uk/jit/examples/hypertree-demo2.php?mode=tag&amp;url=http://spotlight.reuters.com/</a></p>
+
+<p>You will notice two arguments, <em>url</em> and <em>mode</em>. The <em>url</em> should be set to the (escaped) URL you want the history of. The <em>mode</em> should be set to <em>user</em> (the default) or <em>tag</em>.</p>
+
+<p>The <em>user</em> view plots the users who bookmarked the URL, and the tags they used. The <em>tag</em> view (as shown above) plots the tags used to describe the URL and the people who used them.</p>
+
+<p>   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/jit" rel="tag">jit</a>, <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/%20delicous" rel="tag"> delicous</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014547.html">09:38 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14547" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+
+<a name="014544"></a>
+<h3 class="title">delicious URL History - Hyperbolic Tree Visualisation</h3>
+
+Over the last few weeks and months, several javascript visualisation libraries have arrived on the scene that allow you to create quite complex visualisations within the browser. For almost as long as I can remember, I've been completely taken by...
+<!--
+<p>Over the last few weeks and months, several javascript visualisation libraries have arrived on the scene that allow you to create quite complex visualisations within the browser.</p>
+
+<p>For almost as long as I can remember, I've been completely taken by computer visualisations, but almost completely unable to create them.... Something to do with not being able work out <em>how to do the drawing bit</em>, I guess?</p>
+
+<p>Which is why I like the javascript visualisation libraries... as long as you can get your data into the right data structure, the libraries will display it for you. And being javascript - a lite scripting language that's easily abused and runs client side in the browser (no server or additioanl libraries required) - there's no time consuming recompilation of overcomplicated, syntactically nightmarish code;-) (although it must be said the browser can sometimes slow to a near halt;-)</p>
+
+<p>Anyway, this morning I had a little tinker with the outstanding <a href="http://blog.thejit.org/?page_id=14">JavaScript Information Visualization Toolkit (JIT)</a>, a javascript library that plots treemaps, hyperbolic trees, radial graphs and "space trees".</p>
+
+<p>Here's an example of my first attempt - a hyperbolic tree showing the people who have bookmarked a particular URL on delicious, and how they hae tagged it.</p>
+
+<p><a href="%3Cbr/%3Ehttp://ouseful.open.ac.uk/jit/examples/hypertree-demo.php" title="JIT hyperbolic tree"><img src="http://farm3.static.flickr.com/2196/2497057488_052be4426b.jpg" alt="(null)" height="418" width="500" /></a></p>
+
+<p>If you want to try it out yourself, here it is: <a href="http://ouseful.open.ac.uk/jit/examples/hypertree-demo.php?url=http://www.york.ac.uk/">social life of a url (delicious, hyperbolic tree)</a>.</p>
+
+<p>You can visualise any url using the scheme: <em>http://ouseful.open.ac.uk/jit/examples/hypertree-demo.php?url=http://www.york.ac.uk/</em> (though you should probably escape the URL).</p>
+
+<p>If the browser warns you the script it taking a long time to continue, just tell it to continue ;-)</p>
+
+<p>The data for the tree is pulled on from a Yahoo pipe (where else?!;-) which looks up the URL on delicious and returns the people who have bookmarked it and the tags they used (<a href="http://blogs.open.ac.uk/Maths/ajh59/014179.html">view delicous comments for a bookmarked URL pipe</a>). A tiny bit of client side handling puts the JSON output from the pipe into the data structure required by the JIT.</p>
+
+<p>All in all, this took maybe 90 mins from scratch, 20 mins of which were spent wondering why this didn't work:<br />
+<em>for (var j; j &lt; tags.length; j++) { ... }</em></p>
+
+<p>[Ans: <em>j</em> needed initialising - <em>var j<strong>=0</strong></em> ]<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/delcious" rel="tag">delcious</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014544.html">03:23 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14544" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 21, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013973"></a>
+<h3 class="title">Tinkering with Google Trendalyser, err, Motion Chart, Gadgets</h3>
+
+I've just managed to steal a little time to play with a couple of the new Google Visualisation gadgets. There seem straightforward enough to use, and the integration with Google spreadsheets means that one you get the data into a...
+<!--
+<p>I've just managed to steal a little time to play with a couple of the new Google Visualisation gadgets. There seem straightforward enough to use, and the integration with Google spreadsheets means that one you get the data into a spreadsheet you can start to play with it.</p>
+
+<p>I went off and pinched some data from UCAS (<a href="http://www.ucas.com/about_us/stat_services/stats_online/data_tables/abushei/">UCAS admissions data</a>) and used it to generate a Trendalyser view - now known as a Motion Chart - was trivial (feed readers, you'll have to click through to see and play with it ;-)</p>
+
+<p>Firstly, a look at how admissions are faring in a handful of institutions:</p>
+
+<p><iframe width='450' height='471' frameborder='0' scrolling='no' src='http://k2alr2pc-a.gmodules.com/ig/ifr?up__table_query_url=http%3A%2F%2Fspreadsheets.google.com%2Ftq%3Frange%3DB1%253AH32%26key%3Dp1rHUqg4g422xIt4UXCxsVg%26gid%3D0%26pub%3D1&up_title=UCAS%20Admissions%20data%20(example)&up_state=&up__table_query_refresh_interval=0&url=http%3A%2F%2Fwww.google.com%2Fig%2Fmodules%2Fmotionchart.xml' style='border: 1px solid #cccccc'></iframe></p>
+
+<p>Here's another one, this time looking at some demographics data:</p>
+
+<p><iframe width='450' height='471' frameborder='0' scrolling='no' src='http://k2alr2pc-a.gmodules.com/ig/ifr?up__table_query_url=http%3A%2F%2Fspreadsheets.google.com%2Ftq%3Frange%3DA2%253AAJ7%26key%3Dp1rHUqg4g422aUaJQmA2nRQ%26gid%3D0%26pub%3D1&up_title=UCAS%20(demographics)&up_state=&up__table_query_refresh_interval=0&url=http%3A%2F%2Fwww.google.com%2Fig%2Fmodules%2Fmotionchart.xml' style='border: 1px solid #cccccc'></iframe></p>
+
+<p>Now, I wonder what sorts of things we can do with the Course Profiles data...? ;-)<br />
+</div><br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/trendalyser" rel="tag">trendalyser</a>, <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/%20hefce" rel="tag"> hefce</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013973.html">09:32 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13973" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 18, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013308"></a>
+<h3 class="title">Heads Up - Embeddable Google Charting</h3>
+
+I'm supposedly on holiday today, but I thought i'd have a quick play with the Data Visualization Google Gadgets to see if I could get them working... but I couldn't... (If you haven't seen notice of these gadgets, Google has...
+<!--
+<p>I'm supposedly on holiday today, but I thought i'd have a quick play with the <a href="http://googlesystem.blogspot.com/2008/02/data-visualization-google-gadgets.html">Data Visualization Google Gadgets</a> to see if I could get them working... but I couldn't...</p>
+
+<p>(If you haven't seen notice of these gadgets, Google has quietly released a set of feed powered data visualisation widgets/gadget - bar charts, line charts, organisational charts, and a Gapminder/trendalyzer like widget among others - but no-one can work out how to get them working!)</p>
+
+<p>Anyway, like many others, I tried to feed data into one of these widgets from a Google  chart, which was when i noticed this on the Google spreadsheet toolbar: <a href="http://www.flickr.com/photos/psychemedia/2274731152/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2176/2274731152_ec75e17c50_o.png" alt="2008-02-18_1538" style="border: 0pt none ;" height="34" width="44" /></a></p>
+
+<p>A chart tool....? How very interesting... :-)</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2273940413/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2259/2273940413_f4c8f311a2.jpg" alt="2008-02-18_1539" style="border: 0pt none ;" height="365" width="500" /></a></p>
+
+<p>The charts are all publishable and embeddable:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2273947063/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2113/2273947063_e4b45c0ed0_o.png" alt="2008-02-18_1543" style="border: 0pt none ;" height="122" width="132" /></a> <a href="http://www.flickr.com/photos/psychemedia/2274742476/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2062/2274742476_e7212663cf.jpg" alt="2008-02-18_1544" style="border: 0pt none ;" height="219" width="450" /></a></p>
+
+<p>They are also fed live from the spreadsheet. Here's an example of an embedded chart:</p>
+
+<p><img src="http://spreadsheets.google.com/pub?key=p1rHUqg4g4207oHzeNadtTg&amp;oid=1&amp;output=image" /></p>
+
+<p>From the image URL, you can see how it is feed powered:</p>
+
+<p><span style="font-style: italic;">&lt;img src="http://spreadsheets.google.com/pub?key=p1rHUqg4g4207oHzeNadtTg&amp;oid=1&amp;output=image" /&gt;</span><br style="font-style: italic;" /><br />
+The <span style="font-style: italic;">key</span> refers to a particular spreadsheet, I think, and I'm guessing (without the trivial test) that <span style="font-style: italic;">oid</span> is the chart identifier within a spreadsheet?</p>
+
+<p>Something I've not really looked at before are the range of feed options from a spreasheet:</p>
+
+<p> <a title="googlespreadsheetfeeds.png" href="http://www.flickr.com/photos/25451952@N00/2274769026/"><img src="http://farm3.static.flickr.com/2333/2274769026_f8a68f80b4_o.png" border="0" /></a></p>
+
+<p>Ho hum, yet more things to play with...</p>
+
+<p>PS if you get any of the Google chart gadgets working, particularly the trendalyzer one, please let me know how! :-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/google" rel="tag">google</a>, <a href="http://technorati.com/tag/chart" rel="tag">chart</a>, <a href="http://technorati.com/tag/%20gchart" rel="tag"> gchart</a>, <a href="http://technorati.com/tag/%20spreadsheet" rel="tag"> spreadsheet</a>, <a href="http://technorati.com/tag/%20gdocs" rel="tag"> gdocs</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013308.html">04:02 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13308" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">December 16, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="012240"></a>
+<h3 class="title">Tinkering with Google Charts</h3>
+
+As it's the weekend, I've been having an bit of an extended play with the Google charts API and some data from the Course Profiles Facebook app. The app now has just over 2,500 users, so while the data is...
+<!--
+<p>As it's the weekend, I've been having an bit of an extended play with the <a href="http://code.google.com/apis/chart/">Google charts API</a> and some data from the <a href="http://blogs.open.ac.uk/Maths/ajh59/010855.html">Course Profiles Facebook app</a>. The app now has just over 2,500 users, so while the data is still sparse there is almost enough to start putting together some proof of concept reports.</p>
+
+<p>Having been introduced to the Python language by the O'Reilly <a href="http://www.amazon.co.uk/Programming-Collective-Intelligence-T-Segaran/dp/0596529325/?tag=ouseful-21"><em>Programming Collective Intelligence</em></a> book, examples from which I've already had a bit of a tinker with (see <a href="http://blogs.open.ac.uk/Maths/ajh59/012128.html">Hierarchical Course Clusters from Course Profiles App</a>, for example), it seemed sensible to carry on it that language putting together the reports. A quick scout around turned up a <a href="http://pygooglechart.slowchop.com/">Python wrapper for the Google Charts API</a>, which makes creating chart URLs pretty straightforward (here's a more general list of <a href="http://groups.google.com/group/google-chart-api/web/useful-links-to-api-libraries">programming language wrappers for the Google Chart API</a>).</p>
+
+<p>The first function I wrote generates a URL for a pie chart showing the distribution of users on a particular course according to the specified course status. The caveat heere is that users who don;t engage withthe course profiles app much will have all their courses flagged as 'current' by default.</p>
+
+<p><a href="http://pygooglechart.slowchop.com/"></a><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=400x160&amp;chd=s:6oL&amp;chtt=T175%20on%20Course%20Profiles%20%28109%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=Completed|Current|Future" src="http://chart.apis.google.com/chart?cht=p&amp;chs=400x160&amp;chd=s:6oL&amp;chtt=T175%20on%20Course%20Profiles%20%28109%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=Completed%7CCurrent%7CFuture" /></p>
+
+<p><br />
+The next function I put together was one that takes in a course code, <em>two</em> status identifiers, and a threshold value, and then produces charts like this one:</p>
+
+<p><img alt="The image “http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240|M150|M255|M257|M263|MU120|M366” cannot be displayed, because it contains errors." src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240%7CM150%7CM255%7CM257%7CM263%7CMU120%7CM366" /></p>
+
+<p>The description of this chart is as follows: "for students who have said they have <em>completed</em> <em>T175</em>, the chart displays those courses they have said they are <em>Currently</em> taking (subject to at least <em>3</em> people having said they are currently taking each course shown).</p>
+
+<p>This type of report reveals (within the context of the Course Profiles app) the relationship between a stated course (declared as "completed", "current" or "future") and other courses declared with a particular status ("completed", "current" or "future") by the same user. For each course code, there are thus nine possible status combination reports, each subject to a particular reporting threshold.</p>
+
+<p>Here are a few more examples...</p>
+
+<p>A report for DSE212 that shows, for students who have said they are currently taking DSE212, what courses they have said they intend to take in the future (subject to at least 4 people having said they intend to take the course in the future):</p>
+
+<p><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:QPPOHEJE&amp;chtt=Current%20DSE212%20users%20stating%2084%20Future%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=ED209|DD303|DD307|SD226|DZX222|D315|DXR222|DSE232" src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:QPPOHEJE&amp;chtt=Current%20DSE212%20users%20stating%2084%20Future%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=ED209%7CDD303%7CDD307%7CSD226%7CDZX222%7CD315%7CDXR222%7CDSE232" /></p>
+
+<p></p>
+
+<p>A report that shows, for students who have said they are currently taking DSE212, what courses they have said they have already completed (subject to at least 4 people having said they've completed the course):</p>
+
+<p><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:lGEGFE&amp;chtt=Current%20DSE212%20users%20stating%2062%20Completed%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100|DD121|S193|S103|MU120|SK185" src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:lGEGFE&amp;chtt=Current%20DSE212%20users%20stating%2062%20Completed%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100%7CDD121%7CS193%7CS103%7CMU120%7CSK185" /></p>
+
+<p></p>
+
+<p><br />
+A report that shows, for students who have said they are intend to take DSE212 in the future, what courses they have said they are currently taking:</p>
+
+<p><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DBBBBBBB&amp;chtt=Future%20DSE212%20users%20stating%2010%20Current%20courses%20%28min%201%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100|ED209|U212|Y158|Y157|S180|DD122|Y156" src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DBBBBBBB&amp;chtt=Future%20DSE212%20users%20stating%2010%20Current%20courses%20%28min%201%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100%7CED209%7CU212%7CY158%7CY157%7CS180%7CDD122%7CY156" /></p>
+
+<p>As mentioned above, the user numbers of the application are still relatively small, which means the above reports are interesting only insofar as they suggest what sorts of reports the data aggregated by the app are possible.</p>
+
+<p>Of course, the OU as an institution has access to comprehensive, authoritative data which can be mined in the above ways... I'm just not sure that: a) I have access to that data, or: b) I am allowed to write arbitrary queries on it...<br />
+   <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/courseprofiles" rel="tag">courseprofiles</a>, <a href="http://technorati.com/tag/%20gchart%20api" rel="tag"> gchart api</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012240.html">03:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12240" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 23, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="011997"></a>
+<h3 class="title">Second Life as a Stage</h3>
+
+I was fortunate enough to share a coffee and a quick chat Peter Miller at the JISC CETIS do earlier this week, and picked up a new lens to look at Second Life with... (The scarey optician's gadget is called...
+<!--
+<p>I was fortunate enough to share a coffee and a quick chat <a href="http://tidalblog.blogspot.com/">Peter Miller</a> at the JISC CETIS do earlier this week, and picked up a new lens to look at Second Life with...</p>
+
+<p><a href="http://flickr.com/photos/sylvar/103400643/" title="Phoropter"><img src="http://farm1.static.flickr.com/35/103400643_d4aac67f2d_m.jpg" alt="Phoropter" height="181" width="240" /></a></p>
+
+<p>(The scarey optician's gadget is called a phoropter, apparently... I was actually just looking for a box full of lenses..)</p>
+
+<p>Anyway, the idea is to use Second Life as a stage, rather than a meeting place, and use it to create artefacts that can be brought into a learning activity (whether that's a lecture, or a VLE session!)...</p>
+
+<p><object type="application/x-shockwave-flash" data="http://www.vimeo.com/moogaloop.swf?clip_id=393910&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=" height="300" width="400">	<param name="quality" value="best">	<param name="allowfullscreen" value="true">	<param name="scale" value="showAll">	<param name="movie" value="http://www.vimeo.com/moogaloop.swf?clip_id=393910&amp;server=www.vimeo.com&amp;fullscreen=1&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color="></object><br />
+<a href="http://www.vimeo.com/393910/l:embed_393910">Lysozyme1</a> from <a href="http://www.vimeo.com/user222087/l:embed_393910">Peter Miller</a> on <a href="http://vimeo.com/l:embed_393910">Vimeo</a>.</p>
+
+<p>I also wondered whether worlds like Second Life could be used to provide a setting for visualised scientific models (such as in the above movie) that would induce a sense of awe - and evoke a consideration of the aesthetic - when stumbled upon by someone wandering through Second Life...</p>
+
+<p>There is, after all, a fine recent history of art'n'science projects... I wonder why <a href="http://www.wellcome.ac.uk/node4525.html">SciArt</a> is no more, though?<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/sciart" rel="tag">sciart</a>, <a href="http://technorati.com/tag/second%20life" rel="tag">second life</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/011997.html">02:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=11997" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 10, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="011622"></a>
+<h3 class="title">Course Profiles Facebook App - Number of Courses per User</h3>
+
+Although the number of users has grown since I last took a dump of users stats (as "reported" in OU Course Profiles Facebook App - Treemaps), I'm still tinkering with the original dump of 700 or so anonymised user records...
+<!--
+<p>Although the number of users has grown since I last took a dump of users stats (as "reported" in <a href="http://blogs.open.ac.uk/Maths/ajh59/011283.html">OU Course Profiles Facebook App - Treemaps</a>), I'm still tinkering with the original dump of 700 or so anonymised user records from the <a href="http://blogs.open.ac.uk/Maths/ajh59/010855.html">Open University Course Profiles Facebook application</a> to see what other low hanging fruit there is in terms of graphical reporting we can explore.</p>
+
+<p>After chatting with Jon Rosewell yesterday about the commenting frequency of students in the Open Studio application on T189 (of which, more in a later post, maybe?) I thought I'd have a quick look at the distribution of the number of courses declared by Course Profiles app users.</p>
+
+<p>Here's the distribution curve...</p>
+
+<p><img src="http://farm3.static.flickr.com/2287/1951798756_ef86e3537f.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="364" width="470" /></p>
+
+<p><br />
+The shape looks kind of familiar, doesn't it?</p>
+
+<p>Here's the data sorted into log (ish;-) ordered bins:</p>
+
+<p><img src="http://farm3.static.flickr.com/2281/1951798498_126b581828.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="238" width="500" /></p>
+
+<p>I'm not sure what the status of the users who entered a single course code is? Maybe they are students on their first course, or on a single OpenLearn course, or maybe they are just trying the application out?</p>
+
+<p>And I'm not sure how to best to dig into this sort of data... are there any 'standard' ways of reporting 'power law' data, I wonder?</p>
+
+<p>Hmmm - maybe it's time to start looking at some formal academic reporting... now I wonder, what were my Science Direct credentials again? Where in the library website can I find a way into the citation databases? Ah, buggrit, as someone in a Terry Pratchett book probably once said - I'll use <a href="http://scholar.google.com">Google Scholar</a>...</p>
+
+<p>PS I tried Google Google first of course - <a href="http://www.eecs.harvard.edu/~michaelm/postscripts/im2006a.pdf">The Future of Power Law Research </a> by Michael Mitzenmacher (Internet Mathematics Vol. 2, No. 4: 525-534 ) looks like it might be quite interesting, although it isn't exactly what I was looking for...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/stats" rel="tag">stats</a>, <a href="http://technorati.com/tag/statistics" rel="tag">statistics</a>, <a href="http://technorati.com/tag/%20analytics%20facebook" rel="tag"> analytics facebook</a>, <a href="http://technorati.com/tag/%20fbapp" rel="tag"> fbapp</a>, <a href="http://technorati.com/tag/%20course%20profiles" rel="tag"> course profiles</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/011622.html">06:32 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=11622" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">November 03, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="011283"></a>
+<h3 class="title">OU Course Profiles Facebook App - Treemaps</h3>
+
+One of the reasons I wanted to see an OU Facebook app based around self-reported course codes was that it would give me access to data that does exist within the OU, but that I wasnlt allowed to explore using...
+<!--
+<p>One of the reasons I wanted to see an <a href="http://blogs.open.ac.uk/Maths/ajh59/010855.html">OU Facebook app</a> based around self-reported course codes was that it would give me access to data that does exist within the OU, but that I wasnlt allowed to explore using visualisation tools such as Many Eyes...</p>
+
+<p>I'm not sure where this could lead, but here are a few snapshots of Treemap visualisations generated by Many Eyes using some raw data (approx 700 users) from the Course Profiles app...</p>
+
+<p>Firstly, a breakdown of self-reported course start dates by year (year 0 is undeclared). The larger blocks within each year correspond to the level of the courses. The atomic (smallest) squares correspond to the declaration of a particular course by a particular registered user of the application.</p>
+
+<p><img src="http://farm3.static.flickr.com/2270/1848051215_24002fbab3.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="336" width="500" /></p>
+
+<p>A view of courses by faculty...</p>
+
+<p><img src="http://farm3.static.flickr.com/2412/1848874816_1a742a0308.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="342" width="500" /></p>
+
+<p>Secondly, a zoomed in view of the Science Faculty courses - the dominant boxes within each course box correspond to the declared year of study.</p>
+
+<p><img src="http://farm3.static.flickr.com/2360/1848050599_2ffbdf1c3a.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="344" width="500" /></p>
+
+<p>Here is a view of courses that have been completed, are currently being studied, or are part of a users planned future study. The large inner groups within each period correspond to the level of course that has bee, is currenlty being, or will be studied.</p>
+
+<p><img src="http://farm3.static.flickr.com/2044/1848873798_df1ffcac93.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="350" width="500" /></p>
+
+<p><br />
+A view of courses by course code, then year of study...</p>
+
+<p><img src="http://farm3.static.flickr.com/2345/1848874162_7a766d2280.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="346" width="500" /></p>
+
+<p><br />
+As well as Treemaps, the data representation used is also appropriate for generating certain classes of Matrix Chart. Here we see current/future/previously studied courses, organised by level. The size of each bubble is a count of the number of people who declared it; the colour segments are breakdowns by faculty.</p>
+
+<p></p>
+
+<p><img src="http://farm3.static.flickr.com/2134/1848875518_016202aa4f.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="376" width="500" /></p>
+
+<p>This chart shows how the charts can be explored by highlighting levels of study, within a chart that depicts courses by Faculty and status (currently/previously and to be studied).</p>
+
+<p><br />
+<img src="http://farm3.static.flickr.com/2309/1849059884_9d1cf6e5bd.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="365" width="500" /></p>
+
+<p>My feeling is that such displays offer at a glance views over large amounts of data that would allow curriculum planners in the first instance to phrase interesting questions about the data that could then be explored in more detail.</p>
+
+<p>Of course, the same of data displayed above is based on a relatively tiny sample of OU students (700 or so) compared to the 120 thousand current students and over 2million alumni... which could generate a wonderful dataset to play with if they all joined facebook, added the Course Profiles app and let me aggregate their data... ;-)<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openuniversity" rel="tag">openuniversity</a>, <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/%20manyeyes" rel="tag"> manyeyes</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/011283.html">11:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=11283" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">October 15, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010798"></a>
+<h3 class="title">&quot;A Vision of Students Today"</h3>
+
+You ever get a shiver down your back when you see or read or hear something that tells you what you already know, but in a really powerful way? Web2.0...The Machine is Us/ing Us did it for me, as it...
+<!--
+<p>You ever get a shiver down your back when you see or read or hear something that tells you what you already know, but in a really powerful way?</p>
+
+<p><a href="http://www.youtube.com/watch?v=6gmP4nk0EOE">Web2.0...The Machine is Us/ing Us</a> did it for me, as it did for a lot of people I think... I'm listening to it now, as I'm typing this - I see the words appear as I type them, <s>as I delete them</s> - you can't see what I just did, but I did it - if you <s>ah</s>haven't seen the movie, go watch it now - you'll get t<s>ge ide</s>he idea... </p>
+
+<p>Anyway...</p>
+
+<p>...<a href="http://www.ksu.edu/sasw/anthro/wesch.htm">Micheal Wesch</a>  has just released a couple <a href="http://youtube.com/user/mwesch">more movies...</a></p>
+
+<p>If you're into education...</p>
+
+<p>...watch this  - <a href="http://www.youtube.com/watch?v=dGCJ46vyR9o">A Vision of Students Today</a></p>
+
+<p><object height="350" width="425"><param name="movie" value="http://www.youtube.com/v/dGCJ46vyR9o"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/dGCJ46vyR9o" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"></object></p>
+
+<p><small>Thanks for the <a href="http://www.peterme.com/?p=595">link</a>,  Sean...</small></p>
+
+<p><br />
+ <!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/video" rel="tag">video</a>, <a href="http://technorati.com/tag/beautiful" rel="tag">beautiful</a>, <a href="http://technorati.com/tag/%20education" rel="tag"> education</a>, <a href="http://technorati.com/tag/%20futures" rel="tag"> futures</a>, <a href="http://technorati.com/tag/%20futuremedia" rel="tag"> futuremedia</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010798.html">11:19 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10798" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">October 12, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010735"></a>
+<h3 class="title">Moods and Trends</h3>
+
+Whilst having a little look around for sites that explore the "mood of the web" last night, I came across MoodViews, "a collection of tools for tracking the stream of mood-annotated text made available by LiveJournal." I'm not a LiveJournal...
+<!--
+<p>Whilst having a little look around for sites that explore the "mood of the web" last night, I came across <a href="http://ilps.science.uva.nl/MoodViews/">MoodViews</a>, "a collection of tools for tracking the stream of mood-annotated text made available by LiveJournal."</p>
+
+<p>I'm not a LiveJournal user, but it seems that when you post to LiveJournal, you can associate a mood icon with it - <a href="http://www.livejournal.com/moodlist.bml">LiveJournal Moods - Mood Theme Previews</a>.</p>
+
+<p>The MoodViews app aggregates this information to produce a mood of the web report.  Some of the 'moods' show periodicity:</p>
+
+<p><img src="http://ilps.science.uva.nl/MoodViews/Moodgrapher/CyclicEvents/awake.graph.png" alt="moodview - periodicity"/></p>
+
+<p>Some anticipate forthcoming events:</p>
+
+<p><img src="http://ilps.science.uva.nl/MoodViews/Moodgrapher/GlobalEvents/christmas2005-excited.png" alt="moodview - christmas excitement" /></p>
+
+<p>It's also worth noting that <a href="http://blogs.open.ac.uk/Maths/ajh59/006260.html">Google Trends</a> in search terms also reveal similar dynamic features - when do you think people search for <a href="http://google.com/trends?q=toys">toys</a> for example, or <a href="http://google.com/trends?q=equinox">equinox</a>?</p>
+
+<p>The <a href="http://ilps.science.uva.nl/MoodViews/Moodsignals/">MoodSignals</a> service is partuicularly interesting - large changes in mood can be seen to correspond to particular events.</p>
+
+<p>It'd be interesting to see how well these Mood Signals correlate to particular events as signalled by changes in particular Google searches using Google trends?</p>
+
+<p>Unfortunately, I don't think either service offers an API at the moment?</p>
+
+<p>PS what I meant to mention in this post was how the MoodView scanning approach could be extended out from Live Journal to other status services, like Facebook or Twitter. Prompted buy: Andy Powell commenting on using Twitter to update Facebook status entries - <a href="http://efoundations.typepad.com/efoundations/2007/10/andy-is.html">Andy is...</a></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010735.html">06:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10735" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 01, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010524"></a>
+<h3 class="title">Embedding Google Maps and Adding Photos to Google Earth</h3>
+
+I've come back from holidays to find a wealth of new things to play with, so here's the first of what maybe several bitty catch-up posts... First up, Google look like they might have finally "spoiled" a whole load of...
+<!--
+<p>I've come back from holidays to find a wealth of new things to play with, so here's the first of what maybe several bitty catch-up posts...</p>
+
+<p>First up, Google look like they might have finally "spoiled" a whole load of third party utility mashup apps by making it trivial to embed a Google map in your own web page:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5105315169124879698"><img src="http://lh4.google.com/tony.hirst/Rtm5GOIaDVI/AAAAAAAAAfM/ATeUW9SAqgE/s800/gMapEmbed.png" /></a></p>
+
+<p>The map is embedded in an HTML <em>iframe</em>, as this example - a map of the OU campus in Milton Keynes - shows (which is why <a href="http://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=109196350919255002936.0004350fbe9e51aa9141a&amp;ll=52.026383,-0.706193&amp;spn=0.007169,0.021243&amp;t=k&amp;z=16&amp;om=1">this example</a> probably won't work in a feed reader!):</p>
+
+<p><iframe marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=109196350919255002936.0004350fbe9e51aa9141a&amp;ll=52.024422,-0.709459&amp;spn=0.003867,0.004623&amp;t=k&amp;om=1&amp;output=embed&amp;s=AARTsJqjqSXU3MsO0xKlnu8KEb15XkPHgw" frameborder="no" height="350" scrolling="no" width="425"></iframe><br />
+<a href="http://maps.google.com/maps/ms?ie=UTF8&amp;msa=0&amp;msid=109196350919255002936.0004350fbe9e51aa9141a&amp;ll=52.024422,-0.709459&amp;spn=0.003867,0.004623&amp;t=k&amp;om=1&amp;source=embed" style="color: rgb(0, 0, 255); text-align: left; font-size: small;">View Larger Map</a></p>
+
+<p>Embedding maps has been a bit of a pain until now, but this new facility could see a whole load more appearing...</p>
+
+<p>Second up, and just in passing, <a href="http://earth.google.com/sky/index.html">Google Earth now does the sky too</a>, allowing you to see the heavens from your current location on (Google) Earth.</p>
+
+<p><object height="350" width="425"><param name="movie" value="http://www.youtube.com/v/eMhGpzyFdhE"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/eMhGpzyFdhE" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"></object></p>
+
+<p>I haven't had time to play with this in any great depth yet, so it'll be interesting to see how it compares to things like Celestia and NASA's World Wind, that I've <a href="http://blogs.open.ac.uk/Maths/ajh59/010504.html">posted about previously</a>.</p>
+
+<p>However, I have to agree with <a href="http://www.edparsons.com/?p=520">Ed Parson's</a> that possibly even more interesting in the latest Google Earth release is support for <a href="http://code.google.com/apis/kml/documentation/photos.html">photo overlays and <em>very</em> large images</a> (see als <a href="http://www.ogleearth.com/2007/08/gigapanorg_puts.html">here</a>). The overlaid photos can be oriented relative to the 'ground', which makes it easy to pop up your own billboard!</p>
+
+<p>So for example, here's a view of Adobe Systems, showing a vertically oriented photo, as well as Sketchup model:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5105323028915031394"><img src="http://lh6.google.com/tony.hirst/RtnAPuIaDWI/AAAAAAAAAfc/JvJ7aPFhLi8/s800/gEarthPhotoOverlay.png" /></a></p>
+
+<p>The photo is taken at very high resolution, which means it's possible to go exploring 'inside' it:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5105323041799933298"><img src="http://lh5.google.com/tony.hirst/RtnAQeIaDXI/AAAAAAAAAfk/5ESyltMuoJk/s800/gEarthMegaPhoto.png" /></a></p>
+
+<p>Here's looking into someone's window, for example:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5105323054684835202"><img src="http://lh4.google.com/tony.hirst/RtnAROIaDYI/AAAAAAAAAfs/MyjdeEq2KY4/s800/gEarthWindow.png" /></a></p>
+
+<p>UPDATE: here's a <a href="http://www.youtube.com/watch?v=kjwr7lUruvw">video demo</a>:</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/kjwr7lUruvw"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/kjwr7lUruvw" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>This very much reminded me (although in a <em>complementary</em> way), of Microsoft's <a href="http://labs.live.com/photosynth/">PhotoSynth</a>, which makes a 3D mosaic of photographs that overlap in the visual scene:</p>
+
+<p><object height="350" width="425"><param name="movie" value="http://www.youtube.com/v/p16frKJLVi0"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/p16frKJLVi0" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"></object></p>
+
+<p>I wonder how long it will be before Google snap up <a href="http://fotowoosh.com/">fotowoosh</a>?</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010524.html">08:53 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10524" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
 
 
 <h2 class="date">August 07, 2007</h2>
@@ -45,12 +910,15 @@ function OpenTrackback (c) {
 <a name="010509"></a>
 <h3 class="title">Playing with Many Eyes Data Formats</h3>
 
-<p>Over the weekend, I had a little play with some sample data sets in Many Eyes, just in case I manage to get hold of some real OU course population, retention or student intention data. If I get a chance this week, I'll create some 'plausible'  dummy data and try and post some example visualisations. But in the meantime, here is something a little more abstract... <br /><br />Consider some data that has the form:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095724908934670258"><img src="http://lh3.google.com/tony.hirst/Rremzm4pJ7I/AAAAAAAAAZY/p3Y5Dh_g6o8/s800/manyeyestestdata1.png" /></a><br /><br />(In OU parlance, and in accord with my previous posts on this subject (e.g. <a href="./010472.html">here</a> and <a href="./010499.html">here</a>) courses and modules might corrspond to courses and qualifications.)<br /><br />For each row, there are multiple columns. Numerical data in each column associates a row with a column, and also provides a notion of a 'weight' value between particular row and column values.<br /><br />This sort of layout is typical of many data sets, such as some of the <a href="http://www.ucas.com/figures/index.html">UCAS statistics data</a>. For example, here is some subject data from the <a href="http://www.ucas.com/figures/enq/index.html">UCAS statistics online interactive service</a>:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095718127181309842"><img src="http://lh4.google.com/tony.hirst/Rrego24pJ5I/AAAAAAAAAY8/tAO73tnD1mE/s800/ucasData.png" /></a><br /><br />This information can be thought of as describing a weighted graph by viewing it as an <a href="http://oneweb.utc.edu/%7EChristopher-Mawata/petersen/lesson7.htm">adjacency matrix</a> - if the value of a cell is non-zero, imagine a connection between the row and column items:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713918113359730"><img src="http://lh4.google.com/tony.hirst/Rrecz24pJ3I/AAAAAAAAAYk/UCGInSUs3d8/s800/graphAdjancyMatrix.png" /></a><br /><br />Here, the 1s in the adjacency matrix represent a connection. In this case the graph is undirected (if node a is connected to node b, then node b is connected to node a) and the matrix is symmetrical.<br /><br />I had half-hoped that <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> would be able to see the example data in the format described above as an adjacency matrix and plot the corresponding network diagram, but apparently not (at least, not at the moment...).<br /><br />Instead, the data needed transforming into a format that Many Eyes did like:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095710679708018466"><img src="http://lh6.google.com/tony.hirst/RreZ3W4pJyI/AAAAAAAAAX0/8dAO999Ww6w/s800/manyEyesTestdata2.png" /></a><br /> <br />The network visualisation tool then worked perfectly:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095720734226458530"><img src="http://lh3.google.com/tony.hirst/RrejAm4pJ6I/AAAAAAAAAZI/r-XiyLbIeF8/s800/manyeyesTestdataNetwork.png" /></a><br /><br />(See if you can reconcile this graph with the data in the original format ;-)<br /><br />With the data in this form, Many Eyes can now be used to create a wide variety of visualisations of the data.<br /><br />For example, here is a bubble matrix chart showing the numbers of people on 'courses' that are associated with particular 'modules':<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713879458654002"><img src="http://lh3.google.com/tony.hirst/Rrecxm4pJzI/AAAAAAAAAYE/at_i59CbUbs/s800/manyeyesTestdataMatrix.png" /></a><br /><br />The matrix chart also support a bar chart view - here, we can view the modules (represented via a percentage measure) against courses:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713883753621314"><img src="http://lh4.google.com/tony.hirst/Rrecx24pJ0I/AAAAAAAAAYM/75RvTexA95o/s800/manyeyesTestdataMatrixbar.png" /></a><br /><br />Pie charts are also readily visualised - here is the breakdown of courses:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713896638523218"><img src="http://lh3.google.com/tony.hirst/Rrecym4pJ1I/AAAAAAAAAYU/oKwNr1oUenc/s800/manyeyestestdataPie1.png" /></a><br /><br />And at the flick of a drop down list, a pie chart breakdown of the distribution by module:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713905228457826"><img src="http://lh5.google.com/tony.hirst/RreczG4pJ2I/AAAAAAAAAYc/hXnDNYEqX2A/s800/manyeyesTestdataPie2.png" /></a><br /><br />You might also notice that a particular pie segments can be visually emphasised.<br /></p>
+Over the weekend, I had a little play with some sample data sets in Many Eyes, just in case I manage to get hold of some real OU course population, retention or student intention data. If I get a chance...
+<!--
+<p>Over the weekend, I had a little play with some sample data sets in Many Eyes, just in case I manage to get hold of some real OU course population, retention or student intention data. If I get a chance this week, I'll create some 'plausible'  dummy data and try and post some example visualisations. But in the meantime, here is something a little more abstract... <br /><br />Consider some data that has the form:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095724908934670258"><img src="http://lh3.google.com/tony.hirst/Rremzm4pJ7I/AAAAAAAAAZY/p3Y5Dh_g6o8/s800/manyeyestestdata1.png" /></a><br /><br />(In OU parlance, and in accord with my previous posts on this subject (e.g. <a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">here</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/010499.html">here</a>) courses and modules might corrspond to courses and qualifications.)<br /><br />For each row, there are multiple columns. Numerical data in each column associates a row with a column, and also provides a notion of a 'weight' value between particular row and column values.<br /><br />This sort of layout is typical of many data sets, such as some of the <a href="http://www.ucas.com/figures/index.html">UCAS statistics data</a>. For example, here is some subject data from the <a href="http://www.ucas.com/figures/enq/index.html">UCAS statistics online interactive service</a>:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095718127181309842"><img src="http://lh4.google.com/tony.hirst/Rrego24pJ5I/AAAAAAAAAY8/tAO73tnD1mE/s800/ucasData.png" /></a><br /><br />This information can be thought of as describing a weighted graph by viewing it as an <a href="http://oneweb.utc.edu/%7EChristopher-Mawata/petersen/lesson7.htm">adjacency matrix</a> - if the value of a cell is non-zero, imagine a connection between the row and column items:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713918113359730"><img src="http://lh4.google.com/tony.hirst/Rrecz24pJ3I/AAAAAAAAAYk/UCGInSUs3d8/s800/graphAdjancyMatrix.png" /></a><br /><br />Here, the 1s in the adjacency matrix represent a connection. In this case the graph is undirected (if node a is connected to node b, then node b is connected to node a) and the matrix is symmetrical.<br /><br />I had half-hoped that <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> would be able to see the example data in the format described above as an adjacency matrix and plot the corresponding network diagram, but apparently not (at least, not at the moment...).<br /><br />Instead, the data needed transforming into a format that Many Eyes did like:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095710679708018466"><img src="http://lh6.google.com/tony.hirst/RreZ3W4pJyI/AAAAAAAAAX0/8dAO999Ww6w/s800/manyEyesTestdata2.png" /></a><br /> <br />The network visualisation tool then worked perfectly:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095720734226458530"><img src="http://lh3.google.com/tony.hirst/RrejAm4pJ6I/AAAAAAAAAZI/r-XiyLbIeF8/s800/manyeyesTestdataNetwork.png" /></a><br /><br />(See if you can reconcile this graph with the data in the original format ;-)<br /><br />With the data in this form, Many Eyes can now be used to create a wide variety of visualisations of the data.<br /><br />For example, here is a bubble matrix chart showing the numbers of people on 'courses' that are associated with particular 'modules':<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713879458654002"><img src="http://lh3.google.com/tony.hirst/Rrecxm4pJzI/AAAAAAAAAYE/at_i59CbUbs/s800/manyeyesTestdataMatrix.png" /></a><br /><br />The matrix chart also support a bar chart view - here, we can view the modules (represented via a percentage measure) against courses:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713883753621314"><img src="http://lh4.google.com/tony.hirst/Rrecx24pJ0I/AAAAAAAAAYM/75RvTexA95o/s800/manyeyesTestdataMatrixbar.png" /></a><br /><br />Pie charts are also readily visualised - here is the breakdown of courses:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713896638523218"><img src="http://lh3.google.com/tony.hirst/Rrecym4pJ1I/AAAAAAAAAYU/oKwNr1oUenc/s800/manyeyestestdataPie1.png" /></a><br /><br />And at the flick of a drop down list, a pie chart breakdown of the distribution by module:<br /><br /><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095713905228457826"><img src="http://lh5.google.com/tony.hirst/RreczG4pJ2I/AAAAAAAAAYc/hXnDNYEqX2A/s800/manyeyesTestdataPie2.png" /></a><br /><br />You might also notice that a particular pie segments can be visually emphasised.<br /></p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010509.html">12:11 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010509.html">12:11 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10509" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -68,9 +936,11 @@ function OpenTrackback (c) {
 <a name="010505"></a>
 <h3 class="title">More UK Emergency Mapping Opportunites - Foot and Mouth</h3>
 
+[For a Google Map showing the current (as of August 3, 2007) "foot and mouth exclusion zone", try here: Foot and Mouth Map, as of 3/8/07.] A couple of weeks ago it was floods, and I put together a Google...
+<!--
 <p>[For a Google Map showing the current (as of August 3, 2007) "foot and mouth exclusion zone", try here: <a href="http://maps.google.com/maps?q=http:%2F%2Fwww.edparsons.com%2FFoot_and_Mouth.kml&ie=UTF8&t=h&z=11&om=1">Foot and Mouth Map, as of 3/8/07</a>.]</p>
 
-<p>A couple of weeks ago it was floods, and I put together a Google map mashup of <a href="./010494.html">clean water bowser locations in Gloucester</a>, and now it's a <a href="http://www.ft.com/cms/s/57bfbb8c-4208-11dc-8328-0000779fd2ac.html">foot and mouth alert</a> (UPDATE: <a href="http://microbiologybytes.wordpress.com/2007/08/04/uk-foot-and-mouth-disease-outbreak/">10 Facts About Foot and Mouth Disease</a>.)</p>
+<p>A couple of weeks ago it was floods, and I put together a Google map mashup of <a href="http://blogs.open.ac.uk/Maths/ajh59/010494.html">clean water bowser locations in Gloucester</a>, and now it's a <a href="http://www.ft.com/cms/s/57bfbb8c-4208-11dc-8328-0000779fd2ac.html">foot and mouth alert</a> (UPDATE: <a href="http://microbiologybytes.wordpress.com/2007/08/04/uk-foot-and-mouth-disease-outbreak/">10 Facts About Foot and Mouth Disease</a>.)</p>
 
 <p>I caught the news as I was driving home tonight, (I wasn't too far from the location of the outbreak at the time!) and when I heard a three kilometer <s>exclusion</s> protection zone and five kilometer surveillance zone had been imposed, my first thought was to wonder how easy it would be to plot some circular map overlays onto a Google map, a visualisation effect I originally saw demonstrated by Eric Meyer's <a href="http://meyerweb.com/eric/tools/gmap/hydesim.html">HYDESim: High Yield Detonation Effects Simulator</a>. </p>
 
@@ -104,10 +974,13 @@ function OpenTrackback (c) {
 
 <p>[UPDATE 17/7/07: There have a been a few earthquakes recently, and the mashups that have sprung up around them look like they may contain <a href="http://googlemapsmania.blogspot.com/2007/08/earthquake-google-maps-mashup.html">some reusable circle overlay plotting tricks..?</a>]</p>
 
+<p>PS How come I missed this - the Google maps polygon API; check out this example app: <a href="http://googlemapsapi.blogspot.com/2007/01/gpolygon-example.html">GPolygon Example</a></p>
 
+
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010505.html">01:23 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010505.html">01:23 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10505" onclick="OpenComments(this.href); return false">Comments (1)</a>
 	
 	
@@ -125,6 +998,8 @@ function OpenTrackback (c) {
 <a name="010504"></a>
 <h3 class="title">NASA World Wind - 3D Globe plus NASA Data</h3>
 
+Driving up to Milton Keynes today, I was listening to an IT Conversations podcast from Where 2.0 about NASA Worldwind that mentioned the NASA World Wind app, a 3D globe that can be used to visualise Earth related data as...
+<!--
 <p>Driving up to Milton Keynes today, I was listening to an <a href="http://www.itconversations.com/shows/detail1811.html">IT Conversations podcast from Where 2.0 about NASA Worldwind</a> that mentioned the <a href="http://worldwind.arc.nasa.gov/index.html">NASA World Wind</a> app, a 3D globe that can be used to visualise Earth related data as well as the Moon, Mars, Venus and Jupiter.</p>
 
 <p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206620815664690"><img src="http://lh6.google.co.uk/tony.hirst/RrJB7m4pJjI/AAAAAAAAAUo/HyztNsbMlKM/s800/worldwindLandsatGeoCover.jpg" /></a></p>
@@ -160,9 +1035,10 @@ function OpenTrackback (c) {
 <p>I guess the only way at the moment is to upload the basics of a <em>new</em> unit to <a href="http://labspace.open.ac.uk">LabSpace</a>?</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010504.html">09:52 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010504.html">09:52 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10504" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -180,7 +1056,9 @@ function OpenTrackback (c) {
 <a name="010502"></a>
 <h3 class="title">Visualising OpenLearn Course Listings</h3>
 
-<p>In the previous post (<a href="./010501.html">Visualising OpenLearn Course Listings: Prequel</a>) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be uploaded to the <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> visualisation tool.</p>
+In the previous post (Visualising OpenLearn Course Listings: Prequel) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be...
+<!--
+<p>In the previous post (<a href="http://blogs.open.ac.uk/Maths/ajh59/010501.html">Visualising OpenLearn Course Listings: Prequel</a>) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be uploaded to the <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> visualisation tool.</p>
 
 <p>In this post, I'll quickly demonstrate several possible visualisations, leaving a fuller discussion of the pros, cons, mertis and otherwise of each technique to a series of later posts.</p>
 
@@ -239,9 +1117,10 @@ I'm not sure that the idea behind Many Eyes was to prototype website navigation 
 <p>Time allowing, I'll pop up a series of separate posts, one per visualisation, looking at each view in a little more detail.</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010502.html">11:23 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010502.html">11:23 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10502" onclick="OpenComments(this.href); return false">Comments (2)</a>
 	
 	
@@ -253,11 +1132,15 @@ I'm not sure that the idea behind Many Eyes was to prototype website navigation 
 </div>
 
 </div>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script type="text/javascript">
+
+
 </script>
 <script type="text/javascript">
-_uacct = "UA-571814-1";
-urchinTracker();
+
+
+
 </script>
+
 </body>
 </html>

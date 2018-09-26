@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Doublemarks - Bookmarking Two URLs at Once (but not in the Spirit of Cohere...)</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014885.html" title="The Cost of Meetings - How Much Return on Investment Do YOU Get?" />
+
+<link rel="next" href="./014895.html" title="OER Custom Search Engine" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014885.html">&laquo; The Cost of Meetings - How Much Return on Investment Do YOU Get?</a> |
+
+<a href="./">Main</a>
+| <a href="./014895.html">OER Custom Search Engine &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 20, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Doublemarks - Bookmarking Two URLs at Once (but not in the Spirit of Cohere...)</h3>
+
+<p>A few weeks ago, the <a href="http://cohere.open.ac.uk">Cohere sensemaking application</a>, which lets you creat a relation between two ideas, each of which may have one or more resources associated with it, opened up its API.</p>
+
+<p>Cohere was mentioned a couple of times at the recent SocialLearn workshop (there are a couple of posts around but I don't have any links to hand...) so I dusted off the code and got a (private) demo working: <em>Doublemarks</em> (dblmarks?)</p>
+
+<p>The idea is this: many times I've bookmarked one page/URL that is contained within/appears on another page (right click, "Favourite this link" in Flock...). With a dblmark, not only do you bookmark the link on the page, you also bookmark the page the link appeared on...</p>
+
+<p><a href="http://cohere.open.ac.uk/index.php#" title="Cohere"><img src="http://farm4.static.flickr.com/3003/2595888874_5b17a26e39.jpg" alt="2008-06-20_1817" height="441" width="500" /></a></p>
+
+<p>At the moment, I'm abusing the spirit of Cohere with this application, but not the technology (though you could argue that point too: what I'm doing is not very elegant and not at all respectful of the <em>intended</em> semantics of the Cohere data structures - but it does work...). The intention of the Cohere developers is that Cohere is a place to connect <em>ideas</em> rather than URLs (although it is possible to get into a semantic web related argument about that...;-). If nothing else, my demo stress tests notions about how happy we are with "open" APIs when people do things that don't fit with the way we "want" the API to be used, or the purposes we want it to be used for (I see the Cohere API as offering a clunky API to a sort of triple store; I think the developers would like the app as a whole to be seen as a database of related ideas;-)</p>
+
+<p>So  - here's what I've got ... (the demo requires authentication to use the Cohere API so I'm not posting it just at the moment...).</p>
+
+<p>A bookmarklet that will annotate every link on a page in such a way that when you click a link, it will be bookmarked, along with the URL of the host page, to Cohere as a "dblmark".</p>
+
+<p>At the moment I just bookmark the URLs - no description, no tags - as ideas. This is "not in the Spirit of Cohere"... </p>
+
+<p>To find out what is in the spirit of cohere, consider what happens when Cohere is used to import bookmarks from delicious: each tag is used to create an idea, and then each idea (tag) has the URL(s) bookmarked with it associated as resources dangling off that idea. These bookmark resources contain URL, page title and description fields.</p>
+
+<p><a href="http://cohere.open.ac.uk" title="cohere"><img src="http://farm4.static.flickr.com/3083/2595105197_5fcee68067.jpg" alt="cohere resources for idea" height="430" width="342" /></a></p>
+
+<p>I have no idea which way to push dblmarks next, but here's a dump of what I could do:</p>
+
+<p>1) rather than upload each URL as an idea, store them as a URL/resource type. The page title could be the title, or (in the case of the bookmarked link) the link text. The description could be the contents of the HTML block that contains the link (that is, the the contents of the "parent" node of the anchor tag).</p>
+
+<p>2) rather than bookmark the URl of the 'host' page that the link appears on, bookmark the page URL plus the XPATH to the link (note to self: xpath javascript function - http://snippets.dzone.com/posts/show/3754 )</p>
+
+<p>3) if I do (1), what's the idea? Cohere supports relations between two ideas. What two ideas could be created for the two bookmarked URLs? A separate tag for each, used as an idea?</p>
+
+<p>If I was using Cohere to store the link structure of e.g. trackbacked posts in <a href="./014848.html">Digital Worlds</a>, what would the "idea" of each post be? It's category? The sum of its categories? The sum of its categories and tags (and then in what order? Alphabetical?)</p>
+
+<p>Or should I stick with a URL (URI) as the idea - it is unique after all (if not in keeping with the Spirit of Cohere...)</p>
+
+<p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Ci18DihDRH4&hl=en"></param><embed src="http://www.youtube.com/v/Ci18DihDRH4&hl=en" type="application/x-shockwave-flash" width="425" height="344"></embed></object><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/cohere" rel="tag">cohere</a>, <a href="http://technorati.com/tag/api" rel="tag">api</a>, <a href="http://technorati.com/tag/%20xpath" rel="tag"> xpath</a>, <a href="http://technorati.com/tag/%20doublemark" rel="tag"> doublemark</a>, <a href="http://technorati.com/tag/%20dblmark" rel="tag"> dblmark</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 20, 2008 06:58 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

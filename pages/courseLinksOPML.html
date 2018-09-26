@@ -93,25 +93,47 @@ a:hover {
 }
   </style>
   <script type="text/javascript">
-<!--
+
 function loadopml2() {
  q = document.getElementById ('q').value;
+ addLink('onlineOPML','http://ouseful.open.ac.uk/libraryTools/libraryCourseRSS.php?cc='+q,'OPML online link');
+ addLink('grazrView','http://grazr.com/config.html?file='+encodeURI('http://ouseful.open.ac.uk/libraryTools/libraryCourseRSS.php?cc='+q),'View OPML in Grazr');
+
+
  var element = document.getElementById('output');
  var opmlOut='<opml>\n<head>\n<title>'+q+' CourseLinks</title>\n</head>\n<body>\n';
- opmlOut+='<outline text="'+q+' Ebooks" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_ebooks.php?course='+q+'" />\n';
- opmlOut+='<outline text="'+q+' Databases" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_databases.php?course='+q+'" />\n';
- opmlOut+='<outline text="'+q+' Journals" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_ejournals.php?course='+q+'" />\n';
- opmlOut+='<outline text="'+q+' ROUTES" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_routes.php?course='+q+'" />\n';
- opmlOut+='<outline text="'+q+' Reference Shelf" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_reference.php?course='+q+'" />\n';
- opmlOut+='<outline text="'+q+' OU Links" xmlUrl="http://myopenlibrary.open.ac.uk/rss/rss_links.php?course='+q+'" />\n';
+ opmlOut+='<outline text="'+q+' Ebooks" type="feed" url="http://myopenlibrary.open.ac.uk/rss/rss_ebooks.php?course='+q+'" />\n';
+ opmlOut+='<outline text="'+q+' Databases" type="feed" url="http://myopenlibrary.open.ac.uk/rss/rss_databases.php?course='+q+'" />\n';
+ opmlOut+='<outline text="'+q+' Journals" type="feed" url="http://myopenlibrary.open.ac.uk/rss/rss_ejournals.php?course='+q+'" />\n';
+ opmlOut+='<outline text="'+q+' ROUTES" type="feed" url="http://myopenlibrary.open.ac.uk/rss/rss_routes.php?course='+q+'" />\n';
+ opmlOut+='<outline text="'+q+' Reference Shelf" type="feed" url="http://myopenlibrary.open.ac.uk/rss/rss_reference.php?course='+q+'" />\n';
+ opmlOut+='<outline text="'+q+' OU Links" type="feed" url="http://myopenlibrary.open.ac.uk/rss/rss_links.php?course='+q+'" />\n';
  opmlOut+='</body>\n</opml>';
  element.value=opmlOut;
 }
--->
+
+function cleanNode(id){
+ var output = document.getElementById(id);
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+}
+
+function addLink(id,URL, linkText){
+ cleanNode(id);
+ var link=document.createElement('a');
+ var myURL=URL;
+ link.setAttribute('href', myURL); link.setAttribute('id',id);
+ linkTxt=document.createTextNode(linkText);
+ link.appendChild(linkTxt);
+ var output=document.getElementById(id);
+ output.appendChild(link);
+}
+
+
   </script>
 </head>
 <body>
 <div id="page">
+
 <h1>MyOpenLibrary
 2.0 - Course
 Feeds</h1>
@@ -121,11 +143,19 @@ related feeds so you can use <a href="http://netvibes.com/">Netvibes</a>
 as a
 surrogate <a href="http://myopenlibrary.open.ac.uk">MyOpenLibrary</a>
 environment.</p>
-<p>For more infomation , see <a href="./005240.html">Course Profiles for MyOpenLibrary 2.0</a></p>
+<p>For more infomation , see <a href="http://blogs.open.ac.uk/Maths/ajh59/005240.html">Course Profiles for MyOpenLibrary 2.0</a></p>
 <p>Enter a course code and click
 the
 'make courselinks.opml' button to get a list of rss feeds in OPML.</p>
+<p>Possibly valid course codes include:  A215, A217, A219, A251, A300, A430, A840, A841
+A847, A850, A851, A857, AA307, AA307, AA311, AA312, AA315, AA820, AS208, E115, E123, E124, E131, E215, E243, E301, E848,
+ED840, H807, K113, K115, K202, K216, K221, K302, K311, KYP302, KZL107, M801, M886, 
+S320, S390, S802, S804, S807, S809, S810, S819, SD805, SEH806, SXG390, SXM390,
+T307, T320, T324, T455, T883, T889, U211. <em>However</em>, note that support varies across course codes (the service creates links to all possible feeds, rather than ones that necessarily contain content; also,
+as courses cease to be presented, library support for them will disappear).</p>
+</p>
 <p>Note that not all OU courses have associated MyOpenLibrary resources. See <a href="http://myopenlibrary.open.ac.uk">MyOpenLibrary</a> for more details.</p>
+
 <fieldset><legend>enter course code</legend>
 <form action="" onsubmit="loadopml2(); return false;">
   <p><label for="q"> Search:</label> <input style="width: 200px;"
@@ -136,7 +166,8 @@ the
 <fieldset> <legend>your
 courseLinks.opml:</legend>
 <form action="">
-  <div><textarea id="output" cols="100" rows="35" style="width: 98%;"></textarea>
+  <div><div> <span id="onlineOPML"></span>, <span id="grazrView"></span></div><textarea id="output" cols="100" rows="35" style="width: 98%;"></textarea>
+
   <br>
   <br>
   <input value="select all"
@@ -148,8 +179,9 @@ courseLinks.opml:</legend>
 <p>Select all, copy and paste it
 into a new file (<code>courseLinks.opml</code>)
 and import it into <a href="http://netvibes.com">Netvibes</a>.</p>
-<small>Page layout, design and
-script based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a>&nbsp;</small>
+
+<!--<small>Page layout, design and
+script based on <a href="http://uckan.info/depot/monitorthis/">MonitorThis</a>&nbsp;</small>-->
 </div>
 </body>
 </html>

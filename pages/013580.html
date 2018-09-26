@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Mapping School Catchment Areas, Approximately...</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013504.html" title="Opening the Box..." />
+
+<link rel="next" href="./013608.html" title="gCalMap: Google Calendar and Calendar Map Views, Side By Side" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013504.html">&laquo; Opening the Box...</a> |
+
+<a href="./">Main</a>
+| <a href="./013608.html">gCalMap: Google Calendar and Calendar Map Views, Side By Side &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 24, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Mapping School Catchment Areas, Approximately...</h3>
+
+<p>Attending a public consultation evening about the proposed schools' reorganisation on the Isle of Wight a couple of weeks ago, one of the things that came out was that the schools 'listed' for closure under each option in the public consultation document were only intended to be <em>indicative</em> of what the effect of choosing each option might be. As I now understand it, once an option is decided upon, another round of consultation, including representation from school governing bodies, will lead up to the decision as to which which schools would actually close.<br />
+ <br />
+Rooting around on the Eduwight webste to see what information is provided there to help people assess not only local consequences of a particular school closing in a particular village, but also the wider consequences of neighbouring schools closing, (or alternatively, one school closing and a neighbouring one not), I came across some maps showing maps such as the following: "<a href="http://eduwight.iow.gov.uk/schools/reorganisation/images/Option2PTwoMiles.pdf">Primary Schools</a>– with the green area indicating the areas not within a 2 mile radius of a primary school" (from the <a href="http://eduwight.iow.gov.uk/schools/reorganisation/The_Options/option2.asp">Option 2 consultation page</a>).</p>
+
+<p><a href="http://eduwight.iow.gov.uk/schools/reorganisation/images/Option2PTwoMiles.pdf"><img src="http://farm4.static.flickr.com/3184/2289316338_da42500d6a.jpg" /></a></p>
+
+<p>On the one hand, I applaud this approach in terms of the way it attempts to make coverage information clear to see; on the other, if the <em>actual</em> school closures are not finalised yet, the map is indicative of only one possible closure plan and hence limited in value...</p>
+
+<p>...so I've started working on an interactive <a href="./gmaptest.html">circular catchment area map</a>.</p>
+
+<p><img src="http://farm3.static.flickr.com/2152/2262805774_6aeff79007_o.png" style='border:0' /></p>
+
+<p>The interactive map allows you to select different circular catchment areas for each sector (on the grounds that an appropriate travel distance for 7 year olds in primary school is probably different to an acceptable catchment for teenagers in High school). All the schools in any particular sector can be hidden from the map. In addition, one or more individual schools can be removed from the catchment area plots, simulating school closure(s). Different catchment areas can be modeled for each sector, giving indicative views of 'walking', 'cycling' or 'vehicle' catchment areas, for example.</p>
+
+<p>At the moment, catchment area settings can't be saved, nor can a static 'snapshot' of a map be taken (unless you take a screenshot, of course...). I have a plan for how to hack saved settings, though! ;-)</p>
+
+<p>I have started to generalise the map so that schools, for example, plotted on other Google MyMaps, can be imported into the map. (I'll post more about that approach later; in the meantime, you can always have a play yourself: <a href="./gmaptest.php">generic schools circular catchment area interactive map</a>).</p>
+
+<p>PS courtesy of a tip from my sister, here's a <a href="http://www.kirklees.gov.uk/community/education-learning/schoolpaa.asp">Huddersfield schools priority admission area interactive map</a> which shows 'actual' priority areas rather than crude 2 mile radius plots (travel times within a 2 mile radius catchment area can vary significantly, of course).</p>
+
+<p>PPS The eduWight website also has information regarding the <a href="http://www.eduwight.iow.gov.uk/schools/reorganisation/Schools_Information/overview.asp">percentage of pupils currently living within two mile of each current school</a>, bu I haven't worked out how I can use it yet!</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 24, 2008 09:00 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

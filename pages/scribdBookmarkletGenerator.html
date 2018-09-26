@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Scribd iPaper Bookmarklet Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	font-size: 80%;
+	line-height: 160%;
+	font-family: "Bitstream Vera Sans", Verdana, sans serif;
+	color:#000;
+	text-align: center;
+	}
+#page {
+	text-align: left;
+	margin: 0 auto;
+	padding: 20px;
+	width: 600px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	}
+h1 {
+	font-size: 150%;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	color: #666;
+	}
+h2 {
+	font-size: 120%;
+	margin: 10px 0 10px 0;
+}
+form {
+	margin: 10px 0 30px 0;
+	padding: 0;
+}
+ul, ol {
+	margin: 10px 0 20px 20px;
+	padding: 0;
+}
+ul li, ol li {
+	list-style-type: none;
+	color: #777;
+	margin: 3px 0 0;
+	padding: 0;
+}
+ul li:before {
+	content: "\00BB \0020";
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	font-size: 90%;
+	margin: 0;
+	padding: 2px;
+}
+code {
+	font-size: 110%;
+	color: green;
+}
+img, a img {
+	border: none;
+}
+fieldset {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+legend {
+	color: #666;
+}
+
+table.sbApps tr td {
+	width: 200px;
+}
+
+input.but {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+input.but:hover {
+	background: #eee;
+	border: 1px solid #000; 
+}
+a:link, a:visited {
+	color: blue;
+	text-decoration: none; 
+}
+a:hover {
+	color: red;
+	text-decoration: underline; 
+}
+  </style>
+  <script type="text/javascript">
+<!--
+
+function generateScribdiPaperBookmarklets(){
+ var pubid = document.getElementById('pubid').value;
+ var output = document.getElementById('output');
+ for (;output.childNodes.length>0;) output.removeChild(output.firstChild);
+ 
+//link
+ var linkBookmarklet="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';var t=d.createTextNode('var scribd_publisher_id = \\'"+pubid+"\\';var scribd_type = 1;var scribd_keep_private = 0;var scribd_keep_original_link = 0;');s.appendChild(t);db.appendChild(s);s=d.createElement('script');s.src='http://www.scribd.com/javascripts/auto.js';db.appendChild(s);})()";
+
+ var link = document.createElement('a');
+ var linkTxt=document.createTextNode('iPaper this (links)');  
+ link.setAttribute('href', linkBookmarklet); link.setAttribute('id','linkBookmarklet');
+ link.appendChild(linkTxt);
+
+//embed
+var embedBookmarklet="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';var t=d.createTextNode('var scribd_publisher_id = \\'"+pubid+"\\';var scribd_type = 2;var scribd_keep_original_link = 0;var scribd_ipaper_params = [];scribd_ipaper_params[\\'public\\'] =true;');s.appendChild(t);db.appendChild(s);s=d.createElement('script');s.src='http://www.scribd.com/javascripts/auto.js';db.appendChild(s);})()"; 
+ var embed = document.createElement('a');
+ linkTxt=document.createTextNode('iPaper this (embed)');  
+ embed.setAttribute('href', embedBookmarklet); link.setAttribute('id','embedBookmarklet');
+ embed.appendChild(linkTxt);
+ 
+ var spacer=document.createTextNode(', ');
+
+ output.appendChild(link);
+ output.appendChild(spacer);
+ output.appendChild(embed);
+}
+
+-->
+  </script>
+</head>
+<body>
+<div id="page">
+
+  <h1>Scribd iPaper Bookmarklet Generator</h1>
+  <p>This web page application (only tested in Firefox) will create a bookmarklet 
+    that you can add to your browser and that will convert any links to documents linked to from a web
+page to links that allow you to view the document using Scribd's iPaper, or that let you replace those
+links with actual embedded versions of the documents using iPaper.</p>
+  <p>To use the bookmarklet, you'll need a Scribd develop key, becuase the documents you view have to be uploaded
+to a Scribd account. You can get the developer key by registering with the
+<a href='http://www.scribd.com/platform/home'>Scribd Platform</a>.</p>
+
+  <fieldset>
+  <legend>enter scribd platform pub-id</legend>
+<form name="dataForm" action="" onsubmit="generateScribdiPaperBookmarklets(); return false;">
+
+  <table border='0'>
+<tr>
+        <td><label for="pubid">pub-id:</label></td><td><input style="width: 200px;"
+ id="pubid" type="text"></td></tr>
+<tr><td></td><td><input value="generate bookmarklets" class="but" type="submit"></td></tr></table>
+</form>
+
+</fieldset>
+
+  <p>Here are your bookmarklets: <span id='output'></span></p>
+  <p>Once you have created your bookmarklet, save it as a favourite/bookmark, 
+    or drag it onto your browser bookmarks toolbar (Firefox). For more information 
+    on installing bookmarks, see <a href="http://www.bloglines.com/help/easysub">here</a>.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Visualising CoAuthors in Open Repository Online Papers, Part 2</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014979.html" title="Visualising CoAuthors in Open Repostory Online Papers, Part 1" />
+
+<link rel="next" href="./014990.html" title="Synchronicity in the Air... Institutional Innovation &amp; OU Job Ads" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014979.html">&laquo; Visualising CoAuthors in Open Repostory Online Papers, Part 1</a> |
+
+<a href="./">Main</a>
+| <a href="./014990.html">Synchronicity in the Air... Institutional Innovation & OU Job Ads &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 10, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 2</h3>
+
+<p>Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in <a href="./014979.html">Visualising CoAuthors in Open Repostory Online Papers, Part 1</a>, to give a graphic which isn't really <em>that</em> useful or interesting (too cluttered), I thought I'd try out a couple of network visualisations using Many Eyes and Graphviz.</p>
+
+<p>It's possible to construct graphs using both these tools by organising the data in pairs - so for each reference in a collection of references (for example, all the papers produced by a particular unit, or all the references returned from a title/abstract search on a particular query term), I pulled out every possible pairwise combination of authors. (So for exampple, a paper authored by A, B, C and D generates (A, B), (A, C), (A, D), (B, C), (B, D), (C, D) as all the possible pairwise coathor relations for that reference.) For convenience (i.e. as a result of laziness), I allowed duplicate pairs into the list (so if A and B had coauthored mutliple papers, their pairwise cauthor relation would appear many times in the data set.</p>
+
+<p>So what's the result? Well here's a Many Eyes view over references produced from the <a href="http://oro.open.ac.uk/view/faculty_dept/fels-cepm.html">Academic Unit/Department: Educational Policy, Leadership and Lifelong Learning</a>:</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w%7EP2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3255/2654724721_c671ccb974.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="468" width="493" /></a></p>
+
+<p>It's possible to zoom in to the display and highlight or search for individual authors, and see who they have co-authored with:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2655552986/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3148/2655552986_533a0edb56.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="210" width="324" /></a></p>
+
+<p>As it seems that Many Eyes now allows visualisations to be embedded, let's see what happens if I try to embed the above.</p>
+
+<p><script type="text/javascript" src="http://services.alphaworks.ibm.com/manyeyes/api/v1/snapshot/89ade5ae1afd68ea011b03c2f1b103e9.js?width=400&amp;height=350"></script></p>
+
+<p>At a high level, this visualisation allows us to pick out clusters of what we might refer to as different co-authoring teams within the unit. If we were visualising references returned from a search on a particular topic, the result might allow us to detect different groups working in a similar who don't author with each other, or different domains that use the same term but in completely different senses.</p>
+
+<p>There are also a few  things to notice in the detail about the Many Eyes network visualisation. Firstly, ambiguity in naming has a visual effect: <em>WoodsPA</em> and <em>WoodsP</em> are the same person I think, so their different representation creates an artificial degree of separation in the visualisation. Secondly, the node size reflects the degree of (I think) each author node - that is, the number of coauthors are connected to. I'm not sure if it also represents the absolute number of times the name appeared in the uploaded data set? Which leads neatly to the third point: the repeated occurrence of the same coauthor pairs are not apparently visualised.</p>
+
+<p>If we now look at a fragment of a Graphviz directed graph (the direction goes from authors who appear earlier in the reference list to authors who appear later) we see that repeated co-author pairings are displayed - the number of connections between two authors represents the number of references they have coauthored:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2652732682/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3274/2652732682_d92a70a1fe.jpg" alt="(null)" height="218" width="500" /></a></p>
+
+<p>Visualising the results of a search (e.g. a <a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search over ORO for  the term "mobile"</a>) reveals far more structure - here's a significant fragment of a Graphviz visualisation of couthors on references returned from just such a search:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3048/2654746483_eb6504469e.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="150" width="500" /></a></p>
+
+<p>Here's a more detailed view of part of the above:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3074/2654750561_0bde106452.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="271" width="500" /></a></p>
+
+<p>So what? So nothing really... it just seemed like a good idea at the time, another way of trying to identify professional networks and teams based on their outputs... and it was relatively trivial (and quick) to do... ;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20graphviz" rel="tag"> graphviz</a>, <a href="http://technorati.com/tag/%20many%20eyes" rel="tag"> many eyes</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July 10, 2008 11:26 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

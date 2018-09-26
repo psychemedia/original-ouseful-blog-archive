@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Raising Expectations via Progressive Enhancement</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014002.html" title="New OU Facebook App - My OU Story" />
+
+<link rel="next" href="./014014.html" title="Progressive Enhancement - Some Examples" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014002.html">&laquo; New OU Facebook App - My OU Story</a> |
+
+<a href="./">Main</a>
+| <a href="./014014.html">Progressive Enhancement - Some Examples &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 28, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Raising Expectations via Progressive Enhancement</h3>
+
+<p>Traditional engineering often favours the approach of <em>graceful degradation</em>, in which a system continues to operate in the face of parts of the system failing for one reason or another.</p>
+
+<p>In the area of web design, web developers must code their web pages to cope with a wide variety of browsers. In institutions such as the OU, a computer specification might well define the minimum version browsers that all our online course materials will work with properly. Looking at the range of browsers, each with its own quirks and foibles, one might design a page for one browser and then customise it with exception handlers to render properly in the other supported browsers. In some cases, a page may be designed to 'degrade gracefully' in older browsers.</p>
+
+<p>At the OU, where students must find their own computers to work with (rather than coming onto campus and using centrally provided and maintained computers) making course materials widely accessible means that we often code for the lowest common denominator - the oldest supported browser. With a student body covering a huge demographic, it can be difficult for us to innovate on behalf of our users and force them to upgrade their computer systems on a regular basis... which can make rolling out innovations that exploit new browser technologies, for example, hard to achieve.</p>
+
+<p>Along with our declaration of 'openness', there is also a desire to be equitable, and provide all students with a similar, high quality experience. Of course I sign up to this, but I don't think this means that every student should be forced to use materials designed for lowest common denominator technologies. (After all, we can have students ranging from postgrads and professionals, to people fresh out of school with no qualifications studying on the same course: giving them exactly the same book or web page to read does not mean they will necessarily experience the same benefits from it).</p>
+
+<p>So what to do? Potentially, the idea of <em>progressive enhancement</em> offers a way forward here.</p>
+
+<p>In this case, the page is deliberately designed to work well on the lowest common denominator platform, and then dynamic techniques (Javascript and CSS) are used to progressively enhance the user experience according to the capabilities of the browser. (See the post <a href="./014014.html">Progressive Enhancement - Some Examples</a> for some examples.; <a href="http://ejohn.org/blog/progressive-css-enhancement/"> Progressive CSS Enhancement</a> briefly reviews some of the differences between javascript and CSS enhancement.; <a href="http://dev.opera.com/articles/view/progressive-enhancement-and-the-yahoo-u/">Progressive Enhancement and the Yahoo! User Interface Library (YUI)</a> also provides a good introduction to the technique.)</p>
+
+<p>This change in stance towards web page design is both subtle and profound. By adopting a progressive enhancement approach, you are making a declaration that you will try to improve the user experience on the page by making use of appropriate technologies as they become available, rather than saying - "okay, page built, now all I have to do is fix it for those other crappy browsers..."</p>
+
+<p>Progressive enhancement also allows for implicit A/B testing.</p>
+
+<p>(I don't think we do A/B testing on courses to try to figure out what works and what doesn't across large scale, live courses. There are two reasons for this: firstly, equitability (students on the same course should receive exactly the same stuff presented in exactly the same way, irrespective of their personal capabilities, computer specifications and so on); secondly, the bane of all education research, if the experience is a bad one, then it's potentially messed up that learner's 'real' education.)</p>
+
+<p>By using progressive enhancement, students with more powerful browsers, who may be early adopters (and therefore potentially more forgiving in case of errors, as well as having higher expectations), will get to try out new display techniques and metaphors, and provide feedback from a real, learning context. Because the features are progressive enhancements, they can be switched off by the user if they are intrusive, annoying or just plain broken.</p>
+
+<p>Albeit in the absence of evidence ;-), I'd argue that progressive enhancement could play an important role in the innovation pipeline, particularly insofar as it relates to the design and presentation of online educational materials (the 'elearning' word is dead, isn't it?)</p>
+
+<p>Progressive enhancement also allows you to innovate on behalf of your users. Users on old browsers can be shown previews of the enhanced experience through screencasts and screenshots and encouraged to upgrade if they want to avail themselves of those features.</p>
+
+<p>In short, sticking with design techniques that <em>only</em> work for lowest common denominator technologies will stifle innovation. By adopting a progressive enhancement approach, materials can be designed for lowest common denominator technologies, and then extended and improved for use on improved technology platforms.</p>
+
+<p>In this way, a minimum quality of service can be guaranteed, with alternative, potentially higher quality, user interface experiences available to anyone who wants to avail themselves of them.</p>
+
+<p>If I use a latest generation browser, my knowledge of what sorts of interactions the web can support/what browsers are capable of as well as my expectations of what counts as a good quality web experience are likely to be very different to someone who only uses their old browser for accessing Hotmail.<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/progressiveenhancement" rel="tag">progressiveenhancement</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 28, 2008 12:06 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Tony, how do you square this circle before you face a legal challenge?</p>
+
+<p>http://www.leeds.ac.uk/educol/documents/00003152.htm<br />
+E-learning accessibility practices within higher education: a review. Jane K. Seale <br />
+The 2001 Special Educational Needs and Disability Act (SENDA) made it an offence for educational institutions to discriminate against a disabled person by treating him or her less favourably than others for a reason relating to their disability. The Act covers all aspects of student services, including provision and use of electronic materials and resources. Learning technologists have therefore been charged with the responsibility of ensuring that electronic teaching materials can be accessed by disabled students. In an attempt to explore how learning technologists are developing practices to produce accessible electronic materials this paper will present a review of current accessibility practice. The review will focus on what key professionals (academics, researchers, educational developers and staff developers) within the learning technology field are saying and doing about making electronic materials and resources accessible to disabled students. Key issues that may influence the "accessibility" practices of learning technologists are highlighted; the importance of these issues for developing an understanding of "accessibility" practices is discussed and implications for future research are identified.<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at March 28, 2008 12:22 PM</span>
+</div>
+<div class="comments-body">
+<p>Okay - first off, I agree with the spirit of SENDA - making materials accessible as widely as possible: that should go without saying...</p>
+
+<p>Progressive enhancement requires good underlying code/data design, and often makes things *more* accessible because you have to tag the basic elements sensibly and appropriately for the progressive enhancements to work. </p>
+
+<p>Accessibility technologies have more hooks to build on if resources are well designed in the first place.</p>
+
+<p>But when it comes to reading SENDA as making it "an offence for educational institutions to discriminate against [people with rubbish browsers] by treating him or her less favourably than others for a reason relating to their [crap browser]" I start to get twitchy.</p>
+
+<p>Pages supporting progressive enhancement need to be well  designed in the first place. So they will work well anyway (better than many pages designed the other way - get it working in firefox then hack it till it works in IE6).</p>
+
+<p>For people who have better browsers, and possibly higher expectations, why not give them an interface appropriate to, and sensitive to that medium and in line with (or even exceeding) their expectations of how that medium can be used? What is wrong with doing that? If I am blind and using a screen reader, what difference does it make that a sighted user can now use a nicely designed slider, or see a pie chart view of a table that was just a grid of numbers before; especially if my screen readder can now more easily and reliably describe the contents of that table? (Or maybe I'm a visual thinker - the graph just made it easier for me to see what the table was saying; because I'm dyslexic, highlighting the rows, or reskinning the table with a different colour theme, just made it easier to cross refer what was going on in the table with the analysis in the text).</p>
+
+<p>If I'm not allowed to progressively enhance materials in the browser because an equivalent enhancement is not made available at the same time in a screen reader, that's a bit crap; but if I design my pages so they can be progressively enhanced, it makes it easier for the screen reader designers to improve their product and add additional value to THEIR users experience.</p>
+
+<p>Designing for progressive enhancement puts hooks in place to make alternative (otherwise accessible) views of the same thing possible.</p>
+
+<p>Taking a step back, if pages are designed with progressive enhancement in mind, then it would be possible for users to choose to use extensions that act on those hooks. For example, I built a Greasemonkey script that will embed an ipaper version of a public pdf in web pages in my browser. It's an accessibility extension I use because Adobe acrobat and me - we just don't get on. </p>
+
+<p>If data tables were marked up appropriately, I could use a GM script to YUI data tableify them. Does that "get round" SENDA? The institution designs a crap looking interface for everyone, but the underlying code is nice. It's then down to the user to choose their own progressive enhancements, skins, and accessibility tools to make it look good, and increasingly useful? But then, maybe you're discriminating against pretty much everyone who doesn't know how to install an extension?</p>
+
+<p>Personally I think we should only have .txt files on the web, rendered in courier font, appropriate for Lynx or IE3 (?!). Images are evil and everything that requires a click hurts my RSId hands... (not really...;-)</p>
+
+<p>PS I think I also take issue with the view of SENDA being used to block innovation because the innovation (in its original form, maybe) may not confer equal benefit, or be equally accessible, to all potential users.</p>
+
+<p>One of my colleagues has a wheat intolerance - does that mean the course menu can't serve crappy loaves from Tesco? No - as long as there's an alternative. So we can serve crappy bread. But now suppose we also have the opportunity to serve nice (wheat encrusted) bread. A progressive enhancement to the loaf. Unfortunatley not one that can be taken up by people who don't like getting bits stuck between their teeth.. can we go with that loaf - a better experience for those who can avail themselves of it - or not?</p>
+
+<p>If the improvements/enhancements are pursued at the expense of raising the baseline quality, that does become an issue. If SENDA is used to penalise the many because similar improvements can't be guaranteed for the few, then aren't you discriminating against the many, and not making full use of the available technology to give them the best possible experience?</p>
+
+<p>I take a 'best efforts' point of view... and believe that the good, accessible design principles that designing for progressive enhancement encourages can only benefit everyone...</p>
+
+<p>Remember, progressive enhancement design is predicated on a sound, lowest common denominator design...</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at March 28, 2008 01:10 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

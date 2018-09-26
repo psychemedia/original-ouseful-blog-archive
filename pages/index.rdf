@@ -14,658 +14,621 @@
 <description><![CDATA[<em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. ]]></description>
 <dc:language>en-us</dc:language>
 <dc:creator></dc:creator>
-<dc:date>2007-08-05T11:54:02+00:00</dc:date>
+<dc:date>2008-07-16T09:51:18+00:00</dc:date>
 <admin:generatorAgent rdf:resource="http://www.movabletype.org/?v=2.64" />
 
 
 <items>
 <rdf:Seq>
 <rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010507.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010506.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010505.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010504.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010503.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010502.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010501.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010500.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010499.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010498.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010496.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010494.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010493.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010492.html" />
-<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/010491.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/015010.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/015007.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014991.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014990.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014984.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014979.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014976.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014965.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014962.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014951.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014935.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014924.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014919.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014913.html" />
+<rdf:li rdf:resource="http://blogs.open.ac.uk/Maths/ajh59/014909.html" />
 </rdf:Seq>
 </items>
 
 </channel>
 
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010507.html">
-<title>Quick Way of Adding Weather to the Foot and Mouth Map</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010507.html</link>
-<description><![CDATA[<p>A comment on Ed Parson's <a href="http://www.edparsons.com/?p=508">Foot and Mouth - a Geographical Problem</a> post suggests:<br />
-<blockquote>The usefulness of the tool or otherwise comes from what analysis can be done with the output. Given that F&amp;M can often be distributed as an airborne disease, some means of showing the wind direction and speed over time makes this more than just a pretty coloured map...</blockquote><br />
-I agree that it would be useful to be able to overlay wind speed and direction markers on to an emergency response map. And I wonder how difficult it would be to use such data to transform (even approximately) a circular overlay to one that reflects the likely distribution of a gas release, say, given prevailing wind conditions? </p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/015010.html">
+<title>Visualising CoAuthors in Open Repository Online Papers, Part 3</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/015010.html</link>
+<description><![CDATA[<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">Visualising CoAuthors in Open Repository Online Papers, Part 2</a> I described an approach for pulling author information out of the OU ORO repository and displaying it in various ways, such as using a Graphviz plotted graph. I knew that ORO was scheduling an update, which has been pushed in the last few days, so the screen scraper I wrote to work with the old repository is now broken (of course...). The new ORO engine is capable of generating RSS search feeds though, so looking forwards, the whole system is far easier to play with it...</p>
 
-<p>The more I think about it, the more I can see a use for an "emergency response web 2.0" toolkit that would allow the rapid construction of an information website to aggregate information in the case of an emergency. A combination of something like <a href="http://ning.com">Ning</a> and <a href="http://services.alphaworks.ibm.com/qedwiki/">IBM's QEDWiki</a> (which I really need to get round to playing with...!), maybe?</p>
+<p>...but it means that the demos I was just about to post about are now all broken... and it seems that the server I usually post scripts to (http://ouseful.open.ac.uk) won't run the (simple) PHP scraper I was using from the dev server on my laptop, so that's f***d too... </p>
 
-<p>Anyway, as a stop gap on the weather thing, a quick search on Google MyMaps ("Add content") turns up this mapplet that can display the wind conditions from various locations around the world, including one not far from Guildford:</p>
+<p>Anyway, had everything been working, I'd have posted about a screenscraper that trashes through results pages from ORO repositories, and generates a .dot graph definition file that can be visualisaed using Graphviz.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095168848108791554"><img src="http://lh5.google.com/tony.hirst/RrWtEm4pJwI/AAAAAAAAAXU/uFXwk3I4vfc/s800/gMapplet.png" /></a></p>
+<p>Like this excerpt of a view of authors of papers on <a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html">LB1603 Secondary Education: High schools</a> from the University of Southampton open repository.</p>
 
-<p>Clicking on the temperature marker opens up a pop-up that includes wind direction data:</p>
+<p><a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3027/2673909694_f5f82517dc.jpg" alt="http://eprints.soton.ac.uk/view/subjects/LB1603.html" height="114" width="500" /></a><br />
+ <br />
+...which I realise just now isn't working properly... the regular expression was tested against the author format used in last week's OU ORO reference listings (where every author was separated by an 'and'), and it breaks for multiple authored papers on the Southampton site where there are more than two authors (only the last author is 'and'ed, the others are comma separated). The fix should be a quick one, but... I have other things to do... and if the OU ORO site has been upgraded, maybe the Southampton one will soon follow...</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095162813679740658"><img src="http://lh4.google.com/tony.hirst/RrWnlW4pJvI/AAAAAAAAAXE/bJfPPlnmBaQ/s800/footMouthWeather.png" /></a></p>
+<p>(It has been pointed out to me that using the approach on e.g. ORO papers might be used to shame people into submitting their own papers to local repositories, when they see their name isn't shown in a particular graph view where they might expect to see it... I couldn't possibly comment on that...!)</p>
 
-<p>The Mapplet is provided by WeatherBug and can be found here: <a href="http://maps.google.com/ig/directory?url=http://mapplets.weatherbug.com/WeatherBugMapplet.xml">WeatherBug Mapplet</a>.</p>
+<p>Sigh - so much for this as another IWMW innopvation competition entry... The lesson: even sites that nominally use the same software (e.g. eprints) all use them slightly diffefrently; so scraping as a general technique sucks (now I remember why I stopped writing screen scrapers...;-)</p>
 
-<p>One thing that jumps out at me looking at that map - it would be sensible to make a semi-transparent coloured filter layer within the two circle overlays on the map.</p>
+<p>The "find collections of sets of names (such as article references), work out all the paired name combinations for each set (reference), then plot the graph" recipe seems to work though...</p>
 
-<p>I've not really looked at <a href=:http://code.google.com/apis/kml/documentation/">KML</a> yet, so maybe now's a good time for me to find out a little more about it, and try to add a semi-transparent layer in? ;-)</p>]]></description>
-<dc:subject>Geo</dc:subject>
+<p>So for example, here's a graph showing all the people who sit on the same committees in the Isle of Wight Council (as of June 2008); multiple links between two people shows they sit on several different committees together. The direction info in the links is rather more arbitrary, except in two particular cases... if you are only ever the chair of a committee, there will only be links going away from you... If there are only ever incoming links to you, you are not the chair of any committee.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2658900693/" title="Isle of Wight Council committee comembership by psychemedia, on Flickr"><img src="http://farm4.static.flickr.com/3237/2658900693_f4128efee3_b.jpg" alt="Isle of Wight Council committee comembership" height="744" width="1024" /></a></p>
+
+<p>If I could find lists of committee memberships for the OU, I'd have a go at plotting something similar... (it strikes me it might be interesting to see graphs showing named representation on committees that pass work to each other, as well as ex officio membership of committees by virtue of job title/rank (PVC, Dean, HoD, and so on...)</p>
+
+<p>Just one final note - visualising .dot files requires a Graphviz viewer. These are most comonly offline applications, though I have found a coupe of routes to online viewing:</p>
+
+<p>- <a href="http://ashitani.jp/gv/">AJAX Graphviz viewer</a>: post a (small) .dot file into a form, hit the enter key, and see the graph...<br />
+- <a href="http://drupal.org/project/graphviz_filter">Graphviz filter for Drupal</a>; I had asked <a href="http://greenhughes.com">Liam</a> if he could get one of these running somewhere, so I could plug in the eprints repository scraper and we'd have a neat IWMW innovation competition entry, but as my scripts all appear to be broken, and I donlt have time to fix them, I guess that's for another day (or not...)..</p>
+
+<p>Anyway, it seems that the OU may be going all 2.0, if Twitter is to be believed... so it's been a good three years or more,  and maybe it's job done..?! Time for something else maybe? A return to pointless research in a tiny micro-field somewhere (but at least a promotion prospect at the end...). I'll keep <a href="http://ouseful.info">http://ouseful.info</a> pointing somewhere, and <a href="http://feeds.feedburner.com/ouseful">http://feeds.feedburner.com/ouseful</a> will keep spewing forth...</p>
+
+<p>...but in the meantime...</p>
+
+<p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object></p>
+
+<p>OUseful.info on <em>http://blogs.open.ac.uk/Maths/ajh59</em> has left the house... </p>
+
+<p>...be seeing you...<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw-not" rel="tag">iwmw-not</a>, <a href="http://technorati.com/tag/graphviz" rel="tag">graphviz</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject></dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-08-05T11:54:02+00:00</dc:date>
+<dc:date>2008-07-16T09:51:18+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010506.html">
-<title>Co-presenting Search Results on Timelines and Maps</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010506.html</link>
-<description><![CDATA[<p>In several previous posts, I've looked at the way <a href="http://blogs.open.ac.uk/Maths/ajh59/010329.html">timelines are being used to display search results</a>, as well as <a href="http://blogs.open.ac.uk/Maths/ajh59/010163.html">timeline and map combinations</a>, as well as demonstrating a <a href="http://blogs.open.ac.uk/Maths/ajh59/010366.html">dual Google maps and timelines search page</a>:</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/015007.html">
+<title>IWMW2008 Innovation Competition - Searching for Media Release Related News Stories</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/015007.html</link>
+<description><![CDATA[<p>It seems the <a href="http://www.ukoln.ac.uk/web-focus/events/workshops/webmaster-2008/competition/">Institutional Web Management Workshop 2008: Innovation Competition</a> is in need of entries, so I had quick a half hour hack around the University of Aberdeen newsfeeds to see if I could come up with anything interesting (Brian Kelly hinted that  if I used any OU info sources, no-one would take any notice becuase it would be seen as an 'official' OU development!;-)</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5071196243881702098"><img src="http://lh3.google.com/image/tony.hirst/RmCCHY7dMtI/AAAAAAAAAC4/ouO-p2I-K18/s800/gMapnTimeline.png" /></a></p>
+<p>Here's where I've got so far...</p>
 
-<p>Whilst I was searching for Google maps circle overlay scripts for the previous post on plotting <a href="http://blogs.open.ac.uk/Maths/ajh59/010505.html">foot and mouth exclusion zones</a>, I came across this <s>post</s>paper on <a href="http://blog.andyeick.com/2007/07/16/Extending+Mashups+To+Visualize+Patterns+In+Temporal+Data.aspx">Extending Mashups to Visualize Patterns in Temporal Data</a>.<br />
-<blockquote>Many datasets are now published as streams of time-stamped, geo-encoded events using GeoRSS. To understand patterns within this class of data, we have taken ideas from mashups and extended them to develop new visual components that present live geospatial data in novel ways. The components are interactive, live, linked and contain many novel features for understanding temporal and geospatial patterns in event data. The components are light-weight, thin client, Web 2.0 AJAX technology and are suitable for analyzing both on-line streaming and off-line static datasets. Our work expands traditional geospatial mashups to include timeline, time wheel, and graph mashups for real-time time streaming data.</blockquote></p>
+<p>The University of Aberdeen (and many other universities) publish an RSS feed of their media releases. But how effective are these releases? That is, do the releases actually manage to generate any news coverage?</p>
 
-<p>The paper describes several interesting ways of combining geo- and temportal data, and is well worth a read. Here's a second, related paper: <a href="http://blog.andyeick.com/2007/06/30/Thin+Client+Visualization.aspx">Extending Mashups to Visualize Patterns in Temporal Data</a>.</p>
+<p>University of Aberdeen media releases: <a href="http://www.abdn.ac.uk/mediareleases/feed.xml">http://www.abdn.ac.uk/mediareleases/feed.xml </a> (RSS format, limited to 10 items. ?How can I increase the number of items in this feed?)</p>
 
-<p>Quite by chance, my last feed reading session of the day turned up a post on <a href="http://www.seobythesea.com">SEO by the SEA</a> about <a href="http://www.seobythesea.com/?p=772">Google Timelines, Fact Maps, and Fact Relevance Rankings</a>:<br />
-<blockquote>DISPLAYING FACTS ON A LINEAR GRAPH <br />
-A set of objects having facts is established. Facts of objects having positions in a order are identified. Some facts explicitly describe the positions in the linear order, while are facts do not explicitly describe the positions. The facts are presented in the order on a linear graph, such as a timeline. Facts of the objects describing geographic positions are presented on a map.</blockquote><a href="http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&u=%2Fnetahtml%2FPTO%2Fsearch-adv.html&r=1&p=1&f=G&l=50&d=PG01&S1=20070179952.PGNR.&OS=dn/20070179952&RS=DN/20070179952"><small>United States Patent Application 20070179952</small></a></p>
+<p>One of the easiest ways of doing a news search around an organisation is to simply do a search on Google news.</p>
 
-<p><img src="http://farm2.static.flickr.com/1133/1000837653_9112aeba5e.jpg" alt="image from google patent application showing map and timeline views " /></p>
+<p><a href="http://news.google.com/news?as_q=&amp;svnum=10&amp;as_scoring=r&amp;%3Bsvnum=10&amp;ned=us&amp;aq=f&amp;hl=en&amp;aq=f&amp;ie=UTF-8&amp;aq=f&amp;ned=us&amp;btnG=Google+Search&amp;as_epq=&amp;as_oq=university-of-aberdeen+aberdeen-university&amp;as_eq=&amp;as_drrb=q&amp;as_qdr=m&amp;as_mind=15&amp;as_minm=6&amp;as_maxd=15&amp;as_maxm=7&amp;as_nsrc=&amp;as_nloc=UK&amp;geo=&amp;as_occt=any&amp;aq=f" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3106/2670331235_bc44cbed2f.jpg" alt="2008-07-15_1222" height="286" width="500" /></a></p>
 
-<p>It'll be interesting to see how this all plays out...</p>]]></description>
-<dc:subject>search</dc:subject>
-<dc:creator>ajh59</dc:creator>
-<dc:date>2007-08-04T02:02:23+00:00</dc:date>
-</item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010505.html">
-<title>More UK Emergency Mapping Opportunites - Foot and Mouth</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010505.html</link>
-<description><![CDATA[<p>A couple of weeks ago it was floods, and I put together a Google map mashup of <a href="http://blogs.open.ac.uk/Maths/ajh59/010494.html">clean water bowser locations in Gloucester</a>, and now it's a <a href="http://www.ft.com/cms/s/57bfbb8c-4208-11dc-8328-0000779fd2ac.html">foot and mouth alert</a> (UPDATE: <a href="http://microbiologybytes.wordpress.com/2007/08/04/uk-foot-and-mouth-disease-outbreak/">10 Facts About Foot and Mouth Disease</a>.)</p>
+<p>Conveniently, RSS feeds for persistent (alerting) Google News searches are available: <a href="http://news.google.com/news?svnum=10&amp;as_scoring=r&amp;%3Bsvnum=10&amp;ned=us&amp;aq=f&amp;hl=en&amp;aq=f&amp;ie=UTF-8&amp;aq=f&amp;ned=us&amp;as_drrb=q&amp;as_qdr=m&amp;as_mind=15&amp;as_minm=6&amp;as_maxd=15&amp;as_maxm=7&amp;geo=&amp;aq=f&amp;q=university-of-aberdeen+OR+aberdeen-university+location:uk&amp;output=atom">Atom feed for Google news search for <em>university-of-aberdeen OR aberdeen-university location:uk</em> over the last month</a>.</p>
 
-<p>I caught the news as I was driving home tonight, (I was not too far from the location of the outbreak at the time!) and when I heard a three kilometer exclusion zone and five kilometer surveillance zone had been imposed, my first thought was to wonder how easy it would be to plot some circular map overlays onto a Google map, a visulisation effect I originally saw demonstrated by Eric Meyer's <a href="http://meyerweb.com/eric/tools/gmap/hydesim.html">HYDESim: High Yield Detonation Effects Simulator</a>. </p>
+<p>That's possibly useful in a different way, though, because it will capture <em>all</em> recent mentions of the university in the UK press.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094628627122300610"><img src="http://lh3.google.com/tony.hirst/RrPBvm4pJsI/AAAAAAAAAWI/kO3YQ1rA_rA/s800/hydesim.png" /></a></p>
+<p>So here's a recipe that attempts to find news stories about the university that are also on the topics mentioned in the press releases. For convenience, I've specified the recipe as a working prototype in the form Yahoo Pipe.</p>
 
-<p>Checking on the <a href="http://www.defra.gov.uk/animalh/diseases/fmd/default.htm"><em>defra</em> Foot and Mouth Disease</a> website, I found they'd already got an interactive map - of sorts - up already, although it's by no means as slick as a Google maps interface.</p>
+<p>Fetch the press release feed and run the description of each one through the Yahoo content analysis/term extraction tool.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094624078751934114"><img src="http://lh4.google.com/tony.hirst/RrO9m24pJqI/AAAAAAAAAVw/aoMg7ZjQpoM/s800/footMouthMap1.png" /></a></p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3186/2671209336_be705b32b5.jpg" alt="2008-07-15_1259" height="252" width="448" /></a></p>
 
-<p>For example, the map isn't draggable and the pan and zoom effects are quite coarse grained:</p>
+<p>Use these terms as the basis of a search query, supplemented by additional search terms for <em>("University of Aberdeen" OR "Aberdeen University")</em>.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094624095931803314"><img src="http://lh4.google.com/tony.hirst/RrO9n24pJrI/AAAAAAAAAV4/SbxJxUgbFOI/s800/footMouthMap2.png" /></a></p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2414/2670392765_9eeebfa72f.jpg" alt="2008-07-15_1302" height="85" width="500" /></a></p>
 
-<p>The <a href="http://news.bbc.co.uk/1/hi/england/6930684.stm">BBC News site</a> has gone for a static map:</p>
+<p>Generate a set of Google news persistent search RSS URLs for UK news mentions over the last 3 months using the above search terms:</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094633420305802962"><img src="http://lh3.google.com/tony.hirst/RrPGGm4pJtI/AAAAAAAAAWY/_t1xNs_jE2Y/s800/footMouthBBCmap.png" /></a></p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3226/2671215936_e6b90279d5.jpg" alt="2008-07-15_1303" height="500" width="404" /></a></p>
 
-<p>(Interestingly, there was no information that I could find on the <a href="http://www.co-ordination.gov.uk/">UK Resilience</a> homepage, even though COBRA had been called. I'd have thought the two would be related, for some reason.)</p>
+<p>We're now going to replace the original feed items with a set of items returned from the contextualised/media release related news search:</p>
 
-<p>It's a bit late now to start trying to put together a Google map equivalent of the above (in case it takes longer than I expect!) but as potential building blocks I found this site that uses calls on the Google maps API to plot a circle - <a href="http://maps.forum.nu/gm_clickable_circle.html">Google Maps clickable circle generator</a> - as well as a more general application for creating Google Map overlays - <a href="http://lecturer.eng.chula.ac.th/fsvskk/gglmap2/gmad-v2x.html">Google Maps-API Application for Digitizing (GMAD)</a>.</p>
-
-<p>And here's a script that will <a href="http://www.movable-type.co.uk/scripts/latlong.html">calculate the distance between two latitude/longitude points</a>.</p>
-
-<p>If you come across a foot and mouth exclusion zone Google map, please send me the link :-)</p>
-
-<p>UPDATE: <a href="http://www.edparsons.com/?p=508">Ed Parsons</a> has just posted a <a href="http://www.edparsons.com/Foot_and_Mouth.kml">KML file for the surveillance and protection zones</a>:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5094784800723117794"><img src="http://lh6.google.com/tony.hirst/RrRPyG4pJuI/AAAAAAAAAWs/coOjZ_lGu2s/s800/footMouthKML.png" /></a></p>
-
-<p>See it overlayed on a <a href="http://maps.google.com/maps?q=http:%2F%2Fwww.edparsons.com%2FFoot_and_Mouth.kml&ie=UTF8&t=h&z=11&om=1">Google map</a>.</p>]]></description>
-<dc:subject>visualisation</dc:subject>
-<dc:creator>ajh59</dc:creator>
-<dc:date>2007-08-04T01:23:42+00:00</dc:date>
-</item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010504.html">
-<title>NASA World Wind - 3D Globe plus NASA Data</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010504.html</link>
-<description><![CDATA[<p>Driving up to Milton Keynes today, I was listening to an <a href="http://www.itconversations.com/shows/detail1811.html">IT Conversations podcast from Where 2.0 about NASA Worldwind</a> that mentioned the <a href="http://worldwind.arc.nasa.gov/index.html">NASA World Wind</a> app, a 3D globe that can be used to visualise Earth related data as well as the Moon, Mars, Venus and Jupiter.</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206620815664690"><img src="http://lh6.google.co.uk/tony.hirst/RrJB7m4pJjI/AAAAAAAAAUo/HyztNsbMlKM/s800/worldwindLandsatGeoCover.jpg" /></a></p>
-
-<p>As well as providing a 3D visualisation of the globe (along with 3D relief) World Wind provides overlays for many scientific visualisations, including animations.</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206625110632002"><img src="http://lh3.google.co.uk/tony.hirst/RrJB724pJkI/AAAAAAAAAUw/oYq8XD6MPmU/s800/worldwindScienceViz.jpg" /></a></p>
-
-<p>As mentioned, World Wind is not just about the Earth. Here's Mars:</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206633700566610"><img src="http://lh5.google.co.uk/tony.hirst/RrJB8W4pJlI/AAAAAAAAAU4/OB_3U_pVECI/s800/worldwindMars.jpg" /></a></p>
-
-<p>Mars in relief (you only really get the feel for it when interacting with the globe):</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206637995533922"><img src="http://lh6.google.co.uk/tony.hirst/RrJB8m4pJmI/AAAAAAAAAVA/tu_heu50vJk/s800/worldwindMars2.jpg" /></a></p>
-
-<p>Mars in colour relief:</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206642290501234"><img src="http://lh3.google.co.uk/tony.hirst/RrJB824pJnI/AAAAAAAAAVI/bv3sHXBm1KA/s800/worldwindMarsColourRelief.jpg" /></a></p>
-
-<p>Also mentioned in the questions at the end of the podcast was <a href="http://www.shatters.net/celestia/">Celestia</a>, a "free space simulation that lets you explore our universe in three dimensions.... Unlike most planetarium software, Celestia doesn't confine you to the surface of the Earth. You can travel throughout the solar system, to any of over 100,000 stars, or even beyond the galaxy. "</p>
-
-<p>But just for a taste, here's a view of part of our own solar system - Saturn:</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206646585468546"><img src="http://lh4.google.co.uk/tony.hirst/RrJB9G4pJoI/AAAAAAAAAVQ/UOaNMBvz-1Y/s800/celestiaSaturn.jpg" /></a></p>
-
-<p>And something man-made - the Hubble Space Telescope (with constellations mapped out in the background).</p>
-
-<p><a href="http://picasaweb.google.co.uk/tony.hirst/OUsefulScreenshots/photo#5094206650880435858"><img src="http://lh5.google.co.uk/tony.hirst/RrJB9W4pJpI/AAAAAAAAAVY/le2F7X-GsLs/s800/worldwindHubble.jpg" /></a></p>
-
-<p>I don't think OpenLearn has any astronomy units up yet, but a question occurs to me... How can we use OpenLearn to support learning around applications such as World Wind or Celestia, <em>if</em> there aren't any related OpenLearn units available?</p>
-
-<p>I guess the only way at the moment is to upload the basics of a <em>new</em> unit to <a href="http://labspace.open.ac.uk">LabSpace</a>?</p>]]></description>
-<dc:subject>visualisation</dc:subject>
-<dc:creator>ajh59</dc:creator>
-<dc:date>2007-08-02T21:52:49+00:00</dc:date>
-</item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010503.html">
-<title>Time to &quot;Tangle&quot; OpenLearn Forums and Chat?</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010503.html</link>
-<description><![CDATA[<p>One of the key differentiators of <a href="http://www.open.ac.uk/openlearn">OpenLearn</a>, compared to other OER sites, is the provision of a "learning environment" around the open educational content. Several tools are provided to help learners make sense of the materials and also support community formation and social interactions.</p>
-
-<p>For example, the <a href="http://compendium.open.ac.uk/index.html">Compendium</a> visual thinking, knowledge mapping, sense making tool (which just doesn't make sense to me! Maybe I'm prejudiced against it because it requires a download...?;-):</p>
-
-<p><img alt="compendium screenshot" src="http://kmi.open.ac.uk/projects/osc/img/compendium/compendium_welcome.PNG" /></p>
-
-<p><a href="http://flashmeeting.com">Flashmeeting</a>, a small group video conferencing tool, with and IM/chat line, whiteboard and the ability to record meetings and analyse participation within them:</p>
-
-<p><img src="http://flashmeeting.open.ac.uk/images/screen01.jpg" alt="flashmeeting screenshot" /></p>
-
-<p>The <a href="http://kmi.open.ac.uk/technologies/msg/">MSG Instant Messenger</a>*, with it's nifty geo-presence indicator (I don't think you can make chat histories public, though, in a "previous chats about this topic" sort of way?):</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093658355355428050"><img src="http://lh3.google.com/tony.hirst/RrBPSW4pJNI/AAAAAAAAARI/Yw_jP6l5enA/s800/kmiMSG.png" /></a><br />
-<small>(MSG is an open source software app, I think, that runs using Jabber?)</small></p>
-
-<p> and the OpenLearn forums...</p>
-
-<p>...which <a href="http://openlearn.blogspot.com/2007/06/forum-discussion.html">don't seem to be working at all well...</a>:<br />
-<blockquote>We are having a problem in that the number of people who are using the OpenLearn forums and making postings is rather limited. It is felt that the reasons for this may be:</p>
-
-<p>    * there are too many forums <small>[OUseful: YES - and this potentially silos discussions. For example, several units cover overlapping areas (climate change and global warming come to mind, elements of ICT systems do too). One thing discussion is good for is considering multiple points of view; the current forum structure fragments discussion even about the same topic.]</small></p>
-
-<p>    * the forums are often too deeply embedded <small>[OUseful: YES - and where they appear moves around: on the front page, there's a link in the left sidebar, on the unit pages it's in the right; I guess the forum box is always below the scroll, though, which is some sort of consistency!]</small></p>
-
-<p>    * people may not be encouraged to enter the forum <small>[OUseful: YES - but what do you expect? No-one likes to be first to post - many sites seed their forums to give the appearance of activity, like seating diners in the window of a restaurant...]</small></blockquote></p>
-
-<p>And of course, it'd take at least 3 clicks? maybe 4? from the front page before you can even see evidence of a forum posting?</p>
-
-<p>What brought OpenLearn comms to mind was a recent TechCrunch post on <a href="http://www.tangler.com/">Tangler</a> (<a href="http://www.techcrunch.com/2007/07/31/tanglers-embedded-discussions/">Tangler's Embedded Discussions</a>):<br />
-<blockquote>Australian startup Tangler has created a next generation forum product that allows real-time discussions to occur without page refreshes. Their forum product is both synchronous and asynchronous - meaning it competes as much with Meebo (web based chat) as it does with existing forum applications.</blockquote></p>
-
-<p>Whether or not this is what Tangler does, reconciling "public" chat (i.e. supporting chat rooms as well as p2p chat), "public" Flashmeetings and forum discussions maybe one way of fostering and cross-promoting the OpenLearn communications channels?</p>
-
-<p>At the moment, I'd have to look in several places for discussion about an OpenLearn topic (<em>if</em> such a discussion exists...): the Compendium archive, the Flashmeeting archive and the forums. And maybe a Facebook group.... etc etc.</p>
-
-<p>Maybe finding a way of using forums as a conversation aggregator about a particular topic would be a better way to go?</p>]]></description>
-<dc:subject>Web 2.OU</dc:subject>
-<dc:creator>ajh59</dc:creator>
-<dc:date>2007-08-01T11:04:53+00:00</dc:date>
-</item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010502.html">
-<title>Visualising OpenLearn Course Listings</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010502.html</link>
-<description><![CDATA[<p>In the previous post (<a href="http://blogs.open.ac.uk/Maths/ajh59/010501.html">Visualising OpenLearn Course Listings: Prequel</a>) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be uploaded to the <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> visualisation tool.</p>
-
-<p>In this post, I'll quickly demonstrate several possible visualisations, leaving a fuller discussion of the pros, cons, mertis and otherwise of each technique to a series of later posts.</p>
-
-<p>If you want to create your own visualisations, you can find the data here: <a href="http://services.alphaworks.ibm.com/manyeyes/data/SO2G2IsOtha6f-UCD1p2I2-">OpenLearn unit listing data (as of 28/7/07)</a>.<br />
-<hr><br />
-<h2>OpenLearn Treemap</h2><br />
-Treemaps provide a powerful way of visualising hierarchical data. This view shows how we can navigate organise <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6j-Ure3r2I2-">OpenLearn Units by Subject area</a>:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292437026710690"><img src="http://lh5.google.com/tony.hirst/Rq8CfG4pJKI/AAAAAAAAAQI/x8VfivYuqlU/s800/openlearnManyEyesTreemap1.png" /></a></p>
-
-<p>The labels of each of the smallest inner boxes correspond in this case to OpenLearn unit codes.</p>
-
-<p>You might also notice a further level of structure, specifically boxed groupings of courses <i>within</i> a Subject area (groups of cells bounded by a purple(?) or grey(?) line, rather than the white lines separating individual cells). These represent groupings at the level of the <em>originating</em> Open University course (in many cases, several OpenLearn units are derived from a single Open University course).</p>
-
-<p>The following tree map explores the relationship between originating courses and OpenLearn Units in a clearer way:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292424141808786"><img src="http://lh6.google.com/tony.hirst/Rq8CeW4pJJI/AAAAAAAAAQA/Qe6pJoDW3P8/s800/openlearnManyEyesTreemap2.png" /></a></p>
-
-<p>(To generate new views on the Treemap, just reorder the column headings.)</p>
-
-<p><h2>OpenLearn Matrix View</h2><br />
-The <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha600kvfUt2I2-">OpenLearn Units matrix view</a> can be used to illustrate how many units a particular course has contributed to OpenLearn, ordered by subject area. This view is useful for revealing how originating courses may actually contribute to several different subject areas:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292368307233890"><img src="http://lh5.google.com/tony.hirst/Rq8CbG4pJGI/AAAAAAAAAPo/InhLdiaXCVs/s800/openlearnManyEyesMatrix.png" /></a></p>
-
-<p>The number in each circle is a count of how many units carry each originating course code label.</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3118/2671219582_5060ce4ed4.jpg" alt="2008-07-15_1305" height="194" width="440" /></a></p>
 
 <p><br />
-<h2>OpenLearn Units Network Diagrams</h2><br />
-Netowork diagrams can be used to show up relationships between elements of the data set. This view shows the relationship between <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6cB-BlHt4I2-">Subject Areas and content analysis generated tags</a>:</p>
+Finally, we use the news story date for the timestamp of each item.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292449911612594"><img src="http://lh4.google.com/tony.hirst/Rq8Cf24pJLI/AAAAAAAAAQQ/HOjU0P_mZ_0/s800/openlearnManyEyesNetwork2.png" /></a></p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3229/2671224700_309284e3fb.jpg" alt="2008-07-15_1308" height="313" width="487" /></a></p>
 
-<p>Unlike the Treemap visulisation, in which different views can be obtained form a single visualisation widget, different network maps must created as different visualisations by selecting attribute pairs:</p>
+<p>This feed can then be used in the normal way - for example, here it is on a Dipity timeline:</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292454206579906"><img src="http://lh5.google.com/tony.hirst/Rq8CgG4pJMI/AAAAAAAAAQY/WBdVmhBgkUU/s800/openlearnManyEyesNetworkSelect.png" /></a></p>
+<p><a href="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_contextual_news" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3240/2671228400_0e777f560f.jpg" alt="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_contextual_news" height="285" width="500" /></a></p>
 
-<p>This view shows <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6u-EgZQr2I2-">unit titles arranged around subject areas</a>:</p>
+<p><br />
+What I need now, of course, is a timeline comparison tool, that lets me compare items on two separate, aligned timelines - one for the media releases, and one for the 'media release contextual news search'...</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292406961939586"><img src="http://lh6.google.com/tony.hirst/Rq8CdW4pJII/AAAAAAAAAP4/jjlDmIscu-I/s800/openlearnManyEyesNetwork1.png" /></a></p>
+<p>UPDATE: In the meantime, it's easy enough to merge a feed of the original media releases and the contextual/content extracted terms news search.</p>
 
-<p>Although network diagrams can get cluttered, they can reveal interesting relationships. If OpenLearn users were allowed to tag units, a visualisation of connections between user tags and courses or user tags and subject areas could prove informative.</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=6halKnZS3RGrdt9JYEsBXw" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3140/2671456160_49753cac55.jpg" width="500" height="246" alt="http://pipes.yahoo.com/pipes/pipe.info?_id=6halKnZS3RGrdt9JYEsBXw"/></a></p>
 
-<p><h2>OpenLearn Tag Cloud</h2><br />
-The Many Eyes Tag Cloud visualisation parses processed input text to procude a tag cloud of the most frequently occuring terms. For example, here is a <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha63_kPTZr2I2-">tag cloud of OpenLearn content analysis tags</a>:</p>
+<p>By plotting this feed on a timeline, you can see whether the media release lead to resulting story...</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292394077037682"><img src="http://lh3.google.com/tony.hirst/Rq8Ccm4pJHI/AAAAAAAAAPw/yXqKteimKWY/s800/openlearnManyEyesTagcloud.png" /></a></p>
+<p><a href="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_media_release_effectiveness" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3104/2670630975_83b0f58cc5.jpg" width="500" height="246" alt="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_media_release_effectiveness"/></a></p>
 
-<p>The same visualisation widget can also be used to display clouds for other data fields.</p>
+<p>Of course, you'd get an even more comprehensive view if you just plotted a 'raw' news search for <em>"Aberdeen University" OR "University of Aberdeen"</em> (which is what <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=27c0b7e1570c3ee06afd85693374ab66">this pipe</a> does, as displayed on <a href="">this timeline</a>). Which is actually better... Hmm... But this post is about building <em>semantic</em> news filters, right?! (Err... ;-)</p>
 
-<p>Unfortunately, the tag cloud cannot be used to link to external pages or pop-up large blocks of text (for example, complete unit descriptions would be useful in this case).</p>
+<p>So to recap, the idea is to take a university media release news feed, automatically extract a set of keywords related to each media release, and then use those keywords as the basis for a set of queries on Google news for UK based news items related to those topics that also mention the university in question. The results are then output from the pipe as an RSS feed, or otherwise. Each item is timestamped with the date of the news article, so it can be displayed on a timeline, or otherwise, as required.</p>
 
-<p><hr /><br />
-I'm not sure that the idea behind Many Eyes was to prototype website navigation tools, but if you consider templated websites - like OpenLearn - as big databases, I think it follows naturally!</p>
+<p>Note that it would be possible to modify the pipe so that searched for news stories were associated with the media release item that provided the corresponding content extracted query terms that turned up the particular search results. However, to make full use of these results would require a client that could consume and display the JSON output of the pipe, which would take a little bit more time to do... And the point of the innovation competition is that the mashups are quick'n'easy to do, right, and ideally make use of stuff that's already out there?! ;-)</p>
 
-<p>Time allowing, I'll pop up a series of separate posts, one per visualisation, looking at each view in a little more detail.</p>]]></description>
-<dc:subject>visualisation</dc:subject>
-<dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-31T11:23:00+00:00</dc:date>
-</item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010501.html">
-<title>Visualising OpenLearn Course Listings: Prequel</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010501.html</link>
-<description><![CDATA[<p>Several weeks ago, I was chatting to Coral Stanion-Nazeri (who's running the <a href="http://ouclusters.ning.com/">OU Clusters</a> "social web tools for practice based learning" project for the Library) about visualising course data. I'd been thinking about visualising OU Courses and Qualifications data (for example, see <a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">here</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/010499.html">here</a>) but Coral was thinking more in terms of improving the user experience on <a href="http://openlearn.open.ac.uk">OpenLearn</a> - courses are listed by topic:</p>
+<p><br />
+PS another approach might be to search for news stories or blogposts that reference the media release items linked to in the media release feed. For example:</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093270889175786498"><img src="http://lh3.google.com/tony.hirst/Rq7u424pJAI/AAAAAAAAAOM/SNglGVKgAqM/s800/openlearnCourses1.png" /></a></p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=EmdRlGpS3RGSwuWCCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3013/2671272474_a38d4d3394.jpg" alt="http://pipes.yahoo.com/pipes/pipe.info?_id=EmdRlGpS3RGSwuWCCB2yXQ" height="398" width="496" /></a></p>
 
-<p>and then by unit - often over several pages. The 'advanced' ordering options are useful, but it can still be a chore to discover a particular course:</p>
+<p>This pipe loops through each item in the media release feed, and searches for blog posts that have linked to the original story (that is, that have linked to the URL for the particular media release).</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093270906355655698"><img src="http://lh3.google.com/tony.hirst/Rq7u524pJBI/AAAAAAAAAOU/pP8qyrgWnh8/s800/openlearnCourses2.png" /></a></p>
-
-<p>Navigation within a course unit is also problematic (for example, see <a href="http://blogs.open.ac.uk/Maths/ajh59/009144.html">Navigating LabSpace</a>), but that's another story!</p>
-
-<p>Anyway, Coral had been inspired by the treemap browser for a <a href="http://historywired.com/">collection of museum objects</a>:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093273543465575458"><img src="http://lh5.google.com/tony.hirst/Rq7xTW4pJCI/AAAAAAAAAOk/zHV6u9daLss/s800/historyWiredTreemap.png" /></a></p>
-
-<p>and wondered whether a treemap browser for OpenLearn would aid navigation.</p>
-
-<p>The <a href="http://services.alphaworks.ibm.com/manyeyes/app">Many Eyes</a> visualisation tool doesn't (yet?) support links from data to arbitrary URLs, so it can't be used for navigation, but it maybe can help with discovery, or at least demo the visual component for a possible navigation scheme.</p>
-
-<p>So I thought I'd pop some OpenLearn course info into Many Eyes and see what it looked like.</p>
-
-<p>The first issue was how to get the data in. It just so happens that there are some RSS feeds (due for release in mid-August, I think?) on the acceptance testing server that contain lists of courses by topic area, as well as a complete "all OpenLearn Units" feed. The feeds contain the course title, topic area, and course description for each course, as well as other metadata.</p>
-
-<p>To generate a tabular listing of courses (i.e. to get the data into a format that I could copy and paste into Many Eyes) I ran the feed through a Yahoo pipe and took a JSON feed out, formatting the HTML display using a slightly modified version of the Yahoo pipes <a href="http://blog.pipes.yahoo.com/2007/06/12/working-with-pipes-on-your-web-site/">Working with Pipes on Your Website</a>.</p>
-
-<p>I also used the pipe to add a couple of extra tags to the feed - the OpenLearn Unit code, and and the original course code, both extracted from the unit URL. I also used the Yahoo content analysis tool to generate a some "tags" for each unit, based on a content analysis of the unit description:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093279418980836418"><img src="http://lh5.google.com/tony.hirst/Rq72pW4pJEI/AAAAAAAAAPE/NAaWJ6iqFmM/s800/openlearnFeedAugmented.png" /></a></p>
-
-<p>Here's the processed result:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093280424003183698"><img src="http://lh3.google.com/tony.hirst/Rq73j24pJFI/AAAAAAAAAPU/jvf0S2aAn3o/s800/openlearnFeedTabular%20view.png" /></a></p>
-
-<p>The tabular layout means that when I select all this data and cut and paste it into Many Eyes, the columns are separated by tabs, just how Many Eyes likes it.</p>
-
-<p>In the next post, I'll give a quick overview of how Many Eyes can be used to visualise the Openlearn course information...</p>]]></description>
+<p>The "URL inLinks (blogs, raw)" module is one I had built earlier, that uses a Google blogsearch to find posts that mention a particular link. It would probably be more effective to look through each media release to see whatstory related websites (if any) it mentions/links to, and then use these as the basis for the blogged link search (for example, I may not be likely to link to the press release, but I may point to the research group web page it describes).<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw2008" rel="tag">iwmw2008</a>, <a href="http://technorati.com/tag/mashup%20competition" rel="tag">mashup competition</a>, <a href="http://technorati.com/tag/%20innovation%20competition" rel="tag"> innovation competition</a></p><!-- technorati tags end --></p>]]></description>
 <dc:subject>RSS</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-31T09:53:44+00:00</dc:date>
+<dc:date>2008-07-15T13:47:12+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010500.html">
-<title>Live Data Gaming - Sharkrunners</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010500.html</link>
-<description><![CDATA[<p>Way back when, when I was still at school, one of the things that helped me decide to do an electronics undergrad was a document my Dad had brought back from work about some telemetry system or other for the waste water industry. The idea of live data was somehow compelling, although at that time there was no web, and no real access to real, live data, except via shortwave radio. (I seem to remember Maplin had a kit you could buy to grab the data from a radio set and display it on, err, a ZX81, probably!).</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014991.html">
+<title>Institutional Social Networks</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014991.html</link>
+<description><![CDATA[<p>Reading the feed from <a href="http://blog.newport.ac.uk/blogs/michael/default.aspx">Michael Webb's Blog</a> yesterday, I was.... stunned is probably the best word, to read his post "<a href="http://blog.newport.ac.uk/blogs/michael/archive/2008/07/09/52948.aspx">Newspace - a  social networking site for new students</a>" which describes "a social networking site for new students at the University, <a href="http://newstudents.newport.ac.uk/">http://newstudents.newport.ac.uk</a>." And why was I shocked? "It's based on <a href="http://www.ning.com">Ning</a>..." (a site we've also used as an online social network complement to our two recent <a href="http://www.open.ac.uk/blogs/socialearn/">SocialLearn</a> workshops).</p>
 
-<p>Things are so different now. More and more data is out there, more and more of it is public and more and more of it is live or near live: <a href="http://backstage.bbc.co.uk/data/TravelFeeds?v=138u">transport/travel data</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/006173.html">Formula One live timing data</a>, <a href="http://backstage.bbc.co.uk/data/WeatherFeeds?v=p12">weather data</a>, <a href="http://www.vesseltracker.com/en/Googleearth.html">ship/vessel tracking</a>, <a href="http://www.fboweb.com/antest/ge/intro.aspx?old=1">aircraft tracking</a>, <a href="http://www.ogleearth.com/2007/01/live_schiphol_f.html">aircraft tracking with corresponding noise levels (!)</a>, <a href="http://www.justmagic.com/GM-GE.html">loads of marine related data</a>  and a wealth of <a href="http://www.kcl.ac.uk/schools/sspp/geography/research/emm/geodata">other geodata</a>.</p>
+<p><a href="http://newstudents.newport.ac.uk/" title="Newspace - Ning social network for Newport students"><img src="http://farm3.static.flickr.com/2315/2658584500_aa2eaba6e0.jpg" alt="http://newstudents.newport.ac.uk/ Newport newspace social student site http://newstudents.newport.ac.uk/" height="342" width="500" /></a></p>
 
-<p>Some of the data has even been turned into persistent online games - that is, games where the game world persists even if aren't playing it at the time, as is the case in many online virtual worlds.</p>
+<p>(The actual NIng site is here: <a href="http://newportstudents.ning.com/">http://newportstudents.ning.com/</a>.) Michael's post describes some of the issues relating to the decision to use Ning, and is well worth a read...</p>
 
-<p>Take <a href="http://dsc.discovery.com/convergence/sharkweek/shark-runners/shark-runners.html">Sharkrunners</a>, for example (via <a href="http://radar.oreilly.com/archives/2007/07/sharkrunners_re.html">O'Reilly Radar</a> et al.)</p>
+<p>Having dutifully emailed(?) the SocialLearn team to give them a heads up about this site, I got a "yeah, it's happening all over the place" reply back that linked to a site the University of Bradfrod have also set up on NIng: <a href="http://developme.ning.com/">Develop Me! (University of Bradfrod on Ning)</a>. This social network appears to offer the "Meet and chat online" bit of a wider project hosted on the University of Bradford website itself: <a href="http://www.brad.ac.uk/developme/">Develop Me! homepage</a></p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905314444452786"><img src="http://lh5.google.com/tony.hirst/Rq2iZm4pI7I/AAAAAAAAAMU/aleUY0wTUEI/s800/sharkrunners1.png" /></a></p>
+<p><a href="http://www.brad.ac.uk/developme/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3047/2657775735_6c97143c94.jpg" alt="2008-07-11_1340" height="396" width="500" /></a></p>
 
-<p>The aim of the game is to use your (virtual) boat to track - and collect data about - (real) sharks, which have been tagged with GPS receivers. Shark encounters gain you funding dollars, that is, err, points. The game runs in real time, with encounter alerts sent via email. Each encounter earns you grant funding which you can use to upgrade your boat, hire more crew etc.</p>
+<p>Here's the Bradford site on Ning:</p>
 
-<p>To add interest, you can play the game with various different agendas:</p>
+<p><a href="http://developme.ning.com/" title="Unoversity of Bradford 'Develop Me' social netowrk on Ning"><img src="http://farm4.static.flickr.com/3059/2657778499_6ebf4725be.jpg" alt="http://developme.ning.com/" height="337" width="500" /></a></p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905331624321986"><img src="http://lh5.google.com/tony.hirst/Rq2iam4pI8I/AAAAAAAAAMc/fH_dIqw2nQc/s800/sharkrunners2.png" /></a></p>
+<p>It's interesting how the openness of the front page of this site compares with what happens if you try to go straight to the Newport Ning site...</p>
 
-<p>To start with, you get a basic boat, which can be upgraded over time (I think... I haven't played long enough to find out for sure!)</p>
+<p>So with some institutions feeling adventurous and taking the plunge into the world of social web apps, whilst maintaining some element of control, how will SocialLearn fit into all this? Like this maybe?</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905340214256594"><img src="http://lh3.google.com/tony.hirst/Rq2ibG4pI9I/AAAAAAAAAMk/i9YKTjcUxX8/s800/sharkrunners3.png" /></a></p>
+<p><a href="http://www.open.ac.uk/blogs/socialearn/" title="Locating SocialLearn"><img src="http://farm3.static.flickr.com/2323/2658645524_4c9ce2fb9b.jpg" alt="Scoping socialearn" height="155" width="500" /></a></p>
 
-<p>The game starts by choosing a start location.</p>
+<p>That is, maybe SocialLearn could become a <em>trusted</em> gateway to the world of social networks that institutions are more likely to trust than sites like Ning? By providing an open API and clear security model, it may also provide a platform within which insitutions can develop their own social applications or expose their own data to their own students in a social context? In developing a trusted pltform though, a lot would ride on the structure of the governance model, which is still unclear (at the moment, it's being run within the OU, using external developers, as an OU strategic development project).</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905348804191202"><img src="http://lh5.google.com/tony.hirst/Rq2ibm4pI-I/AAAAAAAAAMs/G3m8e0gu0YU/s800/sharkrunners4.png" /></a></p>
+<p>PS Just trying to find my first mention of Ning on OUseful.info, I cam across this post from over two years ago now about <a href="http://blogs.open.ac.uk/Maths/ajh59/005963.html"><em>ad hoc</em> learning environments</a>. Reading back over it, i wish I'd worked some of the ideas through more clearly, because they could well have fed into SocialLearn discussions over the last year...</p>
 
-<p>Then you're ready to begin:</p>
-
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905361689093106"><img src="http://lh4.google.com/tony.hirst/Rq2icW4pI_I/AAAAAAAAAM0/ZOiwesrZBrQ/s800/sharkrunners5.png" /></a></p>
-
-<p>(See the <a href="http://dsc.discovery.com/convergence/sharkweek/shark-runners/help.html">full set of Sharkrunners rules</a>.)</p>
-
-<p>The game proceeds by setting waypoints (click on your boat and you get the opportunity to set waypoints, the boat;'s speed, etc.) and then, when a shark encounter happens, taking an action within a three hour window:</p>
-
-<blockquote>Once a waypoint is selected, your boat will begin to move toward that waypoint in real-time.  The movement in Sharkrunners happens at a realistic pace, and certain waypoints can take hours to reach.  Keep an eye on each waypoint's ETA to know how long it will be before your boat reaches that point.  Waypoints can be deleted and re-set at any time (except during a shark encounter). Final waypoints indicate the amount of fuel you will have remaining when you arrive at that location.
-
-<p>...</p>
-
-<p>Shark encounters are triggered whenever one or more sharks are located within the encounter range of the player's boat. Encounters are "modal" - the rest of the game pauses and the player must resolve the encounter before doing anything else.  If the player isn't currently logged into the game when an encounter is triggered the game will generate an email and/or text message based on the selection that player made about how and when they wish to receive these alerts on the Settings Page.</p>
-
-<p>Encounters have a time limit of approximately 3 hours. The player must log into the online game application to resolve the encounter before this time limit expires. Once the time limit has expired, the player can no longer use this opportunity to collect data and must wait for another encounter to be triggered.<br />
-</blockquote></p>
-
-<p>When an encounter is reported you must decide how to handle it, choosing between various sorts of dives (1, 2, 3-person, cage dive) surface observations, "SharkCAM", and so on, depending on the number of people available in the team and the amount of equipment you have managed to accumulate.</p>
-
-<p>This ability to mix live data with virtual game actions that result in plausible encounters and potentially "real" observations is quite compelling, to me.</p>
-
-<p>Tamagotchi "pets" demonstrated how kids could assimilate persistent electronic pets into their life - so maybe persistent science games can provide a driver for creating and maintaining engagement in science based educational activities?</p>]]></description>
-<dc:subject>gaming</dc:subject>
+<p>PPS As well as Ning, let's not forget sites like UK based <a href="http://www.webjam.com/webjam/home">Webjam</a>, which <a href="http://www.techcrunch.com/2008/07/09/webjam-secures-further-19m-for-branded-communities/">apparently</a> received funding this week to help roll out its white label social network service...<br />
+  <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ning" rel="tag">ning</a>, <a href="http://technorati.com/tag/sociallearn" rel="tag">sociallearn</a>, <a href="http://technorati.com/tag/%20socialearn" rel="tag"> socialearn</a>, <a href="http://technorati.com/tag/%20s%3Al" rel="tag"> s:l</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>Student Services</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-30T10:47:46+00:00</dc:date>
+<dc:date>2008-07-11T14:27:41+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010499.html">
-<title>More OU Courses and Qualifications  Visualisations - Treemap Views</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010499.html</link>
-<description><![CDATA[<p>In a previous post (<a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">Visualising OU Courses and Qualifications</a>), I showed how IBM's <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes data visualisation service</a> could be used to visualise OU course data, in particular the network of relationships between courses of qualifications.</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014990.html">
+<title>Synchronicity in the Air... Institutional Innovation &amp; OU Job Ads</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014990.html</link>
+<description><![CDATA[<p>It's been one of those weeks this week when synchronicity (or maybe confluence) seems to have been in the air...</p>
 
-<p>There's a meeting at the OU on Monday where one of the agenda items is to look at a "single" curriculum for our ICT and Computing offerings, so I added a few more qualifications to the data list in case anyone wanted to make use of the visualisation to aid the meeting. (I didn't add all the Computing degrees - they seem to have down down the line of spawning "Computing with X" courses which will just clutter the diagram. I leave the visualisation of those qualifications as an exercise for members of the Computing department ;-)</p>
+<p>So for example, the week started with brief email exchange regarding knowledge management in the context of tracking and reviewing and getting feedback/opinion on new technology that might be interesting (one might almost say "OUseful";-) in an OU context. Here was my take on it:</p>
 
-<p>The new data set can be found here : <a href="http://services.alphaworks.ibm.com/manyeyes/data/SWUK0IsOtha6i2Ubhv21I2-">OU ICT C&Q data</a>. Note that is is not authoritative and study choices should not be based on it...</p>
+<blockquote>Something I feel we need to explore is find a way of helping information "flow" around the university more, routing it to the right people as needed. A few of us do this anyway in an informal way anyway, either as a broadcast (eg public blog) or point-to-point communication "FYI emails"; thing's like the LTS media monthly newsletter also communicate news items to people who are likely to be interested in such things.
 
-<p>Here are a couple of visualisations based on the data:</p>
+<p>As far as soliciting the opinions of OU members about particular technologies, then we need: a) a way of routing these 'call for comments' to people who can comment quickly; b) getting comments back to the people who need them in an appropriate form.</p>
 
-<p>- <a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6m2kbpI31I2-">Network visualisation</a><br />
-- <a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6x2U5g_41I2-">Treemap visualisation</a></p>
+<p>Being lazy, I'd like to be able to do several things at once with any comments I make - eg: a) get the commentary back to who wants it; b) get a blog post out of it ;-) It'd also be nice to think that there was some way of actually seeing new ideas built on and rolled out across the university.</p>
 
-<p>The network map is a little bit more useful with the additional data - node size now starts to reflects the degree of connectivity of elements:</p>
+<p>What's needed is to get a conversation going and give people the feeling that they are allowed to spend time indulging/participating in that conversation, which may be with internal people or it may be with the wider world e.g. through online networks. And requests for comments would just be dropped into that conversation somehow...</blockquote>Then yesterday,  John Tropea/Library Clips posted some thoughts on "<a href="http://libraryclips.blogsome.com/2008/07/10/theres-more-than-just-supply-side-km/">There’s more than just supply-side KM</a>", (a response to this article on <a href="http://www.reedfirstsource.com/news/members/lnstory%7Edid%7E811371438%7Etopic%7E100002731.asp">Ideation and the Supply Side of Knowledge</a>): "The article is about how much time and energy we devote to: <em>Capturing and storing vs Knowledge flow</em>...[I]n a learning organisation you are aware of solutions as they happen, even if you have no use for them at the time. You can connect to people involved in the solutions, and you are connected to people in general. The act of participating gives more chance of solutions coming to you more easily… you have more of a chance of shared context and the peripheral information around a solution."</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199385029747602"><img src="http://lh5.google.com/tony.hirst/RqsgXG4pI5I/AAAAAAAAAL0/Qf6DQbZ5Crg/s800/manyeyesNetwork.png" /></a><br />
-<a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6m2kbpI31I2-">Network visualisation</a></p>
+<p>The original article - by Raj Datta - also has this to say:<br />
+<blockquote>[T]hose who believe that "management" is about control and predictability often view KM as a way to bring about predictability, by documenting all best practices and lessons learnt and making them available to everyone.</p>
 
-<p>It would be handy to be able to associate an additional text column with entries in each data column containing tooltip text for each item (even better if the text data could be pulled in from another, separate table; I've just got a <a href="http://www.freebase.com">freebase</a> account and my first impression is that it's going to be like <a href="http://dabbledb.com/">dabble db</a> on steroids when it comes to cross-referencing and pivoting about data).</p>
+<p>Here, the supply side becomes focused on explicit knowledge, on identifying and generating quality content, and generally focused on learning from the past. The hidden assumption is that once the right answers are all available in the repository, everyone will come seeking it. Demand, it's assumed, is automatically created. This then produces a robust internal knowledge (content) market, complete with consumers and producers of knowledge (content).</blockquote>Now where I thought this argument would go was along the lines of: even we do manage to curate information about new technologies effectively, that information is not necessarily going to be worked effectively if that information doesn't continue to circulate - or "flow" - around the organisation, as part of an ongoing conversation within the organisation, in particular the conversation between those people who can benefit from the information, work it further, or work it into conversations with other people who might benefit from it.</p>
 
-<p>The Many Eyes treemap visualisation go the C&Q data is also starting to demonstrate it's power a little more obviously now, as the size of the data set increases: <a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6x2U5g_41I2-">Treemap visualisation</a>.</p>
+<p>But it didn't, at least not in such crude terms... (Even so, the "flow" argument is still one of the take home messages I'll (mis)remember the article by! )</p>
 
-<p>For example, here is a view of courses associated with qualifications, ordered by qualification:</p>
+<p>What the original article does go on to talk about is how organisations potentially miss out on creating new knowledge, because they are too busy mining the past:<br />
+<blockquote>But even if one were to subscribe to this viewpoint, it has at least one obvious shortcoming. By equating KM with content management, and by equating the purpose of KM with predictability and control, we may inadvertently de-emphasize new knowledge creation.<br />
+...[N]ew knowledge creation is about the future. It's about possibilities and alternatives. It's about doing things differently and unleashing creative energies. It's about innovating.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199380734780290"><img src="http://lh4.google.com/tony.hirst/RqsgW24pI4I/AAAAAAAAALs/dVKEFywquQM/s800/manyeyesTreemapQuals.png" /></a></p>
+<p>Companies that are serious about innovation have to create an organizational ecosystem that allows for creativity to be sourced, transformed into inventions and then into innovations. This forwardlooking view gives KM a new meaning and purpose. Companies that are able to foster new knowledge creation alongside the more traditional view of KM, are able to strike a balance between effectiveness and efficiency and between innovation and productivity. This is a necessary condition for longevity in a global knowledge economy.</p>
 
-<p>This display makes it easy to see what courses are associated with any particular qualification.</p>
+<p>Why ideation?</p>
 
-<p>It's also trivial to reorder the treemap to view of the qualifications associated with a particular course:</p>
+<p>Ideation is the first step in the whole process of innovation. A good way to judge whether a company is serious about innovation is to see what happens to ideas in that company Some indicative questions are: Who is responsible for generating ideas? Once generated, how are ideas transformed to inventions?</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199359259943778"><img src="http://lh3.google.com/tony.hirst/RqsgVm4pI2I/AAAAAAAAALc/a9iGZjpZEp4/s800/manyeyesTreemapCourses.png" border='0' /></a></p>
+<p>If these questions have been explicitly considered in the organization, then chances are that the first step towards a generative view of KM strategy has been taken. This shows that the company values knowledge creation.</p>
 
-<p>This view of the data makes it obvious which courses are key to a large number of programmes  - and hence might also help identify ways of reducing the number of overlapping qualification offerings. </p>
+<p>If these questions are implicit, or we have to search for the answers, then chances are that a strong enough focus doesn't exist yet in the organization. If the R&amp;D department is viewed as the place where ideation happens and inventions take place, then we are again [li]miting the potential of tapping into the collective creative energies of the organization. R&amp;D personnel are not the only ones with ideas and creative minds, and open processes should exist to tap into the collective capabilities of employees.</p>
 
-<p>To swap between the two views, just drag and rearrange the data labels in the bar at the top of the screen:</p>
+<p>As well as creative minds that generate ideas, we also need minds that know how to transform wild ideas into feasible implementation projects and we need minds that are able to understand market potential and how to tap into it. In short, we need to transform ideas to inventions and then inventions to innovations, tapping into the collective insights and capabilities of complementary minds. Base skills, competences and strengths may differ across employees, and by themselves have limited use, but the power of tapping into their collaborative capability is tremendous.</blockquote>This line of thinking resonates strongly with me. After almost 10 years here, I still don't understand how the OU manages to take internally produced "inventions" and work them up to a state where they can be delivered as institutional innovations... Although maybe that's about to change?</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092201120196535202"><img src="http://lh5.google.com/tony.hirst/Rqsh8G4pI6I/AAAAAAAAAMA/0PjHIuNlogg/s800/manyeyesTreemapreorder.png" border='0' /></a></p>
+<p>OU Job Ad: <a href="http://www3.open.ac.uk/employment/job-details.asp?id=3871&amp;ref=ouseful">Change Manager, Developments Manager, Two Senior Project Managers,  Learning Innovation Office (LIO), Strategy Unit. Based in Milton Keynes.</a><br />
+<blockquote>Fascinated by the use of new technologies to enhance the learning experience in higher education? A Learning Innovation Office is being set up within the Open University's Strategy Unit to coordinate the development of elearning and innovative teaching and learning. Building on the University's new virtual learning environment (VLE), the Office will commission and oversee further development work, coordinate elearning strategy and policy, and monitor and disseminate learning innovations at the OU and elsewhere. The Director of Learning Innovation has been appointed and a number of staff are being recruited to work with him.</p>
 
-<p>When in a particular view, the search tool allows you to see the distribution of child elements across the parent elements. So for example, in the qualifications view, we can search on a course code to identify which qualifications admit that course as an option:</p>
+<p>Excellent organisational, interpersonal and communication skills, flexibility and initiative will be needed by all of the role holders to liaise with a wide range of academic, technical and administrative colleagues. You should have considerable experience of elearning development and implementation.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199367849878386"><img src="http://lh5.google.com/tony.hirst/RqsgWG4pI3I/AAAAAAAAALk/VqbSzTlUDu0/s800/manyeyesTreemapSearch.png" /></a></p>
+<p><strong>Change Manager</strong><br />
+You will work under the leadership of the Director of Learning Innovation to plan and initiate a range of strategic change initiatives, aimed at promoting elearning and embedding the OU's new VLE across the University. You will need exceptional communication, presentation and project management skills and will have significant experience of coordinating change initiatives in higher education. You will be supported by two Senior Project Managers.</p>
 
-<p>This search highlighting essentially adds another dimension to the visualisation, and one that I think may be useful in a visual course catalogue browser.</p>
+<p><strong>Developments Manager</strong><br />
+You will work under the leadership of the Director of Learning Innovation to manage the operational activities of the Learning Innovation Office, and to plan and oversee a number of projects to develop additional functionality for the OU's new VLE. These projects will be managed by two Senior Project Managers who will report to you. You will need exceptional project management skills to provide effective management of these initiatives, significant experience in administration related to systems development, and will liaise with colleagues in other units who will be providing the technical and operational management of the VLE.</p>
 
-<p>It would be even more powerful if it allowed Boolean search terms (<em>this</em> OR <em>that</em>).</p>
+<p><strong>Two Senior Project Managers</strong><br />
+The Senior Project Managers will work under the direction of the Developments Manager and Change Manager, Learning Innovation Office, to plan and manage a number of activities aimed at promoting elearning and usage of the VLE, and to manage projects to develop additional functionality. You will report to the Developments Manager in the Learning Innovation office and you will need excellent project management and communication skills and significant experience in administration or systems development to provide effective management of these initiatives.</blockquote>As well as those posts, there is also this rather wonderful sounding post:<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3872&amp;ref=ouseful"><strong>Director of Multi-Platform Broadcasting, Strategy Unit</strong></a><br />
+Europe's largest and most innovative university is seeking an outstanding individual for the new post of Director of Multi-Platform Broadcasting, which has been created following a major review of our broadcasting strategy.</p>
 
-<p>Speaking of which - getting authoritative data about our courses and quals is decidedly non-trivial. It seems that different units within the OU have "ownership" over different parts of the data, with the result that people are unwilling to share their data. I also suspect that there are multiple copies of various bits of data (nominally the same) which are separately maintained.... Oops...</p>
+<p>You will have extensive experience at a senior level in the broadcasting and/or internet sectors and will have the strategic vision, management capability and technical understanding to enable the University to realise the potential of all broadcast media to support its global teaching and learning, research and public engagement missions. You will work closely with the University's Open Broadcasting Unit, with a wide range of areas of the University, and with the BBC and other key partners.</p>
 
-<p>There is (at least one!) <a href="http://www.elframework.org/projects/xcri">XCRI</a> project underway at the OU, so it would be nice to think it can help establish an authoritative (and public!) view over the course catalogue for people to innovate with.</p>
+<p>You will be responsible to the Pro Vice Chancellor (Strategy, Planning and External Affairs) for the achievement of the University's ambitious broadcasting objectives.</blockquote>I'm not sure whether this post in marketing will report in any way to that post, though?<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3830&amp;ref=ouseful"><strong>Marketing Manager, Marketing and Sales</strong></a><br />
+In this new role has been created to focus on developing marketing plans covering BBC programming, Widening Participation &amp; Openings and other marketing projects. You will work with marketing colleagues in the OU and BBC to scope and identify education and training opportunities for the Widening participation sector, opportunities to promote the BBC and marketing our Openings courses. You will also develop and manage fulfilment of a marketing plan to these markets and identify appropriate channels to market.</blockquote>Business innovation is also in the air:<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3889&amp;ref=ouseful"><strong>Senior Project Manager, Europe. Futures Office, Strategy Unit</strong></a><br />
+We wish to appoint an outstanding individual to the Futures Office, to manage the implementation of the OU's strategy for Europe. You will liaise with key stakeholders across the OU and externally to evaluate and identify the optimum business model for the OU's operations in central Europe, shaping the OU's strategic priorities for international growth.</p>
 
-<p>To drive innovation, I guess we'd really need to set up an affiliate scheme, too, so that anyone building a course choice catalogue on top of our data can get a referral fee if a student uses it to register on a course. (Maybe the referral fee would be held in escrow until the student completed the course...?)</p>]]></description>
-<dc:subject>Web 2.OU</dc:subject>
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3891&amp;ref=ouseful"><strong> Communications Program Manager (Business to Business), Marketing and Sales</strong></a><br />
+Reporting to the Head of Customer Communications, as part of the sub unit management team, you will lead the planning, development and execution of marketing programs for the business to business segment; targeted to increase OU awareness and to generate enquiries from employers resulting in sponsored students, CPLD (Centre for Professional Learning and Development) revenues, etc.</p>
+
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3870&amp;ref=ouseful"><strong> Senior Manager (Administration), Validation Services</strong></a><br />
+Open University Validation Services is responsible for providing Open University validation for external academic programmes; and vocational awards through the OU Awarding Body. More than 33,000 students are currently registered for validated and vocational awards in more than 50 partner organisations. The University is currently investing in a restructure of OUVS and an expansion of our team.  As part of our expansion we are seeking a Senior Manager (Administration) to manage central support services including management of registrations, certification and aftercare services.</blockquote><em>Disclaimer: none</em>... ;-) Except maybe the OUVS post... I have an idea for an OUVS webservice that's being considered in part under the SocialLearn banner...</p>
+
+<p>Needless to say, I have nothing to do with appointments to any of those posts, at the dizzying heights such as they are (I'm way down the food chain, and on the academic side of the fence too...). That said, I'll probably heckle whoever does get in and try to grab a coffee with them every so often! <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/recruitment" rel="tag">recruitment</a>, <a href="http://technorati.com/tag/innovation" rel="tag">innovation</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>jobs</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-28T12:22:34+00:00</dc:date>
+<dc:date>2008-07-11T12:27:15+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010498.html">
-<title>Open Tentacles</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010498.html</link>
-<description><![CDATA[<p>Yesterday, I got what feels like my weekly Amazon delivery (1-click goodness...!) and was surprised to see an OU logo (or sorts) staring back at me from the back cover of one of the books that fell out of the package.</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014984.html">
+<title>Visualising CoAuthors in Open Repository Online Papers, Part 2</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014984.html</link>
+<description><![CDATA[<p>Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">Visualising CoAuthors in Open Repostory Online Papers, Part 1</a>, to give a graphic which isn't really <em>that</em> useful or interesting (too cluttered), I thought I'd try out a couple of network visualisations using Many Eyes and Graphviz.</p>
 
-<p>The book in question - <a href="http://www.amazon.co.uk/Game-Cultures-Computer-Games-Media/dp/033521357X/ref=sr_11_1/026-1676656-2894836?tag=ouseful-21">Game Cultures: Computer Games as New Media (Paperback)</a> - just happens to be published by the <a href="http://www.openup.co.uk">Open University Press</a>, which I hadn't realised at the time I purchased it (not that that would have made any difference...).</p>
+<p>It's possible to construct graphs using both these tools by organising the data in pairs - so for each reference in a collection of references (for example, all the papers produced by a particular unit, or all the references returned from a title/abstract search on a particular query term), I pulled out every possible pairwise combination of authors. (So for exampple, a paper authored by A, B, C and D generates (A, B), (A, C), (A, D), (B, C), (B, D), (C, D) as all the possible pairwise coathor relations for that reference.) For convenience (i.e. as a result of laziness), I allowed duplicate pairs into the list (so if A and B had coauthored mutliple papers, their pairwise cauthor relation would appear many times in the data set.</p>
 
-<p>Just like other universities, we have a university press (via McGraw-Hill Education) that publishes books, err, according to what criteria I'm not quite sure? [see comment]</p>
+<p>So what's the result? Well here's a Many Eyes view over references produced from the <a href="http://oro.open.ac.uk/view/faculty_dept/fels-cepm.html">Academic Unit/Department: Educational Policy, Leadership and Lifelong Learning</a>:</p>
 
-<p><em>Unlike</em> many other institutions, we <em>also</em> enter into co-publication deals for books that will be supplied with some of our courses, a consequence in part of being a distance learning organisation that operates at large scale.</p>
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w%7EP2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3255/2654724721_c671ccb974.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="468" width="493" /></a></p>
 
-<p>We also co-produce broadcast radio and television with the BBC. Most of the programmes are supported with a page or two on <a href="http://open2.net">Open2.net</a> (which is produced by BBC Worldwide under contract to the OU, I think) and DVDs of some of the programmes - such as <em>Rough Science</em> and presumably <em>Coast</em> - can be bought through <a href="http://www.ouw.co.uk/">Open University Worldwide (OUW)</a>.</p>
+<p>It's possible to zoom in to the display and highlight or search for individual authors, and see who they have co-authored with:</p>
 
-<p>OUW also sell course packs (but site navigation is lousy; and guys - check out the favicon...and if I were you, I'd make <em>http://ouw.co.uk</em> point somewhere sensible, too - you'll see why in a minute...)</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2655552986/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3148/2655552986_533a0edb56.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="210" width="324" /></a></p>
 
-<p>Corporate Open University Services - <a href="http://www.corous.com">COROUS</a> - is the "company that works with you to develop the full potential of your workforce" by using "an appropriate blend of online and offline learning strategies to enable organisations to develop their human capital"; that is, it's the bit of the OU that provides "learning, tailored to needs, to many of the biggest names in international commerce and UK public services."</p>
+<p>As it seems that Many Eyes now allows visualisations to be embedded, let's see what happens if I try to embed the above.</p>
 
-<p>That site doesn't respect a dropped <em>www</em> in the url either (I'm thinking: <em>http://corous.com</em> - DON'T TRY IT) with rather more unfortunate consequences than the 404 that <em>http://ouw.co.uk</em> gives:</p>
+<p><script type="text/javascript" src="http://services.alphaworks.ibm.com/manyeyes/api/v1/snapshot/89ade5ae1afd68ea011b03c2f1b103e9.js?width=400&amp;height=350"></script></p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5091621316791444306"><img src="http://lh3.google.com/tony.hirst/RqkSnG4pI1I/AAAAAAAAALA/7O437UkKsuM/s800/corousHacked.png" /></a></p>
+<p>At a high level, this visualisation allows us to pick out clusters of what we might refer to as different co-authoring teams within the unit. If we were visualising references returned from a search on a particular topic, the result might allow us to detect different groups working in a similar who don't author with each other, or different domains that use the same term but in completely different senses.</p>
 
-<p>[UPDATE: <a href="http://www.ouworldwide.com/">Open University Worldwide (OUWorldWide)</a> seems to be an internationalist education wing of the university, looking to promote our values, social justice mission and methods across the world.<br />
-<blockquote>Open University Worldwide can put the Open University's wealth of materials, technology and expertise to work to support your interests, capabilities or productivity. We manage the OU's international teaching partnerships, corporate e-learning programmes and educational consulting services. We handle multimedia product sales, distribution and licensing. We foster academic fellowship and mutual exchange.</blockquote>]</p>
+<p>There are also a few  things to notice in the detail about the Many Eyes network visualisation. Firstly, ambiguity in naming has a visual effect: <em>WoodsPA</em> and <em>WoodsP</em> are the same person I think, so their different representation creates an artificial degree of separation in the visualisation. Secondly, the node size reflects the degree of (I think) each author node - that is, the number of coauthors are connected to. I'm not sure if it also represents the absolute number of times the name appeared in the uploaded data set? Which leads neatly to the third point: the repeated occurrence of the same coauthor pairs are not apparently visualised.</p>
 
-<p>The OU also has a raft of other URLs (<em>http://openuniversity.com</em>, <em>http://openlearn.com</em> and <em>http://openlearn.org</em> come to mind), but at the moment they seem to resolve/redirect to the <em>open.ac.uk</em> domain.</p>
+<p>If we now look at a fragment of a Graphviz directed graph (the direction goes from authors who appear earlier in the reference list to authors who appear later) we see that repeated co-author pairings are displayed - the number of connections between two authors represents the number of references they have coauthored:</p>
 
-<p>[UPDATE: There are also some services we offer that don't have their own domain, but which could do? <a href="http://www.open.ac.uk/validate/index.shtml">Open University Validation Services</a>, for example: "The Open University offers a quality assurance and validation service for higher education organisations which do not have their own degree awarding powers."</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2652732682/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3274/2652732682_d92a70a1fe.jpg" alt="(null)" height="218" width="500" /></a></p>
 
-<p>Or how about <a href="http://www.open.ac.uk/employers/">CPD Services for Employers</a>. Err, oops - the CPD site is here: <a href="http://www.open.ac.uk/cpd/">Continuing Professional Development</a>]</p>
+<p>Visualising the results of a search (e.g. a <a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search over ORO for  the term "mobile"</a>) reveals far more structure - here's a significant fragment of a Graphviz visualisation of couthors on references returned from just such a search:</p>
 
-<p><br />
-PS just because, here are some <a href="http://youtube.com/watch?v=3SNk-iXVEfw"><em>Ozric</em> Tentacles</a>...</p>
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3048/2654746483_eb6504469e.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="150" width="500" /></a></p>
 
-<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/3SNk-iXVEfw"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/3SNk-iXVEfw" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>]]></description>
-<dc:subject>OU Futures</dc:subject>
+<p>Here's a more detailed view of part of the above:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3074/2654750561_0bde106452.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="271" width="500" /></a></p>
+
+<p>So what? So nothing really... it just seemed like a good idea at the time, another way of trying to identify professional networks and teams based on their outputs... and it was relatively trivial (and quick) to do... ;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20graphviz" rel="tag"> graphviz</a>, <a href="http://technorati.com/tag/%20many%20eyes" rel="tag"> many eyes</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>visualisation</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-26T22:40:53+00:00</dc:date>
+<dc:date>2008-07-10T11:26:45+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010496.html">
-<title>Thinking About Course Gameplay</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010496.html</link>
-<description><![CDATA[<p>OUseful blog post 501: Martin's been wondering <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/07/is-education-in.html">Is education intrinsically a bit dull?</a>, Marc's been <a href="http://kmi.open.ac.uk/people/marc/2007/07/24/niigata-3-icalt-2007-notes/">deliver[ing] a stinging condemnation of elearning at his keynote address to the IEEE International Conference on Advanced Learning Technologies on Friday in Niigata, Japan</a> and I have been asking myself the question: "if courses are games, have we got the gameplay wrong?"</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014979.html">
+<title>Visualising CoAuthors in Open Repostory Online Papers, Part 1</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014979.html</link>
+<description><![CDATA[<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014965.html">ORO Search by Name Pipes Interface</a> I described a Yahoo pipe for extracting author information from papers listed in the OU's open repository, and outlined some of the potential author naming ambiguities that arise when using ORO reference data as author metadata. In this post, I'll describe my initial attempt at visualising co-author relations using the Moowheel javascript visualisation library. In a couple of follow on posts, I look at some rather more 'correct' visualisations using both Moowheel and Many Eyes.</p>
 
-<p>This question arises partly from my background reading for a new 10 point short course on computer game design and interactive media, which has the deliberately provocative internal working title of "<em>Playing God: Designing Games, Creating Digital Worlds</em>: A hands-on guide to computer game design and interactive media."</p>
+<p>If you're not familiar with it, Moowheel constructs a circular display of points that are connected to each other by some relation when provided with a set of data organised in an appropriate way. For example, in <a href="http://blogs.open.ac.uk/Maths/ajh59/014570.html">delicious Tags'n'users Wheel</a> I used Moowheel to show the tags used by different users who had bookmarked a particular URL on delicious.</p>
 
-<p>Yesterday, I was looking at <a href="http://www.amazon.co.uk/Half-Real-Video-Between-Fictional-Worlds/dp/0262101106?tag=ouseful-21">Half--Real: Video Games Between Real Rules and Fictional Worlds</a> by Jesper Juul, which has an interesting take on the way rules limit, or afford, particular behaviours within a game.</p>
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/"><img src="http://farm3.static.flickr.com/2351/2498112816_d6915d716d.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="468" width="500" /></a></p>
 
-<p>One interesting distinction that was made in the book (and in this <a href="http://www.jesperjuul.net/text/openandtheclosed.html">short paper</a>) is between <em>games of progression</em> and <em>games of emergence</em>:<br />
-<blockquote>[G]ames of progression ... directly set up each consecutive challenge in a game, and games of emergence ... set up challenges indirect because the rules of the game interact. (p67)</blockquote></p>
+<p>Hovering over a username highlights the tags they used to bookmark the original link.</p>
 
-<p>The earliest adventure games are fine examples of games of progression - the aim is for the player to solve a series of puzzles in a particular order; Pong is used as an example of a game of emergence - every game is different depending on how the game is played (even though the rules are very simple).<br />
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="500" height="500"><br />
-<param name="menu" value="false" /><br />
-<param name="movie" value="http://www.miniclip.com/swfcontent/freegames/battle-pong.swf" /><br />
-<param name="quality" value="high" /><br />
-<embed src="http://www.miniclip.com/swfcontent/freegames/battle-pong.swf" menu="false" quality="high" width="500" height="500" name="acidfactory" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /><br />
-</object></p>
+<p>In Moowheel v0.1 at least, the data must be supplied in a form similar to: (a, b, c), (c, a, d), (b, c, e), (d, a), (e). To construct the circle, each item (a, b, c, d, e) must be present as the first item in a set; each set describes the items that are connected to each other in some way.) Links are highlighted to members of a set when the first item in the set is hovered over.</p>
 
-<p>This distinction - simple as it is - got me thinking about courses that have a strong linear narrative (which is how our online courses tend to be constructed): in a sense, they resemble games of progression. In games of porgression, the game designer specifies quite tightly <em>how</em> the game will proceed and what the player must do in order to proceed.</p>
+<p>So here's how I first thought to try to visualise the co-authors of an ORO paper - the source is a results listing for a <a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search on ORO by author "pillinger"</a>:</p>
 
-<p>Compare this with resource based and informal models, which arguably have more in common with games of emergence. Games of emergence set up situations that allow the game designer to be surprised by the actions of the player as they proceed through the game - the goal state may be defined, but <em>how</em> the player reaches that goal is not.</p>
+<p>- construct a list of unique authors and use this to create the unique items on the circle: (author1), (author2), (author3), ..., (authorN).<br />
+- construct sets of the form: (author1, author2), (author1, author2), ..., (author3, author1, authorN) - where the first set are the authors of paper1, the second set are the authors of paper2, and so on.</p>
 
-<p>Another feature of games of progression is that you probably don't want to keep playing them over and over again, once you've cracked them. Whereas games of emergence can be played again and again, with the player changing their behaviour as their skills develop, in turn changing the possible outcome of the game (and maybe even the way they play it).</p>
+<p>My hope was that the Moowheel would then plot out the connections between all the authors who had ever coauthored a paper together that had also included a "pillinger" as an author. Here's a sample result:</p>
 
-<p>Considering courses as games has a lot to offer, I think, particularly in terms of "gameplay" and player reward schedules...</p>
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2009/2651292446_7dca7662d6.jpg" alt="moowheel oro authors 1" height="478" width="500" /></a></p>
 
-<p>...but first, I have some script marking to do... :-(</p>]]></description>
-<dc:subject>TAL</dc:subject>
+<p>You'll see that some authors are depicted multiple times, but with no connections. What Moowheel v0.1, at least, seems to be doing is only display the connections for a non-singleton set where the first term in the set occurs with other set members for the first time(?) (There was also originally some ambiguity in actual author names; for example, "PIllinger, CT", "Pillinger, C" and "Pilinger, Colin" all appear in the results list - see <a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">Dirty Name Data in the OU Open Repository Online</a> for a discussion about this; in the above demo, I went overboward and just used the surname, which combined results fro "Pillinger, C" and "Pillinger, J"...;-)</p>
+
+<p>If you want to have a play with the Moowheel, you can find it here: <a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php?author=pillinger">ORO viz demo 1</a>.</p>
+
+<p>In order to cope with authors appearing multiple times along the outside edges of the graph, I guessed that I needed to construct non-singleton sets that were started with a unique identifier, so I added a level of indirection that related authors with the papers that had contributed to:</p>
+
+<p>- construct a list of unique authors;<br />
+- construct sets headed by unique authors, and the papers they had contributed to, and use this to create the unique items on the circle: (author1, paper1, paper2), (author2, paper1), (author3, paper2, paperN), ..., (authorN, paper2).<br />
+- construct sets for each paper listing the authors who had contributed to that paper: (paper1, author1, author2), (paper2, author1, author3), ..., (paperN, author3).</p>
+
+<p>Here's the result (<a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php?author=pillinger">ORO viz demo 2</a> NB there's a niggle somewhere in the code which means that for some few results listings, the wheel doesn't display... Also, the pipe canlt cope with overlong results listings Ideally, ORO would produce it's own RSS/JSON output...:-(:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3058/2651308026_eac86efc3d.jpg" alt="oro author papers" height="467" width="500" /></a></p>
+
+<p>This time, if you hover over the name of an author, the links to the papers they contributed to will be highlighted. If you hover over a paper reference, the authors who contributed to it will be highlighted.</p>
+
+<p>In order to see which authors had coauthored with whom, I guess I'd need to hack the Moowheel code so that if I hovered over an author, the links to papers they had contributed to would be highlighted, and the 'activated' papers would then in turn highlight the links to the authors who had contributed to those papers...</p>
+
+<p>Whilst I haven't tried that approach, I did find another way of visualising who had coauthored with whom - as I'll describe in my next post... :-)<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20moowheel" rel="tag"> moowheel</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>visualisation</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-25T19:43:25+00:00</dc:date>
+<dc:date>2008-07-09T10:43:06+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010494.html">
-<title>Making the Most of Google Maps (or not): Gloucestershire Emergency Water Points</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010494.html</link>
-<description><![CDATA[<p><a href="http://tinyurl.com/2m43m5">Click here for a map of emergency water points in Gloucestershire (as of 18:00 23/7/07)</a></p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014976.html">
+<title>National Statistics API - Discovery services AJAX demos</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014976.html</link>
+<description><![CDATA[<p>Last week, a call went out for government data mashup ideas, along with a list of government data APIS: <a href="http://www.showusabetterway.com/">Show Us a Better Way</a>.</p>
 
-<p>The most recent, official list is here: <a href="http://www.stwater.co.uk/">Severn Trent Water website</a><br />
-<hr /></p>
+<p>i signed up for some of the API keys (though I still haven't received an NHS data API key :-(, and had a little tinker over the weekend just trying to get my head around some of them. While I've nothing to show yet (and no real ideas other than a search tool for the NHS service) I do expect to cobble together a set of 'minimally working' tools that act essentially as "Hello World" elaborations around the often scant documentation.</p>
 
-<p>Well it seems as if we're in the middle of a <a href="http://news.bbc.co.uk/1/hi/england/gloucestershire/6910559.stm">national emergency</a>, so for my 500th OUseful.info post here's something charitable - a Google Map (made the slow way) of <a href="http://maps.google.co.uk/maps/ms?f=q&view=text&hl=en&ie=UTF8&msa=0&msid=109196350919255002936.000435f2d463a0c57cf1b&ll=51.851447,-2.253871&spn=0.477585,1.086273&z=10&om=1">water bowser locations in Gloucestershire</a>, as of <em>Monday 23rd July 1900hrs</em>:</p>
+<p>So here for starters is a reworking of the supplied National Statistics API AJAX demo, that demonstrates the use of the discovery service API (as described in the <a href="http://neighbourhood.statistics.gov.uk/HTMLDocs/downloads/NeSS_Data_Exchange_User_Guide_v0.2.pdf">NeSS Data Exchange User Guide v0.2</a>) for three different discovery queries (GetLevelTypes, GetLevelTypesByHierarchy and GetSubjectTree): <a href="http://blogs.open.ac.uk/Maths/ajh59/NationalStatsAPI-ajaxDiscoveryDemos.zip">National Statistics API - Discovery services AJAX demos</a>.</p>
 
-<p>Here's a tinyurl to the map: <a href="http://tinyurl.com/2m43m5">http://tinyurl.com/2m43m5</a></p>
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/NationalStatsAPI-ajaxDiscoveryDemos.zip" title="National Statistics API - Discovery services AJAX demos"><img src="http://farm4.static.flickr.com/3278/2646978426_5d0bb37088.jpg" alt="National Stats API" height="340" width="500" /></a></p>
 
-<p>The data is sort of correct as of <em>Monday 23rd July 1900hrs</em>, although the list isn't complete.</p>
+<p>The API is a SOAP service (as you'd expect), which means processing the results XML file with a small XSL transformation. As I was following the "Hello World" call, I transformed the results to an HTML table. If I get a chance, I'll try to put together a couple of XSLTs to JSON, and show how to actually get a handle on the data in the web page itself...</p>
 
-<p>The data was taken from the Severn Trent Water website:  <a href="http://www.stwater.co.uk/server.php?show=ConWebDoc.3156"> 	<br />
-Bowser Locations Gloucestershire Monday 23rd July 1900hrs</a></p>
-
-<p>The data is given as a list of locations, of the form:<br />
-<blockquote>Bowser Locations in Abbeydale</p>
-
-<p>NEWSTEAD RD  ON F/P<br />
-ABBEYMEAD AV<br />
- BROADLEYS RD<br />
-ABBEYMEAD AV<br />
-UPTON LN</blockquote></p>
-
-<p>The site also proudly suggests:<br />
-<em>We recommend you use <a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=gloucestershire&ie=UTF8&ll=51.913779,-2.15332&spn=1.616258,3.702393&z=8&om=1">Google Maps</a> to view your area and locate street locations.</em><br />
-with the link pointing to a Google map over Gloucestershire.</p>
-
-<p>I pondered for a while building a screenscraper and geocoder to plot a map from the data on the page (or cut and paste it into a Google spreadsheet and from there geocode it with the Google maps geocoder API), but in the end I opted for the slow and painful route to try and see what sorts of errors the automated route would choke at.</p>
-
-<p>And so, I created a Google MyMap, cut and pasted the addresses into the map search box, then saved each result to the appropriate MyMap, moving the balloon to the correct location if necessary.</p>
-
-<p>Doing this, I noticed there are quite a few typos/errors in the street names ("Ave" rather than "Rd", for example) but foolishly didn't record them. (I assume these are errors on the Severn Trent site). Locating the points accurately was also difficult (so there may be a few errors).</p>
-
-<p>I also noticed that there are a few 'dated' location names (or do we still have <em>GPO Sorting Offices</em>?).</p>
-
-<p>Some locations appear to be duplicated in the list.</p>
-
-<p>At times, the 'local area' clusters that are used to group location appear to overlap, or drift from the supposed locale.</p>
-
-<p>If the locations change, or more or added, the map will rot badly. If new locations are added, then depneding on how they are added/flagged it may be easy or difficult to update the map.</p>
-
-<p>[UPDATE: 01:00 24/7/07 - the Severn Trent listing appears to have been updated, and now lists bowser locations as of 22:00 on 23/7/07; however, as I suspected might happen, it's not possible to see the changes that were made to the earlier posting, so it's hard for me to update the map... one reason for live scraping, I guess ;-) So how could the Severn Trent folks have helped matters: by adding a [added 22:00, 23/7/07] label to updated items maybe (easy)? Or using a public read only access wiki, with history features enabled? (and maybe a wiki way for people to suggest corrections to incorrect road names, as well as tightening up the <em>actual</em> location of the bowsers?) (harder).]</p>
-
-<p>Anyway - the map is there, and hopefully contributing to Google searches [though now it's out of date and maybe even incorrect...so maybe I should take it down? I wonder, once a bowser location is posted, does that location remain fixed for the duration of the emergency? It would make sense to me if that is the case (i.e. once you've found a water location, you don't need to hunt for it the next time you need it... In which case, the map will only ever show <em>fewer</em> locations than is actually the case.)].</p>
-
-<p>Here's a link to the map again: <a href="http://tinyurl.com/2m43m5">http://tinyurl.com/2m43m5</a><br />
-<hr /><br />
-PS Another thing that came to mind is that in such situations, is there a need for an "IT/web hacker" equivalent to <a href="http://www.raynet-uk.net/">RAYNET, The Radio Amateurs' Emergency Network</a>?</p>
-
-<p>Local council IT practitioners are not necessarily as up-to-speed as members of the Lazyweb, even if local services aren't under the sorts of pressure that an emergency presents...</p>
-
-<p>[UPDATE 01:15 24/7/07 So for an example of the emergency web stratgey, the srwater.co.uk (good URL, huh? Not that I was expecting severntrent.co.uk or anything...(that's the share price and press room website - no emergency info...!)) front page is currently a listing of the water bowser locations, with a small link to the 'normal' website. I don't know how the site normally handles incoming emails but I'm guessing server load has toppled it over:<br />
-<blockquote>An error has occurred</p>
-
-<p>HOST: www.stwater.co.uk<br />
-SCRIPT: /server.php<br />
-QUERY: show=nav.5614<br />
-Message:	Undefined index: currentTemplate<br />
-File:	E:\boxuk\amaxus\private\inc\class\common\XslTransformer.class.php<br />
-Line:	334<br />
-Time:	July 24, 2007, 1:11 am</blockquote>]</p>
-
-<p><br />
-For some time I've been thinking about volunteering activities, but I'm not really that practical away from a keyboard... so maybe I need to look around to see if there is something like a <em>Webnet</em> organisation - "The Web Hackers' and Data Mashers' Emergency Network" - that I could maybe contribute to?</p>
-
-<p>Anyone know of such a thing? I know there have been <em>ad hoc</em> applications created to help out in dire times, but is there a latent, standing group out there who can help out with pulling together information services when necessary?</p>
-
-<p>PPS a couple of examples: <a href="http://www.allthingsdistributed.com/2007/07/wired_on_jim_gray.html">the search for Jim Gray</a>, <a href="http://www.edparsons.com/?p=504">Thames Valley Flood Map</a>.</p>
-
-<p>PPPS Here's an embedded view of the map, (built using an online <a href="http://www.dr2ooo.com/tools/maps/">Embed Google 'My Maps'</a> tool):</p>
-
-<p><iframe src="http://www.dr2ooo.com/tools/maps/maps.php?zoom=10&ll=51.912085,-2.168427&kml=%20http%3A//maps.google.co.uk/maps/ms%3Ff%3Dq%26view%3Dtext%26hl%3Den%26ie%3DUTF8%26om%3D1%26mpnum%3D3%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.000435f2d463a0c57cf1b&ctrl=true&" width="400" height="266"></iframe></p>
-
-<p>Not all the mapped points seem to be displayed, so I guess there must be a limit on either how many points can be listed in a MyMaps KML file or how many the map embedding app can cope with?</p>
-
-<p>PPPS Here are some <a href="http://googlemapsmania.blogspot.com/2007/07/bbcs-interactive-google-my-map-of-flood.html">more flood news related mashups</a>.</p>]]></description>
-<dc:subject>outreach</dc:subject>
+<p>PS is there an official "showusabetterway" tag?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/NationalStatistics%20API" rel="tag">NationalStatistics API</a>, <a href="http://technorati.com/tag/%20showusabetterway" rel="tag"> showusabetterway</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>projects</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-23T23:09:48+00:00</dc:date>
+<dc:date>2008-07-07T18:58:04+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010493.html">
-<title>Deep Linking 2.0 - What Counts as Fair Use of Online Book Extracts?</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010493.html</link>
-<description><![CDATA[<p>When I first started writing online educational materials, I was told that deep linking was out - if we wanted to reference a page several clicks down into a site, we had to provide instructions on how to find that page from the front page, which was (supposedly) the only place we could link to.</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014965.html">
+<title>ORO Search by Name Pipes Interface</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014965.html</link>
+<description><![CDATA[<p>Over the last few weeks, I've been playing with various Javascript visualisation libraries that work all sorts of magic if you throw data at them in the right way. But in order to do that, you often have to get the data from a third party location into the web page that contains the visualisation code...</p>
 
-<p>Times are a little more enlightened now, but still there are bottlenecks in place, and for good financial (and fair use) reasons.</p>
+<p>One of the easiest ways of doing this is to load a Javascript object into the page using JSON - Javascript Object Notation. In the same way that a Javascript library can be loaded into a web page using the HMTL <tt>&lt;script&gt;</tt> tag, a JSON feed can be pulled into the page in the same way.</p>
 
-<p>Just now, I tried a search on Amazon - in the books section - on <em>hype cycle</em> - no hits:</p>
+<p>For example, the following pulls a JSON feed into a page from a Yahoo Pipe:</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090375252289594130"><img src="http://lh4.google.com/tony.hirst/RqSlUm4pIxI/AAAAAAAAAKA/9NHdzA6eAo0/s800/amazonHypeCycle1.png" /></a></p>
+<p><tt>&lt;script type="text/javascript" src="http://pipes.yahoo.com/pipes/pipe.run?_id=vhMha5tK3RGAl2xDouNLYQ&amp;_render=json&amp;_callback=parseJSON&amp;name=pillinger"&gt;&lt;/script&gt;</tt><br />
+ <br />
+Yahoo Pipes originally started out as a service for processing RSS feeds, but over the months it has become an increasingly general purpose mashup tool. Whilst it excels at processing RSS/Atom syndication feeds, it can also consume CSV files (comma separated variable files, a common output format for simple spreadsheet data), JSON feeds, XML and web pages, and publish RSS or JSON formatted data (the JSON data may be far richer than the RSS output).</p>
 
-<p>there was the option to search inside books though, which was far more promising:</p>
+<p>The ability to consume HTML pages means that it can be used as a simple screen scraper. That is, it can be used to literally 'scrape' data from a web page.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090375273764430626"><img src="http://lh5.google.com/tony.hirst/RqSlV24pIyI/AAAAAAAAAKI/GGE2PjzMPWA/s800/amazonHypeCycle2.png" /></a></p>
+<p>So for example, consider the case of the OU <a href="http://oro.open.ac.uk">Open Repository Online (ORO) service</a>, which acts as a repository for research publications authored by OU staff. Whilst there are several RSS feeds available from the service (which makes the information portable), such as new submission feeds, ORO still doesn't appear to offer an <a href="http://www.opensearch.org/Home">OpenSearch RSS service</a> that would allow search query URLs to be constructed in an advertised and standard way, and search results to be pulled from the service as RSS. Which means that to build a service around ORO search results, we need to scrape the results listings off the search results web page...</p>
 
-<p>From these results, I can click through to the actual page on which the search term appears:</p>
+<p>Which is where Yahoo Pipes comes in: <a href="http://pipes.yahoo.com/ouseful/oroauthorsearch">OU ORO Author Search pipe</a><br />
+<ol><li>do an author search on ORO, and grab the results page URL...</li><br />
+<li>create a new Yahoo Pipe, and place a <em>URL Builder</em> block on the canvas. Paste the ORO search results page into the <em>Base</em> field and hit return - the block will split the URL up into its component parts;</li><br />
+<li>we want to let the user search for a particular name using the pipe, so drag a <em>Text Input</em> block onto the canvas and name it appropriately; wire the output of this block to the form element in the URL Builder block that contained the original name you searched for.</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090377245154419522"><img src="http://lh4.google.com/tony.hirst/RqSnIm4pI0I/AAAAAAAAAKo/gH5lDNFjhc0/s800/amazonHypeCycle4.png" /></a></p>
+<p><a href="http://pipes.yahoo.com/ouseful/oroauthorsearch" title="Yahoo ORO author search pipe"><img src="http://farm4.static.flickr.com/3280/2645878054_de68679ca9.jpg" alt="oro pipe step 1" height="297" width="500" /></a></li><br />
+<li>Havng constructed the URL of search results page for a particular author, fetch the page into the pipe. The <em>Fetch Page</em> block also allows you to 'segment' the page into a set of separate item, such as one item per search result. By inspecting the HTML source of the page, try to find unique words or phrases that bound the whole of the page area that you want to extract, as well as text strings that identify each element you want to extract as a separate item. So for example, here's an ORO search results page (browser view):</p>
 
-<p>(The panel in the top left is the <a href="http://blogs.open.ac.uk/Maths/ajh59/009009.html">OU Library Traveller panel</a>, which appears on pages that have ISBNs in the URL from a selection of bookselling and bookrelated websites. The panel looks up books with that ISBN (and alternative editions via xISBN) in the OU Library, both hard copy and ebook versions, and displays its availability. The script is easily customisable to many other library systems.)</p>
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3280/2645887300_5486caf5aa.jpg" alt="ORO author search results" height="201" width="500" /></a></p>
 
-<p>As a heavy Amazon user, this ability to search through books and pull out content (as well as maybe buying the book) is a Good Thing. (Funnily enough, I don't tend to use <a href="http://books.google.com">Google books</a> to do this much...)</p>
+<p>and here's the source HTML:</p>
 
-<p>But what struck me just now was that this supports <em>exactly</em> the way I use a great many academic/technical books - to look up <em>particular</em> items on maybe one or two pages.</p>
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3189/2645891572_456d09f85e.jpg" alt="ORO authro search view source" height="433" width="500" /></a></p>
 
-<p>The next thought was: can I link to an open book page on Amazon and share that link? Answer: I don't think I can (though maybe I could on Google books) - I think I need to be logged in on my Amazon account?</p>
+<p>In the pipe, I've tried to pull out just the bit of the page that corresponds to the search results, and within that block, identify some feature that lets each search result be indentified as a separate item:</p>
 
-<p>The next thought: if I <em>could</em> deep link to an open book page, could I put that link in my course materials? That is, would the deep link be a fair use of the resource being linked to? The corollary I'd like to imagine in the real world is a 2 page photocopied handout for the students on a course.</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2645054911/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3281/2645054911_90d863e4d9.jpg" alt="ORO author search pipe 2" height="128" width="436" /></a></li><br />
+<li>Just to ensure that I only pull out itens that contain search results, I'm going to filter out any items that don't contain the name I was searching for:</p>
 
-<p>Next thought: OU courses are password/paywall (i.e. student registration required) protected - so the use is limited (and hopefully justified under educational terms). Bit what about putting such a link in OpenLearn, where there is no restriction on access? Still fair?</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2645070441/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3063/2645070441_f7ec603b94.jpg" alt="ORO author search pipe 3" height="134" width="500" /></a></p>
 
-<p>Back behind the paywall, and could we "borrow" the Amazon embed code to display the two pages of text in the body of OUr materials, as we could with material posted on <a href="http://scribd.com">Scribd</a> for example?</p>
+<p>Here's the output of the first element in the pipe so far (browser view - the 'source view' is actually HTMLcode):</p>
 
-<p>And so it goes on...</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2645076093/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3260/2645076093_458b5621c0.jpg" alt="ORO author search pipe 4" height="69" width="500" /></a></li><br />
+<li>The next step is to prepare a version of the search results that can be output as an RSS feed. RSS feeds have a standard structure. In the most straightforward case, each RSS feed item contains a title, description and link/URL - so we make a copy of each results item in a placeholder for each of those elements (the full HTML code is displayed in the top level element (which is just a reflection of the contents of the title element):</p>
 
-<p>The main question is - can I fairly, in password protected online educational materials, link to (or even better, embed) one/two page snippets of online scanned book content? Because often one or two pages is all I need?</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2645080551/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3015/2645080551_ca169b2d38.jpg" alt="ORO author search pipe 5" height="307" width="440" /></a></li><br />
+<li>Now we do some magic using regular expressions. Regular expressions provided a standardised way for doing complex search and replace operations. In this case, we process the contents of each of the title, link and description fields in order to extract different information from them:</p>
 
-<p>Or would we have to license the content and pay a special page charge for it? (Obviously, we'd have to pay for larger chunks, for example at chapter level: <a href="http://www.oreillynet.com/fyi/blog/2007/06/buy_by_the_chapter.html">Buy By the Chapter</a>).</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2645083433/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3072/2645083433_61fa0356c3.jpg" alt="ORO author search pipe 6" height="248" width="500" /></a></p>
 
-<p>PS here's something else to chase, maybe? The <a href="http://www.openlibrary.org/toc.html">Open Library</a> (which is <em>not</em> the OU Library...):<br />
-<blockquote>The Open Library website was created by the Internet Archive to demonstrate a way that books can be represented online.</p>
+<p>(The final regular expression strips out the html tags from the description field.)</li><br />
+<li>The final step loops through the description element of each feed item and separates the authors named in the description field into a separate list of authors:</p>
 
-<p>The vision is to create free web access to important book collections from around the world.</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2645089937/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3056/2645089937_0f6e739d6e.jpg" alt="ORO author search pipe 7" height="227" width="500" /></a></li></ol><br />
+If we now run the pipe, we can get an RSS feed out containing the ORO search results, as well as a more comprehensive JSON feed which aslo contains a list of separatley identified authors.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oroyahoo%20pipes" rel="tag">oroyahoo pipes</a>, <a href="http://technorati.com/tag/%20pipes" rel="tag"> pipes</a>, <a href="http://technorati.com/tag/%20screenscraper" rel="tag"> screenscraper</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>RSS</dc:subject>
+<dc:creator>ajh59</dc:creator>
+<dc:date>2008-07-07T12:12:09+00:00</dc:date>
+</item>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014962.html">
+<title>Dirty Name Data in the OU Open Repository Online</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014962.html</link>
+<description><![CDATA[<p>Now I'm not one to criticise the Library (?!;-), but over the weekend I've been playing with one of the Library's newest collections, the <a href="http://oro.open.ac.uk">Open Repository Online</a>, with a view to visualising who's co-authored papers in the collection with whom. And looking through the author information provided in the results listing for a search on a particular author name, I have to take issue with one or two things...</p>
 
-<p>Books are scanned and then offered in an easy-to-use interface for free reading online. If they're in the public domain, the books can be downloaded, shared and printed for free. They can also be printed for a nominal fee by a third party, who will bind and mail the book to you. The books are always FREE to read at the Open Library website.</blockquote></p>]]></description>
+<p>Like the considerable amount of ambiguity in both the naming convention and the stylistic presentation used for name references.</p>
+
+<p>For example, the following names all appear in the author information for papers returned from an ORO name search on the author "<a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">pillinger</a>":<br />
+<ul><li>Pillinger, C. T.</li><br />
+<li>Pillinger, C.T.</li><br />
+<li>Pillinger, Colin T.</li><br />
+<li>Pillinger, Colin</li><br />
+<li>Pillinger, C.T, (or maybe you could read this as "Pillinger, C.T")</li></ul>(I'm also guessing that <em>Semjonova, L. F.</em> and <em>Semenova, L.F.</em> are the same person (apologies to both parties if not)?)</p>
+
+<p>If I was to construct a table of author names, using direct/literal pattern matching of text strings to match individuals across different article references, all of the above <em>Pillinger</em> variants would appear as <em>different</em> authors, because the text strings are different and simple string matching is dumb.</p>
+
+<p>(This is just one of the issues that was mentioned at the CRiG barcamp a month or so ago (<a href="http://blogs.open.ac.uk/Maths/ajh59/014735.html">CRIG DRY (Don't Repeat Yourself) Metadata Barcamp</a>), in particular by the <a href="http://names.mimas.ac.uk/">MIMAS Names project</a>, which "is going to scope the requirements of <abbr title="United Kingdom">UK</abbr> institutional and subject  repositories for a service that will reliably and uniquely identify individuals and institutions" in order to "provide important information about the future usefulness of a name authority  service for institutional and subject-based repositories, and other applications  beyond the repository sector." One of that things that was discussed then related to reconciling repository name references with staff records, but for data end users, if different presentation modes (as above) are used to reference the same individual, then simple pattern matching algorithms used in mining the data are seen to be brittle, unless the data user seeks to normalise the data in some way. Which may be advisable..? That is, <em>always</em> assume the data is messy/noisy...).</p>
+
+<p>Where the information is the source of it's own metadata, or where appropriate web page markup - such as microformats* and cool URIs - provide implicit metadata that the adventuous can build hacks around, it's quite handy if the literal textual representation of the data is coherent/self-consistent; and in the case of ORO, it doesn't appear to be...</p>
+
+<p><small>*though bear in mind this recent second look at microformats from an accessibility point of view from the BBC: <a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml">Removing Microformats from bbc.co.uk/programmes</a>!</small></p>
+
+<p>So this is where I start to wonder where the Library fits in to the workflow of online university research repositories if they are to be useful to data users? For example, what do we conclude if the Library can't guarantee the quality of data in their own, most recent, collection (which was born <em>de novo</em> only a couple of years ago)? It seems to me that "reference gardening" (which must one the lousiest jobs imaginable!), is one of the areas where they could really add value, although ideally the information would be collected/submitted in a way that removed ambiguity and ideally guaranteed conformity with some standard, authoritative naming scheme.... But that will never happen...</p>
+
+<p>So whilst I appreciate that no matter how many checks and balances you put in place, there is always going to be mess. And maybe the Library can help by finding ways to help users cope with the inevitable mess... Entropy always wins out...</p>
+
+<p>Ideally, of course, the data would be clean/correct, and if it wasn't that ideally any errors, once found, would be corrected. But maybe there's also scope for the Library to accept that the data is a mess, and help data patrons find heuristics for cleaning it and removing some of the noise. For example, as well as helping users write advanced (and robust) search queries (like how to use advanced search operators and set up saved search alerts), I wonder whether they should also maintain a set of 'reference functions' that users of (messy) "data as metadata" can apply as heuristics to try and tidy up textual data.</p>
+
+<p>So for example, the fiollow javascript function will (I think? Err...) replace a spelled out forename in the above name referencing style with an initial:</p>
+
+<p><tt>function tidyName2(s){return s.replace(/(,\s*[A-Z])[a-z]*/g, "$1.");}</tt></p>
+
+<p>e.g. <em>Pillinger, Colin T.</em> will become <em>Pillinger, C. T.</em></p>
+
+<p>And this one will remove the punctuation:</p>
+
+<p><tt>function tidyName3(s){return s.replace(/[\s ,\.]*/g,"");}</tt></p>
+
+<p>e.g. <em>Pillinger, C. T.</em> will become <em>PillingerCT</em></p>
+
+<p>By applying several of these heuristics, we can produce a name format that removes some of the typographical ambiguity, though losing an initial may be going too far? e.g. going from <em>PillingerCT</em> to <em>PillingerC</em> may be the wrong thing to do, even though it would set up an identity between these two original forms: <em>Pillinger, Colin</em> and <em>Pillinger, C. T.</em></p>
+
+<p>That said, how many library staff in general even know what a regular expression is, let alone how to construct one to help a 'search a replace' patron tidy a data set in a text editor or even in Word (<a href="http://office.microsoft.com/en-us/help/HA010873051033.aspx">Add power to Word searches with regular expressions</a>)?<br />
+<a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml"></a><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/library" rel="tag">library</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>, <a href="http://technorati.com/tag/" rel="tag"></a></p><!-- technorati tags end --></p>]]></description>
 <dc:subject>Library</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-23T14:25:09+00:00</dc:date>
+<dc:date>2008-07-06T22:33:56+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010492.html">
-<title>Original Cholera Map on Google Earth?</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010492.html</link>
-<description><![CDATA[<p>I've been wondering about what would make for a good educational demo of Google Earth'n'data mashups, and "rediscovering" the water borne transmission of cholera looks promising...</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014951.html">
+<title>The Library Moves On...</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014951.html</link>
+<description><![CDATA[<p>I don't normally write posts that just repost stuff from elsewhere, but I thought this was interesting... a message I received via a blog feed from the MCT (Maths, Computing and Technology) "link librarian' in the OU Library:<br />
+<blockquote><strong>Withdrawal of British Standards print stock.</strong><br />
+The Library has decided to withdraw its collection of print standards (mainly British Standards). Thanks to recent improvements to the British Standards Online database, withdrawn and superceded versions of standards are now available in PDF format to OU users online alongside current editions.<br />
+...</blockquote>Access to print journal collections has also changed over the last few years - where once it was possibly to roam the dusty aisles lined by all manner of obscure journals, serendipitously discovering all sorts of wonderful things on the way, now the aisles are light and airy and tend to be dominated by the (increasingly dated) book collection...</p>
 
-<p>I found a copy of <a href="http://www.ncgia.ucsb.edu/pubs/snow/snow.html">Snow's 1854 cholera data</a> (possibly?!) so now I need:</p>
+<p>The rise of electronic journal subscriptions means we now have access to far more journals, and can far more easily search them, of course. But for me, visits to the library used to be filled with a sense of joyful anticipation about what I might come across by flicking through journals randomly picked from the shelves of the journal collection, whereas now a visit to the library is more about meeting someone for coffee (which is pleasurable in another way, including but not limited to, serendipitous discovery through conversation!).</p>
 
-<p>- a way of turning the map position data into geo-data;<br />
-- an 1854 Google Earth map overlay for the appropriate part of London (something like <a href="http://www.directionsmag.com/images/newsletter/2006/06_01/snow_cholera_map_lg.jpg">this</a> maybe?).</p>
+<p>I love books, always have, but increasingly I find that old academic books - such as the ones that line the shelves of the library - don't really do it for me. But old journal articles and conference proceedings still do, to a certain extent. Maybe it's because the journals and conferences represented the conversational channel of academia of the 20th century? Whereas now, in our connected world, the conversation is elsewhere, and far closer to a real time conversation...</p>
 
-<p>If you know if anyone has done this already, please drop me a line... :-)</p>]]></description>
+<p>Books can be conversational too, of course. But with each turn in the conversation lasting upwards of 100, 000 words, they can take a long time to follow. 10,000 words of book chapter, or 5,000 words of journal article also take time to work through - reading through 4 or 5 connected journal papers is hardly a rapid fire cocktail conversation. 1,000-3,000 words of conference paper are quicker to digest, and reference chasing and citation seeking give you a glimpse of the conversation that was happening at the time. Blog posts represent the conversation in progress - brief reports of work in progress, half-formed ideas still be properly thought through or worked out. And tweets? Well, maybe that's where the 'eureka' slogan gets shouted next, with a link to a blog post capturing the essence of the idea, that post promising a conference paper, and the journal paper to make it matter of record appearing as a special issue to mark the conference, with the book to follow a year or so further down the line...</p>
+
+<p>The question is - where does the library sit in all of this?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/library" rel="tag">library</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>Library</dc:subject>
+<dc:creator>ajh59</dc:creator>
+<dc:date>2008-07-04T10:04:55+00:00</dc:date>
+</item>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014935.html">
+<title>Google Maps Catchup Post</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014935.html</link>
+<description><![CDATA[<p>Earlier this year I did quite a few posts relating to Google Maps, (<a href="http://blogs.open.ac.uk/Maths/ajh59/014014.html">Google Calendar maps</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/012936.html">geoblogging</a> (blogging from Google MyMaps), a <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">geoTwitter map</a>, some <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">maps relating to school catchment areas</a>, and so on) but didn't post everything...</p>
+
+<p>So when an email came round last week asking whether anyone knew how to get postcodes plotted onto maps, I sent a reply:<br />
+<blockquote>Q: I need to create a simple map - plot some sites onto a map of the UK using postcodes (or town names) and then code the markers to denote different site characteristics.</p>
+
+<p>A: One way would be to put the details into a spreadsheet, pass the result through a geocoder (to convert postcodes to lat/long) and then plot different markers on a map.</p>
+
+<p>Here's a recipe for getting the markers onto a map from a spreadsheet with a postcode column: <a href="http://www.andydickinson.net/2008/02/29/maps-spreadsheets-yahoo-pipes-and-post-offices/">http://www.andydickinson.net/2008/02/29/maps-spreadsheets-yahoo-pipes-and-post-offices/</a></p>
+
+<p>I produced a couple of maps that will do client side processing relating to markers before plotting them: <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">http://blogs.open.ac.uk/Maths/ajh59/013580.html</a></blockquote>Looking back at the second of the above mentioned posts, (and spotting the pipe had rotted - now fixed...), I realised that I hadn't posted anywhere the final extent of my tinkerings of the time. And looking around on my laptop, the code appeared to have gone :-( Anyway, fortunately I'd posted a nearly-as-far-as-I'd-got edition of the code to the OUseful blog server, so before I lose it again, here's a link: <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php">Generic Circular Catchment Areas - Interactive Map</a></p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3111/2624872814_420ea60c17.jpg" alt="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php" height="423" width="500" /></a></p>
+
+<p>What the map allows you to do is load in a set of points from a Google MyMap, marked up as members of different classes, and then plot the catchment areas around each point using a customisable radius for each class. (Along with a user defined radius, you can also set the colour of each circular  catchment area (using a YUI colour selector)).</p>
+
+<p>You can hide all the markers from any class, or just hide individual points.</p>
+
+<p>(The URL on the map page for the Plymouth supermarkets MyMap is incorrect. Here's the correct link: <a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=109196350919255002936.000446d925755b10ddf4e&z=10">Plynmouth supermarkets MyMap</a>.)</p>
+
+<p>When I get a chance, I'll try to tidy up the code and do a version that: a) will plot points identified by postcode from a Google spreadsheet; b) let oyou use different markers as well as or instead of the circular catchment areas; c) have a think about how a table containing postcode info could be <a href="http://blogs.open.ac.uk/Maths/ajh59/014014.html">progressively enhanced</a> with a map display.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/maps" rel="tag">maps</a>, <a href="http://technorati.com/tag/geo" rel="tag">geo</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>Geo</dc:subject>
+<dc:creator>ajh59</dc:creator>
+<dc:date>2008-06-30T15:01:00+00:00</dc:date>
+</item>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014924.html">
+<title>More Idle Thoughts About Nothing in Particular (i.e. Twitter)</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014924.html</link>
+<description><![CDATA[<p>Here's another thought along the lines of the CMC same/different time/place grid as applied to Twitter I mentioned in <a href="http://blogs.open.ac.uk/Maths/ajh59/014919.html">Twitter and "Desynchronous" Communication</a>... Twitter seems to be all over the place if you plotted a scatter chart opf different interaction modes on these axes:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2618165639/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3028/2618165639_29b1d31ee4.jpg" alt="Twitterness" height="309" width="403" /></a></p>
+
+<p>1 sender and 0 receivers (or maybe 0 readers) - late night tweet to no-one and it gets lost...</p>
+
+<p>1 sender to 1 or 2 explicitly identified receivers -  I just tweeted @one or @two people.</p>
+
+<p>Lots of senders, not really thinking about who's receiving it - something's happening (an earthquake, maybe?)</p>
+
+<p>Lots of senders, 1 recipient (maybe that someone asked a question to their followers (1 sender, lots of recipients) and lots of people are replying?)</p>
+
+<p>It's also worth bearing in mind that mass action trends are identifiable on Twitter: <a href="http://trendspotting.corank.com/tech/tag/twitter"><em>Twitter</em> on Trendspotting</a>.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/cmc" rel="tag">cmc</a>, <a href="http://technorati.com/tag/%20this%20is%20the%20sort%20of%20trivial%20unthought%20through%20observation%20that%20people%20write%20up%20and%20present%20in%20papers%20in%20dodgy%20conferences%20and%20journals%20isn't%20it%3F" rel="tag"> this is the sort of trivial unthought through observation that people write up and present in papers in dodgy conferences and journals isn't it?</a></p><!-- technorati tags end --></p>]]></description>
 <dc:subject>Misc</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-23T00:39:56+00:00</dc:date>
+<dc:date>2008-06-28T19:20:16+00:00</dc:date>
 </item>
-<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/010491.html">
-<title>Mashup Tools Frenzy</title>
-<link>http://blogs.open.ac.uk/Maths/ajh59/010491.html</link>
-<description><![CDATA[<p>A week away from a daily play, and my feedreader now contains way too many unread messages. Prompted by this CNET News post on <a href="http://news.com.com/8301-10784_3-9747138-7.html">The battle of the mashup editors</a>,  I also realise that I probably haven't been keeping up with updates to the Google Mashup Editor or Microsoft Popfly since I played with them the day the invites originally came out... (aaaaaarrrrrrrrrrrrrggggggghhhhhhhh - not enough time to play with the big toys, let alone keep up with the little ones...........!)</p>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014919.html">
+<title>Twitter and &quot;Desynchronous&quot; Communication</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014919.html</link>
+<description><![CDATA[<p>In the quaint language of academia,  "CMC" - computer-mediated communication - is the phrase typically used to identify person-to-person electronic communications. Oftentimes, CMC tools are classed as either synchronous or asynchronous and then plotted on this sort of matrix (e.g. <a href="http://projects.coe.uga.edu/epltt/index.php?title=Computer_Mediated_Instruction">Computer Mediated Instruction</a>):</p>
 
-<p>So - top of the to do list is to catch up with feature releases from <a href="http://blog.pipes.yahoo.com/">Yahoo Pipes</a>, <a href="http://popflyteam.spaces.live.com/blog/">Microsoft Popfly</a> and <a href="http://googlemashupeditor.blogspot.com/">Google Mashup Editor</a> (as well as the other various Google APIs, like the <a href="http://googleajaxsearchapi.blogspot.com/">AJAX feed API</a>).</p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2616149410/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3203/2616149410_25af7eef64.jpg" alt="cmc" height="257" width="352" /></a></p>
 
-<p>Come to think of it, I haven't even played with IBM's <a href="http://services.alphaworks.ibm.com/qedwiki/">QEDWIki</a> <em>at all</em>, yet... or the <a href="http://www.seobythesea.com/?p=716">Intel Mashmaker</a> tool (though I guess access to that isn't available at the mo...).</p>
+<p>(Other dimensions you can add in are one-to-one communication, one-to-many, many-to-many and so on...)</p>
 
-<p>As everyone seems to be releasing <a href="http://del.icio.us/psychemedia/autodiscovery">feed autodiscovery</a>  - at least, Yahoo Pipes and Google AJAX API both offer this now (as does this <a href="http://simplepie.org/">PHP library</a>) - I feel I really should try to build something that makes use of this... the only question  is, what? Something <a href="http://ouseful.open.ac.uk/stringle">String'n'Glue</a> related, maybe?</p>
+<p>But it seems to me that I increasingly use many asynchronous tools in a "near-synchronous" or "presynchronous" way, and potentially synchronous toos in an asynchronous ('desynchronous'?) way.</p>
 
-<p>I'm also hoping that when the OpenLearn folks finally start moving the OpenLearn feeds from the dev server onto the public one, they'll make the feeds autodiscoverable... Although just what possibilities that will open up for feed related creativity, I'm not sure yet!</p>
+<p>For example, twitter allows me to engage in one-to-one (private), one-to-one (cocktail party) and one-to-many way in near real time, or with an arbitrarily long gap between statement and response. Instant messaging allows me to engage in synchronous conversation or send message to people offline, knowing they'll be able to pick them up when they are online. (Ands others have noticed from their own perspective, (e.g. <a href="http://www.offmessage.com/2008/06/on-twitter/">On Twitter</a>), my IM usage has gone down since I started tweeting...)</p>
 
-<p><hr /><br />
-PS I notice that I get live suggestions from my Firefox search widget (at least with Google as the search engine).</p>
+<p>Looking again at the above figure, it seems to me that twitter pretty much falls into every quadrant: for example, top right is the conference room backchannel, bottom right is the backchannel open to the world. Top left are asynchronous wrokplace tweets ("anyone for coffee"), and bottom right are end of day tweets that may not be picked up till tomorrow (if at all).</p>
 
-<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090147511648723714"><img src="http://lh6.google.com/tony.hirst/RqPWMW4pIwI/AAAAAAAAAJo/5CV_cZVEROM/s800/googleSuggest.png" /></a></p>
+<p>SMS has similar properties maybe, but requires a different access device and one that is maybe not so amenable to flow, when compared to an ever open or oft-looked at computer window?</p>
 
-<p>It'd be really neat - particularly for navigational/known item queries, where you <em>know</em> the result you want to find - if below the bar in the drop down live suggestions it also gave the top three hits for the current query-in-progress, live search style, treating them as clickable links rather than search terms...</p>]]></description>
+<p>Ramble, ramble, ramble; not sure what I meant to post about, really...</p>
+
+<p></p>
+
+<p>   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter.cmc" rel="tag">twitter.cmc</a></p><!-- technorati tags end --></p>]]></description>
 <dc:subject>Misc</dc:subject>
 <dc:creator>ajh59</dc:creator>
-<dc:date>2007-07-22T23:30:53+00:00</dc:date>
+<dc:date>2008-06-27T16:07:59+00:00</dc:date>
+</item>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014913.html">
+<title>Searchme Stack demo...</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014913.html</link>
+<description><![CDATA[<p>One of the things I was really pleased to get into the current presentation of T184, our <a href="http://ouseful.open.ac.uk/t184">online short course on robotics</a>, were a handful of embedded video clips from Youtube. The presentation of the assets isn't that pretty, but I'm starting to learn about what battles to fight when (!;-) so it was enough just to the embedding sorted without worrying to much about beautiful page design/layout, media player customisation, and so on...</p>
+
+<p><a href="http://ouseful.open.ac.uk/t184" title="T184 screenshot"><img src="http://farm4.static.flickr.com/3071/2610591785_8e95652d2a.jpg" alt="t184 image" height="375" width="500" /></a></p>
+
+<p>The pages as currently constructed owe a lot to the styling and layout of a printed page (many students do allegedly print out online/HTML materials for offline reading) and an old old page template...), so things like images are also embedded in the page in what at (on my off days) I consider to be a quite inelegant way:</p>
+
+<p><a href="http://ouseful.open.ac.uk/t184" title="T184 screenshot"><img src="http://farm4.static.flickr.com/3267/2610589527_5e7d327c6b.jpg" alt="T184 excerpt" height="331" width="500" /></a></p>
+
+<p>So when I saw the recent "stack" demo from the <a href="http://searchme.com">searchme visual search engine</a>, I started wondering about whether this could be a way of putting a multiple image and video payload into a single gallery window on a page?</p>
+
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/8JQn8XfOP5s&amp;hl=en"><embed src="http://www.youtube.com/v/8JQn8XfOP5s&amp;hl=en" type="application/x-shockwave-flash" height="344" width="425"></object></p>
+
+<p> (There are issues regarding printing the page out or course, particularly if the gallery is just an image gallery - I don't think the searchme widget will 'linearise' the images for a print display?!) </p>
+
+<p>So as T184 comes up to ts last presentation (in its current form....) in October, I wonder about how we might use this sort of display in the context of online teaching materials? Here's the simplest of demos, showing a mixed collection of assets on a theme (click through to the post to see demo of an embedded stack. Or here's a direct link to the stack: <a href="http://www.searchme.com/stack/12c6">Automata stack (<em>searchme</em>)</a>.</p>
+
+<div><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="embedded" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" height="375" width="600">  <param name="bgcolor" value="#FFFFFF">
+  <param name="allowScriptAccess" value="always">
+  <param name="allowFullScreen" value="true">
+  <embed src="http://e.searchme.com/embed?a=sm&amp;v=1&amp;stack=12c6" quality="high" bgcolor="#FFFFFF" name="embedded" play="true" loop="false" allowscriptaccess="always" type="application/x-shockwave-flash" allowfullscreen="true" pluginspage="http://www.adobe.com/go/getflashplayer" flashvars="autoPlay=true&amp;speed=1&amp;theme=black" align="middle" height="375" width="600">
+</object><table width="600"><tbody><tr width="100%"><td align="left"><a href="http://www.searchme.com/">Searchme</a></td><td align="right"><a href="http://www.searchme.com/stack/12c6">Maximize stack view</a></td></tr></tbody></table></div>
+
+<p>One of the biggest queries I have about this approach, though, is with respect to rights (which regular readers know I <a href="http://blogs.open.ac.uk/Maths/ajh59/012355.html">don't understand at all</a>!). The widget embeds a set of user selected results from a search engine collected as a results set on a third party site, and viewed in an embedded third party widget. So if rights clearance is sought for images that appear in a stack, what clearance is necessary? If anyone was tracking usage of images pulled from the flickr server, it would resolve back to the searchme stack address presumably, rather than the page that the stack widget is embedded in?</p>
+
+<p>And what if searchme offered embeddable 'saved search' stacks (that displays the results of a particular search query)? You wouldn't know for sure what images were going to be pulled back into and displayed in the widget (though you might craft the search query in such a way as to maximise the chances of pulling in a set of images you are particularly interested in!).</p>
+
+<p>So I <em>guess</em> what's got me thinking is this: to what extent do embedding results from <em>visual</em> search engines cause grief for the rights folks?</p>
+
+<p>I don't know if the searchme visual search limits searches to Creative Commons licensed  images, but it would be good if it was an option, and even better if it could generate a 'titles' slide to show attribution to the images in the stack at the end of the stack!<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/searchme" rel="tag">searchme</a>, <a href="http://technorati.com/tag/visual%20search" rel="tag">visual search</a>, <a href="http://technorati.com/tag/%20widget" rel="tag"> widget</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>TAL</dc:subject>
+<dc:creator>ajh59</dc:creator>
+<dc:date>2008-06-25T20:37:34+00:00</dc:date>
+</item>
+<item rdf:about="http://blogs.open.ac.uk/Maths/ajh59/014909.html">
+<title>SocialLearn Workshop - Open Invite - July 1/2, 2008</title>
+<link>http://blogs.open.ac.uk/Maths/ajh59/014909.html</link>
+<description><![CDATA[<p>Some eagle-eyed readers may well have picked up on reports about the SocialLearn workshop that was run over a couple of days last week for members of the OU community (see a write up <a href="http://drbadgr.wordpress.com/2008/06/19/sociallearn-a-new-ou-philosophy/">here</a>, <a href="http://nogbad.wordpress.com/2008/06/19/socialearn-conference/">here</a> or <a href="http://www.greenhughes.com/content/a-successful-sociallearn-workshop">here</a>, or even this review from an <a href="http://dougclow.wordpress.com/2008/06/24/tel-away-day-social-learn/">OU workshop session on SocialLearn</a> held yesterday). A second workshop is being held next week that is open to all-comers from the wider ed tech community:<br />
+ <blockquote>You are invited to attend a workshop to hear about the OU’s SocialLearn project, and to contribute your views on social learning and teaching in a Web 2.0 world.</p>
+
+<p>We are bringing together participants from educational institutions and business from across the country to discuss the potential and the pitfalls of learning, mentoring, and doing business on the Open, Social, Free and For-Fee Web.</p>
+
+<p>    * What are the characteristics of web-native learners, and what tools do they want/need?<br />
+    * What new learning/business opportunities – and risks – are opened up by social networking and media sharing tools?<br />
+    * What do you think of the prototype tools that we will preview?<br />
+    * Do we need to reframe our ideas of learning and teaching?<br />
+    * What is a university, if many of its current services were disaggregated to specialist providers on the Web?</p>
+
+<p>If interested, please email <a href="http://www.open.ac.uk/blogs/socialearn/contact/">SociaLearn</a> with a brief statement of your background, and what you would hope to add to these discussions.</p>
+
+<p>On confirmation of your place [which are running out fast - though I think there are still a couple available...], you will be invited to join the social network that provides our 24/7 space before, during and after the event. All accommodation, food and reasonable travel costs are covered. The workshop is a 24 hour event from noon 1-2 July, at Horwood House, near Milton Keynes.<br />
+<a href="http://www.open.ac.uk/blogs/socialearn/2008/06/20/sociallearn-workshop2/">SocialLearn Workshop 2.0</a></blockquote></p>
+
+<div style="width: 425px; text-align: left;" id="__ss_271495"><object style="margin: 0px;" height="355" width="425"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=sociallearn-introduction-120341000081104-4"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=sociallearn-introduction-120341000081104-4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="355" width="425"></object><div style="font-size: 11px; font-family: tahoma,arial; height: 26px; padding-top: 2px;"><a href="http://www.slideshare.net/?src=embed"><img src="http://static.slideshare.net/swf/logo_embd.png" style="border: 0px none ; margin-bottom: -5px;" alt="SlideShare" /></a> | <a href="http://www.slideshare.net/mweller/sociallearn-introduction" title="View this slideshow on SlideShare">View</a> | <a href="http://www.slideshare.net/upload">Upload your own</a></div></div><img style="visibility: hidden; width: 0px; height: 0px;" src="http://counters.gigya.com/wildfire/CIMP/bT*xJmx*PTEyMTQzODY2NjU2MjAmcHQ9MTIxNDM4NjY3MTQ5OSZwPTEwMTkxJmQ9Jm49Jmc9Mg==.jpg" border="0" height="0" width="0" />
+
+<p>I'll also be running a SocialLearn workshop at the <a href="http://www.ukoln.ac.uk/web-focus/events/workshops/webmaster-2008/">IWMW 2008</a> gathering in Aberdeen, assuming I manage to book a flight/train up there in time (hmmm.... maybe should do that now?!) so it'd be great to see you at either one or the other (or both!) of these events... :-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/sociallearn" rel="tag">sociallearn</a>, <a href="http://technorati.com/tag/socialearn" rel="tag">socialearn</a>, <a href="http://technorati.com/tag/%20s%3Al" rel="tag"> s:l</a>, <a href="http://technorati.com/tag/%20iwmw2008" rel="tag"> iwmw2008</a></p><!-- technorati tags end --></p>]]></description>
+<dc:subject>Open Content</dc:subject>
+<dc:creator>ajh59</dc:creator>
+<dc:date>2008-06-25T10:44:06+00:00</dc:date>
 </item>
 
 

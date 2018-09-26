@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Course Analytics - Prequel</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010908.html" title="OpenLearnigg - Social Ranking for OpenLearn Units" />
+
+<link rel="next" href="./010953.html" title="Video Response to OU Campus Movie...? ;-)" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010908.html">&laquo; OpenLearnigg - Social Ranking for OpenLearn Units</a> |
+
+<a href="./">Main</a>
+| <a href="./010953.html">Video Response to OU Campus Movie...? ;-) &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 24, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Course Analytics - Prequel</h3>
+
+<p>Earlier this week, <a href="http://www.downes.ca/cgi-bin/page.cgi?post=42132">Stephen Downes</a> picked up on an <a href="http://www.educause.edu/ir/library/pdf/PUB6101.pdf">EduCause report on <em>Academic Analytics</em></a>, which "describes how data from sources such as a course management system (CMS) or a student information systems (SIS) can identify at-risk students through analytics and predictive modeling". Academic Analytics can also be used to predict student success, as well as retention.</p>
+
+<p>In this post, I thought I'd set the scene for a series of <em>course analytics</em> posts using data that I "acquired" from an online course earlier this year. (I've posted previously about some of my <a href="http://ouseful.open.ac.uk/blog/010481.html">early thinking on the topic</a>.)</p>
+
+<p>In contrast to the academic analytics, one of the things I set out to explore was how an off the shelf web stats analytics tool (<a href="http://google.com/analytics">Google Analytics</a>) could be used to help me learn more about what students were doing with our online course materials, and help me identify what - if anything - a "learning site's" <em>goals</em> could be, and what the site might be optimised for.</p>
+
+<p>Part of the difficulty lies with the site not being a "selling" site. Optimising a mini-site like <a href="http://www3.open.ac.uk/courses/bin/p12.dll?A02">Study at the OU</a> is in the first instance all about securing registrations on courses. But for an online course, it's not so clear what the goal is, or what the important metrics along the way are.</p>
+
+<p>(I asked a similar question at the Library Strategy workshop a couple of weeks ago: if the library website was Amazon, then success would be measured in taking someone's credit card number, shipping the goods, and not getting them returned. What's the success measure - or success measures - for a library website?)</p>
+
+<p>Something I found useful in helping me think about this topic was this seminar on <a href="http://www.youtube.com/watch?v=LgXDUuAK77M">Google Analytics - Non-Ecommerce Sites: Beyond Averages</a> from the <a href="Google%20Conversion%20University">Google Conversion University Playlist on YouTube</a> (the <a href="http://www.google.com/analytics/conversionuniversity.html">Google Conversion University website</a> also has some interesting articles...).</p>
+
+<p><object height="355" width="425"><param name="movie" value="http://www.youtube.com/v/LgXDUuAK77M"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/LgXDUuAK77M" type="application/x-shockwave-flash" wmode="transparent" height="355" width="425"></object></p>
+
+<p>In particular, here are four <em>distribution</em> (rather than average) measures that are useful for analysing user behaviour on non-ecommerce websites:<br />
+<ul><li>Visitor loyalty - how often has each user visited the site over a given period;</li><br />
+<li>Visitor recency - of all the people who have visited the site, how many have visited in the last N days;</li><br />
+<li>Length of visit - how long do visitors stay on site;</li><br />
+<li>Depth of visit - how many pages on the site are seen on each visit;</li></ul></p>
+
+<p>Over the next week or so, I'll do a series of posts looking at these measures as obtained from an online course, and go way beyond reports like this...</p>
+
+<p><img src="http://farm3.static.flickr.com/2117/1727702520_4a4d90c605.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="348" width="500" />  </p>
+
+<p>That said - there are a couple of interesting features in the above report - periodicity, for example (Tuesday's look busy...), and traffic peaks at the two assessment weeks...</p>
+
+<p><small>PS Just by the by, if you use consultants to do your reading for you (i.e. you read through reports or sit through presentations that talk-up <a href="http://www.amazon.co.uk/Innovators-Dilemma-Technologies-Cause-Great/dp/0875845851/?tag=ouseful-21">The Innovator's Dilemma</a>/<a href="http://www.amazon.co.uk/Innovators-Solution-Creating-Sustaining-Successful/dp/1578518520/?tag=ouseful-21">Solution</a>, or <a href="http://www.amazon.co.uk/Blue-Ocean-Strategy-Uncontested-Competition/dp/1591396190/?tag=ouseful-21">Blue Ocean Strategies</a> and so on) I'm guessing that <a href="http://www.amazon.co.uk/Competing-Analytics-Thomas-H-Davenport/dp/1422103323/?tag=ouseful-21">Competing on Analytics</a> will be the next "bestselling" Harvard Business School book they quote at you! (I'm not convinced that the <a href="http://www.amazon.co.uk/Black-Swan-Impact-Highly-Improbable/dp/0713999950/?tag=ouseful-21">Black Swan</a> will fly? ;-)</small><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/course%20analytics" rel="tag">course analytics</a>, <a href="http://technorati.com/tag/%20online%20learning" rel="tag"> online learning</a>, <a href="http://technorati.com/tag/elearning" rel="tag">elearning</a>, <a href="http://technorati.com/tag/analytics" rel="tag">analytics</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 24, 2007 12:46 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>If I have guessed the course correctly, Tuesday activity levels may have been influenced by moderator messages on Mondays saying " Week x starts tomorrow".</p>
+
+<p>I suspect a similar weekly pattern is less likely to be seen on the longer 9 month courses, where there would be a greater divergence in the timing of studying particular parts of the course.</p>
+
+<p>Although peaks around assessment deadlines would still be seen - similar to the patterns of activity seen in the student forums.</p>
+
+<p>Guess who has just finished writing her annual moderator reports!</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;ks4243&#64;tutor&#46;open&#46;ac&#46;uk">Kate</a> at October 26, 2007 01:11 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

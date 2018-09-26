@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: New OU Search Tools</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./009224.html" title="Search OpenLearn Anywhere" />
+
+<link rel="next" href="./009231.html" title="Embracing Hype" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./009224.html">&laquo; Search OpenLearn Anywhere</a> |
+
+<a href="./">Main</a>
+| <a href="./009231.html">Embracing Hype &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 24, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">New OU Search Tools</h3>
+
+<p>At a show'n'tell session for the new OU VLE yesterday (which in the best tradition of IT projects is largely late, under-resourced and, er, late) the new <a href='http://css2.open.ac.uk/search/search.aspx'>OU search interface</a> was demonstrated. The service is live, but unless you're into that sort of thing you perhaps haven't noticed, or seen much new it for you. So here are a few things I spotted about it (more later when I get a chance to look at the Advanced Search tools).</p>
+
+<p>If you are signed in to the OU website as a staff member, you'll get a search interface like this:</p>
+
+<p><img src='http://ouseful.open.ac.uk/blogpics/ouSearch1.jpg' alt='OU search interface' /></p>
+
+<p>The <em>course materials</em> option is permissions sensitive and searches over what exactly, I'm not sure (more info when I have it/have dug a bit deeper...)</p>
+
+<p>As a staff member I get to search 'all' OU materials; for a student regsitered on one or more courses, they would have options to search over the materials for each of the courses they are currently registered on. (<s>If anyone can send me a screenshot of what a 'student' interface looks like, I'd appreciate that.</s> Thanks Richard :-)</p>
+
+<p><img alt="ouCourseSearch.png" src="./ouCourseSearch.png" width="449" height="188" border="0" /></p>
+
+<p>The other options are available to public/unauthenticated visitors to the site. The provision of the OpenLearn  (not <em>Open Learn</em>?) materials search is an interesting - and welcome - one, though the rationale behind its provision is not clear to me.</p>
+
+<p>The results page is a tabbed display over the fields selected for the search:</p>
+
+<p><img src='http://ouseful.open.ac.uk/blogpics/ouSearch2.jpg' alt='OU search tabbed results' /></p>
+
+<p>I don't like the the list above the results, particularly - I think something like the <a href='http://clusty.com'>Clusty</a> interface is far tidier:</p>
+
+<p><img src='http://ouseful.open.ac.uk/blogpics/clustySearch.jpg' alt='OU search tabbed results' /></p>
+
+<p>Looking at the item level results, I think that emphasising the the search results is a good idea, but I'm not sure about the colour of the URL? I find it a bit dominant/too close to red (which pulls at the user's attention a little too much for my liking ).</p>
+
+<p><img src='http://ouseful.open.ac.uk/blogpics/ouSearch3.jpg' alt='OU search item level result' /></p>
+
+<p>I wonder whether any eyetracking tests were run on a monochrome mockup of the results page? For example, do most users use the URL to help them filter the results/choose the ones they are going to click through? (I don't recall reading a critique of this before - must chase that up...) Certainly, I'd expect that attention will be drawn to the URL in the current scheme by virtue of the colour, so it would good to know why/how users use this info, even if it's an unconscious use.</p>
+
+<p>[Reflecting on this personally, I think I use the URL in a results item to see - <br />
+a) where the source is; I discount things like http//:my.site.is.brilliant.com/climateChange.htm<br />
+b) what the filetype is (for occasions when I'm after a known doc type and am too lazy to limit the search (does OU advanced search support filetype: limits, I wonder? :-)]</p>
+
+<p>On a related issue, I wonder how  (if?) users use the percentage relevance score to any great extent (and this metirc is relevant according to what, exactly?) Is the relevance score typically used by people when they are on page 2 or 3 of the results listing, maybe, as a guide for when to stop looking at lower results pages? Or evenm to judge whether the <em>any</em> of the results are relevant (perhaps reinforced by briefly clciking through to, and scanning over, one or two sample results?)</p>
+
+<p>The page size (<em>23k</em> etc) is another of those features that  I know I use it as a crib, on occasion. For example, when I come across a pdf or ppt file, I use file size as clue to how large the doc is likely to be, and infer in part from that how detailed it is and how long it will take to a) download; and b) read! In fact, I actually use filesize more rigorously than that, because I use it to decide whether or not I'll preview the document/skim it 'online' and either download it to read it later, bookmark the link, or print it off unread. (I tend to bookmark/download larger docs, skim smaller ones).</p>
+
+<p>Looking at the bottom of the page, we get the search box pre-loaded woth the current search term:</p>
+
+<p><img src='http://ouseful.open.ac.uk/blogpics/ouSearch4.jpg' alt='OU search again' /></p>
+
+<p>While I'm all for this, I'd actually prefer it if the search box  was at the top of the page too - (like on most search engines). I wonder if there is any reason for NOT doing that in this case? The current scheme forces you to glance over all the search results before you can run another search. For users who can discount the search as returning useless results by skimming the top two or three results, it's not obvious <em>how</em> to run another search if the search box is below the fold.</p>
+
+<p>On a design point, the width of the <em>Search again</em> box is not the same as the width of the results listings, which jars on my eye a little? There are two alternatives here, I guess - to centre the Search Again? box, or make it the same width?</p>
+
+<p>One final point is that the new OU search design is different to the 'new' <a href="http://search.open.ac.uk/kbroker/library/search.sim">Library search</a> (developed last year):</p>
+
+<p><img src='http://ouseful.open.ac.uk/blogpics/ouSearch5.jpg' alt='Library search results' /></p>
+
+<p>I wonder if there is an intention to normalise/standardise these? Certainly, I'd expectLibrary search results to start to appearing in the main OU search tool at some point - the design seems like it has been set up to be extensible (though the lenght of checkbox lists may start to become problematic unless they are moved to a sidebar).</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 24, 2007 07:38 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

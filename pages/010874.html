@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: RSS Content Analysis, Tag Clouds and OpenLearn Navigation</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010855.html" title="Open University Course Profiles Facebook App" />
+
+<link rel="next" href="./010884.html" title="Relevant Knowledge? T189 on flickr...?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010855.html">&laquo; Open University Course Profiles Facebook App</a> |
+
+<a href="./">Main</a>
+| <a href="./010884.html">Relevant Knowledge? T189 on flickr...? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 21, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">RSS Content Analysis, Tag Clouds and OpenLearn Navigation</h3>
+
+<p>Last week, I came across a service - <a href="http://www.jiglu.com/">Jiglu</a> - that claimed to "automatically create intelligent tags and links for your web content". One of the things I've been exploring lately is the potential for constructing thematic bundles of OpenLearn course units - as more and more units are added to the current OpenLearn topics, their usefulness as containers that support discovery through browsing becomes debatable...</p>
+
+<p>So the Jiglu service looked interesting this respect; unfortunately, it seems that you need to add a Javascript snippet to the pages you want to analyse, which I don't have access to on OpenLearn (I didn't check this - maybe the javascript is just required for presentaion and you can find a API URL in the code?)</p>
+
+<p>However, <a href="http://zoomclouds.egrupos.net/">ZoomClouds</a> - the tag cloud service I use on <a href="http://ouseful.info">OUseful Info</a> - only requires an RSS feed URL in order for you to benefit from <em>it's</em> content analysis and term extraction service, so I dutifully set up a demo.</p>
+
+<p>Here, for example, is a cloud generated from the unit feed from <a href="http://openlearn.open.ac.uk/course/view.php?id=1710">M248_1 Exploring data: graphs and numerical summaries</a> (<a href="./openLearnTagCloudDemo.html">see demo tag cloud</a>).</p>
+
+<p><img src="http://farm3.static.flickr.com/2201/1660780178_450115c553.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="168" width="218" /></p>
+
+<p>As far as I know, ZoomClouds doesn't offer an API for creating new ZoomClouds, although the <a href="http://clouds.zoomblog.com/archivo/2006/02/27/zoomclouds-Api.html">ZoomCLouds API</a>does publish an XML feed containing the tags extracted from a feed, so generating a ZoomCloud for each of the dozens and dozens of OpenLearn Units that are now available would be tedious, to say the least!</p>
+
+<p>What might be more interesting could be to generate a single, spliced feed of several OpenLearn units - maybe even all the units in an OpenLearn topic area, or at least all the descriptions of courses in a topic area - and generate a navigational tag cloud that links into the course descriptions, rather than the sections within an individual course.</p>
+
+<p>Ahh - what the heck - let's see how that might look. Let's take the <a href="http://openlearn.open.ac.uk/course/filter.php?grouping=topic&amp;detail=10">feed of unit descriptions for the OpenLearn Science and Nature topic</a>, for example:</p>
+
+<p><img src="http://farm3.static.flickr.com/2247/1660779966_eb4dd613da.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="500" width="207" /><br />
+<a href="./openLearnTagCloudDemo.html">See demo tag cloud</a>.</p>
+
+<p>As OpenLearn provides access to more and more units, supporting discovery of relevant content is going to become more and more of an issue. The use of ZoomClouds shows one possible approach to automating the generation of navigational widgets on the basis of content analysis, In a later post, I'll write up a tag based approach I've been exploring in the context of a Digg-like interface to OpenLearn - <a href="http://openlearnigg.corank.com">OpenLearnigg</a>.<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/tagcloud" rel="tag">tagcloud</a>, <a href="http://technorati.com/tag/content%20analysis" rel="tag">content analysis</a>, <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/navigation" rel="tag">navigation</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 21, 2007 12:12 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Tinkering with Google Trendalyser, err, Motion Chart, Gadgets</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013972.html" title="Google Office Appliance" />
+
+<link rel="next" href="./013983.html" title="Digital Worlds Week 3, Round-Up" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013972.html">&laquo; Google Office Appliance</a> |
+
+<a href="./">Main</a>
+| <a href="./013983.html">Digital Worlds Week 3, Round-Up &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 21, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Tinkering with Google Trendalyser, err, Motion Chart, Gadgets</h3>
+
+<p>I've just managed to steal a little time to play with a couple of the new Google Visualisation gadgets. There seem straightforward enough to use, and the integration with Google spreadsheets means that one you get the data into a spreadsheet you can start to play with it.</p>
+
+<p>I went off and pinched some data from UCAS (<a href="http://www.ucas.com/about_us/stat_services/stats_online/data_tables/abushei/">UCAS admissions data</a>) and used it to generate a Trendalyser view - now known as a Motion Chart - was trivial (feed readers, you'll have to click through to see and play with it ;-)</p>
+
+<p>Firstly, a look at how admissions are faring in a handful of institutions:</p>
+
+<p><iframe width='450' height='471' frameborder='0' scrolling='no' src='http://k2alr2pc-a.gmodules.com/ig/ifr?up__table_query_url=http%3A%2F%2Fspreadsheets.google.com%2Ftq%3Frange%3DB1%253AH32%26key%3Dp1rHUqg4g422xIt4UXCxsVg%26gid%3D0%26pub%3D1&up_title=UCAS%20Admissions%20data%20(example)&up_state=&up__table_query_refresh_interval=0&url=http%3A%2F%2Fwww.google.com%2Fig%2Fmodules%2Fmotionchart.xml' style='border: 1px solid #cccccc'></iframe></p>
+
+<p>Here's another one, this time looking at some demographics data:</p>
+
+<p><iframe width='450' height='471' frameborder='0' scrolling='no' src='http://k2alr2pc-a.gmodules.com/ig/ifr?up__table_query_url=http%3A%2F%2Fspreadsheets.google.com%2Ftq%3Frange%3DA2%253AAJ7%26key%3Dp1rHUqg4g422aUaJQmA2nRQ%26gid%3D0%26pub%3D1&up_title=UCAS%20(demographics)&up_state=&up__table_query_refresh_interval=0&url=http%3A%2F%2Fwww.google.com%2Fig%2Fmodules%2Fmotionchart.xml' style='border: 1px solid #cccccc'></iframe></p>
+
+<p>Now, I wonder what sorts of things we can do with the Course Profiles data...? ;-)<br />
+</div><br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/trendalyser" rel="tag">trendalyser</a>, <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/%20hefce" rel="tag"> hefce</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 21, 2008 09:32 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Is that the same software that's behind those wonderful maps on Gapminder?</p>
+<span class="comments-post">Posted by: <a href="http://userweb.port.ac.uk/~duke-wie/blog">Emma</a> at March 22, 2008 11:37 AM</span>
+</div>
+<div class="comments-body">
+<p>"Is that the same software that's behind those wonderful maps on Gapminder?"</p>
+
+<p>Yes - the s/w is actually called trendalyser; Google bought it last year - and this is the result...</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at March 22, 2008 12:12 PM</span>
+</div>
+<div class="comments-body">
+<p>Are there any commercial alternatives same as Google Motion Charts where I can host the data rather then hand it over to Google documents?</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;punisher101&#64;gmail&#46;com">Dalamar</a> at April 17, 2008 08:26 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

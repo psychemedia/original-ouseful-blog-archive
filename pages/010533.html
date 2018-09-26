@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Dynamic Google Custom Search Engines</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010531.html" title="feedshow - A Feed Powered Web Page Presentation Tool" />
+
+<link rel="next" href="./010538.html" title="And Then There Were Three, Err, Four, RSS Mashup Tools" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010531.html">&laquo; feedshow - A Feed Powered Web Page Presentation Tool</a> |
+
+<a href="./">Main</a>
+| <a href="./010538.html">And Then There Were Three, Err, Four, RSS Mashup Tools &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 06, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Dynamic Google Custom Search Engines</h3>
+
+<p>For some reason, I haven't been tracking the <a href="http://googlecustomsearch.blogspot.com/">Google Custom Search Engine blog</a> which is stupid, <em>stupid, STUPID</em>, because the service now provides plenty of searchfeedr-like components as Lego blocks. I half twigged this in <a href="./010456.html">Google Custom Search on the Fly (just like searchfeedr....err?)</a> but didn't really grok the power of it until just now, whilst looking through the <a href="http://www.google.com/coop/docs/cse/cse_file.html">Google CSE documentation</a>, and this post on the CSE blog - <a href="http://googlecustomsearch.blogspot.com/2007/06/custom-search-engine-apis.html">Custom Search Engine APIs</a>.</p>
+
+<p>The post began innocuously (?!) enough: "With our new <a href="http://www.google.com/coop/docs/cse/cref.html" title="Linked CSEs">Linked CSEs</a>, we are exposing the API to create and control CSEs."</p>
+
+<p>Then the hints start to drop: for example, using the original CSE, "[i]t was difficult to use other data sources such as iCal, RSS, Google Base, etc. to programmatically create CSEs."</p>
+
+<p>True...</p>
+
+<p>So get this: "[Y]ou can now specify your CSE using a ... parameter that points to a URL, anywhere on the web.  You update this URL at your end and don't have to upload it or edit your CSE using our tools. The URL can take arguments to produce dynamic CSEs, based on the current page, the current user visiting your site, etc. ... You can use any script you want, or reference a static file, when creating your CSE."</p>
+
+<p>Cool - so now I can define a "live" CSE using my own dynamic PHP script, say, and use it to power a custom search... that is, I could now build something like searchfeedr using a CSE...<br />
+<blockquote><b>How does this work?</b> With Linked CSEs, you designate a CSE specification URL with each search request (as a hidden form field in your search box HTML code).  Google retrieves the CSE specification from the URL when your user searches in the CSE.  We cache and refresh the results so that only the first search to your CSE incurs any delay.  The flexibility to specify how your search engine should behave, just when your user is doing the query, using whatever data sources you want, opens up many possibilities.</blockquote><em>Possibilities?</em> For coders, maybe. But that said, it's still quite a niche community. Writing the link scraping and feed parsing scripts to grab the links to feed in to a dynamically created CSE definition file is not likely to appeal to many people...</p>
+
+<p>But hang on:<br />
+<blockquote>You can use our <a href="http://www.google.com/coop/docs/cse/tools.html" title="makecse tool">makecse tool</a> to generate CSEs from different sources of links:<br />
+<ul><li>HTML:  <a href="http://www.google.com/cse/tools/makecse?url=http://www.cs.berkeley.edu/%7Erussell/ai.html" title="http://www.cs.berkeley/~russell/ai.html">http://www.cs.berkeley/~russell/ai.html</a></li><br />
+<li>RSS: <a href="http://www.google.com/cse/tools/makecse?url=http://reddit.com/.rss" title="http://reddit.com/.rss">http://reddit.com/.rss</a></li><br />
+<li>ATOM: <a href="http://www.google.com/cse/tools/makecse?url=http://lipstadt.blogspot.com/feeds/posts/default" title="http://lipstadt.blogspot.com/feeds/posts/default">http://lipstadt.blogspot.com/feeds/posts/default</a></li><br />
+<li>OPML: <a title="http://medicalconnectivity.com/gems/blogroll.opml" href="http://www.google.com/cse/tools/makecse?url=http://medicalconnectivity.com/gems/blogroll.opml">http://medicalconnectivity.com/gems/blogroll.opml</a></li></ul><br />
+You can combine multiple sources of links using our <a href="http://www.google.com/coop/docs/cse/tools.html" title="makeannotations tool">makeannotations tool</a> and the <a href="http://www.google.com/coop/docs/cse/cse_file.html#externalanno" title="">&lt;Include&gt; tag</a>.  For example, its easy to create a <a href="http://www.google.com/cse/samples/include.xml" title="search engine">search engine</a> from the links on the front pages of techmeme, slashdot and  digg.</p>
+
+<p>You can write your own tools to produce <a href="http://www.google.com/coop/docs/cse/label_file.html" title="">&lt;Annotations /&gt; XML</a> from other data sources such as Google Calendar or iCal feeds, Google Base or any other structured source of information.</p>
+
+<p>You can automatically generate any number of CSEs, each possibly tuned to a particular user. For example, we've created a sample that builds a CSE from a user's digg.com friend network and submissions using the <a title="Digg API" href="http://apidoc.digg.com/">Digg API</a>.  <a title="Try it out" href="http://www.google.com/cse/samples/digg.html">Try it out</a> and <a title="view the source" href="http://mwytock.komarix.org/pub/bin/diggcse.py?user=kevinrose">view the source</a>. This makes use of two simple python CGI scripts:  <br />
+<ul><li><a title="diggannos.py" href="http://www.google.com/cse/samples/diggannos.py.txt">diggannos.py</a> generates &lt;Annotations&gt; from the specified user's submitted stories</li><br />
+<li><a title="diggcse.py" href="http://www.google.com/cse/samples/diggcse.py.txt">diggcse.py</a> generates &lt;GoogleCustomizations&gt; from the specified user's friend network.  For each friend, it generates an &lt;Include&gt; element pointing to the appropriate diggannos.py URL </li></ul></blockquote><br />
+The post closes with this: "Linked CSEs are a very big step for Google Custom Search."</p>
+
+<p>They're not wrong...</p>
+
+<p>If only I had a clear week or two to be able to play with this...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September  6, 2007 01:02 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

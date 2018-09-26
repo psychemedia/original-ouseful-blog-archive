@@ -6,7 +6,7 @@
 
 <title>OUseful Info: elearning Archives</title>
 
-<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
 <script language="javascript" type="text/javascript">
@@ -28,13 +28,329 @@ function OpenTrackback (c) {
 <body>
 
 <div id="banner">
-<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
 <div id="container">
 
 <div class="blog">
+
+
+<h2 class="date">February 19, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013371"></a>
+<h3 class="title">No More PDF Reader Hell? Hello iPaper - You Taking Note...?</h3>
+
+My day's been made again - my dead Mac only has a dead power supply (the pins in the end-of-cable adapter have mechanically failed - maybe dropping the end of the lead in a full cup of hot, sweet coffee...
+<!--
+<p>My day's been made again - my dead Mac only has a dead power supply (the pins in the end-of-cable adapter have mechanically failed - maybe dropping the end of the lead in a full cup of hot, sweet coffee didn't help?), so the sooner I can get a replacement and get away from PC/XP hell the better; and <a href="http://scribd.com">Scribd </a>made an announcement...</p>
+
+<p>...about something they're calling  <a style="font-style: italic;" href="http://www.scribd.com/ipaper">iPaper</a> (what is it with <span style="font-style: italic;">i</span>Everything?).</p>
+
+<p>iPaper is flash powered, like the previous Scribd embeds (which rendered uploaded files in a flash container within a browser), but with some extra features "including full text search, copy/paste functionality, view modes, and zoom." It'll be interesting to see how it fares on the accessibility stakes, both in terms of screen readers, but also on mobile devices.</p>
+
+<p>iPaper will render a whole range of document formats, including Microsoft and Open Office documents, presentations and spreadsheet, PDF and postscript (remember that?).</p>
+
+<p>Anyway, I love it when webco's make zero day mashups <em>apparently</em> so easy to achieve (even though my publisher key isn't being recognised at the mo... :-( another zero day feature? ;-) [I mailed them to give a heads up on the problem and they mailed straight back, saying it was wider(?) problem on their end and quarter of an hour should do it; 10 mins was all it took...]</p>
+
+<p>Along with the iPaper announcement, Scribd announced a developer API, as well as a <a href="http://www.scribd.com/platform/documentation">developer API</a>, and a neat little javascript include that will turn all the docs in your page to iPaper docs painlessly...</p>
+
+<p>I don't know if the doc has to been on the same domain for this to work though?</p>
+
+<p>(I think the Javascript should follow the grazr approach, and default with a slurp  link that gets removed if the embed is available? <a href="http://www.scribd.com/slurp?scribd_publisher_id=pub-64160908907150939988&display_mode=scribd&public=true&url=http://ocw.mit.edu/NR/rdonlyres/hs/calculus/a/18_01_fall_2005_lecture_15.pdf">example doc...</a>)</p>
+
+<p><script type="text/javascript" src='http://www.scribd.com/javascripts/view.js'></script>     <div id='embedded_flash'  ><a href='http://www.scribd.com/doc/2095898/18-01-fall-2005-lecture-6'>18 01 fall 2005 lecture 6</a></div> <script type="text/javascript"> var scribd_doc = new scribd.Document(2095898, 'key-1ov21agyf2iderko48p9');  scribd_doc.addParam('height', 500);   scribd_doc.addParam('width', 450);   scribd_doc.addParam('page', 1);  scribd_doc.write('embedded_flash'); </script></p>
+
+<p><br />
+To convert all the docs in a page to iPaper, just add a javascript include to the bottom of the page. To convert your site to iPaper, just put the script in your footer template (that's what it's for, right? ;-)</p>
+
+<p>To see it in action - here are some <a href="http://www.scribd.com/platform/documentation/resources">demo movies</a>.</p>
+
+<p>If you're a bit more technically inclined, there's a 'proper' Scribd API too, along with a lightweight javascript iPaper API.</p>
+
+<p>Box.net were quick off the mark to integrate the service ("<a href="http://blog.box.net/?p=125" rel="bookmark" title="Permanent Link: Scribd launches iPaper; OpenBox services on shared pages">Scribd launches iPaper; OpenBox services on shared pages</a>"), reinforcing their position as best-of-breed online-storage/do-something-with-your-stuff/just-tell-me-why-it-isn't-an-eportfolio-then service (IMVHO, of course...)</p>
+
+<p>And finally - iPaper can embed ads, in a far neater way than the <a href="http://blogs.open.ac.uk/Maths/ajh59/012090.html">Adobe/Yahoo PDF ad-includes</a>. If Google ads can be added in to a doc, think what you could do with an internal ad server piping contemporary content into iPaper docs containing otherwise static content, (a bit like the way the Conversations Network podcast engine works, I think, adding fresh ads at the top and tail of archived audio content? &lt;- can anyone confirm that? Is there a white paper on their architecture anywhere?).</p>
+
+<p>I've been taking issue in various comments around the web lately about the way many "open"courseware initiatives use closed PDFs (I don't have a PDF plugin in my browser and don't want one...and I like the Adobe reader about as much as Real player (does Adobe still require a PC restart when you install Acrobat Reader?)</p>
+
+<p>So - any bets on when OU MyStuff/ePortfolio will make use of iPaper? Or any of the Open Repositories (<a href="http://dfflanders.wordpress.com/">Flanders</a>, I dare ya... first round'll be on me ;-)? Or any of the OER sites?</p>
+
+<p>PS what Scribd really need to do, of course, is allow a link to raise an iPaper doc in a <a href="http://mjijackson.com/shadowbox/">lightbox</a>. I'm convinced this interaction style is good for maintaining flow and I love to see it being trialled a bit more to see if that is indeed the case...</p>
+
+<p>PPS I've done a couple of bookmarklets and a Greasemonkey script that will either embed iPaper previews of documents linked to from any web page, or rewrite those links so they point to iPaper previews of the documents: <a href="http://blogs.open.ac.uk/Maths/ajh59/013390.html">Scribd iPaper Bookmarklet</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a>, but it's the first time from a PC and the styling is all broken... crappy Windows...</p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ipaper" rel="tag">ipaper</a>, <a href="http://technorati.com/tag/scribd" rel="tag">scribd</a>, <a href="http://technorati.com/tag/%20hahaAdobe" rel="tag"> hahaAdobe</a>, <a href="http://technorati.com/tag/pdf" rel="tag">pdf</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013371.html">07:42 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13371" onclick="OpenComments(this.href); return false">Comments (5)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">January 29, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="012644"></a>
+<h3 class="title">Catching Up With Myself - Screencasts et al.</h3>
+
+ Traipsing through a load of long forgotten and lost links that I don't think I blogged about before (which means I can't find them by searching Ouseful.info ;-), here are a couple of elearning design doodles that I maybe...
+<!--
+<p> Traipsing through a load of long forgotten and lost links that I don't think I blogged about before (which means I can't find them by searching Ouseful.info ;-), here are a couple of elearning design doodles that I maybe need to look at again someday...</p>
+
+<p>Firstly, a set of examples showing different ways of <a href="http://phoenixweb.open.ac.uk/%7ETony_Hirst/tu120animationDemo/">embedding a series of screenshots in a web page</a>.  The case in point was an demonstration of the google suggest feature, where live suggestions/search phrase recommendations appear in a drop down list form the google search box.</p>
+
+<p>For example, here's the animated gif version:</p>
+
+<p><a href="http://phoenixweb.open.ac.uk/%7ETony_Hirst/tu120animationDemo/"><img src="http://phoenixweb.open.ac.uk/%7ETony_Hirst/tu120animationDemo/gSuggest.gif" alt="Google suggest animation: car valeting" style="border: 0pt none ;" /></a></p>
+
+<p>The other examples include a screencast, a slideshow, and an embedded (i.e. interactive) iframe (so the students could try out the feature themselves). I didn't do a custom embedded demo, though that would be trivial with the frameworks around now.</p>
+
+<p>The second thing I need to link to - and I'd completely forgotten about this - is a short (silent) screencast showing some of the crazy things you can do in a Google search box. I think I did this as a trailer for an "In Search of Google" partial attention workshop (in which I provide a commentary as we ramble around the links on this <a href="http://h2obeta.law.harvard.edu/106431">In Search of Google H2O playlist</a>!), or maybe it was for <a href="http://ouseful.open.ac.uk/tu120">TU120</a>?;-)</p>
+
+<p>Anyway, if you have a five minutes to spare, you can watch it here: <a href="http://ouseful.open.ac.uk/tu120playground/googleSearchBox/">"I didn't know you could do that in a Google search box!" screencast</a>.</p>
+
+<p>PS the Google results page has moved on a bit since that movie was recorded. For example, the library search result returns an embedd Google local search map, now...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/google" rel="tag">google</a>, <a href="http://technorati.com/tag/screencast" rel="tag">screencast</a>, <a href="http://technorati.com/tag/animation" rel="tag">animation</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012644.html">01:19 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12644" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">October 27, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="011009"></a>
+<h3 class="title">YouTube Snippets for ICT Education and Assessment?</h3>
+
+Just before the summer break, one of my colleagues, John Monk, put together a series of short video clips (voiced over images and short animations) that describe various ICT related concepts. In his own words: I produced a number of...
+<!--
+<p>Just before the summer break, one of my colleagues, John Monk, put together a series of short video clips (voiced over images and short animations) that describe various ICT related concepts. In his own words:<br />
+<blockquote>I produced a number of short videos to assess what was involved in asking students to produce media clips as part of their assessment, whether or not it would add to learning and what would be involved in marking. My conclusion is that a combination of media clip and story board used in the preparation of the clip has some potential. (It is quite taxing to explain a concept in a few seconds and you really get to the essence of things even if it does not quite emerge in the finished product).</blockquote></p>
+
+<p><object width='425' height='366'><param name='movie' value='http://www.youtube.com/cp/vjVQa1PpcFOItcYcdFQ6B-A5swgOqJ8X4TCh-Jav0g8='></param><param name='wmode' value='transparent'></params><embed src='http://www.youtube.com/cp/vjVQa1PpcFOItcYcdFQ6B-A5swgOqJ8X4TCh-Jav0g8=' type='application/x-shockwave-flash' wmode='transparent' width='425' height='366'></embed></object></p>
+
+<p>You can see them all on <a href="http://uk.youtube.com/profile_videos?user=monkjoh&amp;p=r">John Monk's YouTube Channel</a>.</p>
+
+<p>Here a complete list of the 16 movies John made:<br />
+<ul><li><a href="http://uk.youtube.com/watch?v=JYq16cBscgA">Information: symbols</a> Threatening technologies are symbols of intent that aim to affect people’s behaviour more by their symbolism than their capabilities.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=KV6CHNKlh6Y">Information: intentions</a> Information technologies inform us and also help inform others of our intentions and desires.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=YNlpqHWWHM0">Information: records</a> Record keeping of fleeting events is one of the roles of the information technologies.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=gYv6uKwLiyI">Information: perceptibility</a> Instruments convert physical occurrences into perceptible forms such as sounds and images to inform us of hidden events and patterns.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=Xnop0CTY0DA">Information: context</a> It is impossible to react to a sign in a way the sign writer intended without being aware of the context of the sign.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=C6LpQx_Qmk0">Information: environment</a> Information systems, signals and signs consume resources such as energy. With dispersed systems it can be difficult to assess which are the best options.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=reusFp-JzW0">Information: ethics</a> What makes a “good�&#65533; item of ICT? Sign systems impose themselves on our lives culturally, physically and psychologically. How can we balance the good and bad effects?</li><br />
+<li><a href="http://uk.youtube.com/watch?v=a1Xktfa58H8">Information: icons</a> Iconic signs have been described by some writers as signs that bear a resemblance to the form and function of some other object.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=1IV1RymfdcI">Information: keys</a> Often information is accessed indirectly so some signs do not give you the information you seek but guide you to where you might find it.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=nBW9fYqStQY">Information: carriers</a> Signs are constructed and are often constructed from smaller elements that help project, support or distinguish the sign.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=0qfTEhA0BQ4">Information: models</a> Models are objects that inform and aid, stimulate and structure discussions about another object, organisation or system.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=dezRyg9H4pc">Information: social states</a> Many signs report or establish a socially defined state. They are performative and declare something to be so and depend on their projection of authority.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=nGTsxBEMHAc">Information: surrogates</a> Some instruments provide information by mimicking the behaviour of something else. Occasional connections are necessary to synchronise the mimic to the imitated.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=V4S8TWVzM7c">Information: salience</a> Signs are useful only if they are noticed by the intended audience but lose their effectiveness if they overwhelm their setting.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=_j44YOrjBGo">Information: infrastructure</a> The technology of signs has to include the infrastructure that makes the sign available, durable, perceptible and decipherable.</li><br />
+<li><a href="http://uk.youtube.com/watch?v=gIycwrkvW-k">Information: literary signs</a> Many of our signs are verbal and demand literacy to render them comprehensible.</li></ul></p>
+
+<p>There is an increasing number of tools that support the production of this sort of movie, from <a href="http://www.microsoft.com/windowsxp/using/digitalphotography/photostory/default.mspx">MicroSoft's PhotoStory</a> to several online tools, including <a href="http://www.bubbleshare.com/">Bubbleshare</a> and <a href="http://voicethread.com/">VoiceThread</a>, and several generic <a href="http://del.icio.us/psychemedia/video+editor">online video editing sites</a>.</p>
+
+<p>If you've been experimenting with student submitted video as part of an assessment strategy in ICT education, I'd be interested to hear how you've got on...<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/onlinevideo" rel="tag">onlinevideo</a>, <a href="http://technorati.com/tag/%20video%20short" rel="tag"> video short</a>, <a href="http://technorati.com/tag/%20assessment" rel="tag"> assessment</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/011009.html">02:59 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=11009" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 06, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010539"></a>
+<h3 class="title">OpenLearn RSS So Nearly There...</h3>
+
+I was just about to write a post talking up the release of RSS listings of OpenLearn courses, as well as the far, far more exciting news that RSS versions of the OpenLearn units themselves are being made available (e.g....
+<!--
+<p>I was just about to write a post talking up the release of RSS listings of OpenLearn courses, as well as the far, far more exciting news that RSS versions of the OpenLearn units themselves are being made available (e.g. see this list of <a href="http://openlearn.open.ac.uk/course/index.php">OpenLearn Units as RSS</a>), but you know what...? I'm not going to...</p>
+
+<p>The value-add I had in mind for the post <em>was</em> intended to be a quick 10 minute script that took an RSS feed of course units, used a simple string rewrite of the URLs to convert them to URLs that pointed to the RSS feeds, and then bundled them up in an OPML file for viewing in Grazr.</p>
+
+<p>But you know what?</p>
+
+<p>Whilst the RSS listings of course units point - quite sensibly - to the "tidy" URL for each course (something like <a href="http://openlearn.open.ac.uk/course/view.php?name=A103_1">http://openlearn.open.ac.uk/course/view.php?name=A103_1</a> for example), the unit content RSS feeds themselves (and the actual links to the course units on the HTML version of the page) use a nasty URL, such as <a href="http://openlearn.open.ac.uk/course/view.php?id=1472">http://openlearn.open.ac.uk/course/view.php?id=1472</a> for a course unit, and <a href="http://openlearn.open.ac.uk/file.php/1472/formats/A103_1_rss.xml">http://openlearn.open.ac.uk/file.php/1472/formats/A103_1_rss.xml</a> for a feed.</p>
+
+<p>The number in the URL - <em>1472</em> in the above case - is of course unique to each unit, though it is consistent across HTML and RSS locations of the same unit.</p>
+
+<p>And it doesn't appear anywhere in the "All OpenLearn Units", or OpenLearn Units by topic, RSS feeds.</p>
+
+<p>So I <em>can't</em> use the RSS feed(s) of course units to produce an OPML feed that points to the RSS versions of the units...</p>
+
+<p>That is, I can't even create the URL for the RSS version of a unit from the unit's description in the course listing feed...</p>
+
+<p>So close, folks, yet so far away...</p>
+
+<p><strong>[UPDATE: there is- apparently - a sensible URL for the RSS feeds that works; for example <a href="http://openlearn.open.ac.uk/file.php/A103_1/formats/A103_1_rss.xml">http://openlearn.open.ac.uk/file.php/A103_1/formats/A103_1_rss.xml</a> </p>
+
+<p>Which means ...  I can get a feed of content feeds. For example, here are the <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnopml.php">Science and Nature units via an OPML feed</a>. Note that at the moment, they don;lt seem to work in either Grazr or Optimal browser...]</strong></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010539.html">09:14 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10539" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 14, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010512"></a>
+<h3 class="title">Three Takes on a Google Suggest Animated Demo</h3>
+
+I seem to recall seeing a note somewhere that the VLE demo site - and with it my (old and dated) Moodle playground demo site (login as guest) - may not be around forever, so I thought I'd better start...
+<!--
+<p>I seem to recall seeing a note somewhere that the VLE demo site - and with it my (old and dated) <a href="http://vledemo.open.ac.uk/course/view.php?id=69">Moodle playground demo site</a> (login as guest) - may not be around forever, so I thought I'd better start raiding various things I've posted there and keep them archived by links I have access to!</p>
+
+<p>So here's a quickie for now: <a href="http://phoenixweb.open.ac.uk/%7ETony_Hirst/tu120animationDemo/">three examples of using Google suggest</a>, originally produced as an illustrative example for the <a href="http://ouseful.open.ac.uk/tu120">TU120 Beyond Google</a> course team.</p>
+
+<p>Why three? Because they demonstrate Google suggest/live search suggestions using three different techniques - a screencast, an animated GIF, and a slideshow.</p>
+
+<p>Here's the animated GIF:</p>
+
+<p><img src="http://phoenixweb.open.ac.uk/%7ETony_Hirst/tu120animationDemo/gSuggest.gif" alt="Google suggest animation: car valeting" /></p>
+
+<p>PS if you're wondering why the blog's been a bit quiet for the last few days, it's because we've been away, taking in the <a href="http://www.bristolfiesta.co.uk/">Bristol Balloon Fiesta</a> on one of the days...</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/jIhxCW7QM1U"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/jIhxCW7QM1U" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>We saw over 60 balloons go up on the Saturday evening, and then hung around for the <a href="http://youtube.com/watch?v=jIhxCW7QM1U">night glow and fireworks</a> :-)</p>
+
+<p>Getting out was a pain though - we were deep in the on-the-day car park, and having got back to the car didn't turn the engine on for 90 minutes, eventually leaving some time after midnight... :-(</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010512.html">01:00 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10512" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 08, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010510"></a>
+<h3 class="title">Which World for 3D Webbing?</h3>
+
+A recent TechCrunch post that included a Casual Immersive Worlds Comparison Chart set the cat amongst the pigeons (again) on the question of - you guessed it - educators' use of Second Life... Here's one example - the latest post...
+<!--
+<p>A recent TechCrunch post that included a <a href="&visit=15020594"><em>Casual Immersive Worlds</em> Comparison Chart</a> set the cat amongst the pigeons (again) on the question of - you guessed it - educators' use of Second Life... Here's one example - the latest post in ding-dong between Peter Miller and Scott Wilson: <a href="http://tidalblog.blogspot.com/2007/08/now-im-in-wrong-metaverse.html">Now I'm in the wrong metaverse... :-)</a></p>
+
+<p>Regular readers have probably guessed that I'm not much of a fan of Second Life (e.g. <a href="http://blogs.open.ac.uk/Maths/ajh59/010299.html">So That's What Second Life's for...</a>) but maybe that's just because it's not one of "my" discovered toys and I'm not trying to evangelise it in anyway, (a bit like with Compendium...).</p>
+
+<p>Or maybe it's because I see people putting resource and effort into it because they fell for media hype, without really thinking about what they're trying to achieve? Chat with avatars, rather than video or plain text is about all I can see in it...! ;-) (so why not stick with video and morph things around a bit, augmented reality style, like <a href="http://www.fix8.com">fix8</a> does! (It even works with standard IM clients, I think? You do need a webcam though...))</p>
+
+<p>A couple of weeks ago, I posted this into a course team conference where Second Life was mentioned:</p>
+
+<blockquote>Second Life will be interesting over the next few weeks; <a href="http://secondlife.reuters.com/stories/2007/07/26/linden-lab-outlaws-second-life-gambling/">gambling has just been outlawed in world</a>, and whilst the repercussions may not be so much that areas of SL get cleaned up, the authoritarian and "arbitrary" way that Linden Lab imposed the changes <em>may</em> have knock-on effects...
+
+<p>[How is it, by the way, that institutions are set against services like Google docs and Netvibes "because they might disappear" and do not apply the same argument to Second Life - which consumes way more effort and is not the most open of environments?]</p>
+
+<p>Of course, of the millions of registered SL users, most never make it off the orientation island...</p>
+
+<p>Just by the by - IBM are doing a lot with virtual worlds. They also just brought out a set of <a href="http://eightbar.co.uk/2007/07/27/ibm-virtual-world-guidelines/">'guidelines' for IBMers who go into virtual worlds...</a> </p>
+
+<p>Virtual worlds possibly are important for education - but Second Life as a relatively early stage single provider may not be the best place to go to... although experience gained in there may well prove valuable in the longer term...</p>
+
+<p>3 or 4 months ago a lot of education people got a heads-up about social networking in MySpace, which arguably helped set up/made possible the current educational buzz/interest that is currently happening around Facebook.</p>
+
+<p>SL arguably got the current wave of interest in online, non-gameplay (ie not MMORPG) 3d environments going, supported in no small part by a mainstream media who didn't look elsewhere and don't like MMORPGs (Entropia universe is gaining ground and World of Warcraft is huge)... </p>
+
+<p>But I suspect there's going to be whole raft of rivals arriving online *if* 3d chat environment/social meeting space worlds continue to appear to be attractive....</p>
+
+<p>I'm also guessing SL will be surpassed in terms of interest and engagement if the technology supports it (bandwidth, graphics and so on). </p>
+
+<p>Microsoft  (Silverlight), Adobe (Air) and Google (Gears was a start but only a small one) are all exploring technologies that support increasingly rich interfaces and/or allow web/desktop synching and offline use of what are apparently online apps; and vice versa - <a href="http://searchengineland.com/070726-090113.php">Google Earth enterprise now works via a browser</a> for example, and Microsoft Virtual Earth already works in a Windows browser environment.</p>
+
+<p>These new approaches may provide the platform basis for a more usable 3d web experience; i.e. the next generation of 3D web browsing.</blockquote></p>
+
+<p>So here are what I think are interesting ;-)</p>
+
+<ul><li><a href="http://www.opencroquet.org/index.php/Main_Page">Open Croquet</a> (<a href="http://youtube.com/watch?v=oKi-fkyAtg8">video demo</a>) - "a powerful open source software development environment for the creation and large-scale distributed deployment of multi-user virtual 3D applications and metaverses that are (1) persistent (2) deeply collaborative, (3) interconnected and (4) interoperable. The Croquet architecture supports synchronous communication, collaboration, resource sharing and computation among large numbers of users on multiple platforms and multiple devices."
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/oKi-fkyAtg8"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/oKi-fkyAtg8" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>What I like about Open Croquet is that the worlds run on your own machine, and you can then hook them into other worlds running on other people's machines, peer-to-peer style.<br />
+</li><br />
+<li><a href="http://www.multiverse.net/">Multiverse</a> - "Multiverse lets you to build an MMOG or virtual world for less money and in less time than ever before. Multiverse technology is scalable, extensible, and highly customizable, enabling you to build your world with its own unique look and feel, gameplay, and mechanics. ... Download our client, server, tools, starter assets, and sample worlds for free and start building your world today!"</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/I9w9hFuZKD8"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/I9w9hFuZKD8" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<p>The twist with Multiverse is that users are provided with a single client (a 3D world browser, in effect) that can be used to connect to any world in the Multiverse, err, multiverse. </li></ul></p>
+
+<p>It's worth remembering too that the IT heavyweights are looking at this sort of technology, as in the case of <a href="http://research.sun.com/projects/mc/mpk20.html">Sun Microsystems' MKK30 Virtual Workplace</a>.</p>
+
+<p>And Google and Microsoft may both end up there, after a fashion, with their respective "Earth" products... (for example, check out <a href="http://sketchup.google.com/3dwarehouse/modelcycle?scoring=d&hl=en">Model Vision</a>, a live map showing recent uploads to the Google Earth 3D model Sketchup Warehouse).</p>
+
+<p>PS the ultimate, of course, would be <a href="http://www.businessweek.com/magazine/content/07_33/b4046064.htm">an avatar that works across all virtual worlds</a>...</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010510.html">12:00 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10510" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
 
 
 <h2 class="date">July 06, 2007</h2>
@@ -45,6 +361,8 @@ function OpenTrackback (c) {
 <a name="010474"></a>
 <h3 class="title">Making the Most of Interactive Timelines, Maps et al.</h3>
 
+At a (not so) recent meeting of the T151, our new in production short course on gaming and interactive media, one of the stories we all thought was important to tell was the evolution of interactive computer games by means...
+<!--
 <p>At a  (not so) recent meeting of the T151, our new in production short course on gaming and interactive media, one of the stories we all thought was important to tell was the evolution of interactive computer games by means of a timeline.</p>
 
 <p>Something like this, for example (taken from <a href="http://www.xtimeline.com/">xtimeline</a>) - <a href="http://www.xtimeline.com/entertainment/The-History-of-Video-Games">The History of Video Games</a>:</p>
@@ -94,13 +412,14 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 <p>Which is to say, the <em>point</em> of the activity for me would really just be saying: look at what's possible with this technology. <em>Use it....</em>* - for something, anything...! And here's one example of how we might use it in this case... <small>(*where appropriate...)</small> The important thing is not necessarily knowing how to do something, but that it is possible within certain limits. It is possible to plot masts on a map and generate radio propagation maps. But it's not necessarily important that <em>you</em> know how to do it.</p>
 
 <p>See also:<br />
-- <a href="./010329.html">More Timelines: oneTimeLine and the BBC British History Timeline</a><br />
-- <a href="./010366.html">Google Maps and Timelines - Side by Side</a></p>
+- <a href="http://blogs.open.ac.uk/Maths/ajh59/010329.html">More Timelines: oneTimeLine and the BBC British History Timeline</a><br />
+- <a href="http://blogs.open.ac.uk/Maths/ajh59/010366.html">Google Maps and Timelines - Side by Side</a></p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010474.html">10:59 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010474.html">10:59 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10474" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -118,6 +437,8 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 <a name="010211"></a>
 <h3 class="title">An MIT OpenCourseWare Course via an OPML Feed</h3>
 
+Over the weekend, I noticed that MIT OpenCourseWare courses were offering a "Download this Course" option. Intrigued, I immediately grabbed a copy of the CMS.610 / CMS.922 Media Industries and Systems, Spring 2006 course and had a poke around inside...
+<!--
 <p>Over the weekend, I noticed that MIT OpenCourseWare courses were offering a "Download this Course" option. Intrigued, I immediately grabbed a copy of the <a href="http://ocw.mit.edu/OcwWeb/Comparative-Media-Studies/CMS-610Spring-2006/CourseHome/index.htm">CMS.610 / CMS.922 Media Industries and Systems, Spring 2006</a> course and had a poke around inside it.</p>
 
 <p>The download bundle is - I guess(?!) - a standard (?) IMS  - err - package? (can you tell I'm not up on educational material interoperability standards?!;-)</p>
@@ -136,13 +457,13 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 
 <p>The course - as published on the MIT OpenCourseWare website - is structured according to the course syllabus, readings, lecture notes, projects (i.e. group and individual activities) and related resources.</p>
 
-<p><img alt="mitHTML.png" src="./mitHTML.png" width="802" height="316" border="0" /></p>
+<p><img alt="mitHTML.png" src="http://blogs.open.ac.uk/Maths/ajh59/mitHTML.png" width="802" height="316" border="0" /></p>
 
 <p>As a first pass, I have generated an OPML version of the course that follows a similar structure. At the moment, this OPML feed is - to all intents and purposes - a monolithic feed. Over the coming weeks I intend to disaggregate it into separate component feeds that can be reaggregated in an OPML feed that pulls in separate OPML and RSS component feeds.</p>
 
 <p>You can view the OPML version of the course here: <a href="http://grazr.com/gzpanel.html?addbar=off&view=3p&theme=gloss_silver&file=http://ouseful.open.ac.uk/mitocwplayground/mitocwDemo.opml">MIT OCW CMS610 Spring, 2006, Comparative Media (via Grazr)</a>.</p>
 
-<p><img alt="mitOPML.png" src="./mitOPML.png" width="911" height="317" border="0" /></p>
+<p><img alt="mitOPML.png" src="http://blogs.open.ac.uk/Maths/ajh59/mitOPML.png" width="911" height="317" border="0" /></p>
 
 <p>Note that at the current time, some of the links (to New York Times) resources require a NYT login. I will patch these as and when I can. In addition, the links to audio-visual resources should really be made available via an embedded player, as well as link to the original site.</p>
 
@@ -153,9 +474,10 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 <p>PS <a href="http://blogs.learningparty.net/brian/2007/04/25/resistance-is-fertile/">this is spot on</a>.</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010211.html">11:04 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010211.html">11:04 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10211" onclick="OpenComments(this.href); return false">Comments (1)</a>
 	
 	
@@ -173,6 +495,8 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 <a name="010176"></a>
 <h3 class="title">Embedding youTube Movies in "Commercial" elearning Materials</h3>
 
+One of the things I (supposedly) do when not tinkering with Web 2.0 toys is look after an introductory OU short course on robotics. Robotics as a subject area is pretty well suited to making reuse of 3rd party content...
+<!--
 <p>One of the things I (supposedly) do when not tinkering with Web 2.0 toys is look after an introductory OU short course on <a href="http://ouseful.open.ac.uk/t184">robotics</a>.</p>
 
 <p>Robotics as a subject area is pretty well suited to making reuse of 3rd party content to illustrate points, especially in an online course: movies and images are order of the day, as you might imagine:</p>
@@ -211,9 +535,10 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 <p>PS I just spotted over on the Google Blog that <a href="http://googleblog.blogspot.com/2007/04/were-expecting.html">presentations will soon be added to the Google docs'n'spreadsheets mix</a>...</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010176.html">09:21 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010176.html">09:21 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10176" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -231,6 +556,8 @@ For example, last week, I gave a demo of Google Earth with an <a href="http://us
 <a name="009267"></a>
 <h3 class="title">Getting into Gaming</h3>
 
+Gaming is flavour of the day in several areas of the OU at the moment. Digilab opened in the Library to act as a space to playfully engage with technology (a Wii is on the way, apparently ;-) A couple...
+<!--
 <p>Gaming is flavour of the day in several areas of the OU at the moment.</p>
 
 <p><a href="http://digilab.open.ac.uk/">Digilab</a> opened in the Library to act as a space to playfully engage with technology (a Wii is on the way, apparently ;-)</p>
@@ -249,9 +576,10 @@ This highly experimental course is a response to projects such as Wikipedia, Wik
 I wonder what would be said if I applied for that post? ;-)</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./009267.html">01:34 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009267.html">01:34 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9267" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -269,6 +597,8 @@ I wonder what would be said if I applied for that post? ;-)</p>
 <a name="009018"></a>
 <h3 class="title">Roundtripping in StringLE</h3>
 
+One of the 'emergent' features I've discovered about StringLE is the ability to do roundtripping - sort of.... By this I mean it's possible to use a tool in the stringle context to create a resource that you can bookmark...
+<!--
 <p>One of the 'emergent' features I've discovered about <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a> is the ability to do roundtripping - sort of.... By this I mean it's possible to use a tool in the stringle context to create a resource that you can bookmark and immediately gain access to from the StringLE navigation panel.</p>
 
 <p>For example: if I add a feed to one of my delicious bookmark tags to the OPML file that is used to provide navigation via the StringLE embedded Grazr widget, I can create a resource and bookmark it with that tag (often from the resource creation application directly), at which point it becomes  available via the navigation widget (err, that's not strictly true - the feed may need updating in the widget).</p>
@@ -304,9 +634,10 @@ I wonder what would be said if I applied for that post? ;-)</p>
 <p>Now I wonder, will <a href="http://ning.com">Ning</a> get into this area too? It'd be a powerful addition to a prototypical NingLE (which I am really going to have to start thinking about. properly..)?</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./009018.html">09:10 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/009018.html">09:10 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=9018" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -324,11 +655,13 @@ I wonder what would be said if I applied for that post? ;-)</p>
 <a name="008847"></a>
 <h3 class="title">The Electronic Provision of Course Content</h3>
 
+Over the last couple of years, I've played with - and reviewed - several different styles of online course. Some have been based around Flash presentations (animated slideshows with an audio track essentially); some have been lists of links to...
+<!--
 <p>Over the last couple of years, I've played with - and reviewed - several different styles of online course. Some have been based around Flash presentations (animated slideshows with an audio track essentially); some have been lists of links to PDFs; some have been HTML content.  Most have been delivered via some sort of website and viewed using a web browser.</p>
 
 <p>A couple of approaches I'm interested in exploring relate to the delivery of course material through other means - online using web feeds (such as RSS); offline using portable devices, such as USB memory sticks. I'll post about RSS/web feed delivery and Portable Study Sticks in the next week or two, but here are some thoughts about some of the current issues (as I see them) relating to some of the ways I believe we currently deliver electronic course materials and electronic copies of printed course materials.</p>
 
-<p>At the current time, student access to OU online course materials tends to be cut-off a few short weeks after the end of the course. Students can, of course, save their own copies of each course page (e.g. see the <a href="./008414.html">hints on how to do this relatively easily</a> using the <a href="http://amb.vis.ne.jp/mozilla/scrapbook/">Scrapbook</a> browser extension). I am unclear as to <em>why</em> physical/offline copies of courses are <em>not</em> provided as a matter of course at them moment - maybe it's a rights thing?</p>
+<p>At the current time, student access to OU online course materials tends to be cut-off a few short weeks after the end of the course. Students can, of course, save their own copies of each course page (e.g. see the <a href="http://blogs.open.ac.uk/Maths/ajh59/008414.html">hints on how to do this relatively easily</a> using the <a href="http://amb.vis.ne.jp/mozilla/scrapbook/">Scrapbook</a> browser extension). I am unclear as to <em>why</em> physical/offline copies of courses are <em>not</em> provided as a matter of course at them moment - maybe it's a rights thing?</p>
 
 <p>There have been one or two exceptions. A couple of Relevant Knowledge short courses (which combine HTML teaching materials and PDF practical guides) have been delivered on the relevant course CD-ROM and at least one other course with a large online/HTML course material component was made available as compressed HTML (using the <a href="http://en.wikipedia.org/wiki/Microsoft_Compressed_HTML_Help">chm format</a>).</p>
 
@@ -354,14 +687,15 @@ I wonder what would be said if I applied for that post? ;-)</p>
 
 <p>Even so, the argument that the access to materials if they are made available in electronic form will reduce the likelihood that people will <em>buy</em> the course those materials are provided in is not a strong one. Firstly, the OU is not just a content producer. The course package is an altogether different proposition, including as it does software packages, tutor support and face-to-face tutorials, moderated, course specific online communities, assessment, formal educational credit, and so on, all value adding services delivered in addition to the actual course materials. Secondly, 'free access to materials' is a loaded phrase. More accurate in this case would be 'the ability to preview course materials'.</p>
 
-<p>That print course materials are made available in electronic form (which support search using desktop search tools, for example) whilst access to pure electronic content after the end of the course is not guaranteed seems a bit odd to me. If I take a traditional course, I leave with physical and electronic copies of the course materials. If I take an electronic course, I leave with nothing that I don;t copy myself. (Related to this are the lack of course related derivative products, such as <a href="./008559.html">course related link collections and search engines</a>.)</p>
+<p>That print course materials are made available in electronic form (which support search using desktop search tools, for example) whilst access to pure electronic content after the end of the course is not guaranteed seems a bit odd to me. If I take a traditional course, I leave with physical and electronic copies of the course materials. If I take an electronic course, I leave with nothing that I don;t copy myself. (Related to this are the lack of course related derivative products, such as <a href="http://blogs.open.ac.uk/Maths/ajh59/008559.html">course related link collections and search engines</a>.)</p>
 
 <p>Hmm.. one for the Library, I think... preview copies through the library catalogue of all course units, at least for users (students and/or staff) with a SAMS cookie set (i.e. OU authenticated users).</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./008847.html">09:20 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008847.html">09:20 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8847" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -379,23 +713,25 @@ I wonder what would be said if I applied for that post? ;-)</p>
 <a name="008638"></a>
 <h3 class="title">Online OPML Feed Management</h3>
 
+A couple of people have asked over the last week or two whether I knew of an online OPML manager that could be used to create and organise hosted OPML feeds that could then be wired directly into StringLE. I...
+<!--
 <p>A couple of people have asked over the last week or two whether I knew of an online OPML manager that could be used to create and organise hosted OPML feeds that could then be wired directly into <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a>.</p>
 
 <p>I had a bit of a play over the weekend, and again today over lunch, and from the <a href="http://del.icio.us/psychemedia/opml+manager">list of OPML managers</a> I've collected, <a href="http://opmlmanager.com">OPML Manager</a> seems to fit the bill nicely.</p>
 
 <p>So nicely, in fact, I'm using it to feed the default Stringle environment:</p>
 
-<p><img alt="stringleOPMLManager.jpg" src="./stringleOPMLManager.jpg" width="672" height="494" border="0" /></p>
+<p><img alt="stringleOPMLManager.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/stringleOPMLManager.jpg" width="672" height="494" border="0" /></p>
 
-<p>What this means is I now have a completely online solution for handling what gets fed into the Stringle navigation panel (remember, you can enter your own URL for the OPML feed using the customisation panel or the <a href="./008357.html">StringLE URL API</a>).</p>
+<p>What this means is I now have a completely online solution for handling what gets fed into the Stringle navigation panel (remember, you can enter your own URL for the OPML feed using the customisation panel or the <a href="http://blogs.open.ac.uk/Maths/ajh59/008357.html">StringLE URL API</a>).</p>
 
 <p>I've added a link to OPML Manager from the top bar of StringLE. These tool links open in the Tools tab/panel (links from the Grazr navigation widget on the left hand side open in the Web panel).</p>
 
 <p>You'll notice that the <a href="http://grazr.com">Grazr</a> widget is now displaying a couple of OPML files (the blue feed icon). These are fed into Grazr as links - Grazr sniffs out the opml suffix and then handles them as you might expect it to...</p>
 
-<p>I'm actually use these OPML files to pull in GrazrScripted search boxes - one for the OU Voyager library catalogue, one for Amazon (read more about <a href="./008496.html">Amazon in Grazr</a>).</p>
+<p>I'm actually use these OPML files to pull in GrazrScripted search boxes - one for the OU Voyager library catalogue, one for Amazon (read more about <a href="http://blogs.open.ac.uk/Maths/ajh59/008496.html">Amazon in Grazr</a>).</p>
 
-<p>The Learning Materials section pulls in <a href="http://openlearn.open.ac.uk">OpenLearn/Labspace</a> content that I <a href="./008208.html">transformed to RSS</a>, both directly and in a crude 'remix'  - feeds generated from two Openlearn courses and piped through <a href="http://feeddigest.com/">FeedDigest</a>, along with a podcast feed, filtered using a couple of keywords, and then displayed in another Grazr widget (I'll pop a diagram up to show how it works in a couple of days...;-)</p>
+<p>The Learning Materials section pulls in <a href="http://openlearn.open.ac.uk">OpenLearn/Labspace</a> content that I <a href="http://blogs.open.ac.uk/Maths/ajh59/008208.html">transformed to RSS</a>, both directly and in a crude 'remix'  - feeds generated from two Openlearn courses and piped through <a href="http://feeddigest.com/">FeedDigest</a>, along with a podcast feed, filtered using a couple of keywords, and then displayed in another Grazr widget (I'll pop a diagram up to show how it works in a couple of days...;-)</p>
 
 <p>One thing I noticed doing this is that Grazr is capable of playing audio files embedded in a feed - there are some examples in the Learning materials section under 'Search Related IT Conversations' and here:</p>
 
@@ -411,9 +747,10 @@ I wonder what would be said if I applied for that post? ;-)</p>
 <p>If anyone wants an invite to the demo whiteboard or Elgg space, mail me... or leave a note in the wiki (create an <em>Invites...</em> page if there isn't one there already...)</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./008638.html">06:29 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008638.html">06:29 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8638" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -431,6 +768,8 @@ I wonder what would be said if I applied for that post? ;-)</p>
 <a name="008559"></a>
 <h3 class="title">Making the Most of Links from Online Course Materials to External Websites</h3>
 
+At the request of the TU120 Course Team, I spent half an hour a couple of days ago extracting by hand the external links from the online course materials for the first week of Beyond Google and popping them into...
+<!--
 <p>At the request of the TU120 Course Team, I spent half an hour a couple of days ago extracting <em>by hand</em> the external links from the online course materials for the first week of <a href="http://ousefu;l.open.ac.uk/tu120">Beyond Google</a>  and popping them into <a href="http://del.icio.us">delicious</a>.</p>
 
 <p>Although the materials are generated from XML source files (and so automated link extraction is trivial) I did it by hand partly to see what observations I could make about what sorts of information might be available to support the automated tagging and description of automatically extracted links.</p>
@@ -471,25 +810,25 @@ c) use linkrolls as a feed source for a course related customised search engine.
 <p> - exported as bookmarks/favourites into a browser (for example, using nested folders of bookmarks organised by section, topic,  or category), or viewed as live bookmarks;<br />
 - displayed in a webtop like PageFlakes or  Netvibes, or viewed  in Grazr; for example, here are several ways of using an OPML bundle to provide <a href="http://ouseful.open.ac.uk/openlearnplayground/grazrNav.php?u=http://ouseful.open.ac.uk/tu120playground/tu120_1.opml&s=http://ouseful.open.ac.uk/tu120">link navigation from a Grazr widget</a>.</p>
 
-<p><img alt="tu120LinksGrazr1.png" src="./tu120LinksGrazr1.png" width="392" height="253" border="0" /></p>
+<p><img alt="tu120LinksGrazr1.png" src="http://blogs.open.ac.uk/Maths/ajh59/tu120LinksGrazr1.png" width="392" height="253" border="0" /></p>
 
 <p>The navigation on the left actually shows different ways the links may be organised; note that when you  get to the links, they are in reverse order, as discussed above.</p>
 
 <p>Here are a couple more Grazr views:</p>
 
-<p><img alt="tu120LinksGrazr.png" src="./tu120LinksGrazr.png" width="482" height="307" border="0" /></p>
+<p><img alt="tu120LinksGrazr.png" src="http://blogs.open.ac.uk/Maths/ajh59/tu120LinksGrazr.png" width="482" height="307" border="0" /></p>
 
-<p><img alt="tu120LinksGrazr2.png" src="./tu120LinksGrazr2.png" width="445" height="336" border="0" /></p>
+<p><img alt="tu120LinksGrazr2.png" src="http://blogs.open.ac.uk/Maths/ajh59/tu120LinksGrazr2.png" width="445" height="336" border="0" /></p>
 
 <p>4) It's easy enough getting the links out of delicious and putting them into a <a href="http://www.google.com/coop/">Google custom search engine</a> like this <a href="http://www.google.com/coop/cse?cx=009190243792682903990%3A6urthaytduc">TU120 search engine</a> (week 1 links only, at the moment):</p>
 
-<p><img alt="tu120LinksGoogle.png" src="./tu120LinksGoogle.png" width="397" height="425" border="0" /></p>
+<p><img alt="tu120LinksGoogle.png" src="http://blogs.open.ac.uk/Maths/ajh59/tu120LinksGoogle.png" width="397" height="425" border="0" /></p>
 
-<p><img alt="tu120LinksGoogle2.png" src="./tu120LinksGoogle2.png" width="607" height="329" border="0" /></p>
+<p><img alt="tu120LinksGoogle2.png" src="http://blogs.open.ac.uk/Maths/ajh59/tu120LinksGoogle2.png" width="607" height="329" border="0" /></p>
 
-<p><a href="http://ouseful.open.ac.uk/searchfeedr">searchfeedr</a> will also let you narrow the search down to 15 sites at a time, which would be ok for a section search; here's an example search over <a href="./searchfeedrlabs.php?f=ouseful/usr:tu120+1.1&amp;q=september+11&t=d&se=y&s=pages">external links from  TU120 section 1.1</a>:</p>
+<p><a href="http://ouseful.open.ac.uk/searchfeedr">searchfeedr</a> will also let you narrow the search down to 15 sites at a time, which would be ok for a section search; here's an example search over <a href="http://blogs.open.ac.uk/Maths/ajh59/searchfeedrlabs.php?f=ouseful/usr:tu120+1.1&amp;q=september+11&t=d&se=y&s=pages">external links from  TU120 section 1.1</a>:</p>
 
-<p><img alt="tu120Linkssearchfeedr.png" src="./tu120Linkssearchfeedr.png" width="1057" height="588" border="0" /></p>
+<p><img alt="tu120Linkssearchfeedr.png" src="http://blogs.open.ac.uk/Maths/ajh59/tu120Linkssearchfeedr.png" width="1057" height="588" border="0" /></p>
 
 <p>This exercise raised many more questions for me than it answered. For example, </p>
 
@@ -501,12 +840,13 @@ b) user scenarios: how might students use linkrolls? How should we organise, dis
 <p>As we move towards more and more online courses, with course authors presumably continuing to deep link into third party sites (even if we are only supposed to link to the top level of a domain ;-) I think its worth asking how the knowledge locked up in linkrolls/link collections can be unlocked, as well as exploring ways in which further value can be added.</p>
 
 <p>PS having put the links into delicious, I also realised I should have used <a href="http://simpy.com">Simpy</a>. Simpy offers private groups, which means we can keep our IP locked up, even if we do use a third party social bookmarking service ;-)<br />
-PPS for newish readers to the blog who are interested in issues relating to the use of social bookmarking in formal education, you may be interested in reading <a href="./005107.html">Towards a Managed Social Bookmarking Environment in Higher Education</a>.</p>
+PPS for newish readers to the blog who are interested in issues relating to the use of social bookmarking in formal education, you may be interested in reading <a href="http://blogs.open.ac.uk/Maths/ajh59/005107.html">Towards a Managed Social Bookmarking Environment in Higher Education</a>.</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./008559.html">10:15 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008559.html">10:15 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8559" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -524,6 +864,8 @@ PPS for newish readers to the blog who are interested in issues relating to the 
 <a name="008414"></a>
 <h3 class="title">Annotating Local, Navigable Copies of OpenLearn Content</h3>
 
+Early this week I came across quite the most amazing Firefox extension I've seen for some time - Scrapbook. This extension lets you make a local (i.e. offline) copy of a site, and then do various nifty things with it...
+<!--
 <p>Early this week I came across quite the most amazing Firefox extension I've seen for some time - <a href="http://amb.vis.ne.jp/mozilla/scrapbook/">Scrapbook</a>. This extension lets you make a local (i.e. offline) copy of a site, and then do various nifty things with it  - make personal annotations (or even shared ones if you have shared drive access), text highlighting, even search.</p>
 
 <p>This extension particularly resonated with me when I came across it because earlier in the day we had been discussing at <a href="http://ouseful.open.ac.uk/tu120">TU120</a> course team meeting the frequently asked question about how long students retain access to course materials from our online courses. (Several weeks is the answer - then the material is no longer avialable).</p>
@@ -534,67 +876,67 @@ PPS for newish readers to the blog who are interested in issues relating to the 
 
 <p>So this is one area where Scrapbook caught my interest - the ability to download very easily all the pages from a course. So for example, we could go to the <a href="http://openlearn.open.ac.uk/course/view.php?id=1617">index page of an OpenLearn course</a>, which has links to all the course content pages from it, and use those links to download all the course information:</p>
 
-<p><img alt="olsb1.jpg" src="./olsb1.jpg" width="577" height="596" border="0" /></p>
+<p><img alt="olsb1.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb1.jpg" width="577" height="596" border="0" /></p>
 
 <p><em>A similar approach can be used for saving local copies of Technology short course pages: go to the course index page (that is, click on the Index tab , rather than Home tab) of a <a href="http://tscp.open.ac.uk/">Relevant Knowledge course</a> and download in one go the course content pages linked to therefrom. Readers of this blog on any of these courses may wish to pass this info on via a course <s>conference</s> forum ;-)</em></p>
 
 <p>Grabbing the index page - and the pages that are linked to from it - is easy: simply take the 'Capture Page As..' option from the Scrapbook menu:</p>
 
-<p><img alt="olsb2.jpg" src="./olsb2.jpg" width="310" height="144" border="0" /></p>
+<p><img alt="olsb2.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb2.jpg" width="310" height="144" border="0" /></p>
 
 <p>You now have to configure the download - take the links of depth  1:</p>
 
-<p><img alt="olsb3.jpg" src="./olsb3.jpg" width="407" height="501" border="0" /></p>
+<p><img alt="olsb3.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb3.jpg" width="407" height="501" border="0" /></p>
 
 <p>This gives you a list of <em>all</em> the pages that are linked to, which is way more than the ones you actually want:</p>
 
-<p><img alt="olsb4.jpg" src="./olsb4.jpg" width="455" height="507" border="0" /></p>
+<p><img alt="olsb4.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb4.jpg" width="455" height="507" border="0" /></p>
 
 <p>There are two ways of getting round this - one is to pause the download as soon as you can and just select the pages you want to download. One way of identifying which links those are is to hover over the links you want to download (or exclude) on the index page and make a note of the URL that should appear in the status bar at the bottom left corner of the browser window:</p>
 
-<p><img alt="olsb5.jpg" src="./olsb5.jpg" width="423" height="107" border="0" /></p>
+<p><img alt="olsb5.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb5.jpg" width="423" height="107" border="0" /></p>
 
 <p>Another way is to use the skip button to skip the download of the next link in the download list - there is a 3 second delay between downloads to give you time to make this decision for each link.</p>
 
-<p> <img alt="olsb6.jpg" src="./olsb6.jpg" width="425" height="110" border="0" /></p>
+<p> <img alt="olsb6.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb6.jpg" width="425" height="110" border="0" /></p>
 
 <p>For this 'Capture Page As...' download option., all the saved files are access via a single Scrapbook item, which you can find in the Scrapbook sidebar:</p>
 
-<p><img alt="olsb8.jpg" src="./olsb8.jpg" width="462" height="314" border="0" /></p>
+<p><img alt="olsb8.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb8.jpg" width="462" height="314" border="0" /></p>
 
 <p>(It is also possible to save each page as separate Scrapbook items, although local navigation between the pages will not then be respected.)</p>
 
 <p>If you select an item in the Scrapbook, you are taken to the local copy of that Scrapbook item. Two toolbars are then available at the bottom of the screen, that can be configured from the Scrapbook item right at the bottom of the browser window:</p>
 
-<p><img alt="olsb9.jpg" src="./olsb9.jpg" width="199" height="177" border="0" /></p>
+<p><img alt="olsb9.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb9.jpg" width="199" height="177" border="0" /></p>
 
 <p>The Edit toolbar:</p>
 
-<p><img alt="olsb10.jpg" src="./olsb10.jpg" width="444" height="29" border="0" /></p>
+<p><img alt="olsb10.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb10.jpg" width="444" height="29" border="0" /></p>
 
 <p>And the Info toolbar:</p>
 
-<p><img alt="olsb11.jpg" src="./olsb11.jpg" width="405" height="28" border="0" /></p>
+<p><img alt="olsb11.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb11.jpg" width="405" height="28" border="0" /></p>
 
 <p>The Info toolbar actually provides a sitemap to all the pages you downloaded:</p>
 
-<p><img alt="olsb12.jpg" src="./olsb12.jpg" width="452" height="270" border="0" /></p>
+<p><img alt="olsb12.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb12.jpg" width="452" height="270" border="0" /></p>
 
-<p>This is handy, because although the downloaded material has all the links localised, (so the navigation through the OpenLearn material is within your downloaded local copy of the material) the current OpenLearn navigation through materials is all but unusable (although <a href="./008189.html">solutions are in principle available</a>).</p>
+<p>This is handy, because although the downloaded material has all the links localised, (so the navigation through the OpenLearn material is within your downloaded local copy of the material) the current OpenLearn navigation through materials is all but unusable (although <a href="http://blogs.open.ac.uk/Maths/ajh59/008189.html">solutions are in principle available</a>).</p>
 
 <p>The utility of the Scrapbook as a study support tool now moves up another gear. For example, you can highlight or annotate the saved content:</p>
 
-<p><img alt="olsb13.jpg" src="./olsb13.jpg" width="287" height="127" border="0" /></p>
+<p><img alt="olsb13.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb13.jpg" width="287" height="127" border="0" /></p>
 
 <p>Annotations can either be inline (and displayed via a popup tooltip) or floating 'post-it' type notes:</p>
 
-<p><img alt="olsb15.jpg" src="./olsb15.jpg" width="181" height="46" border="0" /></p>
+<p><img alt="olsb15.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb15.jpg" width="181" height="46" border="0" /></p>
 
-<p><img alt="olsb14.jpg" src="./olsb14.jpg" width="321" height="206" border="0" /></p>
+<p><img alt="olsb14.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb14.jpg" width="321" height="206" border="0" /></p>
 
 <p>Another hand tool is the ability to search through the save content:</p>
 
-<p><img alt="olsb16.jpg" src="./olsb16.jpg" width="706" height="538" border="0" /></p>
+<p><img alt="olsb16.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/olsb16.jpg" width="706" height="538" border="0" /></p>
 
 <p>More tools are available too -  the <a href="http://amb.vis.ne.jp/mozilla/scrapbook/files/ScrapbookTutorial-1.1.pdf">Scrapbook tutorial</a> is well worth a read, even if you don't get this extension, just so you know what you're missing out on.</p>
 
@@ -607,9 +949,10 @@ PPS for newish readers to the blog who are interested in issues relating to the 
 <p>Perhaps the ultimate toy would be to add Scrapbook style bulk download functionality (and maybe the annotation and highlighting tools) to  <a href="http://www.zotero.org"">Zotero</a>, which provides more sophisticated collection management tools, as well as bibliographic reference tools?</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./008414.html">12:30 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008414.html">12:30 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8414" onclick="OpenComments(this.href); return false">Comments (3)</a>
 	
 	
@@ -627,6 +970,8 @@ PPS for newish readers to the blog who are interested in issues relating to the 
 <a name="008153"></a>
 <h3 class="title">Is Google Custom Search OUseful?</h3>
 
+Maybe... Here are a few ways of using Google Custom Search that came immediately to my mind: For collecting links in a course team while a course is in production. We could do this with a social bookmarking tool, of...
+<!--
 <p>Maybe...</p>
 
 <p>Here are a few ways of using <a href="http://www.google.com/coop/docs/cse/">Google Custom Search</a> that came immediately to my mind:<br />
@@ -636,9 +981,10 @@ PPS for newish readers to the blog who are interested in issues relating to the 
 </ol></p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./008153.html">04:15 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/008153.html">04:15 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=8153" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -656,6 +1002,8 @@ PPS for newish readers to the blog who are interested in issues relating to the 
 <a name="007632"></a>
 <h3 class="title">Interaction Design - "Now Follow This Link"</h3>
 
+Every time I get involved with producing new online course materials, I get fired up by the possibility of working out new styles of interaction that may or may not prove to be very OUseful. Being a reflective practitioner (?!),...
+<!--
 <p>Every time I get involved with producing new online course materials, I get fired up by the possibility of working out new styles of interaction that may or may not prove to be very OUseful. Being a reflective practitioner (?!), I also take these opportunities to explore my own understanding of how online course materials differ from our more traditional print offerings.</p>
 
 <p>Take weblinks for example. Our online course materials increasingly make use of embedded links to 'additional reading' materials, as well as links out to pages we want students to read and critique, or comment upon, as part of a structured activity. Typically, these links are well signposted and explicitly presented as links. Here's an example from <a href="http://ouseful.open.ac.uk/tu120">Beyond Google</a>:<br />
@@ -684,15 +1032,15 @@ You can try out the <a href="http://developer.yahoo.com/search/web/V1/relatedSug
 
 <p>As far as I know, no-one has written yet about how universal tabbed browsing might change elearning activity design through the interactions it affords, but I think that this is an area where huge developments in usability and the way we approach the use of outlinks from elearning materials might result.</p>
 
-<p>(Using tabbed displays <em>within</em> a single page is another matter altogether. See for example  <a href="./007371.html">Using iframes in a Tab Widget to Support Web Page Comparison</a> or <a href="./007560.html">SearchTab Display of Several Web Search Engines</a>. )</p>
+<p>(Using tabbed displays <em>within</em> a single page is another matter altogether. See for example  <a href="http://blogs.open.ac.uk/Maths/ajh59/007371.html">Using iframes in a Tab Widget to Support Web Page Comparison</a> or <a href="http://blogs.open.ac.uk/Maths/ajh59/007560.html">SearchTab Display of Several Web Search Engines</a>. )</p>
 
 <p>Overlaying pages using transparency is yet another possibility and one that I explored yesterday with a slightly hacked <a href="http://www.findmotive.com/2006/08/23/lightbox-using-iframes-instead-of-ajax/">lightbox</a> script.  Lightboxes are rather neat style effects in which a dark, semi-transparent overlay is placed on top of a web page, with a 'normal' brightness (i.e. now effectively highlighted) image or dialogue (such as a login panel) placed centrally within the window.</p>
 
 <p>The idea was to use a lightbox containing an iframe to display a web page that a student had clicked through to. This keeps the student in the frame of reference of the course material (they can see the course material through the dark, transparent overlay) and yet forces them to focus on the newly opened window (which may or may not be an external site). Here's a demo: <a href="http://ouseful.open.ac.uk/tu120playground/lightBoxDemo.html">open a link in a lightbox</a> (follow a <em>lightbox</em> link...):</p>
 
-<p><img alt="lighboxlink.png" src="./lighboxlink.png" width="821" height="563" border="0" /></p>
+<p><img alt="lighboxlink.png" src="http://blogs.open.ac.uk/Maths/ajh59/lighboxlink.png" width="821" height="563" border="0" /></p>
 
-<p><img alt="lightBoxOpen.png" src="./lightBoxOpen.png" width="821" height="563" border="0" /></p>
+<p><img alt="lightBoxOpen.png" src="http://blogs.open.ac.uk/Maths/ajh59/lightBoxOpen.png" width="821" height="563" border="0" /></p>
 
 <p>More often than not, this sort of playing I engage in goes nowhere, in part because I don't think things through enough to persuade people of the merits  - if any - of the ideas I tinker with (completer-finisher is one of the team roles that I just don't do!), but also because there hasn't really been anywhere in the OU where I felt I could raise and discuss potentially innovative ideas. One reason for blogging them, I guess...</p>
 
@@ -703,9 +1051,10 @@ You can try out the <a href="http://developer.yahoo.com/search/web/V1/relatedSug
 <p><strong>LAUNCH DATE IS TUESDAY, 28/11/06, IN THE LIBRARY, 5-7pm</strong></p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./007632.html">10:59 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007632.html">10:59 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7632" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -723,9 +1072,11 @@ You can try out the <a href="http://developer.yahoo.com/search/web/V1/relatedSug
 <a name="007560"></a>
 <h3 class="title">SearchTab Display of Several Web Search Engines</h3>
 
+I've just been doodling a few tweaks to my tabbed search engine display page, and the result is quite fun (well I think so) so I thought I'd post it here: The page has an API of sorts: http://ouseful.open.ac.uk/searchTabs.php is...
+<!--
 <p>I've just been doodling a few tweaks to my tabbed search engine display page, and the result is quite fun (well I think so) so I thought I'd post it here:</p>
 
-<p><img alt="searchTabNew.png" src="./searchTabNew.png" width="757" height="566" border="0" /></p>
+<p><img alt="searchTabNew.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabNew.png" width="757" height="566" border="0" /></p>
 
 <p>The page has an API of sorts:<br />
 <ul><li><a href="http://ouseful.open.ac.uk/searchTabs.php"><em>http://ouseful.open.ac.uk/searchTabs.php</em></a> is the page itself. Arguments can be added on to the end of the URL by using a <em>?</em>followed by the required argument(s). Multiple arguments are separated in the normal way with an ampersand (&).</li><br />
@@ -742,7 +1093,7 @@ The OU search tab is always provided. <s>and still appears</s> All the supported
 <p>If you want to load a page with a couple of search engines, and no initial query, just use the s argument - e.g. <a href="http://ouseful.open.ac.uk/searchTabs.php?s=y,g">http://ouseful.open.ac.uk/searchTabs.php?s=y,g</a>  gives you Yahoo! andf Google.</li></ul><br />
 So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22technology%20faculty%22%20robotics&s=a,c,y">http://ouseful.open.ac.uk/searchTabs.php?q=%22technology%20faculty%22%20robotics&s=a,c,y</a> loads the following page:</p>
 
-<p><img alt="searchTabdemo.png" src="./searchTabdemo.png" width="766" height="560" border="0" /></p>
+<p><img alt="searchTabdemo.png" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabdemo.png" width="766" height="560" border="0" /></p>
 
 <p>The intention behind the search tabs page is to allow a relatively quick an easy comparison of several search engines using the same query.</p>
 
@@ -751,9 +1102,10 @@ So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22t
 <p>if there are any search engines missing that you think really should be included, drop me a line.</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./007560.html">10:15 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007560.html">10:15 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7560" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -771,17 +1123,19 @@ So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22t
 <a name="007371"></a>
 <h3 class="title">Using iframes in a Tab Widget to Support Web Page Comparison</h3>
 
+A couple of things I'm keen to hammer home in an early section of Beyond Google are: a) that Google is not the only general purpose search engine out there; and b) that the different, major league search engines may...
+<!--
 <p>A couple of things I'm keen to hammer home in an early section of <a href="http://ouseful.open.ac.uk/tu120">Beyond Google</a> are: a) that Google is not the only general purpose search engine out there; and b) that the different, major league search engines may return differently ranked results for identical queries made at the same time.</p>
 
 <p>To try and encourage students to compare search queries across search engines, I have been exploring various ways in which we might used tabbed widgets to embed search pages within a teaching page.</p>
 
-<p>I have popped up several demos at <a href="./searchTabber.html">Multisearch panels demo</a>, including examples of applying the same, predefined search to several search engines via a single link, and allowing the user to apply a single search box query to several search engines at the same time.</p>
+<p>I have popped up several demos at <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabber.html">Multisearch panels demo</a>, including examples of applying the same, predefined search to several search engines via a single link, and allowing the user to apply a single search box query to several search engines at the same time.</p>
 
-<p><img alt="searchTabber.gif" src="./searchTabber.gif" width="593" height="403" border="0" /></p>
+<p><img alt="searchTabber.gif" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabber.gif" width="593" height="403" border="0" /></p>
 
-<p>I've also doodled a couple of standalone pages: <a href="./searchTabs.html">GYM Comparison</a> and <a href="./searchTabsAcademic.html">Google Scholar and Windows Live Academic</a>.</p>
+<p>I've also doodled a couple of standalone pages: <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabs.html">GYM Comparison</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabsAcademic.html">Google Scholar and Windows Live Academic</a>.</p>
 
-<p>An <a href="./searchTabs.php">alternative GYM comparison page</a> additionally allows you to a pass a search query directly in to the page, as for example this multiSearch on <a href="./searchTabs.php?q=tabbed%20browsing">tabbed browsing</a>.</p>
+<p>An <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabs.php">alternative GYM comparison page</a> additionally allows you to a pass a search query directly in to the page, as for example this multiSearch on <a href="http://blogs.open.ac.uk/Maths/ajh59/searchTabs.php?q=tabbed%20browsing">tabbed browsing</a>.</p>
 
 <p>One thing I did briefly consider was using AJAX search APIs to pull the results from the different search engines directly into the page.</p>
 
@@ -789,18 +1143,19 @@ So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22t
 
 <p>We're still working out the best way - if at all - of integrating these sorts of interactive exercise within the course materials, so if anyone has any comments - or has tried something similar in the past - please get in touch...</p>
 
-<p>PS Partly in response to this article on "<a href='http://www.snee.com/bobdc.blog/2006/09/a_great_feature_in_altavista_a.html'>A great feature in AltaVista, alltheweb, and Ask.com, but not in Google</a>", which describes limit searching by date on the Altavista, AllTheWeb and Ask  - but <em>not</em> Google -  advanced search pages, I felt I ought to knock up an <a href="./searchAdvancedTabs.html">advanced search page tabbed display</a>.</p>
+<p>PS Partly in response to this article on "<a href='http://www.snee.com/bobdc.blog/2006/09/a_great_feature_in_altavista_a.html'>A great feature in AltaVista, alltheweb, and Ask.com, but not in Google</a>", which describes limit searching by date on the Altavista, AllTheWeb and Ask  - but <em>not</em> Google -  advanced search pages, I felt I ought to knock up an <a href="http://blogs.open.ac.uk/Maths/ajh59/searchAdvancedTabs.html">advanced search page tabbed display</a>.</p>
 
 <p>I wonder too whether I really should add a few more search engines to the basic search engine display panel?</p>
 
-<p><img alt="searchTabAdvanced.jpg" src="./searchTabAdvanced.jpg" width="761" height="213" border="0" /></p>
+<p><img alt="searchTabAdvanced.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/searchTabAdvanced.jpg" width="761" height="213" border="0" /></p>
 
 <p>PS I just came across <a href="http://www.gahooyoogle.com/">GahooYoogle</a> which allows you to search Google and Yahoo (web search, image search etc) side by side in a spilt panel view.</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./007371.html">05:40 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/007371.html">05:40 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=7371" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -812,11 +1167,15 @@ So for example, the URL <a href="http://ouseful.open.ac.uk/searchTabs.php?q=%22t
 </div>
 
 </div>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script type="text/javascript">
+
+
 </script>
 <script type="text/javascript">
-_uacct = "UA-571814-1";
-urchinTracker();
+
+
+
 </script>
+
 </body>
 </html>

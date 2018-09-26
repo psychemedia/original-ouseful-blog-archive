@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn XML Processor, Redux</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012998.html" title="Beware of Google Quoting Out of Context" />
+
+<link rel="next" href="./013066.html" title="Best Practice Instructional Material?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012998.html">&laquo; Beware of Google Quoting Out of Context</a> |
+
+<a href="./">Main</a>
+| <a href="./013066.html">Best Practice Instructional Material? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 12, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn XML Processor, Redux</h3>
+
+<p>Some time ago, I posted about an <a href="./010124.html">OpenLearn XML processor</a>, that parsed the XML representation of a sample OpenLearn XML unit in various ways, disaggregating the unit into component assets, such as images, audio and video items, and so on.</p>
+
+<p>Looking back over the code a couple of weeks ago, I'm not sure that it ever worked properly, so I've popped a  <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnProcessor2.php">revised version of the processor up that should work correctly</a> (fingers crossed... ;-)</p>
+
+<p>The original proof of concept ran various XSL translation tools over local copies of a handful of OpenLearn XML units. Since then, the OpenLearn team have started to provide access directly to the XML source of each unit on the OpenLearn website, so the XML processor can now be run against any unit hosted on the OpenLearn website.</p>
+
+<p>One thing I need to think about doing is cacheing the output of each XML processor transaction, or storing the output of the XSLT following its first run. The OpenLearn units are pretty stable, after all, so running the XML representation of each course <span style="font-style: italic;">every time</span> the processor run is hugely inefficient. (I was thinking of trying to store the results in the cloud using the Amazon simple database service, although if Zoho offer an API to their database, maybe I should give that a whirl? The third alternative I've been considering is storing the results on the Talis platform, though I'm not sure whether I have an account/space on there yet?</p>
+
+<p>So what does the OpenLearn XML processor do? Here's a quick recap - for each unit run through the processor, it will generate an OPML file containing collections of links that point to: the image fies that appear in the unit content; the audio files referred to in the unit; the video files contained within the unit.</p>
+
+<p>For example, here's what happens when you run the L120_1 materials through the OpenLearn XML processor:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/read?font=arial&amp;fontsize=9pt&amp;view=o&amp;file=http://www.w3.org/2005/08/online_xslt/xslt?xslfile=http://ouseful.open.ac.uk/openlearnplayground/openlearnAssets.xsl&amp;xmlfile=http://openlearn.open.ac.uk/file.php/L120_1/formats/L120_1.xml&amp;forward-accept=on&amp;content-type=text/xml&amp;submit=transform" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?font=arial&amp;fontsize=9pt&amp;view=o&amp;file=http://www.w3.org/2005/08/online_xslt/xslt?xslfile=http://ouseful.open.ac.uk/openlearnplayground/openlearnAssets.xsl&amp;xmlfile=http://openlearn.open.ac.uk/file.php/L120_1/formats/L120_1.xml&amp;forward-accept=on&amp;content-type=text/xml&amp;submit=transform"></script></div>
+
+<p>(This doesn't actually work for me a lot of the time in my everyday-use Flock/Firefox browser, though it does work fine for me elsewhere - some cookie problem to do with being logged in to OpenLearn or not, I think. If you aren't an OpenLearn user/have never logged in to OpenLearn then you should be able to see the images and play the audio. (I'm not sure the video is working yet, though). The issue has something or other to do with the huge login kludge that OpenLearn uses for guesting access to assets via the RSS feeds, but apparently I'm the only person who sees this problem so it's not a proper bug...)</p>
+
+<p>You can find the OpenLearn XML processor at: <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnProcessor2.php">http://ouseful.open.open.ac.uk/openlearnplayground/openlearnProcessor2.php</a></p>
+
+<p>As well as the combined OPML output, the processor provides separate RSS feeds that contain links to any images found in the unit and any external links (URLs) referenced in the unit material. The outgoing links can also bundled into a Google Linked custom search engine annotations file, along with a link to the unit itself on OpenLearn, which means that is is possible to create a search engine on-the-fly that will search over only the unit and the sites it links to (see <a href="./012825.html">OpenLearn Dynamic Custom Search Engine</a> for the initial announcement of this live CSE app).</p>
+
+<p>As and when I get round to it, I'll also do a separate RSS audio feed with a link to the audio file added as an enclosure, which means that services like the Grazr feed reading widget can play the file using an automatically embedded audio player. (Ideally, the OPML bundle asset bundle for a unit should point to separate RSS feeds for each asset type.)</p>
+
+<p>Also on my to do list is a slideshow tool to display the images from a unit in a slideshow widget via the processed image RSS feed :-)</p>
+
+<p>One of the reasons I'm exploring the idea of unbundling media typed OpenLearn resources into constituent feeds is that I'm trying to get a feeling for how easy it would - or wouldn't - be to indulge in a little roundtripping, unbundling the unit into constituent parts and then reassembling them to hopefully form some semblance of the original course, or at least, a coherent, well-resourced course on the same topic.</p>
+
+<p>(Another take on this exploration is provided by the MIT opencourseware unit unbundling and representation experiment I tried way back when: <a href="./010236.html">Disaggregating an MIT OpenCourseware Course into Separate RSS Feeds</a>)</p>
+
+<p>Although it pains me to say so, it may be that I need to have a look at some learning design templates to see whether or not they might provide some way of physically representing the structure of a course and the way the individual assets are organised within it. The XML representation used by Compendium might also be relevant here? As a first step, through, it may make more sense to try to tease out the structure of a course from structural outline elements (such as section headings etc.) and represent them using a hierarchical schema, such as the Freemind mindmap format.</p>
+
+<p>(I've actually experimented with that format a couple of times before, though in a slightly different context. For example, see the <a href="./010443.html">T180_8 wikipedia/freemind mashup</a>)</p>
+
+<p>Alternatively, I wonder if its possible to use a clustering algorithm to try to naively tease out any content clusters within the course, again maybe representing the result in a hierarchical Freemind representation (as demoed in <a href="./012128.html">Hierarchical Course Clusters from Course Profiles App</a> for the course codes declared by students using our <a href="./010855.html">Course Profiles Facebook application</a>).</p>
+
+<p>Ho hum - too many things I could do, no time to do any of them... :-(<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/open%20content" rel="tag">open content</a>, <a href="http://technorati.com/tag/%20oer" rel="tag"> oer</a>, <a href="http://technorati.com/tag/%20xml" rel="tag"> xml</a>, <a href="http://technorati.com/tag/%20opml" rel="tag"> opml</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 12, 2008 05:11 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>I just thought I ought to point out that some of the images/audio/video etc that are embedded in OpenLearn units have their own rights attributions and have not been released under the full creative commons licence as has the rest of the content.  Where this happens, the rights agreed by the owner of the asset have been displayed in the textual content beside the asset.</p>
+
+<p>As a result, it is risky to separate the assets from the text for re-use in case you (or some-one else consuming one of the feeds) misses the rights and breaches the item's terms.  </p>
+
+<p>That's why we've not done this kind of OPML of assets for the units ourselves.  It would be possible to include the rights in DC or CC tags within such a feed, but since there's no asset level metadata for each asset to pick up rights info from, you're reduced to scanning the original XML, and that's messy and unreliable.</p>
+
+<p>Oh and BTW we've found a fault with our guest access for RSS feeds, so maybe your problems will go away after our next release.  </p>
+<span class="comments-post">Posted by: <a href="mailto&#58;j&#46;m&#46;gray&#64;open&#46;ac&#46;uk">Jenny Gray</a> at February 13, 2008 01:17 PM</span>
+</div>
+<div class="comments-body">
+<p>"It would be possible to include the rights in DC or CC tags within such a feed, but since there's no asset level metadata for each asset to pick up rights info from, you're reduced to scanning the original XML, and that's messy and unreliable."</p>
+
+<p>I argued years ago for some sort of provenance attribute in e.g. image tags in the OU schema, and a license attribute would make sense too.</p>
+
+<p>Given that a sizeable chunk of OpenLearn funding has ben spent on rights clearance, it seems a bit odd that you not making appropriate use of metadata and that there isn't a clear way of processing the XML feed automagically so that rights can be recoginised and addressed, and images swapped out/replaced by a rights notice and a link back to OpenLearn, if necessary...</p>
+
+<p>...or something like that ;-)</p>
+
+<p>"Oh and BTW we've found a fault with our guest access for RSS feeds, so maybe your problems will go away after our next release."</p>
+
+<p>If I wasn't so busy, I'd find the email where you said there weren't any problems with that horrible guest authentication hack I think you're using, and it must be something wrong at my end...!</p>
+
+<p>When's OpenId coming onstream by the way? ;-) And how about OAuth?! ;-)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at February 13, 2008 01:41 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

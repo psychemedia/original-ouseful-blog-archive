@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Visualising OpenLearn Course Listings</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010501.html" title="Visualising OpenLearn Course Listings: Prequel" />
+
+<link rel="next" href="./010503.html" title="Time to &quot;Tangle&quot; OpenLearn Forums and Chat?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010501.html">&laquo; Visualising OpenLearn Course Listings: Prequel</a> |
+
+<a href="./">Main</a>
+| <a href="./010503.html">Time to "Tangle" OpenLearn Forums and Chat? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 31, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Visualising OpenLearn Course Listings</h3>
+
+<p>In the previous post (<a href="./010501.html">Visualising OpenLearn Course Listings: Prequel</a>) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be uploaded to the <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> visualisation tool.</p>
+
+<p>In this post, I'll quickly demonstrate several possible visualisations, leaving a fuller discussion of the pros, cons, mertis and otherwise of each technique to a series of later posts.</p>
+
+<p>If you want to create your own visualisations, you can find the data here: <a href="http://services.alphaworks.ibm.com/manyeyes/data/SO2G2IsOtha6f-UCD1p2I2-">OpenLearn unit listing data (as of 28/7/07)</a>.<br />
+<hr><br />
+<h2>OpenLearn Treemap</h2><br />
+Treemaps provide a powerful way of visualising hierarchical data. This view shows how we can navigate organise <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6j-Ure3r2I2-">OpenLearn Units by Subject area</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292437026710690"><img src="http://lh5.google.com/tony.hirst/Rq8CfG4pJKI/AAAAAAAAAQI/x8VfivYuqlU/s800/openlearnManyEyesTreemap1.png" /></a></p>
+
+<p>The labels of each of the smallest inner boxes correspond in this case to OpenLearn unit codes.</p>
+
+<p>You might also notice a further level of structure, specifically boxed groupings of courses <i>within</i> a Subject area (groups of cells bounded by a purple(?) or grey(?) line, rather than the white lines separating individual cells). These represent groupings at the level of the <em>originating</em> Open University course (in many cases, several OpenLearn units are derived from a single Open University course).</p>
+
+<p>The following tree map explores the relationship between originating courses and OpenLearn Units in a clearer way:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292424141808786"><img src="http://lh6.google.com/tony.hirst/Rq8CeW4pJJI/AAAAAAAAAQA/Qe6pJoDW3P8/s800/openlearnManyEyesTreemap2.png" /></a></p>
+
+<p>(To generate new views on the Treemap, just reorder the column headings.)</p>
+
+<p><h2>OpenLearn Matrix View</h2><br />
+The <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha600kvfUt2I2-">OpenLearn Units matrix view</a> can be used to illustrate how many units a particular course has contributed to OpenLearn, ordered by subject area. This view is useful for revealing how originating courses may actually contribute to several different subject areas:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292368307233890"><img src="http://lh5.google.com/tony.hirst/Rq8CbG4pJGI/AAAAAAAAAPo/InhLdiaXCVs/s800/openlearnManyEyesMatrix.png" /></a></p>
+
+<p>The number in each circle is a count of how many units carry each originating course code label.</p>
+
+<p><br />
+<h2>OpenLearn Units Network Diagrams</h2><br />
+Netowork diagrams can be used to show up relationships between elements of the data set. This view shows the relationship between <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6cB-BlHt4I2-">Subject Areas and content analysis generated tags</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292449911612594"><img src="http://lh4.google.com/tony.hirst/Rq8Cf24pJLI/AAAAAAAAAQQ/HOjU0P_mZ_0/s800/openlearnManyEyesNetwork2.png" /></a></p>
+
+<p>Unlike the Treemap visulisation, in which different views can be obtained form a single visualisation widget, different network maps must created as different visualisations by selecting attribute pairs:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292454206579906"><img src="http://lh5.google.com/tony.hirst/Rq8CgG4pJMI/AAAAAAAAAQY/WBdVmhBgkUU/s800/openlearnManyEyesNetworkSelect.png" /></a></p>
+
+<p>This view shows <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6u-EgZQr2I2-">unit titles arranged around subject areas</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292406961939586"><img src="http://lh6.google.com/tony.hirst/Rq8CdW4pJII/AAAAAAAAAP4/jjlDmIscu-I/s800/openlearnManyEyesNetwork1.png" /></a></p>
+
+<p>Although network diagrams can get cluttered, they can reveal interesting relationships. If OpenLearn users were allowed to tag units, a visualisation of connections between user tags and courses or user tags and subject areas could prove informative.</p>
+
+<p><h2>OpenLearn Tag Cloud</h2><br />
+The Many Eyes Tag Cloud visualisation parses processed input text to procude a tag cloud of the most frequently occuring terms. For example, here is a <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha63_kPTZr2I2-">tag cloud of OpenLearn content analysis tags</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292394077037682"><img src="http://lh3.google.com/tony.hirst/Rq8Ccm4pJHI/AAAAAAAAAPw/yXqKteimKWY/s800/openlearnManyEyesTagcloud.png" /></a></p>
+
+<p>The same visualisation widget can also be used to display clouds for other data fields.</p>
+
+<p>Unfortunately, the tag cloud cannot be used to link to external pages or pop-up large blocks of text (for example, complete unit descriptions would be useful in this case).</p>
+
+<p><hr /><br />
+I'm not sure that the idea behind Many Eyes was to prototype website navigation tools, but if you consider templated websites - like OpenLearn - as big databases, I think it follows naturally!</p>
+
+<p>Time allowing, I'll pop up a series of separate posts, one per visualisation, looking at each view in a little more detail.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July 31, 2007 11:23 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Hum, interesting!</p>
+
+<p>I wonder how complicated it would be to do something like that ourselves, or at least provide the right data format automatically to make use of the external system.  One for the Technical Director I think!</p>
+
+<p>Also, regarding tagging, you may wish to know that we're implementing user tagging of courses at the moment - release in the autumn some time.  For those who have OpenLearn eRoom access, see http://alps/eRoomReq/Files/oci/work/0_d142/L29%20L30%20L31.doc</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;j&#46;m&#46;gray&#64;open&#46;ac&#46;uk">Jenny Gray</a> at July 31, 2007 01:39 PM</span>
+</div>
+<div class="comments-body">
+<p>"I wonder how complicated it would be to do something like that ourselves"</p>
+
+<p>Now there's an idea - let's build our own... ;-)</p>
+
+<p>I had a quick scout around and a couple of possibilities present themselves:</p>
+
+<p>Roomformilk ( http://www.roomformilk.com/ ) is an aggregator with treemap view apparently based around this treemap PHP library: http://neurofuzzy.net/2006/04/28/treemap-php-source-code/</p>
+
+<p>SVG is maybe another way to go? For example, here's a proof-of-concept OPML2SVG treemap XSLT stylesheet: http://protocol7.com/archives/2002/03/17/opml_to_svg/</p>
+
+<p><br />
+There are a couple of interesting javascript libraries around already that may be worth looking at too: jsviz ( http://www.kylescholz.com/blog/projects/jsviz/ ) and the (commercial looking) yFiles Web 2.0 Libraries ( http://www.yworks.com/en/products_yfiles_web_about.htm  )<br />
+  <br />
+If the Many Eyes app supported clickable outlinks, it could be really useful as as navigation generating tool, I think?!</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at July 31, 2007 02:03 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

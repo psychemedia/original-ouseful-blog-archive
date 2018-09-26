@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Dirty Name Data in the OU Open Repository Online</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014951.html" title="The Library Moves On..." />
+
+<link rel="next" href="./014965.html" title="ORO Search by Name Pipes Interface" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014951.html">&laquo; The Library Moves On...</a> |
+
+<a href="./">Main</a>
+| <a href="./014965.html">ORO Search by Name Pipes Interface &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 06, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Dirty Name Data in the OU Open Repository Online</h3>
+
+<p>Now I'm not one to criticise the Library (?!;-), but over the weekend I've been playing with one of the Library's newest collections, the <a href="http://oro.open.ac.uk">Open Repository Online</a>, with a view to visualising who's co-authored papers in the collection with whom. And looking through the author information provided in the results listing for a search on a particular author name, I have to take issue with one or two things...</p>
+
+<p>Like the considerable amount of ambiguity in both the naming convention and the stylistic presentation used for name references.</p>
+
+<p>For example, the following names all appear in the author information for papers returned from an ORO name search on the author "<a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">pillinger</a>":<br />
+<ul><li>Pillinger, C. T.</li><br />
+<li>Pillinger, C.T.</li><br />
+<li>Pillinger, Colin T.</li><br />
+<li>Pillinger, Colin</li><br />
+<li>Pillinger, C.T, (or maybe you could read this as "Pillinger, C.T")</li></ul>(I'm also guessing that <em>Semjonova, L. F.</em> and <em>Semenova, L.F.</em> are the same person (apologies to both parties if not)?)</p>
+
+<p>If I was to construct a table of author names, using direct/literal pattern matching of text strings to match individuals across different article references, all of the above <em>Pillinger</em> variants would appear as <em>different</em> authors, because the text strings are different and simple string matching is dumb.</p>
+
+<p>(This is just one of the issues that was mentioned at the CRiG barcamp a month or so ago (<a href="./014735.html">CRIG DRY (Don't Repeat Yourself) Metadata Barcamp</a>), in particular by the <a href="http://names.mimas.ac.uk/">MIMAS Names project</a>, which "is going to scope the requirements of <abbr title="United Kingdom">UK</abbr> institutional and subject  repositories for a service that will reliably and uniquely identify individuals and institutions" in order to "provide important information about the future usefulness of a name authority  service for institutional and subject-based repositories, and other applications  beyond the repository sector." One of that things that was discussed then related to reconciling repository name references with staff records, but for data end users, if different presentation modes (as above) are used to reference the same individual, then simple pattern matching algorithms used in mining the data are seen to be brittle, unless the data user seeks to normalise the data in some way. Which may be advisable..? That is, <em>always</em> assume the data is messy/noisy...).</p>
+
+<p>Where the information is the source of it's own metadata, or where appropriate web page markup - such as microformats* and cool URIs - provide implicit metadata that the adventuous can build hacks around, it's quite handy if the literal textual representation of the data is coherent/self-consistent; and in the case of ORO, it doesn't appear to be...</p>
+
+<p><small>*though bear in mind this recent second look at microformats from an accessibility point of view from the BBC: <a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml">Removing Microformats from bbc.co.uk/programmes</a>!</small></p>
+
+<p>So this is where I start to wonder where the Library fits in to the workflow of online university research repositories if they are to be useful to data users? For example, what do we conclude if the Library can't guarantee the quality of data in their own, most recent, collection (which was born <em>de novo</em> only a couple of years ago)? It seems to me that "reference gardening" (which must one the lousiest jobs imaginable!), is one of the areas where they could really add value, although ideally the information would be collected/submitted in a way that removed ambiguity and ideally guaranteed conformity with some standard, authoritative naming scheme.... But that will never happen...</p>
+
+<p>So whilst I appreciate that no matter how many checks and balances you put in place, there is always going to be mess. And maybe the Library can help by finding ways to help users cope with the inevitable mess... Entropy always wins out...</p>
+
+<p>Ideally, of course, the data would be clean/correct, and if it wasn't that ideally any errors, once found, would be corrected. But maybe there's also scope for the Library to accept that the data is a mess, and help data patrons find heuristics for cleaning it and removing some of the noise. For example, as well as helping users write advanced (and robust) search queries (like how to use advanced search operators and set up saved search alerts), I wonder whether they should also maintain a set of 'reference functions' that users of (messy) "data as metadata" can apply as heuristics to try and tidy up textual data.</p>
+
+<p>So for example, the fiollow javascript function will (I think? Err...) replace a spelled out forename in the above name referencing style with an initial:</p>
+
+<p><tt>function tidyName2(s){return s.replace(/(,\s*[A-Z])[a-z]*/g, "$1.");}</tt></p>
+
+<p>e.g. <em>Pillinger, Colin T.</em> will become <em>Pillinger, C. T.</em></p>
+
+<p>And this one will remove the punctuation:</p>
+
+<p><tt>function tidyName3(s){return s.replace(/[\s ,\.]*/g,"");}</tt></p>
+
+<p>e.g. <em>Pillinger, C. T.</em> will become <em>PillingerCT</em></p>
+
+<p>By applying several of these heuristics, we can produce a name format that removes some of the typographical ambiguity, though losing an initial may be going too far? e.g. going from <em>PillingerCT</em> to <em>PillingerC</em> may be the wrong thing to do, even though it would set up an identity between these two original forms: <em>Pillinger, Colin</em> and <em>Pillinger, C. T.</em></p>
+
+<p>That said, how many library staff in general even know what a regular expression is, let alone how to construct one to help a 'search a replace' patron tidy a data set in a text editor or even in Word (<a href="http://office.microsoft.com/en-us/help/HA010873051033.aspx">Add power to Word searches with regular expressions</a>)?<br />
+<a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml"></a><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/library" rel="tag">library</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>, <a href="http://technorati.com/tag/" rel="tag"></a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July  6, 2008 10:33 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>http://orlabs.oclc.org/viaf/LC|n+88128999</p>
+
+<p>http://orlabs.oclc.org/viaf/BNF|FRBNF123588880</p>
+
+<p>http://errol.oclc.org/laf/n+88128999.html</p>
+<span class="comments-post">Posted by: <a href="http://orweblog.oclc.org">lorcan dempsey</a> at July  7, 2008 04:33 AM</span>
+</div>
+<div class="comments-body">
+<p>Isn't this a good argument for the Semantic Web? When we talk about authors, we do not talk about character strings but about objects (persons). So, regardless whether we talk about TBL or Berners-Lee, since we point to an URI, e.g, http://dbpedia.org/resource/Tim_Berners-Lee, we know who we mean.</p>
+<span class="comments-post">Posted by: <a href="http://bloggingullrich.blogspot.com">Carsten</a> at July  7, 2008 05:59 AM</span>
+</div>
+<div class="comments-body">
+<p>Whilst there are authoritative name services out there, do they offer service that will accept a scruffy/messy name and send back estimates of authoritative names, maybe with levels of confidence? eg is this what http://orlabs.oclc.org/viaf/search/VIAF?query=local.personalName+all+%22pillinger%20colin%20 demos? </p>
+
+<p>With e.g. http://worldcat.org/identities/lccn-n88-128999 how do I generate "lccn-n88-128999" without a handshake and some guesswork? Also, it'd be nice to have a switch http://worldcat.org/identities/lccn-n88-128999?limit=alt_id which just returned the alternative names?</p>
+
+<p>One thing the post got me thinking about, and about which I need to ponder a bit more, are cases where web page data essentially is its own metadata. In which case you need to expose the data in a consistent way (like the structure of author names, or references to particular journals); I guess an alternative would be to admit mess at the rendered page view ("Pillinger, Colin" or "Pillinger, C.T.") as long as the names are marked up with an authoritative link or microformat eg [a href="http://dbpedia.org/resource/Tim_Berners-Lee"]Berners Lee, T[/a] or [a href="http://dbpedia.org/resource/Tim_Berners-Lee"]Berners Lee, Tim[/a] would both be reconcileable back to the same person.... In which case I guess a 'presentation layer' service could accept mess ("Berners Lee, T", "Tim Berners Lee"), leave it as mess in the presentation layer, but disambiguate/reconcile the identities with another layer of info from the gardener (the [a href="http://dbpedia.org/resource/Tim_Berners-Lee"]Berners Lee, T[/a] link)?</p>
+
+<p>In this way, the info one layer down is both potentially more authoritative, but also heuristic?! I guess a confidence measure could be applied in the link? [a href="http://dbpedia.org/resource/Tim_Berners-Lee" name="Tim Berners Lee, (confidence 0.82)"]Berners Lee, T[/a]</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at July  7, 2008 12:24 PM</span>
+</div>
+<div class="comments-body">
+<p>Any ambiguity in the naming conventions is surely due to the different conventions of the publishers where this material was originally published. If the source data isn't consistent how can anything aggregating that be consistent?</p>
+
+<p>Databases like Scopus and Web of Science are also working on ways to pull together authors which publish under different names. It seems as if they're using affiliation as a way of linking them together, but it's difficult to tell how they're doing it technically. </p>
+<span class="comments-post">Posted by: <a href="mailto&#58;c&#46;h&#46;hunt&#64;open&#46;ac&#46;uk">Clari Hunt</a> at July  7, 2008 02:33 PM</span>
+</div>
+<div class="comments-body">
+<p>Sorry, I guess we haven't done a very good job of letting people know that the ORLABS Identities service is in production as WorldCat Identities now.  Anything you can do in ORLABS, you can do in WorldCat Identities.</p>
+
+<p>The question asked above was, how do you get a WorldCat Identities URI?  Go to the WorldCat Identities search page (http://worldcat.org/identities) and throw as dirty a name as you like at it.  It will come back with a ranked list of suggestions.</p>
+
+<p>Much to my surprise, Pillinger, C. T. seems to be the way the Library of Congress has controlled his name, even though they know he is also Colin T.</p>
+
+<p>Thom Hickey has a nice post on how to interface with WorldCat Identities here: http://outgoing.typepad.com/outgoing/2008/06/linking-to-worl.html<br />
+</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;levan&#64;oclc&#46;org">Ralph LeVan</a> at July  7, 2008 04:32 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

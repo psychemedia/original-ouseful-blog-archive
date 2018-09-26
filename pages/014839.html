@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Emergent Structure in the Digital Worlds Uncourse Blog Experiment</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014803.html" title="The Cost of Learning" />
+
+<link rel="next" href="./014840.html" title="Uncovering a Little More Digital Worlds Structure" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014803.html">&laquo; The Cost of Learning</a> |
+
+<a href="./">Main</a>
+| <a href="./014840.html">Uncovering a Little More Digital Worlds Structure &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 16, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Emergent Structure in the Digital Worlds Uncourse Blog Experiment</h3>
+
+<p>In an earlier post on <a href="./013966.html">Disaggregating the Notion of PLEs #1 - PCVs: Personal (Portable?) Content Views</a>, I showed how  by using blog post tags and categories in the <a href="http://digitalworlds.wordpress.com">Digital Worlds uncourse blog experiment</a> the original steady stream of posts could be disaggreated into various different content views by subscribing to appropriate RSS feeds from the blog.</p>
+
+<p>In this post, I'm just putting down a marker (in part as preparations for a presentation I have to give on Thursday) about the <em>emergent</em> or <em>impliceit</em> structure that is embodied in Digital Worlds through internal blog post links - that is, posts on Digital Worlds that refer to other Digital Worlds posts.</p>
+
+<p>One of the nice features of the Wordpress platform is that if you reference another post on the blog, a trackback/pingback is automatically generated:</p>
+
+<p><a href="http://digitalworlds.wordpress.com/2008/03/17/making-pictures-move/" title="DigitalWorlds trackbacks"><img src="http://farm4.static.flickr.com/3013/2584276120_5ea1b7fafd.jpg" alt="DigitalWorlds trackbacks" height="184" width="500" /></a></p>
+
+<p>By exporting the blog posts, along with comments/trackbacks, as an XML file, it's trivial to parse the XML file to provide a list of URL pairs that correspond to pingbacks between blog posts on the Digital Worlds uncourse blog. So for example, referring to the above figure which shows the pingnbacks to a post on "Making Pictures Move" from three other posts, we would get three URL pairs (with the pairs containing one of the above URLs and the "Making Pictures Move" page URL.</p>
+
+<p>By uploading these pairs to <a href="http://services.alphaworks.ibm.com/manyeyes/home%22">Many Eyes</a>, we can   use the Many Eyes Netowrk visulisation tool to visualise the emergent structure of the blog.</p>
+
+<p>So for example, here we have a short run of three separate posts, where "Our Heavens in 3D" refers to an earlier post on "Our World in 3D", which in turn refers to a Friday Fun posts about Google Earth and Microsoft Virtual Earth (the numbers are datestamps corresponding to the date the post was published).</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3057/2584295644_016fccac1b.jpg" alt="digital worlds" height="227" width="370" /></a></p>
+
+<p>As well as short linear runs, there are also more complex emergent structures. for example, in the following case, a run starts with a Friday Fun post on digital stroytelling that then 'forks' at the 'unfortunate series of events' post, one branch going off to explore emergent stories, another to explore game narrative structures and how they may be described in the game design and release process.</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Digital worlds - emergent structure"><img src="http://farm4.static.flickr.com/3264/2584311380_c3175af017.jpg" alt="Digital worlds - emergent structure" height="364" width="500" /></a>.</p>
+
+<p>In a couple of cases, there are examples of posts that refer to two or more previous posts, one or more of which also refer to one or more of the other referred to posts. For example, in the case below, the post on "Three Lives" refers to both "Upping the stakes" and "Who's Best", and the "Upping the Stakes" post also refers to "Who's Best".</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Digital Worlds structure"><img src="http://farm4.static.flickr.com/3045/2583496237_dcfd58bfcd.jpg" alt="Digital Worlds structure" height="156" width="500" /></a></p>
+
+<p>In some parts of the graph, the structure is actually quite messy - and wouldn't be the sort of structure you might try to design in to the materials in an explicit, high level navigational way. </p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Digital Worlds structure"><img src="http://farm4.static.flickr.com/3001/2583538671_9f95321992.jpg" alt="Digital Worlds structure" height="403" width="500" /></a></p>
+
+<p><br />
+I'm not too sure where this is going yet, or whether the emergent link structure is rich enough for me to say anything about anything ;-) One thing the Many Eyes visualisation doesn't bring out is the directed nature of the link graph, so I maybe need to create an output file that will visualise the graph using something like GraphViz...</p>
+
+<p>Also on the to do list is to have a look at the category/tag structure, and see if there are any differences cf. the emergent link structure.</p>
+
+<p>ps for my own reference, here's the abstract I need to write the presentation around...</p>
+
+<blockquote>Digital Worlds - A Self-Disaggregating Blogged Course Experiment
+
+<p>Over the last 3 months or so, I have been drafting materials for a poterntial level 1 Technology short course on digital media and computer game design in public on an externally hosted blog - http://digitalworlds.wordpress.com</p>
+
+<p>The inspiration behind the approach - creating educational materials by blogging them - is twofold:</p>
+
+<p>- firstly, the Open University Relevant Knowledge programme, which delivers course materials in part via the web, using web pages that are each about the length of a blog post…</p>
+
+<p>- secondly, the Open University’s OpenLearn website, which makes content available via RSS feeds.</p>
+
+<p>Given that the OU is making materials available that look like they could have been delivered via a blog, I thought I’d close the loop - and doodle the production of some example materials by actually blogging them…</p>
+
+<p>In this presentation, I will give an overview of the Digital Worlds blog and describe some of the innovations in production and presentation that arise from the use of certain publishing platforms - such as blog engines.</p>
+
+<p>In particular, I will show how by making use of blog categories it is possible generate separate views over the content either on a page level (click on the category tag on the blog and see a reverse chronological river of posts view of posts in that category) or feed level. Category and tag level RSS feeds can then be piped into a webdesktop such as Netvibes of Pageflakes and used to re-present the content at at a topic level in a form that suits the user. In a sense, RSS feeds from appropriatley chosen ctegories allows the 'course' to become self-disaggregating.</p>
+
+<p>Through the use of 'trackbacks' - comment links that associate legacy posts with ones that reference them at a later date, it is possible to view the blog engine as a slef-maintaining, non-linear authroing environment. By subscribing to comment feeds from a particular post on a topic that is of interest to the reader, they can maintain current awareness about the topic if later comments or trackbacks from other posts referencing the original article are published.</p>
+
+<p>Finally, I will discuss how publishing the content in public allows for user comments at the drafting stage, as well as exposing the content to the major web search engines, potentially building an audience for an official release of the course. The presentation will close with a consideration of how a formal course offering based on material drafted in public via a blog is likely to diiffer from the live, public offerings of the blog experiment.<br />
+</blockquote><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/digitalworlds" rel="tag">digitalworlds</a>, <a href="http://technorati.com/tag/emergent%20structure" rel="tag">emergent structure</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 16, 2008 04:06 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

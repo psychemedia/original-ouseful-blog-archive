@@ -1,0 +1,1354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: February 2008 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2008_01.html" title="January 2008" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2008_03.html" title="March 2008" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_01.html">&laquo; January 2008</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2008_03.html">March 2008 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">February 29, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013706"></a>
+<h3 class="title">Embed Scribd iPaper in Grazr Demo</h3>
+
+When iPaper launched a couple of weeks ago, I thought it looked like an ideal fit for Grazr, to go along with audio and video embedding (e.g. Youtube Playlists and Related Videos, (and Neulio) All Mixed Up With Yahoo Pipes...
+<!--
+<p>When iPaper launched a couple of weeks ago, I thought it looked like an ideal fit for <a href="http://grazr.com">Grazr</a>, to go along with audio and video embedding (e.g. <a href="http://blogs.open.ac.uk/Maths/ajh59/012372.html">Youtube Playlists and Related Videos, (and Neulio) All Mixed Up With Yahoo Pipes and Grazr Goodness</a>) and Slideshare embedding (<a href="http://blogs.open.ac.uk/Maths/ajh59/011999.html">Viewing Presentations in Grazr via Slideshare RSS Feeds</a>).</p>
+
+<p>My thinking was, if a feed contains a PDF as an enclosure, Grazr could take the liberty of embedding it in the Grazr view.</p>
+
+<p>Anyway, just to check that Grazr could handle the embedding just from the 'can I embed iPaper in Grazr anyway?' point of view, I put together a <a href="http://blogs.open.ac.uk/Maths/ajh59/iPaperTest.opml">minimal OPML feed</a> containing an (escaped) iPaper embed script in an OPML outline text element... and of course, <a href="http://grazr.com/gzpanel.html?pl=ou&amp;view=o&amp;theme=gloss_silver&amp;file=http://blogs.open.ac.uk/Maths/ajh59/iPaperTest.opml">it works fine</a> :-)<br />
+<div style="height:350px;width:600px;"><a href="http://grazr.com/read?pl=ou&file=http://blogs.open.ac.uk/Maths/ajh59/iPaperTest.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?pl=ou&amp;file=http://blogs.open.ac.uk/Maths/ajh59/iPaperTest.opml"></script></div><br />
+In order to write a quick script to take an RSS feed with PDF enclsoures and links and produce and OPML variant of that feed contining the embedded  documents, we need a way of getting a URL to the iPaper representation of a PDF from the PDF URl - and it looks like the <em>scribd.Document.getDocFromUrl</em> API call will do just that  <em>in a Javascript context</em> (ref: <a href="http://www.scribd.com/platform/documentation/viewer">Scribd Platform Documentation - iPpaer Javascript API</a>; thanks, Jason :-)</p>
+
+<p>What I want to do though, is write a quick PHP script that will get the doc id from a URL, that I can then paste into an escaped embed code in a generated OPML file. The <a href="http://www.scribd.com/platform/documentation/api?method_name=docs.uploadFromUrl">full iPaper API</a> offers a <span style="font-style: italic;">docs.uploadFromUrl</span> call which looks promising, but I wonder what happens on the backend? Does it look to see if the document has already been uploaded, and if so just returns the doc id? Or does it always upload the pdf? Or would a separate&nbsp; <span style="font-style: italic;">docs.checkIfAlreadyUploadedFromURL</span> call be useful, that passes back the doc id if it's already there?</p>
+
+<p>PS I notice there's an experimental <a href="http://www.scribd.com/platform/resources/libraries">PHP wrapper for the iPaper API</a>, so I'll try and find time to give it a go over the weekend... Unless the Grazr folks get iPaper embedding working 'natively' in Grazr&nbsp; first, of course... ;-) <br />
+ <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ipaper" rel="tag">ipaper</a>, <a href="http://technorati.com/tag/scribd" rel="tag">scribd</a>, <a href="http://technorati.com/tag/%20grazr" rel="tag"> grazr</a>, <a href="http://technorati.com/tag/pdf" rel="tag">pdf</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013706.html">01:31 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13706" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="013699"></a>
+<h3 class="title">What's Everyone Twittering About?</h3>
+
+I gave myself half an hour for this, all told, which means I've only 5 mins left to write this post, so the demo isn't as far on as I'd hoped (I got sidetracked, needless to say...) Anyway, I've started...
+<!--
+<p>I gave myself half an hour for this, all told, which means I've only 5 mins left to write this post, so the demo isn't as far on as I'd hoped (I got sidetracked, needless to say...)</p>
+
+<p>Anyway, I've started thinking about <a href="http://www.google.co.uk/search?q=feed+annotation+stream">feed annotation streams</a> again, so I put together a minimal pipe: <a href="http://pipes.yahoo.com/ouseful/twittercas">basic twitter annotation feed</a></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2299264595/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3181/2299264595_d6b01c8c44.jpg" alt="(null)" style="border: 0pt none ;" height="208" width="500" /></a></p>
+
+<p>(The actual pipe has changed a bit - now you just need to add your Twitter username, and it will grab your twitter friends feed.)</p>
+
+<p>What the pipe does is just loop through every item in an RSS feed, run the description through the Yahoo Term Extractor/content analysis web service, use the outcome of that service (i.e. the extracted terms) as the search term(s) in a normal Yahoo search, and then replace each twitter feed item link with a link to the top search result found based on content analysis of that tweet.</p>
+
+<p>The extratced term is actually placed in the author attribute of each item for safe keeping.</p>
+
+<p>Got that..? ;-) Easy peasy - tiny pieces, each joined one to the next...</p>
+
+<p>Anyway, what prompted me to post was this little bit of round tripping...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2299278183/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2020/2299278183_cffb1ac01b.jpg" width="500" height="127" alt="2008-02-29_0954" style="border:0"/></a></p>
+
+<p>Brian K tweeted:<br />
+"Of interest to @PeteJ and @adrianstevenson? "Lookout MySpace: Facebook targets bands and filmmakers" - http://rurl.org/jec"</p>
+
+<p>Yahoo extracted: <em>filmmakers lookout targets</em></p>
+
+<p>Yahoo search returned, as top hit: <a href="http://blogs.zdnet.com/social/?p=413">Lookout MySpace: Facebook targets bands and filmmakers | The Social Web | ZDNet.com</a> with URL <em>http://blogs.zdnet.com/social/?p=413</em></p>
+
+<p>Brian K had included in his tweet the shortened URL <a href="http://rurl.org/jec"><em>http://rurl.org/jec</em></a>, which actually resolves to... <em>http://blogs.zdnet.com/social/?p=413</em></p>
+
+<p>PS hmmm - has twitter just died?<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/fastreams" rel="tag">fastreams</a>, <a href="http://technorati.com/tag/feedannotation%20" rel="tag">feedannotation </a>, <a href="http://technorati.com/tag/%20twitter" rel="tag"> twitter</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013699.html">10:08 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13699" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 28, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013685"></a>
+<h3 class="title">Facebook Apps Webinar...</h3>
+
+So I just got the record for over-running on my rehearsal for the Higher Ed Experts webinar on Facebook Applications 101 and Beyond: How to develop Facebook apps to engage students next week, and now have to trim the presentation...
+<!--
+So I just got the record for over-running on my rehearsal for the Higher Ed Experts webinar on <a href="http://www.higheredexperts.com/webinar/en/webinars/?tx_seminars_pi1%5BshowUid%5D=15">Facebook Applications 101 and Beyond: How to develop Facebook apps to engage students</a> next week, and now have to trim the presentation down somewhat...
+
+So what? Well.... apart from the fact that if you're really quick you might still be able to register for the webinar series, I think I might be tempted to start exploring this podcasting lark, a bit... err... maybe... ;-)
+  <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013685.html">06:51 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13685" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="013661"></a>
+<h3 class="title">OU Library "One Stop Search" - Err, What Happened to usability?</h3>
+
+Now let's all count together.... One click... Two click... Note that in the above the user has moved to a different domain, too... Three credentials... And another domain... Maybe I should reiterate that point...? I give my bank credentials away...
+<!--
+<p>Now let's all count together....</p>
+
+<p><h1><em>One</em> click...</h1><br />
+   <br />
+<a href="http://www.flickr.com/photos/psychemedia/2296537311/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3119/2296537311_628cbee6b4.jpg" alt="2008-02-28_0026" style="border: 0pt none ;" height="339" width="500" /></a></p>
+
+<p><h1><em>Two</em> click...</h1></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297339384/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3078/2297339384_68ecb26176.jpg" alt="2008-02-28_0032" style="border: 0pt none ;" height="73" width="500" /></a></p>
+
+<p>Note that in the above the user has moved to a different domain, too...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2296546743/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3006/2296546743_af55195d46.jpg" alt="2008-02-28_0033" style="border: 0pt none ;" height="47" width="414" /></a></p>
+
+<p><h1><em>Three</em> credentials...</h1></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297342100/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3151/2297342100_5c72fc8568.jpg" alt="2008-02-28_0034" style="border: 0pt none ;" height="265" width="478" /></a></p>
+
+<p>And another domain...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297343268/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3231/2297343268_c5eb69695c.jpg" alt="2008-02-28_0035" style="border: 0pt none ;" height="47" width="448" /></a></p>
+
+<p>Maybe I should reiterate that point...?</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297344582/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3201/2297344582_c0df171b6f.jpg" alt="2008-02-28_0035" style="border: 0pt none ;" height="423" width="500" /></a></p>
+
+<p>I give my bank credentials away like that, and when I ask where all my cash went, I guess they'll say: stoopid, <em>stoopid</em>, <strong>STOOPID</strong>, sucker - you GAVE it away...</p>
+
+<p>Anyway...</p>
+
+<p><h1><em>Four</em> click...</h1></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297348064/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3242/2297348064_67df3ea01d.jpg" alt="2008-02-28_0038" style="border: 0pt none ;" height="211" width="500" /></a></p>
+
+<p>Still on the foreign, non-OU domain... and it arguably gets worse from a security point of view:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297358848/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3165/2297358848_a164fc3790.jpg" alt="2008-02-28_0045" style="border: 0pt none ;" height="147" width="500" /></a></p>
+
+<p>Hurrah...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2297350210/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3148/2297350210_a6e9107889.jpg" alt="2008-02-28_0039" style="border: 0pt none ;" height="328" width="500" /></a></p>
+
+<p>The observant among you will notice my authenticated user details, (the <em>Tony Hirst</em> etc stuff below the toolbar) seems to have disappeared... so am I logged in or not? Have I just succumbed to a phishing attack? (Though why anyone would want my OU login details, I don't know...)</p>
+
+<p>Anyway, I guess I can search now...</p>
+
+<p><h1><em>Five</em> click...</h1><br />
+<a href="http://www.flickr.com/photos/psychemedia/2297355958/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3182/2297355958_b14e64e1b2.jpg" alt="2008-02-28_0043" style="border: 0pt none ;" height="391" width="500" /></a></p>
+
+<p>Hmm,, ok, another click...</p>
+
+<p>And so it goes - the OU Library's new 'One Stop Search'... tested and approved in accordance with usability testing, apparently...</p>
+
+<p>Ho hum.. now everyone...ready again... all together now.... and:</p>
+
+<p><h1>One click...</h1></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2296578761/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3190/2296578761_fa86741395.jpg" width="500" height="385" alt="2008-02-28_0055" style="border:0"/></a></p>
+
+<p>Personalised results, apparently, too, according to my search history, presumably, and all the other interests Google has learned I have... (that said, I'm not convinced personalised results are that effective...yet...certainly another test on Google cookie free browser (though from the same IP address) gave the same top results...)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/baiting" rel="tag">baiting</a>, <a href="http://technorati.com/tag/library" rel="tag">library</a>, <a href="http://technorati.com/tag/%20website" rel="tag"> website</a>, <a href="http://technorati.com/tag/%20design" rel="tag"> design</a>, <a href="http://technorati.com/tag/%20usability" rel="tag"> usability</a>, <a href="http://technorati.com/tag/%20sucks" rel="tag"> sucks</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013661.html">12:56 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13661" onclick="OpenComments(this.href); return false">Comments (5)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 27, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013636"></a>
+<h3 class="title">UK Earthquake</h3>
+
+I guess some other people felt it too.... I'm in Milton Keynes, but it appears to have got around... What's interesting is that I canlt find a near real time live earthquake data map... [UPDATE 01.17 27/02/08 - got it:...
+<!--
+<p>I guess some other people felt it too.... I'm in Milton Keynes, but it appears to have got around...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2295231402/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3163/2295231402_39138d18f5.jpg" width="500" height="420" alt="2008-02-27_0113" style="border:0"/></a></p>
+
+<p>What's interesting is that I canlt find a near real time live earthquake data map...</p>
+
+<p>[UPDATE 01.17 27/02/08 - got it:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2294445025/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3216/2294445025_2e75b630d9.jpg" width="453" height="359" alt="2008-02-27_0116" style="border:0"/></a></p>
+
+<p>From here: <a href="http://earthquake.usgs.gov/eqcenter/recenteqsww/Quakes/us2008nyae.php#details">USGS Earthquake hazards program: Magnitude 4.7 - ENGLAND, UNITED KINGDOM</a></p>
+
+<p><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ukearthquake" rel="tag">ukearthquake</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013636.html">01:15 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13636" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 25, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013608"></a>
+<h3 class="title">gCalMap: Google Calendar and Calendar Map Views, Side By Side</h3>
+
+In a previous post (that got picked up by both Lifehacker and a wired.com blog, no less ;-) I described how to Display Google Calendar Events on a Map. Today, I got an email from Martin Wunderlich containing a couple...
+<!--
+<p>In a previous post (that got picked up by both <a href="http://lifehacker.com/350560/show-gcal-events-on-google-maps">Lifehacker</a> and a <a href="http://blog.wired.com/monkeybites/2008/01/killer-mashup-p.html">wired.com blog</a>, no less ;-) I described how to <a href="http://blog.wired.com/monkeybites/2008/01/killer-mashup-p.html">Display Google Calendar Events on a Map</a>.</p>
+
+<p>Today, I got an email from <a href=" http://www.martinwunderlich.com">Martin Wunderlich</a> containing a couple of queries about the mashup, that pointed me to a demo page displaying a calendar side by side with a Google map displaying the calendar feed.</p>
+
+<p>I've been meaning to do something like this for a week or two, so this was all the prompting I needed... Here then is a <a href="http://blogs.open.ac.uk/Maths/ajh59/calmaptest.php">side-by-side calendar agend view and map display mashup</a>.</p>
+
+<p><a href="http://www.flickr.com/photos/25451952@N00/2291706477/"><img src="http://farm4.static.flickr.com/3069/2291706477_6cd82e3963.jpg" style="border:0" /></a></p>
+
+<p>The view can be generated from a single (<em>cal</em>) argument passed via the url. For example, <em>http://blogs.open.ac.uk/Maths/ajh59/calmaptest.php?cal=u0aq4g3cjf6g6nnesa8mv0l77g@group.calendar.google.com</em>.</p>
+
+<p>The value of the <em>cal</em> argument is taken from the settings view of a public Google Calendar:</p>
+
+<p><a href="http://www.flickr.com/photos/25451952@N00/2291715651/"><img src="http://farm3.static.flickr.com/2035/2291715651_f2ef1145b7.jpg" style='border:0' /></a></p>
+
+<p>This calendar ID is then passed to the <a href='http://pipes.yahoo.com/ouseful/geocal'>geocal pipe</a> to obtain the KML feed that provides the map overlay, and also used to pull in the calendar agenda view.</p>
+
+<p>To display your own calendar, simply replace the calendar ID in the above example URL with the calendar ID for the calendar you wish to display...</p>
+
+<p>...or paste the calendar ID here to link to the gCalMap view:</p>
+
+<form method='get' action='http://blogs.open.ac.uk/Maths/ajh59/calmaptest.php'>
+<input type='text' size=65 name='cal' value='u0aq4g3cjf6g6nnesa8mv0l77g@group.calendar.google.com' /> <input type='submit' value='View gCalmap' /></form>
+
+<p>If you want to embed the view in your own web pages, you should be able to just embed the gCalMap page in an iframe.</p>
+
+<p>If I get a chance, I'll have a go at producing a customisable 'embed code' generator for the gCalMap view.</p>
+
+<p>Note that for the geocoding to work correctly, you must specify the location of each event in the calendar in the event's 'where' entry box.</p>
+
+<p>PS here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/013846.html">Google calendar events map embed code generator</a> - give it a gCal id and get an iframe containing a map view of the events in return...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013608.html">10:19 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13608" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 24, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013580"></a>
+<h3 class="title">Mapping School Catchment Areas, Approximately...</h3>
+
+Attending a public consultation evening about the proposed schools' reorganisation on the Isle of Wight a couple of weeks ago, one of the things that came out was that the schools 'listed' for closure under each option in the public...
+<!--
+<p>Attending a public consultation evening about the proposed schools' reorganisation on the Isle of Wight a couple of weeks ago, one of the things that came out was that the schools 'listed' for closure under each option in the public consultation document were only intended to be <em>indicative</em> of what the effect of choosing each option might be. As I now understand it, once an option is decided upon, another round of consultation, including representation from school governing bodies, will lead up to the decision as to which which schools would actually close.<br />
+ <br />
+Rooting around on the Eduwight webste to see what information is provided there to help people assess not only local consequences of a particular school closing in a particular village, but also the wider consequences of neighbouring schools closing, (or alternatively, one school closing and a neighbouring one not), I came across some maps showing maps such as the following: "<a href="http://eduwight.iow.gov.uk/schools/reorganisation/images/Option2PTwoMiles.pdf">Primary Schools</a>– with the green area indicating the areas not within a 2 mile radius of a primary school" (from the <a href="http://eduwight.iow.gov.uk/schools/reorganisation/The_Options/option2.asp">Option 2 consultation page</a>).</p>
+
+<p><a href="http://eduwight.iow.gov.uk/schools/reorganisation/images/Option2PTwoMiles.pdf"><img src="http://farm4.static.flickr.com/3184/2289316338_da42500d6a.jpg" /></a></p>
+
+<p>On the one hand, I applaud this approach in terms of the way it attempts to make coverage information clear to see; on the other, if the <em>actual</em> school closures are not finalised yet, the map is indicative of only one possible closure plan and hence limited in value...</p>
+
+<p>...so I've started working on an interactive <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest.html">circular catchment area map</a>.</p>
+
+<p><img src="http://farm3.static.flickr.com/2152/2262805774_6aeff79007_o.png" style='border:0' /></p>
+
+<p>The interactive map allows you to select different circular catchment areas for each sector (on the grounds that an appropriate travel distance for 7 year olds in primary school is probably different to an acceptable catchment for teenagers in High school). All the schools in any particular sector can be hidden from the map. In addition, one or more individual schools can be removed from the catchment area plots, simulating school closure(s). Different catchment areas can be modeled for each sector, giving indicative views of 'walking', 'cycling' or 'vehicle' catchment areas, for example.</p>
+
+<p>At the moment, catchment area settings can't be saved, nor can a static 'snapshot' of a map be taken (unless you take a screenshot, of course...). I have a plan for how to hack saved settings, though! ;-)</p>
+
+<p>I have started to generalise the map so that schools, for example, plotted on other Google MyMaps, can be imported into the map. (I'll post more about that approach later; in the meantime, you can always have a play yourself: <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest.php">generic schools circular catchment area interactive map</a>).</p>
+
+<p>PS courtesy of a tip from my sister, here's a <a href="http://www.kirklees.gov.uk/community/education-learning/schoolpaa.asp">Huddersfield schools priority admission area interactive map</a> which shows 'actual' priority areas rather than crude 2 mile radius plots (travel times within a 2 mile radius catchment area can vary significantly, of course).</p>
+
+<p>PPS The eduWight website also has information regarding the <a href="http://www.eduwight.iow.gov.uk/schools/reorganisation/Schools_Information/overview.asp">percentage of pupils currently living within two mile of each current school</a>, bu I haven't worked out how I can use it yet!</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">09:00 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13580" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 22, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013504"></a>
+<h3 class="title">Opening the Box...</h3>
+
+One of the key pieces, apparently, in the VLE jigsaw is providing students with an effective e-portfolio system; working out How to integrate VLEs/LMSs with other student-facing systems is another; interface aesthetics is something that's really important to the user...
+<!--
+<p>One of the key pieces, apparently, in the VLE jigsaw is providing students with an effective e-portfolio system; working out <a href="http://sclater.com/blog/?p=58">How to integrate VLEs/LMSs with other student-facing systems</a> is another; <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2008/02/blog-as-educati.html">interface aesthetics</a> is something that's really important to the user of course, which is why I doubt it is on the list...;-)</p>
+
+<p>So to everyone working in this area, might I suggest you take 20 minutes out of the crazy project development cycle you're probably in worrying about how to do all this, and go and look at <a href="http://box.net">box.net</a> for an example of how to manage files via a browser, and how to integrate with other systems using public APIs.... please...</p>
+
+<p>And to everyone working on repositories, wondering how to get your academics publishing stuff through your repository (i.e. storage service...), go and look at <a href="http://box.net">box.net</a> for an example of how to edit and publish content stored in box.net using third party systems via their public APIs.... please... (you should probably also read what Andy Powell has been saying recently... latest here: <a href="http://efoundations.typepad.com/efoundations/2008/02/repositories-fo.html">Repositories follow-up - global vs. institutional</a>.)</p>
+
+<p>Even if you've looked at box.net before, months ago, go look now - go on, it's Friday, give yoursefl something to dream about over the weekend... ;-)</p>
+
+<p>Here are some pointers:<br />
+<ul><li><a href="http://www.box.net/help/22">easy upload</a> - a trad file dialogue (with a nice skin) or drag'n'drop from the desktop into the browser. Or email the content in...</li><br />
+<li>folder based view - private, shared, or public; even share the contents of a folder via a webpage with the <a href="http://www.box.net/info/widget">Box Widget</a>. </li><br />
+<li>edit your office documents via box's <a href="http://www.box.net/info/document-editing">integration with Zoho</a>; good for workflow, right? Go to your online fielstore and then edit those documents, in a browser, from there, with a single click...</li><br />
+<li><a href="http://www.teknobites.com/2008/02/20/boxnet-integrates-ipaper-technology/">Preview documents </a> you don't want to - or can't - edit, using Scribd's iPaper.</li><br />
+<li>Publish documents to the world via Scribd - wouldn't it be handy if integration with your repository was so sweet (it could be - box.net offer a <a href="http://enabled.box.net/">full API and integration showcase</a>).</li></ul><br />
+Here are the services I have running on my box.net account, for example:</p>
+
+<p><a href="http://www.flickr.com/photos/25451952@N00/2283970606/"><img src="http://farm3.static.flickr.com/2191/2283970606_7003a06a96.jpg" style="border:0" /></a></p>
+
+<p>There are more available, too - see the <a hrewf="http://www.box.net/services/browse">full list of box integrated services</a> (includes, blogging on Blogger and Wordpress, the Picnik photo editor, and Autodesk Freewheel).</p>
+
+<p>PS my <a href="http://blogs.open.ac.uk/Maths/ajh59/013390.html">Scribd iPaper bookmarklet</a> (as mentioned in<a href="http://lifehacker.com/358582/convert-document-links-to-viewable-objects-with-ipaper-bookmarklets"> Lifehacker</a>;-) is now back up without the need to get your own publisher key... so you can just grab the bookmarklet and start using it straightaway to view documents online...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013504.html">02:26 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13504" onclick="OpenComments(this.href); return false">Comments (4)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 20, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013390"></a>
+<h3 class="title">Scribd iPaper Bookmarklets and Greasemonkey Script</h3>
+
+One of the neat features about the Scribd iPaper platform is the way it provides you QuickSwitch, a single javascript include that, when added to a page, will convert all the document links to embedded, or online viewable, versions of...
+<!--
+<p>One of the neat features about the Scribd iPaper platform is the way it provides you <a href="http://www.scribd.com/platform/documentation/quickswitch">QuickSwitch</a>, a <em>single</em> javascript include that, when added to a page, will convert all the document links to embedded, or online viewable, versions of the document.</p>
+
+<p>So you can get a feel for what this may be like in practice, I've put together a couple of demo bookmarklets. One will convert all the document links to links through to a page that will display the document using iPaper; the other will embed all the documents contained in the page within the page using iPaper.</p>
+
+<p>To use the bookmarklets, drag them on to your bookmarks toolbar (Firefox/Flock - I'm not sure what the process is with IE nowadays?) and then click one of them, when your on a likely suspect page (e.g. try this page from MIT OpenCourseware: <a href="http://ocw.mit.edu/OcwWeb/hs/calculus/d/1/1.htm">Continuity</a>).</p>
+
+<p>- <a href="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';var t=d.createTextNode('var scribd_publisher_id = \'pub-64160908907150939988\';var scribd_type = 1;var scribd_keep_private = 0;var scribd_keep_original_link = 0;');s.appendChild(t);db.appendChild(s);s=d.createElement('script');s.src='http://www.scribd.com/javascripts/auto.js';db.appendChild(s);})()">iPaper  this (link)</a> bookmarklet: converts document download links to iPaper viewer links; (really, this should optionally open in a lightbox, maybe with the option to open in a new window from there?)</p>
+
+<p>- <a href="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';var t=d.createTextNode('var scribd_publisher_id = \'pub-64160908907150939988\';var scribd_type = 2;var scribd_keep_original_link = 0;var scribd_ipaper_params = [];scribd_ipaper_params[\'public\'] =true;');s.appendChild(t);db.appendChild(s);s=d.createElement('script');s.src='http://www.scribd.com/javascripts/auto.js';db.appendChild(s);})()">iPaper this (embed)</a> bookmarklet: scans the page for document links and replaces them with the embedded version of each document.</p>
+
+<p>[UPDATE: <s>I've had a comment from Scribd pointing out that whenever anyone uses the bookmarklets, the files get uploaded to my Scribd account. So the above bookmarklets will now only work if you drag them on to your toolbar <em>and then edit them to replace YOUR_PUB-ID with your own Scribd publisher ID (available from <a href='http://www.scribd.com/platform/home'>Scribd Platform</a> (it's free...;-)</em>.</s></p>
+
+<p>LATEST NEWS - chatting with the Scribd folks again, I've sacrificed my original Scribd account so that the bookmarklet can be re-released with a publisher code embedded - so it should work for anyone, out of the can. The publisher code is the same one I originally used, so any bookmarklets out there should continue to work. Apologies to the few hundred people who's docs I deleted from the account a couple of days ago...</p>
+
+<p>So.... if you want to keep a safely bookmarked copy of the documents you're viewing in iPaper, you should get your own iPaper publisher ID and create your own, personalised  bookmarklet. To generate your own custom bookmarklets painlessly, I've created a bookmarklet generator: <a href="http://blogs.open.ac.uk/Maths/ajh59/scribdBookmarkletGenerator.html">iPaper bookmarklet generator utility</a>. Provide your Scribd Platform publisher ID and it will generate your own bookmarklets for you... To anyone who used the original bookmarklet: you may find the files have disappeared, because I've deleted them...sorry about that... (Scribd folks - any chance of resetting my pub-id, and you taking over the original one? ;-)]</p>
+
+<p><a href="http://content.screencast.com/media/21f7590c-b915-4e41-aef2-cceddf3ef5ca_6b0ae803-4931-45fa-a2a2-8c3fe3d4c884_static_0_0_2008-02-20_1136.png"><img src="http://content.screencast.com/media/21f7590c-b915-4e41-aef2-cceddf3ef5ca_6b0ae803-4931-45fa-a2a2-8c3fe3d4c884_static_0_0_2008-02-20_1136.png" width="563" height="530" border="0" /></a></p>
+
+<p>What could be easier? ;-)</p>
+
+<p>PS you should change the publisher-id in the bookmarklet to your own publisher id - you can get one for free from the <a href="http://www.scribd.com/platform/home">scribd developer site</a>. Use this: <a href="http://blogs.open.ac.uk/Maths/ajh59/scribdBookmarkletGenerator.html">iPaper bookmarklet generator utility</a>.</p>
+
+<p>PPS a couple of people requested a Greasemonkey script based on the bookmarklets. I'm not convinced the embed bookmarklet is appropriate for a GM script, but the linkifier one is.... so for those who asked, here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/iPaperLinky.user.js">iPaper linkifier Greasmonkey script</a>. If you install this script, it will convert all document links in a page to 'view in iPaper' links. As a default, the script is set up to only run on http://ocw.mit.edu/OcwWeb/* . If you want the script to run on all pages, go to the Greasemonkey 'Manage User Scripts' menu item (browser Tools menu, I think?), select the <em>Scribd iPaper linkify</em> script and then add <em>http://*</em> to the allowed sites. (It may also be worth adding <em>https://*</em> to the disallowed sites... And remember, all docs viewed with the script will be uploaded to an account I have access to on Scribd... If you want the docs to be uploaded to <em>your</em> account, you will need to edit the Greasemonkey script to replace my <em>pub-id</em> with yours...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013390.html">11:23 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13390" onclick="OpenComments(this.href); return false">Comments (7)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 19, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013371"></a>
+<h3 class="title">No More PDF Reader Hell? Hello iPaper - You Taking Note...?</h3>
+
+My day's been made again - my dead Mac only has a dead power supply (the pins in the end-of-cable adapter have mechanically failed - maybe dropping the end of the lead in a full cup of hot, sweet coffee...
+<!--
+<p>My day's been made again - my dead Mac only has a dead power supply (the pins in the end-of-cable adapter have mechanically failed - maybe dropping the end of the lead in a full cup of hot, sweet coffee didn't help?), so the sooner I can get a replacement and get away from PC/XP hell the better; and <a href="http://scribd.com">Scribd </a>made an announcement...</p>
+
+<p>...about something they're calling  <a style="font-style: italic;" href="http://www.scribd.com/ipaper">iPaper</a> (what is it with <span style="font-style: italic;">i</span>Everything?).</p>
+
+<p>iPaper is flash powered, like the previous Scribd embeds (which rendered uploaded files in a flash container within a browser), but with some extra features "including full text search, copy/paste functionality, view modes, and zoom." It'll be interesting to see how it fares on the accessibility stakes, both in terms of screen readers, but also on mobile devices.</p>
+
+<p>iPaper will render a whole range of document formats, including Microsoft and Open Office documents, presentations and spreadsheet, PDF and postscript (remember that?).</p>
+
+<p>Anyway, I love it when webco's make zero day mashups <em>apparently</em> so easy to achieve (even though my publisher key isn't being recognised at the mo... :-( another zero day feature? ;-) [I mailed them to give a heads up on the problem and they mailed straight back, saying it was wider(?) problem on their end and quarter of an hour should do it; 10 mins was all it took...]</p>
+
+<p>Along with the iPaper announcement, Scribd announced a developer API, as well as a <a href="http://www.scribd.com/platform/documentation">developer API</a>, and a neat little javascript include that will turn all the docs in your page to iPaper docs painlessly...</p>
+
+<p>I don't know if the doc has to been on the same domain for this to work though?</p>
+
+<p>(I think the Javascript should follow the grazr approach, and default with a slurp  link that gets removed if the embed is available? <a href="http://www.scribd.com/slurp?scribd_publisher_id=pub-64160908907150939988&display_mode=scribd&public=true&url=http://ocw.mit.edu/NR/rdonlyres/hs/calculus/a/18_01_fall_2005_lecture_15.pdf">example doc...</a>)</p>
+
+<p><script type="text/javascript" src='http://www.scribd.com/javascripts/view.js'></script>     <div id='embedded_flash'  ><a href='http://www.scribd.com/doc/2095898/18-01-fall-2005-lecture-6'>18 01 fall 2005 lecture 6</a></div> <script type="text/javascript"> var scribd_doc = new scribd.Document(2095898, 'key-1ov21agyf2iderko48p9');  scribd_doc.addParam('height', 500);   scribd_doc.addParam('width', 450);   scribd_doc.addParam('page', 1);  scribd_doc.write('embedded_flash'); </script></p>
+
+<p><br />
+To convert all the docs in a page to iPaper, just add a javascript include to the bottom of the page. To convert your site to iPaper, just put the script in your footer template (that's what it's for, right? ;-)</p>
+
+<p>To see it in action - here are some <a href="http://www.scribd.com/platform/documentation/resources">demo movies</a>.</p>
+
+<p>If you're a bit more technically inclined, there's a 'proper' Scribd API too, along with a lightweight javascript iPaper API.</p>
+
+<p>Box.net were quick off the mark to integrate the service ("<a href="http://blog.box.net/?p=125" rel="bookmark" title="Permanent Link: Scribd launches iPaper; OpenBox services on shared pages">Scribd launches iPaper; OpenBox services on shared pages</a>"), reinforcing their position as best-of-breed online-storage/do-something-with-your-stuff/just-tell-me-why-it-isn't-an-eportfolio-then service (IMVHO, of course...)</p>
+
+<p>And finally - iPaper can embed ads, in a far neater way than the <a href="http://blogs.open.ac.uk/Maths/ajh59/012090.html">Adobe/Yahoo PDF ad-includes</a>. If Google ads can be added in to a doc, think what you could do with an internal ad server piping contemporary content into iPaper docs containing otherwise static content, (a bit like the way the Conversations Network podcast engine works, I think, adding fresh ads at the top and tail of archived audio content? &lt;- can anyone confirm that? Is there a white paper on their architecture anywhere?).</p>
+
+<p>I've been taking issue in various comments around the web lately about the way many "open"courseware initiatives use closed PDFs (I don't have a PDF plugin in my browser and don't want one...and I like the Adobe reader about as much as Real player (does Adobe still require a PC restart when you install Acrobat Reader?)</p>
+
+<p>So - any bets on when OU MyStuff/ePortfolio will make use of iPaper? Or any of the Open Repositories (<a href="http://dfflanders.wordpress.com/">Flanders</a>, I dare ya... first round'll be on me ;-)? Or any of the OER sites?</p>
+
+<p>PS what Scribd really need to do, of course, is allow a link to raise an iPaper doc in a <a href="http://mjijackson.com/shadowbox/">lightbox</a>. I'm convinced this interaction style is good for maintaining flow and I love to see it being trialled a bit more to see if that is indeed the case...</p>
+
+<p>PPS I've done a couple of bookmarklets and a Greasemonkey script that will either embed iPaper previews of documents linked to from any web page, or rewrite those links so they point to iPaper previews of the documents: <a href="http://blogs.open.ac.uk/Maths/ajh59/013390.html">Scribd iPaper Bookmarklet</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a>, but it's the first time from a PC and the styling is all broken... crappy Windows...</p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ipaper" rel="tag">ipaper</a>, <a href="http://technorati.com/tag/scribd" rel="tag">scribd</a>, <a href="http://technorati.com/tag/%20hahaAdobe" rel="tag"> hahaAdobe</a>, <a href="http://technorati.com/tag/pdf" rel="tag">pdf</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013371.html">07:42 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13371" onclick="OpenComments(this.href); return false">Comments (5)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 18, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013308"></a>
+<h3 class="title">Heads Up - Embeddable Google Charting</h3>
+
+I'm supposedly on holiday today, but I thought i'd have a quick play with the Data Visualization Google Gadgets to see if I could get them working... but I couldn't... (If you haven't seen notice of these gadgets, Google has...
+<!--
+<p>I'm supposedly on holiday today, but I thought i'd have a quick play with the <a href="http://googlesystem.blogspot.com/2008/02/data-visualization-google-gadgets.html">Data Visualization Google Gadgets</a> to see if I could get them working... but I couldn't...</p>
+
+<p>(If you haven't seen notice of these gadgets, Google has quietly released a set of feed powered data visualisation widgets/gadget - bar charts, line charts, organisational charts, and a Gapminder/trendalyzer like widget among others - but no-one can work out how to get them working!)</p>
+
+<p>Anyway, like many others, I tried to feed data into one of these widgets from a Google  chart, which was when i noticed this on the Google spreadsheet toolbar: <a href="http://www.flickr.com/photos/psychemedia/2274731152/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2176/2274731152_ec75e17c50_o.png" alt="2008-02-18_1538" style="border: 0pt none ;" height="34" width="44" /></a></p>
+
+<p>A chart tool....? How very interesting... :-)</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2273940413/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2259/2273940413_f4c8f311a2.jpg" alt="2008-02-18_1539" style="border: 0pt none ;" height="365" width="500" /></a></p>
+
+<p>The charts are all publishable and embeddable:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2273947063/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2113/2273947063_e4b45c0ed0_o.png" alt="2008-02-18_1543" style="border: 0pt none ;" height="122" width="132" /></a> <a href="http://www.flickr.com/photos/psychemedia/2274742476/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2062/2274742476_e7212663cf.jpg" alt="2008-02-18_1544" style="border: 0pt none ;" height="219" width="450" /></a></p>
+
+<p>They are also fed live from the spreadsheet. Here's an example of an embedded chart:</p>
+
+<p><img src="http://spreadsheets.google.com/pub?key=p1rHUqg4g4207oHzeNadtTg&amp;oid=1&amp;output=image" /></p>
+
+<p>From the image URL, you can see how it is feed powered:</p>
+
+<p><span style="font-style: italic;">&lt;img src="http://spreadsheets.google.com/pub?key=p1rHUqg4g4207oHzeNadtTg&amp;oid=1&amp;output=image" /&gt;</span><br style="font-style: italic;" /><br />
+The <span style="font-style: italic;">key</span> refers to a particular spreadsheet, I think, and I'm guessing (without the trivial test) that <span style="font-style: italic;">oid</span> is the chart identifier within a spreadsheet?</p>
+
+<p>Something I've not really looked at before are the range of feed options from a spreasheet:</p>
+
+<p> <a title="googlespreadsheetfeeds.png" href="http://www.flickr.com/photos/25451952@N00/2274769026/"><img src="http://farm3.static.flickr.com/2333/2274769026_f8a68f80b4_o.png" border="0" /></a></p>
+
+<p>Ho hum, yet more things to play with...</p>
+
+<p>PS if you get any of the Google chart gadgets working, particularly the trendalyzer one, please let me know how! :-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/google" rel="tag">google</a>, <a href="http://technorati.com/tag/chart" rel="tag">chart</a>, <a href="http://technorati.com/tag/%20gchart" rel="tag"> gchart</a>, <a href="http://technorati.com/tag/%20spreadsheet" rel="tag"> spreadsheet</a>, <a href="http://technorati.com/tag/%20gdocs" rel="tag"> gdocs</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013308.html">04:02 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13308" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 17, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013251"></a>
+<h3 class="title">Food for Thought - OpenLearn Spamblogs? and a Welcome to wpOpenLearn</h3>
+
+My day was made today reading this post from Jim Groom: "Proud Spammer of Open University Courses" describing how he has pulled a couple of OpenLearn units into Wordpress via the OpenLearn unit RSS feeds, and republished them in a...
+<!--
+<p>My day was made today reading this post from Jim Groom: "<a href="http://jimgroom.umwblogs.org/2008/02/17/proud-spammer-of-open-university-courses/" rel="bookmark" title="Proud Spammer of Open University Courses">Proud Spammer of Open University Courses</a>" describing how he has pulled a couple of OpenLearn units into Wordpress via the OpenLearn unit RSS feeds, and republished them in a Wordpress environment: <blockquote>I pulled the Open University courses feeds into individual blogs using Wp-o-Matic, a tried and true spamblogging plugin. And I am pretty excited by the results. (As an aside, I find great pleasure in re-purposing the wicked tools of spammers to make re-publishing open educational resources that much easier.</blockquote></p>
+
+<p>(Brian Lamb hails it too, also referencing a move on the eduglu front: <a href="http://weblogs.elearning.ubc.ca/brian/archives/045020.php">With visions of EduGlu dancing in their twisted spamblogging heads...</a>)</p>
+
+<p>Here are a couple of examples: <a href="http://devthought.com/wp-o-matic-the-wordpress-rss-agreggator/">A course on Goya</a>, and <a href="http://hume.wpmued.org/">a course on Hume</a></p>
+
+<p>The initiative was set in motion by a David Wiley post reporting on the <a href="http://opencontent.org/blog/archives/464">publication of an opencourseware course via a blog</a>, and a comment (legitimised by <a href="http://www.downes.ca/cgi-bin/page.cgi?post=43445">Downes</a>) I made on a couple of trackback posts to it saying how I been itching to see someone experiment with importing some OpenLearn RSS feeds into a blog - Jim inherited the itch and promptly scratched it, taking the prize IMHO for the first third party, scaleably useful, mashup reuse of OpenLearn material :-)</p>
+
+<p>With the concept now proven, comes step two - engaging a community around the resource...</p>
+
+<p>Just in passing, Jim's comment about reusing a spam tool to get the content into the blog was an interesting one - and made me idly wonder whether it would be a good or a bad thing if the sploggers started using OpenLearn content as a hook into their ad-sales? It may go against the license terms, but so what, if the intention of initiatives like OpenLearn is to get a wider exposure for the materials (it would also suggest that maybe OpenLearn was missing out on some SEO tricks?)?<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/nolookingback" rel="tag">nolookingback</a>, <a href="http://technorati.com/tag/%20itoldyouso" rel="tag"> itoldyouso</a>, <a href="http://technorati.com/tag/blog" rel="tag">blog</a>, <a href="http://technorati.com/tag/wpOpenLearn" rel="tag">wpOpenLearn</a>, <a href="http://technorati.com/tag/%20oer" rel="tag"> oer</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013251.html">01:59 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13251" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 14, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013114"></a>
+<h3 class="title">RESTful Image Generation - When Text Just Won't Do</h3>
+
+One of the take homes for me from the recent OU VLE 2.0 show-and-tell was a talk by LTS developer Jonathan "Google Charts, MathTran and editable PNG files" Fine about displaying mathematical equations in online course materials. This would be...
+<!--
+<p>One of the take homes for me from the recent OU VLE 2.0 show-and-tell was a talk by LTS developer Jonathan "<a href="http://jonathanfine.wordpress.com/2008/01/14/google-charts-mathtran-and-editable-png-files/">Google Charts, MathTran and editable PNG files</a>" Fine about displaying mathematical equations in online course materials.</p>
+
+<p>This would be easy enough if we could guarantee students had MathML support in their browser, but a fall back position is required if they don't - enter this pretty neat solution to the problem: rendering equations as images, generated from text, using <a href="http://www.mathtran.org/">MathTran</a>.</p>
+
+<p>MathTran is essentially an image resource generator: call the the resource via a URL such as the following:</p>
+
+<p><em>http://www.mathtran.org/cgi-bin/mathtran?D=1;tex=%5Cint%20_0%5E1%20x%5E2%5C%2C%20dx</em></p>
+
+<p>and you should get an image in return: <img src="http://www.mathtran.org/cgi-bin/mathtran?D=1;tex=%5Cint%20_0%5E1%20x%5E2%5C%2C%20dx" /></p>
+
+<p>The URL arguments are an encoded version of TeX, a text based representation for expressing all manner of weird typographical sh*t (to use the vernacular... anyone who's done a maths or physics degree will know <em>all</em> about it ;-)</p>
+
+<p>(There are issues with this approach of course, such as making the image accessible to a screen reader, but at least this approach makes the equation accessible in a visual way! The alt tag is still available of course, for  TeXtual description of the equation, which I'll return to again below...)</p>
+
+<p>This resourceful web service approach is similar in kind to the way the <a href="http://code.google.com/apis/chart/">Google Charts API</a> works: pass a description of the chart via a URL to the chart image generator, and get a chart back as a response. For example:</p>
+
+<p><em>http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240%7CM150%7CM255%7CM257%7CM263%7CMU120%7CM366</em></p>
+
+<p>is responsible for creating this chart:</p>
+
+<p><img src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240%7CM150%7CM255%7CM257%7CM263%7CMU120%7CM366" /></p>
+
+<p>I use the Google chart API in my evolving <a href="http://blogs.open.ac.uk/Maths/ajh59/012240.html">Course Profiles Facebook app reporting tool</a> (which I guess I should do a bit more work on and post about... ho hum, one more thing on th eto do list...;-)</p>
+
+<p>As well as pie charts, the Google Chart API will create line graphs and bar charts, scatter plots and Venn diagrams. If you want to have a play, here's a <a href="http://almaer.com/chartmaker/">rather neat Google Chart generator</a>. Enter some data, pick a chart type, and it will generate the chart image URL for you...</p>
+
+<p>Although the Google Chart API has only be around for a couple of months, it's already been put to some interesting uses. This <a href="http://groups.google.com/group/google-chart-api/browse_thread/thread/d3b4d0f6436796e9">Math equation parser/plotter</a> on the Google Chart API group links to a <a href="http://www.felipebarone.com/plot-function-google.php">Google Chart  maths equation plotter</a>, which lets you type in a simple function and it will then generate a graph for you by running the equation through a web service (I think you have to HTTP POST the arguments through - but I didn't check...) that generates the chart data values and constructs the chart image URL.</p>
+
+<p><img src="http://chart.apis.google.com/chart?chtt=f%28x%29+%3D+sin%28x%29-cos%28x%29%2Acos%28x%29&amp;chts=FF0000,16&amp;cht=lxy&amp;chs=400x400&amp;chd=t:0,1.67,3.33,5,6.67,8.33,10,11.67,13.33,15,16.67,18.33,20,21.67,23.33,25,26.67,28.33,30,31.67,33.33,35,36.67,38.33,40,41.67,43.33,45,46.67,48.33,50,51.67,53.33,55,56.67,58.33,60,61.67,63.33,65,66.67,68.33,70,71.67,73.33,75,76.67,78.33,80,81.67,83.33,85,86.67,88.33,90,91.67,93.33,95,96.67,98.33%7C36.92,44.87,53.46,62.24,70.66,78.22,84.43,88.88,91.28,91.47,89.44,85.31,79.37,72.01,63.69,54.94,46.28,38.19,31.09,25.28,20.96,18.17,16.84,16.78,17.69,19.24,21.06,22.8,24.15,24.9,24.92,24.21,22.89,21.17,19.34,17.77,16.81,16.81,18.06,20.76,25,30.73,37.76,45.81,54.45,63.21,71.56,78.99,85.02,89.26,91.42,91.35,89.07,84.73,78.61,71.12,62.72,53.96,45.33,37.34%7C0,100%7C58.3333333333,58.3333333333%7C66.6666666667,66.6666666667%7C0,100&amp;chco=0033FF,DDDDDD,DDDDDD,3072F3&amp;chxt=x,y&amp;chxl=0:%7C-6%7C-1.5%7C3%7C1:%7C-1.75%7C-0.25%7C1.25&amp;chm=&amp;chg=25,25,1,5" /></p>
+
+<p>Now here's where a general knowledge of design and coding patterns - and what's possible on the web - comes in handy in terms of seeing what the next step might be... (this sort of observation is how I justify reading feeds all day...;-)</p>
+
+<p>Here are a couple more things you need to know, and let's see if you come to the same conclusion as I do about how the maths''n'graphs ideas could merge together...</p>
+
+<p>Firstly, MathTran doesn't just provide a TeX2Image service. They also make available a <a href="http://www.mathtran.org/wiki/index.php/TeX_image">Javascript library</a> that you can add to your web page which lets you write  the TeX equation description in the alt attribute of an image tag, and it will then create the src URL and pull in the image view of the equation.</p>
+
+<p>Here's an example of an image tag as you might write it to encode an image - &lt;img alt="tex:a^2+b^2=c^2"&gt; [Unfortunately, when I tried the script in the original version of this post I got an XML request/cross domain error...]</p>
+
+<p>Secondly, check out this approach to <a href="http://www.wait-till-i.com/2008/01/08/generating-charts-from-accessible-data-tables-using-the-google-charts-api/">Generating charts from accessible data tables using the google charts API</a>. The idea here is to take the data from a straightforward HTML data table in a web page and use a bit of Javascript to create a corresponding Google Chart URL and embed in the image in the same web page. If javascript is disabled, you  stil have the data table. If you're interested, here's <a href="http://icant.co.uk/sandbox/datatable-to-chart/index.html">the table to chart demo</a>. Here's a typical result:</p>
+
+<p><img src="http://ajaxian.com/wp-content/images/rb_googlecharts.gif" /> (via <a href="http://ajaxian.com/archives/accessible-google-charts">Ajaxian</a>)</p>
+
+<p>So here's where idea fusion comes in: would it be possible to create a MathTran+ service that will take a TeX described equation in a div tag attribute, say, and return two images: one displaying the equation in a properly formatted way (using MathTran, for example) and one displaying a Google Chart of the plotted equation?</p>
+
+<p>Over to you, Jonathan (or have you done this already? I seem to recall you mentioning something about 'executable TeX', or similar, where a textually described equation could be treated as an equation and plotted out? Or did this only work with MathML?)</p>
+
+<p>PS  Jonathan also idled about the idea of a musical notation resource generating service - has anyone seen on e of these? I guess the idea would be to pass a textual description of a piece of music to the service, and receive an image of the score, using musical notation, in return...?</p>
+
+<p>PPS whilst on the topic of chart generators-ish, here's a <a href="http://bitworking.org/projects/sparklines/">sparkline generator</a> that works on the same principle - pass the data to the service via a URL and get an image back in return: <img src="http://bitworking.org/projects/sparklines/spark.cgi?type=impulse&amp;d=88,84,82,92,82,86,66,82,44,64,66,88,96,80,24,26,14,0,0,26,8,6,6,24,52,66,36,6,10,14,30&amp;height=20&amp;limits=0,100&amp;upper=90&amp;above-color=red&amp;below-color=gray&amp;width=2" /></p>
+
+<p>PPPS Reduced as I am to using the last.fm website rather than the client, which appears to have stopped working on my office machine (one more reason not to bother coming in to work, I guess), I notice they're pushing embeddable radio players... so here's an example of what I was listening to whilst writing this post... </p>
+
+<p><style type="text/css">table.lfmWidget3bd23294229342a580319e1692ba193e td {margin:0 !important;padding:0 !important;border:0 !important;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmHead a:hover {background:url(http://cdn.last.fm/widgets/images/en/header/radio/mini_grey.png) no-repeat 0 0 !important;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmEmbed object {float:left;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmFoot td.lfmConfig a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat 0px 0 !important;;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmFoot td.lfmView a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat -85px 0 !important;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmFoot td.lfmPopup a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat -159px 0 !important;}</style><br />
+<table class="lfmWidget3bd23294229342a580319e1692ba193e" style="width: 110px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr class="lfmHead"><td><a title="Music tagged bhangra " href="http://www.last.fm/listen/globaltags/Bhangra" target="_blank" style="border: 0pt none ; background: transparent url(http://cdn.last.fm/widgets/images/en/header/radio/mini_grey.png) no-repeat scroll 0pt -20px; overflow: hidden; display: block; height: 20px; width: 110px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;"></a></td></tr><tr class="lfmEmbed"><td><object type="application/x-shockwave-flash" data="http://cdn.last.fm/widgets/radio/19.swf" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="140" width="110"> <param name="movie" value="http://cdn.last.fm/widgets/radio/19.swf"> <param name="flashvars" value="lfmMode=radio&amp;radioURL=globaltags%2FBhangra&amp;title=Music+tagged+bhangra+&amp;theme=grey&amp;autostart=&amp;lang=en&amp;widget_id=3bd23294229342a580319e1692ba193e"> <param name="bgcolor" value="999999"> <param name="quality" value="high"> <param name="allowScriptAccess" value="always"> <param name="allowNetworking" value="all"> </object></td></tr><tr class="lfmFoot"><td style="background: transparent url(http://cdn.last.fm/widgets/images/footer_bg/grey.png) repeat-x scroll 0pt 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right;"><table style="width: 110px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="lfmConfig"><a href="http://www.last.fm/widgets/?url=globaltags%2FBhangra&amp;colour=grey&amp;size=mini&amp;autostart=&amp;from=code&amp;widget=radio" title="Get your own widget" target="_blank" style="border: 0pt none ; background: transparent url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat scroll 0px -20px; overflow: hidden; display: block; width: 85px; height: 20px; float: right; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;"></a></td><td class="lfmPopup" style="width: 25px;"><a href="http://www.last.fm/widgets/popup/?url=globaltags%2FBhangra&amp;colour=grey&amp;size=mini&amp;autostart=&amp;from=code&amp;widget=radio&amp;resize=1" title="Load this radio in a pop up" target="_blank" style="border: 0pt none ; background: transparent url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat scroll -159px -20px; overflow: hidden; display: block; width: 25px; height: 20px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" onclick="window.open(this.href + '&resize=0','lfm_popup','height=240,width=160,resizable=yes,scrollbars=yes'); return false;"></a></td></tr></tbody></table></td></tr></tbody></table></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013114.html">09:43 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13114" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 13, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013066"></a>
+<h3 class="title">Best Practice Instructional Material?</h3>
+
+One of the 'issues' we meet again and again when writing OU course materials is the extent to which we have to hand-hold our students when explaining how to use particular software applications. Unlike traditional HEIs, where computer lab sessions...
+<!--
+<p>One of the 'issues' we meet again and again when writing OU course materials is the extent to which we have to hand-hold our students when explaining how to use particular software applications. Unlike traditional HEIs, where computer lab sessions are staffed with postgrads eager(?!) to help out, OUr students study at a distance - we use screenshots, and increasingly screencasts (though the jury is still out on those) to show our students how to work through many of our computer based exercises.</p>
+
+<p>At first glance, some of our materials do seem to overly labour the point, though if you've seen the <a href="http://www.youtube.com/watch?v=LRBIVRwvUeE">medieval/Middle Ages tech support</a> video on how to use a book, you'll maybe appreciate why we feel we have to go to such lengths:</p>
+
+<p><object height="355" width="425"><param name="movie" value="http://www.youtube.com/v/LRBIVRwvUeE&amp;rel=1"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/LRBIVRwvUeE&amp;rel=1" type="application/x-shockwave-flash" wmode="transparent" height="355" width="425"></object></p>
+
+<p>Increasingly, though, the baseline IT skills we might expect our students to have are improving - I no longer have to show students at residential school to just lift and replace a mouse on the mousepad, rather than chase it down the table leg because they want the cursor to go to the bottom of the screen!</p>
+
+<p>When writing teaching material around a software application, it is easy to fall in to the trap of taking a screenshot of everything. Maybe this is necessary, maybe it's not. Maybe <em>not</em> including a screenshot of a particular step is the equivalent of the dreaded use of "hence", "obviously", and "clearly" statements that step over particularly difficult steps (for the novice) in many mathematical textbooks.</p>
+
+<p>It can be instructive, though, to consider what sort of guidance we might write around a technology we are pretty sure everyone is comfortable with, and here's a neat example: a <a href="http://blogoscoped.com/archive/2008-02-11-n78.html">manual on using coloured pencils</a>. Here's a snippet:<br />
+<blockquote>Preparing the color pencil device for usage is relatively straightforward. <s>As shown in the photo</s> you will have to open the lid of the metal box using your right or left hand. This installation however was completely undocumented, which may leave non power users confused. What's more, reading the sparse documentation on the backside of the metal box after you set up the pencils for usage requires you to turn around the box - which will make the color pencils fall out of their box onto the floor or table.</p>
+
+<p>How do you use the device? To select a color, you need to compare the color preview printed outside the edges of the specific pencil. The color is also printed on the tip of each pencil, a nice addition. You will then press the pencil onto the display paper, which you will be able to locate inside your printer.</blockquote><br />
+One reason I found this particularly amusing was that it reminded me of the risk assessment supp (supplementary item - OU code for piece of paper with a number on it) that I had to write for one of our short courses in which we sent out a permanent marker pen in the first mailing...  At the time, there was a lot of debate/to and fro discussion - I probably archived the email exchange somewhere - about the different risks associated with washable and permanent markers, although parts of the risk assessment were the same for both.</p>
+
+<p>(I've also had to write a risk assesssment about using Lego in a couple of OU residential school activities - choking and chipped teeth hazard when trying to pry apart bits of Lego with your teeth, head bump on table hazard when bending down to pick up piece of Logo you've dropped on the floor, lifting hazard bending down to pick up pices of Lego dropped on the floor, etc, etc!)</p>
+
+<p>Ho hum - coffee break over and my toast for lunch has just popped up; back to the grind, I guess...</p>
+
+<p>PS just because - have you tried my <a href="http://ouseful.open.ac.uk/howdoi">How Do I? instructional video search</a> app, lately? I keep adding sites to it all the time... ;-)</p>
+
+<p>PPS in case you missed it, this <a href="http://web.sls.csail.mit.edu/lectures/">Video lecture browser with 'teleprompt'-style transcript display</a> from MIT is worth checking out..<br />
+   <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013066.html">01:15 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13066" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 12, 2008</h2>
+
+
+<div class="blogbody">
+<a name="013035"></a>
+<h3 class="title">OpenLearn XML Processor, Redux</h3>
+
+Some time ago, I posted about an OpenLearn XML processor, that parsed the XML representation of a sample OpenLearn XML unit in various ways, disaggregating the unit into component assets, such as images, audio and video items, and so on....
+<!--
+<p>Some time ago, I posted about an <a href="http://blogs.open.ac.uk/Maths/ajh59/010124.html">OpenLearn XML processor</a>, that parsed the XML representation of a sample OpenLearn XML unit in various ways, disaggregating the unit into component assets, such as images, audio and video items, and so on.</p>
+
+<p>Looking back over the code a couple of weeks ago, I'm not sure that it ever worked properly, so I've popped a  <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnProcessor2.php">revised version of the processor up that should work correctly</a> (fingers crossed... ;-)</p>
+
+<p>The original proof of concept ran various XSL translation tools over local copies of a handful of OpenLearn XML units. Since then, the OpenLearn team have started to provide access directly to the XML source of each unit on the OpenLearn website, so the XML processor can now be run against any unit hosted on the OpenLearn website.</p>
+
+<p>One thing I need to think about doing is cacheing the output of each XML processor transaction, or storing the output of the XSLT following its first run. The OpenLearn units are pretty stable, after all, so running the XML representation of each course <span style="font-style: italic;">every time</span> the processor run is hugely inefficient. (I was thinking of trying to store the results in the cloud using the Amazon simple database service, although if Zoho offer an API to their database, maybe I should give that a whirl? The third alternative I've been considering is storing the results on the Talis platform, though I'm not sure whether I have an account/space on there yet?</p>
+
+<p>So what does the OpenLearn XML processor do? Here's a quick recap - for each unit run through the processor, it will generate an OPML file containing collections of links that point to: the image fies that appear in the unit content; the audio files referred to in the unit; the video files contained within the unit.</p>
+
+<p>For example, here's what happens when you run the L120_1 materials through the OpenLearn XML processor:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/read?font=arial&amp;fontsize=9pt&amp;view=o&amp;file=http://www.w3.org/2005/08/online_xslt/xslt?xslfile=http://ouseful.open.ac.uk/openlearnplayground/openlearnAssets.xsl&amp;xmlfile=http://openlearn.open.ac.uk/file.php/L120_1/formats/L120_1.xml&amp;forward-accept=on&amp;content-type=text/xml&amp;submit=transform" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?font=arial&amp;fontsize=9pt&amp;view=o&amp;file=http://www.w3.org/2005/08/online_xslt/xslt?xslfile=http://ouseful.open.ac.uk/openlearnplayground/openlearnAssets.xsl&amp;xmlfile=http://openlearn.open.ac.uk/file.php/L120_1/formats/L120_1.xml&amp;forward-accept=on&amp;content-type=text/xml&amp;submit=transform"></script></div>
+
+<p>(This doesn't actually work for me a lot of the time in my everyday-use Flock/Firefox browser, though it does work fine for me elsewhere - some cookie problem to do with being logged in to OpenLearn or not, I think. If you aren't an OpenLearn user/have never logged in to OpenLearn then you should be able to see the images and play the audio. (I'm not sure the video is working yet, though). The issue has something or other to do with the huge login kludge that OpenLearn uses for guesting access to assets via the RSS feeds, but apparently I'm the only person who sees this problem so it's not a proper bug...)</p>
+
+<p>You can find the OpenLearn XML processor at: <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearnProcessor2.php">http://ouseful.open.open.ac.uk/openlearnplayground/openlearnProcessor2.php</a></p>
+
+<p>As well as the combined OPML output, the processor provides separate RSS feeds that contain links to any images found in the unit and any external links (URLs) referenced in the unit material. The outgoing links can also bundled into a Google Linked custom search engine annotations file, along with a link to the unit itself on OpenLearn, which means that is is possible to create a search engine on-the-fly that will search over only the unit and the sites it links to (see <a href="http://blogs.open.ac.uk/Maths/ajh59/012825.html">OpenLearn Dynamic Custom Search Engine</a> for the initial announcement of this live CSE app).</p>
+
+<p>As and when I get round to it, I'll also do a separate RSS audio feed with a link to the audio file added as an enclosure, which means that services like the Grazr feed reading widget can play the file using an automatically embedded audio player. (Ideally, the OPML bundle asset bundle for a unit should point to separate RSS feeds for each asset type.)</p>
+
+<p>Also on my to do list is a slideshow tool to display the images from a unit in a slideshow widget via the processed image RSS feed :-)</p>
+
+<p>One of the reasons I'm exploring the idea of unbundling media typed OpenLearn resources into constituent feeds is that I'm trying to get a feeling for how easy it would - or wouldn't - be to indulge in a little roundtripping, unbundling the unit into constituent parts and then reassembling them to hopefully form some semblance of the original course, or at least, a coherent, well-resourced course on the same topic.</p>
+
+<p>(Another take on this exploration is provided by the MIT opencourseware unit unbundling and representation experiment I tried way back when: <a href="http://blogs.open.ac.uk/Maths/ajh59/010236.html">Disaggregating an MIT OpenCourseware Course into Separate RSS Feeds</a>)</p>
+
+<p>Although it pains me to say so, it may be that I need to have a look at some learning design templates to see whether or not they might provide some way of physically representing the structure of a course and the way the individual assets are organised within it. The XML representation used by Compendium might also be relevant here? As a first step, through, it may make more sense to try to tease out the structure of a course from structural outline elements (such as section headings etc.) and represent them using a hierarchical schema, such as the Freemind mindmap format.</p>
+
+<p>(I've actually experimented with that format a couple of times before, though in a slightly different context. For example, see the <a href="http://blogs.open.ac.uk/Maths/ajh59/010443.html">T180_8 wikipedia/freemind mashup</a>)</p>
+
+<p>Alternatively, I wonder if its possible to use a clustering algorithm to try to naively tease out any content clusters within the course, again maybe representing the result in a hierarchical Freemind representation (as demoed in <a href="http://blogs.open.ac.uk/Maths/ajh59/012128.html">Hierarchical Course Clusters from Course Profiles App</a> for the course codes declared by students using our <a href="http://blogs.open.ac.uk/Maths/ajh59/010855.html">Course Profiles Facebook application</a>).</p>
+
+<p>Ho hum - too many things I could do, no time to do any of them... :-(<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/open%20content" rel="tag">open content</a>, <a href="http://technorati.com/tag/%20oer" rel="tag"> oer</a>, <a href="http://technorati.com/tag/%20xml" rel="tag"> xml</a>, <a href="http://technorati.com/tag/%20opml" rel="tag"> opml</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013035.html">05:11 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13035" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 11, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012998"></a>
+<h3 class="title">Beware of Google Quoting Out of Context</h3>
+
+This was just too amusing not to post - Martin apparently putting OpenLearn down in this Google blogsearch result: Here's what he actuually said: Google strips out tags when it produces the summary, so while Martin used a &lt;blockquote&gt; for...
+<!--
+<p>This was just too amusing not to post - Martin apparently putting OpenLearn down in this Google blogsearch result:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2256955799/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2330/2256955799_338f83ff5d.jpg" alt="2008-02-11_1032" style="border: 0pt none ;" height="97" width="500" /></a></p>
+
+<p>Here's what he actuually said:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2256955199/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2009/2256955199_94018d9d9b.jpg" alt="2008-02-11_1031" style="border: 0pt none ;" height="168" width="500" /></a></p>
+
+<p>Google strips out tags when it produces the summary, so while Martin used a &lt;blockquote&gt; for the quote, Google just stripped it out...<br />
+ <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/google" rel="tag">google</a>, <a href="http://technorati.com/tag/search" rel="tag">search</a>, <a href="http://technorati.com/tag/infoskills" rel="tag">infoskills</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012998.html">10:36 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12998" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 10, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012955"></a>
+<h3 class="title">The Problem With OpenLearn...</h3>
+
+Downes linked to a post yesterday - Is the Open University making the right content open in OpenLearn? - that raised various concerns about the value of the OpenLearn endeavor. The post also picked up on another post - OpenLearn...
+<!--
+<p><a href="http://www.downes.ca/cgi-bin/page.cgi?post=43305">Downes</a> linked to a post yesterday - <a href="http://fm.schmoller.net/2008/02/is-the-open-uni.html">Is the Open University making the right content open in OpenLearn?</a> - that raised various concerns about the value of the OpenLearn endeavor. The post also picked up on another post -  <a href="http://donaldclarkplanb.blogspot.com/2008/02/openlearn-another-document-dump.html">OpenLearn - another document dump</a> - that was even more critical in tone (I posted a comment a few hours ago but it doesn't seem to have got through owner moderation yet...).</p>
+
+<p><a href="http://nogoodreason.typepad.co.uk/no_good_reason/">Martin</a> posted a response earlier today - <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2008/02/in-defence-of-o.html">In defence of openlearn</a> - and I'm sitting here on the boat back home wondering whether Laura has entered into the debate yet with an "official" comment, either in the form of a direct response via Open Air, or a comment on either (or both) of the blogs concerned.</p>
+
+<p>Long time readers will know that on occasion I've been publicly critical of some of the technology and user interface decisions made with respect to the OpenLearn environment, (which is nothing compared to some of the feedback I've given in private!;-) but I've tended to keep out of the argument about the quality of the materials posted up there. So I was in two minds whether to join in the debate, or just to keep my own counsel... but as I figure Martin needs all the links he can get in our Technorati ranking race, here's a thought or two of my own on the subject...</p>
+
+<p>First off, Martin made a valid point in his post about the origins of the OpenLearn content as <span style="font-style: italic;">distance education teaching material</span> that is actually something worth remembering when considering who the intended audience is for open courseware, and the ways in which OERs might potentially be used, and by whom.</p>
+
+<p>Many OU materials are based on the idea of a "tutorial in print", in which the text is structured in an almost conversational way between the author and the reader. SAQs - self-assessment questions - and exercises engage the learner in activities that help them question their own understanding of the material they have been studying, much as a tutor might question a student on their understanding of a particular point being covered in a traditional tutorial. Answers are generally provided to both exercises and SAQs, and often include explanations correcting "gotchas", such as common misunderstandings or typical errors. [It's also important to remember that for-credit OU courses are presented within a formal assessment framework, which provides a strong motivational context for study (hat tip, <a href="http://kindalearning.blogspot.com/2008/02/openlearn-not-doing-business.html">Sarah</a> for pointing that out, in a <a href='http://nogoodreason.typepad.co.uk/no_good_reason/2008/02/in-defence-of-o.html#comment-100869008">comment to Martin's post</a>)]</p>
+
+<p>Formally delivered OU courses also come with a community, both online and in the form of small, face to face tutorial groups. Although many of our courses have cohorts in the many hundreds, the 25-1 student to tutor ratio (or whatever it is), and regional structure (students are allocated to one of <a href="http://blogs.open.ac.uk/Maths/ajh59/010569.html">thirteen or so geographical regions</a>) means that despite dealing with at-scale, home study courses delivered on a national (and even international) basis, we still manage to provide a very personal delivery model.</p>
+
+<p>OpenLearn hasn't managed to get that community - or local support - vibe going, although tools like the MSG messenger (try logging in with an OpenID;-) and Flashmeeting videoconferencing tool are both attempting to support synchronous one-to-one and small group conversations that might contribute to a peer-based support model that takes the place of the OU's formal SOL - Supported Open Learning - mechanism in our 'commercial' courses. Forum activity hasn't really got going either (at least, not in the forums I've seen - though I think there may be some active ones?). My opinion, for what it's worth, would be to aggressively push something like the Course Profiles Facebook app and get learners to badge themselves with OpenLearn unit codes and maybe meet up in subject or topic focussed Facebook groups, using OpenLearn as a potential entry point for people into the Facebook community, and hoping they will then associate Facebook with OpenLearn, at least some of the time!</p>
+
+<p>The distance learning origins of the OU materials place them in stark contrast with the opencourseware offerings of the likes of Yale or MIT. Those materials are typically collections of resources, ordered by course, and aggregated on a per lecture basis. My feed based disaggregations of those courses (such as <a href="http://blogs.open.ac.uk/Maths/ajh59/012199.html">MIT OpenCourseware for High Schools</a> or <a href="http://blogs.open.ac.uk/Maths/ajh59/012487.html">Yale OpenCourseware Feeds</a>) compared with the content feeds offered by OpenLearn <span style="font-style: italic;">as a standard</span>. My own experiments with the OpenLearn XML Processor (and a new post out hopefully in the next few days) offer a starting point for a closer comparison of feed based representations of current opencourseware.</p>
+
+<p>For my sins, I lobbied long and hard for OpenLearn to release its content as RSS feeds. That was perhaps an error of judgement - getting the content into a wiki or disaggregated into a triple store might have encouraged more participation (in the case of the wiki), or more benefits from content scaling and consequent data mining (in the case of the triple store), but what's done is done... and I guess the feeds did make openlearnigg possible (I'd had that concept of a feed powered environment in my mind's eye from the day OpenLearn launched...). Some of the other benefits are described here: <a href="http://blogs.open.ac.uk/Maths/ajh59/011119.html">Feeding from OpenCourseware</a> (if you're one of the reviewers from that OpenLearn 2007 conference submission who slated me for not providing any references to other work in the area, I'd really appreciate knowing what you expected me to reference?)</p>
+
+<p>On a practical note, lobbying early on for a wholesale change to the underlying database/course representation that a port over to MediaWiki or a triple store would have required, compared to the simple elaboration of the current OpenLearn content that was all that was required to support the course content RSS feeds, would have been a non-starter; and probably still is...</p>
+
+<p>That said, one thing I'm keen to try is importing OpenLearn modules wholesale into a MediaWiki by converting the OpenLearn unit XML into the MediaWIki Export (and hence import) XML format, especially now that a page level RSS feed output module is available (hat tip to Leigh Blackall at <a href="http://wikieducator.org">wikieducator</a>, who tipped me off to the <a href="http://jimbojw.com/wiki/index.php?title=WikiArticleFeeds_Extension">Wiki Article Feeds Extension</a> that they're trialling. Could this be a possible project, Leigh?;-)</p>
+
+<p>Making the feeds available as they currently are on OpenLearn was not the be all and end all of what I envisioned, though as I hope to show below it does demonstrate a difference in approach to the interpretation of "open" in the phrase "open courseware". The course content feeds do offer a way of syndicating content and allowing others to republish it alternative environments (as I demonstrate within the <a href="http://openlearnigg.corank.com">openlearnigg demonstrator</a> and the <a href="http://blogs.open.ac.uk/Maths/ajh59/010778.html">OpenLearn Content Grazr Facebook</a> application) but they don't really represent an innovation in how students might consume the content. The closest I feel I have come to that is with the <a href="http://blogs.open.ac.uk/Maths/ajh59/009164.html">OpenLearn_Daily</a> demonstrator (now deprecated), a feature which is also made available via <span style="font-style: italic;">openlearnigg</span>. (OpenLearn_daily uses a "feedcycle", or serialised RSS feed (in the sense of magazine or radio serials), whereby users can subscribe at any time and then receive one item per day (or week, or whenever) in their feedreader from the day they subscribe).</p>
+
+<p>A few thousand of the OpenLearn grant spent with a third party developer (how much, Andy T? ;-) would have been enough to build a OpenLearn_daily demonstrator in pretty quick time, bashed out in Rails or within some other framework, but anyone working in a large institution knows that it would cost way more than that in terms of time, coin, stress and specification wars than is worth contemplating!</p>
+
+<p>As hinted at above, I do think that exposing the full content RSS feeds expresses a powerful philosophical point about the nature of open. Document formats such as PDF are not open in the sense that I can edit those documents using freely and readily available tools. (Okay, I know some of the OU material has been released as PDF, but for most of the units, most of it is HTML delivering text and embedded assets). The extent to which you can consume the course content in a feed reader, or embeddable feed rendering widget, such as <a href="http://grazr.com">Grazr</a>, is for me a useful rule-of-thumb as to the 'representational openness' of the resource.</p>
+
+<p>As to the delivery of OpenLearn content via Moodle, I do think this represented something of a lack of vision. The idea of making OpenLearn content in a learning environment, rather than just releasing it via lists of materials in an opencourseware micro-site, was something of a novel initiative at the time, I think, <a href="http://cnx.org/">Connexions</a> aside, maybe? (which doesn't say much for the rest of the OER community's efforts in this area... ;-)</p>
+
+<p>But as far as innovating in the delivery of online course material, I'd agree that OpenLearn/Moodle was as boring as hell. And not particularly well executed (the navigation is lousy; the search is poor; the aesthetic is pretty mundane, the usability is questionable, and so on (my browser shortcut to a Moodle test server I used to run was 'muddle';-).</p>
+
+<p>This is all pretty much par for the course across a lot of "elearning" though, so I won't labour the point here (maybe I'll do another post about that in the next week or two...?;-)</p>
+
+<p>Anyway - <span style="font-style: italic;">is OpenLearn making right content available?</span>, and is it <span style="font-style: italic;">just another document dump?</span></p>
+
+<p>Who cares? The take home points for me about OpenLearn is that <span style="font-weight: bold;">it makes available authentic distance educational material, some of it designed for online delivery, in an open format and under an open license</span>.</p>
+
+<p>I'm forever banging on here in this blog, and internally whenever I get the chance, about how <span style="font-style: italic;">I</span> think we're doing lots of online stuff wrong... and how it's impossible to try out anything with our materials in the current production system ("LTS just aren't very helpful" - me, quoted-ish, and overheard in the bar by senior LTS management ;-)</p>
+
+<p>But now I've got access to some real content - indeed, we all have, and for over a year now - which means I can try to figure out, in public and in the wild, what the right way might possibly be, using real'n'authentic OU content - as approved by the quality police, <span style="font-style: italic;">and</span> the rights police <span style="font-style: italic;">;-) heh heh, love ya really :-)</span></p>
+
+<p>...albeit at 1am on Saturday night/Sunday morning after delivering an OU residential school activity a hundred miles or so away several hours ago today, yesterday, whatever.</p>
+
+<p>Ho hum, it would be time for bed, but I think I've got some "work" to do...go figure...<br />
+   <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oer" rel="tag">oer</a>, <a href="http://technorati.com/tag/open%20content" rel="tag">open content</a>, <a href="http://technorati.com/tag/%20opencourseware" rel="tag"> opencourseware</a>, <a href="http://technorati.com/tag/%20openlearn" rel="tag"> openlearn</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012955.html">01:11 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12955" onclick="OpenComments(this.href); return false">Comments (6)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 08, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012936"></a>
+<h3 class="title">MyMaps GeoBlogger - Blogging From Google Maps</h3>
+
+I've been thinking about contextualised blogging interfaces, lately, in the sense of lightweight publishing and syndication from an environment that supports the easy creation of structured posts, such as posts about a series of events structured in time, or space....
+<!--
+<p>I've been thinking about contextualised blogging interfaces, lately, in the sense of lightweight publishing and syndication from an environment that supports the easy creation of structured posts, such as posts about a series of events structured in time, or space.</p>
+
+<p>The <a href="http://blogs.open.ac.uk/Maths/ajh59/012594.html">Displaying Google Calendar Events on a Map</a> Yahoo pipes mashup may be viewed as using the Google Calendar environment to easily create posts associated with a particular date, and then optionally associate location information (described in natural language) with each posted item. If the date information is removed, the order of posts that appear in the calendar feed can be readily reordered, changing the presentation order in the published feed, simply by moving the posts about in the calendar view. (The body of the post in this case would be contained withing the Calendar event description.)</p>
+
+<p>Google Calendar thus provides an interface for creating - and managing - a series of ordered posts, and does not have to be viewed as just a calendar...</p>
+
+<p>But what if you <span style="font-style: italic;">primarily</span> want to blog from different geographical locations, (without the aid of GPS support!)? It would be really handy if you could just click the relevant location on a map, and write a post exactly from there...</p>
+
+<p>...which is why I tidied up and extended the Yahoo pipe mentioned in <a href="http://blogs.open.ac.uk/Maths/ajh59/012866.html">A "Google MyMaps RSS editor"</a> and added a couple of extra features, like being able to add a 'publication date' for your post, as well as a link URL: <a href="http://pipes.yahoo.com/ouseful/mymapsblog">Google MyMaps Blogging Pipe - http://pipes.yahoo.com/ouseful/mymapsblog</a></p>
+
+<p>The pipe effectively allows you to use a Google My Map as a "geographical blogging surface". Each marker on the map corresponds to a separate post, or feed item. The 'View in Google Earth' link from the MyMap can be passed to the pipe and a valid geoRSS feed will be produced as a result.</p>
+
+<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/KJukKpQDVLQ&rel=0&border=0"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/KJukKpQDVLQ&rel=0&border=0" type="application/x-shockwave-flash" wmode="transparent"width="425" height="355"></embed></object></p>
+
+<p>As well as adding geoRSS lat/long tags to the RSS feed, the pipe is capable of:</p>
+
+<p>- adding a date to each post: to give the post a date, use a construct like: date: February 7th, 2008. You can also add dates like "today", which will give the post the current days date whenever the pipe is run - meaning you can associate 'relative' post dates with posts made from the map.</p>
+
+<p>- associating a URL with the title of each post, in true RSS fashion: to give an item a url, use something like: url:http://example.com or link:http://example.com/foo/bar.html </p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2251411566/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2334/2251411566_107f3d7c3f.jpg" alt="2008-02-08_2111" style="border: 0pt none ;" height="372" width="375" /></a></p>
+
+<p>Here's a very poor <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=109196350919255002936.0004458fc8b1d6b01cd52&amp;z=8&amp;om=0">example MyMaps geoblog</a>, and here's an <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=f8d13298b0cdcc7eebf35763c50791ca&amp;_render=rss&amp;kmlNetworkLinkURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.0004458fc8b1d6b01cd52">example MyMaps geoblog feed</a>.</p>
+
+<p>To generate the MyMaps geoblog RSS feed, get hold of the "View in Google Earth" URL from the MyMap:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250623973/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2240/2250623973_5b77fce1da.jpg" alt="2008-02-08_2117" style="border: 0pt none ;" height="141" width="500" /></a></p>
+
+<p>and paste it in to the Yahoo <a href="http://pipes.yahoo.com/ouseful/mymapsblog">MyMaps geoblogger pipe</a>, then get hold of the RSS feed URL from the pipe:</p>
+
+<p><br />
+   <a title="MyMaps geoblogger pipe" href="http://www.flickr.com/photos/25451952@N00/2250633031/"><img src="http://farm3.static.flickr.com/2307/2250633031_86f7502084_o.png" style="border: 0pt none ;" title="" alt="" /><br />
+</a><br />
+To prove the date stamping works, you can <a href="http://30boxes.com/external/widget?url=http%3A%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Df8d13298b0cdcc7eebf35763c50791ca%26_render%3Drss%26kmlNetworkLinkURL%3Dhttp%253A%252F%252Fmaps.google.co.uk%252Fmaps%252Fms%253Fie%253DUTF8%2526hl%253Den%2526msa%253D0%2526output%253Dnl%2526msid%253D109196350919255002936.0004458fc8b1d6b01cd52+&amp;forceTheme=%2Ftheme%2Fsmall&amp;forceNoResize=1&amp;forceRows=5">view the feed via a 30 Boxes calendar</a> (look for February 2008; link generated using the <a href="http://30boxes.com/external/widget.php?action=buildUrl&amp;theme=%2Ftheme%2Fsmall&amp;url1=http%3A%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Df8d13298b0cdcc7eebf35763c50791ca%26_render%3Drss%26kmlNetworkLinkURL%3Dhttp%253A%252F%252Fmaps.google.co.uk%252Fmaps%252Fms%253Fie%253DUTF8%2526hl%253Den%2526msa%253D0%2526output%253Dnl%2526msid%253D109196350919255002936.0004458fc8b1d6b01cd52&amp;url2=&amp;url3=&amp;title=&amp;resize=on&amp;numWeeks=&amp;bgColor=&amp;feedColor1=&amp;feedColor2=&amp;feedColor3=">30 Boxes Calendar mashup machine</a>; for some reason the calendar doesn't display the description content, but <a href="http://grazr.com/gzpanel.html?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=f8d13298b0cdcc7eebf35763c50791ca&amp;_render=rss&amp;kmlNetworkLinkURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.0004458fc8b1d6b01cd52">a Grazr widget does</a>).</p>
+
+<p><br />
+The mechanics of the pipe are pretty much as described in the <a href="http://blogs.open.ac.uk/Maths/ajh59/012866.html">Google MyMaps RSS editor</a> post, at least insofar as the creation of the main item and geoRSS feed components from the "View in Google Earth" Network Link wrapping KML URL go.</p>
+
+<p>The link and date are then extracted using a regular expression, and the two Pipes date blocks used to identify the date and put it into an appropriate form:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250644905/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2381/2250644905_505a1ef4c3_o.png" alt="2008-02-08_2129" style="border: 0pt none ;" /></a></p>
+
+<p>If you have a go using the pipe, and come across any problems, please let me know.</p>
+
+<p>I'm sure there must be some other geoblogging tools out there, but this one is essentially 'for free', being built as it is from components that already exist.</p>
+
+<p>Okay, so the MyMaps marker annotation editor is maybe not the best in the world, but there is a rich text editor and HTML view if you want to add a little style:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250656705/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2383/2250656705_c75b633906.jpg" alt="2008-02-08_2136" style="border: 0pt none ;" height="361" width="326" /></a></p>
+
+<p>Now, what was next on the list...? ;-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/gmaps" rel="tag">gmaps</a>, <a href="http://technorati.com/tag/mymaps" rel="tag">mymaps</a>, <a href="http://technorati.com/tag/%20geoblog" rel="tag"> geoblog</a>, <a href="http://technorati.com/tag/geoblogging" rel="tag">geoblogging</a>, <a href="http://technorati.com/tag/geoblogger" rel="tag">geoblogger</a>, <a href="http://technorati.com/tag/yahoo%20pipes" rel="tag">yahoo pipes</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012936.html">09:38 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12936" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 07, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012866"></a>
+<h3 class="title">A "Google MyMaps RSS editor" (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)</h3>
+
+One of the handy things about Google MyMaps is that you can use the map to add markers to particular locations on a map, save the markers to a named MyMap, and obtain a link to "View [the markers] in...
+<!--
+<p>One of the handy things about Google MyMaps is that you can use the map to add markers to particular locations on a map, save the markers to a named MyMap, and obtain a link to "View [the markers] in Google Earth".</p>
+
+<p>The Google Earth link is actually a link to a KML file that in turn points to a second, network linked KML feed that contains the markers you have plotted on the particular MyMap.</p>
+
+<p>If you want to use a Google map to generate an RSS feed (or more specifically, a geoRSS feed, that contains the latitude and longitude of each marker/item in the RSS feed) which can then be displayed in a generic feed reading application (albeit without making using of the geo information), then I don't Google maps can offer you that...</p>
+
+<p>...but a little Yahoo pipes mashup can...</p>
+
+<p>So for example, take the <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=103763259662194171141.000001119b4bc596127f8&amp;z=2&amp;om=0">World of Hello World</a> map. We can grab the "View in Google Earth" feed and pop it into a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=upZvhxPV3BGkyflyX0sBXw">Yahoo Pipe that will firstly extract the Network Link URL</a> that actually points to the KML feed that contains the individual map items:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247758220/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2129/2247758220_43b78c77c5.jpg" alt="2008-02-07_0058" style="border: 0pt none ;" height="318" width="500" /></a></p>
+
+<p>Secondly, you should notice that the above pipe itself calls a second, nested custom pipe, <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=zDJgJA_V3BGpfsszJxOy0Q">KML2geoRSS</a>. This embedded pipe actually converts the KML feed that contains the individual map items to a geoRSS feed:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2246971699/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2071/2246971699_e4810e72e9.jpg" alt="2008-02-07_0104" style="border: 0pt none ;" height="236" width="500" /></a></p>
+
+<p>The location extractor appears to pull the lat/long info out of the KML feed (and maybe just propagate it for the KML output?) However, for some reason, the Yahoo map display when you run the pipe doesn't appear to plot the markers properly (at least it didn't in my browser; and the same buggy result happens if you try to view the geoRSS feed in a google map:-(</p>
+
+<p>[UPDATE: ok, the lat/long cordinates were being pulled out in the wrong order. I must have tested it one way to get the good map, then changed it and broke it... so it now works fine, but some of the screenshots in this post may be a little misleading; check the actual pipe to see how it's *really* built ;-)]</p>
+
+<p>At one point, I did manage to grab the KML output from the pipe, paste it back in to the Google map search box, hit 'Search' to load in the KML file output from the Yahoo pipe, and display it once again in the Google map:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247771374/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2414/2247771374_4b80651457.jpg" alt="2008-02-07_0107" style="border: 0pt none ;" height="193" width="500" /></a></p>
+
+<p>(This time, the 'View in Google Earth' link actually points directly to the Yahoo pipes KML output.)</p>
+
+<p>BUT - this seems to have stopped working now:-( and I get the same broken display the Yahoo map pipe output gives event though the feed looks right in the Pipes debugger?</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247817130/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2373/2247817130_21dc62e93e.jpg" alt="2008-02-07_0137" style="border: 0pt none ;" height="165" width="324" /></a></p>
+
+<p>(The geocoder/location extractor adds the y:location info, the Point is a remnant of the KML feed.)</p>
+
+<p>So this form of round tripping is all pretty pointless, right? {Especially as it appears to keep breaking in the geocoding stakes:-(] We get a KML file containing a netwrok link from a Google MyMap, stick it into a pipe that pulls out the network link URL and converts the KML file it points to to a geoRSS feed, and then use the Yahoo pipes output filter to get a KML file (which should be pretty similar to the KML file that the network link pointed to...) which can then plot back on the Googlr map...</p>
+
+<p>Hmmm...</p>
+
+<p>But, and here's the possibly useful point, the pipe will also give you an RSS feed that you can display in an RSS display widget, such as Grazr:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/read?view=o&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=upZvhxPV3BGkyflyX0sBXw&amp;_render=rss&amp;kmzURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D103763259662194171141.000001119b4bc596127f8" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=upZvhxPV3BGkyflyX0sBXw&amp;_render=rss&amp;kmzURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D103763259662194171141.000001119b4bc596127f8"></script></div>
+
+<p>Along with the <a href="http://blogs.open.ac.uk/Maths/ajh59/012594.html">Plotting Google Calendar Events on a Google Map</a> hack, which lets you use a calendar as a natural editing enviroment for generating date based feeds (that may additionally contain location information that can be exploited to give you a map view of the calendar feed), this current map2rss hack lets you use a map as an editor for creating location enhanced RSS feeds (that appear to be broken in wrt the geo bit:-( that can also be displayed in any old feed reader...</p>
+
+<p>...which may be useful?</p>
+
+<p>PS if you can spot why the geo bit seems to break in the pipe, please let me know :-) [The problem was lat and long getting switched by mistake... oops]</p>
+
+<p>PPS here's a version that does work, though it is a little more involved: <a href="http://pipes.yahoo.com/ouseful/mymap2georss">http://pipes.yahoo.com/ouseful/mymap2georss</a>.</p>
+
+<p>In particular, it embeds a <a href="http://pipes.yahoo.com/ouseful/kml2rss">pipe that calls the KML2geoRSS service to Microsoft</a> that I cloned off <a href="http://pipes.yahoo.com/barryhunter">Barry Hunter</a>. It uses this rather handy call: <em>http://maps.live.com/GeoCommunity.asjx?mkt=en-gb&mapurl=<strong>KMLfileURL</strong></em> to get a geoRSS feed.</p>
+
+<p>So now if you pass a Google MyMaps "View in Google Earth" URL to the <em>http://pipes.yahoo.com/ouseful/mymap2georss</em> Yahoo pipe, the live network linked KML url will be extracted, the KML feed passed through a Microsoft KML2RSS service, and you'll get a valid (and working) geoRSS feed out as a result which can be viewed in any feed reader, and also plotted on any map that accepts a geoRSS feed :-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/googlemaps" rel="tag">googlemaps</a>, <a href="http://technorati.com/tag/%20hack" rel="tag"> hack</a>, <a href="http://technorati.com/tag/%20kml2rss" rel="tag"> kml2rss</a>, <a href="http://technorati.com/tag/%20kml2georss" rel="tag"> kml2georss</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012866.html">01:42 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12866" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 05, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012825"></a>
+<h3 class="title">OpenLearn Dynamic Custom Search Engine</h3>
+
+This is a quick heads up about something I was tinkering with over the weekend, and about which I'll be posting more in the next couple of weeks...There has been quite a bit of talk, of late, in the blogosphere...
+<!--
+<p>This is a quick heads up about something I was tinkering with over the weekend, and about which I'll be posting more in the next couple of weeks...<br /><br />There has been quite a bit of talk, of late, in the blogosphere about "social search" - for example, <a href="http://venturebeat.com/2008/01/31/googles-marissa-mayer-social-search-is-the-future/">Marissa Mayer in interview with Venturebeat</a> or this <a href="http://www.watshow.com/2008/01/31/exclusive-interview-with-jimmy-wales-wikipedia-founder-watshow-episode-12/">interview with Jimmy Wales about Wikia</a>.<br /><br />One thing I've been trying to argue for for ages are custom, bounded search engines that search over sites linked to from OU courses. And over the weekend, the itch got so bad I had to scratch it...<br /><br />So imagine if you will an OpenLearn unit such as <a href="ouseful.open.ac.uk/t180_8">T180_8 Living with the internet: keeping it safe</a>. This unit explores the downside to "huge increases in ownership of home computers and ever-widening access [that has] been an obvious boon to many peoples' lives". In particular it contains many links to external, third party web sites, such as antivirus company Sophos, among others.<br /><br />And also imagine a piece of magic code that extracts all the weblinks from this course and uses them to define the sites over which a Google custom search engine will search - in effect, a search engine defined by the sites referenced from this online course.<br /><br />(You're familiar with the idea of a custom search engine, right? Like the <a href="http://ouseful.open.ac.uk/howdoi">How Do I?</a> instructional video search engine, or the <a href="http://ouseful.open.ac.uk/howdoicook">How Do Cook/What's Cooking?</a> recipe search engine, or even this <a href="http://blogs.open.ac.uk/Maths/ajh59/010642.html">OpenLearn custom search engine</a>...?)<br /><br />Okay - so here's an example - a 'malware search engine' that searches only over the websites linked to from T180_8: <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearncse.php">T180_8 custom search engine</a>.<br /><br />PS the search engine will actually create a custom search engine on the fly for any OpenLearn unit using the URL http://ouseful.open.ac.uk/openlearnplayground/openlearncse.php?cc=<em>unit_code</em></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012825.html">09:41 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12825" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 04, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012788"></a>
+<h3 class="title">feedshow Link Presenter - Getting There...</h3>
+
+From time to time I give presentations based almost wholly around websites, or screenshots of websites, rather than a set of Powerpoint slides. This is particularly true whenever I do a "partial attention format" workshop, a typically hectic tour of...
+<!--
+<p>From time to time I give presentations based almost wholly around websites, or screenshots of websites, rather than a set of Powerpoint slides. This is particularly true whenever I do a "partial attention format" workshop, a typically hectic tour of preselected websites in which the audience are free to take notes, follow along with what I'm saying via the projector screen, or by visiting the sites under discussion on their own computers, or catch-up on their mail and feedreading if they've heard it all before ;-)</p>
+
+<p>The feedshow link presenter has evolved to support this sort of presentation by providing a simple environment for stepping through a list of links delivered to the presenter app via an RSS feed. A typical source for such a feed might be a social bookmarking site such as delicious, for example; (links for each 'show' can be assigned a different tag). The actual sites - rather than screenshots - are displayed within the presenter, so they can be explored in real time during the presentation.</p>
+
+<p>I've just popped a new version up at <a href="http://ouseful.open.ac.uk/feedshow">http://ouseful.open.ac.uk/feedshow</a>, incorporating a couple of new features (with more on the way if next get a spare half hour... and loads more when I have a spare couple of hours...;-)</p>
+
+<p>So what's new?</p>
+
+<p>Firstly, the landing page.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2223323263/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2032/2223323263_f5d2fcf803.jpg" alt="2008-01-27_2019" style="border: 0pt none ;" height="288" width="500" /></a></p>
+
+<p>As the app evolves, the link presenter is going to go through several versions, or variants, so the landing page will allow you to select between the currently available versions. At the moment, there are two flavours available:</p>
+
+<p>- <span style="font-style: italic;">solo</span>: the <span style="font-style: italic;">Solo Show</span> is for use when you don't expect anyone to follow along, such as when no-one in the audience has access to a computer, or internet connection. (The presenter needs an internet connection for the app to work...But then, as the aim of the app is to help sequence a series of visits to third party websites, the network connection is more or less essential ;-) If someone <span style="font-style: italic;">does</span> have access to a connected computer, you can splash them a URL so they can get access to the links in the link presenter environment, and click through them at their own speed.</p>
+
+<p>- <span style="font-style: italic;">synch</span>: the <span style="font-style: italic;">Synch Show</span> allows members of the audience to run a version of the link presenter that can synch their view with that of the presenter. So if they drift off for a few 'slides' (i.e. sites), or wander off browsing elsewhere, they can easily synch with the main presentation view - and then start wandering off again on their own tack by clicking around the site under discussion ;-)</p>
+
+<p>The "Reverse order" switch will reverse the order of links that are presented. This can be useful when feeding from sources like delicious, where it is easier to add links in the order you intend to use them, and which will then be in reverse (chronological addition date) order when pulled into the link presenter.</p>
+
+<p>When you launch the slideshow, you are taken to the splash screen for the show:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2228703371/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2011/2228703371_134444ce65.jpg" alt="2008-01-29_2143" style="border: 0pt none ;" height="260" width="500" /></a></p>
+
+<p>The top menu bar is where the real action is (NB.  the styling of the top bar still needs tweaking - it only displays properly in quite a wide aspect browser...)</p>
+
+<p>At the moment, the control bars are different for the solo and synch shows:</p>
+
+<p>Solo show controls:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2229502548/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2224/2229502548_d6ac981e4e.jpg" alt="2008-01-29_2145" style="border: 0pt none ;" height="14" width="500" /></a></p>
+
+<p>Synch show controls:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2229505856/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2309/2229505856_bbb0211cd9.jpg" alt="2008-01-29_2147" style="border: 0pt none ;" height="15" width="500" /></a></p>
+
+<p>Clicking on <span style="font-style: italic;">Splash</span> will display a URL for audience members to follow along.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2228716673/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2313/2228716673_d88be393c3.jpg" alt="2008-01-29_2149" style="border: 0pt none ;" height="271" width="500" /></a></p>
+
+<p>In the solo show, the link points to the version of the app that the person presenting the show is using. Audience members are in control of the app and there is no synchronisation between their browser and the person presenting.</p>
+
+<p>In the synch show, the link points a client version of the application (the person presenting the show is running a master version). The client/audeince view in the synch version has a control bar that is cut down further still:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2229517352/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2008/2229517352_c8755ab120.jpg" alt="2008-01-29_2153" style="border: 0pt none ;" height="15" width="500" /></a></p>
+
+<p>In all control bars, Back and Forward will point to the next and previous links/pages in the show. The sequence wraps round at each end of the show (next on the last link goes to the first link in the show, previous on the first goes to the last link in the show).</p>
+
+<p>The show is started in sole and synch master views by clicking the 'Current' button. This will load the page corresponding to the first URL in the linkshow into the display area:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2228738409/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2077/2228738409_f653e7b8d3.jpg" alt="2008-01-29_2200" style="border: 0pt none ;" height="314" width="500" /></a></p>
+
+<p>In the synch show, the number of the link is displayed in the control bar. If the <em>Synch</em> button is clicked in the synch client, the page display will be synchronised with the URL currently loaded in the master view. In this way, audience members can synch the state of their Feedshow page with that of the presenter - which can be handy if you've only been paying partial attention, and wandered off to explore an earlier site in detail... </p>
+
+<p>Also in the synch show, the person giving the presentation can splash the URL of the page currently being displayed by clicking the <em>URL</em> button:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2228738409/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2369/2228745111_83a04edb30.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" style="border: 0pt none ;" height="213" width="500" /></a></p>
+
+<p>The text box - and the associated <em>Go</em> button - enable you to visit an arbitrary URL outside of the linkshow:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2228804761/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2123/2228804761_1da56ed43f.jpg" alt="2008-01-29_2233" style="border: 0pt none ;" height="143" width="500" /></a></p>
+
+<p>In the synch version, client users can synch with these out-of-show links by clicking the <em>Synch</em> button.</p>
+
+<p>Back in the master view, the presenter can return to the current slide in the show by clicking on the <em>Current</em> button, or move on to the next item in the sequenced show by clicking <em>Forward</em>.</p>
+
+<p>By loading actual pages into the main display area, rather than screenshots, sites can be explored in situ, within the context of the linkshow, whilst retaining the ability to go directly to the current, next or previous- bookmarked site in the show with a single click.</p>
+
+<p>If you have a play and come across any problems at all, please, please, please mail me...<br />
+<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/feedshow" rel="tag">feedshow</a>, <a href="http://technorati.com/tag/link%20presenter" rel="tag">link presenter</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012788.html">04:58 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12788" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 01, 2008</h2>
+
+
+<div class="blogbody">
+<a name="012714"></a>
+<h3 class="title">Emergency Maps Via Geo-Twitter</h3>
+
+Putting together the Barack Obama Campaign Trail Twitter Map just now, I vaguely recalled this post by John Tropea on Twitter Hashtags and Emergency 2.0, in which he talked about: some kind of emergency/disaster website that streams Twitter hashtags, Flickr...
+<!--
+<p>Putting together the <a href="http://blogs.open.ac.uk/Maths/ajh59/012712.html">Barack Obama Campaign Trail Twitter Map</a> just now, I vaguely recalled this post by John Tropea on <a href="http://libraryclips.blogsome.com/2008/01/17/twitter-hashtags-and-emergency-20/">Twitter Hashtags and Emergency 2.0</a>, in which he talked about:<br />
+<blockquote>some kind of emergency/disaster website that streams Twitter hashtags, Flickr Tags, and YouTube tags ... perhaps this is something Technorati could specialise in. Why not throw in a wiki and maps as well.</blockquote>I've not started trying to think through a good way of mashing different services together, but there's some really lo hanging fruit in terms of cloning the <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">geotwitter pipe</a>  and using it to plot tweets disovered using an RSS search feed (is it an opensearch feed, I wonder?) from <a href="http://terraminds.com/twitter/">Terraminds</a>:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2235355986/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2017/2235355986_5c96b22412.jpg" alt="2008-02-01_1858" style="border: 0pt none ;" height="178" width="500" /></a></p>
+
+<p>So... here's the <a href="http://pipes.yahoo.com/ouseful/geotwittersearch">geo twitter search pipe - http://pipes.yahoo.com/ouseful/geotwittersearch</a>, and here's what a <a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Dbcd9da52f1ee2f488aea5edbaf21ad40%26_render%3Dkml%26twitterq%3Dearthquake&amp;ie=UTF8&amp;ll=35.88905,-117.421875&amp;spn=70.524643,146.25&amp;z=3&amp;om=0">map of recent earthquake twitterings</a> looks like:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2235365450/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2125/2235365450_8d7fe3efbf.jpg" alt="2008-02-01_1905" style="border: 0pt none ;" height="231" width="500" /></a></p>
+
+<p>So - what other twitter map mashups are we lacking? ;-)</p>
+
+<p>PS I've thought about emergency maps before too...: <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?IncludeBlogs=1149&search=emergency%20map">OUseful.info posts on emergency mapping</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/geotwitter" rel="tag">geotwitter</a>, <a href="http://technorati.com/tag/%20terraminds" rel="tag"> terraminds</a>, <a href="http://technorati.com/tag/%20google%20map" rel="tag"> google map</a>, <a href="http://technorati.com/tag/%20twitter" rel="tag"> twitter</a>, <a href="http://technorati.com/tag/%20yahoo%20pipe" rel="tag"> yahoo pipe</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a>, <a href="http://technorati.com/tag/search" rel="tag">search</a>, <a href="http://technorati.com/tag/%20map" rel="tag"> map</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012714.html">07:07 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12714" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="012712"></a>
+<h3 class="title">Barack Obama Campaign Trail Twitter Map</h3>
+
+A comment on my Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map post from Richard@Soapdish point out how the hack is "quite effective if you plug in BarackObama's twitter ID. Shows what a mental amount...
+<!--
+<p>A comment on my <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</a> post from <a href="http://thesoapdish.wordpress.com/">Richard@Soapdish</a> point out how the hack is "quite effective if you plug in <a href="http://twitter.com/barackobama">BarackObama's twitter ID</a>.  Shows what a mental amount of travelling he's doing at the moment."</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2235231952/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2088/2235231952_01540a442d.jpg" alt="2008-02-01_1744" style="border: 0pt none ;" height="199" width="500" /></a></p>
+
+<p>Here's the <a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3DgB6E0bbQ3BGt8MhmnkartA%26_render%3Dkml%26twitterId%3Dbarackobama&ie=UTF8&z=4&om=0">actual, live map</a> (feed readers, you'll need to click through...):</p>
+
+<p><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3DgB6E0bbQ3BGt8MhmnkartA%26_render%3Dkml%26twitterId%3Dbarackobama&amp;ie=UTF8&amp;om=0&amp;s=AARTsJorZKfdpwB_Il7K8dvOEsUHbh3hBw&amp;ll=38.391226,-95.451514&amp;spn=47.614427,74.707031&amp;z=3&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3DgB6E0bbQ3BGt8MhmnkartA%26_render%3Dkml%26twitterId%3Dbarackobama&amp;ie=UTF8&amp;om=0&amp;ll=38.391226,-95.451514&amp;spn=47.614427,74.707031&amp;z=3&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+
+<p>And how long did that take?! All I had to do was paste <em>barackobama</em> into the <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=gB6E0bbQ3BGt8MhmnkartA">geotwitter pipe</a>, grab the URL of the KML feed (right click on "Get as KML" then choose the option closest to "Copy Link Location"), and paste it into a Google map search box.</p>
+
+<p><img src="http://farm3.static.flickr.com/2376/2221484878_2f877cd196.jpg" /><br />
+Don't you just love it when a mashup comes together? ;-)</p>
+
+<p>PS I'll maybe try to figure out a 1-click way of getting the map embed code from just the twitter userid, over the w/e ;-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/brackobama" rel="tag">brackobama</a>, <a href="http://technorati.com/tag/%20obama" rel="tag"> obama</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a>, <a href="http://technorati.com/tag/%20twitter" rel="tag"> twitter</a>, <a href="http://technorati.com/tag/%20camplaign%20map" rel="tag"> camplaign map</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012712.html">05:56 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12712" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="012696"></a>
+<h3 class="title">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</h3>
+
+I was just catching up on a few feeds over coffee, I read this snippet in a post by repository hacker David Flanders on What is Twitter? My initial answer was what can we do with the Twitter API: especially...
+<!--
+<p>I was just catching up on a few feeds over coffee, I read this snippet in a post by repository hacker David Flanders on <a href="http://dfflanders.wordpress.com/2008/01/31/what-is-twitter/">What is Twitter?</a><br />
+<blockquote>My initial answer was what can we do with the Twitter API: especially the idea of a phone app that posted my twitter from a Google maps location so you could actually see where the Twits were coming from. </blockquote>Twittervision and Twittermap already offer geo-location tools, and an API for you to set your location:<br />
+<ul><li>L:place=address[:]	store a personal location</li><br />
+<li>L:place[:]	set a stored personal location as current location</li><br />
+<li>L:address[:]	set an arbitrary location as current location</li></ul><br />
+So here's my offering, a Yahoo Pipe that will have a go at geocoding locations declared in a tweet - <a href="http://pipes.yahoo.com/ouseful/geotwitter">Geo-twitter Pipe - http://pipes.yahoo.com/ouseful/geotwitter</a>:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2234724384/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2130/2234724384_14d8571764.jpg" alt="2008-02-01_1152" style="border: 0pt none ;" height="230" width="500" /></a></p>
+
+<p>You can set the location using any of the following forms: =london, l=san_francisco, l:place=Los_angeles, geo=MILTON_KEYnes (all case insensitive). In deference to a converntion Brian Kelly is using, the pipe will also accept a ':' instead of the '=', so <em>l:Xiang</em> should work okay... Spaces in the location name should be replaced by an underscore (_).</p>
+
+<p>The pipe looks for the declared location, and temporarily pops it (and it alone) into the post title, (purely within the context of the pipe, of course - your feed isn't affected anywhere else). The pipe location extractor actually looks for a location in the title and description elements of the feed. The twitter feed puts the whole tweet (I think) in the both the title and the description of the feed, so by pulling out the declared location we hopefully give the location extractor a big clue as to the location we want to extract and geocode;-) If you <em>don't</em> explicitly mark up the location, the geocoder may well pull it out of the full tweet in the description part of the feed anyway...</p>
+
+<p>If the location extractor recognises the location, it will add geo-rss elements to the feed:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2234746996/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2116/2234746996_60ecf286a1.jpg" alt="2008-02-01_1214" style="border: 0pt none ;" height="238" width="430" /></a></p>
+
+<p>To run the pipe, simply provide your Twitter name (and pop a location in a recent tweet using one of the techniques mentioned above.</p>
+
+<p>In a sort of related post - <a href="http://blogs.open.ac.uk/Maths/ajh59/0125http://blogs.open.ac.uk/Maths/ajh59/012594.html94.html">Displaying Google Calendar Events on a Map</a> - I show how you can take the output of a pipe as KML and plot it on a Google map or within Google Earth etc...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2233961923/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2408/2233961923_d1baa4fe9a.jpg" width="500" height="261" alt="2008-02-01_1216" style="border:0"/></a></p>
+
+<p>Enjoy :-)</p>
+
+<p>PS if you want to know where your friends are: <a href="http://pipes.yahoo.com/ouseful/geotwitterfriends ">http://pipes.yahoo.com/ouseful/geotwitterfriends </a>. </p>
+
+<p>So for example, here's where the people I follow are tweeting about at the moment:</p>
+
+<p><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3D476168e6b5b16097b2aad6aedef59464%26_render%3Dkml%26twitterId%3Dpsychemedia&amp;ie=UTF8&amp;om=0&amp;s=AARTsJoIafM1pDp2BN17J8kYmtPw3xrv1w&amp;ll=15.961329,13.359375&amp;spn=152.331624,298.828125&amp;z=1&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3D476168e6b5b16097b2aad6aedef59464%26_render%3Dkml%26twitterId%3Dpsychemedia&amp;ie=UTF8&amp;om=0&amp;ll=15.961329,13.359375&amp;spn=152.331624,298.828125&amp;z=1&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+
+<p>PPS A question for the community - should I add a filter to the pipe so that it only contains geotagged items? <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/yahoo%20pipe" rel="tag">yahoo pipe</a>, <a href="http://technorati.com/tag/%20map" rel="tag"> map</a>, <a href="http://technorati.com/tag/%20georss" rel="tag"> georss</a>, <a href="http://technorati.com/tag/%20geotwitter" rel="tag"> geotwitter</a>, <a href="http://technorati.com/tag/google%20map" rel="tag">google map</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">12:18 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12696" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

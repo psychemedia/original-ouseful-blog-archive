@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Visualising CoAuthors in Open Repository Online Papers, Part 3</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./015007.html" title="IWMW2008 Innovation Competition - Searching for Media Release Related News Stories" />
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./015007.html">&laquo; IWMW2008 Innovation Competition - Searching for Media Release Related News Stories</a> |
+
+<a href="./">Main</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 16, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 3</h3>
+
+<p>In <a href="./014984.html">Visualising CoAuthors in Open Repository Online Papers, Part 2</a> I described an approach for pulling author information out of the OU ORO repository and displaying it in various ways, such as using a Graphviz plotted graph. I knew that ORO was scheduling an update, which has been pushed in the last few days, so the screen scraper I wrote to work with the old repository is now broken (of course...). The new ORO engine is capable of generating RSS search feeds though, so looking forwards, the whole system is far easier to play with it...</p>
+
+<p>...but it means that the demos I was just about to post about are now all broken... and it seems that the server I usually post scripts to (http://ouseful.open.ac.uk) won't run the (simple) PHP scraper I was using from the dev server on my laptop, so that's f***d too... </p>
+
+<p>Anyway, had everything been working, I'd have posted about a screenscraper that trashes through results pages from ORO repositories, and generates a .dot graph definition file that can be visualisaed using Graphviz.</p>
+
+<p>Like this excerpt of a view of authors of papers on <a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html">LB1603 Secondary Education: High schools</a> from the University of Southampton open repository.</p>
+
+<p><a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3027/2673909694_f5f82517dc.jpg" alt="http://eprints.soton.ac.uk/view/subjects/LB1603.html" height="114" width="500" /></a><br />
+ <br />
+...which I realise just now isn't working properly... the regular expression was tested against the author format used in last week's OU ORO reference listings (where every author was separated by an 'and'), and it breaks for multiple authored papers on the Southampton site where there are more than two authors (only the last author is 'and'ed, the others are comma separated). The fix should be a quick one, but... I have other things to do... and if the OU ORO site has been upgraded, maybe the Southampton one will soon follow...</p>
+
+<p>(It has been pointed out to me that using the approach on e.g. ORO papers might be used to shame people into submitting their own papers to local repositories, when they see their name isn't shown in a particular graph view where they might expect to see it... I couldn't possibly comment on that...!)</p>
+
+<p>Sigh - so much for this as another IWMW innopvation competition entry... The lesson: even sites that nominally use the same software (e.g. eprints) all use them slightly diffefrently; so scraping as a general technique sucks (now I remember why I stopped writing screen scrapers...;-)</p>
+
+<p>The "find collections of sets of names (such as article references), work out all the paired name combinations for each set (reference), then plot the graph" recipe seems to work though...</p>
+
+<p>So for example, here's a graph showing all the people who sit on the same committees in the Isle of Wight Council (as of June 2008); multiple links between two people shows they sit on several different committees together. The direction info in the links is rather more arbitrary, except in two particular cases... if you are only ever the chair of a committee, there will only be links going away from you... If there are only ever incoming links to you, you are not the chair of any committee.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2658900693/" title="Isle of Wight Council committee comembership by psychemedia, on Flickr"><img src="http://farm4.static.flickr.com/3237/2658900693_f4128efee3_b.jpg" alt="Isle of Wight Council committee comembership" height="744" width="1024" /></a></p>
+
+<p>If I could find lists of committee memberships for the OU, I'd have a go at plotting something similar... (it strikes me it might be interesting to see graphs showing named representation on committees that pass work to each other, as well as ex officio membership of committees by virtue of job title/rank (PVC, Dean, HoD, and so on...)</p>
+
+<p>Just one final note - visualising .dot files requires a Graphviz viewer. These are most comonly offline applications, though I have found a coupe of routes to online viewing:</p>
+
+<p>- <a href="http://ashitani.jp/gv/">AJAX Graphviz viewer</a>: post a (small) .dot file into a form, hit the enter key, and see the graph...<br />
+- <a href="http://drupal.org/project/graphviz_filter">Graphviz filter for Drupal</a>; I had asked <a href="http://greenhughes.com">Liam</a> if he could get one of these running somewhere, so I could plug in the eprints repository scraper and we'd have a neat IWMW innovation competition entry, but as my scripts all appear to be broken, and I donlt have time to fix them, I guess that's for another day (or not...)..</p>
+
+<p>Anyway, it seems that the OU may be going all 2.0, if Twitter is to be believed... so it's been a good three years or more,  and maybe it's job done..?! Time for something else maybe? A return to pointless research in a tiny micro-field somewhere (but at least a promotion prospect at the end...). I'll keep <a href="http://ouseful.info">http://ouseful.info</a> pointing somewhere, and <a href="http://feeds.feedburner.com/ouseful">http://feeds.feedburner.com/ouseful</a> will keep spewing forth...</p>
+
+<p>...but in the meantime...</p>
+
+<p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object></p>
+
+<p>OUseful.info on <em>.</em> has left the house... </p>
+
+<p>...be seeing you...<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw-not" rel="tag">iwmw-not</a>, <a href="http://technorati.com/tag/graphviz" rel="tag">graphviz</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July 16, 2008 09:51 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

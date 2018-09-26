@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OU VLE Update - VLE version 2</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012562.html" title="YUI Sortable Data Tables" />
+
+<link rel="next" href="./012581.html" title="delicious Stemming Pipes Demo" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012562.html">&laquo; YUI Sortable Data Tables</a> |
+
+<a href="./">Main</a>
+| <a href="./012581.html">delicious Stemming Pipes Demo &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 25, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OU VLE Update - VLE version 2</h3>
+
+<p>I went to an update session on the <a href="http://sclater.com/blog/?p=55">latest OU VLE release</a> earlier this week, and whilst I have to admit to having certain "<a href="http://sclater.com/blog/?p=45">issues</a>" (?!) with the Moodle/VLE approach, there were a couple of announcements that look really promising...</p>
+
+<p>I wandered in to the session a few minutes late, so missed the opening bravado, but did manage to see presentations about each of the tools now being - or soon to be - offered within the OU VLE.</p>
+
+<p>As I understand it, the development phase of the VLE will continue to run until July 2008, and then move into a proper roll-out phase (less development, more evangelism to course teams, producing courses with the VLE in mind, and so on).</p>
+
+<p>I'm not sure how agile the development process was (changing the spec as development went along, in consultation with course teams, ALs, students and web stats reports...) nor whether there will be developer effort available to 'tune' the various VLE modules after July as we gain experience in using them for real. My assumption would be that the powers that be will see the VLE as a done deal, rather than a living platform that could, should?, evolve with use - and continued developer involvement - but then, traditional software engineering/project management processes have a lot to answer for...</p>
+
+<p>Anywhere, here's a quick run down of what was reported on the day. (If you are OU staff, you can <a href="http://stadium.open.ac.uk/stadia/preview.php?s=1&amp;whichevent=1103">watch a recording of the event via the Berrill stadium</a>, and/or find more detail about the program on the <a href="http://intranet.open.ac.uk/ouvle">OU VLE minisite</a>.</p>
+
+<p><span style="font-weight: bold;">Integrated Online Experience/Student User Experience</span><br />
+There are currently several different interfaces presented to students, in particular Student Home (which sites outside Moodle?) and the course websites in the VLE. In particular, the VLE has a different look and feel to Student Home, and no obvious return path to there, even though that is a natural entry point to a course website.</p>
+
+<p>Students want single portal  (allegedly...;-), want to feel part of a community, want timely info, and so on.</p>
+
+<p>A new top level navigation scheme was released in January:</p>
+
+<p><img src="http://farm3.static.flickr.com/2245/2218665350_ab746f03b3.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="39" width="500" /></p>
+
+<p>The Student Home message board now incorporates course news. (I'm not sure how this is handled (I'd have the message board as an RSS feed display and then pipe news to it via aggregated RSS feeds, but I expect it's way more clunky than that (I would so love to be proved wrong...;-)</p>
+
+<p>For July, there will be a redesign of interfaces to provide a consistent user experience, along with some community feature (an "OU Life" tab). (The Course Profiles Facebook app provides quite a few social features, but letting students make friends with each other through Student Home is probably a bit too radical?;-)<br style="font-weight: bold;" /><br style="font-weight: bold;" /><span style="font-weight: bold;">Federated search</span><br />
+Currently - the OU search page will search over course materials, C&amp;Q etc (e.g. <a href="./009229.html">New OU Search Tools</a>, though that's maybe dated now?) Moodle course pages are now included in results when a search is made over course materials (not sure how the permissions work here? Can you only see into course materials on courses you are registered on? On courses you have taken? etc etc). On the student view there will be an option to search over the course materials for your course. (I'd like to see a custom search engine for each course too that searches over things that are linked to from the course...)</p>
+
+<p>Library search will be available from the federated search page next week, covering online subscriptions, repositories etc.; there will be guest access for the public, to act as a taster of online Library service provision for potential students; Library search will be added to the intranet search in near future. Clicking through on results e.g. for an ejournal article, will go via a link resolver direct to the article.</p>
+
+<p>By July 08 - federated search team will explore the inclusion of blogs, wikis, forums, internet, mystuff (?how will they index mystuff?); save and tag search results in Mystuff (?saved searches? or save/tag individual search results?)</p>
+
+<p><span style="font-weight: bold;">Mobile Learner Support</span><br />
+Recognition that mobility increasingly requires device independence delivery, and that it is the learner who is mobile.</p>
+
+<p>I thought I heard Rhodri say that the OU is moving to a web spec rather than a computer spec (we currently 'require' students to have a windows machine, for example, rather than saying they should be able to run IE67, Firefox 2, Opera or Safari, for example, with at least Flash 8 (or whatever) installed).</p>
+
+<p>Project has been considering different classes of devices/behaviours - mobiles, smartphones, tablets etc. AACS have apparently got a mobile demonstrator (?url )</p>
+
+<p>A Mobile "channel" is being explored - e.g. to include podcasting; there is a limited Moodle ipodcast module under development, though we still need to find a way of embedding e.g. transcript support, possibly using e.g. lyric support. Small scale trials from end of February.</p>
+
+<p>Mobile collaboration being explored - presences/status/IM; (rich) media capture, sharing; location based/GPS etc.</p>
+
+<p>Support for students who are mobile e.g. between locations, or where connectivity is an issue - offline moodle/Moodle on a stick; local version of content, forum synch.</p>
+
+<p><span style="font-weight: bold;">Calendars</span><br />
+Calendar items have a check box, so student can mark off what they have done (?use for to do lists?); calendar supports linking.</p>
+
+<p>Assessment details block - displays assessment dates, and highlights next assessment. [??should this display result of completed assessment?? - is the assessment date stuff available as a service/RSS feed?]</p>
+
+<p>There is a combined calendar view, for students with several courses. (??Should students be able to move 'fluid' elements, cf. fixed assessment elements? e.g could we not let students rearrange certain parts of their calendar (include a 'reset to OU recommended schedule' option?).</p>
+
+<p>A personal calendar page is now available (but does it offer synch via iCal etc? If not, then it limits its usefulness?)</p>
+
+<p>Tutors an create group events for their tutor group; tutorial dates imported into calendar (are tutorial dates available as a web service/RSS feed?)</p>
+
+<p>For the future - export (ah - ical?), automatic next presentation calendar creation (?just need a 'relative dates' calendar representation and then set the start date, surely??); student led calendar creation (e.g. student has a window for study, and needs to pace their study within that window - ??cf. possible intermediate state of student rearranging fixed presentation calendar pondered above?).</p>
+
+<p><span style="font-weight: bold;">Questions</span><br />
+Giles - (copublishing) - how does OU VLE compare with the way that commercial systems have evolved?<br />
+NS - our Moodle VLE provides us with flexibility cf. e.g. Blackboard; hasn't been keeping g up with commercial providers' offerings.<br />
+DK: we are monitoring, e.g. keeping an eye on Pearson/eCollege etc<br />
+OU is taking a system wide view of VLE development - ECAs, ETMAs, structured authoring, synchronous comms, etc.</p>
+
+<p>Comment: usability poor on some futures; e.g. setting up tutor groups on Moodle, <span style="font-style: italic;">but</span> course managers need to produce pages of instructions about how to do it.</p>
+
+<p><span style="font-weight: bold;">eAssessment</span><br />
+Okay - so I admit it, I was quite impressed by some of the eAssessment tools (which are being used in presentation, SDK125) [internal link: <a href="http://learn.open.ac.uk/site/icma">eAssessment site</a>]</p>
+
+<p>Gradebook/Tutor view - of student progress; at a glance view of each student's CMA progress to date.</p>
+
+<p>[Qn at end, Karen Kear: privacy issues wrt e.g. student tracking, peering at student's computer based assessment<br />
+??should student be allowed to declare who they want to see their assessment answers?<br />
+Student profile - maybe provide student privacy opt-in/out e.g. wrt tracking and sharing of tracked info?<br />
+CT can make progress data private so ALs can't see it (but students can't exert the same control over their own data??)]</p>
+
+<p>CMA - can you go back and edit answers before final submission; what counts as final submission?<br />
+Tutor has access to the feedback report for each student on each ECMA (??privacy).</p>
+
+<p>??Are the student result tables sortable? Easy to do with <a href="./012562.html">YUI data table</a>...and I seem to remember LTS saying there were going to use YUI?</p>
+
+<p>Openmark questions (?not for assessment?) can be embedded in the Moodle course materials (for a quick overview of Openmark - <a href="./010513.html">Openmark Computer-Assisted Assessment Tool</a>). OpenMark (almost - ready by March) integrated with the Moodle eAssessment  module - so you use both Moodle eAssessment questions and OpenMark questions in the same assessment :-)</p>
+
+<p>eAssessment project team are looking for a course to use Moodle assessment for credit - T151 would be a good candidate I think, offering a 10 week trial in 2008J?? but we'd need to start now-ish??</p>
+
+<p><span style="font-weight: bold;">Social Tools</span><br />
+Pilot course for ALs over 3 weeks last year, evaluated by IET - forum, blog, wiki, quiz.</p>
+
+<p>New blog module; wiki reports of user activity/participation (??interesting to see screen shots?); forum load testing,<br />
+OU wiki (can be locked down before, after, before/after particular dates; RSS feeds of changes; add comments to individual pages;); audio recording tool (simple, stripped down); vote module (in testing; multiple questions, different chart options (what chart generator are they using?); different answer types)<br />
+Replacement for Lyceum; tendering exercise - none of open source solutions met needs; list of 3 bidding in tender process, [CONFIDENTIAL] will be adopted, subject to contract.<br />
+Pilots - MSG (3 courses from May 2008), Vote module, [Lyceum replacement]</p>
+
+<p><span style="font-weight: bold;">Mathematical and Scientific Content/Notation</span> (from April)<br />
+Two areas  - display and input</p>
+
+<p>Currently  - pdf , or embedded image (poor on accessibility, screen reader support etc).<br />
+MathML is preferred option, e.g. is executable (plottable, for exampe) ??url for demo of plotting equation&nbsp; from MathML?<br />
+Currently okay for IE, Firefox but not Moodle in FF...<br />
+"About" - Can get MathML, TeX view of equation; preferences to set display as MathML with plugin, as image, with link back to the "About" page. <br />
+Next step - student Maths editor.<br />
+Currently - support TeX input (?); want: visual editor, simpler text input syntax; informal handwritten maths input.</p>
+
+<p><span style="font-weight: bold;">Student Tracking and Reporting</span><br />
+How better understand what happens in VLE/better serve students (cf. <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?IncludeBlogs=1149&amp;search=%22course%20analytics%2C%20part%22">course analytics</a>)<br />
+Moodle recording and reporting.<br />
+Develop reporting system, with many views:<br />
+- VCE dashboard<br />
+- document download reports</p>
+
+<p>Student tracking - doc in preparation; <br />
+Milestone tracking (???maybe this relates to learning design????)<br />
+Export data at completion date[????] - tutor group view, potential VOICE integration, course teams assessing entire student body.</p>
+
+<p>???would a layered view of web analytics/student course tracking be useful?</p>
+
+<p><span style="font-weight: bold;">MyStuff</span><br />
+<a href="http://learn.open.ac.uk/mod/portfolio">OU ePortfolio</a> - can be accessed by all using OUCU and OU pwd<br />
+New design - spaces, tags, compilations, items, sharing, pinboard.</p>
+
+<p>[I will do a write up in next few weeks...]</p>
+
+<p>Spaces - programmes or CT can provide course related views (who sets spaces up??)<br />
+Resource view over content from course - but how does this reconcile with stuff in Moodle? [ ??how does mystuff related to studenthome????? Danger here of providing yet another inconsistent interface, cf. unified student experience project. What's the betting that unified experience team looked at legacy tools, and none of the stuff yet to come on stream, like Mystuff? Silos&nbsp; - that's what we want... (and loosely coupled does not necessarily imply siloed at the user experience level IF your design team is working effectively... ;-)</p>
+
+<p>Compilations - ?compilation is a web page editor? store notes from 3rd party website?? cf. google notebook. Heh heh - so there's no reason from a copyright point of view about recommending Zotero, or Firefox scrapbook plugin to students?</p>
+
+<p>Emphasis at the moment is on stability...<br />
+<img src="http://farm3.static.flickr.com/2395/2175522180_ed46616fd7.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="176" width="500" /><br />
+Identify missing features for July 08 push; ??No mention of storage limits, export, integration with third party storage, integration with doc viewers (e.g. Zoho), embedding (e.g. Scribd, Slideshare) ;-)</p>
+
+<p>Can MyStuff integrate with ETMA/ECA system?</p>
+
+<p>Delay to PDP and About Me. Guidance written, with animations (where??)<br />
+Uability/accessiblity testing over Feb, IET evaluation and case studies (do IET look at web analytics?? Or just single user ete tracking and small group questionnaires?)<br />
+Desirable features e.g. better sharing (with tutor/tutor group).</p>
+
+<p>Study spaces are for students to collect stuff. (do they link through to moodle view? where does back button go?<br />
+Mystuff available from study support area (?but it does feel disolocated wrt integrated student experience). Save to Mystuff buttons a possibility in moodle envt.</p>
+
+<p>??argument for providing multiple possible points of view and letting students/users find there way, then we support/imrpove that experience (build the path where people walk)</p>
+
+<p><span style="font-weight: bold;">Structured Authoring tool</span><br />
+<a href="http://learn.open.ac.uk/site/savle">New features</a>- media file support (audio, video, flash), large images (thumbnail with link to full image), link handling, linked PDF (printable version), improved search</p>
+
+<p>Improved tools for linking with a doc, with other VLE activities<br />
+Improved numbering, internal sections for one page docs<br />
+Search within doc, or cluster of docs, integration with federated search.<br />
+Rights info, equation support (LaTeX, soon MathML); item ID, printable PDF, browser usage hints(??), better error handling in SA tool.<br />
+Approx 200 people across OU using the tool (i.e. total failure in adoption? ;-)<br />
+LTS support mechanisms - front line: media project manager; <a href="http://intranet.open.ac.uk/lts/service-delivery">Service delivery team</a>; online services user group. </p>
+
+<p>Qn: reconciliation between SA and VLE support for Maths; to paraphrase, "aware there may be an issue, working on it". Will be hooked in to SA process and when VLE support is made available.</p>
+
+<p>Will SA support course productivity, e.g. rapid, integrated agile commenting, changes, etc.??<br />
+Workflow appears to be linear flow rather than shared/collaborative docs? i.e. implemented OLD workflow model rather than a more agile, collaborative one. Ah well, what's email for if not to mail Word docs to groups of people and ask them to each mail separate annotated copies back round to everyone on the the doc circulation list...?!</p>
+
+<p>No consideration yet of musical notation support (cf. MathML support)</p>
+
+<p><span style="font-weight: bold;">Highlights</span><br />
+The assessment block, and some of the approaches being used in Maths notation support.<br />
+Unified student experience has something going for it, (maybe lots, depending on how they are moving info around in the backend?;-).</p>
+
+<p><span style="font-weight: bold;">Lowlights</span><br />
+Strcutured authoring has issues in uptake and workflow. MyStuff is all over the place.<br />
+Calendars and search look somehow lacking and uninspiring at the user-experience level??<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ouvle" rel="tag">ouvle</a>, <a href="http://technorati.com/tag/moodle" rel="tag">moodle</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 25, 2008 11:58 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Static RSS Feed Content, Delivered Daily</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010487.html" title="Facebook Profiles and OpenLearn Annotation Streams" />
+
+<link rel="next" href="./010491.html" title="Mashup Tools Frenzy" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010487.html">&laquo; Facebook Profiles and OpenLearn Annotation Streams</a> |
+
+<a href="./">Main</a>
+| <a href="./010491.html">Mashup Tools Frenzy &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 18, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Static RSS Feed Content, Delivered Daily</h3>
+
+<p>Something I realise I haven't posted about, but which has been sitting in my Yahoo Pipes area for some time, is a "daily feed item" pipe that will deliver items from a <em>static</em> RSS feed - like an <a href="./009142.html">OpenLearn Unit RSS feed</a> - according to a daily schedule, personalised according to the time you subscribe to the feed: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_HA1AGDs2xG4VFhRCB2yXQ">Serialised Feed Pipe</a></p>
+
+<p>That is, on subscribing to a feed with a particular "start time" and "duty cycle" (or "period"), you will receive items from the feed according to your own schedule: one feed item per day, for example, or one per week.</p>
+
+<p>This is particularly useful for delivering <em>static</em> feed content, where the feed items do not change. In a "normal" RSS feed, such as a blog RSS feed, the feed contents reflect the most recent blog postings, and as such change whenever a new post is made. In a static feed, the content is fixed and "just" represented using an RSS format, so that subscription models and RSS rendering techniques can be used to syndicate and republish the content. One might imagine abridged versions of books being syndicated in the way, like the BBC Radio 4 "Book of the Week", only delivered as text, via an RSS feed, with one chapter delivered per day. (Of course, "static" podcast feeds can also be serialised and delivered in this way.)</p>
+
+<p>The approach used in the <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_HA1AGDs2xG4VFhRCB2yXQ">serialised feed pipe</a> is essentially a generalisation of the <a href="http://ouseful.open.ac.uk/openlearndaily">OpenLearn<em>_daily</em></a> approach, which allows you to sign up to OpenLearn course feeds and receive a new feed item from a particular unit according to your own schedule.</p>
+
+<p>The pipe takes in a start time (in universal time), a delivery period (one additional feed item will be delivered for each period after the start time - one item a day, for example) and the URL of the feed to be serialised.</p>
+
+<p><img alt="pipeFeedSerialiserInput.png" src="./pipeFeedSerialiserInput.png" width="379" height="292" border="0" /></p>
+
+<p>Internally, the pipe passes this information - along with the <em>current</em> time - to another <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=hObiAyHs2xGeU6lEEpPZnA">pipe that calculates the number of items required in the feed</a>: </p>
+
+<p><img alt="pipeSerialNumItemsCalc.png" src="./pipeSerialNumItemsCalc.png" width="929" height="492" border="0" /></p>
+
+<p>The calculation simply subtracts the start  time from the current time, and divides it by the specified period.</p>
+
+<p>This pipe then uses <em> yet another</em> internal pipe ("Feed Serialiser") to <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">deliver the <em>specified number</em> of feed items</a> by simply truncating the feed after that number of items have been delivered.</p>
+
+<p><img alt="pipeNumItems.png" src="./pipeNumItems.png" width="627" height="452" border="0" /></p>
+
+<p>Here's the actual "top level" pipe:</p>
+
+<p><img alt="pipeFeedSerialiser.png" src="./pipeFeedSerialiser.png" width="911" height="565" border="0" /></p>
+
+<p>I'll try and provide a web page interface to this over the next week or two, probably by tidying up this <a href="http://ouseful.open.ac.uk/openlearndaily/feedCycle.php">very basic "feed cycle" form</a>. I also need to add a couple more parameters in that let the user specify the number of feed items they want in the first delivery, as well as the additional number of feed items delivered in each feed cycle.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July 18, 2007 05:51 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Sounds interesting: I'm not much of a techie, though, so I'm not sure I understand what this tool does. Does it make it possible for someone to get an RSS feed with elements of an ordinary web page being delivered to them on a regular basis? I know that there are tools that can make RSS feeds from ordinary websites out there, but I assumed that they would only feed updates. The concept of one that will generate a feed out of static content is definitely a powerful one when it comes to delivering a course...</p>
+<span class="comments-post">Posted by: <a href="http://blogs.warwick.ac.uk/lriu">Jenny Delasalle</a> at July 19, 2007 03:27 PM</span>
+</div>
+<div class="comments-body">
+<p>What the pipe does is take content that has been put into RSS form (for example, a book, or course unit) and alllow people to subscribe to it whenever they want.</p>
+
+<p>They will then get one feed item per day from the day that they personally subscribe to the feed.</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at July 24, 2007 11:47 AM</span>
+</div>
+<div class="comments-body">
+<p>It may not be your department, but the newsletter says that you've added a Spanish course to OpenLearn Daily but the link doesn't work and I can't find any reference to it on the site. The Open Daily page lists 6 feeds in total and you appear to have RSS'd a lot more. The Espacios Publicos unit doesn't seem to mention Open Daily.</p>
+
+<p>Am I just blind?</p>
+<span class="comments-post">Posted by: <a href="http://www.fearoflanding.com/">Sylvia </a> at July 24, 2007 02:34 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

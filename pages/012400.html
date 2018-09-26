@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Feedshow Link Presenter - Testing Audience Synch</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012375.html" title="UCBerkeley Youtube Playlist Course Browser &amp; Video Lecture Search" />
+
+<link rel="next" href="./012409.html" title="Google Page 2 Search" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012375.html">&laquo; UCBerkeley Youtube Playlist Course Browser & Video Lecture Search</a> |
+
+<a href="./">Main</a>
+| <a href="./012409.html">Google Page 2 Search &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 11, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Feedshow Link Presenter - Testing Audience Synch</h3>
+
+<p>Last weekend, I had a bit of a tinker with my <a href="./010531.html">Feedshow link presenter</a>, the hopefully OUseful utility that lets you present a series of web pages from a bookmark list RSS feed. The result was a couple of lines of code that allow members of the audience who are following the show to synch their view with that of the lead presenter.</p>
+
+<p>A more advanced dev version of Feedshow has quite a few more bells and whistles, but I thought I'd post the initial version here just in case anyone fancies have a quick Friday play, and maybe identifying any 'issues' before I push the richer version...;-)</p>
+
+<p>Anyway, here's what's in store if you go to <a href="http://ouseful.open.ac.uk/feedshow/social.php">http://ouseful.open.ac.uk/feedshow/social.php</a>.</p>
+
+<p><br />
+<a href="http://www.flickr.com/photos/psychemedia/2185618246/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2077/2185618246_f67ea5ef67.jpg" alt="2008-01-11_1505" style="border: 0pt none ;" height="307" width="500" /></a></p>
+
+<p>Launching the slideshow gives you a master view (as opposed to the user view). Clicking on the "Splash" button in the master view gives this page - a shortened link to the client/user view of the current slideshow:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2184845239/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2146/2184845239_b08095ccd9.jpg" alt="2008-01-11_1512" style="border: 0pt none ;" height="228" width="500" /></a></p>
+
+<p><br />
+(The + in the name distinguishes this version from the non-synching original version... If the + isn't there, you're using the old version, which doesn't have the synch functionality...)</p>
+
+<p>Audience members should follow the shortened Snipr link to see the show...</p>
+
+<p>To start running through the bookmarked links that have been pulled in to the presenter from the show RSS feed, click on the Current button. Move through the links that make up the show using the forward and back links. The text box lets you enter an arbitrary URL; click Go to visit it. Clicking Current will be you back to the current page item in the feedshow.</p>
+
+<p>Here's the user view (the one you get from following the shortened URL):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2184855749/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2161/2184855749_b7959dc280.jpg" alt="2008-01-11_1518" style="border: 0pt none ;" height="190" width="500" /></a></p>
+
+<p>The synch button will synch the client's view with the presenter's view. (NB At the moment, clients can't synch to the main presenter's "Go" pages - in the dev version they can...). Users can click forward and back through the links in the presentation at will, but clicking Synch will bring them back into synch with the main presenter.</p>
+
+<p>Client users can also browse arbitrary links via the text box/Go route, but as yet there is no way sharing this back with the main presenter (should there be?)</p>
+
+<p>Here's the URL again: <a href="http://ouseful.open.ac.uk/feedshow/social.php">http://ouseful.open.ac.uk/feedshow/social.php</a></p>
+
+<p>If anyone does have a few spare mins and fancies having a quick play/test, I'd appreciate any comments. At the moment I've only tested the app in FLock on a Mac...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/feedshow" rel="tag">feedshow</a>, <a href="http://technorati.com/tag/feed%20presenter" rel="tag">feed presenter</a>, <a href="http://technorati.com/tag/%20link%20presenter" rel="tag"> link presenter</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 11, 2008 03:29 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

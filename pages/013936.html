@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: geotwitterous Now Featuring Twittervision</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013907.html" title="Digital Worlds Week 2, Round-Up" />
+
+<link rel="next" href="./013937.html" title="Right hand, Meet Left hand. Left Hand, Meet Right Hand..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013907.html">&laquo; Digital Worlds Week 2, Round-Up</a> |
+
+<a href="./">Main</a>
+| <a href="./013937.html">Right hand, Meet Left hand. Left Hand, Meet Right Hand... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 18, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">geotwitterous Now Featuring Twittervision</h3>
+
+<p>I really should be thinking about how to get through my mashup talk on Thursday, so I thought I'd do this instead - a quick update on <a href="http://ouseful.open.ac.uk/geotwitterous">geotwitterous</a>.</p>
+
+<p>In a comment to the original post (<a href="./012696.html">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</a>), which described a Yahoo peipe that tried to geocode a tweet based on its content,  Jean-Noël asked: "Why not create a Pipes using API TwitterVision?"</p>
+
+<p>If you don't know it already, Twittervision plots tweets on a map based on the twitterer's location, as specified in theri Twitter profile, or if it's declared in a tweet in a particular way. A quick look at the <a href="http://twittervision.com/api.html">Twittervision API</a> showed how easy it is to call. FOr example:</p>
+
+<p>- <em>http://api.twittervision.com/user/current_status/<strong>twitterID</strong>.xml</em><br />
+- <em>http://api.twittervision.com/user/current_status/<strong>twitterID</strong>.json</em></p>
+
+<p>It only took a few minutes to create pipe to grab this data (<a href="http://pipes.yahoo.com/ouseful/twittervisionapi">http://pipes.yahoo.com/ouseful/twittervisionapi</a>):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2343058868/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2091/2343058868_5d4c5f6592.jpg" alt="2008-03-18_1037" style="border: 0pt none ;" height="430" width="500" /></a></p>
+
+<p>This pipe in turn can be embedded in another pipe that takes in a normal twitter friends feed and then grabs the twittervision details for each user who has a tweet in that feed - <a href="http://pipes.yahoo.com/ouseful/twittervisionfriends">http://pipes.yahoo.com/ouseful/twittervisionfriends</a>. here are some of the interesting bits:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2342234869/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2304/2342234869_5af2d40f77.jpg" style="border: 0pt none ;" alt="Twittervision friends pipe" height="412" width="500" /></a></p>
+
+<p>The regular expression finds the author (as a twitter ID) of each tweet. The Loop runs each item in the feed through the twittervision API pipe, enriching/augementing/annotating the feed with whatever Twittervision can learn about the user. Any geo information returned from twittervision is copied to the top of each feed item so it looks like geoRSS. The Location Extractor uses this geoRSS info to create a full internal geo representation; (if no geoRSS info is found, it will try to extract a location from the title/description elements of each feed item).</p>
+
+<p>On the <a href="http://ouseful.open.ac.uk/geotwitterous/?id=psychemedia&amp;twittervision=on">geotwitterous page</a>, I then take a  JSON output from the pipe and plot the tweets on a Google map, trying to bundle all the tweets from the same person together:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2342244053/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3062/2342244053_7baff64409.jpg" alt="geotwitterous map" style="border: 0pt none ;" height="349" width="500" /></a></p>
+
+<p>So  - a map view of where my friends are twittering from...</p>
+
+<p>I need to fully integrate this with my own twitter geocoder, but as a half-hour hack, it was quite satisfying :-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/geotwitterous" rel="tag">geotwitterous</a>, <a href="http://technorati.com/tag/twittervision" rel="tag">twittervision</a>, <a href="http://technorati.com/tag/%20yahoo%20pipes" rel="tag"> yahoo pipes</a>, <a href="http://technorati.com/tag/%20pipes" rel="tag"> pipes</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 18, 2008 10:52 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>just come across this http://www.cybersoc.com/2008/03/translate-your.html  looks like it would fit nicely with a maps mashup!</p>
+<span class="comments-post">Posted by: <a href="http://conclave.open.ac.uk/SocialCommunications/">Stuart Brown</a> at March 18, 2008 12:02 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

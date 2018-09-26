@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: UC Berkeley Lectures on Youtube, via Grazr</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010630.html" title="Fond Memories of Late Night OU TV Programmes, Relived" />
+
+<link rel="next" href="./010637.html" title="OU Viral Marketing via YouTube" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010630.html">&laquo; Fond Memories of Late Night OU TV Programmes, Relived</a> |
+
+<a href="./">Main</a>
+| <a href="./010637.html">OU Viral Marketing via YouTube &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 04, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">UC Berkeley Lectures on Youtube, via Grazr</h3>
+
+<p>TechCrunch reported today that UC Berkeley have been putting a wide selection of their lectures up on YouTube: <a href="http://www.techcrunch.com/2007/10/03/uc-berkeley-puts-courses-on-youtube/#comment-1658154">UC Berkeley Puts Courses On YouTube</a>, though <a href="http://scienceoftheinvisible.blogspot.com/2007/10/bored-at-berkeley.html">AJ</a> isn't much impressed...</p>
+
+<p>I was intrigued as to whether it's possible to search videos by user on YouTube and get the result via a feed using the <a href="http://code.google.com/apis/youtube/developers_guide_protocol.html#SearchingVideosKeywords">YouTube/GData API</a>, and it's easy... For example: <a href="http://gdata.youtube.com/feeds/videos?q=skeletal+biology&amp;author=ucberkeley">http://gdata.youtube.com/feeds/videos?q=skeletal+biology&amp;author=ucberkeley</a>.</p>
+
+<p>Using a simple bit of <a href="http://docs.grazr.com/script/tutorial/">GrazrScript</a>, it doesn't take much to build a little search widget around this feed, that you could then embed in your own page.</p>
+
+<p>To make things a little more interesting, though, I also added a <a href="http://pipes.yahoo.com/pipes/pipe.info?query=biology+skeletal&amp;_cmd=Run+Pipe&amp;_id=yGlMnlty3BGax5jTCB2yXQ&amp;_run=1">feed embellishment via a Yahoo Pipe</a> that adds the movie as an enclosure to the feed so that it can be played directly within the Grazr widget (scroll down on the result in the widget... the embedded player may look a little broken at first, but it works fine if you click on it).</p>
+
+<p>So here it is: <a href="http://grazr.com/gzpanel.html?view=3p&amp;file=http://ouseful.open.ac.uk/grazr/ucberkeleyYoutubeVideoSearch.opml">UCB Video search via Grazr</a></p>
+
+<p><a href="http://grazr.com/gzpanel.html?view=3p&amp;file=http://ouseful.open.ac.uk/grazr/ucberkeleyYoutubeVideoSearch.opml"><img src="http://farm2.static.flickr.com/1099/1482965186_22e080d09d.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="420" width="500" /></a></p>
+
+<p>I maybe need to look around YouTube to see if there are any more universities putting their content up there.</p>
+
+<p>If you know of any, feel free to add them in a comment.</p>
+
+<p>PS add the UC Berkeley lecture search tool to Facebook with this <a href="http://www.facebook.com/apps/application.php?id=6118334781">UCB Video Lecture Search Facebook App</a> <br />
+<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/youtube" rel="tag">youtube</a>, <a href="http://technorati.com/tag/grazr" rel="tag">grazr</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October  4, 2007 11:18 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

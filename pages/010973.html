@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Course Analytics, Part 2 - When Are Our Students Online?</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010957.html" title="Course Analytics, Part 1 - Visitor Behaviour" />
+
+<link rel="next" href="./010990.html" title="Hey Babe - Dump the Gorilla..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010957.html">&laquo; Course Analytics, Part 1 - Visitor Behaviour</a> |
+
+<a href="./">Main</a>
+| <a href="./010990.html">Hey Babe - Dump the Gorilla... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">October 26, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Course Analytics, Part 2 - When Are Our Students Online?</h3>
+
+<p>[<a href="#updateCAWhen">UPDATED</a> - with a whole load of qualifying statements and disclaimers!]</p>
+
+<p>Google Analytics offers a couple of views of the same report that might be useful in identifying study patterns - the <em>Visitor trending - Visits</em> report.</p>
+
+<p>(Note these reports are captured over slightly less than the 8 week period mentioned in the previous post.)</p>
+
+<p><h3>Visits - By Date</h3><em>Visits - By Date</em> breaks down the number of visits by date over a particular period. The following snapshot suggests some sort of periodicity as well as "quiet days" during the week - Saturdays, for example, appear <em>not</em> to be popular study days for this cohort, whereas by observation Sunday, Monday and Tuesday are.</p>
+
+<p><img src="http://farm3.static.flickr.com/2150/1751654650_1f4752031f.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="411" width="500" /></p>
+
+<p>A more rigorous test would be to run this time series data through an autocorrelation function, or some form of spectral analysis, for example, to see whether it is "really" periodic. (But this is a quick blog post, not a formal paper, so here is not the place to run that sort of test... unless anyone knows of a quick'n'easy online tool I can paste my GA data into and get such a report out?)</p>
+
+<p>That said - the report needs to be taken with a pinch of salt (also see <a href="#updateCAWhen">[update]</a> below...). I mentioned in the previous post that the number of unique visitors significantly outnumbers the number of students registered on the course (i.e. the number of people who have access to the course materials): that is, there is a many-to-one mapping from Google unique visitors to students. <em>It's also worth remembering that the course in question requires at least as much study time again on book reading and desktop computer activity...</em></p>
+
+<p>A consideration of data across the whole length of the course also suggests that the periodicity is not so clear cut. There is also a clear "end effect" around the time of the end-of-course assessment, as I will show in the next post on this topic.<br />
+<h3>Visits - By Time of Day</h3>Having got a handle (maybe) on what days of the week our students are going online, the next question to ask is what time of day students are logging in to the course materials.</p>
+
+<p><em>Visits - By Time of Day</em> gives just such a report (my analytics settings are set to UK time, so the following should be the "real" time of access for our UK students. (A map overlay (not show) shows that virtually all the students on the course were coming form UK IP addresses.)</p>
+
+<p><img src="http://farm3.static.flickr.com/2391/1750804869_3433142057.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="500" width="430" /></p>
+
+<p>The distribution suggests that&nbsp; we don't have so many night owls, nor a significant number of students studying early in the morning (before work or getting the kids ready for school, for example). Peaks around lunchtime might suggest online study at work (or there again, they might not...), with another bump in the evening between 7pm and 10pm.</p>
+
+<p>A finer grained breakdown, e.g. giving time of day reports for weekdays, Saturday and Sunday, would help to unmask any differences between weekend (i.e. Sunday!) working compared to weekday working.<br />
+<h3>Summary</h3>Identfying exactly <em>when</em> distance educations students engage with their studies is always problematic for distance education institutions. The move to online delivery and online study through a controlled website makes it possible to capture this information invisibly, without requiring students to self-complete and return study logs.</p>
+
+<p>Two views of a single Google Analytics report - the Visitor Trending "Visitors" report - allow us to identify study patterns across time of day, and day of week.</p>
+
+<p>Visual observation of reports collected over a two week period hint at patterns of behaviour across the week, with Sunday, Monday and Tuesday being popular study days, and Saturday being unpopular; and throughout the day - lunchtimes and early evening are popular, all night and early morning study unlikely.</p>
+
+<p>[<a name="updateCAWhen">UPDATE</a>: The "Saturday effect" may be completely misleading insofar as it describes how students study the <em>whole</em> of the course... I mentioned that the course includes book reading and use of a desktop application, which are being studied - somewhen; the analytics reported here therefore only relate to the online portion of the course, which correspond to maybe 40% of the time spent on the course... oops... I'll try to focus more on what is maybe safer ground in future posts, and concentrate on what the analytics appears to tell us about <em>just</em> the way the students appear to be interacting with the <em>online</em> materials, at least, without worrying too much about those uncounted students who didn't just print the materials off and study them that way!)]</p>
+
+<p><small>"Confession": maybe not publishing in peer reviewed circles for a bit has led to me losing some of the rigour of academic analysis? A couple of times I've been tempted to write: "-maybe, this is only a blog post after all and not a proper academic publication....", as if that let's me off... Hmm... I wonder how this sits with Martin's thoughts on <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/10/academic-discou.html">Academic Discourse and [Blogging]</a>? Certainly, Grainne Conole's excellent new <a href="http://e4innovation.com/">e4innovation</a> blog is something I would say does tend towards "formal" academic credibility (references 'n' everything ;-)</small><br />
+ <!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/analytics" rel="tag">analytics</a>, <a href="http://technorati.com/tag/courseanalytics" rel="tag">courseanalytics</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at October 26, 2007 12:09 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Kate Sim posted the following comment to the "Course Analytics, Prequel" post, which is worth adding here too:</p>
+
+<p>"If I have guessed the course correctly, Tuesday activity levels may have been influenced by moderator messages on Mondays saying 'Week x starts tomorrow'.</p>
+
+<p>"I suspect a similar weekly pattern is less likely to be seen on the longer 9 month courses, where there would be a greater divergence in the timing of studying particular parts of the course.</p>
+
+<p>"Although peaks around assessment deadlines would still be seen - similar to the patterns of activity seen in the student forums."</p>
+
+<p>This point raises quite a few issues, I think:</p>
+
+<p> - the population of the course in question is small for an OU course  (around 100 or so) and there are potentially significant single point intervention effects from moderator postings. A complete set of analytics should include traffic and "lurking" monitoring from the course conferences/forums;</p>
+
+<p>- the course is short compared to most OU courses (a 10 week, 10 CAT point short course as opposed to a 30 or 60 point 30week course);</p>
+
+<p>- the course is presented/paced using online materials (although there is book reading and required use of a desktop application).</p>
+
+<p>tony</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at October 26, 2007 09:26 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

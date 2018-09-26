@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: July 2008 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2008_06.html" title="June 2008" />
+
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_06.html">&laquo; June 2008</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">July 16, 2008</h2>
+
+
+<div class="blogbody">
+<a name="015010"></a>
+<h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 3</h3>
+
+In Visualising CoAuthors in Open Repository Online Papers, Part 2 I described an approach for pulling author information out of the OU ORO repository and displaying it in various ways, such as using a Graphviz plotted graph. I knew that...
+<!--
+<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">Visualising CoAuthors in Open Repository Online Papers, Part 2</a> I described an approach for pulling author information out of the OU ORO repository and displaying it in various ways, such as using a Graphviz plotted graph. I knew that ORO was scheduling an update, which has been pushed in the last few days, so the screen scraper I wrote to work with the old repository is now broken (of course...). The new ORO engine is capable of generating RSS search feeds though, so looking forwards, the whole system is far easier to play with it...</p>
+
+<p>...but it means that the demos I was just about to post about are now all broken... and it seems that the server I usually post scripts to (http://ouseful.open.ac.uk) won't run the (simple) PHP scraper I was using from the dev server on my laptop, so that's f***d too... </p>
+
+<p>Anyway, had everything been working, I'd have posted about a screenscraper that trashes through results pages from ORO repositories, and generates a .dot graph definition file that can be visualisaed using Graphviz.</p>
+
+<p>Like this excerpt of a view of authors of papers on <a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html">LB1603 Secondary Education: High schools</a> from the University of Southampton open repository.</p>
+
+<p><a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3027/2673909694_f5f82517dc.jpg" alt="http://eprints.soton.ac.uk/view/subjects/LB1603.html" height="114" width="500" /></a><br />
+ <br />
+...which I realise just now isn't working properly... the regular expression was tested against the author format used in last week's OU ORO reference listings (where every author was separated by an 'and'), and it breaks for multiple authored papers on the Southampton site where there are more than two authors (only the last author is 'and'ed, the others are comma separated). The fix should be a quick one, but... I have other things to do... and if the OU ORO site has been upgraded, maybe the Southampton one will soon follow...</p>
+
+<p>(It has been pointed out to me that using the approach on e.g. ORO papers might be used to shame people into submitting their own papers to local repositories, when they see their name isn't shown in a particular graph view where they might expect to see it... I couldn't possibly comment on that...!)</p>
+
+<p>Sigh - so much for this as another IWMW innopvation competition entry... The lesson: even sites that nominally use the same software (e.g. eprints) all use them slightly diffefrently; so scraping as a general technique sucks (now I remember why I stopped writing screen scrapers...;-)</p>
+
+<p>The "find collections of sets of names (such as article references), work out all the paired name combinations for each set (reference), then plot the graph" recipe seems to work though...</p>
+
+<p>So for example, here's a graph showing all the people who sit on the same committees in the Isle of Wight Council (as of June 2008); multiple links between two people shows they sit on several different committees together. The direction info in the links is rather more arbitrary, except in two particular cases... if you are only ever the chair of a committee, there will only be links going away from you... If there are only ever incoming links to you, you are not the chair of any committee.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2658900693/" title="Isle of Wight Council committee comembership by psychemedia, on Flickr"><img src="http://farm4.static.flickr.com/3237/2658900693_f4128efee3_b.jpg" alt="Isle of Wight Council committee comembership" height="744" width="1024" /></a></p>
+
+<p>If I could find lists of committee memberships for the OU, I'd have a go at plotting something similar... (it strikes me it might be interesting to see graphs showing named representation on committees that pass work to each other, as well as ex officio membership of committees by virtue of job title/rank (PVC, Dean, HoD, and so on...)</p>
+
+<p>Just one final note - visualising .dot files requires a Graphviz viewer. These are most comonly offline applications, though I have found a coupe of routes to online viewing:</p>
+
+<p>- <a href="http://ashitani.jp/gv/">AJAX Graphviz viewer</a>: post a (small) .dot file into a form, hit the enter key, and see the graph...<br />
+- <a href="http://drupal.org/project/graphviz_filter">Graphviz filter for Drupal</a>; I had asked <a href="http://greenhughes.com">Liam</a> if he could get one of these running somewhere, so I could plug in the eprints repository scraper and we'd have a neat IWMW innovation competition entry, but as my scripts all appear to be broken, and I donlt have time to fix them, I guess that's for another day (or not...)..</p>
+
+<p>Anyway, it seems that the OU may be going all 2.0, if Twitter is to be believed... so it's been a good three years or more,  and maybe it's job done..?! Time for something else maybe? A return to pointless research in a tiny micro-field somewhere (but at least a promotion prospect at the end...). I'll keep <a href="http://ouseful.info">http://ouseful.info</a> pointing somewhere, and <a href="http://feeds.feedburner.com/ouseful">http://feeds.feedburner.com/ouseful</a> will keep spewing forth...</p>
+
+<p>...but in the meantime...</p>
+
+<p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object></p>
+
+<p>OUseful.info on <em>http://blogs.open.ac.uk/Maths/ajh59</em> has left the house... </p>
+
+<p>...be seeing you...<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw-not" rel="tag">iwmw-not</a>, <a href="http://technorati.com/tag/graphviz" rel="tag">graphviz</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/015010.html">09:51 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=15010" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 15, 2008</h2>
+
+
+<div class="blogbody">
+<a name="015007"></a>
+<h3 class="title">IWMW2008 Innovation Competition - Searching for Media Release Related News Stories</h3>
+
+It seems the Institutional Web Management Workshop 2008: Innovation Competition is in need of entries, so I had quick a half hour hack around the University of Aberdeen newsfeeds to see if I could come up with anything interesting (Brian...
+<!--
+<p>It seems the <a href="http://www.ukoln.ac.uk/web-focus/events/workshops/webmaster-2008/competition/">Institutional Web Management Workshop 2008: Innovation Competition</a> is in need of entries, so I had quick a half hour hack around the University of Aberdeen newsfeeds to see if I could come up with anything interesting (Brian Kelly hinted that  if I used any OU info sources, no-one would take any notice becuase it would be seen as an 'official' OU development!;-)</p>
+
+<p>Here's where I've got so far...</p>
+
+<p>The University of Aberdeen (and many other universities) publish an RSS feed of their media releases. But how effective are these releases? That is, do the releases actually manage to generate any news coverage?</p>
+
+<p>University of Aberdeen media releases: <a href="http://www.abdn.ac.uk/mediareleases/feed.xml">http://www.abdn.ac.uk/mediareleases/feed.xml </a> (RSS format, limited to 10 items. ?How can I increase the number of items in this feed?)</p>
+
+<p>One of the easiest ways of doing a news search around an organisation is to simply do a search on Google news.</p>
+
+<p><a href="http://news.google.com/news?as_q=&amp;svnum=10&amp;as_scoring=r&amp;%3Bsvnum=10&amp;ned=us&amp;aq=f&amp;hl=en&amp;aq=f&amp;ie=UTF-8&amp;aq=f&amp;ned=us&amp;btnG=Google+Search&amp;as_epq=&amp;as_oq=university-of-aberdeen+aberdeen-university&amp;as_eq=&amp;as_drrb=q&amp;as_qdr=m&amp;as_mind=15&amp;as_minm=6&amp;as_maxd=15&amp;as_maxm=7&amp;as_nsrc=&amp;as_nloc=UK&amp;geo=&amp;as_occt=any&amp;aq=f" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3106/2670331235_bc44cbed2f.jpg" alt="2008-07-15_1222" height="286" width="500" /></a></p>
+
+<p>Conveniently, RSS feeds for persistent (alerting) Google News searches are available: <a href="http://news.google.com/news?svnum=10&amp;as_scoring=r&amp;%3Bsvnum=10&amp;ned=us&amp;aq=f&amp;hl=en&amp;aq=f&amp;ie=UTF-8&amp;aq=f&amp;ned=us&amp;as_drrb=q&amp;as_qdr=m&amp;as_mind=15&amp;as_minm=6&amp;as_maxd=15&amp;as_maxm=7&amp;geo=&amp;aq=f&amp;q=university-of-aberdeen+OR+aberdeen-university+location:uk&amp;output=atom">Atom feed for Google news search for <em>university-of-aberdeen OR aberdeen-university location:uk</em> over the last month</a>.</p>
+
+<p>That's possibly useful in a different way, though, because it will capture <em>all</em> recent mentions of the university in the UK press.</p>
+
+<p>So here's a recipe that attempts to find news stories about the university that are also on the topics mentioned in the press releases. For convenience, I've specified the recipe as a working prototype in the form Yahoo Pipe.</p>
+
+<p>Fetch the press release feed and run the description of each one through the Yahoo content analysis/term extraction tool.</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3186/2671209336_be705b32b5.jpg" alt="2008-07-15_1259" height="252" width="448" /></a></p>
+
+<p>Use these terms as the basis of a search query, supplemented by additional search terms for <em>("University of Aberdeen" OR "Aberdeen University")</em>.</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2414/2670392765_9eeebfa72f.jpg" alt="2008-07-15_1302" height="85" width="500" /></a></p>
+
+<p>Generate a set of Google news persistent search RSS URLs for UK news mentions over the last 3 months using the above search terms:</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3226/2671215936_e6b90279d5.jpg" alt="2008-07-15_1303" height="500" width="404" /></a></p>
+
+<p>We're now going to replace the original feed items with a set of items returned from the contextualised/media release related news search:</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3118/2671219582_5060ce4ed4.jpg" alt="2008-07-15_1305" height="194" width="440" /></a></p>
+
+<p><br />
+Finally, we use the news story date for the timestamp of each item.</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3229/2671224700_309284e3fb.jpg" alt="2008-07-15_1308" height="313" width="487" /></a></p>
+
+<p>This feed can then be used in the normal way - for example, here it is on a Dipity timeline:</p>
+
+<p><a href="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_contextual_news" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3240/2671228400_0e777f560f.jpg" alt="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_contextual_news" height="285" width="500" /></a></p>
+
+<p><br />
+What I need now, of course, is a timeline comparison tool, that lets me compare items on two separate, aligned timelines - one for the media releases, and one for the 'media release contextual news search'...</p>
+
+<p>UPDATE: In the meantime, it's easy enough to merge a feed of the original media releases and the contextual/content extracted terms news search.</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=6halKnZS3RGrdt9JYEsBXw" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3140/2671456160_49753cac55.jpg" width="500" height="246" alt="http://pipes.yahoo.com/pipes/pipe.info?_id=6halKnZS3RGrdt9JYEsBXw"/></a></p>
+
+<p>By plotting this feed on a timeline, you can see whether the media release lead to resulting story...</p>
+
+<p><a href="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_media_release_effectiveness" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3104/2670630975_83b0f58cc5.jpg" width="500" height="246" alt="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_media_release_effectiveness"/></a></p>
+
+<p>Of course, you'd get an even more comprehensive view if you just plotted a 'raw' news search for <em>"Aberdeen University" OR "University of Aberdeen"</em> (which is what <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=27c0b7e1570c3ee06afd85693374ab66">this pipe</a> does, as displayed on <a href="">this timeline</a>). Which is actually better... Hmm... But this post is about building <em>semantic</em> news filters, right?! (Err... ;-)</p>
+
+<p>So to recap, the idea is to take a university media release news feed, automatically extract a set of keywords related to each media release, and then use those keywords as the basis for a set of queries on Google news for UK based news items related to those topics that also mention the university in question. The results are then output from the pipe as an RSS feed, or otherwise. Each item is timestamped with the date of the news article, so it can be displayed on a timeline, or otherwise, as required.</p>
+
+<p>Note that it would be possible to modify the pipe so that searched for news stories were associated with the media release item that provided the corresponding content extracted query terms that turned up the particular search results. However, to make full use of these results would require a client that could consume and display the JSON output of the pipe, which would take a little bit more time to do... And the point of the innovation competition is that the mashups are quick'n'easy to do, right, and ideally make use of stuff that's already out there?! ;-)</p>
+
+<p><br />
+PS another approach might be to search for news stories or blogposts that reference the media release items linked to in the media release feed. For example:</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=EmdRlGpS3RGSwuWCCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3013/2671272474_a38d4d3394.jpg" alt="http://pipes.yahoo.com/pipes/pipe.info?_id=EmdRlGpS3RGSwuWCCB2yXQ" height="398" width="496" /></a></p>
+
+<p>This pipe loops through each item in the media release feed, and searches for blog posts that have linked to the original story (that is, that have linked to the URL for the particular media release).</p>
+
+<p>The "URL inLinks (blogs, raw)" module is one I had built earlier, that uses a Google blogsearch to find posts that mention a particular link. It would probably be more effective to look through each media release to see whatstory related websites (if any) it mentions/links to, and then use these as the basis for the blogged link search (for example, I may not be likely to link to the press release, but I may point to the research group web page it describes).<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw2008" rel="tag">iwmw2008</a>, <a href="http://technorati.com/tag/mashup%20competition" rel="tag">mashup competition</a>, <a href="http://technorati.com/tag/%20innovation%20competition" rel="tag"> innovation competition</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/015007.html">01:47 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=15007" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 11, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014991"></a>
+<h3 class="title">Institutional Social Networks</h3>
+
+Reading the feed from Michael Webb's Blog yesterday, I was.... stunned is probably the best word, to read his post "Newspace - a social networking site for new students" which describes "a social networking site for new students at the...
+<!--
+<p>Reading the feed from <a href="http://blog.newport.ac.uk/blogs/michael/default.aspx">Michael Webb's Blog</a> yesterday, I was.... stunned is probably the best word, to read his post "<a href="http://blog.newport.ac.uk/blogs/michael/archive/2008/07/09/52948.aspx">Newspace - a  social networking site for new students</a>" which describes "a social networking site for new students at the University, <a href="http://newstudents.newport.ac.uk/">http://newstudents.newport.ac.uk</a>." And why was I shocked? "It's based on <a href="http://www.ning.com">Ning</a>..." (a site we've also used as an online social network complement to our two recent <a href="http://www.open.ac.uk/blogs/socialearn/">SocialLearn</a> workshops).</p>
+
+<p><a href="http://newstudents.newport.ac.uk/" title="Newspace - Ning social network for Newport students"><img src="http://farm3.static.flickr.com/2315/2658584500_aa2eaba6e0.jpg" alt="http://newstudents.newport.ac.uk/ Newport newspace social student site http://newstudents.newport.ac.uk/" height="342" width="500" /></a></p>
+
+<p>(The actual NIng site is here: <a href="http://newportstudents.ning.com/">http://newportstudents.ning.com/</a>.) Michael's post describes some of the issues relating to the decision to use Ning, and is well worth a read...</p>
+
+<p>Having dutifully emailed(?) the SocialLearn team to give them a heads up about this site, I got a "yeah, it's happening all over the place" reply back that linked to a site the University of Bradfrod have also set up on NIng: <a href="http://developme.ning.com/">Develop Me! (University of Bradfrod on Ning)</a>. This social network appears to offer the "Meet and chat online" bit of a wider project hosted on the University of Bradford website itself: <a href="http://www.brad.ac.uk/developme/">Develop Me! homepage</a></p>
+
+<p><a href="http://www.brad.ac.uk/developme/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3047/2657775735_6c97143c94.jpg" alt="2008-07-11_1340" height="396" width="500" /></a></p>
+
+<p>Here's the Bradford site on Ning:</p>
+
+<p><a href="http://developme.ning.com/" title="Unoversity of Bradford 'Develop Me' social netowrk on Ning"><img src="http://farm4.static.flickr.com/3059/2657778499_6ebf4725be.jpg" alt="http://developme.ning.com/" height="337" width="500" /></a></p>
+
+<p>It's interesting how the openness of the front page of this site compares with what happens if you try to go straight to the Newport Ning site...</p>
+
+<p>So with some institutions feeling adventurous and taking the plunge into the world of social web apps, whilst maintaining some element of control, how will SocialLearn fit into all this? Like this maybe?</p>
+
+<p><a href="http://www.open.ac.uk/blogs/socialearn/" title="Locating SocialLearn"><img src="http://farm3.static.flickr.com/2323/2658645524_4c9ce2fb9b.jpg" alt="Scoping socialearn" height="155" width="500" /></a></p>
+
+<p>That is, maybe SocialLearn could become a <em>trusted</em> gateway to the world of social networks that institutions are more likely to trust than sites like Ning? By providing an open API and clear security model, it may also provide a platform within which insitutions can develop their own social applications or expose their own data to their own students in a social context? In developing a trusted pltform though, a lot would ride on the structure of the governance model, which is still unclear (at the moment, it's being run within the OU, using external developers, as an OU strategic development project).</p>
+
+<p>PS Just trying to find my first mention of Ning on OUseful.info, I cam across this post from over two years ago now about <a href="http://blogs.open.ac.uk/Maths/ajh59/005963.html"><em>ad hoc</em> learning environments</a>. Reading back over it, i wish I'd worked some of the ideas through more clearly, because they could well have fed into SocialLearn discussions over the last year...</p>
+
+<p>PPS As well as Ning, let's not forget sites like UK based <a href="http://www.webjam.com/webjam/home">Webjam</a>, which <a href="http://www.techcrunch.com/2008/07/09/webjam-secures-further-19m-for-branded-communities/">apparently</a> received funding this week to help roll out its white label social network service...<br />
+  <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ning" rel="tag">ning</a>, <a href="http://technorati.com/tag/sociallearn" rel="tag">sociallearn</a>, <a href="http://technorati.com/tag/%20socialearn" rel="tag"> socialearn</a>, <a href="http://technorati.com/tag/%20s%3Al" rel="tag"> s:l</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014991.html">02:27 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14991" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014990"></a>
+<h3 class="title">Synchronicity in the Air... Institutional Innovation & OU Job Ads</h3>
+
+It's been one of those weeks this week when synchronicity (or maybe confluence) seems to have been in the air... So for example, the week started with brief email exchange regarding knowledge management in the context of tracking and reviewing...
+<!--
+<p>It's been one of those weeks this week when synchronicity (or maybe confluence) seems to have been in the air...</p>
+
+<p>So for example, the week started with brief email exchange regarding knowledge management in the context of tracking and reviewing and getting feedback/opinion on new technology that might be interesting (one might almost say "OUseful";-) in an OU context. Here was my take on it:</p>
+
+<blockquote>Something I feel we need to explore is find a way of helping information "flow" around the university more, routing it to the right people as needed. A few of us do this anyway in an informal way anyway, either as a broadcast (eg public blog) or point-to-point communication "FYI emails"; thing's like the LTS media monthly newsletter also communicate news items to people who are likely to be interested in such things.
+
+<p>As far as soliciting the opinions of OU members about particular technologies, then we need: a) a way of routing these 'call for comments' to people who can comment quickly; b) getting comments back to the people who need them in an appropriate form.</p>
+
+<p>Being lazy, I'd like to be able to do several things at once with any comments I make - eg: a) get the commentary back to who wants it; b) get a blog post out of it ;-) It'd also be nice to think that there was some way of actually seeing new ideas built on and rolled out across the university.</p>
+
+<p>What's needed is to get a conversation going and give people the feeling that they are allowed to spend time indulging/participating in that conversation, which may be with internal people or it may be with the wider world e.g. through online networks. And requests for comments would just be dropped into that conversation somehow...</blockquote>Then yesterday,  John Tropea/Library Clips posted some thoughts on "<a href="http://libraryclips.blogsome.com/2008/07/10/theres-more-than-just-supply-side-km/">There’s more than just supply-side KM</a>", (a response to this article on <a href="http://www.reedfirstsource.com/news/members/lnstory%7Edid%7E811371438%7Etopic%7E100002731.asp">Ideation and the Supply Side of Knowledge</a>): "The article is about how much time and energy we devote to: <em>Capturing and storing vs Knowledge flow</em>...[I]n a learning organisation you are aware of solutions as they happen, even if you have no use for them at the time. You can connect to people involved in the solutions, and you are connected to people in general. The act of participating gives more chance of solutions coming to you more easily… you have more of a chance of shared context and the peripheral information around a solution."</p>
+
+<p>The original article - by Raj Datta - also has this to say:<br />
+<blockquote>[T]hose who believe that "management" is about control and predictability often view KM as a way to bring about predictability, by documenting all best practices and lessons learnt and making them available to everyone.</p>
+
+<p>Here, the supply side becomes focused on explicit knowledge, on identifying and generating quality content, and generally focused on learning from the past. The hidden assumption is that once the right answers are all available in the repository, everyone will come seeking it. Demand, it's assumed, is automatically created. This then produces a robust internal knowledge (content) market, complete with consumers and producers of knowledge (content).</blockquote>Now where I thought this argument would go was along the lines of: even we do manage to curate information about new technologies effectively, that information is not necessarily going to be worked effectively if that information doesn't continue to circulate - or "flow" - around the organisation, as part of an ongoing conversation within the organisation, in particular the conversation between those people who can benefit from the information, work it further, or work it into conversations with other people who might benefit from it.</p>
+
+<p>But it didn't, at least not in such crude terms... (Even so, the "flow" argument is still one of the take home messages I'll (mis)remember the article by! )</p>
+
+<p>What the original article does go on to talk about is how organisations potentially miss out on creating new knowledge, because they are too busy mining the past:<br />
+<blockquote>But even if one were to subscribe to this viewpoint, it has at least one obvious shortcoming. By equating KM with content management, and by equating the purpose of KM with predictability and control, we may inadvertently de-emphasize new knowledge creation.<br />
+...[N]ew knowledge creation is about the future. It's about possibilities and alternatives. It's about doing things differently and unleashing creative energies. It's about innovating.</p>
+
+<p>Companies that are serious about innovation have to create an organizational ecosystem that allows for creativity to be sourced, transformed into inventions and then into innovations. This forwardlooking view gives KM a new meaning and purpose. Companies that are able to foster new knowledge creation alongside the more traditional view of KM, are able to strike a balance between effectiveness and efficiency and between innovation and productivity. This is a necessary condition for longevity in a global knowledge economy.</p>
+
+<p>Why ideation?</p>
+
+<p>Ideation is the first step in the whole process of innovation. A good way to judge whether a company is serious about innovation is to see what happens to ideas in that company Some indicative questions are: Who is responsible for generating ideas? Once generated, how are ideas transformed to inventions?</p>
+
+<p>If these questions have been explicitly considered in the organization, then chances are that the first step towards a generative view of KM strategy has been taken. This shows that the company values knowledge creation.</p>
+
+<p>If these questions are implicit, or we have to search for the answers, then chances are that a strong enough focus doesn't exist yet in the organization. If the R&amp;D department is viewed as the place where ideation happens and inventions take place, then we are again [li]miting the potential of tapping into the collective creative energies of the organization. R&amp;D personnel are not the only ones with ideas and creative minds, and open processes should exist to tap into the collective capabilities of employees.</p>
+
+<p>As well as creative minds that generate ideas, we also need minds that know how to transform wild ideas into feasible implementation projects and we need minds that are able to understand market potential and how to tap into it. In short, we need to transform ideas to inventions and then inventions to innovations, tapping into the collective insights and capabilities of complementary minds. Base skills, competences and strengths may differ across employees, and by themselves have limited use, but the power of tapping into their collaborative capability is tremendous.</blockquote>This line of thinking resonates strongly with me. After almost 10 years here, I still don't understand how the OU manages to take internally produced "inventions" and work them up to a state where they can be delivered as institutional innovations... Although maybe that's about to change?</p>
+
+<p>OU Job Ad: <a href="http://www3.open.ac.uk/employment/job-details.asp?id=3871&amp;ref=ouseful">Change Manager, Developments Manager, Two Senior Project Managers,  Learning Innovation Office (LIO), Strategy Unit. Based in Milton Keynes.</a><br />
+<blockquote>Fascinated by the use of new technologies to enhance the learning experience in higher education? A Learning Innovation Office is being set up within the Open University's Strategy Unit to coordinate the development of elearning and innovative teaching and learning. Building on the University's new virtual learning environment (VLE), the Office will commission and oversee further development work, coordinate elearning strategy and policy, and monitor and disseminate learning innovations at the OU and elsewhere. The Director of Learning Innovation has been appointed and a number of staff are being recruited to work with him.</p>
+
+<p>Excellent organisational, interpersonal and communication skills, flexibility and initiative will be needed by all of the role holders to liaise with a wide range of academic, technical and administrative colleagues. You should have considerable experience of elearning development and implementation.</p>
+
+<p><strong>Change Manager</strong><br />
+You will work under the leadership of the Director of Learning Innovation to plan and initiate a range of strategic change initiatives, aimed at promoting elearning and embedding the OU's new VLE across the University. You will need exceptional communication, presentation and project management skills and will have significant experience of coordinating change initiatives in higher education. You will be supported by two Senior Project Managers.</p>
+
+<p><strong>Developments Manager</strong><br />
+You will work under the leadership of the Director of Learning Innovation to manage the operational activities of the Learning Innovation Office, and to plan and oversee a number of projects to develop additional functionality for the OU's new VLE. These projects will be managed by two Senior Project Managers who will report to you. You will need exceptional project management skills to provide effective management of these initiatives, significant experience in administration related to systems development, and will liaise with colleagues in other units who will be providing the technical and operational management of the VLE.</p>
+
+<p><strong>Two Senior Project Managers</strong><br />
+The Senior Project Managers will work under the direction of the Developments Manager and Change Manager, Learning Innovation Office, to plan and manage a number of activities aimed at promoting elearning and usage of the VLE, and to manage projects to develop additional functionality. You will report to the Developments Manager in the Learning Innovation office and you will need excellent project management and communication skills and significant experience in administration or systems development to provide effective management of these initiatives.</blockquote>As well as those posts, there is also this rather wonderful sounding post:<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3872&amp;ref=ouseful"><strong>Director of Multi-Platform Broadcasting, Strategy Unit</strong></a><br />
+Europe's largest and most innovative university is seeking an outstanding individual for the new post of Director of Multi-Platform Broadcasting, which has been created following a major review of our broadcasting strategy.</p>
+
+<p>You will have extensive experience at a senior level in the broadcasting and/or internet sectors and will have the strategic vision, management capability and technical understanding to enable the University to realise the potential of all broadcast media to support its global teaching and learning, research and public engagement missions. You will work closely with the University's Open Broadcasting Unit, with a wide range of areas of the University, and with the BBC and other key partners.</p>
+
+<p>You will be responsible to the Pro Vice Chancellor (Strategy, Planning and External Affairs) for the achievement of the University's ambitious broadcasting objectives.</blockquote>I'm not sure whether this post in marketing will report in any way to that post, though?<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3830&amp;ref=ouseful"><strong>Marketing Manager, Marketing and Sales</strong></a><br />
+In this new role has been created to focus on developing marketing plans covering BBC programming, Widening Participation &amp; Openings and other marketing projects. You will work with marketing colleagues in the OU and BBC to scope and identify education and training opportunities for the Widening participation sector, opportunities to promote the BBC and marketing our Openings courses. You will also develop and manage fulfilment of a marketing plan to these markets and identify appropriate channels to market.</blockquote>Business innovation is also in the air:<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3889&amp;ref=ouseful"><strong>Senior Project Manager, Europe. Futures Office, Strategy Unit</strong></a><br />
+We wish to appoint an outstanding individual to the Futures Office, to manage the implementation of the OU's strategy for Europe. You will liaise with key stakeholders across the OU and externally to evaluate and identify the optimum business model for the OU's operations in central Europe, shaping the OU's strategic priorities for international growth.</p>
+
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3891&amp;ref=ouseful"><strong> Communications Program Manager (Business to Business), Marketing and Sales</strong></a><br />
+Reporting to the Head of Customer Communications, as part of the sub unit management team, you will lead the planning, development and execution of marketing programs for the business to business segment; targeted to increase OU awareness and to generate enquiries from employers resulting in sponsored students, CPLD (Centre for Professional Learning and Development) revenues, etc.</p>
+
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3870&amp;ref=ouseful"><strong> Senior Manager (Administration), Validation Services</strong></a><br />
+Open University Validation Services is responsible for providing Open University validation for external academic programmes; and vocational awards through the OU Awarding Body. More than 33,000 students are currently registered for validated and vocational awards in more than 50 partner organisations. The University is currently investing in a restructure of OUVS and an expansion of our team.  As part of our expansion we are seeking a Senior Manager (Administration) to manage central support services including management of registrations, certification and aftercare services.</blockquote><em>Disclaimer: none</em>... ;-) Except maybe the OUVS post... I have an idea for an OUVS webservice that's being considered in part under the SocialLearn banner...</p>
+
+<p>Needless to say, I have nothing to do with appointments to any of those posts, at the dizzying heights such as they are (I'm way down the food chain, and on the academic side of the fence too...). That said, I'll probably heckle whoever does get in and try to grab a coffee with them every so often! <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/recruitment" rel="tag">recruitment</a>, <a href="http://technorati.com/tag/innovation" rel="tag">innovation</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014990.html">12:27 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14990" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 10, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014984"></a>
+<h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 2</h3>
+
+Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in Visualising CoAuthors in Open Repostory Online Papers, Part 1, to give a graphic which isn't really that useful or interesting (too cluttered), I...
+<!--
+<p>Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">Visualising CoAuthors in Open Repostory Online Papers, Part 1</a>, to give a graphic which isn't really <em>that</em> useful or interesting (too cluttered), I thought I'd try out a couple of network visualisations using Many Eyes and Graphviz.</p>
+
+<p>It's possible to construct graphs using both these tools by organising the data in pairs - so for each reference in a collection of references (for example, all the papers produced by a particular unit, or all the references returned from a title/abstract search on a particular query term), I pulled out every possible pairwise combination of authors. (So for exampple, a paper authored by A, B, C and D generates (A, B), (A, C), (A, D), (B, C), (B, D), (C, D) as all the possible pairwise coathor relations for that reference.) For convenience (i.e. as a result of laziness), I allowed duplicate pairs into the list (so if A and B had coauthored mutliple papers, their pairwise cauthor relation would appear many times in the data set.</p>
+
+<p>So what's the result? Well here's a Many Eyes view over references produced from the <a href="http://oro.open.ac.uk/view/faculty_dept/fels-cepm.html">Academic Unit/Department: Educational Policy, Leadership and Lifelong Learning</a>:</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w%7EP2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3255/2654724721_c671ccb974.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="468" width="493" /></a></p>
+
+<p>It's possible to zoom in to the display and highlight or search for individual authors, and see who they have co-authored with:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2655552986/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3148/2655552986_533a0edb56.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="210" width="324" /></a></p>
+
+<p>As it seems that Many Eyes now allows visualisations to be embedded, let's see what happens if I try to embed the above.</p>
+
+<p><script type="text/javascript" src="http://services.alphaworks.ibm.com/manyeyes/api/v1/snapshot/89ade5ae1afd68ea011b03c2f1b103e9.js?width=400&amp;height=350"></script></p>
+
+<p>At a high level, this visualisation allows us to pick out clusters of what we might refer to as different co-authoring teams within the unit. If we were visualising references returned from a search on a particular topic, the result might allow us to detect different groups working in a similar who don't author with each other, or different domains that use the same term but in completely different senses.</p>
+
+<p>There are also a few  things to notice in the detail about the Many Eyes network visualisation. Firstly, ambiguity in naming has a visual effect: <em>WoodsPA</em> and <em>WoodsP</em> are the same person I think, so their different representation creates an artificial degree of separation in the visualisation. Secondly, the node size reflects the degree of (I think) each author node - that is, the number of coauthors are connected to. I'm not sure if it also represents the absolute number of times the name appeared in the uploaded data set? Which leads neatly to the third point: the repeated occurrence of the same coauthor pairs are not apparently visualised.</p>
+
+<p>If we now look at a fragment of a Graphviz directed graph (the direction goes from authors who appear earlier in the reference list to authors who appear later) we see that repeated co-author pairings are displayed - the number of connections between two authors represents the number of references they have coauthored:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2652732682/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3274/2652732682_d92a70a1fe.jpg" alt="(null)" height="218" width="500" /></a></p>
+
+<p>Visualising the results of a search (e.g. a <a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search over ORO for  the term "mobile"</a>) reveals far more structure - here's a significant fragment of a Graphviz visualisation of couthors on references returned from just such a search:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3048/2654746483_eb6504469e.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="150" width="500" /></a></p>
+
+<p>Here's a more detailed view of part of the above:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3074/2654750561_0bde106452.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="271" width="500" /></a></p>
+
+<p>So what? So nothing really... it just seemed like a good idea at the time, another way of trying to identify professional networks and teams based on their outputs... and it was relatively trivial (and quick) to do... ;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20graphviz" rel="tag"> graphviz</a>, <a href="http://technorati.com/tag/%20many%20eyes" rel="tag"> many eyes</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">11:26 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14984" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 09, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014979"></a>
+<h3 class="title">Visualising CoAuthors in Open Repostory Online Papers, Part 1</h3>
+
+In ORO Search by Name Pipes Interface I described a Yahoo pipe for extracting author information from papers listed in the OU's open repository, and outlined some of the potential author naming ambiguities that arise when using ORO reference data...
+<!--
+<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014965.html">ORO Search by Name Pipes Interface</a> I described a Yahoo pipe for extracting author information from papers listed in the OU's open repository, and outlined some of the potential author naming ambiguities that arise when using ORO reference data as author metadata. In this post, I'll describe my initial attempt at visualising co-author relations using the Moowheel javascript visualisation library. In a couple of follow on posts, I look at some rather more 'correct' visualisations using both Moowheel and Many Eyes.</p>
+
+<p>If you're not familiar with it, Moowheel constructs a circular display of points that are connected to each other by some relation when provided with a set of data organised in an appropriate way. For example, in <a href="http://blogs.open.ac.uk/Maths/ajh59/014570.html">delicious Tags'n'users Wheel</a> I used Moowheel to show the tags used by different users who had bookmarked a particular URL on delicious.</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/"><img src="http://farm3.static.flickr.com/2351/2498112816_d6915d716d.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="468" width="500" /></a></p>
+
+<p>Hovering over a username highlights the tags they used to bookmark the original link.</p>
+
+<p>In Moowheel v0.1 at least, the data must be supplied in a form similar to: (a, b, c), (c, a, d), (b, c, e), (d, a), (e). To construct the circle, each item (a, b, c, d, e) must be present as the first item in a set; each set describes the items that are connected to each other in some way.) Links are highlighted to members of a set when the first item in the set is hovered over.</p>
+
+<p>So here's how I first thought to try to visualise the co-authors of an ORO paper - the source is a results listing for a <a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search on ORO by author "pillinger"</a>:</p>
+
+<p>- construct a list of unique authors and use this to create the unique items on the circle: (author1), (author2), (author3), ..., (authorN).<br />
+- construct sets of the form: (author1, author2), (author1, author2), ..., (author3, author1, authorN) - where the first set are the authors of paper1, the second set are the authors of paper2, and so on.</p>
+
+<p>My hope was that the Moowheel would then plot out the connections between all the authors who had ever coauthored a paper together that had also included a "pillinger" as an author. Here's a sample result:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2009/2651292446_7dca7662d6.jpg" alt="moowheel oro authors 1" height="478" width="500" /></a></p>
+
+<p>You'll see that some authors are depicted multiple times, but with no connections. What Moowheel v0.1, at least, seems to be doing is only display the connections for a non-singleton set where the first term in the set occurs with other set members for the first time(?) (There was also originally some ambiguity in actual author names; for example, "PIllinger, CT", "Pillinger, C" and "Pilinger, Colin" all appear in the results list - see <a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">Dirty Name Data in the OU Open Repository Online</a> for a discussion about this; in the above demo, I went overboward and just used the surname, which combined results fro "Pillinger, C" and "Pillinger, J"...;-)</p>
+
+<p>If you want to have a play with the Moowheel, you can find it here: <a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php?author=pillinger">ORO viz demo 1</a>.</p>
+
+<p>In order to cope with authors appearing multiple times along the outside edges of the graph, I guessed that I needed to construct non-singleton sets that were started with a unique identifier, so I added a level of indirection that related authors with the papers that had contributed to:</p>
+
+<p>- construct a list of unique authors;<br />
+- construct sets headed by unique authors, and the papers they had contributed to, and use this to create the unique items on the circle: (author1, paper1, paper2), (author2, paper1), (author3, paper2, paperN), ..., (authorN, paper2).<br />
+- construct sets for each paper listing the authors who had contributed to that paper: (paper1, author1, author2), (paper2, author1, author3), ..., (paperN, author3).</p>
+
+<p>Here's the result (<a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php?author=pillinger">ORO viz demo 2</a> NB there's a niggle somewhere in the code which means that for some few results listings, the wheel doesn't display... Also, the pipe canlt cope with overlong results listings Ideally, ORO would produce it's own RSS/JSON output...:-(:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3058/2651308026_eac86efc3d.jpg" alt="oro author papers" height="467" width="500" /></a></p>
+
+<p>This time, if you hover over the name of an author, the links to the papers they contributed to will be highlighted. If you hover over a paper reference, the authors who contributed to it will be highlighted.</p>
+
+<p>In order to see which authors had coauthored with whom, I guess I'd need to hack the Moowheel code so that if I hovered over an author, the links to papers they had contributed to would be highlighted, and the 'activated' papers would then in turn highlight the links to the authors who had contributed to those papers...</p>
+
+<p>Whilst I haven't tried that approach, I did find another way of visualising who had coauthored with whom - as I'll describe in my next post... :-)<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20moowheel" rel="tag"> moowheel</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">10:43 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14979" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 07, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014976"></a>
+<h3 class="title">National Statistics API - Discovery services AJAX demos</h3>
+
+Last week, a call went out for government data mashup ideas, along with a list of government data APIS: Show Us a Better Way. i signed up for some of the API keys (though I still haven't received an NHS...
+<!--
+<p>Last week, a call went out for government data mashup ideas, along with a list of government data APIS: <a href="http://www.showusabetterway.com/">Show Us a Better Way</a>.</p>
+
+<p>i signed up for some of the API keys (though I still haven't received an NHS data API key :-(, and had a little tinker over the weekend just trying to get my head around some of them. While I've nothing to show yet (and no real ideas other than a search tool for the NHS service) I do expect to cobble together a set of 'minimally working' tools that act essentially as "Hello World" elaborations around the often scant documentation.</p>
+
+<p>So here for starters is a reworking of the supplied National Statistics API AJAX demo, that demonstrates the use of the discovery service API (as described in the <a href="http://neighbourhood.statistics.gov.uk/HTMLDocs/downloads/NeSS_Data_Exchange_User_Guide_v0.2.pdf">NeSS Data Exchange User Guide v0.2</a>) for three different discovery queries (GetLevelTypes, GetLevelTypesByHierarchy and GetSubjectTree): <a href="http://blogs.open.ac.uk/Maths/ajh59/NationalStatsAPI-ajaxDiscoveryDemos.zip">National Statistics API - Discovery services AJAX demos</a>.</p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/NationalStatsAPI-ajaxDiscoveryDemos.zip" title="National Statistics API - Discovery services AJAX demos"><img src="http://farm4.static.flickr.com/3278/2646978426_5d0bb37088.jpg" alt="National Stats API" height="340" width="500" /></a></p>
+
+<p>The API is a SOAP service (as you'd expect), which means processing the results XML file with a small XSL transformation. As I was following the "Hello World" call, I transformed the results to an HTML table. If I get a chance, I'll try to put together a couple of XSLTs to JSON, and show how to actually get a handle on the data in the web page itself...</p>
+
+<p>PS is there an official "showusabetterway" tag?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/NationalStatistics%20API" rel="tag">NationalStatistics API</a>, <a href="http://technorati.com/tag/%20showusabetterway" rel="tag"> showusabetterway</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014976.html">06:58 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14976" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014965"></a>
+<h3 class="title">ORO Search by Name Pipes Interface</h3>
+
+Over the last few weeks, I've been playing with various Javascript visualisation libraries that work all sorts of magic if you throw data at them in the right way. But in order to do that, you often have to get...
+<!--
+<p>Over the last few weeks, I've been playing with various Javascript visualisation libraries that work all sorts of magic if you throw data at them in the right way. But in order to do that, you often have to get the data from a third party location into the web page that contains the visualisation code...</p>
+
+<p>One of the easiest ways of doing this is to load a Javascript object into the page using JSON - Javascript Object Notation. In the same way that a Javascript library can be loaded into a web page using the HMTL <tt>&lt;script&gt;</tt> tag, a JSON feed can be pulled into the page in the same way.</p>
+
+<p>For example, the following pulls a JSON feed into a page from a Yahoo Pipe:</p>
+
+<p><tt>&lt;script type="text/javascript" src="http://pipes.yahoo.com/pipes/pipe.run?_id=vhMha5tK3RGAl2xDouNLYQ&amp;_render=json&amp;_callback=parseJSON&amp;name=pillinger"&gt;&lt;/script&gt;</tt><br />
+ <br />
+Yahoo Pipes originally started out as a service for processing RSS feeds, but over the months it has become an increasingly general purpose mashup tool. Whilst it excels at processing RSS/Atom syndication feeds, it can also consume CSV files (comma separated variable files, a common output format for simple spreadsheet data), JSON feeds, XML and web pages, and publish RSS or JSON formatted data (the JSON data may be far richer than the RSS output).</p>
+
+<p>The ability to consume HTML pages means that it can be used as a simple screen scraper. That is, it can be used to literally 'scrape' data from a web page.</p>
+
+<p>So for example, consider the case of the OU <a href="http://oro.open.ac.uk">Open Repository Online (ORO) service</a>, which acts as a repository for research publications authored by OU staff. Whilst there are several RSS feeds available from the service (which makes the information portable), such as new submission feeds, ORO still doesn't appear to offer an <a href="http://www.opensearch.org/Home">OpenSearch RSS service</a> that would allow search query URLs to be constructed in an advertised and standard way, and search results to be pulled from the service as RSS. Which means that to build a service around ORO search results, we need to scrape the results listings off the search results web page...</p>
+
+<p>Which is where Yahoo Pipes comes in: <a href="http://pipes.yahoo.com/ouseful/oroauthorsearch">OU ORO Author Search pipe</a><br />
+<ol><li>do an author search on ORO, and grab the results page URL...</li><br />
+<li>create a new Yahoo Pipe, and place a <em>URL Builder</em> block on the canvas. Paste the ORO search results page into the <em>Base</em> field and hit return - the block will split the URL up into its component parts;</li><br />
+<li>we want to let the user search for a particular name using the pipe, so drag a <em>Text Input</em> block onto the canvas and name it appropriately; wire the output of this block to the form element in the URL Builder block that contained the original name you searched for.</p>
+
+<p><a href="http://pipes.yahoo.com/ouseful/oroauthorsearch" title="Yahoo ORO author search pipe"><img src="http://farm4.static.flickr.com/3280/2645878054_de68679ca9.jpg" alt="oro pipe step 1" height="297" width="500" /></a></li><br />
+<li>Havng constructed the URL of search results page for a particular author, fetch the page into the pipe. The <em>Fetch Page</em> block also allows you to 'segment' the page into a set of separate item, such as one item per search result. By inspecting the HTML source of the page, try to find unique words or phrases that bound the whole of the page area that you want to extract, as well as text strings that identify each element you want to extract as a separate item. So for example, here's an ORO search results page (browser view):</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3280/2645887300_5486caf5aa.jpg" alt="ORO author search results" height="201" width="500" /></a></p>
+
+<p>and here's the source HTML:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3189/2645891572_456d09f85e.jpg" alt="ORO authro search view source" height="433" width="500" /></a></p>
+
+<p>In the pipe, I've tried to pull out just the bit of the page that corresponds to the search results, and within that block, identify some feature that lets each search result be indentified as a separate item:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645054911/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3281/2645054911_90d863e4d9.jpg" alt="ORO author search pipe 2" height="128" width="436" /></a></li><br />
+<li>Just to ensure that I only pull out itens that contain search results, I'm going to filter out any items that don't contain the name I was searching for:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645070441/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3063/2645070441_f7ec603b94.jpg" alt="ORO author search pipe 3" height="134" width="500" /></a></p>
+
+<p>Here's the output of the first element in the pipe so far (browser view - the 'source view' is actually HTMLcode):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645076093/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3260/2645076093_458b5621c0.jpg" alt="ORO author search pipe 4" height="69" width="500" /></a></li><br />
+<li>The next step is to prepare a version of the search results that can be output as an RSS feed. RSS feeds have a standard structure. In the most straightforward case, each RSS feed item contains a title, description and link/URL - so we make a copy of each results item in a placeholder for each of those elements (the full HTML code is displayed in the top level element (which is just a reflection of the contents of the title element):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645080551/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3015/2645080551_ca169b2d38.jpg" alt="ORO author search pipe 5" height="307" width="440" /></a></li><br />
+<li>Now we do some magic using regular expressions. Regular expressions provided a standardised way for doing complex search and replace operations. In this case, we process the contents of each of the title, link and description fields in order to extract different information from them:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645083433/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3072/2645083433_61fa0356c3.jpg" alt="ORO author search pipe 6" height="248" width="500" /></a></p>
+
+<p>(The final regular expression strips out the html tags from the description field.)</li><br />
+<li>The final step loops through the description element of each feed item and separates the authors named in the description field into a separate list of authors:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645089937/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3056/2645089937_0f6e739d6e.jpg" alt="ORO author search pipe 7" height="227" width="500" /></a></li></ol><br />
+If we now run the pipe, we can get an RSS feed out containing the ORO search results, as well as a more comprehensive JSON feed which aslo contains a list of separatley identified authors.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oroyahoo%20pipes" rel="tag">oroyahoo pipes</a>, <a href="http://technorati.com/tag/%20pipes" rel="tag"> pipes</a>, <a href="http://technorati.com/tag/%20screenscraper" rel="tag"> screenscraper</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014965.html">12:12 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14965" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 06, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014962"></a>
+<h3 class="title">Dirty Name Data in the OU Open Repository Online</h3>
+
+Now I'm not one to criticise the Library (?!;-), but over the weekend I've been playing with one of the Library's newest collections, the Open Repository Online, with a view to visualising who's co-authored papers in the collection with whom....
+<!--
+<p>Now I'm not one to criticise the Library (?!;-), but over the weekend I've been playing with one of the Library's newest collections, the <a href="http://oro.open.ac.uk">Open Repository Online</a>, with a view to visualising who's co-authored papers in the collection with whom. And looking through the author information provided in the results listing for a search on a particular author name, I have to take issue with one or two things...</p>
+
+<p>Like the considerable amount of ambiguity in both the naming convention and the stylistic presentation used for name references.</p>
+
+<p>For example, the following names all appear in the author information for papers returned from an ORO name search on the author "<a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">pillinger</a>":<br />
+<ul><li>Pillinger, C. T.</li><br />
+<li>Pillinger, C.T.</li><br />
+<li>Pillinger, Colin T.</li><br />
+<li>Pillinger, Colin</li><br />
+<li>Pillinger, C.T, (or maybe you could read this as "Pillinger, C.T")</li></ul>(I'm also guessing that <em>Semjonova, L. F.</em> and <em>Semenova, L.F.</em> are the same person (apologies to both parties if not)?)</p>
+
+<p>If I was to construct a table of author names, using direct/literal pattern matching of text strings to match individuals across different article references, all of the above <em>Pillinger</em> variants would appear as <em>different</em> authors, because the text strings are different and simple string matching is dumb.</p>
+
+<p>(This is just one of the issues that was mentioned at the CRiG barcamp a month or so ago (<a href="http://blogs.open.ac.uk/Maths/ajh59/014735.html">CRIG DRY (Don't Repeat Yourself) Metadata Barcamp</a>), in particular by the <a href="http://names.mimas.ac.uk/">MIMAS Names project</a>, which "is going to scope the requirements of <abbr title="United Kingdom">UK</abbr> institutional and subject  repositories for a service that will reliably and uniquely identify individuals and institutions" in order to "provide important information about the future usefulness of a name authority  service for institutional and subject-based repositories, and other applications  beyond the repository sector." One of that things that was discussed then related to reconciling repository name references with staff records, but for data end users, if different presentation modes (as above) are used to reference the same individual, then simple pattern matching algorithms used in mining the data are seen to be brittle, unless the data user seeks to normalise the data in some way. Which may be advisable..? That is, <em>always</em> assume the data is messy/noisy...).</p>
+
+<p>Where the information is the source of it's own metadata, or where appropriate web page markup - such as microformats* and cool URIs - provide implicit metadata that the adventuous can build hacks around, it's quite handy if the literal textual representation of the data is coherent/self-consistent; and in the case of ORO, it doesn't appear to be...</p>
+
+<p><small>*though bear in mind this recent second look at microformats from an accessibility point of view from the BBC: <a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml">Removing Microformats from bbc.co.uk/programmes</a>!</small></p>
+
+<p>So this is where I start to wonder where the Library fits in to the workflow of online university research repositories if they are to be useful to data users? For example, what do we conclude if the Library can't guarantee the quality of data in their own, most recent, collection (which was born <em>de novo</em> only a couple of years ago)? It seems to me that "reference gardening" (which must one the lousiest jobs imaginable!), is one of the areas where they could really add value, although ideally the information would be collected/submitted in a way that removed ambiguity and ideally guaranteed conformity with some standard, authoritative naming scheme.... But that will never happen...</p>
+
+<p>So whilst I appreciate that no matter how many checks and balances you put in place, there is always going to be mess. And maybe the Library can help by finding ways to help users cope with the inevitable mess... Entropy always wins out...</p>
+
+<p>Ideally, of course, the data would be clean/correct, and if it wasn't that ideally any errors, once found, would be corrected. But maybe there's also scope for the Library to accept that the data is a mess, and help data patrons find heuristics for cleaning it and removing some of the noise. For example, as well as helping users write advanced (and robust) search queries (like how to use advanced search operators and set up saved search alerts), I wonder whether they should also maintain a set of 'reference functions' that users of (messy) "data as metadata" can apply as heuristics to try and tidy up textual data.</p>
+
+<p>So for example, the fiollow javascript function will (I think? Err...) replace a spelled out forename in the above name referencing style with an initial:</p>
+
+<p><tt>function tidyName2(s){return s.replace(/(,\s*[A-Z])[a-z]*/g, "$1.");}</tt></p>
+
+<p>e.g. <em>Pillinger, Colin T.</em> will become <em>Pillinger, C. T.</em></p>
+
+<p>And this one will remove the punctuation:</p>
+
+<p><tt>function tidyName3(s){return s.replace(/[\s ,\.]*/g,"");}</tt></p>
+
+<p>e.g. <em>Pillinger, C. T.</em> will become <em>PillingerCT</em></p>
+
+<p>By applying several of these heuristics, we can produce a name format that removes some of the typographical ambiguity, though losing an initial may be going too far? e.g. going from <em>PillingerCT</em> to <em>PillingerC</em> may be the wrong thing to do, even though it would set up an identity between these two original forms: <em>Pillinger, Colin</em> and <em>Pillinger, C. T.</em></p>
+
+<p>That said, how many library staff in general even know what a regular expression is, let alone how to construct one to help a 'search a replace' patron tidy a data set in a text editor or even in Word (<a href="http://office.microsoft.com/en-us/help/HA010873051033.aspx">Add power to Word searches with regular expressions</a>)?<br />
+<a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml"></a><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/library" rel="tag">library</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>, <a href="http://technorati.com/tag/" rel="tag"></a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">10:33 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14962" onclick="OpenComments(this.href); return false">Comments (5)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 04, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014951"></a>
+<h3 class="title">The Library Moves On...</h3>
+
+I don't normally write posts that just repost stuff from elsewhere, but I thought this was interesting... a message I received via a blog feed from the MCT (Maths, Computing and Technology) "link librarian' in the OU Library: Withdrawal of...
+<!--
+<p>I don't normally write posts that just repost stuff from elsewhere, but I thought this was interesting... a message I received via a blog feed from the MCT (Maths, Computing and Technology) "link librarian' in the OU Library:<br />
+<blockquote><strong>Withdrawal of British Standards print stock.</strong><br />
+The Library has decided to withdraw its collection of print standards (mainly British Standards). Thanks to recent improvements to the British Standards Online database, withdrawn and superceded versions of standards are now available in PDF format to OU users online alongside current editions.<br />
+...</blockquote>Access to print journal collections has also changed over the last few years - where once it was possibly to roam the dusty aisles lined by all manner of obscure journals, serendipitously discovering all sorts of wonderful things on the way, now the aisles are light and airy and tend to be dominated by the (increasingly dated) book collection...</p>
+
+<p>The rise of electronic journal subscriptions means we now have access to far more journals, and can far more easily search them, of course. But for me, visits to the library used to be filled with a sense of joyful anticipation about what I might come across by flicking through journals randomly picked from the shelves of the journal collection, whereas now a visit to the library is more about meeting someone for coffee (which is pleasurable in another way, including but not limited to, serendipitous discovery through conversation!).</p>
+
+<p>I love books, always have, but increasingly I find that old academic books - such as the ones that line the shelves of the library - don't really do it for me. But old journal articles and conference proceedings still do, to a certain extent. Maybe it's because the journals and conferences represented the conversational channel of academia of the 20th century? Whereas now, in our connected world, the conversation is elsewhere, and far closer to a real time conversation...</p>
+
+<p>Books can be conversational too, of course. But with each turn in the conversation lasting upwards of 100, 000 words, they can take a long time to follow. 10,000 words of book chapter, or 5,000 words of journal article also take time to work through - reading through 4 or 5 connected journal papers is hardly a rapid fire cocktail conversation. 1,000-3,000 words of conference paper are quicker to digest, and reference chasing and citation seeking give you a glimpse of the conversation that was happening at the time. Blog posts represent the conversation in progress - brief reports of work in progress, half-formed ideas still be properly thought through or worked out. And tweets? Well, maybe that's where the 'eureka' slogan gets shouted next, with a link to a blog post capturing the essence of the idea, that post promising a conference paper, and the journal paper to make it matter of record appearing as a special issue to mark the conference, with the book to follow a year or so further down the line...</p>
+
+<p>The question is - where does the library sit in all of this?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/library" rel="tag">library</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014951.html">10:04 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14951" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Searchme Stack demo...</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014909.html" title="SocialLearn Workshop - Open Invite - July 1/2, 2008" />
+
+<link rel="next" href="./014919.html" title="Twitter and &quot;Desynchronous&quot; Communication" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014909.html">&laquo; SocialLearn Workshop - Open Invite - July 1/2, 2008</a> |
+
+<a href="./">Main</a>
+| <a href="./014919.html">Twitter and "Desynchronous" Communication &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 25, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Searchme Stack demo...</h3>
+
+<p>One of the things I was really pleased to get into the current presentation of T184, our <a href="http://ouseful.open.ac.uk/t184">online short course on robotics</a>, were a handful of embedded video clips from Youtube. The presentation of the assets isn't that pretty, but I'm starting to learn about what battles to fight when (!;-) so it was enough just to the embedding sorted without worrying to much about beautiful page design/layout, media player customisation, and so on...</p>
+
+<p><a href="http://ouseful.open.ac.uk/t184" title="T184 screenshot"><img src="http://farm4.static.flickr.com/3071/2610591785_8e95652d2a.jpg" alt="t184 image" height="375" width="500" /></a></p>
+
+<p>The pages as currently constructed owe a lot to the styling and layout of a printed page (many students do allegedly print out online/HTML materials for offline reading) and an old old page template...), so things like images are also embedded in the page in what at (on my off days) I consider to be a quite inelegant way:</p>
+
+<p><a href="http://ouseful.open.ac.uk/t184" title="T184 screenshot"><img src="http://farm4.static.flickr.com/3267/2610589527_5e7d327c6b.jpg" alt="T184 excerpt" height="331" width="500" /></a></p>
+
+<p>So when I saw the recent "stack" demo from the <a href="http://searchme.com">searchme visual search engine</a>, I started wondering about whether this could be a way of putting a multiple image and video payload into a single gallery window on a page?</p>
+
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/8JQn8XfOP5s&amp;hl=en"><embed src="http://www.youtube.com/v/8JQn8XfOP5s&amp;hl=en" type="application/x-shockwave-flash" height="344" width="425"></object></p>
+
+<p> (There are issues regarding printing the page out or course, particularly if the gallery is just an image gallery - I don't think the searchme widget will 'linearise' the images for a print display?!) </p>
+
+<p>So as T184 comes up to ts last presentation (in its current form....) in October, I wonder about how we might use this sort of display in the context of online teaching materials? Here's the simplest of demos, showing a mixed collection of assets on a theme (click through to the post to see demo of an embedded stack. Or here's a direct link to the stack: <a href="http://www.searchme.com/stack/12c6">Automata stack (<em>searchme</em>)</a>.</p>
+
+<div><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="embedded" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" height="375" width="600">  <param name="bgcolor" value="#FFFFFF">
+  <param name="allowScriptAccess" value="always">
+  <param name="allowFullScreen" value="true">
+  <embed src="http://e.searchme.com/embed?a=sm&amp;v=1&amp;stack=12c6" quality="high" bgcolor="#FFFFFF" name="embedded" play="true" loop="false" allowscriptaccess="always" type="application/x-shockwave-flash" allowfullscreen="true" pluginspage="http://www.adobe.com/go/getflashplayer" flashvars="autoPlay=true&amp;speed=1&amp;theme=black" align="middle" height="375" width="600">
+</object><table width="600"><tbody><tr width="100%"><td align="left"><a href="http://www.searchme.com/">Searchme</a></td><td align="right"><a href="http://www.searchme.com/stack/12c6">Maximize stack view</a></td></tr></tbody></table></div>
+
+<p>One of the biggest queries I have about this approach, though, is with respect to rights (which regular readers know I <a href="./012355.html">don't understand at all</a>!). The widget embeds a set of user selected results from a search engine collected as a results set on a third party site, and viewed in an embedded third party widget. So if rights clearance is sought for images that appear in a stack, what clearance is necessary? If anyone was tracking usage of images pulled from the flickr server, it would resolve back to the searchme stack address presumably, rather than the page that the stack widget is embedded in?</p>
+
+<p>And what if searchme offered embeddable 'saved search' stacks (that displays the results of a particular search query)? You wouldn't know for sure what images were going to be pulled back into and displayed in the widget (though you might craft the search query in such a way as to maximise the chances of pulling in a set of images you are particularly interested in!).</p>
+
+<p>So I <em>guess</em> what's got me thinking is this: to what extent do embedding results from <em>visual</em> search engines cause grief for the rights folks?</p>
+
+<p>I don't know if the searchme visual search limits searches to Creative Commons licensed  images, but it would be good if it was an option, and even better if it could generate a 'titles' slide to show attribution to the images in the stack at the end of the stack!<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/searchme" rel="tag">searchme</a>, <a href="http://technorati.com/tag/visual%20search" rel="tag">visual search</a>, <a href="http://technorati.com/tag/%20widget" rel="tag"> widget</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June 25, 2008 08:37 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>An elegant tool. Using Vodpod the stack can be easily embedded into a post on a wordpress.com blog. Could be good for the blogged courses you're developing. Thanks for the tips.</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;c&#46;mcgoun&#64;mmu&#46;ac&#46;uk">Clive</a> at June 26, 2008 05:49 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

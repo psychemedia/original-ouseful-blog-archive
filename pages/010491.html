@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Mashup Tools Frenzy</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010489.html" title="Static RSS Feed Content, Delivered Daily" />
+
+<link rel="next" href="./010492.html" title="Original Cholera Map on Google Earth?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010489.html">&laquo; Static RSS Feed Content, Delivered Daily</a> |
+
+<a href="./">Main</a>
+| <a href="./010492.html">Original Cholera Map on Google Earth? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 22, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Mashup Tools Frenzy</h3>
+
+<p>A week away from a daily play, and my feedreader now contains way too many unread messages. Prompted by this CNET News post on <a href="http://news.com.com/8301-10784_3-9747138-7.html">The battle of the mashup editors</a>,  I also realise that I probably haven't been keeping up with updates to the Google Mashup Editor or Microsoft Popfly since I played with them the day the invites originally came out... (aaaaaarrrrrrrrrrrrrggggggghhhhhhhh - not enough time to play with the big toys, let alone keep up with the little ones...........!)</p>
+
+<p>So - top of the to do list is to catch up with feature releases from <a href="http://blog.pipes.yahoo.com/">Yahoo Pipes</a>, <a href="http://popflyteam.spaces.live.com/blog/">Microsoft Popfly</a> and <a href="http://googlemashupeditor.blogspot.com/">Google Mashup Editor</a> (as well as the other various Google APIs, like the <a href="http://googleajaxsearchapi.blogspot.com/">AJAX feed API</a>).</p>
+
+<p>Come to think of it, I haven't even played with IBM's <a href="http://services.alphaworks.ibm.com/qedwiki/">QEDWIki</a> <em>at all</em>, yet... or the <a href="http://www.seobythesea.com/?p=716">Intel Mashmaker</a> tool (though I guess access to that isn't available at the mo...).</p>
+
+<p>As everyone seems to be releasing <a href="http://del.icio.us/psychemedia/autodiscovery">feed autodiscovery</a>  - at least, Yahoo Pipes and Google AJAX API both offer this now (as does this <a href="http://simplepie.org/">PHP library</a>) - I feel I really should try to build something that makes use of this... the only question  is, what? Something <a href="http://ouseful.open.ac.uk/stringle">String'n'Glue</a> related, maybe?</p>
+
+<p>I'm also hoping that when the OpenLearn folks finally start moving the OpenLearn feeds from the dev server onto the public one, they'll make the feeds autodiscoverable... Although just what possibilities that will open up for feed related creativity, I'm not sure yet!</p>
+
+<p><hr /><br />
+PS I notice that I get live suggestions from my Firefox search widget (at least with Google as the search engine).</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090147511648723714"><img src="http://lh6.google.com/tony.hirst/RqPWMW4pIwI/AAAAAAAAAJo/5CV_cZVEROM/s800/googleSuggest.png" /></a></p>
+
+<p>It'd be really neat - particularly for navigational/known item queries, where you <em>know</em> the result you want to find - if below the bar in the drop down live suggestions it also gave the top three hits for the current query-in-progress, live search style, treating them as clickable links rather than search terms...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July 22, 2007 11:30 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

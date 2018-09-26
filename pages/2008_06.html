@@ -1,0 +1,1220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: June 2008 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2008_05.html" title="May 2008" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2008_07.html" title="July 2008" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_05.html">&laquo; May 2008</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2008_07.html">July 2008 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">June 30, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014935"></a>
+<h3 class="title">Google Maps Catchup Post</h3>
+
+Earlier this year I did quite a few posts relating to Google Maps, (Google Calendar maps, geoblogging (blogging from Google MyMaps), a geoTwitter map, some maps relating to school catchment areas, and so on) but didn't post everything... So when...
+<!--
+<p>Earlier this year I did quite a few posts relating to Google Maps, (<a href="http://blogs.open.ac.uk/Maths/ajh59/014014.html">Google Calendar maps</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/012936.html">geoblogging</a> (blogging from Google MyMaps), a <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">geoTwitter map</a>, some <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">maps relating to school catchment areas</a>, and so on) but didn't post everything...</p>
+
+<p>So when an email came round last week asking whether anyone knew how to get postcodes plotted onto maps, I sent a reply:<br />
+<blockquote>Q: I need to create a simple map - plot some sites onto a map of the UK using postcodes (or town names) and then code the markers to denote different site characteristics.</p>
+
+<p>A: One way would be to put the details into a spreadsheet, pass the result through a geocoder (to convert postcodes to lat/long) and then plot different markers on a map.</p>
+
+<p>Here's a recipe for getting the markers onto a map from a spreadsheet with a postcode column: <a href="http://www.andydickinson.net/2008/02/29/maps-spreadsheets-yahoo-pipes-and-post-offices/">http://www.andydickinson.net/2008/02/29/maps-spreadsheets-yahoo-pipes-and-post-offices/</a></p>
+
+<p>I produced a couple of maps that will do client side processing relating to markers before plotting them: <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">http://blogs.open.ac.uk/Maths/ajh59/013580.html</a></blockquote>Looking back at the second of the above mentioned posts, (and spotting the pipe had rotted - now fixed...), I realised that I hadn't posted anywhere the final extent of my tinkerings of the time. And looking around on my laptop, the code appeared to have gone :-( Anyway, fortunately I'd posted a nearly-as-far-as-I'd-got edition of the code to the OUseful blog server, so before I lose it again, here's a link: <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php">Generic Circular Catchment Areas - Interactive Map</a></p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3111/2624872814_420ea60c17.jpg" alt="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php" height="423" width="500" /></a></p>
+
+<p>What the map allows you to do is load in a set of points from a Google MyMap, marked up as members of different classes, and then plot the catchment areas around each point using a customisable radius for each class. (Along with a user defined radius, you can also set the colour of each circular  catchment area (using a YUI colour selector)).</p>
+
+<p>You can hide all the markers from any class, or just hide individual points.</p>
+
+<p>(The URL on the map page for the Plymouth supermarkets MyMap is incorrect. Here's the correct link: <a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=109196350919255002936.000446d925755b10ddf4e&z=10">Plynmouth supermarkets MyMap</a>.)</p>
+
+<p>When I get a chance, I'll try to tidy up the code and do a version that: a) will plot points identified by postcode from a Google spreadsheet; b) let oyou use different markers as well as or instead of the circular catchment areas; c) have a think about how a table containing postcode info could be <a href="http://blogs.open.ac.uk/Maths/ajh59/014014.html">progressively enhanced</a> with a map display.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/maps" rel="tag">maps</a>, <a href="http://technorati.com/tag/geo" rel="tag">geo</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014935.html">03:01 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14935" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 28, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014924"></a>
+<h3 class="title">More Idle Thoughts About Nothing in Particular (i.e. Twitter)</h3>
+
+Here's another thought along the lines of the CMC same/different time/place grid as applied to Twitter I mentioned in Twitter and "Desynchronous" Communication... Twitter seems to be all over the place if you plotted a scatter chart opf different interaction...
+<!--
+<p>Here's another thought along the lines of the CMC same/different time/place grid as applied to Twitter I mentioned in <a href="http://blogs.open.ac.uk/Maths/ajh59/014919.html">Twitter and "Desynchronous" Communication</a>... Twitter seems to be all over the place if you plotted a scatter chart opf different interaction modes on these axes:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2618165639/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3028/2618165639_29b1d31ee4.jpg" alt="Twitterness" height="309" width="403" /></a></p>
+
+<p>1 sender and 0 receivers (or maybe 0 readers) - late night tweet to no-one and it gets lost...</p>
+
+<p>1 sender to 1 or 2 explicitly identified receivers -  I just tweeted @one or @two people.</p>
+
+<p>Lots of senders, not really thinking about who's receiving it - something's happening (an earthquake, maybe?)</p>
+
+<p>Lots of senders, 1 recipient (maybe that someone asked a question to their followers (1 sender, lots of recipients) and lots of people are replying?)</p>
+
+<p>It's also worth bearing in mind that mass action trends are identifiable on Twitter: <a href="http://trendspotting.corank.com/tech/tag/twitter"><em>Twitter</em> on Trendspotting</a>.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/cmc" rel="tag">cmc</a>, <a href="http://technorati.com/tag/%20this%20is%20the%20sort%20of%20trivial%20unthought%20through%20observation%20that%20people%20write%20up%20and%20present%20in%20papers%20in%20dodgy%20conferences%20and%20journals%20isn't%20it%3F" rel="tag"> this is the sort of trivial unthought through observation that people write up and present in papers in dodgy conferences and journals isn't it?</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014924.html">07:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14924" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 27, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014919"></a>
+<h3 class="title">Twitter and "Desynchronous" Communication</h3>
+
+In the quaint language of academia, "CMC" - computer-mediated communication - is the phrase typically used to identify person-to-person electronic communications. Oftentimes, CMC tools are classed as either synchronous or asynchronous and then plotted on this sort of matrix (e.g....
+<!--
+<p>In the quaint language of academia,  "CMC" - computer-mediated communication - is the phrase typically used to identify person-to-person electronic communications. Oftentimes, CMC tools are classed as either synchronous or asynchronous and then plotted on this sort of matrix (e.g. <a href="http://projects.coe.uga.edu/epltt/index.php?title=Computer_Mediated_Instruction">Computer Mediated Instruction</a>):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2616149410/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3203/2616149410_25af7eef64.jpg" alt="cmc" height="257" width="352" /></a></p>
+
+<p>(Other dimensions you can add in are one-to-one communication, one-to-many, many-to-many and so on...)</p>
+
+<p>But it seems to me that I increasingly use many asynchronous tools in a "near-synchronous" or "presynchronous" way, and potentially synchronous toos in an asynchronous ('desynchronous'?) way.</p>
+
+<p>For example, twitter allows me to engage in one-to-one (private), one-to-one (cocktail party) and one-to-many way in near real time, or with an arbitrarily long gap between statement and response. Instant messaging allows me to engage in synchronous conversation or send message to people offline, knowing they'll be able to pick them up when they are online. (Ands others have noticed from their own perspective, (e.g. <a href="http://www.offmessage.com/2008/06/on-twitter/">On Twitter</a>), my IM usage has gone down since I started tweeting...)</p>
+
+<p>Looking again at the above figure, it seems to me that twitter pretty much falls into every quadrant: for example, top right is the conference room backchannel, bottom right is the backchannel open to the world. Top left are asynchronous wrokplace tweets ("anyone for coffee"), and bottom right are end of day tweets that may not be picked up till tomorrow (if at all).</p>
+
+<p>SMS has similar properties maybe, but requires a different access device and one that is maybe not so amenable to flow, when compared to an ever open or oft-looked at computer window?</p>
+
+<p>Ramble, ramble, ramble; not sure what I meant to post about, really...</p>
+
+<p></p>
+
+<p>   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter.cmc" rel="tag">twitter.cmc</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014919.html">04:07 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14919" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 25, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014913"></a>
+<h3 class="title">Searchme Stack demo...</h3>
+
+One of the things I was really pleased to get into the current presentation of T184, our online short course on robotics, were a handful of embedded video clips from Youtube. The presentation of the assets isn't that pretty, but...
+<!--
+<p>One of the things I was really pleased to get into the current presentation of T184, our <a href="http://ouseful.open.ac.uk/t184">online short course on robotics</a>, were a handful of embedded video clips from Youtube. The presentation of the assets isn't that pretty, but I'm starting to learn about what battles to fight when (!;-) so it was enough just to the embedding sorted without worrying to much about beautiful page design/layout, media player customisation, and so on...</p>
+
+<p><a href="http://ouseful.open.ac.uk/t184" title="T184 screenshot"><img src="http://farm4.static.flickr.com/3071/2610591785_8e95652d2a.jpg" alt="t184 image" height="375" width="500" /></a></p>
+
+<p>The pages as currently constructed owe a lot to the styling and layout of a printed page (many students do allegedly print out online/HTML materials for offline reading) and an old old page template...), so things like images are also embedded in the page in what at (on my off days) I consider to be a quite inelegant way:</p>
+
+<p><a href="http://ouseful.open.ac.uk/t184" title="T184 screenshot"><img src="http://farm4.static.flickr.com/3267/2610589527_5e7d327c6b.jpg" alt="T184 excerpt" height="331" width="500" /></a></p>
+
+<p>So when I saw the recent "stack" demo from the <a href="http://searchme.com">searchme visual search engine</a>, I started wondering about whether this could be a way of putting a multiple image and video payload into a single gallery window on a page?</p>
+
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/8JQn8XfOP5s&amp;hl=en"><embed src="http://www.youtube.com/v/8JQn8XfOP5s&amp;hl=en" type="application/x-shockwave-flash" height="344" width="425"></object></p>
+
+<p> (There are issues regarding printing the page out or course, particularly if the gallery is just an image gallery - I don't think the searchme widget will 'linearise' the images for a print display?!) </p>
+
+<p>So as T184 comes up to ts last presentation (in its current form....) in October, I wonder about how we might use this sort of display in the context of online teaching materials? Here's the simplest of demos, showing a mixed collection of assets on a theme (click through to the post to see demo of an embedded stack. Or here's a direct link to the stack: <a href="http://www.searchme.com/stack/12c6">Automata stack (<em>searchme</em>)</a>.</p>
+
+<div><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="embedded" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" height="375" width="600">  <param name="bgcolor" value="#FFFFFF">
+  <param name="allowScriptAccess" value="always">
+  <param name="allowFullScreen" value="true">
+  <embed src="http://e.searchme.com/embed?a=sm&amp;v=1&amp;stack=12c6" quality="high" bgcolor="#FFFFFF" name="embedded" play="true" loop="false" allowscriptaccess="always" type="application/x-shockwave-flash" allowfullscreen="true" pluginspage="http://www.adobe.com/go/getflashplayer" flashvars="autoPlay=true&amp;speed=1&amp;theme=black" align="middle" height="375" width="600">
+</object><table width="600"><tbody><tr width="100%"><td align="left"><a href="http://www.searchme.com/">Searchme</a></td><td align="right"><a href="http://www.searchme.com/stack/12c6">Maximize stack view</a></td></tr></tbody></table></div>
+
+<p>One of the biggest queries I have about this approach, though, is with respect to rights (which regular readers know I <a href="http://blogs.open.ac.uk/Maths/ajh59/012355.html">don't understand at all</a>!). The widget embeds a set of user selected results from a search engine collected as a results set on a third party site, and viewed in an embedded third party widget. So if rights clearance is sought for images that appear in a stack, what clearance is necessary? If anyone was tracking usage of images pulled from the flickr server, it would resolve back to the searchme stack address presumably, rather than the page that the stack widget is embedded in?</p>
+
+<p>And what if searchme offered embeddable 'saved search' stacks (that displays the results of a particular search query)? You wouldn't know for sure what images were going to be pulled back into and displayed in the widget (though you might craft the search query in such a way as to maximise the chances of pulling in a set of images you are particularly interested in!).</p>
+
+<p>So I <em>guess</em> what's got me thinking is this: to what extent do embedding results from <em>visual</em> search engines cause grief for the rights folks?</p>
+
+<p>I don't know if the searchme visual search limits searches to Creative Commons licensed  images, but it would be good if it was an option, and even better if it could generate a 'titles' slide to show attribution to the images in the stack at the end of the stack!<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/searchme" rel="tag">searchme</a>, <a href="http://technorati.com/tag/visual%20search" rel="tag">visual search</a>, <a href="http://technorati.com/tag/%20widget" rel="tag"> widget</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014913.html">08:37 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14913" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014909"></a>
+<h3 class="title">SocialLearn Workshop - Open Invite - July 1/2, 2008</h3>
+
+Some eagle-eyed readers may well have picked up on reports about the SocialLearn workshop that was run over a couple of days last week for members of the OU community (see a write up here, here or here, or even...
+<!--
+<p>Some eagle-eyed readers may well have picked up on reports about the SocialLearn workshop that was run over a couple of days last week for members of the OU community (see a write up <a href="http://drbadgr.wordpress.com/2008/06/19/sociallearn-a-new-ou-philosophy/">here</a>, <a href="http://nogbad.wordpress.com/2008/06/19/socialearn-conference/">here</a> or <a href="http://www.greenhughes.com/content/a-successful-sociallearn-workshop">here</a>, or even this review from an <a href="http://dougclow.wordpress.com/2008/06/24/tel-away-day-social-learn/">OU workshop session on SocialLearn</a> held yesterday). A second workshop is being held next week that is open to all-comers from the wider ed tech community:<br />
+ <blockquote>You are invited to attend a workshop to hear about the OUâ€™s SocialLearn project, and to contribute your views on social learning and teaching in a Web 2.0 world.</p>
+
+<p>We are bringing together participants from educational institutions and business from across the country to discuss the potential and the pitfalls of learning, mentoring, and doing business on the Open, Social, Free and For-Fee Web.</p>
+
+<p>    * What are the characteristics of web-native learners, and what tools do they want/need?<br />
+    * What new learning/business opportunities â€“ and risks â€“ are opened up by social networking and media sharing tools?<br />
+    * What do you think of the prototype tools that we will preview?<br />
+    * Do we need to reframe our ideas of learning and teaching?<br />
+    * What is a university, if many of its current services were disaggregated to specialist providers on the Web?</p>
+
+<p>If interested, please email <a href="http://www.open.ac.uk/blogs/socialearn/contact/">SociaLearn</a> with a brief statement of your background, and what you would hope to add to these discussions.</p>
+
+<p>On confirmation of your place [which are running out fast - though I think there are still a couple available...], you will be invited to join the social network that provides our 24/7 space before, during and after the event. All accommodation, food and reasonable travel costs are covered. The workshop is a 24 hour event from noon 1-2 July, at Horwood House, near Milton Keynes.<br />
+<a href="http://www.open.ac.uk/blogs/socialearn/2008/06/20/sociallearn-workshop2/">SocialLearn Workshop 2.0</a></blockquote></p>
+
+<div style="width: 425px; text-align: left;" id="__ss_271495"><object style="margin: 0px;" height="355" width="425"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=sociallearn-introduction-120341000081104-4"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=sociallearn-introduction-120341000081104-4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="355" width="425"></object><div style="font-size: 11px; font-family: tahoma,arial; height: 26px; padding-top: 2px;"><a href="http://www.slideshare.net/?src=embed"><img src="http://static.slideshare.net/swf/logo_embd.png" style="border: 0px none ; margin-bottom: -5px;" alt="SlideShare" /></a> | <a href="http://www.slideshare.net/mweller/sociallearn-introduction" title="View this slideshow on SlideShare">View</a> | <a href="http://www.slideshare.net/upload">Upload your own</a></div></div><img style="visibility: hidden; width: 0px; height: 0px;" src="http://counters.gigya.com/wildfire/CIMP/bT*xJmx*PTEyMTQzODY2NjU2MjAmcHQ9MTIxNDM4NjY3MTQ5OSZwPTEwMTkxJmQ9Jm49Jmc9Mg==.jpg" border="0" height="0" width="0" />
+
+<p>I'll also be running a SocialLearn workshop at the <a href="http://www.ukoln.ac.uk/web-focus/events/workshops/webmaster-2008/">IWMW 2008</a> gathering in Aberdeen, assuming I manage to book a flight/train up there in time (hmmm.... maybe should do that now?!) so it'd be great to see you at either one or the other (or both!) of these events... :-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/sociallearn" rel="tag">sociallearn</a>, <a href="http://technorati.com/tag/socialearn" rel="tag">socialearn</a>, <a href="http://technorati.com/tag/%20s%3Al" rel="tag"> s:l</a>, <a href="http://technorati.com/tag/%20iwmw2008" rel="tag"> iwmw2008</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014909.html">10:44 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14909" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 23, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014902"></a>
+<h3 class="title">Visualising Audio</h3>
+
+A couple of weeks ago, I spent the week writing posts on the Visual Gadgets uncourse blog, one of which focused on ways of visualising audio transcripts: Visual Interfaces for Audio/Visual Transcripts. Over the weekend, a couple of BBC R...
+<!--
+<p>A couple of weeks ago, I spent the week writing posts on the <a href="http://visualgadgets.blogspot.com/">Visual Gadgets uncourse blog</a>, one of which focused on ways of visualising audio transcripts: <a href="http://visualgadgets.blogspot.com/2008/06/visual-interfaces-for-audiovisual.html">Visual Interfaces for Audio/Visual Transcripts</a>.</p>
+
+<p>Over the weekend, a couple of BBC R &amp; D folks at the Mashed 08 event posted another take on this, a visualisation tool for audio files: <a href="http://mashed08.backnetwork.com/event/?articleid=26">Audio visualisation</a>.</p>
+
+<p><a href="http://mashed08.backnetwork.com/event/?articleid=26" title="BBC audio visualisation, Mashed 08"><img src="http://farm4.static.flickr.com/3191/2603017257_78ee3cc32a.jpg" alt="BBC audio visualisation, Mashed 08" height="75" width="500" /></a>.</p>
+
+<p>As they suggest: "Finding your way to a particular item in a recording of a radio programme can be difficult. Fast-forward and rewind functions aren't always very effective, especially in on-demand, on-line use. We are researching the presentation of audio recordings as visible timelines, with different colours or textures used to represent different characterics of the audio, like genre, speaker, tempo, key or rhythm - all extracted automatically".</p>
+
+<p>Again, a week or two ago, I also discovered the 'enhanced podcast' (which I used to create the image synch for <a href="http://blip.tv/file/972770/">remix 2: play, create (Blur, featuring Sir Ken Robinson)</a>, described in <a href="http://blogs.open.ac.uk/Maths/ajh59/014760.html">remix 2: Blur, featuring Sir Ken Robinson...</a>). This allows synching of imagery to audio (something that SMIL almost sorted a long time ago...).</p>
+
+<p>Enhanced podcasts were also picked up on by some of the BBC folks, particularly in this example of <a href="http://mashed08.backnetwork.com/event/?articleid=25">Hack Moyles - Audio segmentation with RTMP</a>. The post describes a technique for segmenting MP3 files so that each segment can be marked up with data, such as text, or images. Here's a demo: <a href="http://willcox.welcomebackstage.com:5080/20080404.html">RTMP Segmented Audio Player</a>.</p>
+
+<p>This is something that could be really good for us, I think?</p>
+
+<p>PS sort of but not really related, ages ago I came across the rather wonderful <a href="http://schillmania.com/projects/soundmanager2/">SoundManager 2</a> javascript libraries. I rediscovered it again a week or two ago, around about the time I discovered that audio files from ITConversations could (once again) be deep linked into... (<a href="http://www.gardnercampbell.net/blog1/?p=610">Excerpting audio from ITConversations</a>).</p>
+
+<p>So I posted a demo (via twitter) that allows the user to 'trigger' one or more audio files from an HTML 'trigger pad'.</p>
+
+<p><a href="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" title="Audio sample trigger pad"><img src="http://farm4.static.flickr.com/3070/2603884098_0d9631db69.jpg" alt="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" height="500" width="466" /></a></p>
+
+<p>The audio sample triggered from each pad is actually pulled in from an XML file - as the following shows, the target URL for the file can actually be an <a href="http://itc.conversationsnetwork.org/">IT Conversations</a> 'deep link' URL.</p>
+
+<p><a href="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3141/2603895898_a5c02b69f7.jpg" alt="http://ouseful.open.ac.uk/soundmanager/soundDemo.html" height="194" width="500" /></a></p>
+
+<p>When I get a chance, I'll see if I can make this sample pad delicious powered... I was also wondering whether I should try to trigger the display of a flickr image whenever a pad is pressed? (When two audio sampels are triggered, they both play - what's the equivalent for displaying mulitple images? Fade one in over the other, show them both as semi-transparent?)<br />
+ <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/audio" rel="tag">audio</a>, <a href="http://technorati.com/tag/visualisation" rel="tag">visualisation</a>, <a href="http://technorati.com/tag/%20samples" rel="tag"> samples</a>, <a href="http://technorati.com/tag/%20itconversations" rel="tag"> itconversations</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014902.html">10:16 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14902" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 22, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014895"></a>
+<h3 class="title">OER Custom Search Engine</h3>
+
+In an OLDaily post last week (University Learning = OCW + OER = FREE! which picked up on a blog post of the same name by Zaid Ali Alsagoff (University Learning = OCW + OER = FREE!) and which contained...
+<!--
+<p>In an OLDaily post last week (<a href="http://zaidlearn.blogspot.com/2008/06/university-learning-ocw-oer-free.html">University Learning = OCW + OER = FREE!</a> which picked up on a blog post of the same name by Zaid Ali Alsagoff (<a href="http://zaidlearn.blogspot.com/2008/06/university-learning-ocw-oer-free.html">University Learning = OCW + OER = FREE!</a>) and which contained a comprehensive link collection of OER and OCW sites, Stephen Downes commented: "This is a great resource - and something to spur me to create something (using RSS or something) that will aggregate and make available for search the collected resources from those sites."</p>
+
+<p>So as a first, quick attempt, at that, here's a Google Custom search engine that will do just that: <a href="http://www.google.com/coop/cse?cx=009190243792682903990%3Ae40rcqv1bbo"><em>University Learning = OCW+OER = Free</em> custom search engine</a>.</p>
+
+<p>This search engine will search over all the domain linked to from the original blog post. So that's a lot of work, right? Wrong - here's how it was defined:</p>
+
+<p><a href="http://www.google.com/coop/cse/" title="Google CSE"><img src="http://farm4.static.flickr.com/3155/2600270770_3a31871c64.jpg" alt="OER CSE" height="291" width="500" /></a></p>
+
+<p>Just provide the CSE with the URL of the link collection post, tell it to search over the sites that are linked to from that post, and that's it... (For more info about this sort of approach, see: <a href="http://blogs.open.ac.uk/Maths/ajh59/010686.html">Search Hubs and Custom Search at ILI2007</a>).</p>
+
+<p>Note that I actually pointed the CSE to a printer friendly version of the post that was linked to from the original post because the original blog page has lots of 'blog furniture' that contains many links not associated with the post and whioch would "contaminate" the list of web domains searched over by the CSE.</p>
+
+<p>If you want to try the CSE out, here's the URL again: <a href="http://www.google.com/coop/cse?cx=009190243792682903990%3Ae40rcqv1bbo"><em>University Learning = OCW+OER = Free</em> custom search engine</a>.</p>
+
+<p>Note that if you want to pull results from the CSE into your own page in an AJAXy sort of way, that's possible too using the <a href="http://code.google.com/apis/ajaxsearch/samples.html">Google AJAX search API</a>. HEre's an example of how to use that API to get the search results into a Yahoo Pipes environment: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=ZBN9ebkS3RG4OWZGJhOy0Q">Google CSE Yahoo pipe demo</a>.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/cse" rel="tag">cse</a>, <a href="http://technorati.com/tag/search%20hub" rel="tag">search hub</a>, <a href="http://technorati.com/tag/%20oer" rel="tag"> oer</a>, <a href="http://technorati.com/tag/%20ocw" rel="tag"> ocw</a>, <a href="http://technorati.com/tag/search" rel="tag">search</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014895.html">11:01 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14895" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 20, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014889"></a>
+<h3 class="title">Doublemarks - Bookmarking Two URLs at Once (but not in the Spirit of Cohere...)</h3>
+
+A few weeks ago, the Cohere sensemaking application, which lets you creat a relation between two ideas, each of which may have one or more resources associated with it, opened up its API. Cohere was mentioned a couple of times...
+<!--
+<p>A few weeks ago, the <a href="http://cohere.open.ac.uk">Cohere sensemaking application</a>, which lets you creat a relation between two ideas, each of which may have one or more resources associated with it, opened up its API.</p>
+
+<p>Cohere was mentioned a couple of times at the recent SocialLearn workshop (there are a couple of posts around but I don't have any links to hand...) so I dusted off the code and got a (private) demo working: <em>Doublemarks</em> (dblmarks?)</p>
+
+<p>The idea is this: many times I've bookmarked one page/URL that is contained within/appears on another page (right click, "Favourite this link" in Flock...). With a dblmark, not only do you bookmark the link on the page, you also bookmark the page the link appeared on...</p>
+
+<p><a href="http://cohere.open.ac.uk/index.php#" title="Cohere"><img src="http://farm4.static.flickr.com/3003/2595888874_5b17a26e39.jpg" alt="2008-06-20_1817" height="441" width="500" /></a></p>
+
+<p>At the moment, I'm abusing the spirit of Cohere with this application, but not the technology (though you could argue that point too: what I'm doing is not very elegant and not at all respectful of the <em>intended</em> semantics of the Cohere data structures - but it does work...). The intention of the Cohere developers is that Cohere is a place to connect <em>ideas</em> rather than URLs (although it is possible to get into a semantic web related argument about that...;-). If nothing else, my demo stress tests notions about how happy we are with "open" APIs when people do things that don't fit with the way we "want" the API to be used, or the purposes we want it to be used for (I see the Cohere API as offering a clunky API to a sort of triple store; I think the developers would like the app as a whole to be seen as a database of related ideas;-)</p>
+
+<p>So  - here's what I've got ... (the demo requires authentication to use the Cohere API so I'm not posting it just at the moment...).</p>
+
+<p>A bookmarklet that will annotate every link on a page in such a way that when you click a link, it will be bookmarked, along with the URL of the host page, to Cohere as a "dblmark".</p>
+
+<p>At the moment I just bookmark the URLs - no description, no tags - as ideas. This is "not in the Spirit of Cohere"... </p>
+
+<p>To find out what is in the spirit of cohere, consider what happens when Cohere is used to import bookmarks from delicious: each tag is used to create an idea, and then each idea (tag) has the URL(s) bookmarked with it associated as resources dangling off that idea. These bookmark resources contain URL, page title and description fields.</p>
+
+<p><a href="http://cohere.open.ac.uk" title="cohere"><img src="http://farm4.static.flickr.com/3083/2595105197_5fcee68067.jpg" alt="cohere resources for idea" height="430" width="342" /></a></p>
+
+<p>I have no idea which way to push dblmarks next, but here's a dump of what I could do:</p>
+
+<p>1) rather than upload each URL as an idea, store them as a URL/resource type. The page title could be the title, or (in the case of the bookmarked link) the link text. The description could be the contents of the HTML block that contains the link (that is, the the contents of the "parent" node of the anchor tag).</p>
+
+<p>2) rather than bookmark the URl of the 'host' page that the link appears on, bookmark the page URL plus the XPATH to the link (note to self: xpath javascript function - http://snippets.dzone.com/posts/show/3754 )</p>
+
+<p>3) if I do (1), what's the idea? Cohere supports relations between two ideas. What two ideas could be created for the two bookmarked URLs? A separate tag for each, used as an idea?</p>
+
+<p>If I was using Cohere to store the link structure of e.g. trackbacked posts in <a href="http://blogs.open.ac.uk/Maths/ajh59/014848.html">Digital Worlds</a>, what would the "idea" of each post be? It's category? The sum of its categories? The sum of its categories and tags (and then in what order? Alphabetical?)</p>
+
+<p>Or should I stick with a URL (URI) as the idea - it is unique after all (if not in keeping with the Spirit of Cohere...)</p>
+
+<p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Ci18DihDRH4&hl=en"></param><embed src="http://www.youtube.com/v/Ci18DihDRH4&hl=en" type="application/x-shockwave-flash" width="425" height="344"></embed></object><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/cohere" rel="tag">cohere</a>, <a href="http://technorati.com/tag/api" rel="tag">api</a>, <a href="http://technorati.com/tag/%20xpath" rel="tag"> xpath</a>, <a href="http://technorati.com/tag/%20doublemark" rel="tag"> doublemark</a>, <a href="http://technorati.com/tag/%20dblmark" rel="tag"> dblmark</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014889.html">06:58 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14889" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014885"></a>
+<h3 class="title">The Cost of Meetings - How Much Return on Investment Do YOU Get?</h3>
+
+Earlier today I tweeted about something I've been thinking about on and off for years: So here we go: Meeting accounter... Customise your counter via the URL: http://ouseful.open.ac.uk/clock/mtgAcct.php?num=7&amp;sal=25000&amp;expenses=100 num: number of meeting participants; sal: average salary (whole pounds/dollars); expenses: should...
+<!--
+<p>Earlier today I tweeted about something I've been thinking about on and off for years: </p>
+
+<p><a href="http://ouseful.open.ac.uk/clock/mtgAcct.php?num=7&amp;sal=2500000&amp;expenses=100" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2365/2594854165_68f85ed4b9.jpg" alt="2008-06-20_1641" height="242" width="500" /></a></p>
+
+<p>So here we go: <a href="http://ouseful.open.ac.uk/clock/mtgAcct.php?num=7&amp;sal=25000&amp;expenses=100">Meeting accounter</a>...</p>
+
+<p>Customise your counter via the URL: <em>http://ouseful.open.ac.uk/clock/mtgAcct.php?num=7&amp;sal=25000&amp;expenses=100</em><br />
+<ul><li><em>num</em>: number of meeting participants;</li><br />
+<li><em>sal</em>: average salary (whole pounds/dollars);</li><br />
+<li><em>expenses</em>: should be "overheads", really (in whole pounds/dollars); any immediate/direct costs covered by the meeting (travel expenses, coffee and biscuits etc. etc.).</li></ul><br />
+When you load the page, it'll start calculating how much you've spent on the meeting so far, in units of pounds/pence (dallars/cents). The counter maxes out at 10k ;-)</p>
+
+<p>If the counter is displayed during the meeting, then everyone can decide whether or not the meeting is generating a sensible return. Whoever has the courage to call off a meeting on the grounds it probably isn't worth it should get 10% of the expected meeting costs saved to spend on a project of their choice (no meetings allowed ;-).</p>
+
+<p>Related to this, I suggest every meeting has as part of the meeting minutes a standard area along with attendees/apologies etc. that reports the 'person days equivalent' spent attending the minuted meeting, and the 'ballpark cost' of that meeting, e.g. as measured by the meeting accounter). When the minutes are being agreed, everyone can be asked "so was it worth the expense?"</p>
+
+<p>As the culture of 'meeting accountancy" evolves, you could imagine that when agreeing an agenda for a future meeting, an 'expected cost of meeting' estimate should be attached, along with the expected ROI of that meeting, so everyone can clarify what the meeting is supposed to achieve in terms of return ;-)</p>
+
+<p>As the time and effort of calculating the costs and returns of meetings increases/becomes appropriately burdensome, a process of "pre-meeting costings" should be instituted, where the costs of calculating the costs and returns of the meeting are added into the&nbsp; costs of the meeting. (To offset costs incurred during a meeting, the cost of time spent diary setting for the NEXT meeting should be allowed to be carried forward to the NEXT meeting (so the next meeting is costed for the time spent in the previous meeting setting it up). Any decisions pushed forward to a future meeting can also be costed back from that future meeting to the previous meeting. To offset bankrupting future meetings by overlabouring 'next meeting date' activity, any time spent after the meeting having to rearrange dates/times for the next meeting should be costed back to the meeting where the date was set. To prevent future meetings bankrupting previous meetings (e.g. by virtue of spending large amounts of time rearranging meeting dates or addressing issues pushed forward by a previous meeting), no future meetings should ever be agreed to by anyone.</p>
+
+<p>PS if you haven't already seen it: <a href="http://blogoehlert.typepad.com/eclippings/2008/06/omgthere-are-sp.html">OMG...There are spies everywhere sabotaging our organizations!!</a>. Declassified espionage manual suggests sabotage teechniques that actually read like "Meeting Guidance" notes.</p>
+
+<p>   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/meetingaccounter" rel="tag">meetingaccounter</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014885.html">05:15 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14885" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 17, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014848"></a>
+<h3 class="title">Trackback Graphs and Blog Categories</h3>
+
+Okay, another take on the Digital Worlds uncourse blog trackback graph... To what extent do the emergent structures "respect" my use of blog categories (which have RSS feeds associated with them, and so are automatically published as discrete linear lists...
+<!--
+<p>Okay, another take on the Digital Worlds uncourse blog trackback graph... To what extent do the emergent structures "respect" my use of blog categories (which have RSS feeds associated with them, and so are automatically published as discrete linear lists in their own right?)</p>
+
+<p>I'm not sure I've found the best way of visualising this yet, but i have sort of found <em>a</em> way. In particular, for each post, display the title of the post, followd by the categories it is tagged with:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2586999966/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3137/2586999966_34e967b377.jpg" alt="Digital worlds graph" height="200" width="500" /></a></p>
+
+<p>So what's the point? Err, well, err, this view is to help explore in an informal way the extent to which the implicit structure that arises from back references/trackbacks corresponds to the 'explicit' structuring imposed on posts by  the author as a resulting of associating posts with a particular category. In some cases, there is pretty good match, where the implicit/emergent structure matches the explicit category structure:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2586168793/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3137/2586168793_ce172cebb4.jpg" alt="digital worlds - game maker" height="255" width="500" /></a></p>
+
+<p>In other cases, it's a bit more complex?</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2586999966/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3137/2586999966_34e967b377.jpg" alt="Digital worlds graph" height="200" width="500" /></a></p>
+
+<p>(Maybe I need to use colour to make the tags more explicit somehow? But how best to do it? (and how in techie detail to actually do it?!))</p>
+
+<p>So I guess this opens up questions along the lines of "to what extent do implicit, emergent (trackback) and explicit (category) structures match one another?" Or maybe, "in which posts do trackback and category structures fork, and what is the pedagogical role of those posts?" Or maybe it doesn't - I have no idea! (Can you tell I'm making this up as I go along?!;-)</p>
+
+<p>Next up, I think I'll have a go at constructing an uncourse blog adjacency matrix (for N posts, size N x N. A link from post i to post j gives element a_i,j = 1) and maybe the uncourse blog Laplacian matrix. Not sure why, what it will say, or hat it may or may not be good for, but it seems like the obvious next step?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/digitalworlds" rel="tag">digitalworlds</a>, <a href="http://technorati.com/tag/structure" rel="tag">structure</a>, <a href="http://technorati.com/tag/%20course%20graph" rel="tag"> course graph</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014848.html">10:52 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14848" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 16, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014843"></a>
+<h3 class="title">More Trendspotting: Jobs Trends</h3>
+
+In several previous posts ((I'll let you find them for yourself ;-), I've posted about various tools for plotting trends in search engine queries, twitter posts and so on. In today's roundup, here are some job trend plotting services -...
+<!--
+<p>In several previous posts ((I'll let you find them for yourself ;-), I've posted about various tools for plotting trends in search engine queries, twitter posts and so on. In today's roundup, here are some job trend plotting services - 'cos at the endof the day, formal education is about getting people prepared for, and into, work... right?</p>
+
+<p>So here are a few services I've found (if you're reading this through a feedreader, you'll probably need to click through to read this post on the OUseful.info blog if you want to see the embedded graphs...):</p>
+
+<p><a href="http://www.indeed.com/jobtrends?q=cisco%2C+microsoft%2C+linux&l=">Indeed job trends</a>: trends over the US job market, I think?</p>
+
+<div style="width:540px">
+<a href="http://www.indeed.com/jobtrends?q=cisco%2C+microsoft%2C+linux" title="cisco, microsoft, linux Job Trends">
+<img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=cisco%2C+microsoft%2C+linux" border="0" alt="cisco, microsoft, linux Job Trends graph">
+</a>
+<table width="100%" cellpadding="6" cellspacing="0" border="0" style="font-size:80%"><tr>
+<td><a href="http://www.indeed.com/jobtrends?q=cisco%2C+microsoft%2C+linux">cisco, microsoft, linux Job Trends</a></td>
+<td align="right"><a href="http://www.indeed.com/jobs?q=cisco">cisco jobs</a> - <a href="http://www.indeed.com/jobs?q=microsoft">microsoft jobs</a> - <a href="http://www.indeed.com/jobs?q=linux">linux jobs</a></td>
+</tr></table>
+</div>
+
+<p><a href="http://www.simplyhired.com/a/jobtrends/home">Simply Hired job trends</a> (US again, I think?):</p>
+
+<p><!-- BEGIN TREND GRAPH --><div style="width: 540px;" class="chart"><img src="http://www.simplyhired.com/a/jobtrends/graph/q-cisco,+microsoft,+linux/t-line/embed" alt="Cisco, Microsoft, Linux trends" /><table width="100%" style="font-size: 80%;"><tr><td width="2%">&nbsp;</td><td align="left"><a href="http://www.simplyhired.com/a/jobtrends/trend/q-cisco,+microsoft,+linux">Cisco, Microsoft, Linux trends</a></td><td align="right"><a href="http://www.simplyhired.com/a/jobs/list/q-cisco">Cisco jobs</a> | <a href="http://www.simplyhired.com/a/jobs/list/q-microsoft">Microsoft jobs</a> | <a href="http://www.simplyhired.com/a/jobs/list/q-linux">Linux jobs</a></td><td width="2%">&nbsp;</td></tr></table></div><!-- END TREND GRAPH --></p>
+
+<p><a href="http://www.workhound.co.uk/trend/?query=cisco%2C+microsoft%2C+linux&submit=Search+Trends">Workhound job trends</a> (UK, I think?)</p>
+
+<p><script type="text/javascript" src="http://www.workhound.co.uk/trend/trend.php?query=cisco%2C+microsoft%2C+linux"><br />
+</script><br />
+<noscript><a href="http://www.workhound.co.uk/trend/trend.php?query=cisco%2C+microsoft%2C+linux">Job trends</a> by Workhound</noscript></p>
+
+<p>And a sector/industry specific one: <a href="http://www.itjobswatch.co.uk/default.aspx?page=1&sortby=5&orderby=1&q=cisco%2c+microsoft%2c+linux&id=0&lid=2618">IT jobs watch</a>. This service doesn't have a comparison trends service, but you can plot graphs that show how wages and numbers of job postings trend over time for a specific job category.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/trendspotting" rel="tag">trendspotting</a>, <a href="http://technorati.com/tag/emplyment%20trends" rel="tag">emplyment trends</a>, <a href="http://technorati.com/tag/%20recruitment%20trends" rel="tag"> recruitment trends</a>, <a href="http://technorati.com/tag/%20trends" rel="tag"> trends</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014843.html">06:52 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14843" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014840"></a>
+<h3 class="title">Uncovering a Little More Digital Worlds Structure</h3>
+
+Tweaking the Wordpress blog structure parser to get a GraphViz output was trivial, so here are a couple of snapshots for the reverses pingback graph (that is, if post B pingbacked post A, then I plot A as emergent linking...
+<!--
+<p>Tweaking the Wordpress blog structure parser to get a GraphViz output was trivial, so here are a couple of snapshots for the reverses pingback graph (that is, if post B pingbacked post A, then I plot A as emergent linking forward to B).</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2584488258/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3053/2584488258_1cdae7cc33.jpg" alt="Digitalworlds graph" height="281" width="500" /></a></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2583668407/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3136/2583668407_d021b12cc6.jpg" alt="digital worlds structure" height="371" width="500" /></a></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2583671585/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3077/2583671585_eb6fab2724.jpg" alt="Digital Worlds blog structure" height="149" width="500" /></a></p>
+
+<p>So now I now have a couple of ways of looking at this stuff, what should I be looking for that may or may not be interesting...?;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/digitalworlds" rel="tag">digitalworlds</a>, <a href="http://technorati.com/tag/structure" rel="tag">structure</a>, <a href="http://technorati.com/tag/%20blog%20structure" rel="tag"> blog structure</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014840.html">04:51 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14840" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014839"></a>
+<h3 class="title">Emergent Structure in the Digital Worlds Uncourse Blog Experiment</h3>
+
+In an earlier post on Disaggregating the Notion of PLEs #1 - PCVs: Personal (Portable?) Content Views, I showed how by using blog post tags and categories in the Digital Worlds uncourse blog experiment the original steady stream of posts...
+<!--
+<p>In an earlier post on <a href="http://blogs.open.ac.uk/Maths/ajh59/013966.html">Disaggregating the Notion of PLEs #1 - PCVs: Personal (Portable?) Content Views</a>, I showed how  by using blog post tags and categories in the <a href="http://digitalworlds.wordpress.com">Digital Worlds uncourse blog experiment</a> the original steady stream of posts could be disaggreated into various different content views by subscribing to appropriate RSS feeds from the blog.</p>
+
+<p>In this post, I'm just putting down a marker (in part as preparations for a presentation I have to give on Thursday) about the <em>emergent</em> or <em>impliceit</em> structure that is embodied in Digital Worlds through internal blog post links - that is, posts on Digital Worlds that refer to other Digital Worlds posts.</p>
+
+<p>One of the nice features of the Wordpress platform is that if you reference another post on the blog, a trackback/pingback is automatically generated:</p>
+
+<p><a href="http://digitalworlds.wordpress.com/2008/03/17/making-pictures-move/" title="DigitalWorlds trackbacks"><img src="http://farm4.static.flickr.com/3013/2584276120_5ea1b7fafd.jpg" alt="DigitalWorlds trackbacks" height="184" width="500" /></a></p>
+
+<p>By exporting the blog posts, along with comments/trackbacks, as an XML file, it's trivial to parse the XML file to provide a list of URL pairs that correspond to pingbacks between blog posts on the Digital Worlds uncourse blog. So for example, referring to the above figure which shows the pingnbacks to a post on "Making Pictures Move" from three other posts, we would get three URL pairs (with the pairs containing one of the above URLs and the "Making Pictures Move" page URL.</p>
+
+<p>By uploading these pairs to <a href="http://services.alphaworks.ibm.com/manyeyes/home%22">Many Eyes</a>, we can   use the Many Eyes Netowrk visulisation tool to visualise the emergent structure of the blog.</p>
+
+<p>So for example, here we have a short run of three separate posts, where "Our Heavens in 3D" refers to an earlier post on "Our World in 3D", which in turn refers to a Friday Fun posts about Google Earth and Microsoft Virtual Earth (the numbers are datestamps corresponding to the date the post was published).</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3057/2584295644_016fccac1b.jpg" alt="digital worlds" height="227" width="370" /></a></p>
+
+<p>As well as short linear runs, there are also more complex emergent structures. for example, in the following case, a run starts with a Friday Fun post on digital stroytelling that then 'forks' at the 'unfortunate series of events' post, one branch going off to explore emergent stories, another to explore game narrative structures and how they may be described in the game design and release process.</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Digital worlds - emergent structure"><img src="http://farm4.static.flickr.com/3264/2584311380_c3175af017.jpg" alt="Digital worlds - emergent structure" height="364" width="500" /></a>.</p>
+
+<p>In a couple of cases, there are examples of posts that refer to two or more previous posts, one or more of which also refer to one or more of the other referred to posts. For example, in the case below, the post on "Three Lives" refers to both "Upping the stakes" and "Who's Best", and the "Upping the Stakes" post also refers to "Who's Best".</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Digital Worlds structure"><img src="http://farm4.static.flickr.com/3045/2583496237_dcfd58bfcd.jpg" alt="Digital Worlds structure" height="156" width="500" /></a></p>
+
+<p>In some parts of the graph, the structure is actually quite messy - and wouldn't be the sort of structure you might try to design in to the materials in an explicit, high level navigational way. </p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/St29TOsOtha69i%7ElXDKYO2%7E" title="Digital Worlds structure"><img src="http://farm4.static.flickr.com/3001/2583538671_9f95321992.jpg" alt="Digital Worlds structure" height="403" width="500" /></a></p>
+
+<p><br />
+I'm not too sure where this is going yet, or whether the emergent link structure is rich enough for me to say anything about anything ;-) One thing the Many Eyes visualisation doesn't bring out is the directed nature of the link graph, so I maybe need to create an output file that will visualise the graph using something like GraphViz...</p>
+
+<p>Also on the to do list is to have a look at the category/tag structure, and see if there are any differences cf. the emergent link structure.</p>
+
+<p>ps for my own reference, here's the abstract I need to write the presentation around...</p>
+
+<blockquote>Digital Worlds - A Self-Disaggregating Blogged Course Experiment
+
+<p>Over the last 3 months or so, I have been drafting materials for a poterntial level 1 Technology short course on digital media and computer game design in public on an externally hosted blog - http://digitalworlds.wordpress.com</p>
+
+<p>The inspiration behind the approach - creating educational materials by blogging them - is twofold:</p>
+
+<p>- firstly, the Open University Relevant Knowledge programme, which delivers course materials in part via the web, using web pages that are each about the length of a blog post…</p>
+
+<p>- secondly, the Open University’s OpenLearn website, which makes content available via RSS feeds.</p>
+
+<p>Given that the OU is making materials available that look like they could have been delivered via a blog, I thought I’d close the loop - and doodle the production of some example materials by actually blogging them…</p>
+
+<p>In this presentation, I will give an overview of the Digital Worlds blog and describe some of the innovations in production and presentation that arise from the use of certain publishing platforms - such as blog engines.</p>
+
+<p>In particular, I will show how by making use of blog categories it is possible generate separate views over the content either on a page level (click on the category tag on the blog and see a reverse chronological river of posts view of posts in that category) or feed level. Category and tag level RSS feeds can then be piped into a webdesktop such as Netvibes of Pageflakes and used to re-present the content at at a topic level in a form that suits the user. In a sense, RSS feeds from appropriatley chosen ctegories allows the 'course' to become self-disaggregating.</p>
+
+<p>Through the use of 'trackbacks' - comment links that associate legacy posts with ones that reference them at a later date, it is possible to view the blog engine as a slef-maintaining, non-linear authroing environment. By subscribing to comment feeds from a particular post on a topic that is of interest to the reader, they can maintain current awareness about the topic if later comments or trackbacks from other posts referencing the original article are published.</p>
+
+<p>Finally, I will discuss how publishing the content in public allows for user comments at the drafting stage, as well as exposing the content to the major web search engines, potentially building an audience for an official release of the course. The presentation will close with a consideration of how a formal course offering based on material drafted in public via a blog is likely to diiffer from the live, public offerings of the blog experiment.<br />
+</blockquote><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/digitalworlds" rel="tag">digitalworlds</a>, <a href="http://technorati.com/tag/emergent%20structure" rel="tag">emergent structure</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014839.html">04:06 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14839" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 13, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014803"></a>
+<h3 class="title">The Cost of Learning</h3>
+
+This one's for Downes... ;-) Taking a break yesterday from blitzing a whole set of posts to the Visual Gadgets course un-unit (sic) blog experiment, I did a back of an envelope calculation (with a bit of sanity checking from...
+<!--
+<p>This one's for <a href="http://www.downes.ca/cgi-bin/page.cgi?post=44712">Downes</a>... ;-)</p>
+
+<p>Taking a break yesterday from blitzing a whole set of posts to the <a href="http://visualgadgets.blogspot.com">Visual Gadgets course un-unit (<em>sic</em>) blog experiment</a>, I did a back of an envelope calculation (with a bit of sanity checking from Jon Rosewell and <a href="http://www.open.ac.uk/blogs/openair/index.php">Laura D</a> [hmm - we have new internal blog URLs... "http://www.open.ac.uk/blogs/openair/"]) relating to how much revenue the OU gets "per web page view" for delivering online teaching materials.</p>
+
+<p>That is, if we saw ourselves as web publishers, and we made money from page views/click thrus, what levels of traffic do we need to generate to make the same revenue from 'learning content' pages as we do currently?</p>
+
+<p>Taking the Relevant Knowledge short courses as an example (e.g. <a href="http://ouseful.open.ac.uk/tu120">TU120 Beyond Google</a>, or <a href="http://ouseful.open.ac.uk/tu189">T189 Digital Photography</a>), here's an order of magnitude calculation for a 10 week level 1 short course, that takes approximately 10 hours of student time per week to complete.</p>
+
+<p>Assume that the course content pages are what brings the revenue in, not other services (such as assessment, support, etc etc).</p>
+
+<blockquote><h3>Lifetime revenue of each page</h3>Number of 'teaching' web pages per week: 20
+Number of weeks per presentation: 10
+Number of students per cohort: 200
+Number of presentations of course: 10
+
+<p>Number of unique views: 20 x 10 x 200 x 10 = 400,000 (400K) unique views.</p>
+
+<p>Course fee 150 UKP<br />
+HEFCE funding&nbsp; 250 UKP (?)<br />
+Number of students per cohort: 200<br />
+Number of presentations of course: 10</p>
+
+<p>Total Revenue: (150 + 250) UKP x 200 x 10 = 800,000 (800K) UKP</p>
+
+<p>That is, over its life, the page needs to generate of the order 4K UKP (200 x 10 x 2 UKP).</p>
+
+<p><hr><h3>Revenue per student page view</h3>Number of 'teaching' web pages per week: 20<br />
+Number of weeks per presentation: 10<br />
+Number of unique views per presentation: 200<br />
+Course fee 150 UKP<br />
+HEFCE funding 250 UKP (?)<br />
+Revenue per presentation 400 UKP<br />
+Revenue per student page view: 2 UKP (400 UKP / 200)</p>
+
+<p><hr><h3>Annual course revenue - via CPC</h3>Revenue per student page view: 2UKP<br />
+Two presentations per year, 200 students per presentation<br />
+2 x 200 x 400 UKP =160K UKP per year.<br />
+For each page, 2 x 200 x 2 UKP = 800 UKP per year.</p>
+
+<p>Suppose instead we publish 200 'public' pages per year, (say 1 per day for 200 good days per year - imagine, for example, an open content  course wiki, which has to be self sustaining, and within which we can manage  to post 1 page per day) we need to generate 800 UKP *per page* to make 160K UKP back in that year. For a click thru rate (CTR) on revenue generating clicks of 0.1%, at 0.8 UKP per click (PC) we need 1M impressions *per page* over that year (since 1M x 0.8 UKP x 0.001 = 800 UKP). For CTR of 0.1%, at 0.08 UKP PC we need 10M impressions *per page*...</p>
+
+<p><hr><h3>CPM (cost per thousand) rates</h3>If we were to sell ads on a CPM basis to generate the same revenue that course content pages bring in, the total CPM take per page would be 2K UKP. On a UK newspaper website, the ratecards for ads are of order 15UKP - 30UKP. So we are two orders of magnitude above that (assuming the CPM is for an 'exclusive' ad deal; if there are 10 ads on the page, we are one order of magnitude more costly - but we don't get the volume on the page impressions... (we are at 2 orders of magnitude (?) down on volume).</p>
+
+<p><hr><h3>Timeliness - securing equivalent lifetime revenues per page, within a year</h3>Suppose we want to achieve the same lifetime revenue from a web page in a course that is presented twice a year for five years, within a single year. (That is, we create the same amount of content per uncourse, but need to reclaim an equivalent course lifetime revenue with one year, rather than five. (Why? We assume the content dates over the course of a year..)</p>
+
+<p>If we generate revenue at 2 UKP per click through, and CTR of 0.1%, we need 2M impressions to generate 4K UKP.  If we assume 200 effective page viewing days per year, then to generate 4K UKP in 1 year we need 10k impressions per page per day.</p>
+
+<p>If we generate revenue at 0.2 UKP per click through, and CTR of 0.1%, we need 20M impressions to generate 4K UKP. If we assume 200 effective page viewing days per year, then to generate 4K in 1 year we need 100k impressions per page per day.</p>
+
+<p>If we generate revenue at 0.02 UKP per click through, and CTR of 0.1%, we need 200M impressions to generate 4K UKP. If we assume 200 effective page viewing days per year, then to generate 4K UKP in 1 year we need 1M impressions per page per day.</p>
+
+<p><hr><h3>Equivalent CT/CPC Rates</h3>(Thanks to Laura for this one...)</p>
+
+<p>Suppose that rather than course fee/HEFCE income, each course page needed to be self sustaining through click thrus on affiliate links.</p>
+
+<p>To achieve an equivalent page lifetime revenue income of 4K UKP at a CPC of 2 UKP we would need 2000 CTs on affiliate links.</p>
+
+<p>If each page needs to generate 4K from affiliate links, you would need to have every student (cohort size 200) over the 10 presentations click once on an affiliate link on every page of the course. </p>
+
+<p>If the CPC was worth 0.2 UKP, every student would have to click on 10 affiliate links per page to achieve 2K CTs. </blockquote><br />
+Here are a couple more thoughts about the amounts of revenue each page can bring in under different revenue generatng models.</p>
+
+<p>CPM - order of 20 UKP PM, so 0.02UKP PPV<br />
+CPC - order of 0.2UKP PC<br />
+CPA - (cost per action, cf. revenue per Amazon affiliate link sale) order of 2UKP PA<br />
+CPP - "cost per presentatation"(!) - order of 200 UKP<br />
+CPL - "cost per lifetime" of course - order of 2K UKP</p>
+
+<p>What's missing in the above blend is a transaction of the order 20 UKP - and maybe this could open up a new business model that balances revenue generation per page with an achievable number of unique content pages and sensible page view volumes?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/revenue" rel="tag">revenue</a>, <a href="http://technorati.com/tag/socialearn" rel="tag">socialearn</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014803.html">11:24 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14803" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 09, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014763"></a>
+<h3 class="title">Trendspotting Redux: Twist Twitter Trends</h3>
+
+Several weeks ago, I set up a CoRank site to bookmark Google search trends to: Trendspotting. I think I'm also going to use it as a place to bookmark interesting Twitter trends to, too, using the Twist twitter trend plotter:...
+<!--
+<p>Several weeks ago, I set up a CoRank site to bookmark Google search trends to: <a href="http://blogs.open.ac.uk/Maths/ajh59/014577.html">Trendspotting</a>.</p>
+
+<p>I think I'm also going to use it as a place to bookmark interesting Twitter trends to, too, using the <a href="http://twist.flaptor.com/"><em>Twist</em> twitter trend plotter</a>:</p>
+
+<p><a href="http://twist.flaptor.com/trends?gram=breakfast%2C+coffee%2C+lunch%2C+dinner%2C+bed&amp;table=0" title="Twist twitter trends: breakfast, coffee, lunch, dinner, bed"><img src="http://farm3.static.flickr.com/2351/2563414487_3fc76e730c.jpg" alt="Twist twitter trends: breakfast, coffee, lunch, dinner, bed" height="340" width="500" /></a></p>
+
+<p>(I'm thinking the 'lunch' pulse just before breakfast is a UK lunch, before the US breakfast?)</p>
+
+<p>And what about the evenings?</p>
+
+<p><a href="http://twist.flaptor.com/trends?gram=wine%2C+beer%2Cevening%2C+friends%2C+bed&amp;table=0" title="twist: wine, beer,evening, friends, bed"><img src="http://farm4.static.flickr.com/3017/2564255506_067824511d.jpg" alt="twitter trends - evenig ritual" height="352" width="500" /></a></p>
+
+<p>A beer early on, then wine in the evening with dinner, a tweet about friends (who came round for dinner, maybe?) and off to bed...</p>
+
+<p>And how about this?</p>
+
+<p><a href="http://twist.flaptor.com/trends?gram=does%2C+anyone%2C+know%2C+dinner%2C+bed&amp;table=0" title="twist: does, anyone, know, dinner, bed"><img src="http://farm4.static.flickr.com/3123/2564273154_00020a4f40.jpg" alt="twitter trends - does anyone know?" height="362" width="500" /></a></p>
+
+<p>Questions in the evening, after dinner and just before bed? Maybe something came up in conversation? (Note I'm using <em>dinner</em> and <em>bed</em> as time pulses, here...)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/trendspotting" rel="tag">trendspotting</a>, <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/%20twist" rel="tag"> twist</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014763.html">10:00 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14763" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 08, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014760"></a>
+<h3 class="title">remix 2: Blur, featuring Sir Ken Robinson...</h3>
+
+Last weekend, I put together a crude video based presentation by synching a slide of presentation slides and images to a tune by a popular beat combo (Changing Expectations: Educational Publishing): Martin used a similar technique in his video response,...
+<!--
+<p>Last weekend, I put together a crude video based presentation by synching a slide of presentation slides and images to a tune by a popular beat combo (<a href="http://blogs.open.ac.uk/Maths/ajh59/014710.html">Changing Expectations: Educational Publishing</a>):</p>
+
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/fNTlescIvW0&amp;hl=en"><embed src="http://www.youtube.com/v/fNTlescIvW0&amp;hl=en" type="application/x-shockwave-flash" height="344" width="425"></object></p>
+
+<p>Martin used a similar technique in <em>his</em> video response, which along with the original version is also available in this annotated form (described here: <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2008/06/youtube-annotations-on-edupunk-video.html">YouTube annotations (on edupunk video)</a>):</p>
+
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/fy2wfdEsvFo&amp;hl=en"><embed src="http://www.youtube.com/v/fy2wfdEsvFo&amp;hl=en" type="application/x-shockwave-flash" height="344" width="425"></object></p>
+
+<p>This weekend, I originally thought I'd have a go at doing a 'live visuals' mix using the Arkaos VJ tool, but the quick experiment I did produced a screen recording with quite a poor resolution (though maybe I didn't explore the settings enough...).</p>
+
+<p>The second thought was to try to use some video footage alongside the stills using something like iMovie or one of the online video mixing tools, such as <a href="http://jaycut.com/">Jaycut</a> or <a href="http://jumpcut.com/">Jumpcut</a>. A tweet from Martin declaring he was looking at Camtasia suggested he was thinking along similar lines, although I'm not sure how far he's got?</p>
+
+<p>Rather than go down the video route, however, I instead opted for finding a better of way of producing a movie like the <em>changing expectations</em> one... to keep the creativity flowing, I also thought I'd mix a bit of audio in to the music track as well. Here's the result: <a href="http://blip.tv/file/972770/">remix 2: play, create</a> (Quicktime required...) The visual narrative and synching is less developed than in <em>changing expectations</em>, so I declare this a first draft ;-)</p>
+
+<p>A <a href="http://www.youtube.com/watch?v=FQqfudcilD8">version of the movie is on Youtube</a>, with the <em>edupunk</em> tag, but the transcoding at the Youtube end from the m4a format to Flash seems to have dropped out lots of the visuals? The audio is fine though...  which was what I was mainly interested in playing with.</p>
+
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/FQqfudcilD8&amp;hl=en"><embed src="http://www.youtube.com/v/FQqfudcilD8&amp;hl=en" type="application/x-shockwave-flash" height="344" width="425"></object></p>
+
+<p>(If you want to see the visuals as intended, visit the blip site: <a href="http://blip.tv/file/972770/">remix 2: play, create</a>.)</p>
+
+<p>The audio quotes I mixed in to the <a href="http://blur.co.uk">blur</a> track came from a Ken Robinson presentation: <a href="http://www.edutopia.org/sir-ken-robinson-creativity-video">Creatively Speaking: Sir Ken Robinson on the Power of the Imaginative Mind</a>. (I'd already ripped the audio using Audacity the crude way - using an audio lead to connect my laptop "speaker out" to the 'microphone in', playing the video, and using Audacity to record the audio coming in through the microphone socket.)</p>
+
+<p>I used Audacity again to extract a selection of quotes (that is, audio samples), by highlighting the appropriate bit of audio and 'exporting selection'...</p>
+
+<p><a href="http://audacity.sourceforge.net/" title="Audacity"><img src="http://farm4.static.flickr.com/3003/2561831377_a25924bbbb.jpg" alt="audacity audio clip" height="186" width="500" /></a></p>
+
+<p>The audio mix was then created in Garageband, as a podcast project. As well as 'clean' audio samples, several effects tracks were used to apply different effects to the Ken Robinson samples.</p>
+
+<p>Whilst thinking about the possible Arkaos video mix, I'd created a set of slides and images in Keynote to work out a possible visual storyline for the "There's no other way" audio track. (By exporting the slides as images, they could then be dragged into Arkaos in one fell swoop.)</p>
+
+<p>The iWork/Garageband integration on a Mac also meant I could just drag the slides from Keynote into the podcast/image track of the Garageband project.</p>
+
+<p><a href="http://blip.tv/file/972770/" title="Garageband podcast remix"><img src="http://farm4.static.flickr.com/3114/2561808195_ce257f3820.jpg" alt="garageband remix podcast" height="258" width="500" /></a></p>
+
+<p>All in all, this took less time to put together than <em>changing expectations</em>, maybe 5 hours or so?</p>
+
+<p>It also got me thinking about the 'image enhanced' podcast... so maybe next time, I'll have a go at just adding visuals to a spoken word track, such as the Ken Robinson presentation?<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/edupunk" rel="tag">edupunk</a>, <a href="http://technorati.com/tag/garageband" rel="tag">garageband</a>, <a href="http://technorati.com/tag/%20blur" rel="tag"> blur</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014760.html">11:09 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14760" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 07, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014735"></a>
+<h3 class="title">CRIG DRY (Don't Repeat Yourself) Metadata Barcamp</h3>
+
+Just back from another of Paul "IE Demonstrator"-pushing Walk'n'David Flander's CRIG DRY (Don't Repeat Yourself) Metadata workshop/barcamp'n'free beer affairs, where the hardcore(?!) of the UK's academic repository hackers were plotting on how to get the most out of helper webservices...
+<!--
+<p>Just back from another of Paul "<a href="http://blog.iedemonstrator.org">IE Demonstrator</a>"-pushing Walk'n'David Flander's <a href="http://www.ukoln.ac.uk/repositories/digirep/index/CRIG_DRY_Workshop">CRIG DRY (Don't Repeat Yourself)  Metadata workshop</a>/barcamp'n'free beer affairs, where the hardcore(?!) of the UK's academic repository hackers were plotting on how to get the most out of helper webservices being produced by other JISC funded webservices projects...</p>
+
+<p>As I bookmarked the various services, it struck me that I'd <em>already</em> bookmarked at least one of them - and have just never revisited it... Hmm...</p>
+
+<p>Anyway, here were the services:<br />
+<ul><li><a href="http://hypermedia.research.glam.ac.uk/kos/STAR/">STAR</a> - a semantic, archaoelogy thesaurus webservice (which put me in mind of the <a href="http://ads.ahds.ac.uk/">Archaeology Data Service</a>);<br />
+</li><li><a href="http://www.geoxwalk.ac.uk/">GeoCrossWalk</a> - a geocoding and gazeteer serivce (of which, more below);</li><li><a href="http://names.mimas.ac.uk/">Names</a> - an authority name providing service; this is only just beginning, and I do wonder about it's viability...  the idea is to provide an authority name proivider for institutions and academic authors. What I'd like to see is something that in the first instance mines and annotates the names of authors who've written documents that appear in local open research repositories, and then exposes that infomation to an academic people search tool. Practical and pragmatic, in other words...</li><li><a href="http://hilt.cdlr.strath.ac.uk/">HILT</a> - another 'high level' thesaurus; I didn't really get this (yet another etc etc...?)</li><li><a href="http://www.jisc.ac.uk/whatwedo/programmes/programme_rep_pres/interoperabilitydemos/depositplait.aspx">Deposit PLAIT</a>: metadata usage across repositories, and automated metadata creation (once I saw the 'metadata extraction from document templates' bit of this, I thought of the (user created) bibliographic data scraping tools used in <a href="http://svn.citeulike.org/svn/plugins/HOWTO.txt">CiteUlike</a>);<br />
+</li><li><a href="http://www.ukoln.ac.uk/repositories/digirep/index/CRIG">CRIG Service Messaging Architecture</a>: orchestrating RESTful web services.</li></ul>A couple of things to note: JISC apparently likes to fund SOAP powered webservices. Whilst these might conceivably make sense for complicated web service transcations, they're probably overkill in our sector most of the time (a sigh went up from the developers whenever a SOAP interface was mentioned).</p>
+
+<p>Now I know there are tools around that are making playing with services much easier (some of the IBM mashup tools, for example, and I think Popfly?) but sometimes it's just so much quicker to be able to hack around an almost human readable URL and look directly at whatever the data the webservice actually returns in a browser, than have to use a tool to put the webservice call together, get the data out, and then make it readable...</p>
+
+<p>Something that came up a couple of times was managing webservice workflow. In SOAP based processes, of course, there is all many or (complicated) ways of managing orchestration. But in REST, it's not so easy (unless you're happy with a simple pipeline.... Hmm, I wonder how far  has moved on lately?). Scott Wilson mentioend a stalled workflow standard for RESTful services from a decade or so ago that may well be worth a look: <a href="http://www.isr.uci.edu/events/twist/wisen98/presentations/Swenson/">Simple Workflow Access Protocol (SWAP)</a>; see also this old discussion about <a href="www.workflow-research.de/Publications/PDF/MIZU.JENI.KESW-DSS%282004%29.pd">Developing Web Services Choreography Standards â€“ The Case of REST vs. SOAP</a>. </p>
+
+<p>Another issue relating to webservices is one of IPR and licensing. Take for example the geoCrossWalk project. This project actually has two components - a geocoding service, that wil parse a block of text and pull out placenames (among other things) and geocode them, either using "low quality" data (which is probably good enough to help you get thinking about how to build an app, IMHO), and good quality, Ordnance Survey data - which is licensed and requires authenticated access...</p>
+
+<p>I did have a quick look at the <a href="http://edina.ac.uk/digimap/">Edina Digimap</a> pages (where access to the GeoCrossWalk API is hidden away), but I couldn't log in... I guess I could have tried to scour the OU library website, looking for a way in, or a password, or something, but I wanted a quick hit, couldn't get it, so went off to the bar instead...</p>
+
+<p>How ironic would i be for a researcher to fight with their institution about opening up their research data, only to find out they couldnlt expose it on a public website becuase the JISC geocoding service had inherited O/S license conditions that said they couldn't? This isn't at all like software licensed using an aggressive open source software license contaminating all the code it comes into contact with, but then in some respects, it has a  similar feel to it...That is, licensed metadata effectively closing the original data it annotates... There has to be a better way for providers of commercial data to license their wares and generate revenue from it... There has to be... They really, really need to sort out a new business model... Becuase if they don't, we'll just start using good enough data, that we can find for free...</p>
+
+<p>(One of the tellings of 'fairy gold' is that it turns to dust if not passed on before midnight of the day you recieved (or is that dawn of the following day..?!;-) That is, you can spend it, but you can't hoard it. The data providers need to find ways of generating revenue from the flow rate of their data, rather than hoarding it in the hope of a big payoff down the line. If I'm making money in part from your data, I'll give you a cut... But don't prevent me from getting the data to see if I <em>can</em> make use of it in the first place...)</p>
+
+<p>The other part of geoCrossTalk is the CrossWalk part proper. This gazeteer will take one sort of geo reference, such as a place name, postcode, lat/long, region name, local government ward identifier, etc etc, and return references in other forms, including 'polygon bounding boxes' (there must be a proper term for this?) that describe an area: so for example, I could ask about "Bath" and get a KML overlay back that plots the extent of Bath on a map. I was also shown a demo of an overlay for the river Tay, and so on. Given an area overlay, it them becomes possible to ask for all the place names that lay with 1km of the Tay, for example; or all the postcode areas in Bath.</p>
+
+<p>One service I though might be quite handy relates to the display of multiple poorly located markers on a map - for example, markers for 100 photos tagged 'Bath'. By adding an hovering overlay marking out 'Bath' on the map, each marker could be placed somewhere within it, and set to jiggle - like the jiggling or jittery icons on an iPhone or iPod touch when you edit the 'desktop' in those appliances. The jitter suggests that  the location is uncertain, and maybe allows the marker to be pushed down to a lower layer that is more specific, such as a general postcode area - though again, the actual specific location may still be unknown. Only when the marker is jiggle free do you know it is precisley located... (of course, some markers may not designate a point - thay may designate an area...)</p>
+
+<p>As to <em>how</em> to geocode repository data, the assumption was that geocoding would be part of the ingress process whereby documents are added to a repository and annotated with geometadata. Paul Walk suggested that this could actually be added <em>post hoc</em> - a seearch is made over a repository and the results are then geocoded and displayed. (I guess that ideally, the geodata would then be submitted back to the repository?). This put me in mind of Weinberger's aphorism of 'filter on the way out'... If the geodata is not the <em>primary</em> or most important search facet, why go through the pain of adding it to every record, many of which are unlikely to be surfaced ever again, anyway?! The geo data then becomes a search refinement that can be offered as a 'search within results' feature?</p>
+
+<p>I'd actually thought about this <em>post hoc</em> search process earlier in the day, again in conversation with Paul (who also referred to the <a href="http://www.nactem.ac.uk/software/termine/">NaCTem TerMine</a> term extraction service that I need to have a quick play with? Now is it as easy to use as the Yahoo Pipes Term Extraction service; or the not quite so easy to use Reuters Calais service (SOAP, sigh...;-)?) This time it related to thesaurus data - and obvious use case I could see was in providing thesaurus generated 'did you mean?' or 'search with results' facets on a search interface.</p>
+
+<p>One thing I came to realise is that for all their good, many JISC services don't offer a quick hit. In many cases, you can't just start cranking out RESTful URLs, or cobbling Pipes together. <em>You can't get away with not reading the documentation...</em> You have to invest time in finding out what the service is good for, before deciding whether or not it's good for what you want... You can't just have a quick play...</p>
+
+<p>As to other highlights from the day - the ORE work that Richard Jones and ?? are doing looks really fascinating, offereing the ability to unpack repository holdings into aggregate objects (that is, disaggregatable ones). I didnlt make time to talk to Richard - big mistake... Ho hum...</p>
+
+<p>So going forward, what would I like to see on the webserivces front? For every JISC web service, how about one or two of the calls exposed via a Yahoo Pipes or a Popfly block...? Or maybe provided as 'mashlets' in some of the enterprise mashup environments?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>, <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>,  <a href="http://technorati.com/tag/iedemonstrator" rel="tag">iedemonstrator</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014735.html">12:26 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14735" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 05, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014726"></a>
+<h3 class="title">eduPunk Chatter...</h3>
+
+Building off the back of the 'social life of a URL' thinking I've been doing lately, I started tinkering with what 'the social life of eduPunk' might look like... So here's an early glimpse of a work in progress, a...
+<!--
+<p>Building off the back of the 'social life of a URL' thinking I've been doing lately, I started tinkering with what 'the social life of eduPunk' might look like... So here's an early glimpse of a work in progress, a quick view of who's twittering about 'edupunk', and who's using the <a href="http://del.icio.us/tag/edupunk"><em>edupunk</em> tag on the delicious social bookmarking site</a>.</p>
+
+<p>I'll add in technorati tag/blogsearch branches in too, because I'm guessing that the twitter subtree will start to wither before long?</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk socialtag: top level view"><img src="http://farm4.static.flickr.com/3194/2553524570_2ca9976260.jpg" alt="edupunk socialtag" height="432" width="500" /></a><br />
+  <br />
+The first node in each category (delicious or twitter) is the name/id of the person who posted the tweet/bookmark:</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk twitterers"><img src="http://farm4.static.flickr.com/3075/2553529076_62a7071c4e.jpg" alt="edupunk twitterers" height="442" width="500" /></a></p>
+
+<p>The leaves are the title of the post bookmarked or the content of the tweet...</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk tweets"><img src="http://farm4.static.flickr.com/3281/2552707773_aa1af9e4f8.jpg" alt="edupunk tweets viz" height="323" width="500" /></a></p>
+
+<p>Over time, it'll be interesting to see if thebookmark subtree grows... (bearing in mind that I'm using a delicious limited API call at the moment, rather than necessarily accessing <em>all</em> the bookmarked items tagged 'edupunk'.</p>
+
+<p><a href="http://ouseful.open.ac.uk/jit/examples/edupunkSocial.php" title="edupunk bookmarks"><img src="http://farm4.static.flickr.com/3275/2552709837_14f91bf19d.jpg" alt="edupunk bookmarks" height="439" width="500" /></a></p>
+
+<p>With the blog search view/technorati view (not shown) where the author is not necessarily known, what should I use as the 'author'? The blog URL? Maybe in time I'll be able to reconcile identities using e.g. friendfeed?</p>
+
+<p>i also need to work out what sort of connected graph views to explore... For example, it may be that different people are bookmarking or twittering about the same URL, which could be shown. For the blog posts, posts that link out to other URLs that appear in the display could also be connected?</p>
+
+<p>I guess at the end of the day, all I'm doing is muddling my way towards a URL or tag focused meme tracker visualisation? Hmm....<br />
+<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/edupunk" rel="tag">edupunk</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014726.html">11:51 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14726" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 04, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014710"></a>
+<h3 class="title">Changing Expectations: Educational Publishing</h3>
+
+If you follow any North American edublogs, you probably can't fail to have noticed a whole flurry of recent posts on "Edupunk". Capturing the spirit of the times, Jim Groom's call to arms last week inspired many, confused some, and...
+<!--
+<p>If you follow any North American edublogs, you probably can't fail to have noticed a whole flurry of recent posts on "Edupunk". Capturing the spirit of the times, <a href="http://bavatuesdays.com/the-glass-bees/">Jim Groom</a>'s call to arms last week inspired many, confused some, and even offended a few... There's a wealth of good posts on the topic, of which I've especially liked <a href="http://arynna.umwblogs.org/2008/06/01/edupinions/">EDUPINIONS</a> (for the student voice), <a href="http://injenuity.com/archives/186">@Injenuity</a> for the zen-like response, question setting <a href="http://www.chrislott.org/2008/05/28/edupunk-or-eduhacker/">edupunk or eduhacker</a>, and <a href="http://www.dougbelshaw.com/2008/05/30/are-you-an-edupunk-im-not/">Doug Belshaw</a> (for not liking it at all;-) The <a href="http://chronicle.com/wiredcampus/article/3045/frustrated-with-corporate-course-management-systems-some-professors-go-edupunk">Chronicle of Higher Education</a> need thanking for legitimising the term to the extent it helped get it into <a href="http://en.wikipedia.org/wiki/Edupunk">wikipedia</a>, <a href="http://halfanhour.blogspot.com/2008/06/defending-edupunk.html">Downes</a> for providing some clarification and <a href="http://www.darcynorman.net/2008/05/28/on-edupunk/">D'ArcyNorman</a>, who <a href="http://flickr.com/photos/psychemedia/2538449892/">seriously freaked some of us out on Saturday morning</a>... If it's a badge you're after, <a href="http://edtechpost.wikispaces.com/edupunk+merit+badges">Scott Leslie's done 'em...</a>;-) (but who's doin' the t-shirts?;-)</p>
+
+<p>Anyway, stuck for a way of putting together a 5 minute presentation to a group of educational publishers on the topic of "Changing User Expectations: Finding and Using Content" that was (is) to be delivered in my absence this coming Friday (the CRiG Barcamp invite came first...;-), I took heart from Jim's rallying cry and put together a little something that I hope captures something of the energy and spirit of eduPunk, howsoever you want to define it or capitalise it...;-)</p>
+
+<p>The following works best on full screen view and with the volume turned up LOUD!</p>
+
+<p><object type="application/x-shockwave-flash" data="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&feedurl=http%3A%2F%2Fabjectlearning%2Eblip%2Etv%2Frss%2Fflash&file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F965966%3Freferrer%3Dhttp%3A%2F%2Fweblogs%2Eelearning%2Eubc%2Eca%2Fbrian%2Fsource%3D3&brandlink=http%3A%2F%2Fblip%2Etv%2F%3Futm%5Fsource%3Dbrandlink&brandname=blip%2Etv&showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" width="400" height="255" allowfullscreen="true" id="showplayer"><param name="movie" value="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&feedurl=http%3A%2F%2Fabjectlearning%2Eblip%2Etv%2Frss%2Fflash&file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F965966%3Freferrer%3Dhttp%3A%2F%2Fweblogs%2Eelearning%2Eubc%2Eca%2Fbrian%2Fsource%3D3&brandlink=http%3A%2F%2Fblip%2Etv%2F%3Futm%5Fsource%3Dbrandlink&brandname=blip%2Etv&showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" /><param name="quality" value="best" /><embed src="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&feedurl=http%3A%2F%2Fabjectlearning%2Eblip%2Etv%2Frss%2Fflash&file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F965966%3Freferrer%3Dhttp%3A%2F%2Fweblogs%2Eelearning%2Eubc%2Eca%2Fbrian%2Fsource%3D3&brandlink=http%3A%2F%2Fblip%2Etv%2F%3Futm%5Fsource%3Dbrandlink&brandname=blip%2Etv&showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" quality="best" width="400" height="255" name="showplayer" type="application/x-shockwave-flash"></embed></object></p>
+
+<p>(The original swf file came in at 21 MB and can be found <a href="http://ouseful.open.ac.uk/presentations/changingExpectations.swf">here</a>. Thanks to <a href="http://weblogs.elearning.ubc.ca/brian/archives/046651.php">Brian Lamb</a> and <a href="http://andremalan.net/">@ramcio</a> for sorting out the format translation and posting the movie to blip. I owe you one, guys:-) If you want to embed it (feel free:-) and would rather have a Youtube version, here's <a href="http://youtube.com/watch?v=fNTlescIvW0"><em>changing expectations</em> on Youtube</a>.</p>
+
+<p>Hopefully, the mix tells it's own story...though I will post some notes to back it up later in the week.</p>
+
+<p>It was put together on a Mac, using Keynote, with handcrafted timings. The original swf file was generated by loading the soundtrack into the presentation, and then exporting the presentation (with soundtrack) as a standalone, free playing presentation. To synch the slides and the audio, I set the presentation running from the first slide in whatever sequence I was working on, and played the music from an appropriately located start marker in Audacity. The original plan had been to create the whole mix in iMovie (which I've never used before), but inspiration failed me for the best way to create the slides... So I went into Keynote (looking for iMovie integration features) and ended up staying there... For a 4m 15s or song, I reckoned about 3s per slide, requiring around about 85 slides. I actually created 100 or so, including slides for each of the lyrics, which were copied from a random lyric server website, then edited the visuals down. All in all, it took about 6 and a half hours (including a quick dog walk for inspiration;-) Finding the images took a surprisingly long time... (mainly using flickr, with a Creative Commons licence search limit).</p>
+
+<p>Next time, I figure on trying something like Jumpcut...?<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/edupunk" rel="tag">edupunk</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014710.html">01:39 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14710" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 03, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014701"></a>
+<h3 class="title">OU on iTunes U</h3>
+
+For the last couple of months, a small team (nothing to do with me...) have been putting together an OU presence on iTunes U - and very slick it looks too (well done, folks :-): visit the Open University on...
+<!--
+<p>For the last couple of months, a small team (nothing to do with me...) have been putting together an OU presence on iTunes U - and very slick it looks too (well done, folks :-): <a href="http://www.open.ac.uk/itunes/">visit the Open University on iTunes U</a>.</p>
+
+<p><a href="http://www.open.ac.uk/itunes/" title="visit the Open University on iTunes U"><img src="http://farm4.static.flickr.com/3062/2547308475_ebabe8ba95.jpg" alt="OU on iTunes U" height="380" width="500" /></a></p>
+
+<p>I had a look at the site yesterday afternoon, thanks to an internal tip off via delicious, no less, but when I asked if I was free to blog, I was asked to keep quiet until the press release - and the official announcement - came out today...</p>
+
+<p>It seems that the media relations team also team took a hard line with respect to not tipping anyone off early, including the press... (or maybe we don't do embargoed press releases?)</p>
+
+<p><a href="http://news.bbc.co.uk/1/hi/education/7431918.stm" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2132/2547284093_f5cfd2c203.jpg" alt="iTunes U in the UK (BBC)" height="263" width="500" /></a></p>
+
+<p>Here's the fuill press release: <a href="http://www3.open.ac.uk/media/fullstory.aspx?id=13805">The Open University offers free education content on iTunes U in the iTunes Store</a>.</p>
+
+<p>It's probably worth bearing in mind that the rules of PR 1.0 probably still hold true, especially if you don't let the web 2.0 channels prime the story using niche channels... because otherwise, you can lose control of the story:</p>
+
+<p><a href="http://twitter.com/dougclow/statuses/825863405" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3122/2547296345_0938f14f03.jpg" alt="2008-06-03_1157" height="155" width="500" /></a></p>
+
+<p>Maybe I should have published yesterday and been damned? Note that the story has now been amended, although the OU (at time of writing) still doesn't get a link:</p>
+
+<p><a href="http://news.bbc.co.uk/1/hi/education/7431918.stm" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3165/2548109790_05d63c7d76.jpg" alt="2008-06-03_1149" height="155" width="500" /></a></p>
+
+<p>(What was it the recent <a href="http://www.bbc.co.uk/bbctrust/framework/bbc_service_licences/bbc_co_uk.html">BBC Trust report on  said about 'must do better' with respect to linking to third party sites?</a>)</p>
+
+<p>So here's what the OU iTunes site looks like:</p>
+
+<p><a href="https://deimos.apple.com/WebObjects/Core.woa/Browsev2/itunes.open.ac.uk" title="OU on iTunesU"><img src="http://farm3.static.flickr.com/2165/2548137670_7e80743de2.jpg" alt="OU on iTunesU" height="375" width="500" /></a></p>
+
+<p>Unlike many of the other institutional offerings there, the OU presence includes broadcast and near-broadcast quality video from several of our courses, as well as talking head videos from the great and the good.</p>
+
+<p>For example, here are the offerings from one of the courses from my own department:</p>
+
+<p><a href="https://deimos.apple.com/WebObjects/Core.woa/Browsev2/itunes.open.ac.uk" title="OU ICT on iTunes U"><img src="http://farm4.static.flickr.com/3043/2547317309_d3135d4dbf.jpg" alt="OU ICT on iTunes U" height="308" width="500" /></a></p>
+
+<p>Note that as well as video, the transcripts are also made available... And of course, the content is <em>free</em>... At the moment, I don't think there is any regular 'podcast' programming included - hopefully I'll have more to post about that in the near future... ;-)</p>
+
+<p>PS Stuart has also pointed out that the iTunes offering is just part of a wider straegy to engage with social media. As Stuart writes in <a href="http://www.open.ac.uk/blogs/SocialCommunications/?p=214">iTunes U and the OU</a>:<br />
+<blockquote>This work sits alongside ongoing work with YouTube, and activity in spaces such as Facebook, Netvibes, Twitter etc. This is going to be brought together via a <a href="http://www.open.ac.uk/use/">/use</a> site [which] will serve as a landing page for those people visiting the OU from external web spaces and introduce them to what else is on offer. The current /use page is all we are able to offer at the moment; it will be much better in the future!</p>
+
+<p>So, what's the coherent story around the OU's activity in these third-party spaces? Well i think it's partly captured by the intro text on /use; itâ€™s about allowing people to make use of OU content for their own purposes (breaking down the us / them boundaries), it's about letting people experience what the OU has to offer in the social spaces that they already feel comfortable with and not focusing solely on driving them to a corporate website, and it's about being a genuine and valuable part of online communities.</blockquote><br />
+Anyway, here are the links again: <a href="http://www.open.ac.uk/itunes/">visit the Open University on iTunes U</a>, and <a href="http://www.open.ac.uk/use/">/use</a>.</p>
+
+<p>If you have any ideas for other content we should be making available via iTunes U, or you can think of innovative ways we might be able to use that channel, why not post a suggestion to the <a href="http://ou.ideascale.com">(unofficial) OU suggestion box</a>?</p>
+
+<p>PPS anyone interested in a little bet about when, or indeed, if, the iTunes U OU presence gets a mention on <a href="http://open2.net">open2.net</a>?</p>
+
+<p>PPPS it seems open2 is on the case after all:</p>
+
+<p><a href="http://www.open2.net/home/view?entityID=68574&jsp=themed_learning%2Fexpanding_viewer&entityName=object" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3174/2547476879_96e57608ac_o.png" width="206" height="171" alt="2008-06-03_1353"/></a></p>
+
+<p>:-)<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ou" rel="tag">ou</a>, <a href="http://technorati.com/tag/itunesu" rel="tag">itunesu</a>, <a href="http://technorati.com/tag/%20playing%20around%20the%20edges%20of%20that%20disrepute%20thing%20again" rel="tag"> playing around the edges of that disrepute thing again</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014701.html">12:21 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14701" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">June 02, 2008</h2>
+
+
+<div class="blogbody">
+<a name="014686"></a>
+<h3 class="title">Wiki Powered Feeds and an Embedded Result...</h3>
+
+This is what mediawiki should have done from the start... ["A Distributed Publishing Framework... (screencast)" via Quickie screencast - a distributed publishing framework...] In many respects, this makes the wiki page self-disaggregating and embeddable at a section level, which is...
+<!--
+<p>This is what mediawiki should have done from the start...</p>
+
+<p><object type="application/x-shockwave-flash" data="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&amp;feedurl=http%3A%2F%2Fabjectlearning%2Eblip%2Etv%2Frss%2Fflash&amp;file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F929054%3Freferrer%3Dhttp%3A%2F%2Fweblogs%2Eelearning%2Eubc%2Eca%2Fbrian%2Farchives%2F046602%2Ephpsource%3D3&amp;brandlink=http%3A%2F%2Fblip%2Etv%2F%3Futm%5Fsource%3Dbrandlink&amp;brandname=blip%2Etv&amp;showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" allowfullscreen="true" id="showplayer" height="255" width="400"><param name="movie" value="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&amp;feedurl=http%3A%2F%2Fabjectlearning%2Eblip%2Etv%2Frss%2Fflash&amp;file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F929054%3Freferrer%3Dhttp%3A%2F%2Fweblogs%2Eelearning%2Eubc%2Eca%2Fbrian%2Farchives%2F046602%2Ephpsource%3D3&amp;brandlink=http%3A%2F%2Fblip%2Etv%2F%3Futm%5Fsource%3Dbrandlink&amp;brandname=blip%2Etv&amp;showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf"><param name="quality" value="best"><embed src="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&amp;feedurl=http%3A%2F%2Fabjectlearning%2Eblip%2Etv%2Frss%2Fflash&amp;file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F929054%3Freferrer%3Dhttp%3A%2F%2Fweblogs%2Eelearning%2Eubc%2Eca%2Fbrian%2Farchives%2F046602%2Ephpsource%3D3&amp;brandlink=http%3A%2F%2Fblip%2Etv%2F%3Futm%5Fsource%3Dbrandlink&amp;brandname=blip%2Etv&amp;showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" quality="best" name="showplayer" type="application/x-shockwave-flash" height="255" width="400"></object></p>
+
+<p>["<a href="http://blip.tv/file/922638">A Distributed Publishing Framework... (screencast)</a>" via <a href="http://weblogs.elearning.ubc.ca/brian/archives/046602.php">Quickie screencast - a distributed publishing framework...</a>]</p>
+
+<p>In many respects, this makes the wiki page self-disaggregating and embeddable at a section level, which is a <em>Good Thing</em> :-)</p>
+
+<p>Something else came tomy notice on the disaggregation from last week - <a href="http://www.freepdfconvert.com/convert_pdf_to_source.asp">PCF Converter</a>. Although it requires a subscription to be really useful, this service will take an online or uploaded pdf, and do this to it:<br />
+<ul><li>Convert PDF documents to Word</li><br />
+<li>Extract tables from PDF documents to Excel</li><br />
+<li>Extract all images from PDF documents</li></ul><br />
+Not surprisingly, this is <em>exactly</em> the sort of thing I think we should be doing to documents in <a href="http://oro.open.ac.uk">ORO</a> (the OU "Open Repository Online" service), so I'll add it to my ORO wishlist, along with document previews using something like iPaper (along with the other document/filetype conversions that Scribd offers... ;-)</p>
+
+<p>PS I'm still wating to see what becomes of <a href="http://oembed.com/">oEmbed</a>... I managed to find a <a href="http://code.google.com/p/django-oembed/">Django library</a> that handles oEmbed, along with a <a href="http://framework.zend.com/wiki/display/ZFPROP/Zend_Service_Oembed+-+Pawel+Przeradowski?showComments=false">PHP/Zend oEmbed  component proposal</a>, but haven't found any other helper libraries so far... Does Drupal have an oEmbed handler plug-in yet, I wonder? ;-)<br />
+<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/mediawiki" rel="tag">mediawiki</a>, <a href="http://technorati.com/tag/rss" rel="tag">rss</a>, <a href="http://technorati.com/tag/%20oEmbed" rel="tag"> oEmbed</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014686.html">03:30 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14686" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="014685"></a>
+<h3 class="title">People Augmented Search Engines</h3>
+
+In Search 4.0: Putting Humans Back In Search , Danny Sullivan comments "I think there is some potential to tapping into a social network and applying it to search. However, I still remains uncertain how that will unfold. It especially...
+<!--
+<p>In <a href="http://futureofsearch.federatedmedia.net/archives/15#comment-41">Search 4.0: Putting Humans Back In Search</a> , Danny Sullivan comments "I think there is some potential to tapping into a social network and applying it to search. However, I still remains uncertain how that will unfold. It especially remains uncertain that this is somehow the secret sauce for anyone to jump past the current state of search."</p>
+
+<p>I've been thinking a bit about that lately, as another piece in a jigsaw I don't quite understand (although it does seem to include elements of <a href="http://blogs.open.ac.uk/Maths/ajh59/013746.html">serendipitwitterous</a> and <a href="http://pipes.yahoo.com/ouseful/sociurly">the social life of a URL</a> (of which, more in a later post)).</p>
+
+<p>I've also been thinking about things like this:</p>
+
+<p><a href="http://tweetscan.com/index.php?s=anyone+know&amp;u=&amp;d=" title="Tweetscan search for anyone know"><img src="http://farm3.static.flickr.com/2165/2545141954_8a8c455fff.jpg" alt="Tweetscan search for anyone know" height="227" width="500" /></a></p>
+
+<p>Firstly - tweets appearing asking friends/followers a question; secondly, the appearance of (advertised) services that are 'human-question answering service' like...</p>
+
+<p>So here's what I'm thinking... if the search engine knows who your friends are, then when you post a query, it sends the query to them, and they may or may not answer back. It's unlikely that they'll respond quickly enough to make it into a favoured 'Your social network suggests' results slot at the top of the results listing, but friends' results could appear in a sidebar, in effect providing a lazy, slow channel results listing, but hopefully one that is very high quality, and/or maybe usefully related to your recent queries?</p>
+
+<p>This model in turn becomes a driver for natural language search (and the construction of longer, more specific search queries) - because you're actually asking people wo help, as well as the search engine.</p>
+
+<p>Alternatively, if the search engine knows what sort of people are the sorts of people who might know the answer to your question (maybe because the way they have been 'indexed' serves them up as a highly ranked 'result' when you make a query), then it will add the query to their stream, and if they answer, the result comes back to you...</p>
+
+<p>(Obviously you'd want to add some sort of load balancing to make sure the same people didn't get bombarded with search requests).</p>
+
+<p>In the event of a likely "person who might know" not being online, then potentially a search could be made over their social bookmarks, on the grounds that these are already 'implicitly recommended' by virtue of having been valued enough for them to be bookmarked?</p>
+
+<p>So the protocol is:</p>
+
+<p>1) I make a natural language search query;<br />
+2) the search engine does its normal thing and brings back its normal results;<br />
+3) the query is streamed to my friends;<br />
+4) it may also be streamed to people who are ranked highly when this search is run against their indexed profile ('people who might know');<br />
+5) if a friend replies, it appears in your lazy results sidebar;<br />
+6) if you friends/'people who might know' have a social bookmark collection, the query is run against those results, and if any relevant ones turn up then they may be offered as 'x might suggest' highlighted results at the top of the results listing.<br />
+7) if the user has personal web history/search history tracking enabled, and any of these links turn up as highly favoured, they could be returned as "you may be trying to remember" result listings?</p>
+
+<p>Hmmm...</p>
+
+<p>PS this just in: <a href="http://www.readwriteweb.com/archives/answerme_twitter.php">@answerme Answers Your Questions On Twitter</a><div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/search%20engine" rel="tag">search engine</a>, <a href="http://technorati.com/tag/%20social%20search" rel="tag"> social search</a>, <a href="http://technorati.com/tag/%20human%20powered%20search" rel="tag"> human powered search</a></p><!-- technorati tags end --></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014685.html">02:27 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14685" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

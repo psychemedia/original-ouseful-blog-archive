@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Single Item RSS Feeds from OpenLearn Pages</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014351.html" title="TweetSpeech - Twitter to Speech Pipe" />
+
+<link rel="next" href="./014360.html" title="Digital Worlds Week 8, Round-Up" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014351.html">&laquo; TweetSpeech - Twitter to Speech Pipe</a> |
+
+<a href="./">Main</a>
+| <a href="./014360.html">Digital Worlds Week 8, Round-Up &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 25, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Single Item RSS Feeds from OpenLearn Pages</h3>
+
+<p>Picking up on <a href="./014347.html">Embedding Single OpenLearn Unit Pages in an Arbitrary Blog Post</a>, it seems some people are never satisfied, (?!;-) so here's a bookmarklet (I think) that will take you from a page within and OpenLearn unit, to a Grazr widget containing a single feed item corresponding to that page.</p>
+
+<p><a href="javascript:(function(){var d=document;var db=d.body;var s=d.createElement('script');s.type='text/javascript';s.src='http://ouseful.open.ac.uk/openlearn/openlearnpagefeed.js';db.appendChild(s);})()">OpenLearn 'embed this page' bookmarklet</a></p>
+
+<p>What this means is that you can emebed the content from a single OpenLearn unit page in any other page, via an OpenLearn branded Grazr widget. The widget can also be embedded on start pages, web desktops and so on...</p>
+
+<p>The bookmarklet should have been trivial to produce. I had hoped to find meta data embedded within each OpenLearn unit content page containing, for example:</p>
+
+<p><em>&lt;meta name="unitcode" content="T175_1"&gt;</em> - a nice, easy way to find the course code;<br />
+<em>&lt;link rel="alternate" type="application/rss+xml" title="RSS" href="http://openlearn.open.ac.uk/file.php/1345/formats/T180_5_rss.xml" /&gt;</em> - I'verecently been thinking this format is useful because it provides a bridge from a unitcode (T180_5) to a crappy Moodle resource ID (1345).</p>
+
+<p>Sigh....</p>
+
+<p>Anyway, I managed to  find the unit code for the unit a page comes from by scraping the page (the most reliable place I found was in the tag attribute of the Facebook bookmark URL at the bottom of each page!)</p>
+
+<p>To use the bookmarklet, drag it onto your browser toolbar (Firefox/Flock, dunno in IE); if you want to grab an embeddable version of an page from *within* an OpenLearn unit, just click the bookmarklet and it should hopefully take you to a Grazr widget that displays that page's content (in fact, it's the corresponding item in the unit's RSS feed).</p>
+
+<p>To embed the widget in your own page, from the Grazr menu select <em>File-&gt;Add to Your Page</em> or <em>Share-&gt;Cusotmize</em>.</p>
+
+<p>The bookmarkelt yet won't do much if you're on the 'main page' for a unit. When I get a chance, I'll try to make script context sensitive so that for whatever OpenLearn page you click  the bookmarklet on, the Grazr widget will contain something appropriate...<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/bookmarklet" rel="tag">bookmarklet</a>, <a href="http://technorati.com/tag/%20single%20page%20embedding" rel="tag"> single page embedding</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 25, 2008 02:19 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: People You May Know - Time to Dig Out Some Graph Theory Books...</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014014.html" title="Progressive Enhancement - Some Examples" />
+
+<link rel="next" href="./014020.html" title="OU Library - For *&amp;?&Acirc;&pound;$%^%A&#39;s Sake..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014014.html">&laquo; Progressive Enhancement - Some Examples</a> |
+
+<a href="./">Main</a>
+| <a href="./014020.html">OU Library - For *&?£$%^%A's Sake... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">March 28, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">People You May Know - Time to Dig Out Some Graph Theory Books...</h3>
+
+<p>Tool meme of the week in the bit of the social web I inhabit seems to be the <a href="http://apps.facebook.com/_nexus_/">Nexus</a> Facebook application, which just seems to be a prettier version of <a href="http://apps.facebook.com/friendwheel/">friendwheel</a>.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2369826952/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2198/2369826952_5637786dc4.jpg" alt="nexus friends analysis" style="border: 0pt none ;" height="399" width="500" /></a></p>
+
+<p>This graph is that subset of the social graph Facebook knows about that I can see...</p>
+
+<p>Possibly of  more interest, though, is the "People You May Know" feature that Facebook have just rolled out (<a href="http://www.insidefacebook.com/2008/03/26/facebook-starts-suggesting-people-you-may-know/">Facebook starts suggesting 'People You May Know'&#65533;</a>), a clone, apparently, of a Linked In service (<a href="http://blog.adamnash.com/2008/01/03/people-you-may-know-on-linkedin/">People You May Know on Linked In</a>).</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2368987635/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3252/2368987635_42658f9108.jpg" alt="people you may know" style="border: 0pt none ;" height="303" width="500" /></a></p>
+
+<p>Looking at the above, what Facebook appears to be doing is recommending people to me who have a high number of edges in their social graph that connect to nodes (people) that are also in my social graph. Referring back to the Nexus view of my friends netowrk, the recommended friends are people who would not be out of place in my graph, and would be highly connected (i.e. have a high edge count) within it.</p>
+
+<p>I guess one of the simplest (i.e. most literal) ways of identifying these friends is to do something like this:</p>
+
+<p>- over all of my friends, build a list of unique people they have befriended (who are not already my friends);<br />
+- count the number of times each person in the list is friended by people who I know;<br />
+- if the number is larger than N, recommend that person to me as someone I may know, on the grounds that they know several of the people I know. </p>
+
+<p>I wonder if another way of calculating it would be to look at the Facebook social graph, knock out all the links that connect me to my friends and that connect my friends to each other, and then recommend back to me the people who have the highest closeness, or, err, betweenness on the pruned graph between the people who are my friends?</p>
+
+<p>(I really need to brush up on, extend and deepen my knowledge of graph theory and network analysis! (I have a load of old notes on social bookmark tagging looked at as matrices, somewhere...?) Here are few ways in to the vocab at least, maybe? <a href="http://20bits.com/2007/11/02/graph-theory-part-iii-facebook/">Graph Theory: Part III (Facebook)</a>; <a href="http://www.analytictech.com/mb021/graphtheory.htm">Introduction to Network Analysis</a>, <a href="http://www.scribd.com/doc/2386029/report">Representation of Online Social Networks</a>. Though it pains me to say so, I may need to leave the blogosphere and hit the literature for a bit... now where did I put all those original small world network papers from Newman, Watts et al.? ;-) Anyone interested in getting an informal study group together, maybe? ;-)</p>
+
+<p>Anyway, anyway, just to note it so I don't forget it, when I saw the Facebook 'people you may know' results page, I immediately wondered whether there might be mileage in exploring this approach in the context of Course Profiles, using <em>course codes</em> to identify potential closeness of relationship with people I don't already know? (i.e. offering enhancements to, or refinements of, the current Study Buddy and Course Recommender services?</p>
+
+<p>For example, for students who had declared the same courses and the same presentation dates for more than one course, we might be able to recommend "people you may remember studying with" (we'd have to have a privacy setting to out of this, of course).</p>
+
+<p>For students who had taken, are taking and intend to take the same courses at similar times, we might be able to recommend potentially long lasting study friendships along the lines of "people who may be on the same course pathway as you". Where the courses (and ordered sequence of courses) is the same as someone else, but the dates are different, the recommendations may be of the form "people who have previously taken a similar pathway to you" and "people who are intending to take a similar pathway to the one you took/are taking" (that is, identifying mentoring or 'old hand' relationships between people at opposite ends of a qualification pathway).</p>
+
+<p>[It's important to note here that I see Course Profiles as providing access to a graph, in part through app specific data, in part through access to Facebook data, that has two sorts of node (people and courses) and three sorts of edge (course-course, course-person, person-person), each of which may have several possible flavours. On different views over the graph, some of the edges may be directed (e.g. 'this course taken <em>after</em> that course') and ordered into lists (sequences of courses in the order they are taken, for example), and some may be weighted (e.g. '23 people took this course <em>at the same time as</em> that course, or 'this person is taking that 30 point course' (I don't know if properties of one class of node should be exposed as the weight of an edge when connected to a node of another class, but hey, it's something to learn about, right?!;-).]</p>
+
+<p>Now ,do I start tinkering with my Python/Course Profiles analysis code again and see if I can get some 'people you may have known' code working, or do I fire up the Quattro and catch up on <a href="http://www.bbc.co.uk/drama/ashestoashes/">Ashes to Ashes</a>?<br />
+<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/facebook" rel="tag">facebook</a>, <a href="http://technorati.com/tag/fb" rel="tag">fb</a>, <a href="http://technorati.com/tag/%20social%20graph" rel="tag"> social graph</a>, <a href="http://technorati.com/tag/%20nexus" rel="tag"> nexus</a>, <a href="http://technorati.com/tag/%20course%20profiles" rel="tag"> course profiles</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at March 28, 2008 10:39 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>In Here Comes Everybody, Clay Shirky has a good and more, err, accessible :-) , discussion of networks.</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at March 29, 2008 01:31 PM</span>
+</div>
+<div class="comments-body">
+<p>I don't want accessible - i need practical, implementable and efficient; and that means maths... ;-)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at March 29, 2008 05:22 PM</span>
+</div>
+<div class="comments-body">
+<p>Robin Wilson in the maths department wrote the canonical undergraduate textbook on graph theory. I can lend you a copy if you can't find it. As a mathematician, I'd definitely find it easier to discuss this using the standard terminology of the area :-) The basics aren't too hard to pick up - I think I learned them in the sixth form.  </p>
+<span class="comments-post">Posted by: <a href="http://www.jvvw.com">Juliette</a> at March 29, 2008 05:22 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

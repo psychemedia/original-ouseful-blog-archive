@@ -232,7 +232,7 @@ var pageLoad = function(cSize)
 // Search function - creates, builds, and adds remote JSON script
 // to the page, which in turn calls amzJSONCallback
 	var amazonSearch = function(){
-			var request = 'http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium&Style=./wishlist2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback';
+			var request = 'http://xml-uk.amznxslt.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium&Style=http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl&ContentType=text/javascript&CallBack=amzJSONCallback';
 			aObj = new JSONscriptRequest(request);
 			aObj.buildScriptTag();
 			aObj.addScriptTag();
@@ -257,7 +257,7 @@ var pageLoad = function(cSize)
 <li>Alan Taylor's (?) demo at <a href="http://www.kokogiak.com/default.asp">Kokogiak</a> about <a href="http://www.kokogiak.com/gedankengang/2006/05/consuming-amazons-web-api-directly.html">Consuming Amazon's Web API Directly with Javascript (via JSON and XSLT)</a>.</li>
 </ul>
 <p>I have tweaked the Amazon XSLT demo to use the Amazon UK webservice and pull down my <a href="http://webservices.amazon.co.uk/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=0P7A6QBN369NCGYXWBR2&Operation=ListLookup&AssociateTag=robofestauk-21&ListType=WishList&ListId=2ROK7CTRHGK11&ResponseGroup=Request,ListFull,Medium">wishlist</a>.
-This <a href="./wishlist2json.xsl">XSLT file</a> converts the webservice result to JSON,
+This <a href="http://blogs.open.ac.uk/Maths/ajh59/wishlist2json.xsl">XSLT file</a> converts the webservice result to JSON,
 which is then pulled in to this page. A variant of the Kokogiak script then builds various 
 arrays related to my wishlist items which are used by the carousel component to display the results.</p>
 <!-- Carousel Structure -->

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Displaying Google Calendar Events on a Map</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012583.html" title="Facebook Now Offering App Stats, of a Sort..." />
+
+<link rel="next" href="./012617.html" title="Google Generation JISC Report" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012583.html">&laquo; Facebook Now Offering App Stats, of a Sort...</a> |
+
+<a href="./">Main</a>
+| <a href="./012617.html">Google Generation JISC Report &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 26, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Displaying Google Calendar Events on a Map</h3>
+
+<p>If you use Google Calendar, you'll probably know that you can add a location for every calendar event; you may even know that you can then click through to that location on a Google map (see the <span style="font-style: italic; text-decoration: underline;">map</span> link?):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2221439456/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2207/2221439456_9d8ef46c59.jpg" alt="2008-01-26_1939" style="border: 0pt none ;" height="167" width="401" /></a></p>
+
+<p>Last night, I was having a little tinker putting together a calendar of the public consultation events regarding the Isle of Wight council proposals for the future of school education on the Island. Using a Google Calendar makes it easy to embed the calendar on an any web page, which means the calendar becomes a reusable resource for other people, if they want to display such a calendar.</p>
+
+<p>From the Calendar settings:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2220656805/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2284/2220656805_5a074683b5.jpg" alt="2008-01-26_1945" style="border: 0pt none ;" height="191" width="287" /></a></p>
+
+<p>you can grab some embed code for the calendar:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2220664195/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2163/2220664195_8ef66c7180.jpg" alt="2008-01-26_1948" style="border: 0pt none ;" height="121" width="500" /></a></p>
+
+<p>which can then be pasted in your own web pages (feed readers, click thru to see the embedding on the original page...):</p>
+
+<p><iframe src="http://www.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showTabs=0&amp;mode=AGENDA&amp;height=540&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=u0aq4g3cjf6g6nnesa8mv0l77g%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FLondon" style="border-width: 0pt;" frameborder="0" height="550" scrolling="no" width="300"></iframe></p>
+
+<p>The above calendar is actually being pulled in to the page live from Google Calendar. You can add the calendar to your own Google calendar by clicking the "+ Google calendar" button.</p>
+
+<p>The calendar can also be found here: <a href="http://www.google.com/calendar/embed?src=u0aq4g3cjf6g6nnesa8mv0l77g%40group.calendar.google.com&amp;ctz=Europe/London&amp;showDate=0&amp;showTabs=0&amp;mode=AGENDA">IW Schools Reorganisation Counsulation Evenings</a></p>
+
+<p>Also in the Calendar settings are some links to various output feeds from the calendar (if you have set the sharing permissions appropriately - calendars can be publi, private, or shared with certain people):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2220676723/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2091/2220676723_6923f130fa.jpg" alt="2008-01-26_1954" style="border: 0pt none ;" height="63" width="279" /></a></p>
+
+<p>The XML feed is essentially an RSS feed. Now I happen to know that if you paste a geoRSS feed in to a Google Maps search box, and hit search, the map will plot the geo-marked up locations.</p>
+
+<p>A geoRSS feed is one that contains location information (latitude and longitude co-ordinates, typically), so I assumed that the Google Calendar feed would support geoRSS and encode the locations of the events listed in the calendar. After all, the map link suggests Google knows how to do this!;-)</p>
+
+<p>So I posted the XML feed link into Google maps - and no joy: no geotags :-(</p>
+
+<p>Enter Yahoo Pipes - and a 30s pipe to <a href="http://pipes.yahoo.com/ouseful/geocal">geocode a Google calendar feed</a>:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2221478664/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2356/2221478664_ee9fc09bb5.jpg" alt="2008-01-26_1959" style="border: 0pt none ;" height="221" width="500" /></a></p>
+
+<p>Running the pipe actually displays the events on a Yahoo map, but you can also get hold of a KML feed URL:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2221484878/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2376/2221484878_2f877cd196.jpg" alt="2008-01-26_2002" style="border: 0pt none ;" height="277" width="500" /></a></p>
+
+<p>KML is like RSS on steroids for syndicating geographical related data. You can use it to display pointers in Google Earth, for example, and also paste it into a Google maps search box (then hit "search Maps"), and maybe grab the embed code for the Google map, displaying the calendar events, via a Yahoo pipe):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2221492218/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2039/2221492218_1694af6d41.jpg" alt="2008-01-26_2006" style="border: 0pt none ;" height="315" width="500" /></a></p>
+
+<p>Here's the map of <a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Dd696db6de1dda5c86fc8fa59bbef6aec%26_render%3Dkml%26urlinput1%3Dhttp%253A%252F%252Fwww.google.com%252Fcalendar%252Ffeeds%252Fu0aq4g3cjf6g6nnesa8mv0l77g%252540group.calendar.google.com%252Fpublic%252Fbasic&amp;ie=UTF8&amp;z=11&amp;om=0">IOW schools reorganisation consultation evenings</a>, pulling the feed in live from Google calendar via a Yahoo pipe, and then plotting the location of each event on the embedded, interactive map (click on one of the balloons to see... feed readers, you'll need to click thru...):</p>
+
+<p><iframe marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Dd696db6de1dda5c86fc8fa59bbef6aec%26_render%3Dkml%26urlinput1%3Dhttp%253A%252F%252Fwww.google.com%252Fcalendar%252Ffeeds%252Fu0aq4g3cjf6g6nnesa8mv0l77g%252540group.calendar.google.com%252Fpublic%252Fbasic&amp;ie=UTF8&amp;om=0&amp;s=AARTsJo6Gl5NKgDzJo22XrKZHdPg4qVCHA&amp;ll=50.6789,-1.303518&amp;spn=0.304572,0.583649&amp;z=10&amp;output=embed" frameborder="0" height="350" scrolling="no" width="425"></iframe><br />
+<small><a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Dd696db6de1dda5c86fc8fa59bbef6aec%26_render%3Dkml%26urlinput1%3Dhttp%253A%252F%252Fwww.google.com%252Fcalendar%252Ffeeds%252Fu0aq4g3cjf6g6nnesa8mv0l77g%252540group.calendar.google.com%252Fpublic%252Fbasic&amp;ie=UTF8&amp;om=0&amp;ll=50.6789,-1.303518&amp;spn=0.304572,0.583649&amp;z=10&amp;source=embed" style="color: rgb(0, 0, 255); text-align: left;">View Larger Map</a></small></p>
+
+<p>So there you have it - a quick mashup to display Google Calendar events in an embedded calendar, or on an embedded map.</p>
+
+<p>PS it's maybe worth noting that this post took me maybe half and hour to put together (with interruptions). Building the mashup took less than 5 mins, partly because I knew what sorts of mashup opportunity Yahoo pipes, and Google Calendars and maps offer. The app as described above is completely disposable - it took so little time to put together it doesn't really matter if no-one ever makes use of it. But if they want to, they can.<br />
+Writing this up as an academic conference paper, on 'using Google tools to support participatory democracy', or something similarly worthy sounding, would take maybe half a day and no-one would read it... go figure...</p>
+
+<p>PPS the call to the Yahoo pipe sometimes times out in the map. To guarantee the map displaying the KML feed, you could always save the KML feed as a KML file, then upload it somewhere and use that URL in the Google Map search box... </p>
+
+<p>PPPS see how I used Google MyMaps to display each of the three school closure options: <a href="./012526.html">Mapping Proposed School Closure Plans on the Isle of Wight</a></p>
+
+<p><em>del.icio.us user?</em> Tags all over the place? Check out this <a href="./012581.html">delicious stemming pipe hack</a></p>
+
+<p><em>Twitter user?</em> Try this: <a href="./012696.html">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</a></p>
+
+<p>PS I've put together a little script that simplifies usage by taking a Google Calendar ID and then automatically <a href="./013608.html">plotting a Map and calendar side by side</a>.</p>
+
+<p>PPS here's a <a href="./013846.html">Google calendar events map embed code generator</a> - give it a gCal id and get an iframe containing a map view of the events in return...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/yahoopipe" rel="tag">yahoopipe</a>, <a href="http://technorati.com/tag/%20pipes" rel="tag"> pipes</a>, <a href="http://technorati.com/tag/%20google" rel="tag"> google</a>, <a href="http://technorati.com/tag/%20maps" rel="tag"> maps</a>, <a href="http://technorati.com/tag/%20georss" rel="tag"> georss</a>, <a href="http://technorati.com/tag/%20gcal" rel="tag"> gcal</a>, <a href="http://technorati.com/tag/%20calendar" rel="tag"> calendar</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 26, 2008 08:23 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>"Writing this up as an academic conference paper, on 'using Google tools to support participatory democracy', or something similarly worthy sounding, would take maybe half a day and no-one would read it..."</p>
+
+<p>... but it would get you a lot more academic kudos and credit than a blog post.</p>
+
+<p>"go figure..."</p>
+
+<p>Indeed. :-)</p>
+<span class="comments-post">Posted by: <a href="http://dougclow.wordpress.com">Doug Clow</a> at January 28, 2008 04:52 PM</span>
+</div>
+<div class="comments-body">
+<p>Hello!</p>
+
+<p>Awesome work on this!  My organization was looking for something that did just this!!</p>
+
+<p>I do have a question though..  we have multiple google calendars which hold different information which we would like to have combined on a single map.  Could the pipe be tweaked so i could input say 10 different xml feeds into one pipe?</p>
+
+<p>Any help is greatly appreciated!</p>
+
+<p>Gitesh</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;gitesh&#64;progressiveleaders&#46;org">Gitesh Gohel</a> at March  6, 2008 07:53 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

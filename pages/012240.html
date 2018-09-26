@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Tinkering with Google Charts</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012230.html" title="Email and Attachments" />
+
+<link rel="next" href="./012242.html" title="BBC Web   2.0 - Watch Again Online, Plus a Personalised Homepage" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012230.html">&laquo; Email and Attachments</a> |
+
+<a href="./">Main</a>
+| <a href="./012242.html">BBC Web   2.0 - Watch Again Online, Plus a Personalised Homepage &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">December 16, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Tinkering with Google Charts</h3>
+
+<p>As it's the weekend, I've been having an bit of an extended play with the <a href="http://code.google.com/apis/chart/">Google charts API</a> and some data from the <a href="./010855.html">Course Profiles Facebook app</a>. The app now has just over 2,500 users, so while the data is still sparse there is almost enough to start putting together some proof of concept reports.</p>
+
+<p>Having been introduced to the Python language by the O'Reilly <a href="http://www.amazon.co.uk/Programming-Collective-Intelligence-T-Segaran/dp/0596529325/?tag=ouseful-21"><em>Programming Collective Intelligence</em></a> book, examples from which I've already had a bit of a tinker with (see <a href="./012128.html">Hierarchical Course Clusters from Course Profiles App</a>, for example), it seemed sensible to carry on it that language putting together the reports. A quick scout around turned up a <a href="http://pygooglechart.slowchop.com/">Python wrapper for the Google Charts API</a>, which makes creating chart URLs pretty straightforward (here's a more general list of <a href="http://groups.google.com/group/google-chart-api/web/useful-links-to-api-libraries">programming language wrappers for the Google Chart API</a>).</p>
+
+<p>The first function I wrote generates a URL for a pie chart showing the distribution of users on a particular course according to the specified course status. The caveat heere is that users who don;t engage withthe course profiles app much will have all their courses flagged as 'current' by default.</p>
+
+<p><a href="http://pygooglechart.slowchop.com/"></a><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=400x160&amp;chd=s:6oL&amp;chtt=T175%20on%20Course%20Profiles%20%28109%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=Completed|Current|Future" src="http://chart.apis.google.com/chart?cht=p&amp;chs=400x160&amp;chd=s:6oL&amp;chtt=T175%20on%20Course%20Profiles%20%28109%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=Completed%7CCurrent%7CFuture" /></p>
+
+<p><br />
+The next function I put together was one that takes in a course code, <em>two</em> status identifiers, and a threshold value, and then produces charts like this one:</p>
+
+<p><img alt="The image “http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240|M150|M255|M257|M263|MU120|M366” cannot be displayed, because it contains errors." src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240%7CM150%7CM255%7CM257%7CM263%7CMU120%7CM366" /></p>
+
+<p>The description of this chart is as follows: "for students who have said they have <em>completed</em> <em>T175</em>, the chart displays those courses they have said they are <em>Currently</em> taking (subject to at least <em>3</em> people having said they are currently taking each course shown).</p>
+
+<p>This type of report reveals (within the context of the Course Profiles app) the relationship between a stated course (declared as "completed", "current" or "future") and other courses declared with a particular status ("completed", "current" or "future") by the same user. For each course code, there are thus nine possible status combination reports, each subject to a particular reporting threshold.</p>
+
+<p>Here are a few more examples...</p>
+
+<p>A report for DSE212 that shows, for students who have said they are currently taking DSE212, what courses they have said they intend to take in the future (subject to at least 4 people having said they intend to take the course in the future):</p>
+
+<p><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:QPPOHEJE&amp;chtt=Current%20DSE212%20users%20stating%2084%20Future%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=ED209|DD303|DD307|SD226|DZX222|D315|DXR222|DSE232" src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:QPPOHEJE&amp;chtt=Current%20DSE212%20users%20stating%2084%20Future%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=ED209%7CDD303%7CDD307%7CSD226%7CDZX222%7CD315%7CDXR222%7CDSE232" /></p>
+
+<p></p>
+
+<p>A report that shows, for students who have said they are currently taking DSE212, what courses they have said they have already completed (subject to at least 4 people having said they've completed the course):</p>
+
+<p><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:lGEGFE&amp;chtt=Current%20DSE212%20users%20stating%2062%20Completed%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100|DD121|S193|S103|MU120|SK185" src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:lGEGFE&amp;chtt=Current%20DSE212%20users%20stating%2062%20Completed%20courses%20%28min%204%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100%7CDD121%7CS193%7CS103%7CMU120%7CSK185" /></p>
+
+<p></p>
+
+<p><br />
+A report that shows, for students who have said they are intend to take DSE212 in the future, what courses they have said they are currently taking:</p>
+
+<p><img alt="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DBBBBBBB&amp;chtt=Future%20DSE212%20users%20stating%2010%20Current%20courses%20%28min%201%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100|ED209|U212|Y158|Y157|S180|DD122|Y156" src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DBBBBBBB&amp;chtt=Future%20DSE212%20users%20stating%2010%20Current%20courses%20%28min%201%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=DD100%7CED209%7CU212%7CY158%7CY157%7CS180%7CDD122%7CY156" /></p>
+
+<p>As mentioned above, the user numbers of the application are still relatively small, which means the above reports are interesting only insofar as they suggest what sorts of reports the data aggregated by the app are possible.</p>
+
+<p>Of course, the OU as an institution has access to comprehensive, authoritative data which can be mined in the above ways... I'm just not sure that: a) I have access to that data, or: b) I am allowed to write arbitrary queries on it...<br />
+   <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/courseprofiles" rel="tag">courseprofiles</a>, <a href="http://technorati.com/tag/%20gchart%20api" rel="tag"> gchart api</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at December 16, 2007 03:41 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>We used the API to create a really simple loan repayment calculator for a client.</p>
+
+<p>Been browsing around to see what other people have done. Doesn't have the same finesse as your examples but its still mildly useful.</p>
+
+<p>http://www.loanexplorer.co.uk/loan-repayment-calculator/</p>
+<span class="comments-post">Posted by: <a href="http://www.loanexplorer.co.uk/loan-repayment-calculator/">Tom Wilkinson</a> at April  9, 2008 03:45 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Roundtripping in StringLE</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./009009.html" title="OU Library Traveller - eBook Greedy" />
+
+<link rel="next" href="./009057.html" title="OU Region Identifier Web Service" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./009009.html">&laquo; OU Library Traveller - eBook Greedy</a> |
+
+<a href="./">Main</a>
+| <a href="./009057.html">OU Region Identifier Web Service &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">December 08, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Roundtripping in StringLE</h3>
+
+<p>One of the 'emergent' features I've discovered about <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a> is the ability to do roundtripping - sort of.... By this I mean it's possible to use a tool in the stringle context to create a resource that you can bookmark and immediately gain access to from the StringLE navigation panel.</p>
+
+<p>For example: if I add a feed to one of my delicious bookmark tags to the OPML file that is used to provide navigation via the StringLE embedded Grazr widget, I can create a resource and bookmark it with that tag (often from the resource creation application directly), at which point it becomes  available via the navigation widget (err, that's not strictly true - the feed may need updating in the widget).</p>
+
+<p>As well as being personally useful, this approach can be quite powerful in a social or collaborative context, where users can create - and share links to - new resources in real time, and in one place.</p>
+
+<p>Using bookmarks in this way - as some sort of cross between a database and a live, cross-resource navigation menu - is actually quite appealing to me, particularly when resource creation tools are tightly coupled to the bookmarking system via a 'bookmark this creation' link. </p>
+
+<p>So I'm now on the lookout for apps that let you create resources and bookmark them directly into delicious ;-)</p>
+
+<p>I'm also trying to think up a novel way of using <a href="http://simile.mit.edu/wiki/Exhibit">Exhibit</a>, "a lightweight structured data publishing framework that lets you create web pages with support for sorting, filtering, and rich visualization".</p>
+
+<p>For example, if you have a data source - such as bibliographic information in Bibtex format - you can use the Exhibition toolkit to produce <a href="http://haystack.csail.mit.edu/publications.html">your own interface to the Bibtex data</a>.</p>
+
+<p>What happens is that "Exhibit essentially removes the need for a database or a server side web application" by taking the source document, treating it's contents as data, and putting a search and filter interface over the top of it.</p>
+
+<p>Now I wonder, can I give it a <a href="http://searchfeedr.com">searchfeedr</a> like back-end and use it to produce a single interface to user selected data sources?</p>
+
+<p>Speaking of data, there's a data mashup tool just appeared on the scene too: <a href="http://www.swivel.com/">Swivel</a> ("YouTube for data" - described prelaunch in TechCrunch <a href="http://www.techcrunch.com/2006/12/05/swivel-to-launch-this-week-communitize-your-data/">here</a>.).</p>
+
+<p>The idea seems to be that users upload their data, then anyone can remix it/plot it against other data sets (as long as the data shares at least one common dimension, such as time, I guess).</p>
+
+<p>However, at the moment at least, it seems you can't directly plot data sets against each other withing the site limits. Unless I'm missing something obvious, it seems you can only create a graph that also includes data you have uploaded (one way of getting data into the system, I guess). The obvious workaround is to download someone else's data set (which you can do) and upload it back, I guess, then use it as the basis of your own graph.</p>
+
+<p>Here's an <a href="http://www.makeyougohmm.com/20061206/4020/">example of how to create a Swivel chart</a> (I dont have time to build one myself just now:-(</p>
+
+<p>With online spreadsheets making APIs available (like <a href="http://code.google.com/apis/gdata/spreadsheets.html">Google Spreadsheets</a> and <a href=""://writer.zoho.com/public/help/zohoapi/fullpage">Zoho sheets</a>), it'll be interesting to see how long it takes for some online spreadsheets'n'Swivel mashups to appear on the scene.</p>
+
+<p>What would be really neat would be to see <a href="http://www.liveclipboard.org/">Live Clipboard</a> functionality appearing on some of these sites, so users could easily cut and paste data between them...</p>
+
+<p>I'd also quite like to see support for geo-data on Swivel, and integration with generic mapping APIs like <a href="http://www.mapstraction.com/">mapstraction</a>. Then maybe some animation tools like <a href="http://tools.google.com/gapminder/">Gapminder</a>;-)</p>
+
+<p>Now I wonder, will <a href="http://ning.com">Ning</a> get into this area too? It'd be a powerful addition to a prototypical NingLE (which I am really going to have to start thinking about. properly..)?</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at December  8, 2006 09:10 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

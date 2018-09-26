@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: delicious Stemming Pipes Demo</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012576.html" title="OU VLE Update - VLE version 2" />
+
+<link rel="next" href="./012583.html" title="Facebook Now Offering App Stats, of a Sort..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012576.html">&laquo; OU VLE Update - VLE version 2</a> |
+
+<a href="./">Main</a>
+| <a href="./012583.html">Facebook Now Offering App Stats, of a Sort... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 25, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">delicious Stemming Pipes Demo</h3>
+
+<p>    I was just having a look through the chaos that is my delicious tag list, wondering when delicious were going to start supporting stemming in tag based link lookups (e.g. being able to enter <span style="font-style: italic;">http://del.icio.us/psychemedia/game*</span> to look up links tagged <span style="font-style: italic;">game</span> or <span style="font-style: italic;">games</span>) when I realised there's probably quite an easy fix - use a feed merging tool.</p>
+
+<p>So here's a 2 minute proof of concept (I've already spent longer typing this post than it took to build the demo!) - a proof of concept <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=KOZI3G3L3BGP6D8wmLokhQ">Yahoo pipe to support trivial delicious stemming</a>:<br />
+ <br />
+<a href="http://www.flickr.com/photos/psychemedia/2218428485/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2181/2218428485_40a09d9451.jpg" alt="2008-01-25_1751" style="border: 0pt none ;" height="343" width="500" /></a></p>
+
+<p><br />
+This first attempt lets you type in <span style="font-style: italic;">tag*</span> to search over <span style="font-style: italic;">tag</span> or <span style="font-style: italic;">tag<span style="font-weight: bold;">s</span></span>.</p>
+
+<p>I really want to be ablt to enter the tag <span style="font-style: italic;">games</span> and pull things tagged <span style="font-style: italic;">game</span> or <span style="font-style: italic;">games</span> though, so here's a tweak:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2219239222/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2154/2219239222_1f8a8428eb.jpg" alt="2008-01-25_1801" style="border: 0pt none ;" height="155" width="500" /></a></p>
+
+<p>If i can find a handy list  of stemming regexps, I'll maybe work on maintaining this pipe ;-)</p>
+
+<p>PS I've tweaked the pipe so it replaces the <span style="font-style: italic;">last</span> * in the URL string...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/pipes" rel="tag">pipes</a>, <a href="http://technorati.com/tag/yahoo%20pipe" rel="tag">yahoo pipe</a>, <a href="http://technorati.com/tag/%20delicious" rel="tag"> delicious</a>, <a href="http://technorati.com/tag/%20stemming" rel="tag"> stemming</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 25, 2008 06:07 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Very interesting - it seems to me an investigation into other ways of expanding the search (list of synonyms, tags that most commonly occur with the tag in the URL?) would also be worth a look - I might have a play if I get a moment.</p>
+
+<p>Anyway, for stemming algorithms you could have a look at http://tartarus.org/~martin/PorterStemmer/<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://www.meanboyfriend.com/overdue_ideas">Owen Stephens</a> at January 28, 2008 04:56 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

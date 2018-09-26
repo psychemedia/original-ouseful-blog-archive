@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: ORO Search by Name Pipes Interface</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014962.html" title="Dirty Name Data in the OU Open Repository Online" />
+
+<link rel="next" href="./014976.html" title="National Statistics API - Discovery services AJAX demos" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014962.html">&laquo; Dirty Name Data in the OU Open Repository Online</a> |
+
+<a href="./">Main</a>
+| <a href="./014976.html">National Statistics API - Discovery services AJAX demos &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">July 07, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">ORO Search by Name Pipes Interface</h3>
+
+<p>Over the last few weeks, I've been playing with various Javascript visualisation libraries that work all sorts of magic if you throw data at them in the right way. But in order to do that, you often have to get the data from a third party location into the web page that contains the visualisation code...</p>
+
+<p>One of the easiest ways of doing this is to load a Javascript object into the page using JSON - Javascript Object Notation. In the same way that a Javascript library can be loaded into a web page using the HMTL <tt>&lt;script&gt;</tt> tag, a JSON feed can be pulled into the page in the same way.</p>
+
+<p>For example, the following pulls a JSON feed into a page from a Yahoo Pipe:</p>
+
+<p><tt>&lt;script type="text/javascript" src="http://pipes.yahoo.com/pipes/pipe.run?_id=vhMha5tK3RGAl2xDouNLYQ&amp;_render=json&amp;_callback=parseJSON&amp;name=pillinger"&gt;&lt;/script&gt;</tt><br />
+ <br />
+Yahoo Pipes originally started out as a service for processing RSS feeds, but over the months it has become an increasingly general purpose mashup tool. Whilst it excels at processing RSS/Atom syndication feeds, it can also consume CSV files (comma separated variable files, a common output format for simple spreadsheet data), JSON feeds, XML and web pages, and publish RSS or JSON formatted data (the JSON data may be far richer than the RSS output).</p>
+
+<p>The ability to consume HTML pages means that it can be used as a simple screen scraper. That is, it can be used to literally 'scrape' data from a web page.</p>
+
+<p>So for example, consider the case of the OU <a href="http://oro.open.ac.uk">Open Repository Online (ORO) service</a>, which acts as a repository for research publications authored by OU staff. Whilst there are several RSS feeds available from the service (which makes the information portable), such as new submission feeds, ORO still doesn't appear to offer an <a href="http://www.opensearch.org/Home">OpenSearch RSS service</a> that would allow search query URLs to be constructed in an advertised and standard way, and search results to be pulled from the service as RSS. Which means that to build a service around ORO search results, we need to scrape the results listings off the search results web page...</p>
+
+<p>Which is where Yahoo Pipes comes in: <a href="http://pipes.yahoo.com/ouseful/oroauthorsearch">OU ORO Author Search pipe</a><br />
+<ol><li>do an author search on ORO, and grab the results page URL...</li><br />
+<li>create a new Yahoo Pipe, and place a <em>URL Builder</em> block on the canvas. Paste the ORO search results page into the <em>Base</em> field and hit return - the block will split the URL up into its component parts;</li><br />
+<li>we want to let the user search for a particular name using the pipe, so drag a <em>Text Input</em> block onto the canvas and name it appropriately; wire the output of this block to the form element in the URL Builder block that contained the original name you searched for.</p>
+
+<p><a href="http://pipes.yahoo.com/ouseful/oroauthorsearch" title="Yahoo ORO author search pipe"><img src="http://farm4.static.flickr.com/3280/2645878054_de68679ca9.jpg" alt="oro pipe step 1" height="297" width="500" /></a></li><br />
+<li>Havng constructed the URL of search results page for a particular author, fetch the page into the pipe. The <em>Fetch Page</em> block also allows you to 'segment' the page into a set of separate item, such as one item per search result. By inspecting the HTML source of the page, try to find unique words or phrases that bound the whole of the page area that you want to extract, as well as text strings that identify each element you want to extract as a separate item. So for example, here's an ORO search results page (browser view):</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3280/2645887300_5486caf5aa.jpg" alt="ORO author search results" height="201" width="500" /></a></p>
+
+<p>and here's the source HTML:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3189/2645891572_456d09f85e.jpg" alt="ORO authro search view source" height="433" width="500" /></a></p>
+
+<p>In the pipe, I've tried to pull out just the bit of the page that corresponds to the search results, and within that block, identify some feature that lets each search result be indentified as a separate item:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645054911/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3281/2645054911_90d863e4d9.jpg" alt="ORO author search pipe 2" height="128" width="436" /></a></li><br />
+<li>Just to ensure that I only pull out itens that contain search results, I'm going to filter out any items that don't contain the name I was searching for:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645070441/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3063/2645070441_f7ec603b94.jpg" alt="ORO author search pipe 3" height="134" width="500" /></a></p>
+
+<p>Here's the output of the first element in the pipe so far (browser view - the 'source view' is actually HTMLcode):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645076093/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3260/2645076093_458b5621c0.jpg" alt="ORO author search pipe 4" height="69" width="500" /></a></li><br />
+<li>The next step is to prepare a version of the search results that can be output as an RSS feed. RSS feeds have a standard structure. In the most straightforward case, each RSS feed item contains a title, description and link/URL - so we make a copy of each results item in a placeholder for each of those elements (the full HTML code is displayed in the top level element (which is just a reflection of the contents of the title element):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645080551/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3015/2645080551_ca169b2d38.jpg" alt="ORO author search pipe 5" height="307" width="440" /></a></li><br />
+<li>Now we do some magic using regular expressions. Regular expressions provided a standardised way for doing complex search and replace operations. In this case, we process the contents of each of the title, link and description fields in order to extract different information from them:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645083433/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3072/2645083433_61fa0356c3.jpg" alt="ORO author search pipe 6" height="248" width="500" /></a></p>
+
+<p>(The final regular expression strips out the html tags from the description field.)</li><br />
+<li>The final step loops through the description element of each feed item and separates the authors named in the description field into a separate list of authors:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2645089937/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3056/2645089937_0f6e739d6e.jpg" alt="ORO author search pipe 7" height="227" width="500" /></a></li></ol><br />
+If we now run the pipe, we can get an RSS feed out containing the ORO search results, as well as a more comprehensive JSON feed which aslo contains a list of separatley identified authors.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oroyahoo%20pipes" rel="tag">oroyahoo pipes</a>, <a href="http://technorati.com/tag/%20pipes" rel="tag"> pipes</a>, <a href="http://technorati.com/tag/%20screenscraper" rel="tag"> screenscraper</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at July  7, 2008 12:12 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

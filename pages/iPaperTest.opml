@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<opml version="2.0">
+	<head>
+		<title>
+			Simple scribd iPaper embed test
+		</title>
+		<ownerName>
+			psychemedia
+		</ownerName>
+		<ownerID>
+			http://www.grazr.com/files/psychemedia
+		</ownerID>
+
+		<dateModified>
+			Fri Feb 29 2008 12:34:23 GMT+0000 (BST)
+		</dateModified>
+		<dateCreated/>
+
+	</head>
+	<body>
+		<outline text="&lt;object codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0' id='embedded_flash_351701_1ln5mx_object'
+name='embedded_flash_351701_1ln5mx_object' classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' align='middle'	height='500' width='100%'&gt;
+&lt;param name='flashvars' value='&amp;document_id=351701&amp;access_key=clpu7yuocwhxy&amp;page='&gt;		
+&lt;param name='movie'	value='http://documents.scribd.com/ScribdViewer.swf'&gt; 		
+&lt;param name='quality' value='high'&gt; 		&lt;param name='play' value='true'&gt;		&lt;param name='loop' value='true'&gt; 
+&lt;param name='scale' value='showall'&gt;		&lt;param name='wmode' value='opaque'&gt; 		&lt;param name='devicefont' value='false'&gt;	
+&lt;param name='bgcolor' value='#ffffff'&gt; 		&lt;param name='menu' value='true'&gt;		&lt;param name='allowFullScreen' value='true'&gt; 		
+&lt;param name='allowScriptAccess' value='always'&gt; 		&lt;param name='salign' value=''&gt;	
+&lt;embed flashvars='&amp;document_id=351701&amp;access_key=clpu7yuocwhxy&amp;page=' src='http://documents.scribd.com/ScribdViewer.swf' 
+quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' play='true' loop='true' scale='showall' wmode='opaque'
+devicefont='false' bgcolor='#ffffff' name='embedded_flash_351701_1ln5mx_object' menu='true' allowfullscreen='true' allowscriptaccess='always' 
+salign='' type='application/x-shockwave-flash' align='middle' height='500' width='100%'&gt;&lt;/embed&gt;	&lt;/object&gt;"/>
+		
+	</body>
+
+</opml>
+

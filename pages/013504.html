@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Opening the Box...</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013390.html" title="Scribd iPaper Bookmarklets and Greasemonkey Script" />
+
+<link rel="next" href="./013580.html" title="Mapping School Catchment Areas, Approximately..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013390.html">&laquo; Scribd iPaper Bookmarklets and Greasemonkey Script</a> |
+
+<a href="./">Main</a>
+| <a href="./013580.html">Mapping School Catchment Areas, Approximately... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 22, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Opening the Box...</h3>
+
+<p>One of the key pieces, apparently, in the VLE jigsaw is providing students with an effective e-portfolio system; working out <a href="http://sclater.com/blog/?p=58">How to integrate VLEs/LMSs with other student-facing systems</a> is another; <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2008/02/blog-as-educati.html">interface aesthetics</a> is something that's really important to the user of course, which is why I doubt it is on the list...;-)</p>
+
+<p>So to everyone working in this area, might I suggest you take 20 minutes out of the crazy project development cycle you're probably in worrying about how to do all this, and go and look at <a href="http://box.net">box.net</a> for an example of how to manage files via a browser, and how to integrate with other systems using public APIs.... please...</p>
+
+<p>And to everyone working on repositories, wondering how to get your academics publishing stuff through your repository (i.e. storage service...), go and look at <a href="http://box.net">box.net</a> for an example of how to edit and publish content stored in box.net using third party systems via their public APIs.... please... (you should probably also read what Andy Powell has been saying recently... latest here: <a href="http://efoundations.typepad.com/efoundations/2008/02/repositories-fo.html">Repositories follow-up - global vs. institutional</a>.)</p>
+
+<p>Even if you've looked at box.net before, months ago, go look now - go on, it's Friday, give yoursefl something to dream about over the weekend... ;-)</p>
+
+<p>Here are some pointers:<br />
+<ul><li><a href="http://www.box.net/help/22">easy upload</a> - a trad file dialogue (with a nice skin) or drag'n'drop from the desktop into the browser. Or email the content in...</li><br />
+<li>folder based view - private, shared, or public; even share the contents of a folder via a webpage with the <a href="http://www.box.net/info/widget">Box Widget</a>. </li><br />
+<li>edit your office documents via box's <a href="http://www.box.net/info/document-editing">integration with Zoho</a>; good for workflow, right? Go to your online fielstore and then edit those documents, in a browser, from there, with a single click...</li><br />
+<li><a href="http://www.teknobites.com/2008/02/20/boxnet-integrates-ipaper-technology/">Preview documents </a> you don't want to - or can't - edit, using Scribd's iPaper.</li><br />
+<li>Publish documents to the world via Scribd - wouldn't it be handy if integration with your repository was so sweet (it could be - box.net offer a <a href="http://enabled.box.net/">full API and integration showcase</a>).</li></ul><br />
+Here are the services I have running on my box.net account, for example:</p>
+
+<p><a href="http://www.flickr.com/photos/25451952@N00/2283970606/"><img src="http://farm3.static.flickr.com/2191/2283970606_7003a06a96.jpg" style="border:0" /></a></p>
+
+<p>There are more available, too - see the <a hrewf="http://www.box.net/services/browse">full list of box integrated services</a> (includes, blogging on Blogger and Wordpress, the Picnik photo editor, and Autodesk Freewheel).</p>
+
+<p>PS my <a href="./013390.html">Scribd iPaper bookmarklet</a> (as mentioned in<a href="http://lifehacker.com/358582/convert-document-links-to-viewable-objects-with-ipaper-bookmarklets"> Lifehacker</a>;-) is now back up without the need to get your own publisher key... so you can just grab the bookmarklet and start using it straightaway to view documents online...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 22, 2008 02:26 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Thanks Tony, interesting option to add to our growing list of ePortfolio candidates:<br />
+http://ple-uol.wikispaces.com/ePortfolios</p>
+
+<p>I'm slightly confused about access control son Box.net - do you have to have a paid account to make your portfolio public?<br />
+</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at February 22, 2008 04:26 PM</span>
+</div>
+<div class="comments-body">
+<p>As I understand it, access control is as follows:</p>
+
+<p>1) You can specify named collaborators, by emailing them an invite using the email address they registered on box.net with. These are collaboration folders and are viewable in your box.net account. If you edit a doc in a collaboration folder, I will see the changes. (See: 'What are collaboration folders?' http://box.net/help/195 )</p>
+
+<p>2) You can make a folder or a file shared/public. There are two ways of doing this for a folder (get link to folder, or get a widget for the folder) and one for a single file (get link for this file).<br />
+Getting a link: a) makes the item shareable; b) makes it public via that url in a box.net 'sign up now' wrapper. The widget provides a public, read only view of the contents of the folder that you can embed in any web page.</p>
+
+<p>The above services are free. There is a pay-to-play service, which provides a link directly to the file (so no box ad wrapper round it), and allows you to password protect it (see 'Direct links' http://www.box.net/help/32 )</p>
+
+<p>Collaborators can be organised in subgroups (i haven't played with this yet, though - see here: http://www.box.net/help/203 )</p>
+
+<p>Users also have a public box - I guess anything put into this is public by default?</p>
+
+<p>If anyone from box.net wants to chip in and correct any misunderstanding on my part, please feel free :-)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at February 22, 2008 06:31 PM</span>
+</div>
+<div class="comments-body">
+<p>On the other hand:<br />
+http://skydrive.live.com/</p>
+<span class="comments-post">Posted by: <a href="http://scienceoftheinvisible.blogspot.com/">AJ Cann</a> at February 22, 2008 07:56 PM</span>
+</div>
+<div class="comments-body">
+<p>But how well does skydrive integrate with other online systems?</p>
+
+<p>If the portfolio is just a filestore/filesystem, then fair enough (maybe).</p>
+
+<p>But as far as I know, box.net is one of the few sites that's showing for real what you can do with API integration in this area...</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at February 22, 2008 09:24 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

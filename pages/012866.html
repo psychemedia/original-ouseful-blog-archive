@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: A "Google MyMaps RSS editor" (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012825.html" title="OpenLearn Dynamic Custom Search Engine" />
+
+<link rel="next" href="./012936.html" title="MyMaps GeoBlogger - Blogging From Google Maps" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012825.html">&laquo; OpenLearn Dynamic Custom Search Engine</a> |
+
+<a href="./">Main</a>
+| <a href="./012936.html">MyMaps GeoBlogger - Blogging From Google Maps &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 07, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">A "Google MyMaps RSS editor" (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)</h3>
+
+<p>One of the handy things about Google MyMaps is that you can use the map to add markers to particular locations on a map, save the markers to a named MyMap, and obtain a link to "View [the markers] in Google Earth".</p>
+
+<p>The Google Earth link is actually a link to a KML file that in turn points to a second, network linked KML feed that contains the markers you have plotted on the particular MyMap.</p>
+
+<p>If you want to use a Google map to generate an RSS feed (or more specifically, a geoRSS feed, that contains the latitude and longitude of each marker/item in the RSS feed) which can then be displayed in a generic feed reading application (albeit without making using of the geo information), then I don't Google maps can offer you that...</p>
+
+<p>...but a little Yahoo pipes mashup can...</p>
+
+<p>So for example, take the <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=103763259662194171141.000001119b4bc596127f8&amp;z=2&amp;om=0">World of Hello World</a> map. We can grab the "View in Google Earth" feed and pop it into a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=upZvhxPV3BGkyflyX0sBXw">Yahoo Pipe that will firstly extract the Network Link URL</a> that actually points to the KML feed that contains the individual map items:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247758220/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2129/2247758220_43b78c77c5.jpg" alt="2008-02-07_0058" style="border: 0pt none ;" height="318" width="500" /></a></p>
+
+<p>Secondly, you should notice that the above pipe itself calls a second, nested custom pipe, <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=zDJgJA_V3BGpfsszJxOy0Q">KML2geoRSS</a>. This embedded pipe actually converts the KML feed that contains the individual map items to a geoRSS feed:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2246971699/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2071/2246971699_e4810e72e9.jpg" alt="2008-02-07_0104" style="border: 0pt none ;" height="236" width="500" /></a></p>
+
+<p>The location extractor appears to pull the lat/long info out of the KML feed (and maybe just propagate it for the KML output?) However, for some reason, the Yahoo map display when you run the pipe doesn't appear to plot the markers properly (at least it didn't in my browser; and the same buggy result happens if you try to view the geoRSS feed in a google map:-(</p>
+
+<p>[UPDATE: ok, the lat/long cordinates were being pulled out in the wrong order. I must have tested it one way to get the good map, then changed it and broke it... so it now works fine, but some of the screenshots in this post may be a little misleading; check the actual pipe to see how it's *really* built ;-)]</p>
+
+<p>At one point, I did manage to grab the KML output from the pipe, paste it back in to the Google map search box, hit 'Search' to load in the KML file output from the Yahoo pipe, and display it once again in the Google map:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247771374/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2414/2247771374_4b80651457.jpg" alt="2008-02-07_0107" style="border: 0pt none ;" height="193" width="500" /></a></p>
+
+<p>(This time, the 'View in Google Earth' link actually points directly to the Yahoo pipes KML output.)</p>
+
+<p>BUT - this seems to have stopped working now:-( and I get the same broken display the Yahoo map pipe output gives event though the feed looks right in the Pipes debugger?</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247817130/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2373/2247817130_21dc62e93e.jpg" alt="2008-02-07_0137" style="border: 0pt none ;" height="165" width="324" /></a></p>
+
+<p>(The geocoder/location extractor adds the y:location info, the Point is a remnant of the KML feed.)</p>
+
+<p>So this form of round tripping is all pretty pointless, right? {Especially as it appears to keep breaking in the geocoding stakes:-(] We get a KML file containing a netwrok link from a Google MyMap, stick it into a pipe that pulls out the network link URL and converts the KML file it points to to a geoRSS feed, and then use the Yahoo pipes output filter to get a KML file (which should be pretty similar to the KML file that the network link pointed to...) which can then plot back on the Googlr map...</p>
+
+<p>Hmmm...</p>
+
+<p>But, and here's the possibly useful point, the pipe will also give you an RSS feed that you can display in an RSS display widget, such as Grazr:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/read?view=o&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=upZvhxPV3BGkyflyX0sBXw&amp;_render=rss&amp;kmzURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D103763259662194171141.000001119b4bc596127f8" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=upZvhxPV3BGkyflyX0sBXw&amp;_render=rss&amp;kmzURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D103763259662194171141.000001119b4bc596127f8"></script></div>
+
+<p>Along with the <a href="./012594.html">Plotting Google Calendar Events on a Google Map</a> hack, which lets you use a calendar as a natural editing enviroment for generating date based feeds (that may additionally contain location information that can be exploited to give you a map view of the calendar feed), this current map2rss hack lets you use a map as an editor for creating location enhanced RSS feeds (that appear to be broken in wrt the geo bit:-( that can also be displayed in any old feed reader...</p>
+
+<p>...which may be useful?</p>
+
+<p>PS if you can spot why the geo bit seems to break in the pipe, please let me know :-) [The problem was lat and long getting switched by mistake... oops]</p>
+
+<p>PPS here's a version that does work, though it is a little more involved: <a href="http://pipes.yahoo.com/ouseful/mymap2georss">http://pipes.yahoo.com/ouseful/mymap2georss</a>.</p>
+
+<p>In particular, it embeds a <a href="http://pipes.yahoo.com/ouseful/kml2rss">pipe that calls the KML2geoRSS service to Microsoft</a> that I cloned off <a href="http://pipes.yahoo.com/barryhunter">Barry Hunter</a>. It uses this rather handy call: <em>http://maps.live.com/GeoCommunity.asjx?mkt=en-gb&mapurl=<strong>KMLfileURL</strong></em> to get a geoRSS feed.</p>
+
+<p>So now if you pass a Google MyMaps "View in Google Earth" URL to the <em>http://pipes.yahoo.com/ouseful/mymap2georss</em> Yahoo pipe, the live network linked KML url will be extracted, the KML feed passed through a Microsoft KML2RSS service, and you'll get a valid (and working) geoRSS feed out as a result which can be viewed in any feed reader, and also plotted on any map that accepts a geoRSS feed :-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/googlemaps" rel="tag">googlemaps</a>, <a href="http://technorati.com/tag/%20hack" rel="tag"> hack</a>, <a href="http://technorati.com/tag/%20kml2rss" rel="tag"> kml2rss</a>, <a href="http://technorati.com/tag/%20kml2georss" rel="tag"> kml2georss</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February  7, 2008 01:42 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

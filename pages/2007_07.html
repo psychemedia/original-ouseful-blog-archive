@@ -1,0 +1,1320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: July 2007 Archives</title>
+
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2007_06.html" title="June 2007" />
+
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2007_08.html" title="August 2007" />
+
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+
+</head>
+
+<body>	
+
+<div id="banner">
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_06.html">&laquo; June 2007</a> |
+
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2007_08.html">August 2007 &raquo;</a>
+
+</div>
+
+</div>
+
+<div class="blog">
+
+
+<h2 class="date">July 31, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010502"></a>
+<h3 class="title">Visualising OpenLearn Course Listings</h3>
+
+In the previous post (Visualising OpenLearn Course Listings: Prequel) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be...
+<!--
+<p>In the previous post (<a href="http://blogs.open.ac.uk/Maths/ajh59/010501.html">Visualising OpenLearn Course Listings: Prequel</a>) I described some of the motivation behind looking for visual ways to display OpenLearn course listings, and described how I got OpenLearn course listing data into a format that could be uploaded to the <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes</a> visualisation tool.</p>
+
+<p>In this post, I'll quickly demonstrate several possible visualisations, leaving a fuller discussion of the pros, cons, mertis and otherwise of each technique to a series of later posts.</p>
+
+<p>If you want to create your own visualisations, you can find the data here: <a href="http://services.alphaworks.ibm.com/manyeyes/data/SO2G2IsOtha6f-UCD1p2I2-">OpenLearn unit listing data (as of 28/7/07)</a>.<br />
+<hr><br />
+<h2>OpenLearn Treemap</h2><br />
+Treemaps provide a powerful way of visualising hierarchical data. This view shows how we can navigate organise <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6j-Ure3r2I2-">OpenLearn Units by Subject area</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292437026710690"><img src="http://lh5.google.com/tony.hirst/Rq8CfG4pJKI/AAAAAAAAAQI/x8VfivYuqlU/s800/openlearnManyEyesTreemap1.png" /></a></p>
+
+<p>The labels of each of the smallest inner boxes correspond in this case to OpenLearn unit codes.</p>
+
+<p>You might also notice a further level of structure, specifically boxed groupings of courses <i>within</i> a Subject area (groups of cells bounded by a purple(?) or grey(?) line, rather than the white lines separating individual cells). These represent groupings at the level of the <em>originating</em> Open University course (in many cases, several OpenLearn units are derived from a single Open University course).</p>
+
+<p>The following tree map explores the relationship between originating courses and OpenLearn Units in a clearer way:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292424141808786"><img src="http://lh6.google.com/tony.hirst/Rq8CeW4pJJI/AAAAAAAAAQA/Qe6pJoDW3P8/s800/openlearnManyEyesTreemap2.png" /></a></p>
+
+<p>(To generate new views on the Treemap, just reorder the column headings.)</p>
+
+<p><h2>OpenLearn Matrix View</h2><br />
+The <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha600kvfUt2I2-">OpenLearn Units matrix view</a> can be used to illustrate how many units a particular course has contributed to OpenLearn, ordered by subject area. This view is useful for revealing how originating courses may actually contribute to several different subject areas:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292368307233890"><img src="http://lh5.google.com/tony.hirst/Rq8CbG4pJGI/AAAAAAAAAPo/InhLdiaXCVs/s800/openlearnManyEyesMatrix.png" /></a></p>
+
+<p>The number in each circle is a count of how many units carry each originating course code label.</p>
+
+<p><br />
+<h2>OpenLearn Units Network Diagrams</h2><br />
+Netowork diagrams can be used to show up relationships between elements of the data set. This view shows the relationship between <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6cB-BlHt4I2-">Subject Areas and content analysis generated tags</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292449911612594"><img src="http://lh4.google.com/tony.hirst/Rq8Cf24pJLI/AAAAAAAAAQQ/HOjU0P_mZ_0/s800/openlearnManyEyesNetwork2.png" /></a></p>
+
+<p>Unlike the Treemap visulisation, in which different views can be obtained form a single visualisation widget, different network maps must created as different visualisations by selecting attribute pairs:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292454206579906"><img src="http://lh5.google.com/tony.hirst/Rq8CgG4pJMI/AAAAAAAAAQY/WBdVmhBgkUU/s800/openlearnManyEyesNetworkSelect.png" /></a></p>
+
+<p>This view shows <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha6u-EgZQr2I2-">unit titles arranged around subject areas</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292406961939586"><img src="http://lh6.google.com/tony.hirst/Rq8CdW4pJII/AAAAAAAAAP4/jjlDmIscu-I/s800/openlearnManyEyesNetwork1.png" /></a></p>
+
+<p>Although network diagrams can get cluttered, they can reveal interesting relationships. If OpenLearn users were allowed to tag units, a visualisation of connections between user tags and courses or user tags and subject areas could prove informative.</p>
+
+<p><h2>OpenLearn Tag Cloud</h2><br />
+The Many Eyes Tag Cloud visualisation parses processed input text to procude a tag cloud of the most frequently occuring terms. For example, here is a <a href="http://services.alphaworks.ibm.com/manyeyes/view/SO2G2IsOtha63_kPTZr2I2-">tag cloud of OpenLearn content analysis tags</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093292394077037682"><img src="http://lh3.google.com/tony.hirst/Rq8Ccm4pJHI/AAAAAAAAAPw/yXqKteimKWY/s800/openlearnManyEyesTagcloud.png" /></a></p>
+
+<p>The same visualisation widget can also be used to display clouds for other data fields.</p>
+
+<p>Unfortunately, the tag cloud cannot be used to link to external pages or pop-up large blocks of text (for example, complete unit descriptions would be useful in this case).</p>
+
+<p><hr /><br />
+I'm not sure that the idea behind Many Eyes was to prototype website navigation tools, but if you consider templated websites - like OpenLearn - as big databases, I think it follows naturally!</p>
+
+<p>Time allowing, I'll pop up a series of separate posts, one per visualisation, looking at each view in a little more detail.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010502.html">11:23 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10502" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010501"></a>
+<h3 class="title">Visualising OpenLearn Course Listings: Prequel</h3>
+
+Several weeks ago, I was chatting to Coral Stanion-Nazeri (who's running the OU Clusters "social web tools for practice based learning" project for the Library) about visualising course data. I'd been thinking about visualising OU Courses and Qualifications data (for...
+<!--
+<p>Several weeks ago, I was chatting to Coral Stanion-Nazeri (who's running the <a href="http://ouclusters.ning.com/">OU Clusters</a> "social web tools for practice based learning" project for the Library) about visualising course data. I'd been thinking about visualising OU Courses and Qualifications data (for example, see <a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">here</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/010499.html">here</a>) but Coral was thinking more in terms of improving the user experience on <a href="http://openlearn.open.ac.uk">OpenLearn</a> - courses are listed by topic:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093270889175786498"><img src="http://lh3.google.com/tony.hirst/Rq7u424pJAI/AAAAAAAAAOM/SNglGVKgAqM/s800/openlearnCourses1.png" /></a></p>
+
+<p>and then by unit - often over several pages. The 'advanced' ordering options are useful, but it can still be a chore to discover a particular course:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093270906355655698"><img src="http://lh3.google.com/tony.hirst/Rq7u524pJBI/AAAAAAAAAOU/pP8qyrgWnh8/s800/openlearnCourses2.png" /></a></p>
+
+<p>Navigation within a course unit is also problematic (for example, see <a href="http://blogs.open.ac.uk/Maths/ajh59/009144.html">Navigating LabSpace</a>), but that's another story!</p>
+
+<p>Anyway, Coral had been inspired by the treemap browser for a <a href="http://historywired.com/">collection of museum objects</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093273543465575458"><img src="http://lh5.google.com/tony.hirst/Rq7xTW4pJCI/AAAAAAAAAOk/zHV6u9daLss/s800/historyWiredTreemap.png" /></a></p>
+
+<p>and wondered whether a treemap browser for OpenLearn would aid navigation.</p>
+
+<p>The <a href="http://services.alphaworks.ibm.com/manyeyes/app">Many Eyes</a> visualisation tool doesn't (yet?) support links from data to arbitrary URLs, so it can't be used for navigation, but it maybe can help with discovery, or at least demo the visual component for a possible navigation scheme.</p>
+
+<p>So I thought I'd pop some OpenLearn course info into Many Eyes and see what it looked like.</p>
+
+<p>The first issue was how to get the data in. It just so happens that there are some RSS feeds (due for release in mid-August, I think?) on the acceptance testing server that contain lists of courses by topic area, as well as a complete "all OpenLearn Units" feed. The feeds contain the course title, topic area, and course description for each course, as well as other metadata.</p>
+
+<p>To generate a tabular listing of courses (i.e. to get the data into a format that I could copy and paste into Many Eyes) I ran the feed through a Yahoo pipe and took a JSON feed out, formatting the HTML display using a slightly modified version of the Yahoo pipes <a href="http://blog.pipes.yahoo.com/2007/06/12/working-with-pipes-on-your-web-site/">Working with Pipes on Your Website</a>.</p>
+
+<p>I also used the pipe to add a couple of extra tags to the feed - the OpenLearn Unit code, and and the original course code, both extracted from the unit URL. I also used the Yahoo content analysis tool to generate a some "tags" for each unit, based on a content analysis of the unit description:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093279418980836418"><img src="http://lh5.google.com/tony.hirst/Rq72pW4pJEI/AAAAAAAAAPE/NAaWJ6iqFmM/s800/openlearnFeedAugmented.png" /></a></p>
+
+<p>Here's the processed result:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5093280424003183698"><img src="http://lh3.google.com/tony.hirst/Rq73j24pJFI/AAAAAAAAAPU/jvf0S2aAn3o/s800/openlearnFeedTabular%20view.png" /></a></p>
+
+<p>The tabular layout means that when I select all this data and cut and paste it into Many Eyes, the columns are separated by tabs, just how Many Eyes likes it.</p>
+
+<p>In the next post, I'll give a quick overview of how Many Eyes can be used to visualise the Openlearn course information...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010501.html">09:53 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10501" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 30, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010500"></a>
+<h3 class="title">Live Data Gaming - Sharkrunners</h3>
+
+Way back when, when I was still at school, one of the things that helped me decide to do an electronics undergrad was a document my Dad had brought back from work about some telemetry system or other for the...
+<!--
+<p>Way back when, when I was still at school, one of the things that helped me decide to do an electronics undergrad was a document my Dad had brought back from work about some telemetry system or other for the waste water industry. The idea of live data was somehow compelling, although at that time there was no web, and no real access to real, live data, except via shortwave radio. (I seem to remember Maplin had a kit you could buy to grab the data from a radio set and display it on, err, a ZX81, probably!).</p>
+
+<p>Things are so different now. More and more data is out there, more and more of it is public and more and more of it is live or near live: <a href="http://backstage.bbc.co.uk/data/TravelFeeds?v=138u">transport/travel data</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/006173.html">Formula One live timing data</a>, <a href="http://backstage.bbc.co.uk/data/WeatherFeeds?v=p12">weather data</a>, <a href="http://www.vesseltracker.com/en/Googleearth.html">ship/vessel tracking</a>, <a href="http://www.fboweb.com/antest/ge/intro.aspx?old=1">aircraft tracking</a>, <a href="http://www.ogleearth.com/2007/01/live_schiphol_f.html">aircraft tracking with corresponding noise levels (!)</a>, <a href="http://www.justmagic.com/GM-GE.html">loads of marine related data</a>  and a wealth of <a href="http://www.kcl.ac.uk/schools/sspp/geography/research/emm/geodata">other geodata</a>.</p>
+
+<p>Some of the data has even been turned into persistent online games - that is, games where the game world persists even if aren't playing it at the time, as is the case in many online virtual worlds.</p>
+
+<p>Take <a href="http://dsc.discovery.com/convergence/sharkweek/shark-runners/shark-runners.html">Sharkrunners</a>, for example (via <a href="http://radar.oreilly.com/archives/2007/07/sharkrunners_re.html">O'Reilly Radar</a> et al.)</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905314444452786"><img src="http://lh5.google.com/tony.hirst/Rq2iZm4pI7I/AAAAAAAAAMU/aleUY0wTUEI/s800/sharkrunners1.png" /></a></p>
+
+<p>The aim of the game is to use your (virtual) boat to track - and collect data about - (real) sharks, which have been tagged with GPS receivers. Shark encounters gain you funding dollars, that is, err, points. The game runs in real time, with encounter alerts sent via email. Each encounter earns you grant funding which you can use to upgrade your boat, hire more crew etc.</p>
+
+<p>To add interest, you can play the game with various different agendas:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905331624321986"><img src="http://lh5.google.com/tony.hirst/Rq2iam4pI8I/AAAAAAAAAMc/fH_dIqw2nQc/s800/sharkrunners2.png" /></a></p>
+
+<p>To start with, you get a basic boat, which can be upgraded over time (I think... I haven't played long enough to find out for sure!)</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905340214256594"><img src="http://lh3.google.com/tony.hirst/Rq2ibG4pI9I/AAAAAAAAAMk/i9YKTjcUxX8/s800/sharkrunners3.png" /></a></p>
+
+<p>The game starts by choosing a start location.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905348804191202"><img src="http://lh5.google.com/tony.hirst/Rq2ibm4pI-I/AAAAAAAAAMs/G3m8e0gu0YU/s800/sharkrunners4.png" /></a></p>
+
+<p>Then you're ready to begin:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092905361689093106"><img src="http://lh4.google.com/tony.hirst/Rq2icW4pI_I/AAAAAAAAAM0/ZOiwesrZBrQ/s800/sharkrunners5.png" /></a></p>
+
+<p>(See the <a href="http://dsc.discovery.com/convergence/sharkweek/shark-runners/help.html">full set of Sharkrunners rules</a>.)</p>
+
+<p>The game proceeds by setting waypoints (click on your boat and you get the opportunity to set waypoints, the boat;'s speed, etc.) and then, when a shark encounter happens, taking an action within a three hour window:</p>
+
+<blockquote>Once a waypoint is selected, your boat will begin to move toward that waypoint in real-time.  The movement in Sharkrunners happens at a realistic pace, and certain waypoints can take hours to reach.  Keep an eye on each waypoint's ETA to know how long it will be before your boat reaches that point.  Waypoints can be deleted and re-set at any time (except during a shark encounter). Final waypoints indicate the amount of fuel you will have remaining when you arrive at that location.
+
+<p>...</p>
+
+<p>Shark encounters are triggered whenever one or more sharks are located within the encounter range of the player's boat. Encounters are "modal" - the rest of the game pauses and the player must resolve the encounter before doing anything else.  If the player isn't currently logged into the game when an encounter is triggered the game will generate an email and/or text message based on the selection that player made about how and when they wish to receive these alerts on the Settings Page.</p>
+
+<p>Encounters have a time limit of approximately 3 hours. The player must log into the online game application to resolve the encounter before this time limit expires. Once the time limit has expired, the player can no longer use this opportunity to collect data and must wait for another encounter to be triggered.<br />
+</blockquote></p>
+
+<p>When an encounter is reported you must decide how to handle it, choosing between various sorts of dives (1, 2, 3-person, cage dive) surface observations, "SharkCAM", and so on, depending on the number of people available in the team and the amount of equipment you have managed to accumulate.</p>
+
+<p>This ability to mix live data with virtual game actions that result in plausible encounters and potentially "real" observations is quite compelling, to me.</p>
+
+<p>Tamagotchi "pets" demonstrated how kids could assimilate persistent electronic pets into their life - so maybe persistent science games can provide a driver for creating and maintaining engagement in science based educational activities?</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010500.html">10:47 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10500" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 28, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010499"></a>
+<h3 class="title">More OU Courses and Qualifications  Visualisations - Treemap Views</h3>
+
+In a previous post (Visualising OU Courses and Qualifications), I showed how IBM's Many Eyes data visualisation service could be used to visualise OU course data, in particular the network of relationships between courses of qualifications. There's a meeting at...
+<!--
+<p>In a previous post (<a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">Visualising OU Courses and Qualifications</a>), I showed how IBM's <a href="http://services.alphaworks.ibm.com/manyeyes/home">Many Eyes data visualisation service</a> could be used to visualise OU course data, in particular the network of relationships between courses of qualifications.</p>
+
+<p>There's a meeting at the OU on Monday where one of the agenda items is to look at a "single" curriculum for our ICT and Computing offerings, so I added a few more qualifications to the data list in case anyone wanted to make use of the visualisation to aid the meeting. (I didn't add all the Computing degrees - they seem to have down down the line of spawning "Computing with X" courses which will just clutter the diagram. I leave the visualisation of those qualifications as an exercise for members of the Computing department ;-)</p>
+
+<p>The new data set can be found here : <a href="http://services.alphaworks.ibm.com/manyeyes/data/SWUK0IsOtha6i2Ubhv21I2-">OU ICT C&Q data</a>. Note that is is not authoritative and study choices should not be based on it...</p>
+
+<p>Here are a couple of visualisations based on the data:</p>
+
+<p>- <a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6m2kbpI31I2-">Network visualisation</a><br />
+- <a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6x2U5g_41I2-">Treemap visualisation</a></p>
+
+<p>The network map is a little bit more useful with the additional data - node size now starts to reflects the degree of connectivity of elements:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199385029747602"><img src="http://lh5.google.com/tony.hirst/RqsgXG4pI5I/AAAAAAAAAL0/Qf6DQbZ5Crg/s800/manyeyesNetwork.png" /></a><br />
+<a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6m2kbpI31I2-">Network visualisation</a></p>
+
+<p>It would be handy to be able to associate an additional text column with entries in each data column containing tooltip text for each item (even better if the text data could be pulled in from another, separate table; I've just got a <a href="http://www.freebase.com">freebase</a> account and my first impression is that it's going to be like <a href="http://dabbledb.com/">dabble db</a> on steroids when it comes to cross-referencing and pivoting about data).</p>
+
+<p>The Many Eyes treemap visualisation go the C&Q data is also starting to demonstrate it's power a little more obviously now, as the size of the data set increases: <a href="http://services.alphaworks.ibm.com/manyeyes/view/SWUK0IsOtha6x2U5g_41I2-">Treemap visualisation</a>.</p>
+
+<p>For example, here is a view of courses associated with qualifications, ordered by qualification:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199380734780290"><img src="http://lh4.google.com/tony.hirst/RqsgW24pI4I/AAAAAAAAALs/dVKEFywquQM/s800/manyeyesTreemapQuals.png" /></a></p>
+
+<p>This display makes it easy to see what courses are associated with any particular qualification.</p>
+
+<p>It's also trivial to reorder the treemap to view of the qualifications associated with a particular course:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199359259943778"><img src="http://lh3.google.com/tony.hirst/RqsgVm4pI2I/AAAAAAAAALc/a9iGZjpZEp4/s800/manyeyesTreemapCourses.png" border='0' /></a></p>
+
+<p>This view of the data makes it obvious which courses are key to a large number of programmes  - and hence might also help identify ways of reducing the number of overlapping qualification offerings. </p>
+
+<p>To swap between the two views, just drag and rearrange the data labels in the bar at the top of the screen:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092201120196535202"><img src="http://lh5.google.com/tony.hirst/Rqsh8G4pI6I/AAAAAAAAAMA/0PjHIuNlogg/s800/manyeyesTreemapreorder.png" border='0' /></a></p>
+
+<p>When in a particular view, the search tool allows you to see the distribution of child elements across the parent elements. So for example, in the qualifications view, we can search on a course code to identify which qualifications admit that course as an option:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5092199367849878386"><img src="http://lh5.google.com/tony.hirst/RqsgWG4pI3I/AAAAAAAAALk/VqbSzTlUDu0/s800/manyeyesTreemapSearch.png" /></a></p>
+
+<p>This search highlighting essentially adds another dimension to the visualisation, and one that I think may be useful in a visual course catalogue browser.</p>
+
+<p>It would be even more powerful if it allowed Boolean search terms (<em>this</em> OR <em>that</em>).</p>
+
+<p>Speaking of which - getting authoritative data about our courses and quals is decidedly non-trivial. It seems that different units within the OU have "ownership" over different parts of the data, with the result that people are unwilling to share their data. I also suspect that there are multiple copies of various bits of data (nominally the same) which are separately maintained.... Oops...</p>
+
+<p>There is (at least one!) <a href="http://www.elframework.org/projects/xcri">XCRI</a> project underway at the OU, so it would be nice to think it can help establish an authoritative (and public!) view over the course catalogue for people to innovate with.</p>
+
+<p>To drive innovation, I guess we'd really need to set up an affiliate scheme, too, so that anyone building a course choice catalogue on top of our data can get a referral fee if a student uses it to register on a course. (Maybe the referral fee would be held in escrow until the student completed the course...?)</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010499.html">12:22 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10499" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 26, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010498"></a>
+<h3 class="title">Open Tentacles</h3>
+
+Yesterday, I got what feels like my weekly Amazon delivery (1-click goodness...!) and was surprised to see an OU logo (or sorts) staring back at me from the back cover of one of the books that fell out of the...
+<!--
+<p>Yesterday, I got what feels like my weekly Amazon delivery (1-click goodness...!) and was surprised to see an OU logo (or sorts) staring back at me from the back cover of one of the books that fell out of the package.</p>
+
+<p>The book in question - <a href="http://www.amazon.co.uk/Game-Cultures-Computer-Games-Media/dp/033521357X/ref=sr_11_1/026-1676656-2894836?tag=ouseful-21">Game Cultures: Computer Games as New Media (Paperback)</a> - just happens to be published by the <a href="http://www.openup.co.uk">Open University Press</a>, which I hadn't realised at the time I purchased it (not that that would have made any difference...).</p>
+
+<p>Just like other universities, we have a university press (via McGraw-Hill Education) that publishes books, err, according to what criteria I'm not quite sure? [see comment]</p>
+
+<p><em>Unlike</em> many other institutions, we <em>also</em> enter into co-publication deals for books that will be supplied with some of our courses, a consequence in part of being a distance learning organisation that operates at large scale.</p>
+
+<p>We also co-produce broadcast radio and television with the BBC. Most of the programmes are supported with a page or two on <a href="http://open2.net">Open2.net</a> (which is produced by BBC Worldwide under contract to the OU, I think) and DVDs of some of the programmes - such as <em>Rough Science</em> and presumably <em>Coast</em> - can be bought through <a href="http://www.ouw.co.uk/">Open University Worldwide (OUW)</a>.</p>
+
+<p>OUW also sell course packs (but site navigation is lousy; and guys - check out the favicon...and if I were you, I'd make <em>http://ouw.co.uk</em> point somewhere sensible, too - you'll see why in a minute...)</p>
+
+<p>Corporate Open University Services - <a href="http://www.corous.com">COROUS</a> - is the "company that works with you to develop the full potential of your workforce" by using "an appropriate blend of online and offline learning strategies to enable organisations to develop their human capital"; that is, it's the bit of the OU that provides "learning, tailored to needs, to many of the biggest names in international commerce and UK public services."</p>
+
+<p>That site doesn't respect a dropped <em>www</em> in the url either (I'm thinking: <em>http://corous.com</em> - DON'T TRY IT) with rather more unfortunate consequences than the 404 that <em>http://ouw.co.uk</em> gives:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5091621316791444306"><img src="http://lh3.google.com/tony.hirst/RqkSnG4pI1I/AAAAAAAAALA/7O437UkKsuM/s800/corousHacked.png" /></a></p>
+
+<p>[UPDATE: <a href="http://www.ouworldwide.com/">Open University Worldwide (OUWorldWide)</a> seems to be an internationalist education wing of the university, looking to promote our values, social justice mission and methods across the world.<br />
+<blockquote>Open University Worldwide can put the Open University's wealth of materials, technology and expertise to work to support your interests, capabilities or productivity. We manage the OU's international teaching partnerships, corporate e-learning programmes and educational consulting services. We handle multimedia product sales, distribution and licensing. We foster academic fellowship and mutual exchange.</blockquote>]</p>
+
+<p>The OU also has a raft of other URLs (<em>http://openuniversity.com</em>, <em>http://openlearn.com</em> and <em>http://openlearn.org</em> come to mind), but at the moment they seem to resolve/redirect to the <em>open.ac.uk</em> domain.</p>
+
+<p>[UPDATE: There are also some services we offer that don't have their own domain, but which could do? <a href="http://www.open.ac.uk/validate/index.shtml">Open University Validation Services</a>, for example: "The Open University offers a quality assurance and validation service for higher education organisations which do not have their own degree awarding powers."</p>
+
+<p>Or how about <a href="http://www.open.ac.uk/employers/">CPD Services for Employers</a>. Err, oops - the CPD site is here: <a href="http://www.open.ac.uk/cpd/">Continuing Professional Development</a>]</p>
+
+<p><br />
+PS just because, here are some <a href="http://youtube.com/watch?v=3SNk-iXVEfw"><em>Ozric</em> Tentacles</a>...</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/3SNk-iXVEfw"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/3SNk-iXVEfw" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010498.html">10:40 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10498" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 25, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010496"></a>
+<h3 class="title">Thinking About Course Gameplay</h3>
+
+OUseful blog post 501: Martin's been wondering Is education intrinsically a bit dull?, Marc's been deliver[ing] a stinging condemnation of elearning at his keynote address to the IEEE International Conference on Advanced Learning Technologies on Friday in Niigata, Japan and...
+<!--
+<p>OUseful blog post 501: Martin's been wondering <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/07/is-education-in.html">Is education intrinsically a bit dull?</a>, Marc's been <a href="http://kmi.open.ac.uk/people/marc/2007/07/24/niigata-3-icalt-2007-notes/">deliver[ing] a stinging condemnation of elearning at his keynote address to the IEEE International Conference on Advanced Learning Technologies on Friday in Niigata, Japan</a> and I have been asking myself the question: "if courses are games, have we got the gameplay wrong?"</p>
+
+<p>This question arises partly from my background reading for a new 10 point short course on computer game design and interactive media, which has the deliberately provocative internal working title of "<em>Playing God: Designing Games, Creating Digital Worlds</em>: A hands-on guide to computer game design and interactive media."</p>
+
+<p>Yesterday, I was looking at <a href="http://www.amazon.co.uk/Half-Real-Video-Between-Fictional-Worlds/dp/0262101106?tag=ouseful-21">Half--Real: Video Games Between Real Rules and Fictional Worlds</a> by Jesper Juul, which has an interesting take on the way rules limit, or afford, particular behaviours within a game.</p>
+
+<p>One interesting distinction that was made in the book (and in this <a href="http://www.jesperjuul.net/text/openandtheclosed.html">short paper</a>) is between <em>games of progression</em> and <em>games of emergence</em>:<br />
+<blockquote>[G]ames of progression ... directly set up each consecutive challenge in a game, and games of emergence ... set up challenges indirect because the rules of the game interact. (p67)</blockquote></p>
+
+<p>The earliest adventure games are fine examples of games of progression - the aim is for the player to solve a series of puzzles in a particular order; Pong is used as an example of a game of emergence - every game is different depending on how the game is played (even though the rules are very simple).<br />
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="500" height="500"><br />
+<param name="menu" value="false" /><br />
+<param name="movie" value="http://www.miniclip.com/swfcontent/freegames/battle-pong.swf" /><br />
+<param name="quality" value="high" /><br />
+<embed src="http://www.miniclip.com/swfcontent/freegames/battle-pong.swf" menu="false" quality="high" width="500" height="500" name="acidfactory" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /><br />
+</object></p>
+
+<p>This distinction - simple as it is - got me thinking about courses that have a strong linear narrative (which is how our online courses tend to be constructed): in a sense, they resemble games of progression. In games of porgression, the game designer specifies quite tightly <em>how</em> the game will proceed and what the player must do in order to proceed.</p>
+
+<p>Compare this with resource based and informal models, which arguably have more in common with games of emergence. Games of emergence set up situations that allow the game designer to be surprised by the actions of the player as they proceed through the game - the goal state may be defined, but <em>how</em> the player reaches that goal is not.</p>
+
+<p>Another feature of games of progression is that you probably don't want to keep playing them over and over again, once you've cracked them. Whereas games of emergence can be played again and again, with the player changing their behaviour as their skills develop, in turn changing the possible outcome of the game (and maybe even the way they play it).</p>
+
+<p>Considering courses as games has a lot to offer, I think, particularly in terms of "gameplay" and player reward schedules...</p>
+
+<p>...but first, I have some script marking to do... :-(</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010496.html">07:43 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10496" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 23, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010494"></a>
+<h3 class="title">Making the Most of Google Maps (or not): Gloucestershire Emergency Water Points</h3>
+
+Click here for a map of emergency water points in Gloucestershire (as of 18:00 23/7/07) The most recent, official list is here: Severn Trent Water website Well it seems as if we're in the middle of a national emergency, so...
+<!--
+<p><a href="http://tinyurl.com/2m43m5">Click here for a map of emergency water points in Gloucestershire (as of 18:00 23/7/07)</a></p>
+
+<p>The most recent, official list is here: <a href="http://www.stwater.co.uk/">Severn Trent Water website</a><br />
+<hr /></p>
+
+<p>Well it seems as if we're in the middle of a <a href="http://news.bbc.co.uk/1/hi/england/gloucestershire/6910559.stm">national emergency</a>, so for my 500th OUseful.info post here's something charitable - a Google Map (made the slow way) of <a href="http://maps.google.co.uk/maps/ms?f=q&view=text&hl=en&ie=UTF8&msa=0&msid=109196350919255002936.000435f2d463a0c57cf1b&ll=51.851447,-2.253871&spn=0.477585,1.086273&z=10&om=1">water bowser locations in Gloucestershire</a>, as of <em>Monday 23rd July 1900hrs</em>:</p>
+
+<p>Here's a tinyurl to the map: <a href="http://tinyurl.com/2m43m5">http://tinyurl.com/2m43m5</a></p>
+
+<p>The data is sort of correct as of <em>Monday 23rd July 1900hrs</em>, although the list isn't complete.</p>
+
+<p>The data was taken from the Severn Trent Water website:  <a href="http://www.stwater.co.uk/server.php?show=ConWebDoc.3156"> 	<br />
+Bowser Locations Gloucestershire Monday 23rd July 1900hrs</a></p>
+
+<p>The data is given as a list of locations, of the form:<br />
+<blockquote>Bowser Locations in Abbeydale</p>
+
+<p>NEWSTEAD RD  ON F/P<br />
+ABBEYMEAD AV<br />
+ BROADLEYS RD<br />
+ABBEYMEAD AV<br />
+UPTON LN</blockquote></p>
+
+<p>The site also proudly suggests:<br />
+<em>We recommend you use <a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=gloucestershire&ie=UTF8&ll=51.913779,-2.15332&spn=1.616258,3.702393&z=8&om=1">Google Maps</a> to view your area and locate street locations.</em><br />
+with the link pointing to a Google map over Gloucestershire.</p>
+
+<p>I pondered for a while building a screenscraper and geocoder to plot a map from the data on the page (or cut and paste it into a Google spreadsheet and from there geocode it with the Google maps geocoder API), but in the end I opted for the slow and painful route to try and see what sorts of errors the automated route would choke at.</p>
+
+<p>And so, I created a Google MyMap, cut and pasted the addresses into the map search box, then saved each result to the appropriate MyMap, moving the balloon to the correct location if necessary.</p>
+
+<p>Doing this, I noticed there are quite a few typos/errors in the street names ("Ave" rather than "Rd", for example) but foolishly didn't record them. (I assume these are errors on the Severn Trent site). Locating the points accurately was also difficult (so there may be a few errors).</p>
+
+<p>I also noticed that there are a few 'dated' location names (or do we still have <em>GPO Sorting Offices</em>?).</p>
+
+<p>Some locations appear to be duplicated in the list.</p>
+
+<p>At times, the 'local area' clusters that are used to group location appear to overlap, or drift from the supposed locale.</p>
+
+<p>If the locations change, or more or added, the map will rot badly. If new locations are added, then depneding on how they are added/flagged it may be easy or difficult to update the map.</p>
+
+<p>[UPDATE: 01:00 24/7/07 - the Severn Trent listing appears to have been updated, and now lists bowser locations as of 22:00 on 23/7/07; however, as I suspected might happen, it's not possible to see the changes that were made to the earlier posting, so it's hard for me to update the map... one reason for live scraping, I guess ;-) So how could the Severn Trent folks have helped matters: by adding a [added 22:00, 23/7/07] label to updated items maybe (easy)? Or using a public read only access wiki, with history features enabled? (and maybe a wiki way for people to suggest corrections to incorrect road names, as well as tightening up the <em>actual</em> location of the bowsers?) (harder).]</p>
+
+<p>Anyway - the map is there, and hopefully contributing to Google searches [though now it's out of date and maybe even incorrect...so maybe I should take it down? I wonder, once a bowser location is posted, does that location remain fixed for the duration of the emergency? It would make sense to me if that is the case (i.e. once you've found a water location, you don't need to hunt for it the next time you need it... In which case, the map will only ever show <em>fewer</em> locations than is actually the case.)].</p>
+
+<p>Here's a link to the map again: <a href="http://tinyurl.com/2m43m5">http://tinyurl.com/2m43m5</a><br />
+<hr /><br />
+PS Another thing that came to mind is that in such situations, is there a need for an "IT/web hacker" equivalent to <a href="http://www.raynet-uk.net/">RAYNET, The Radio Amateurs' Emergency Network</a>?</p>
+
+<p>Local council IT practitioners are not necessarily as up-to-speed as members of the Lazyweb, even if local services aren't under the sorts of pressure that an emergency presents...</p>
+
+<p>[UPDATE 01:15 24/7/07 So for an example of the emergency web stratgey, the srwater.co.uk (good URL, huh? Not that I was expecting severntrent.co.uk or anything...(that's the share price and press room website - no emergency info...!)) front page is currently a listing of the water bowser locations, with a small link to the 'normal' website. I don't know how the site normally handles incoming emails but I'm guessing server load has toppled it over:<br />
+<blockquote>An error has occurred</p>
+
+<p>HOST: www.stwater.co.uk<br />
+SCRIPT: /server.php<br />
+QUERY: show=nav.5614<br />
+Message:	Undefined index: currentTemplate<br />
+File:	E:\boxuk\amaxus\private\inc\class\common\XslTransformer.class.php<br />
+Line:	334<br />
+Time:	July 24, 2007, 1:11 am</blockquote>]</p>
+
+<p><br />
+For some time I've been thinking about volunteering activities, but I'm not really that practical away from a keyboard... so maybe I need to look around to see if there is something like a <em>Webnet</em> organisation - "The Web Hackers' and Data Mashers' Emergency Network" - that I could maybe contribute to?</p>
+
+<p>Anyone know of such a thing? I know there have been <em>ad hoc</em> applications created to help out in dire times, but is there a latent, standing group out there who can help out with pulling together information services when necessary?</p>
+
+<p>PPS a couple of examples: <a href="http://www.allthingsdistributed.com/2007/07/wired_on_jim_gray.html">the search for Jim Gray</a>, <a href="http://www.edparsons.com/?p=504">Thames Valley Flood Map</a>.</p>
+
+<p>PPPS Here's an embedded view of the map, (built using an online <a href="http://www.dr2ooo.com/tools/maps/">Embed Google 'My Maps'</a> tool):</p>
+
+<p><iframe src="http://www.dr2ooo.com/tools/maps/maps.php?zoom=10&ll=51.912085,-2.168427&kml=%20http%3A//maps.google.co.uk/maps/ms%3Ff%3Dq%26view%3Dtext%26hl%3Den%26ie%3DUTF8%26om%3D1%26mpnum%3D3%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.000435f2d463a0c57cf1b&ctrl=true&" width="400" height="266"></iframe></p>
+
+<p>Not all the mapped points seem to be displayed, so I guess there must be a limit on either how many points can be listed in a MyMaps KML file or how many the map embedding app can cope with?</p>
+
+<p>PPPS Here are some <a href="http://googlemapsmania.blogspot.com/2007/07/bbcs-interactive-google-my-map-of-flood.html">more flood news related mashups</a>.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010494.html">11:09 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10494" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010493"></a>
+<h3 class="title">Deep Linking 2.0 - What Counts as Fair Use of Online Book Extracts?</h3>
+
+When I first started writing online educational materials, I was told that deep linking was out - if we wanted to reference a page several clicks down into a site, we had to provide instructions on how to find that...
+<!--
+<p>When I first started writing online educational materials, I was told that deep linking was out - if we wanted to reference a page several clicks down into a site, we had to provide instructions on how to find that page from the front page, which was (supposedly) the only place we could link to.</p>
+
+<p>Times are a little more enlightened now, but still there are bottlenecks in place, and for good financial (and fair use) reasons.</p>
+
+<p>Just now, I tried a search on Amazon - in the books section - on <em>hype cycle</em> - no hits:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090375252289594130"><img src="http://lh4.google.com/tony.hirst/RqSlUm4pIxI/AAAAAAAAAKA/9NHdzA6eAo0/s800/amazonHypeCycle1.png" /></a></p>
+
+<p>there was the option to search inside books though, which was far more promising:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090375273764430626"><img src="http://lh5.google.com/tony.hirst/RqSlV24pIyI/AAAAAAAAAKI/GGE2PjzMPWA/s800/amazonHypeCycle2.png" /></a></p>
+
+<p>From these results, I can click through to the actual page on which the search term appears:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090377245154419522"><img src="http://lh4.google.com/tony.hirst/RqSnIm4pI0I/AAAAAAAAAKo/gH5lDNFjhc0/s800/amazonHypeCycle4.png" /></a></p>
+
+<p>(The panel in the top left is the <a href="http://blogs.open.ac.uk/Maths/ajh59/009009.html">OU Library Traveller panel</a>, which appears on pages that have ISBNs in the URL from a selection of bookselling and bookrelated websites. The panel looks up books with that ISBN (and alternative editions via xISBN) in the OU Library, both hard copy and ebook versions, and displays its availability. The script is easily customisable to many other library systems.)</p>
+
+<p>As a heavy Amazon user, this ability to search through books and pull out content (as well as maybe buying the book) is a Good Thing. (Funnily enough, I don't tend to use <a href="http://books.google.com">Google books</a> to do this much...)</p>
+
+<p>But what struck me just now was that this supports <em>exactly</em> the way I use a great many academic/technical books - to look up <em>particular</em> items on maybe one or two pages.</p>
+
+<p>The next thought was: can I link to an open book page on Amazon and share that link? Answer: I don't think I can (though maybe I could on Google books) - I think I need to be logged in on my Amazon account?</p>
+
+<p>The next thought: if I <em>could</em> deep link to an open book page, could I put that link in my course materials? That is, would the deep link be a fair use of the resource being linked to? The corollary I'd like to imagine in the real world is a 2 page photocopied handout for the students on a course.</p>
+
+<p>Next thought: OU courses are password/paywall (i.e. student registration required) protected - so the use is limited (and hopefully justified under educational terms). Bit what about putting such a link in OpenLearn, where there is no restriction on access? Still fair?</p>
+
+<p>Back behind the paywall, and could we "borrow" the Amazon embed code to display the two pages of text in the body of OUr materials, as we could with material posted on <a href="http://scribd.com">Scribd</a> for example?</p>
+
+<p>And so it goes on...</p>
+
+<p>The main question is - can I fairly, in password protected online educational materials, link to (or even better, embed) one/two page snippets of online scanned book content? Because often one or two pages is all I need?</p>
+
+<p>Or would we have to license the content and pay a special page charge for it? (Obviously, we'd have to pay for larger chunks, for example at chapter level: <a href="http://www.oreillynet.com/fyi/blog/2007/06/buy_by_the_chapter.html">Buy By the Chapter</a>).</p>
+
+<p>PS here's something else to chase, maybe? The <a href="http://www.openlibrary.org/toc.html">Open Library</a> (which is <em>not</em> the OU Library...):<br />
+<blockquote>The Open Library website was created by the Internet Archive to demonstrate a way that books can be represented online.</p>
+
+<p>The vision is to create free web access to important book collections from around the world.</p>
+
+<p>Books are scanned and then offered in an easy-to-use interface for free reading online. If they're in the public domain, the books can be downloaded, shared and printed for free. They can also be printed for a nominal fee by a third party, who will bind and mail the book to you. The books are always FREE to read at the Open Library website.</blockquote></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010493.html">02:25 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10493" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010492"></a>
+<h3 class="title">Original Cholera Map on Google Earth?</h3>
+
+I've been wondering about what would make for a good educational demo of Google Earth'n'data mashups, and "rediscovering" the water borne transmission of cholera looks promising... I found a copy of Snow's 1854 cholera data (possibly?!) so now I need:...
+<!--
+<p>I've been wondering about what would make for a good educational demo of Google Earth'n'data mashups, and "rediscovering" the water borne transmission of cholera looks promising...</p>
+
+<p>I found a copy of <a href="http://www.ncgia.ucsb.edu/pubs/snow/snow.html">Snow's 1854 cholera data</a> (possibly?!) so now I need:</p>
+
+<p>- a way of turning the map position data into geo-data;<br />
+- an 1854 Google Earth map overlay for the appropriate part of London (something like <a href="http://www.directionsmag.com/images/newsletter/2006/06_01/snow_cholera_map_lg.jpg">this</a> maybe?).</p>
+
+<p>If you know if anyone has done this already, please drop me a line... :-)</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010492.html">12:39 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10492" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 22, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010491"></a>
+<h3 class="title">Mashup Tools Frenzy</h3>
+
+A week away from a daily play, and my feedreader now contains way too many unread messages. Prompted by this CNET News post on The battle of the mashup editors, I also realise that I probably haven't been keeping up...
+<!--
+<p>A week away from a daily play, and my feedreader now contains way too many unread messages. Prompted by this CNET News post on <a href="http://news.com.com/8301-10784_3-9747138-7.html">The battle of the mashup editors</a>,  I also realise that I probably haven't been keeping up with updates to the Google Mashup Editor or Microsoft Popfly since I played with them the day the invites originally came out... (aaaaaarrrrrrrrrrrrrggggggghhhhhhhh - not enough time to play with the big toys, let alone keep up with the little ones...........!)</p>
+
+<p>So - top of the to do list is to catch up with feature releases from <a href="http://blog.pipes.yahoo.com/">Yahoo Pipes</a>, <a href="http://popflyteam.spaces.live.com/blog/">Microsoft Popfly</a> and <a href="http://googlemashupeditor.blogspot.com/">Google Mashup Editor</a> (as well as the other various Google APIs, like the <a href="http://googleajaxsearchapi.blogspot.com/">AJAX feed API</a>).</p>
+
+<p>Come to think of it, I haven't even played with IBM's <a href="http://services.alphaworks.ibm.com/qedwiki/">QEDWIki</a> <em>at all</em>, yet... or the <a href="http://www.seobythesea.com/?p=716">Intel Mashmaker</a> tool (though I guess access to that isn't available at the mo...).</p>
+
+<p>As everyone seems to be releasing <a href="http://del.icio.us/psychemedia/autodiscovery">feed autodiscovery</a>  - at least, Yahoo Pipes and Google AJAX API both offer this now (as does this <a href="http://simplepie.org/">PHP library</a>) - I feel I really should try to build something that makes use of this... the only question  is, what? Something <a href="http://ouseful.open.ac.uk/stringle">String'n'Glue</a> related, maybe?</p>
+
+<p>I'm also hoping that when the OpenLearn folks finally start moving the OpenLearn feeds from the dev server onto the public one, they'll make the feeds autodiscoverable... Although just what possibilities that will open up for feed related creativity, I'm not sure yet!</p>
+
+<p><hr /><br />
+PS I notice that I get live suggestions from my Firefox search widget (at least with Google as the search engine).</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5090147511648723714"><img src="http://lh6.google.com/tony.hirst/RqPWMW4pIwI/AAAAAAAAAJo/5CV_cZVEROM/s800/googleSuggest.png" /></a></p>
+
+<p>It'd be really neat - particularly for navigational/known item queries, where you <em>know</em> the result you want to find - if below the bar in the drop down live suggestions it also gave the top three hits for the current query-in-progress, live search style, treating them as clickable links rather than search terms...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010491.html">11:30 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10491" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 18, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010489"></a>
+<h3 class="title">Static RSS Feed Content, Delivered Daily</h3>
+
+Something I realise I haven't posted about, but which has been sitting in my Yahoo Pipes area for some time, is a "daily feed item" pipe that will deliver items from a static RSS feed - like an OpenLearn Unit...
+<!--
+<p>Something I realise I haven't posted about, but which has been sitting in my Yahoo Pipes area for some time, is a "daily feed item" pipe that will deliver items from a <em>static</em> RSS feed - like an <a href="http://blogs.open.ac.uk/Maths/ajh59/009142.html">OpenLearn Unit RSS feed</a> - according to a daily schedule, personalised according to the time you subscribe to the feed: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_HA1AGDs2xG4VFhRCB2yXQ">Serialised Feed Pipe</a></p>
+
+<p>That is, on subscribing to a feed with a particular "start time" and "duty cycle" (or "period"), you will receive items from the feed according to your own schedule: one feed item per day, for example, or one per week.</p>
+
+<p>This is particularly useful for delivering <em>static</em> feed content, where the feed items do not change. In a "normal" RSS feed, such as a blog RSS feed, the feed contents reflect the most recent blog postings, and as such change whenever a new post is made. In a static feed, the content is fixed and "just" represented using an RSS format, so that subscription models and RSS rendering techniques can be used to syndicate and republish the content. One might imagine abridged versions of books being syndicated in the way, like the BBC Radio 4 "Book of the Week", only delivered as text, via an RSS feed, with one chapter delivered per day. (Of course, "static" podcast feeds can also be serialised and delivered in this way.)</p>
+
+<p>The approach used in the <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_HA1AGDs2xG4VFhRCB2yXQ">serialised feed pipe</a> is essentially a generalisation of the <a href="http://ouseful.open.ac.uk/openlearndaily">OpenLearn<em>_daily</em></a> approach, which allows you to sign up to OpenLearn course feeds and receive a new feed item from a particular unit according to your own schedule.</p>
+
+<p>The pipe takes in a start time (in universal time), a delivery period (one additional feed item will be delivered for each period after the start time - one item a day, for example) and the URL of the feed to be serialised.</p>
+
+<p><img alt="pipeFeedSerialiserInput.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeFeedSerialiserInput.png" width="379" height="292" border="0" /></p>
+
+<p>Internally, the pipe passes this information - along with the <em>current</em> time - to another <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=hObiAyHs2xGeU6lEEpPZnA">pipe that calculates the number of items required in the feed</a>: </p>
+
+<p><img alt="pipeSerialNumItemsCalc.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeSerialNumItemsCalc.png" width="929" height="492" border="0" /></p>
+
+<p>The calculation simply subtracts the start  time from the current time, and divides it by the specified period.</p>
+
+<p>This pipe then uses <em> yet another</em> internal pipe ("Feed Serialiser") to <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=XPfTMuTP2xGUL12c3C7BQA">deliver the <em>specified number</em> of feed items</a> by simply truncating the feed after that number of items have been delivered.</p>
+
+<p><img alt="pipeNumItems.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeNumItems.png" width="627" height="452" border="0" /></p>
+
+<p>Here's the actual "top level" pipe:</p>
+
+<p><img alt="pipeFeedSerialiser.png" src="http://blogs.open.ac.uk/Maths/ajh59/pipeFeedSerialiser.png" width="911" height="565" border="0" /></p>
+
+<p>I'll try and provide a web page interface to this over the next week or two, probably by tidying up this <a href="http://ouseful.open.ac.uk/openlearndaily/feedCycle.php">very basic "feed cycle" form</a>. I also need to add a couple more parameters in that let the user specify the number of feed items they want in the first delivery, as well as the additional number of feed items delivered in each feed cycle.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010489.html">05:51 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10489" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 16, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010487"></a>
+<h3 class="title">Facebook Profiles and OpenLearn Annotation Streams</h3>
+
+I posted just now/the other day* about an OpenLearn Feed Annotation Stream, that takes an RSS feed and annotates it with hopefully relevant links from OpenLearn. (You can try out the service with any RSS feed here: OpenLearn feed annotator.)...
+<!--
+<p>I posted just now/the other day* about an <a href="http://blogs.open.ac.uk/Maths/ajh59/010482.html">OpenLearn Feed Annotation Stream</a>, that takes an RSS feed and annotates it with hopefully relevant links from OpenLearn. (You can try out the service with any RSS feed here: <a href="http://blogs.open.ac.uk/Maths/ajh59/openlearnAnnotations.php">OpenLearn feed annotator</a>.) Re-reading a post from Martin (<a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/07/mo-facebook.html">Mo' Facebook</a>), I notice he picked up on a <a href="http://blogs.open.ac.uk/Maths/ajh59/010477.html">thought of mine</a> where I "suggest[ed] ways in which a status like function could be mined to aid learning and networking."</p>
+
+<p>So here's a demo screenshot of how it might work, in part, using the feed from my Facebook Status as the basis for an OpenLearn Feed Annotation Stream.</p>
+
+<p><img alt="facebookStatus.png" src="http://blogs.open.ac.uk/Maths/ajh59/facebookStatus.png" width="699" height="527" border="0" /></p>
+
+<p>If you have a Facebook account, you can find your status feed linked to from here: <em>http://www.facebook.com/minifeed.php?status&id=<strong>nnnnnn</strong></em>, where <em>nnnnnn</em> is your Facebook ID number, which you can find in the URL of your Facebook profile page (<em>http://www.facebook.com/profile.php?id=<strong>nnnnnn</strong></em>). So for example, here's <a href="http://www.facebook.com/minifeed.php?status&id=506612605">my Facebook status feed</a>.</p>
+
+<p><small>*I'm at OU Residential a school in Bath for a week (ping me if you want to say hi and go for a pint!), so I'm queuing up a few posts so I can keep them dribbling out through the week. If someone beats me to this idea - well - this post was actually written about 10 mins after the previous post I made... ;-)</small></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010487.html">04:56 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10487" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 14, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010482"></a>
+<h3 class="title">OpenLearn Feed Annotation Streams</h3>
+
+One of the things a few of us have been looking at informally over the last few months are ways of assembling relevant educational content around Open2.net broadcast related content - think "Sleevenotez for education", or something similar. To be...
+<!--
+<p>One of the things a few of us have been looking at informally over the last few months are ways of assembling relevant educational content around <a href="http://open2.net">Open2.net</a> broadcast related content - think "<a href="http://sleevenotez.com">Sleevenotez</a> for education", or something similar.</p>
+
+<p>To be scaleable, we need an automated solution for achieving this, so I had a little tinker with a Yahoo Pipe that will take an RSS feed, pass it through the Yahoo Content Analysis package and use the resulting terms as search terms over OpenLearn content:</p>
+
+<p><img alt="openleanFAS.png" src="http://blogs.open.ac.uk/Maths/ajh59/openleanFAS.png" width="778" height="589" border="0" /></p>
+
+<p>You can try out the service with any RSS feed here: <a href="http://blogs.open.ac.uk/Maths/ajh59/openlearnAnnotations.php?url=http://newsrss.bbc.co.uk/rss/newsplayer_uk_edition/sci-tech/rss.xml">OpenLearn feed annotator</a>.</p>
+
+<p><img alt="openlearnFAS2.png" src="http://blogs.open.ac.uk/Maths/ajh59/openlearnFAS2.png" width="926" height="480" border="0" /></p>
+
+<p>The Pipe is a little slow at times - and is in desperate need of optimisation (e.g. to prevent multiple OpenLearn queries using the same content analysis generated search terms).</p>
+
+<p>The quality of the annotation service is dependent on at least two things - the effectiveness of the content analysis service, and the effectiveness of the OpenLearn search (which itself is dependent on the size of the OpenLearn corpus that has been indexed and the extent to which the OU search engine has been optimised over that content).</p>
+
+<p>Anyway - it's a starting point, and while many of the annotations are a little, shall we say,  a little <em>quirky</em> at the moment, it's something to help get across the idea of <a href="http://blogs.open.ac.uk/Maths/ajh59/010361.html">feed annotation streams</a>.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010482.html">07:51 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10482" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 12, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010481"></a>
+<h3 class="title">Online Course Analytics</h3>
+
+For some time, I've been running Google Analytics on the OUseful.info blog, and - err - somewhere else I'll post about another day. One thing I'm keen to do is get access to OU search analytics, both internal and relating...
+<!--
+<p>For some time, I've been running <a href="http://www.google.com/analytics">Google Analytics</a> on the <a href="http://ouseful.info"">OUseful.info blog</a>, and - err - somewhere else I'll post about another day.</p>
+
+<p>One thing I'm keen to do is get access to OU search analytics, both internal and relating to search engine referrals, to see whether we can gain any useful curriculum development intelligence from the data: seeing what keywords students use to find courses, for example, or whether there are any frequent searches we can't accommodate.</p>
+
+<p>I'm in the process of planning a course on gaming and interactive media design, for example, so it'd be handy to see whether anyone is searching the OU courses site with terms relevant to such a course, whatever they may be. (I've posted kite flying thoughts elsewhere about how we might be able to use search as a predictive tool: <a href="http://blogs.open.ac.uk/Maths/ajh59/009726.html">Search Powered Predictions</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/009937.html">Click Powered Predictions...?</a>).</p>
+
+<p>Analytics can be used elsewhere in the system, of course - I'm personally not that interested (at the moment...!) in "<a href="http://www.educause.edu/apps/er/erm07/erm0742.asp">academic analytics</a>", using data about student behaviour to predict success in a course, identify students who may be struggling/about to drop out, and so on, though I do know that there are various people around the OU who have started taking an interest in such things. After all, when students drop out, we don't get any funding for them...</p>
+
+<p>What <em>is</em> of interest to me, though, are analytics that describe how students may be interacting with our online course materials (this data of course is likely to feed in to "academic analytics", particularly with respect to identifying struggling or disengaged students, for example).</p>
+
+<p>I hope to be able to post something a little more concrete about this over the summer, but for now I'm pondering the question of <em>what</em> sorts of data we want to collect.</p>
+
+<p>After all, web analytics of the Google kind seem to be best suited to tracking user behaviour on sites with clearly defined goals, such as successfully completed shopping transactions.</p>
+
+<p>For online course materials - like the Relevant Knowledge short courses - where 10 weeks worth of material are online, organised as weekly topics - identifying relevant goals and sensible "questions" we might ask of the analytics data (with a view to optimising/improving our course materials) is something we haven't really addressed.</p>
+
+<p>So  - what should we track? Or indeed, to try and simplify the problem, what <em>might</em> we track.</p>
+
+<p>The Relevant Knowledge courses all tend to have a similar structure (although each course does tend to introduce it's own innovations). A course calendar lays out the content for each study week, as does an index of the course materials. Links to online course forums are provided at the top level of navigation. Courses may or may not have a glossary and/or a resource page that contains links to external resources referenced in the course materials. A search box that allows users to search the web based course materials (but not external sites, our downloadable course content (I think...) is provided on each page, along with the option to print the page on the course content pages.</p>
+
+<p>(Searching over content linked to from the course materials is easily achieved using a bounded/custom search engine. For example, see <a href="http://blogs.open.ac.uk/Maths/ajh59/010193.html">OpenLearn Unit Search Hub</a> which describes an automated route for creating a bounded search engine over domains linked to from an OpenLearn Unit.) </p>
+
+<p>The course content itself is chunked into 10 to 20 HTML pages per week. Links are often provided to external websites. Links to downloadable documents (such as PDF files, movie or audio files) may be provided. The use of embedded audio/visual material (along with download links, as well as transcripts) is increasingly likely. Course materials include self-assessment exercises as well as narrative content. So-called SAQs (formative <em>self-assessment questions</em>) comprise of a question along with sample answer text. The answer text is revealed by clicking a form button or link (i.e. a trackable action is taken to reveal the answer). Online summative assessment materials are also provided - a CMA (computer marked assignment) around week 5, and an ECA (end of course assessment) in week 10. All assessment materials are "seen" from the start of the course.</p>
+
+<p>So  - what to track?</p>
+
+<p>Here are some preliminary thoughts:<br />
+<ul><li>number of unique visitors (are all students logging in? from how many different browsers?);</li><br />
+<li>number of visits per week (how often are students logging in, and when? Is there periodicity in access behaviour, aggregated over the cohort?);</li><br />
+<li>average time per visit (what's a sensible chunk size in terms of study time?);</li><br />
+<li>average number of page views per visit (again, useful intelligence relating to chunk size of teaching content);</li><br />
+<li>bounce rate (but why are students bouncing? Using the course pages for navigation/to go elsewhere? If so - where?);</li><br />
+<li>External links followed (are students following links at all? should we be providing other access points to external links, offering link collections by other means, such as feeding live bookmarks?);</li><br />
+<li>Pages printed (are students printing out the course content, or consuming it online?)</li><br />
+<li>Clicking through to course forums (looking at forum stats would also be useful, e.g. what percentage of students look at what percentage of messages?)</li><br />
+<li>click-thrus to SAQ answers - and time spent looking at SAQ answer pages;</li><br />
+<li>visitor behaviour around assessment pages (how often/how many times do students visit assessment pages? when? for how long? in the context of visiting other pages (possibly via search results) etc.);</li><br />
+</ul></p>
+
+<p>Identifying sensible <em>goals</em> (which, if tracked, enables additional analytics, such as reverse path tracking (what links did a user follow to reach the goal).</p>
+
+<p>Of course, making sense of course analytics is not just a question of collecting the data, but also interpreting it appropriately and not being misled by naive readings of it...</p>
+
+<p>If you have thoughts about what else we could sensibly track, please post a comment or drop me a line. References to anyone else exploring this area would also be much appreciated...</p>
+
+<p>PS one question I meant to pop down: <em>if we were optimising online course content pages, what would we be optimising them for?</em></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010481.html">10:36 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10481" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 10, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010480"></a>
+<h3 class="title">OU Podcast Strategy</h3>
+
+I don't think we formally have one... maybe we should? Philosophy Podcast storms the download charts What do Chris Evans, Danny Baker, Clive James and The Prime Minister have in common? All have podcasts in the Top 20 downloads on...
+<!--
+<p>I don't think we formally have one... maybe we should?</p>
+
+<p><a href="http://www3.open.ac.uk/media/fullstory.aspx?id=11429">Philosophy Podcast storms the download charts</a><br />
+<blockquote>What do Chris Evans, Danny Baker, Clive James and The Prime Minister have in common?<br />
+All have podcasts in the Top 20 downloads on Itunes but none is as popular as senior OU Philosophy Lecturer, Dr Nigel Warburton, reading from his book Philosophy: The Classics.<br />
+Dr Warburton's readings are currently 14th in the Top 20 and have more downloads than The Best Bits of Chris Evans; Danny Baker's All Day Breakfast Show and even, Prime Minister's Questions!<br />
+<a href="http://www.learnoutloud.com/Podcast-Directory/Philosophy/Ancient-and-Medieval-Philosophy/Philosophy-The-Classics-Podcast/23666">Philosophy: The Classics</a> [<a href="http://www.philclassics.libsyn.com/rss">RSS</a>] is an introduction to 27 key works in the history of Philosophy beginning with Plato and Aristotle and including the work of Machiavelli, Hobbes and Locke.</p>
+
+<p>The free downloads began in May and will continue until all 27 parts are available. ...</blockquote></p>
+
+<div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?theme=gloss_silver&view=o&file=http://www.philclassics.libsyn.com/rss" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?theme=gloss_silver&amp;view=o&amp;file=http://www.philclassics.libsyn.com/rss"></script></div>
+
+<p>I was also tipped off today about a talk about iTunes U that happened on campus that I couldn't make:<br />
+<blockquote>One of the big questions the talk answered for many Open University staff is who has control of the content? It turns out that iTunes U is not a hosting service, it's a subscription model, i.e. it provides the RSS feed for your podcasts and acts as an advert for your university. This means that universities host their own content, and retain control of it - iTunes just provides a way for people to find and access it.</blockquote></p>
+
+<p>Looks interesting - and maybe something we can get involved with?</p>
+
+<p>The talk actually took place in KMi, a venue that often records seminars that take place there. For a full listing of their public seminars, check out <a href="http://kmi.open.ac.uk/seminars/index.cfm">KMi Seminar Replays</a>.</p>
+
+<p>PS It's probably also worth posting this link here (that should also have appeared in the OUseful.info feed via my delicious <a href="http://del.icio.us/psychemedia/feedthru">feedthru</a> tag a few days ago): <a href="http://connect.educause.edu/blog/jklittle/podcastingateachingw/44653?time=1183709833">Podcasting: A Teaching with Technology White Paper | EDUCAUSE CONNECT</a>: <em>"exploration of educational podcasting in three realms: creation and distribution of lecture archives for review delivery of supplemental educational materials and content, assignments requiring students to produce and submit their own podcasts."</em></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010480.html">11:11 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10480" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010479"></a>
+<h3 class="title">PLE = Platform Learning Environment?</h3>
+
+I've been thinking back over my tinkerings with the Stringle string'n'glue environment over the last week or two - in fact, since the Facebook platform launch - and I think the idea of it was just right (a single container...
+<!--
+<p>I've been thinking back over my tinkerings with the <a href="http://ouseful.open.ac.uk/stringle">Stringle</a> string'n'glue environment over the last week or two - in fact, since the <a href="http://blogs.open.ac.uk/Maths/ajh59/010341.html">Facebook platform launch</a> - and I think the idea of it was just right (a single container for third party apps) with a significant missing ingredient - the idea of turning Stringle into a fully fledged <em>platform</em>.</p>
+
+<p>The Facebook platform does what Stringle was intended to do - provide a single place to go to use 3rd party apps. However, Facebook goes further by encouraging 3rd party application providers to hook <em>into</em> Facebook itself (which was a step I hadn't envisioned for Stringle, but which, with hindsight, follows naturally...)</p>
+
+<p>Facebook also has a considerable user community, which is a great incentive for third party app developers wanting to expand their reach. (In fact, Facebook is <em>so</em> attractive - for the moment, bearing in mind that <a href="http://ukwebfocus.wordpress.com/2007/07/08/facebook-will-die/"><em>Facebook will die</em></a> - that there is now even a <a href="http://feeds.feedburner.com/~r/Techcrunch/~3/132172875/">VC fund dedicated to Facebook app developers</a>. Hmm...are there any "widget developer only" funds, I wonder? or eBay developer funds? or Amazon developers funds, even?)</p>
+
+<p>At the moment I have Zoho (<a href="http://blogs.open.ac.uk/Maths/ajh59/010334.html">heh heh ;-)</a>) and Slideshare as apps added to my Facebook profile (as well as a couple of others), which provide me with online office tools and presentation sharing/viewing.</p>
+
+<p>In use, these two applications demonstrate two different ways of integrating Facebook with third party apps.</p>
+
+<p>When you add Slideshare (and also Splashcast) to Facebook, a <em>new account</em> is created on the third party app, tied to your Facebook account. (I'm not sure if this means I can log into the app directly, and <em>not</em> through Facebook, maybe using an ID with some sort of Facebook tag embedded in it? (I can imagine the potential for all sorts of name registration collisions otherwise...) This is great if you don't already have a Slideshare account - one click registration is effectively provided - but potentially a pain if you do (although you can import slideshows from other Slideshare accounts)).</p>
+
+<p>Adding Zoho, on the other hand, allows you to associate an outstanding Zoho account, or create a new one.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5085675031086606770"><img src="http://lh3.google.com/tony.hirst/RpPyfub9qbI/AAAAAAAAAIo/x2DLk30-fTU/s800/fbZoho.png" /></a></p>
+
+<p>The integration extends as far as providing a list of files associated with <em>all</em> your Zoho apps (personal and shared) - documents, presentations, spreadsheets and so on. A Zoho Office directory, if you like. Clicking any link opens that document in a new window in the appropriate Zoho application.</p>
+
+<p>One possible downside of the latter approach - associating third party app credentials with a Facebook account - is the need to "lend" Facebook your login details for other services.</p>
+
+<p>OpenID would be brilliant here - being able to associate an OpenID with your Facebook account would make registering with OpenID enabled third party applications trivial (on adding an app Facebook would try to log you in with the OpenID you had associated with the Facebook account). For maintaining accounts on third party services, a Facebook authenticated OpenID might provide an efficient approach?</p>
+
+<p>It will be interesting to see how long Facebook retains its mantle, give the increasing <a href="http://feeds.feedburner.com/~r/OmMalik/~3/132155266/">commoditisation of social networks</a>, and the "1-click" network custom social network set-up that services like <a href="http://ning.com">Ning</a> offers. <a href="http://scienceoftheinvisible.blogspot.com/2007/07/why-facebook-is-sticky.html">Facebook is sticky</a>, though.</p>
+
+<p>I'm also watching out for someone to "do an AOL" and start shipping a customised browser, optimised for social networking - something like <a href="http://flock.com">Flock</a> maybe?</p>
+
+<p>(Many players, large and small, offer browser extensions, of course. For example, eBay recently launched a <a href="http://pages.ebay.co.uk/firefox/">Firefox ebay edition toolbar</a>, but the degree of customisation it provides is limited.)</p>
+
+<p>PS I can't resist posting this. I always thought that Second Life was - for most people  - just a glorified chat client: <a href="http://blog.katharineberry.co.uk/2007/07/02/ajaxlife/">AjaxLife</a> ;-)</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010479.html">10:46 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10479" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 09, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010477"></a>
+<h3 class="title">Status and Intent: Twoogle</h3>
+
+One of the things that I think contributes to the stickiness of Facebook is the way that changes to the status of your "friends" are displayed in your personal newsfeed. "Status" messages have long been available for instant messaging clients,...
+<!--
+<p>One of the things that I think contributes to the stickiness of Facebook is the way that changes to the status of your "friends" are displayed in your personal newsfeed.</p>
+
+<p>"Status" messages have long been available for instant messaging clients, allowing users to type in particular status messages themselves (as in Facebook) or letting a script update the status message automatically depending on what the user is currently doing.</p>
+
+<p>For example, I use the Adium messaging client on a Mac. When I'm listening to Last.fm I tend to switch on the script that posts details of my recent listening to my IM current status line.  Scripts are also available that display the URL of sites you have recently visited in your browser, and so on.</p>
+
+<p>A week or two ago, Twitter was all the rage in status declaring circles, and it too offers a snapshot of your current status (I expect there is a Twitter Xtra for Adium by now that uses your most recent tweet for the IM status. I don't know if the Facebook Twitter application updates your Facebook status?)</p>
+
+<p>Anyway, what came to mind last night was an idea for augmenting search queries with search intent information. When I do a Google search, I'm usually searching for a reason. Google uses all sorts of information from my personal history, etc. to try and optimise my search results. I'm sure some of the secret sauce also tries to identify intent.</p>
+
+<p>So here's a fusion of status updating and personalised search: when I go to my search engine, before I start a search, it asks - "what are you doing?"; the result gets posted as a status message, and is also used to help tune the search:</p>
+
+<p><em>What are you doing?</em><br />
+Tony is: <em>looking to buy a Nintendo wii</em></p>
+
+<p>This "statement of intent" status message can then be used to scope the search.</p>
+
+<p>Here's how it could be wired together:<br />
+<ul><li>answer what you're doing;</li><br />
+<li>the result goes two ways: 1) to your status announcer(s) (Facebook, IM, Twitter, etc); 2) (maybe after some processing) into the search query either: i) as augmenting terms; or ii) as a preliminary search - search queries under this intent then act as "search within results" queries to refine the original statement of intent search;</li><br />
+<li>you start searching under the current intent.</li></ul><br />
+In effect, the statement of intent seeds the search to produce some intention laden keywords or search facets, which are then added to each of your actual queries - two step intentional searching/explicit intent searching.</p>
+
+<p>Revealing the statement of intent via a public status message also allows members of your public network to feed live personal recommendations into your search results, leveraging online contacts as a potential "live people powered search engine".</p>
+
+<p>Hmm - this could be interesting - after posting a 'statement of intent', aggregating queries designed to satisfy that intention across a social network. We all use slightly different terms to search for the same thing (which is how the "related searches" offers for a particular query are powered), so a posting of a "search intent" status message could also act as a weak request for members of your social network to reply with suggested search terms. These terms are then aggregated to help tune or augment your query. In this case, the social network can support the search by several means:<br />
+<ol><li>suggesting relevant search terms, which "the algorithm" can use to tune the main user's query;</li><br />
+<li>suggesting relveant URLs - which can seed a "related links" factor in the search.</li></ol></p>
+
+<p>I wonder if the Google T&C allow Google to mine your FOAF network and use <em>their</em> personal search history as weak factors in your own personal search, under the assumption that your friends are likely to have similar interests?</p>
+
+<p>Martin sort of suggested something similar to 'live social network recommendations' in a post on the educational relevance of Facebook earlier today: <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/07/and-the-winner-.html">And the winner is ..... Facebook</a>:<br />
+<blockquote>For example, I see that John's status is 'struggling to understand how analogue to digital conversion works.' I see that Davina has added the analogue to digital conversion animation to her learning resources, so I recommend it to John. I look at Davina's learning resources and find a tutorial on Ajax, which I add to my own and I also post on her wall that I have used it. Peter has also posted on her wall, and invites me in to a chat, as he is using it too. And so on.</blockquote></p>
+
+<p>Tom Heath is also doing something not totally unrelated with <a href="http://revyu.com">Revyu</a>, as told here: </p>
+
+<p><embed src="http://talis-utils.s3.amazonaws.com/flvplayer.swf" width="320" height="20" allowfullscreen="true" flashvars="&file=http://talis-podcasts.s3.amazonaws.com/twt20070612-Tom_Heath.mp3&height=20&width=320" /></p>
+
+<p><a href="http://talk.talis.com/archives/2007/06/tom_heath_talks.html">Tom Heath Talks with Talis about Revyu.com and the Semantic Web</a>.</p>
+
+<p>PS <a href="http://www.programmableweb.com/mashup/facebook-answers">Facebook Answers</a>: "Ask questions and get quick answers from your Facebook friends. Answer questions and earn points. See how you rank against other Facebook experts." How long before a combined status update'n'ask app (assuming status updates are accessible via the Facebook API???)(?</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010477.html">12:55 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10477" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 06, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010474"></a>
+<h3 class="title">Making the Most of Interactive Timelines, Maps et al.</h3>
+
+At a (not so) recent meeting of the T151, our new in production short course on gaming and interactive media, one of the stories we all thought was important to tell was the evolution of interactive computer games by means...
+<!--
+<p>At a  (not so) recent meeting of the T151, our new in production short course on gaming and interactive media, one of the stories we all thought was important to tell was the evolution of interactive computer games by means of a timeline.</p>
+
+<p>Something like this, for example (taken from <a href="http://www.xtimeline.com/">xtimeline</a>) - <a href="http://www.xtimeline.com/entertainment/The-History-of-Video-Games">The History of Video Games</a>:</p>
+
+<p><iframe id='xtimelineMyTimeline'  height='440' width='950' src='http://www.xtimeline.com/entertainment/The-History-of-Video-Games/embed/928/420'></iframe></p>
+
+<p>That usable timeline widgets are now readily available is a given - the technology is in place - but that said, I don't really have a good feeling (yet) for how to use them effectively (if they can be used effectively) in an online, e-learning context.</p>
+
+<p>So now I can have a interactive timeline in my course materials.... so what?</p>
+
+<p>And now we can provide our students with a tool to produce their own timelines (for an assessment exercise, maybe?) So what?</p>
+
+<p>Yes - it's using the technology; it may even be using the technology appropriately. But how does it help deliver instruction (?hmmm...) about the <em>History of Video Games</em>, for example?</p>
+
+<p>The same goes for the use of maps, audio clips, video, interactive visualisation tools and so on.</p>
+
+<p>Increasingly, it seems to me that pretty much anything you want or can think of you can embed in a web page!</p>
+
+<p>But how? <em>How can we use these interactive tools effectively?</em></p>
+
+<p>What would it mean to say the tool has been used <em>effectively</em>, has been used <em>appropriately</em>?</p>
+
+<p>At the OU, we like to think (rightly) that we have a good understanding of how to construct print based, distance learning educational materials - tutorials in print - supported by a network of personal tutors and online forums.</p>
+
+<p>But I'm not so sure that we - or anyone else for that matter - has really got to grips with developing pedagogically sound, compelling and engaging <em>online</em> delivery models.</p>
+
+<p>So here's where I'm stuck at at the moment:<br />
+<ol><li>"Training" people how to add data to maps, create timelines, etc etc is important and something we should be doing. Why? I don't know - maybe because it's a useful online communication skill?</li><br />
+<li>Using interactive maps etc. is a way of encouraging learners to explore.... errr... explore what, I'm not exactly sure.</li><br />
+<li>Embedding audio and video in online material breaks up the text and makes use of the medium. It allows learners to hear real voices, see real people. But is that important. Do I need to see Professor XYZ talking about whatever, when I can just read their paper? Or does rich media content break the flow of study (i.e. break the flow of reading print on-screen... Or maybe I printed everyhting off and I'm reading it on paper?)</li></ol><br />
+For example, last week, I gave a demo of Google Earth with an <a href="http://users.stlcc.edu/mbagby/GoogleEarth/BroadcastTowers/BroadcastTowers.kml">overlay of UK radio masts</a>. When looked at with terrain, you could see the elevation of the sites where the maps were located. Some masts even had 3D models available (like the Emley Moor mast).</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5084013669017037218"><img src="http://lh6.google.com/tony.hirst/Ro4Lfub9qaI/AAAAAAAAAIU/EWCMIZdG-zU/s800/googleEarthEmley.png" /></a></p>
+
+<p>This feels to me like it's the <em>right</em> thing to do - if we were teaching about locating radio masts, letting people explore sites they knew about with this tool seems like a sensible thing to do. But justifying it seems harder...</p>
+
+<p>Why is this? Introducing interactive components makes everything an "activity", which means giving up some sort of control we have over our students. To make the activity relevant, we need to associate some sort of learning outcome to the activity, and ideally provide some sort of objective or self-assessment to provide a goal based focus for the activity.</p>
+
+<p>Which is where I personally tend to come unstuck, I think...</p>
+
+<p>[I also think that there is something "experiential" afforded by interactive components, but I need to spend a bit more time (that is - some time, period;-) mulling this over... Trying to justify building mashups as community oriented, experiential learning activity might be interesting! (starting point? <a href="https://www.educause.edu/ir/library/pdf/eqm04110.pdf">Constructing Experiential Learning for Online Courses: The Birth of E-Service</a>.]</p>
+
+<p>If you believe - as I do - that "only everything is important", narrowing down the focus for a learning objective can be quite hard to do (<em>especially</em> if you acknowledge that each of our very different individual students has their own interests, their own goals, their own expertise and experience <em>and even more so</em> if you want to provide each of them an experience that is meaningful, relevant and appropriate to them <em>even if</em> that means that the experience of the activity is different for each student).</p>
+
+<p>Looking at the image above, I could happily turn the exercise into a consideration of radio propagation, how to construct the 3D model of the mast, the format of the KML file that is used to overlay the radio mast icons, the algorithms involved in orienting the perspective of the scene (tilting the map!) in Google Earth, the distribution of settlements around the mast, the immediate risks and emergency access routes in the event of the tower becoming unstable etc etc.</p>
+
+<p>Which is to say, the <em>point</em> of the activity for me would really just be saying: look at what's possible with this technology. <em>Use it....</em>* - for something, anything...! And here's one example of how we might use it in this case... <small>(*where appropriate...)</small> The important thing is not necessarily knowing how to do something, but that it is possible within certain limits. It is possible to plot masts on a map and generate radio propagation maps. But it's not necessarily important that <em>you</em> know how to do it.</p>
+
+<p>See also:<br />
+- <a href="http://blogs.open.ac.uk/Maths/ajh59/010329.html">More Timelines: oneTimeLine and the BBC British History Timeline</a><br />
+- <a href="http://blogs.open.ac.uk/Maths/ajh59/010366.html">Google Maps and Timelines - Side by Side</a></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010474.html">10:59 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10474" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 05, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010472"></a>
+<h3 class="title">Visualising OU Courses and Qualifications</h3>
+
+Inspired in part by my post last night on the current OU Intranet Redesign project, I spent twenty minutes or so (no longer - I assure you...[this post took longer to write!]) cutting and pasting a tiny amount of information...
+<!--
+<p>Inspired in part by my post last night on the current <a href="http://blogs.open.ac.uk/Maths/ajh59/010471.html">OU Intranet Redesign</a> project, I spent twenty minutes or so (no longer - I assure you...[this post took longer to write!]) cutting and pasting a tiny amount of information from the <a href="http://www3.open.ac.uk/courses/classifications/information_technology_and_computing.shtm">Information technology and computing qualifications</a> page into a Google spreadsheet:</p>
+
+<table><tr><th>Qualification</th><th>Course</th></tr>
+<tr><td>C50</td><td>M150</td></tr>
+<tr><td>C50</td><td>MU120</td></tr>
+<tr><td>C50</td><td>MST121</td></tr>
+<tr><td>C47</td><td>M150</td></tr>
+<tr><td>C47</td><td>T175</td></tr>
+<tr><td>C39</td><td>TT280</td></tr>
+</table>
+...and so on...
+
+<p>It was then an easy matter to cut and paste the data into <a href="http://services.alphaworks.ibm.com/manyeyes/data/S8_UXHsOtha6u6-0_nRZH2-">Many Eyes</a> and then visualise it as a <a href="http://services.alphaworks.ibm.com/manyeyes/view/S8_UXHsOtha6y6EKTuRZH2-">ICT Courses and Quals (sample) network diagram</a>:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5083710105023523202"><img src="http://lh5.google.com/tony.hirst/Roz3Z-b9qYI/AAAAAAAAAH4/oMVCPYzseLE/s800/cqNetViz.png" /></a></p>
+
+<p>There are lots of things wrong about this visualisation (not least the typo of qualification GO4!), such as the fact that excluded course combinations are not identified in anyway, but for 20 minutes work the payoff is pretty good, I think?</p>
+
+<p>For example, already it's possible to identify some of the qualifications a course may be associated with, or the breadth of courses that may be taken as part of a particular qualification.</p>
+
+<p>I'm not sure how well this will scale, but the Many Eyes tool does let you move nodes around, zoom in on - and pan across - particular areas of the map, search over labels etc. </p>
+
+<p>In fact, the search is a live search that will highlight labels as you type - so you can just look at level 2 Technology Faculty courses, for example (search on <em>T2</em>) and they will all be highlighted on the map) and then tunnel down to a particular course code to locate it - and the linked qualifications it can used for.</p>
+
+<p>I need to explore Many Eyes in more detail, I think, to see what sorts of mapping are supported (it would be handy, for example, to be able to pop up a course or qualification name when you hover over its code), but I have no more time to spend on this today... :-(</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010472.html">03:14 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10472" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="010471"></a>
+<h3 class="title">OU Intranet Redesign</h3>
+
+The latest OU internal communications brief announces that OU Intranet is up for a redesign apparently, and of course, of course, user opinions will be solicited... INTRANET REDEVELOPMENT The redevelopment of the University's Intranet is now well under way. Its...
+<!--
+<p>The latest <a href="http://intranet.open.ac.uk/communications/pics/d79841.doc ">OU internal communications brief</a> announces that <a href="http://intranet.open.ac.uk">OU Intranet</a> is up for a redesign apparently, and of course, of course, user opinions will be solicited... <br />
+<blockquote><strong>INTRANET REDEVELOPMENT</strong><br />
+The redevelopment of the University's Intranet is now well under way. Its purpose is to create a new working environment for all staff that makes access to information and the completion of daily tasks simpler. An Intranet audit of over 200 Intranet sites to determine their purpose, software used and plans for redevelopment is under way. An Interim Search Improvement Project is currently identifying search difficulties to determine how to improve results. The project is reviewing the most used search terms to see how successfully appropriate information was found and where necessary making them more accessible via Intranet navigation. Staff across the University will be interviewed in order to capture user requirements for future development. The volume of Intranet site traffic is being investigated to determine the most popular sites so that Information Architecture / navigation can be optimised. An 'Interim publishing strategy' recommends the tools to support any internal web site redevelopment/creation ahead of the full findings of the project.</blockquote><br />
+So after a period of <em>no thought</em> whatsoever, here are a few of my own random thoughts, off the top of my head, in stream of consciousness style, scribbled down on the boat home (across the Solent), of some of the things I'd like to see...<br />
+<ul><li><em>an infrastructure that accommodates publishing via RSS</em>, (which of course <a href="http://blogs.open.ac.uk/Maths/ajh59/010271.html">we ignore at our peril</a>;-) To look at it now, the OU intranet home page could almost be completely replaced by a startpage/webtop powered by internal web feeds (a bit like the <a href="http://blogs.open.ac.uk/Maths/ajh59/010382.html">OUseful dashboard</a>);</li><br />
+<li><em>a search engine that works, usably</em>;  for the sake of a few of thousand quid, it'd be worth giving a Google appliance free reign to index the intranet for a week or two of side by side user trials with the current search engine; even if the Google box does a miserable job, observing the differences in both user experience and the quality of search results will provide an interesting lesson for anyone interested in how search works and is used in the OU; ways of exploiting intranet browsing history search (and potentially desktop and email search, too) with intranet search might also be amusing... People search also needs addressing (and it's not just me who thinks that...) - <a href="http://blogs.open.ac.uk/Maths/ajh59/006638.html">Expert Search</a> generalised (to leverage all the <em>other</em> sorts of knowledge that's bottled up and siloed away) would be worth a small investment from any large institution...</li><br />
+<li><em>visualisations of....everything</em> :-) I keep managing to stumble across hierarchical, organisational charts (which I keep thinking could maybe provide a visual navigation tool - like the wikimindmap - to committee documents and minutes?) but it strikes me that committees are not really how the organisation is structured. What might a visualisation of the OU reveal if rendered as a "London Tube map": a) in which stations (nodes) were committees and lines (edges) were people who sit on those committees (<em>either</em> as individuals <em>or</em> as <em>ex officio</em> posts (the "<em>ex officio</em>, committee tube map!));or b) in which nodes were people (either named individuals <em>or</em> roles for an <em>ex officio</em> map view) and edges were committees/teams they are on. (There are loads of opportunities for visualising public OU web stats, OU course populations/student flow through courses, retention maps, course content browsing, etc etc, but neither of those are <em>intranet</em> related, really...)</li></ul></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010471.html">12:19 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10471" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 02, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010468"></a>
+<h3 class="title">2 minute 47s content chunks - perfect...</h3>
+
+From the rather wonderful Wonderland blog, a report on the rather intriguing Afterworld, apparently as told by it's creator-writer Brent Friedman... ...but first, here is Afterworld - Episode 1... So I took an old idea that I always wanted to...
+<!--
+<p>From the rather wonderful <a href="http://www.wonderlandblog.com/wonderland/2007/06/hollywood-gam-4.html">Wonderland</a> blog, a report on the rather intriguing <a href="http://www.afterworld.tv/">Afterworld</a>, apparently as told by it's creator-writer Brent Friedman...</p>
+
+<p>...but first, here is <a href="http://www.youtube.com/watch?v=zy9v7etZG74">Afterworld - Episode 1</a>...</p>
+
+<p><object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/zy9v7etZG74"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/zy9v7etZG74" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object></p>
+
+<blockquote>So I took an old idea that I always wanted to do as a TV series, but was always told it would be way too expensive. I wanted it to be an internet series, told for today's attention-deficit audiences, in 2-3 min bites, but I didn't want to sacrifice the scope or drama.
+...
+So we came up with this notion of an animated drama, told in bites, and our first season was going to be 130 episodes.
+...
+We realized that we'd created modular entertainment: it was designed to be a daily delivery, mon-fri, for 6 months. What we thought is... we can distribute on mobile overseas: Europe and Asia and South America have a much more developed mobile system than we do. We can distribute over the internet, in conjunction with network play: take 5 episodes and smush them together, and you have a 15m episode, which can be used as interstitials.
+
+<p>Take 2 weeks of episodes, and smush, you get a half hour show. Sony's approach was, we love multiplatform capabilities, but we really love that we can sell this as half-hour television, and offer all sorts of other opportunities to each territory on a multiplatform basis. So we wrote the stories in 2-week episode arcs. Everything works just as a 3-min and as part of a bigger whole. <br />
+...<br />
+We put this together, there was a study done in Europe by a consortium of advertisers and media buyers, and they were looking to find the optimum timelength in mobile ents for retaining attention for ad placement.<br />
+...<br />
+So folks are looking to the digital medium and asking, how much will people remember? 2m 47s is the magic number: after that length, something shown in the intro, the preroll, would be retained 100% by the key demographic. 100%! So our episodes are 2m and 57s.</blockquote></p>
+
+<p>The three minute single folks seem to have got it right, then...! I wonder if there's also something here in terms of effective presentation technique - like making a major point every three minutes or so? Or reinforcing a point every three minutes?</p>
+
+<p>Anyway, anyway - this idea of producing content chunks that work as independent, standalone items and yet can be rolled together into longer, coherent packages is one that feels right to me (as touched on in <a href="http://blogs.open.ac.uk/Maths/ajh59/010463.html">(Not?) Talking about Multimedia</a>).</p>
+
+<p>Ideally, though, the chunks might use different media (a paragraph of text, a short video, an audio clip) or have a different "force" - explanatory text, one side of an argument, the framing of a question or exercise - and (the hard one, this) be capable of being delivered in different bundles - the movies or audio clips being rolled together, for example (as with the Afterworld episodes).</p>
+
+<p>I'm not at all sure how to achieve this - yet - but I hope to try various ways out over the next few months. For internal readers, some doodlings will be available <a href="http://conclave.open.ac.uk/t151dev/">here</a>. Things will be pretty standard fare on that site for the first month or two as I try to identify blendable component parts, but any and all feedback/suggestions/experiments will be much appreciated on how we might develop this line of thinking, or if, indeed, it is worth pursuing at all... </p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010468.html">05:44 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10468" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">July 01, 2007</h2>
+
+
+<div class="blogbody">
+<a name="010466"></a>
+<h3 class="title">open2.net - a 20th Century Innovation</h3>
+
+Last week, an OU press release went out about a new OU/BBC series that airs later this month (July, 2007): James May's 20th Century (here's the BBC press release for Week 28 describing the show). If you'd like to see...
+<!--
+<p>Last week, an OU press release went out about a new OU/BBC series that airs later this month (July, 2007): <a href="http://www3.open.ac.uk/media/fullstory.aspx?id=11351">James May's 20th Century</a> (here's the <a href="http://www.bbc.co.uk/pressoffice/proginfo/tv/wk28/tue.shtml#tue_jmay">BBC press release for Week 28 describing the show</a>).</p>
+
+<p>If you'd like to see a trailer of what's in store, check out the <a href="http://www.youtube.com/bbc">official BBC presence on YouTube</a>, and in particular <a href="http://www.youtube.com/watch?v=5yYcDJkmHrA">James May's 20th Century - Honey I Shrunk the World - BBCTwo</a>. I would embed the clip in this post, but apparently <em>Embedding disabled by request</em>.</p>
+
+<p>At the time of writing, a search for <em>james may</em> on the OU/BBC website <a href="http://open2.net">open2.net</a> doesn't turn up any references to the series (try the search here: <a href="http://www.open2.net/home/custom_search?entity_names=object&search_terms=james+may">search for <em>james may</em> on open2.net</a> (just by the by, 'advanced' search doesn't seem to work on the open2.net site - limiting the search to a phrase using quotes (e.g. <a href="http://www.open2.net/home/custom_search?entity_names=object&search_terms=%22james+may%22">"james may"</a>) gets a response of the form: <em>Your search for <strong>"james may"</strong> returned <strong>0</strong> result(s)</em>!).</p>
+
+<p>Another Open2.net related media release last week proudly announced <a href="http://www3.open.ac.uk/media/fullstory.aspx?id=11307">Open University television takes a step beyond TV channels into webspace</a>:<br />
+<blockquote>The Open University is offering a new way to view one of its fact-based programmes. The Open University's Open Broadcasting Unit's (OBU), annual Open University Broadband Lecture will debut today Tuesday June 26 via www.Open2.net.</blockquote><br />
+<em>www.Open2.net</em> is <em>sic</em>, by the way - it's not a link...<br />
+<blockquote>Each year's Open University Broadband Lecture will be presented by an OU academic in front of an invited audience. Professor Zarnecki's programme is available to watch online, or download as a MP3 audio only file.</blockquote><br />
+Again, no links...</p>
+
+<p>If you want to see the lecture, you can find it linked (in several separate parts) from <a href="http://www.open2.net/oulecture2007/">http://www.open2.net/oulecture2007/</a>.</p>
+
+<p>The lecture is split into sections, with each section embedded in a movie player on a different page - the separate clips aren't even embedded as separate items in a single post, as in <a href="http://blogs.open.ac.uk/Maths/ajh59/010445.html">"When T293 had its last presentation in 2001...": We Ignore Digital Media at OUr Peril</a>, let alone a single show (like the <a href="http://blogs.open.ac.uk/Maths/ajh59/010459.html">Splashcast show version of that post</a>, which also makes the <a href="http://media.splashcast.net/xml/feeds/GIPJ3220JF.xml">components available via an RSS feed</a> (although not in the way that I'd have generated that feed...)).</p>
+
+<p>There is no sharing/embed code, so I can't share the lecture with you directly...</p>
+
+<p>I haven't checked, but I also suspect it is <em>not</em> (yet? ;-) available from either <a href="http://www.apple.com/education/itunesu/">iTunesU</a> or <a href="http://www.scitalks.com/">Scitalks</a>.</p>
+
+<p>In my opinion, Open2.net still seems to be stuck very much at 1.0... (Those iCal/RSS programme feeds gone live yet, chaps? ;-)</p>
+
+<p>What might Open2.0 look like, though?</p>
+
+<p>Here's one possible take on it: the new <a href="http://cnn.com">CNN web2.0 redesign</a> (which was beta tested via a <a href="http://behindthescenes.blogs.cnn.com/">behind-the-scenes CNN blog</a>, I think). For a quick overview of what's new and innovative on the site, Read/WriteWeb has a <a href="http://www.readwriteweb.com/archives/cnn_launch_web_20_re-design.php">review</a>.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010466.html">12:54 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10466" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

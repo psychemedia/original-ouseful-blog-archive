@@ -2,14 +2,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <META name="verify-v1" content="H750sV/WlmXwd7WxRf5+tokUiH4YDrEh7GMCkQWx/9k=" />
 <title>OUseful Info</title>
-<!--<link rel="search" type="application/opensearchdescription+xml" title="OUseful Blog Search" href="./ousefulSearch.xml" />-->
+<!--<link rel="search" type="application/opensearchdescription+xml" title="OUseful Blog Search" href="http://blogs.open.ac.uk/Maths/ajh59/ousefulSearch.xml" />-->
 <link rel="meta" type="application/rdf+xml" title="FOAF" href="http://psychemedia.videntity.org/foaf.xml" />
-<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="./rsd.xml" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.open.ac.uk/Maths/ajh59/rsd.xml" />
 
 <style type="text/css">
 <!--
@@ -66,7 +67,7 @@ function OpenTrackback (c) {
 </head>
 
 <body>
-<!-- ./ -->
+<!-- http://blogs.open.ac.uk/Maths/ajh59/ -->
 <div id="banner">
 <h1><a href="http://ouseful.info" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
@@ -75,134 +76,65 @@ function OpenTrackback (c) {
 <div id="content">
 
 <div class="blog">
-
-
-
-		<h2 class="date">
-	October 24, 2007
+<h2 class="date"><center>*********THESE PAGES ARE NOW ALL ARCHIVED********<br/> SEE THE CURRENT BLOG AT</center></h2>
+ <center><h3 class="title"><a style="text-decoration:none" href="http://ouseful.wordpress.com/">http://ouseful.info/</a></h3></center>
+		<br/><hr/><br/><h2 class="date">
+	July 16, 2008
 	</h2>
 	
 
 	<div class="blogbody">
 	
-	<a name="010927"></a>
-	<h3 class="title">Course Analytics - Prequel</h3>
+	<a name="015010"></a>
+	<a style="text-decoration:none" href="http://blogs.open.ac.uk/Maths/ajh59/015010.html"><h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 3</h3></a>
 	
-	<p>Earlier this week, <a href="http://www.downes.ca/cgi-bin/page.cgi?post=42132">Stephen Downes</a> picked up on an <a href="http://www.educause.edu/ir/library/pdf/PUB6101.pdf">EduCause report on <em>Academic Analytics</em></a>, which "describes how data from sources such as a course management system (CMS) or a student information systems (SIS) can identify at-risk students through analytics and predictive modeling". Academic Analytics can also be used to predict student success, as well as retention.</p>
+	<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">Visualising CoAuthors in Open Repository Online Papers, Part 2</a> I described an approach for pulling author information out of the OU ORO repository and displaying it in various ways, such as using a Graphviz plotted graph. I knew that ORO was scheduling an update, which has been pushed in the last few days, so the screen scraper I wrote to work with the old repository is now broken (of course...). The new ORO engine is capable of generating RSS search feeds though, so looking forwards, the whole system is far easier to play with it...</p>
 
-<p>In this post, I thought I'd set the scene for a series of <em>course analytics</em> posts using data that I "acquired" from an online course earlier this year. (I've posted previously about some of my <a href="http://ouseful.open.ac.uk/blog/010481.html">early thinking on the topic</a>.)</p>
+<p>...but it means that the demos I was just about to post about are now all broken... and it seems that the server I usually post scripts to (http://ouseful.open.ac.uk) won't run the (simple) PHP scraper I was using from the dev server on my laptop, so that's f***d too... </p>
 
-<p>In contrast to the academic analytics, one of the things I set out to explore was how an off the shelf web stats analytics tool (<a href="http://google.com/analytics">Google Analytics</a>) could be used to help me learn more about what students were doing with our online course materials, and help me identify what - if anything - a "learning site's" <em>goals</em> could be, and what the site might be optimised for.</p>
+<p>Anyway, had everything been working, I'd have posted about a screenscraper that trashes through results pages from ORO repositories, and generates a .dot graph definition file that can be visualisaed using Graphviz.</p>
 
-<p>Part of the difficulty lies with the site not being a "selling" site. Optimising a mini-site like <a href="http://www3.open.ac.uk/courses/bin/p12.dll?A02">Study at the OU</a> is in the first instance all about securing registrations on courses. But for an online course, it's not so clear what the goal is, or what the important metrics along the way are.</p>
+<p>Like this excerpt of a view of authors of papers on <a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html">LB1603 Secondary Education: High schools</a> from the University of Southampton open repository.</p>
 
-<p>(I asked a similar question at the Library Strategy workshop a couple of weeks ago: if the library website was Amazon, then success would be measured in taking someone's credit card number, shipping the goods, and not getting them returned. What's the success measure - or success measures - for a library website?)</p>
+<p><a href="http://eprints.soton.ac.uk/view/subjects/LB1603.html" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3027/2673909694_f5f82517dc.jpg" alt="http://eprints.soton.ac.uk/view/subjects/LB1603.html" height="114" width="500" /></a><br />
+ <br />
+...which I realise just now isn't working properly... the regular expression was tested against the author format used in last week's OU ORO reference listings (where every author was separated by an 'and'), and it breaks for multiple authored papers on the Southampton site where there are more than two authors (only the last author is 'and'ed, the others are comma separated). The fix should be a quick one, but... I have other things to do... and if the OU ORO site has been upgraded, maybe the Southampton one will soon follow...</p>
 
-<p>Something I found useful in helping me think about this topic was this seminar on <a href="http://www.youtube.com/watch?v=LgXDUuAK77M">Google Analytics - Non-Ecommerce Sites: Beyond Averages</a> from the <a href="Google%20Conversion%20University">Google Conversion University Playlist on YouTube</a> (the <a href="http://www.google.com/analytics/conversionuniversity.html">Google Conversion University website</a> also has some interesting articles...).</p>
+<p>(It has been pointed out to me that using the approach on e.g. ORO papers might be used to shame people into submitting their own papers to local repositories, when they see their name isn't shown in a particular graph view where they might expect to see it... I couldn't possibly comment on that...!)</p>
 
-<p><object height="355" width="425"><param name="movie" value="http://www.youtube.com/v/LgXDUuAK77M"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/LgXDUuAK77M" type="application/x-shockwave-flash" wmode="transparent" height="355" width="425"></object></p>
+<p>Sigh - so much for this as another IWMW innopvation competition entry... The lesson: even sites that nominally use the same software (e.g. eprints) all use them slightly diffefrently; so scraping as a general technique sucks (now I remember why I stopped writing screen scrapers...;-)</p>
 
-<p>In particular, here are four <em>distribution</em> (rather than average) measures that are useful for analysing user behaviour on non-ecommerce websites:<br />
-<ul><li>Visitor loyalty - how often has each user visited the site over a given period;</li><br />
-<li>Visitor recency - of all the people who have visited the site, how many have visited in the last N days;</li><br />
-<li>Length of visit - how long do visitors stay on site;</li><br />
-<li>Depth of visit - how many pages on the site are seen on each visit;</li></ul></p>
+<p>The "find collections of sets of names (such as article references), work out all the paired name combinations for each set (reference), then plot the graph" recipe seems to work though...</p>
 
-<p>Over the next week or so, I'll do a series of posts looking at these measures as obtained from an online course, and go way beyond reports like this...</p>
+<p>So for example, here's a graph showing all the people who sit on the same committees in the Isle of Wight Council (as of June 2008); multiple links between two people shows they sit on several different committees together. The direction info in the links is rather more arbitrary, except in two particular cases... if you are only ever the chair of a committee, there will only be links going away from you... If there are only ever incoming links to you, you are not the chair of any committee.</p>
 
-<p><img src="http://farm3.static.flickr.com/2117/1727702520_4a4d90c605.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="348" width="500" />  </p>
+<p><a href="http://www.flickr.com/photos/psychemedia/2658900693/" title="Isle of Wight Council committee comembership by psychemedia, on Flickr"><img src="http://farm4.static.flickr.com/3237/2658900693_f4128efee3_b.jpg" alt="Isle of Wight Council committee comembership" height="744" width="1024" /></a></p>
 
-<p>That said - there are a couple of interesting features in the above report - periodicity, for example (Tuesday's look busy...), and traffic peaks at the two assessment weeks...</p>
+<p>If I could find lists of committee memberships for the OU, I'd have a go at plotting something similar... (it strikes me it might be interesting to see graphs showing named representation on committees that pass work to each other, as well as ex officio membership of committees by virtue of job title/rank (PVC, Dean, HoD, and so on...)</p>
 
-<p><small>PS Just by the by, if you use consultants to do your reading for you (i.e. you read through reports or sit through presentations that talk-up <a href="http://www.amazon.co.uk/Innovators-Dilemma-Technologies-Cause-Great/dp/0875845851/?tag=ouseful-21">The Innovator's Dilemma</a>/<a href="http://www.amazon.co.uk/Innovators-Solution-Creating-Sustaining-Successful/dp/1578518520/?tag=ouseful-21">Solution</a>, or <a href="http://www.amazon.co.uk/Blue-Ocean-Strategy-Uncontested-Competition/dp/1591396190/?tag=ouseful-21">Blue Ocean Strategies</a> and so on) I'm guessing that <a href="http://www.amazon.co.uk/Competing-Analytics-Thomas-H-Davenport/dp/1422103323/?tag=ouseful-21">Competing on Analytics</a> will be the next "bestselling" Harvard Business School book they quote at you! (I'm not convinced that the <a href="http://www.amazon.co.uk/Black-Swan-Impact-Highly-Improbable/dp/0713999950/?tag=ouseful-21">Black Swan</a> will fly? ;-)</small><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/course%20analytics" rel="tag">course analytics</a>, <a href="http://technorati.com/tag/%20online%20learning" rel="tag"> online learning</a>, <a href="http://technorati.com/tag/elearning" rel="tag">elearning</a>, <a href="http://technorati.com/tag/analytics" rel="tag">analytics</a></p><!-- technorati tags end --></p>
-	
-	
-	
-	<div class="posted">Posted by ajh59 at <a href="./010927.html">12:46 PM</a>
+<p>Just one final note - visualising .dot files requires a Graphviz viewer. These are most comonly offline applications, though I have found a coupe of routes to online viewing:</p>
 
-	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10927" onclick="OpenComments(this.href); return false">Comments (0)</a>
-	
+<p>- <a href="http://ashitani.jp/gv/">AJAX Graphviz viewer</a>: post a (small) .dot file into a form, hit the enter key, and see the graph...<br />
+- <a href="http://drupal.org/project/graphviz_filter">Graphviz filter for Drupal</a>; I had asked <a href="http://greenhughes.com">Liam</a> if he could get one of these running somewhere, so I could plug in the eprints repository scraper and we'd have a neat IWMW innovation competition entry, but as my scripts all appear to be broken, and I donlt have time to fix them, I guess that's for another day (or not...)..</p>
 
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010927.html" type="text/javascript" charset="utf-8"></script>
-	</div>
-	
-	</div>
-	
+<p>Anyway, it seems that the OU may be going all 2.0, if Twitter is to be believed... so it's been a good three years or more,  and maybe it's job done..?! Time for something else maybe? A return to pointless research in a tiny micro-field somewhere (but at least a promotion prospect at the end...). I'll keep <a href="http://ouseful.info">http://ouseful.info</a> pointing somewhere, and <a href="http://feeds.feedburner.com/ouseful">http://feeds.feedburner.com/ouseful</a> will keep spewing forth...</p>
 
+<p>...but in the meantime...</p>
 
+<p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/dZGIJgIs9-Y&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object></p>
 
+<p>OUseful.info on <em>http://blogs.open.ac.uk/Maths/ajh59</em> has left the house... </p>
 
-		<h2 class="date">
-	October 23, 2007
-	</h2>
-	
-
-	<div class="blogbody">
-	
-	<a name="010908"></a>
-	<h3 class="title">OpenLearnigg - Social Ranking for OpenLearn Units</h3>
-	
-	<p>Some time ago, I came across <a href="http://www.corank.com">CoRank</a>, which is not a hosted Digg-clone, (but it is, really...;-). Over the last week or so, I've been using an RSS import facility (available on request from corank) to populate <a href="http://openlearnigg.corank.com">http://openlearnigg.corank.com</a> with links to OpenLearn Units (see <a href="./007457.html">Time for an OpenLearnigg (sic) Environment</a> for my earlier doodles on this topic).</p>
-
-<p><img src="http://farm3.static.flickr.com/2078/1710833805_60779ad082.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="319" width="500" /></p>
-
-<p>CoRank supports topic based and tagged classification, so I've mirrored the OpenLearn topic structure, and also added a handful of tags to each post (by hand! Ideally, this would be done automatically using some sort of  term extraction or content analysis tool).</p>
-
-<p>I've set the permissions up so that:<br />
-<ol><li>anyone can vote;</li><br />
-<li>registered users can comment;</li><br />
-<li>only I can add tags (I think) and new links.</li></ol><br />
-All the links point back to the corresponding unit on the OpenLearn site.</p>
-
-<p>Having got access access to al the template files (again - <a href="http://corank.zoomblog.com/archive/2007/08/30/one-more-step-towards-complete-customi.html">available on request</a>).</p>
-
-<p>On the to do list template hacking wise is the addition of feed URLs for each unit, and then maybe a Grazr embedded feed view of the content from each unit.</p>
-
-<p>I'm also thinking of collecting links to the MIT opencourseware units, agian by piping them in via <a href="http://ocw.mit.edu/OcwWeb/web/about/rss/index.htm">MIT OCW course listings RSS</a>.</p>
-
-<p>Visit <a href="http://openlearnigg.corank.com/">OpenLearnigg</a><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/openlearnigg" rel="tag">openlearnigg</a></p><!-- technorati tags end --></p>
+<p>...be seeing you...<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw-not" rel="tag">iwmw-not</a>, <a href="http://technorati.com/tag/graphviz" rel="tag">graphviz</a></p><!-- technorati tags end --></p>
 	
 	
 	
-	<div class="posted">Posted by ajh59 at <a href="./010908.html">04:26 PM</a>
+	<div class="posted">Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/015010.html">09:51 AM</a>
 
-	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10908" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=15010" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010908.html" type="text/javascript" charset="utf-8"></script>
-	</div>
-	
-	</div>
-	
-
-
-
-
-	
-
-	<div class="blogbody">
-	
-	<a name="010900"></a>
-	<h3 class="title">Customised YouTube Players - OpenLearn: The Renaissance</h3>
-	
-	<p>For some time, YouTube have been offering the anbility to generate embed code for custom YpuTube players. here's an example - <a href="http://www.youtube.com/custom_player?player_id=VGRgCtIOLJ0">The Renaissance, on OpenLearn</a>...</p>
-
-<p><object height="445" width="780"><param name="movie" value="http://www.youtube.com/cp/vjVQa1PpcFOItcYcdFQ6B3ZE7wj7Gn71Zf84vSy3zgM="><param name="wmode" value="transparent"><embed src="http://www.youtube.com/cp/vjVQa1PpcFOItcYcdFQ6B3ZE7wj7Gn71Zf84vSy3zgM=" type="application/x-shockwave-flash" wmode="transparent" height="445" width="780"></object></p>
-
-<p>If the embed code doesn't work, here's what the side panel custom widget looks like:</p>
-
-<p><img src="http://farm3.static.flickr.com/2180/1699178738_af67cbea4e.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="283" width="500" /></p>
-
-<p>The videos shown in the custom player are pulled in from one of your own, specified playlists. This playlists may contain either your own videos, or embeddable videos from other users.<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/youtube" rel="tag">youtube</a>, <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a></p><!-- technorati tags end --></p>
-	
-	
-	
-	<div class="posted">Posted by ajh59 at <a href="./010900.html">12:50 AM</a>
-
-	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10900" onclick="OpenComments(this.href); return false">Comments (0)</a>
-	
-
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010900.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/015010.html" type="text/javascript" charset="utf-8"></script>
 	</div>
 	
 	</div>
@@ -212,164 +144,361 @@ All the links point back to the corresponding unit on the OpenLearn site.</p>
 
 
 		<h2 class="date">
-	October 22, 2007
+	July 15, 2008
 	</h2>
 	
 
 	<div class="blogbody">
 	
-	<a name="010884"></a>
-	<h3 class="title">Relevant Knowledge? T189 on flickr...?</h3>
+	<a name="015007"></a>
+	<a style="text-decoration:none" href="http://blogs.open.ac.uk/Maths/ajh59/015007.html"><h3 class="title">IWMW2008 Innovation Competition - Searching for Media Release Related News Stories</h3></a>
 	
-	<p>TechCrunch are reporting that <a href="http://www.techcrunch.com/2007/10/19/flickr-to-add-photo-editing-tool-via-picnik/">Flickr [is] To Add Online Photo Editing Tools Via Picnik</a>, which strikes me as a Good Thing... I also wonder if it's an opportunity for extending the reach of the OU short course course <a href="http://ouseful.open.ac.uk/t189">T189 Digital photography: creating and sharing better images</a>.<br />
-<blockquote>[T189] is a creative mix of practice, learning, sharing and reflection:</p>
+	<p>It seems the <a href="http://www.ukoln.ac.uk/web-focus/events/workshops/webmaster-2008/competition/">Institutional Web Management Workshop 2008: Innovation Competition</a> is in need of entries, so I had quick a half hour hack around the University of Aberdeen newsfeeds to see if I could come up with anything interesting (Brian Kelly hinted that  if I used any OU info sources, no-one would take any notice becuase it would be seen as an 'official' OU development!;-)</p>
 
-<p>    * Practice: each week you do a practical photographic activity that broadens and strengthens your photographic experience. Together these activities form the basis of your portfolio that youll draw upon for your end-of-course assessment.</p>
+<p>Here's where I've got so far...</p>
 
-<p>    * Learning: each week you learn about different aspects of photographic techniques, as well as relevant aspects of the technology behind digital photography.</p>
+<p>The University of Aberdeen (and many other universities) publish an RSS feed of their media releases. But how effective are these releases? That is, do the releases actually manage to generate any news coverage?</p>
 
-<p>    * Sharing and reflection: each week you share your work within the T189 online community of photographers. You'll steadily develop your ability to reflect upon your own and others' work, and to write about your increasing visual awareness.</blockquote>There are <a href="http://del.icio.us/psychemedia/photo+editor">many online photo editing tools</a> of course, and Adobe will soon be releasing an <a href="http://www.readwriteweb.com/archives/adobe_preparing_full_shift_to_online_apps.php">online version of Photoshop</a> (T189 trains students in the use of Adobe Photoshop Elements, which is provided free with the course, I believe) so the Flickr announcement is not necessarily offering a <em>new</em> service, although it does potentially open up a new audience for T189? </p>
+<p>University of Aberdeen media releases: <a href="http://www.abdn.ac.uk/mediareleases/feed.xml">http://www.abdn.ac.uk/mediareleases/feed.xml </a> (RSS format, limited to 10 items. ?How can I increase the number of items in this feed?)</p>
 
-<p>I don't know if anyone has explored a partnership with Flickr or Photobucket or even the Goog (in the context of Picasa) for T189, but the opportunity of doing a daily learning, or one-topic-per-visit version of the course in the context of a photo-hosting and editing site would seem to me to be a natural fit? And a natural place to offer a <a href="http://tscp.open.ac.uk/">Relevant Knowledge</a> course on digital photography?</p>
+<p>One of the easiest ways of doing a news search around an organisation is to simply do a search on Google news.</p>
 
-<p>Opening up new revenue streams for our courses is something that I think is on the agenda as UK HE funding continues to undergo something of a review. Licensing Relevant Knowledge short courses to sites that provide an appropriate context for them might provide one way of extending their reach, and the revenue we can generate from them?<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/flickr" rel="tag">flickr</a>, <a href="http://technorati.com/tag/t189" rel="tag">t189</a>, <a href="http://technorati.com/tag/digital%20photography" rel="tag">digital photography</a>, <a href="http://technorati.com/tag/relevant%20knowledge" rel="tag">relevant knowledge</a></p><!-- technorati tags end --></p>
-	
-	
-	
-	<div class="posted">Posted by ajh59 at <a href="./010884.html">11:23 AM</a>
+<p><a href="http://news.google.com/news?as_q=&amp;svnum=10&amp;as_scoring=r&amp;%3Bsvnum=10&amp;ned=us&amp;aq=f&amp;hl=en&amp;aq=f&amp;ie=UTF-8&amp;aq=f&amp;ned=us&amp;btnG=Google+Search&amp;as_epq=&amp;as_oq=university-of-aberdeen+aberdeen-university&amp;as_eq=&amp;as_drrb=q&amp;as_qdr=m&amp;as_mind=15&amp;as_minm=6&amp;as_maxd=15&amp;as_maxm=7&amp;as_nsrc=&amp;as_nloc=UK&amp;geo=&amp;as_occt=any&amp;aq=f" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3106/2670331235_bc44cbed2f.jpg" alt="2008-07-15_1222" height="286" width="500" /></a></p>
 
-	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10884" onclick="OpenComments(this.href); return false">Comments (3)</a>
-	
+<p>Conveniently, RSS feeds for persistent (alerting) Google News searches are available: <a href="http://news.google.com/news?svnum=10&amp;as_scoring=r&amp;%3Bsvnum=10&amp;ned=us&amp;aq=f&amp;hl=en&amp;aq=f&amp;ie=UTF-8&amp;aq=f&amp;ned=us&amp;as_drrb=q&amp;as_qdr=m&amp;as_mind=15&amp;as_minm=6&amp;as_maxd=15&amp;as_maxm=7&amp;geo=&amp;aq=f&amp;q=university-of-aberdeen+OR+aberdeen-university+location:uk&amp;output=atom">Atom feed for Google news search for <em>university-of-aberdeen OR aberdeen-university location:uk</em> over the last month</a>.</p>
 
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010884.html" type="text/javascript" charset="utf-8"></script>
-	</div>
-	
-	</div>
-	
+<p>That's possibly useful in a different way, though, because it will capture <em>all</em> recent mentions of the university in the UK press.</p>
 
+<p>So here's a recipe that attempts to find news stories about the university that are also on the topics mentioned in the press releases. For convenience, I've specified the recipe as a working prototype in the form Yahoo Pipe.</p>
 
+<p>Fetch the press release feed and run the description of each one through the Yahoo content analysis/term extraction tool.</p>
 
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3186/2671209336_be705b32b5.jpg" alt="2008-07-15_1259" height="252" width="448" /></a></p>
 
-		<h2 class="date">
-	October 21, 2007
-	</h2>
-	
+<p>Use these terms as the basis of a search query, supplemented by additional search terms for <em>("University of Aberdeen" OR "Aberdeen University")</em>.</p>
 
-	<div class="blogbody">
-	
-	<a name="010874"></a>
-	<h3 class="title">RSS Content Analysis, Tag Clouds and OpenLearn Navigation</h3>
-	
-	<p>Last week, I came across a service - <a href="http://www.jiglu.com/">Jiglu</a> - that claimed to "automatically create intelligent tags and links for your web content". One of the things I've been exploring lately is the potential for constructing thematic bundles of OpenLearn course units - as more and more units are added to the current OpenLearn topics, their usefulness as containers that support discovery through browsing becomes debatable...</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2414/2670392765_9eeebfa72f.jpg" alt="2008-07-15_1302" height="85" width="500" /></a></p>
 
-<p>So the Jiglu service looked interesting this respect; unfortunately, it seems that you need to add a Javascript snippet to the pages you want to analyse, which I don't have access to on OpenLearn (I didn't check this - maybe the javascript is just required for presentaion and you can find a API URL in the code?)</p>
+<p>Generate a set of Google news persistent search RSS URLs for UK news mentions over the last 3 months using the above search terms:</p>
 
-<p>However, <a href="http://zoomclouds.egrupos.net/">ZoomClouds</a> - the tag cloud service I use on <a href="http://ouseful.info">OUseful Info</a> - only requires an RSS feed URL in order for you to benefit from <em>it's</em> content analysis and term extraction service, so I dutifully set up a demo.</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3226/2671215936_e6b90279d5.jpg" alt="2008-07-15_1303" height="500" width="404" /></a></p>
 
-<p>Here, for example, is a cloud generated from the unit feed from <a href="http://openlearn.open.ac.uk/course/view.php?id=1710">M248_1 Exploring data: graphs and numerical summaries</a> (<a href="./openLearnTagCloudDemo.html">see demo tag cloud</a>).</p>
+<p>We're now going to replace the original feed items with a set of items returned from the contextualised/media release related news search:</p>
 
-<p><img src="http://farm3.static.flickr.com/2201/1660780178_450115c553.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="168" width="218" /></p>
-
-<p>As far as I know, ZoomClouds doesn't offer an API for creating new ZoomClouds, although the <a href="http://clouds.zoomblog.com/archivo/2006/02/27/zoomclouds-Api.html">ZoomCLouds API</a>does publish an XML feed containing the tags extracted from a feed, so generating a ZoomCloud for each of the dozens and dozens of OpenLearn Units that are now available would be tedious, to say the least!</p>
-
-<p>What might be more interesting could be to generate a single, spliced feed of several OpenLearn units - maybe even all the units in an OpenLearn topic area, or at least all the descriptions of courses in a topic area - and generate a navigational tag cloud that links into the course descriptions, rather than the sections within an individual course.</p>
-
-<p>Ahh - what the heck - let's see how that might look. Let's take the <a href="http://openlearn.open.ac.uk/course/filter.php?grouping=topic&amp;detail=10">feed of unit descriptions for the OpenLearn Science and Nature topic</a>, for example:</p>
-
-<p><img src="http://farm3.static.flickr.com/2247/1660779966_eb4dd613da.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="500" width="207" /><br />
-<a href="./openLearnTagCloudDemo.html">See demo tag cloud</a>.</p>
-
-<p>As OpenLearn provides access to more and more units, supporting discovery of relevant content is going to become more and more of an issue. The use of ZoomClouds shows one possible approach to automating the generation of navigational widgets on the basis of content analysis, In a later post, I'll write up a tag based approach I've been exploring in the context of a Digg-like interface to OpenLearn - <a href="http://openlearnigg.corank.com">OpenLearnigg</a>.<!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/tagcloud" rel="tag">tagcloud</a>, <a href="http://technorati.com/tag/content%20analysis" rel="tag">content analysis</a>, <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/navigation" rel="tag">navigation</a></p><!-- technorati tags end --></p>
-	
-	
-	
-	<div class="posted">Posted by ajh59 at <a href="./010874.html">12:12 AM</a>
-
-	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10874" onclick="OpenComments(this.href); return false">Comments (0)</a>
-	
-
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010874.html" type="text/javascript" charset="utf-8"></script>
-	</div>
-	
-	</div>
-	
-
-
-
-
-		<h2 class="date">
-	October 19, 2007
-	</h2>
-	
-
-	<div class="blogbody">
-	
-	<a name="010855"></a>
-	<h3 class="title">Open University Course Profiles Facebook App</h3>
-	
-	<p>After a month or so of teasing, the first major push of our skunkworks <a href="http://www.facebook.com/apps/application.php?api_key=06d85b85540794e2fd02e9ef83206bf6">OU Course Profiles</a> Facebook app went live yesterday. Since mid-September, we've been quietly running an application on Facebook that allows OU students to declare the OU courses they've taken, are taking or intend to take. Until yesterday, the app provided a course badge panel on a user's profile page...</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3118/2671219582_5060ce4ed4.jpg" alt="2008-07-15_1305" height="194" width="440" /></a></p>
 
 <p><br />
-<img src="http://farm3.static.flickr.com/2372/1640856721_ce898f1c06.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="278" width="486" /></p>
+Finally, we use the news story date for the timestamp of each item.</p>
 
-<p>... and announced courses added to their profile on their news feed...</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=_kyPiFZS3RGPtDVpCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3229/2671224700_309284e3fb.jpg" alt="2008-07-15_1308" height="313" width="487" /></a></p>
 
-<p><img src="http://farm3.static.flickr.com/2301/1641729824_7482870cd6.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="83" width="412" /></p>
+<p>This feed can then be used in the normal way - for example, here it is on a Dipity timeline:</p>
 
-<p>Courses are added to a profile using a course code. One of the motivations for the app was the observation that many students self-declare courses they have been involved with in the signature to their online conference postings. OU students often take just one or two courses per year over 7 month period, studying at a distance and often on top of the pressure of work and family commitments. Under such a regime, the course code often becomes unforgettable!</p>
-
-<p><img src="http://farm3.static.flickr.com/2372/1640854279_184a593719.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="330" width="500" /></p>
-
-<p>The course title is pulled in from a database of course codes and titles. Whilst this data <em>can</em> be scraped from the OU courses and qualifications website (at least for currently presented courses), we managed to obtain <em>a</em> list of course codes from an internal OU database to drive the title auto-completion code from the start; more recently, an authoritative list of course codes and titles has been obtained.</p>
-
-<p>Part of the philosophy of the development team (myself, <a href="http://conclave.open.ac.uk/SocialCommunications/?p=33">Stuart Brown</a> (comms) and Liam Green-Hughes  (AACS; thanks for all your development effort, Liam :-), with <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/10/first-ou-facebo.html">Martin Weller</a> riding shotgun and covering our backs) was that the application should not make use of privileged OU information; that is, we would only use information that is available on (scrapeable from!) the OU's public websites, or that is self-declared by application users.</p>
-
-<p>However, for the sake of efficiency(!?;-), we decided we <em>would</em> exploit data such as course code and title tables if by doing so we could make an argument to the data holders that they really should publish a public API of the information, and that we could demonstrate a sensible use case for it.</p>
-
-<p>That said, where data has been made available to us, we have reserved the right <em>not</em> use any data we are provided with until such a time as we can make use of it via a public API, even if this means we use lower quality data.</p>
-
-<p><strong>New Features</strong></p>
-
-<p>The new features released yesterday start to exploit various network related properties, as well as exploring integration with OU related services that are <a href="./010591.html">keyed using a course code</a>.</p>
-
-<p><img src="http://farm3.static.flickr.com/2110/1640855627_c17be99e67.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="258" width="500" /></p>
-
-<p>The <em>View Course Information</em> panel currently links through to the 'external'  OU courses and qualifications code for that course (where it exists). However, we are exploring ways in which we might link to the <a href="http://www3.open.ac.uk/occam/courseinfo.asmx">OU's XCRI web service</a> (SOAP, rather than RESTful with a JSON output option, unfortunately...) as and when course level details are made available through it. </p>
-
-<p>The <em>OpenLearn Units</em> panel links through to a page that lists any OpenLearn Units derived from that particular course and links through to the corresponding units on the OpenLearn site. (Although we are not using this service, the <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=eBdDcNdm3BGw5cCHy6ky6g">OpenLearn Units Derived from an OU Course</a> Yahoo! Pipe could be used to source this data.)</p>
+<p><a href="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_contextual_news" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3240/2671228400_0e777f560f.jpg" alt="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_contextual_news" height="285" width="500" /></a></p>
 
 <p><br />
-<img src="http://farm3.static.flickr.com/2321/1641731608_59b8d38f00.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="286" width="500" /><br />
-As the <a href="./010778.html">OpenLearn Units in Facebook</a> app demonstrates, a Grazr widget can be used to display any number of OpenLearn Units in Facebook by making use of the <a href="http://openlearn.open.ac.uk/course/index.php">OpenLearn Unit RSS Feeds</a>. Embedding of OpenLearn unit feeds in this panel is being explored. </p>
+What I need now, of course, is a timeline comparison tool, that lets me compare items on two separate, aligned timelines - one for the media releases, and one for the 'media release contextual news search'...</p>
 
-<p>The <em>Friends on This Course</em> link provides a list of friends who have declared their association with - or interest in - the same course, subject to appropriate privacy settings. Privacy has been one of our ongoing concerns, about which I'll write more in a later post (along with some notes on the development process behind the app).</p>
+<p>UPDATE: In the meantime, it's easy enough to merge a feed of the original media releases and the contextual/content extracted terms news search.</p>
 
-<p><img src="http://farm3.static.flickr.com/2067/1641730120_134dfa68e8.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="221" width="500" /></p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=6halKnZS3RGrdt9JYEsBXw" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3140/2671456160_49753cac55.jpg" width="500" height="246" alt="http://pipes.yahoo.com/pipes/pipe.info?_id=6halKnZS3RGrdt9JYEsBXw"/></a></p>
 
-<p>The <em>Course Comments</em> feature started out as a Facebook comment wall, although we have since instituted a custom built wall. Whilst this means we host the comments and are in a sense responsible for them, it does mean we can remove a comment if it is flagged to us as offensive or abusive by application users.</p>
+<p>By plotting this feed on a timeline, you can see whether the media release lead to resulting story...</p>
 
-<p>The <em>Find A Study Buddy</em> feature starts to leverage the <em>course code declaration network</em> that we are beginning to map out. When a users tries to find a Study Buddy for a course, other users who have declared the same course, and whose privacy settings allow an introduction to be made to the user looking for a Study Buddy, are listed. A message can then be sent via the application to the potential Study Buddy.</p>
+<p><a href="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_media_release_effectiveness" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3104/2670630975_83b0f58cc5.jpg" width="500" height="246" alt="http://www.dipity.com/user/psychemedia/timeline/University_of_Aberdeen_media_release_effectiveness"/></a></p>
 
-<p>A ranking algorithm <em>is</em> used by the Study Buddy finder tool, although you'll have to wait for a later post to find out more about it;-)</p>
+<p>Of course, you'd get an even more comprehensive view if you just plotted a 'raw' news search for <em>"Aberdeen University" OR "University of Aberdeen"</em> (which is what <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=27c0b7e1570c3ee06afd85693374ab66">this pipe</a> does, as displayed on <a href="">this timeline</a>). Which is actually better... Hmm... But this post is about building <em>semantic</em> news filters, right?! (Err... ;-)</p>
 
-<p>A further social tool is the ability to <em>recommend</em> a course to a friend. As well as promoting the application, there are obvious potential marketing benefits to the OU here (it would be handy if the OU offered an affiliate scheme, so we could get a percentage if anyone signed up to a course as a result a Couse Profiles app recommendation?;-).</p>
+<p>So to recap, the idea is to take a university media release news feed, automatically extract a set of keywords related to each media release, and then use those keywords as the basis for a set of queries on Google news for UK based news items related to those topics that also mention the university in question. The results are then output from the pipe as an RSS feed, or otherwise. Each item is timestamped with the date of the news article, so it can be displayed on a timeline, or otherwise, as required.</p>
 
-<p><em>However</em>, our intention has <em>not</em> been to develop a marketing tool - as a skunkworks team, we have been more interested in exploring the potential for cross-unit, agile application development (working on the <a href="">outside, inside</a>!) and the possibility of leveraging both the Facebook social network, and our users' self-declared OU course codes network, as a way of building OU student communities.</p>
+<p>Note that it would be possible to modify the pipe so that searched for news stories were associated with the media release item that provided the corresponding content extracted query terms that turned up the particular search results. However, to make full use of these results would require a client that could consume and display the JSON output of the pipe, which would take a little bit more time to do... And the point of the innovation competition is that the mashups are quick'n'easy to do, right, and ideally make use of stuff that's already out there?! ;-)</p>
 
-<p>At the time of writing, there are approximately 3,500 members of the <a href="http://www.facebook.com/networks/?nk=16827259">Open University Network</a> on Facebook, and about 800 in the <a href="http://www.facebook.com/group.php?gid=2212434521">Open University Group</a> (which is the group I believe Facebook users who cannot join the OU Network (no *.open.ac.uk email address, I guess?) but who do want to participate in a general OU community, align themselves with).</p>
+<p><br />
+PS another approach might be to search for news stories or blogposts that reference the media release items linked to in the media release feed. For example:</p>
 
-<p>The <a href="http://www.facebook.com/apps/application.php?api_key=06d85b85540794e2fd02e9ef83206bf6">OU Course Profiles</a> application has  - as of 19/10/07 - almost 300 users, growing at several(?!) a day. It will be interesting to see how the app propagates through these two communities over the coming weeks, and whether anyone finds it OUseful ;-)</p>
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=EmdRlGpS3RGSwuWCCB2yXQ" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3013/2671272474_a38d4d3394.jpg" alt="http://pipes.yahoo.com/pipes/pipe.info?_id=EmdRlGpS3RGSwuWCCB2yXQ" height="398" width="496" /></a></p>
 
-<p>PS You'll notice that we called the application "Course Profiles" rather than "Open University Course Profiles". That's because it scales... if you want to know more, mail me...<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/facebook" rel="tag">facebook</a>, <a href="http://technorati.com/tag/skunkworks" rel="tag">skunkworks</a></p><!-- technorati tags end --></p>
+<p>This pipe loops through each item in the media release feed, and searches for blog posts that have linked to the original story (that is, that have linked to the URL for the particular media release).</p>
+
+<p>The "URL inLinks (blogs, raw)" module is one I had built earlier, that uses a Google blogsearch to find posts that mention a particular link. It would probably be more effective to look through each media release to see whatstory related websites (if any) it mentions/links to, and then use these as the basis for the blogged link search (for example, I may not be likely to link to the press release, but I may point to the research group web page it describes).<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/iwmw2008" rel="tag">iwmw2008</a>, <a href="http://technorati.com/tag/mashup%20competition" rel="tag">mashup competition</a>, <a href="http://technorati.com/tag/%20innovation%20competition" rel="tag"> innovation competition</a></p><!-- technorati tags end --></p>
 	
 	
 	
-	<div class="posted">Posted by ajh59 at <a href="./010855.html">11:08 PM</a>
+	<div class="posted">Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/015007.html">01:47 PM</a>
 
-	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10855" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=15007" onclick="OpenComments(this.href); return false">Comments (2)</a>
 	
 
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010855.html" type="text/javascript" charset="utf-8"></script>
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/015007.html" type="text/javascript" charset="utf-8"></script>
+	</div>
+	
+	</div>
+	
+
+
+
+
+		<h2 class="date">
+	July 11, 2008
+	</h2>
+	
+
+	<div class="blogbody">
+	
+	<a name="014991"></a>
+	<a style="text-decoration:none" href="http://blogs.open.ac.uk/Maths/ajh59/014991.html"><h3 class="title">Institutional Social Networks</h3></a>
+	
+	<p>Reading the feed from <a href="http://blog.newport.ac.uk/blogs/michael/default.aspx">Michael Webb's Blog</a> yesterday, I was.... stunned is probably the best word, to read his post "<a href="http://blog.newport.ac.uk/blogs/michael/archive/2008/07/09/52948.aspx">Newspace - a  social networking site for new students</a>" which describes "a social networking site for new students at the University, <a href="http://newstudents.newport.ac.uk/">http://newstudents.newport.ac.uk</a>." And why was I shocked? "It's based on <a href="http://www.ning.com">Ning</a>..." (a site we've also used as an online social network complement to our two recent <a href="http://www.open.ac.uk/blogs/socialearn/">SocialLearn</a> workshops).</p>
+
+<p><a href="http://newstudents.newport.ac.uk/" title="Newspace - Ning social network for Newport students"><img src="http://farm3.static.flickr.com/2315/2658584500_aa2eaba6e0.jpg" alt="http://newstudents.newport.ac.uk/ Newport newspace social student site http://newstudents.newport.ac.uk/" height="342" width="500" /></a></p>
+
+<p>(The actual NIng site is here: <a href="http://newportstudents.ning.com/">http://newportstudents.ning.com/</a>.) Michael's post describes some of the issues relating to the decision to use Ning, and is well worth a read...</p>
+
+<p>Having dutifully emailed(?) the SocialLearn team to give them a heads up about this site, I got a "yeah, it's happening all over the place" reply back that linked to a site the University of Bradfrod have also set up on NIng: <a href="http://developme.ning.com/">Develop Me! (University of Bradfrod on Ning)</a>. This social network appears to offer the "Meet and chat online" bit of a wider project hosted on the University of Bradford website itself: <a href="http://www.brad.ac.uk/developme/">Develop Me! homepage</a></p>
+
+<p><a href="http://www.brad.ac.uk/developme/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3047/2657775735_6c97143c94.jpg" alt="2008-07-11_1340" height="396" width="500" /></a></p>
+
+<p>Here's the Bradford site on Ning:</p>
+
+<p><a href="http://developme.ning.com/" title="Unoversity of Bradford 'Develop Me' social netowrk on Ning"><img src="http://farm4.static.flickr.com/3059/2657778499_6ebf4725be.jpg" alt="http://developme.ning.com/" height="337" width="500" /></a></p>
+
+<p>It's interesting how the openness of the front page of this site compares with what happens if you try to go straight to the Newport Ning site...</p>
+
+<p>So with some institutions feeling adventurous and taking the plunge into the world of social web apps, whilst maintaining some element of control, how will SocialLearn fit into all this? Like this maybe?</p>
+
+<p><a href="http://www.open.ac.uk/blogs/socialearn/" title="Locating SocialLearn"><img src="http://farm3.static.flickr.com/2323/2658645524_4c9ce2fb9b.jpg" alt="Scoping socialearn" height="155" width="500" /></a></p>
+
+<p>That is, maybe SocialLearn could become a <em>trusted</em> gateway to the world of social networks that institutions are more likely to trust than sites like Ning? By providing an open API and clear security model, it may also provide a platform within which insitutions can develop their own social applications or expose their own data to their own students in a social context? In developing a trusted pltform though, a lot would ride on the structure of the governance model, which is still unclear (at the moment, it's being run within the OU, using external developers, as an OU strategic development project).</p>
+
+<p>PS Just trying to find my first mention of Ning on OUseful.info, I cam across this post from over two years ago now about <a href="http://blogs.open.ac.uk/Maths/ajh59/005963.html"><em>ad hoc</em> learning environments</a>. Reading back over it, i wish I'd worked some of the ideas through more clearly, because they could well have fed into SocialLearn discussions over the last year...</p>
+
+<p>PPS As well as Ning, let's not forget sites like UK based <a href="http://www.webjam.com/webjam/home">Webjam</a>, which <a href="http://www.techcrunch.com/2008/07/09/webjam-secures-further-19m-for-branded-communities/">apparently</a> received funding this week to help roll out its white label social network service...<br />
+  <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/ning" rel="tag">ning</a>, <a href="http://technorati.com/tag/sociallearn" rel="tag">sociallearn</a>, <a href="http://technorati.com/tag/%20socialearn" rel="tag"> socialearn</a>, <a href="http://technorati.com/tag/%20s%3Al" rel="tag"> s:l</a></p><!-- technorati tags end --></p>
+	
+	
+	
+	<div class="posted">Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014991.html">02:27 PM</a>
+
+	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14991" onclick="OpenComments(this.href); return false">Comments (2)</a>
+	
+
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/014991.html" type="text/javascript" charset="utf-8"></script>
+	</div>
+	
+	</div>
+	
+
+
+
+
+	
+
+	<div class="blogbody">
+	
+	<a name="014990"></a>
+	<a style="text-decoration:none" href="http://blogs.open.ac.uk/Maths/ajh59/014990.html"><h3 class="title">Synchronicity in the Air... Institutional Innovation & OU Job Ads</h3></a>
+	
+	<p>It's been one of those weeks this week when synchronicity (or maybe confluence) seems to have been in the air...</p>
+
+<p>So for example, the week started with brief email exchange regarding knowledge management in the context of tracking and reviewing and getting feedback/opinion on new technology that might be interesting (one might almost say "OUseful";-) in an OU context. Here was my take on it:</p>
+
+<blockquote>Something I feel we need to explore is find a way of helping information "flow" around the university more, routing it to the right people as needed. A few of us do this anyway in an informal way anyway, either as a broadcast (eg public blog) or point-to-point communication "FYI emails"; thing's like the LTS media monthly newsletter also communicate news items to people who are likely to be interested in such things.
+
+<p>As far as soliciting the opinions of OU members about particular technologies, then we need: a) a way of routing these 'call for comments' to people who can comment quickly; b) getting comments back to the people who need them in an appropriate form.</p>
+
+<p>Being lazy, I'd like to be able to do several things at once with any comments I make - eg: a) get the commentary back to who wants it; b) get a blog post out of it ;-) It'd also be nice to think that there was some way of actually seeing new ideas built on and rolled out across the university.</p>
+
+<p>What's needed is to get a conversation going and give people the feeling that they are allowed to spend time indulging/participating in that conversation, which may be with internal people or it may be with the wider world e.g. through online networks. And requests for comments would just be dropped into that conversation somehow...</blockquote>Then yesterday,  John Tropea/Library Clips posted some thoughts on "<a href="http://libraryclips.blogsome.com/2008/07/10/theres-more-than-just-supply-side-km/">There’s more than just supply-side KM</a>", (a response to this article on <a href="http://www.reedfirstsource.com/news/members/lnstory%7Edid%7E811371438%7Etopic%7E100002731.asp">Ideation and the Supply Side of Knowledge</a>): "The article is about how much time and energy we devote to: <em>Capturing and storing vs Knowledge flow</em>...[I]n a learning organisation you are aware of solutions as they happen, even if you have no use for them at the time. You can connect to people involved in the solutions, and you are connected to people in general. The act of participating gives more chance of solutions coming to you more easily… you have more of a chance of shared context and the peripheral information around a solution."</p>
+
+<p>The original article - by Raj Datta - also has this to say:<br />
+<blockquote>[T]hose who believe that "management" is about control and predictability often view KM as a way to bring about predictability, by documenting all best practices and lessons learnt and making them available to everyone.</p>
+
+<p>Here, the supply side becomes focused on explicit knowledge, on identifying and generating quality content, and generally focused on learning from the past. The hidden assumption is that once the right answers are all available in the repository, everyone will come seeking it. Demand, it's assumed, is automatically created. This then produces a robust internal knowledge (content) market, complete with consumers and producers of knowledge (content).</blockquote>Now where I thought this argument would go was along the lines of: even we do manage to curate information about new technologies effectively, that information is not necessarily going to be worked effectively if that information doesn't continue to circulate - or "flow" - around the organisation, as part of an ongoing conversation within the organisation, in particular the conversation between those people who can benefit from the information, work it further, or work it into conversations with other people who might benefit from it.</p>
+
+<p>But it didn't, at least not in such crude terms... (Even so, the "flow" argument is still one of the take home messages I'll (mis)remember the article by! )</p>
+
+<p>What the original article does go on to talk about is how organisations potentially miss out on creating new knowledge, because they are too busy mining the past:<br />
+<blockquote>But even if one were to subscribe to this viewpoint, it has at least one obvious shortcoming. By equating KM with content management, and by equating the purpose of KM with predictability and control, we may inadvertently de-emphasize new knowledge creation.<br />
+...[N]ew knowledge creation is about the future. It's about possibilities and alternatives. It's about doing things differently and unleashing creative energies. It's about innovating.</p>
+
+<p>Companies that are serious about innovation have to create an organizational ecosystem that allows for creativity to be sourced, transformed into inventions and then into innovations. This forwardlooking view gives KM a new meaning and purpose. Companies that are able to foster new knowledge creation alongside the more traditional view of KM, are able to strike a balance between effectiveness and efficiency and between innovation and productivity. This is a necessary condition for longevity in a global knowledge economy.</p>
+
+<p>Why ideation?</p>
+
+<p>Ideation is the first step in the whole process of innovation. A good way to judge whether a company is serious about innovation is to see what happens to ideas in that company Some indicative questions are: Who is responsible for generating ideas? Once generated, how are ideas transformed to inventions?</p>
+
+<p>If these questions have been explicitly considered in the organization, then chances are that the first step towards a generative view of KM strategy has been taken. This shows that the company values knowledge creation.</p>
+
+<p>If these questions are implicit, or we have to search for the answers, then chances are that a strong enough focus doesn't exist yet in the organization. If the R&amp;D department is viewed as the place where ideation happens and inventions take place, then we are again [li]miting the potential of tapping into the collective creative energies of the organization. R&amp;D personnel are not the only ones with ideas and creative minds, and open processes should exist to tap into the collective capabilities of employees.</p>
+
+<p>As well as creative minds that generate ideas, we also need minds that know how to transform wild ideas into feasible implementation projects and we need minds that are able to understand market potential and how to tap into it. In short, we need to transform ideas to inventions and then inventions to innovations, tapping into the collective insights and capabilities of complementary minds. Base skills, competences and strengths may differ across employees, and by themselves have limited use, but the power of tapping into their collaborative capability is tremendous.</blockquote>This line of thinking resonates strongly with me. After almost 10 years here, I still don't understand how the OU manages to take internally produced "inventions" and work them up to a state where they can be delivered as institutional innovations... Although maybe that's about to change?</p>
+
+<p>OU Job Ad: <a href="http://www3.open.ac.uk/employment/job-details.asp?id=3871&amp;ref=ouseful">Change Manager, Developments Manager, Two Senior Project Managers,  Learning Innovation Office (LIO), Strategy Unit. Based in Milton Keynes.</a><br />
+<blockquote>Fascinated by the use of new technologies to enhance the learning experience in higher education? A Learning Innovation Office is being set up within the Open University's Strategy Unit to coordinate the development of elearning and innovative teaching and learning. Building on the University's new virtual learning environment (VLE), the Office will commission and oversee further development work, coordinate elearning strategy and policy, and monitor and disseminate learning innovations at the OU and elsewhere. The Director of Learning Innovation has been appointed and a number of staff are being recruited to work with him.</p>
+
+<p>Excellent organisational, interpersonal and communication skills, flexibility and initiative will be needed by all of the role holders to liaise with a wide range of academic, technical and administrative colleagues. You should have considerable experience of elearning development and implementation.</p>
+
+<p><strong>Change Manager</strong><br />
+You will work under the leadership of the Director of Learning Innovation to plan and initiate a range of strategic change initiatives, aimed at promoting elearning and embedding the OU's new VLE across the University. You will need exceptional communication, presentation and project management skills and will have significant experience of coordinating change initiatives in higher education. You will be supported by two Senior Project Managers.</p>
+
+<p><strong>Developments Manager</strong><br />
+You will work under the leadership of the Director of Learning Innovation to manage the operational activities of the Learning Innovation Office, and to plan and oversee a number of projects to develop additional functionality for the OU's new VLE. These projects will be managed by two Senior Project Managers who will report to you. You will need exceptional project management skills to provide effective management of these initiatives, significant experience in administration related to systems development, and will liaise with colleagues in other units who will be providing the technical and operational management of the VLE.</p>
+
+<p><strong>Two Senior Project Managers</strong><br />
+The Senior Project Managers will work under the direction of the Developments Manager and Change Manager, Learning Innovation Office, to plan and manage a number of activities aimed at promoting elearning and usage of the VLE, and to manage projects to develop additional functionality. You will report to the Developments Manager in the Learning Innovation office and you will need excellent project management and communication skills and significant experience in administration or systems development to provide effective management of these initiatives.</blockquote>As well as those posts, there is also this rather wonderful sounding post:<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3872&amp;ref=ouseful"><strong>Director of Multi-Platform Broadcasting, Strategy Unit</strong></a><br />
+Europe's largest and most innovative university is seeking an outstanding individual for the new post of Director of Multi-Platform Broadcasting, which has been created following a major review of our broadcasting strategy.</p>
+
+<p>You will have extensive experience at a senior level in the broadcasting and/or internet sectors and will have the strategic vision, management capability and technical understanding to enable the University to realise the potential of all broadcast media to support its global teaching and learning, research and public engagement missions. You will work closely with the University's Open Broadcasting Unit, with a wide range of areas of the University, and with the BBC and other key partners.</p>
+
+<p>You will be responsible to the Pro Vice Chancellor (Strategy, Planning and External Affairs) for the achievement of the University's ambitious broadcasting objectives.</blockquote>I'm not sure whether this post in marketing will report in any way to that post, though?<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3830&amp;ref=ouseful"><strong>Marketing Manager, Marketing and Sales</strong></a><br />
+In this new role has been created to focus on developing marketing plans covering BBC programming, Widening Participation &amp; Openings and other marketing projects. You will work with marketing colleagues in the OU and BBC to scope and identify education and training opportunities for the Widening participation sector, opportunities to promote the BBC and marketing our Openings courses. You will also develop and manage fulfilment of a marketing plan to these markets and identify appropriate channels to market.</blockquote>Business innovation is also in the air:<br />
+<blockquote><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3889&amp;ref=ouseful"><strong>Senior Project Manager, Europe. Futures Office, Strategy Unit</strong></a><br />
+We wish to appoint an outstanding individual to the Futures Office, to manage the implementation of the OU's strategy for Europe. You will liaise with key stakeholders across the OU and externally to evaluate and identify the optimum business model for the OU's operations in central Europe, shaping the OU's strategic priorities for international growth.</p>
+
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3891&amp;ref=ouseful"><strong> Communications Program Manager (Business to Business), Marketing and Sales</strong></a><br />
+Reporting to the Head of Customer Communications, as part of the sub unit management team, you will lead the planning, development and execution of marketing programs for the business to business segment; targeted to increase OU awareness and to generate enquiries from employers resulting in sponsored students, CPLD (Centre for Professional Learning and Development) revenues, etc.</p>
+
+<p><a href="http://www3.open.ac.uk/employment/job-details.asp?id=3870&amp;ref=ouseful"><strong> Senior Manager (Administration), Validation Services</strong></a><br />
+Open University Validation Services is responsible for providing Open University validation for external academic programmes; and vocational awards through the OU Awarding Body. More than 33,000 students are currently registered for validated and vocational awards in more than 50 partner organisations. The University is currently investing in a restructure of OUVS and an expansion of our team.  As part of our expansion we are seeking a Senior Manager (Administration) to manage central support services including management of registrations, certification and aftercare services.</blockquote><em>Disclaimer: none</em>... ;-) Except maybe the OUVS post... I have an idea for an OUVS webservice that's being considered in part under the SocialLearn banner...</p>
+
+<p>Needless to say, I have nothing to do with appointments to any of those posts, at the dizzying heights such as they are (I'm way down the food chain, and on the academic side of the fence too...). That said, I'll probably heckle whoever does get in and try to grab a coffee with them every so often! <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/recruitment" rel="tag">recruitment</a>, <a href="http://technorati.com/tag/innovation" rel="tag">innovation</a></p><!-- technorati tags end --></p>
+	
+	
+	
+	<div class="posted">Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014990.html">12:27 PM</a>
+
+	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14990" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/014990.html" type="text/javascript" charset="utf-8"></script>
+	</div>
+	
+	</div>
+	
+
+
+
+
+		<h2 class="date">
+	July 10, 2008
+	</h2>
+	
+
+	<div class="blogbody">
+	
+	<a name="014984"></a>
+	<a style="text-decoration:none" href="http://blogs.open.ac.uk/Maths/ajh59/014984.html"><h3 class="title">Visualising CoAuthors in Open Repository Online Papers, Part 2</h3></a>
+	
+	<p>Having tinkered using Moowheel to visualise coauthors on references pulled from the OU's open repository (ORO) in <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">Visualising CoAuthors in Open Repostory Online Papers, Part 1</a>, to give a graphic which isn't really <em>that</em> useful or interesting (too cluttered), I thought I'd try out a couple of network visualisations using Many Eyes and Graphviz.</p>
+
+<p>It's possible to construct graphs using both these tools by organising the data in pairs - so for each reference in a collection of references (for example, all the papers produced by a particular unit, or all the references returned from a title/abstract search on a particular query term), I pulled out every possible pairwise combination of authors. (So for exampple, a paper authored by A, B, C and D generates (A, B), (A, C), (A, D), (B, C), (B, D), (C, D) as all the possible pairwise coathor relations for that reference.) For convenience (i.e. as a result of laziness), I allowed duplicate pairs into the list (so if A and B had coauthored mutliple papers, their pairwise cauthor relation would appear many times in the data set.</p>
+
+<p>So what's the result? Well here's a Many Eyes view over references produced from the <a href="http://oro.open.ac.uk/view/faculty_dept/fels-cepm.html">Academic Unit/Department: Educational Policy, Leadership and Lifelong Learning</a>:</p>
+
+<p><a href="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w%7EP2%7E" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3255/2654724721_c671ccb974.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="468" width="493" /></a></p>
+
+<p>It's possible to zoom in to the display and highlight or search for individual authors, and see who they have co-authored with:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2655552986/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3148/2655552986_533a0edb56.jpg" alt="http://services.alphaworks.ibm.com/manyeyes/view/SeXKzOsOtha6dDEgl9w~P2~" height="210" width="324" /></a></p>
+
+<p>As it seems that Many Eyes now allows visualisations to be embedded, let's see what happens if I try to embed the above.</p>
+
+<p><script type="text/javascript" src="http://services.alphaworks.ibm.com/manyeyes/api/v1/snapshot/89ade5ae1afd68ea011b03c2f1b103e9.js?width=400&amp;height=350"></script></p>
+
+<p>At a high level, this visualisation allows us to pick out clusters of what we might refer to as different co-authoring teams within the unit. If we were visualising references returned from a search on a particular topic, the result might allow us to detect different groups working in a similar who don't author with each other, or different domains that use the same term but in completely different senses.</p>
+
+<p>There are also a few  things to notice in the detail about the Many Eyes network visualisation. Firstly, ambiguity in naming has a visual effect: <em>WoodsPA</em> and <em>WoodsP</em> are the same person I think, so their different representation creates an artificial degree of separation in the visualisation. Secondly, the node size reflects the degree of (I think) each author node - that is, the number of coauthors are connected to. I'm not sure if it also represents the absolute number of times the name appeared in the uploaded data set? Which leads neatly to the third point: the repeated occurrence of the same coauthor pairs are not apparently visualised.</p>
+
+<p>If we now look at a fragment of a Graphviz directed graph (the direction goes from authors who appear earlier in the reference list to authors who appear later) we see that repeated co-author pairings are displayed - the number of connections between two authors represents the number of references they have coauthored:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2652732682/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3274/2652732682_d92a70a1fe.jpg" alt="(null)" height="218" width="500" /></a></p>
+
+<p>Visualising the results of a search (e.g. a <a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search over ORO for  the term "mobile"</a>) reveals far more structure - here's a significant fragment of a Graphviz visualisation of couthors on references returned from just such a search:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3048/2654746483_eb6504469e.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="150" width="500" /></a></p>
+
+<p>Here's a more detailed view of part of the above:</p>
+
+<p><a href="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3074/2654750561_0bde106452.jpg" alt="http://oro.open.ac.uk/perl/search/simple?meta=mobile&amp;meta_merge=ALL&amp;person=&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search" height="271" width="500" /></a></p>
+
+<p>So what? So nothing really... it just seemed like a good idea at the time, another way of trying to identify professional networks and teams based on their outputs... and it was relatively trivial (and quick) to do... ;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20graphviz" rel="tag"> graphviz</a>, <a href="http://technorati.com/tag/%20many%20eyes" rel="tag"> many eyes</a></p><!-- technorati tags end --></p>
+	
+	
+	
+	<div class="posted">Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">11:26 AM</a>
+
+	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14984" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/014984.html" type="text/javascript" charset="utf-8"></script>
+	</div>
+	
+	</div>
+	
+
+
+
+
+		<h2 class="date">
+	July 09, 2008
+	</h2>
+	
+
+	<div class="blogbody">
+	
+	<a name="014979"></a>
+	<a style="text-decoration:none" href="http://blogs.open.ac.uk/Maths/ajh59/014979.html"><h3 class="title">Visualising CoAuthors in Open Repostory Online Papers, Part 1</h3></a>
+	
+	<p>In <a href="http://blogs.open.ac.uk/Maths/ajh59/014965.html">ORO Search by Name Pipes Interface</a> I described a Yahoo pipe for extracting author information from papers listed in the OU's open repository, and outlined some of the potential author naming ambiguities that arise when using ORO reference data as author metadata. In this post, I'll describe my initial attempt at visualising co-author relations using the Moowheel javascript visualisation library. In a couple of follow on posts, I look at some rather more 'correct' visualisations using both Moowheel and Many Eyes.</p>
+
+<p>If you're not familiar with it, Moowheel constructs a circular display of points that are connected to each other by some relation when provided with a set of data organised in an appropriate way. For example, in <a href="http://blogs.open.ac.uk/Maths/ajh59/014570.html">delicious Tags'n'users Wheel</a> I used Moowheel to show the tags used by different users who had bookmarked a particular URL on delicious.</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/demo.php?url=http://www.bbc.co.uk/"><img src="http://farm3.static.flickr.com/2351/2498112816_d6915d716d.jpg?v=0" alt="" onload="show_notes_initially();" class="reflect" height="468" width="500" /></a></p>
+
+<p>Hovering over a username highlights the tags they used to bookmark the original link.</p>
+
+<p>In Moowheel v0.1 at least, the data must be supplied in a form similar to: (a, b, c), (c, a, d), (b, c, e), (d, a), (e). To construct the circle, each item (a, b, c, d, e) must be present as the first item in a set; each set describes the items that are connected to each other in some way.) Links are highlighted to members of a set when the first item in the set is hovered over.</p>
+
+<p>So here's how I first thought to try to visualise the co-authors of an ORO paper - the source is a results listing for a <a href="http://oro.open.ac.uk/perl/search/simple?meta=&amp;meta_merge=ALL&amp;person=pillinger&amp;person_merge=ALL&amp;date=&amp;_satisfyall=ALL&amp;_order=byyear&amp;_action_search=Search">search on ORO by author "pillinger"</a>:</p>
+
+<p>- construct a list of unique authors and use this to create the unique items on the circle: (author1), (author2), (author3), ..., (authorN).<br />
+- construct sets of the form: (author1, author2), (author1, author2), ..., (author3, author1, authorN) - where the first set are the authors of paper1, the second set are the authors of paper2, and so on.</p>
+
+<p>My hope was that the Moowheel would then plot out the connections between all the authors who had ever coauthored a paper together that had also included a "pillinger" as an author. Here's a sample result:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2009/2651292446_7dca7662d6.jpg" alt="moowheel oro authors 1" height="478" width="500" /></a></p>
+
+<p>You'll see that some authors are depicted multiple times, but with no connections. What Moowheel v0.1, at least, seems to be doing is only display the connections for a non-singleton set where the first term in the set occurs with other set members for the first time(?) (There was also originally some ambiguity in actual author names; for example, "PIllinger, CT", "Pillinger, C" and "Pilinger, Colin" all appear in the results list - see <a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">Dirty Name Data in the OU Open Repository Online</a> for a discussion about this; in the above demo, I went overboward and just used the surname, which combined results fro "Pillinger, C" and "Pillinger, J"...;-)</p>
+
+<p>If you want to have a play with the Moowheel, you can find it here: <a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo.php?author=pillinger">ORO viz demo 1</a>.</p>
+
+<p>In order to cope with authors appearing multiple times along the outside edges of the graph, I guessed that I needed to construct non-singleton sets that were started with a unique identifier, so I added a level of indirection that related authors with the papers that had contributed to:</p>
+
+<p>- construct a list of unique authors;<br />
+- construct sets headed by unique authors, and the papers they had contributed to, and use this to create the unique items on the circle: (author1, paper1, paper2), (author2, paper1), (author3, paper2, paperN), ..., (authorN, paper2).<br />
+- construct sets for each paper listing the authors who had contributed to that paper: (paper1, author1, author2), (paper2, author1, author3), ..., (paperN, author3).</p>
+
+<p>Here's the result (<a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php?author=pillinger">ORO viz demo 2</a> NB there's a niggle somewhere in the code which means that for some few results listings, the wheel doesn't display... Also, the pipe canlt cope with overlong results listings Ideally, ORO would produce it's own RSS/JSON output...:-(:</p>
+
+<p><a href="http://ouseful.open.ac.uk/moowheel_v01/demo/orodemo2.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3058/2651308026_eac86efc3d.jpg" alt="oro author papers" height="467" width="500" /></a></p>
+
+<p>This time, if you hover over the name of an author, the links to the papers they contributed to will be highlighted. If you hover over a paper reference, the authors who contributed to it will be highlighted.</p>
+
+<p>In order to see which authors had coauthored with whom, I guess I'd need to hack the Moowheel code so that if I hovered over an author, the links to papers they had contributed to would be highlighted, and the 'activated' papers would then in turn highlight the links to the authors who had contributed to those papers...</p>
+
+<p>Whilst I haven't tried that approach, I did find another way of visualising who had coauthored with whom - as I'll describe in my next post... :-)<br />
+   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/oro" rel="tag">oro</a>, <a href="http://technorati.com/tag/viz" rel="tag">viz</a>, <a href="http://technorati.com/tag/%20visualisation" rel="tag"> visualisation</a>, <a href="http://technorati.com/tag/%20moowheel" rel="tag"> moowheel</a></p><!-- technorati tags end --></p>
+	
+	
+	
+	<div class="posted">Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">10:43 AM</a>
+
+	| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14979" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+
+<script src="http://feeds.feedburner.com/~s/ouseful?i=http://blogs.open.ac.uk/Maths/ajh59/014979.html" type="text/javascript" charset="utf-8"></script>
 	</div>
 	
 	</div>
@@ -390,7 +519,7 @@ As the <a href="./010778.html">OpenLearn Units in Facebook</a> app demonstrates,
 <div align="center" class="calendar">
 
 <table border="0" cellspacing="4" cellpadding="0" summary="Monthly calendar with links to each day's posts">
-<caption class="calendarhead">October 2007</caption>
+<caption class="calendarhead">July 2008</caption>
 <tr>
 <th abbr="Sunday" align="center"><span class="calendar">Sun</span></th>
 <th abbr="Monday" align="center"><span class="calendar">Mon</span></th>
@@ -407,85 +536,88 @@ As the <a href="./010778.html">OpenLearn Units in Facebook</a> app demonstrates,
 &nbsp;</span></td>
 
 <td align="center"><span class="calendar">
+&nbsp;</span></td>
+
+<td align="center"><span class="calendar">
 1</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010630.html">2</a></span></td>
+2</span></td>
 
 <td align="center"><span class="calendar">
 3</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010633.html">4</a></span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014951.html">4</a></span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010637.html">5</a></span></td>
+5</span></td></tr><tr>
 
 <td align="center"><span class="calendar">
-6</span></td></tr><tr>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">6</a></span></td>
 
 <td align="center"><span class="calendar">
-7</span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014976.html">7</a></span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010642.html">8</a></span></td>
+8</span></td>
 
 <td align="center"><span class="calendar">
-9</span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">9</a></span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010689.html">10</a></span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">10</a></span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010718.html">11</a></span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014991.html">11</a></span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010741.html">12</a></span></td>
+12</span></td></tr><tr>
 
 <td align="center"><span class="calendar">
-<a href="./010778.html">13</a></span></td></tr><tr>
+13</span></td>
 
 <td align="center"><span class="calendar">
 14</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010811.html">15</a></span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/015007.html">15</a></span></td>
 
 <td align="center"><span class="calendar">
-16</span></td>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/015010.html">16</a></span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010834.html">17</a></span></td>
+17</span></td>
 
 <td align="center"><span class="calendar">
 18</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010855.html">19</a></span></td>
+19</span></td></tr><tr>
 
 <td align="center"><span class="calendar">
-20</span></td></tr><tr>
+20</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010874.html">21</a></span></td>
+21</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010884.html">22</a></span></td>
+22</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010908.html">23</a></span></td>
+23</span></td>
 
 <td align="center"><span class="calendar">
-<a href="./010927.html">24</a></span></td>
+24</span></td>
 
 <td align="center"><span class="calendar">
 25</span></td>
 
 <td align="center"><span class="calendar">
-26</span></td>
+26</span></td></tr><tr>
 
 <td align="center"><span class="calendar">
-27</span></td></tr><tr>
+27</span></td>
 
 <td align="center"><span class="calendar">
 28</span></td>
@@ -498,9 +630,6 @@ As the <a href="./010778.html">OpenLearn Units in Facebook</a> app demonstrates,
 
 <td align="center"><span class="calendar">
 31</span></td>
-
-<td align="center"><span class="calendar">
-&nbsp;</span></td>
 
 <td align="center"><span class="calendar">
 &nbsp;</span></td>
@@ -531,13 +660,15 @@ Links
 <div class="side">
 <a href="http://ouseful.open.ac.uk/howdoi">HowDoI Instructional Video Search</a><br/>
 <a href="http://micro-info.blogspot.com/">Micro-info Blog</a><br />
-<a href="http://ouseful.open.ac.uk/">OUseful Website</a><br />
-<a href="http://feeds.feedburner.com/ouseful" title="Subscribe to my feed, OUseful Info" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="border:0"/> Subscribe...</a></div>
+<a rel="me"  href="http://ouseful.open.ac.uk/">OUseful Website</a><br />
+<a rel="me"  href="http://twitter.com/psychemedia">Follow me on twitter</a><br />
+<a rel="me"  href="http://feeds.feedburner.com/ouseful" title="Subscribe to my feed, OUseful Info" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="border:0"/> Subscribe...</a></div>
 
-<div class="side"><a href="mailto:a.j.hirst@open.ac.uk" style="text-decoration:none"><strong>Email Me (Tony Hirst)</strong></a></div>
+<div class="side"><a  rel="me" href="mailto:a.j.hirst@open.ac.uk" style="text-decoration:none"><strong>Email Me (Tony Hirst)</strong></a></div>
 
 <div class="side"><a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http://psychemedia.videntity.org/foaf.xml" title="Tony Hirst&apos;s Friend of a Friend (FOAF) File">
-<img src="http://kmi.open.ac.uk/people/tom/images/foaf.png" alt="FOAF" border="0" width="80" height="15" class="tiles" /></a></div>
+<img src="http://kmi.open.ac.uk/people/tom/images/foaf.png" alt="FOAF" border="0" width="80" height="15" class="tiles" /></a><br/>
+<a href="http://oerblogs.org/"><img src="http://oerblogs.org/oerblogs-button.png" style="border:0" /></a></div>
 
 <div class='side'><p><a href="http://feeds.feedburner.com/ouseful"><img src="http://feeds.feedburner.com/~fc/ouseful?bg=99CCFF&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></p><form style="border:1px solid #ccc;padding:3px;text-align:center;" action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Enter your email address:</p><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="http://feeds.feedburner.com/~e?ffid=87130" name="url"/><input type="hidden" value="OUseful Info" name="title"/><input type="submit" value="Subscribe" /><p>Delivered by <a href="http://www.feedburner.com/" target="_blank">FeedBurner</a></p></form>
 
@@ -556,16 +687,16 @@ Recent Entries
 </div>
 
 <div class="side">
-<a href="./010927.html">Course Analytics - Prequel</a><br />
-<a href="./010908.html">OpenLearnigg - Social Ranking for OpenLearn Units</a><br />
-<a href="./010900.html">Customised YouTube Players - OpenLearn: The Renaissance</a><br />
-<a href="./010884.html">Relevant Knowledge? T189 on flickr...?</a><br />
-<a href="./010874.html">RSS Content Analysis, Tag Clouds and OpenLearn Navigation</a><br />
-<a href="./010855.html">Open University Course Profiles Facebook App</a><br />
-<a href="./010834.html">A Really Simple Question About &lt;embed&gt;</a><br />
-<a href="./010828.html">Interactive Google Advermaps - OU Walton Hall Campus</a><br />
-<a href="./010811.html">The Future of Estate Agents/Realtors</a><br />
-<a href="./010798.html">&quot;A Vision of Students Today"</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/015010.html">Visualising CoAuthors in Open Repository Online Papers, Part 3</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/015007.html">IWMW2008 Innovation Competition - Searching for Media Release Related News Stories</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014991.html">Institutional Social Networks</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014990.html">Synchronicity in the Air... Institutional Innovation & OU Job Ads</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014984.html">Visualising CoAuthors in Open Repository Online Papers, Part 2</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014979.html">Visualising CoAuthors in Open Repostory Online Papers, Part 1</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014976.html">National Statistics API - Discovery services AJAX demos</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014965.html">ORO Search by Name Pipes Interface</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014962.html">Dirty Name Data in the OU Open Repository Online</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/014951.html">The Library Moves On...</a><br />
 
 </div>
 
@@ -573,81 +704,106 @@ Recent Entries
 Categories
 </div>
 <div class="side">
-<a href="./cat_blogging.html">blogging</a> <br />
-<a href="./cat_daily.html">daily</a> <br />
-<a href="./cat_elearning.html">elearning</a> <br />
-<a href="./cat_futures.html">Futures</a> <br />
-<a href="./cat_gaming.html">gaming</a> <br />
-<a href="./cat_geo.html">Geo</a> <br />
-<a href="./cat_jobs.html">jobs</a> <br />
-<a href="./cat_library.html">Library</a> <br />
-<a href="./cat_misc.html">Misc</a> <br />
-<a href="./cat_open_content.html">Open Content</a> <br />
-<a href="./cat_ou_futures.html">OU Futures</a> <br />
-<a href="./cat_outreach.html">outreach</a> <br />
-<a href="./cat_ple.html">PLE</a> <br />
-<a href="./cat_projects.html">projects</a> <br />
-<a href="./cat_rss.html">RSS</a> <br />
-<a href="./cat_search.html">search</a> <br />
-<a href="./cat_semweb.html">semweb</a> <br />
-<a href="./cat_socialbookmarking.html">socialBookmarking</a> <br />
-<a href="./cat_student_services.html">Student Services</a> <br />
-<a href="./cat_tal.html">TAL</a> <br />
-<a href="./cat_talks.html">Talks</a> <br />
-<a href="./cat_visualisation.html">visualisation</a> <br />
-<a href="./cat_vle.html">vle</a> <br />
-<a href="./cat_web20.html">Web2.0</a> <br />
-<a href="./cat_web_2ou.html">Web 2.OU</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_analytics.html">analytics</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_blogging.html">blogging</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_daily.html">daily</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_elearning.html">elearning</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_futures.html">Futures</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_gaming.html">gaming</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_geo.html">Geo</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_jobs.html">jobs</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_library.html">Library</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_misc.html">Misc</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_open_content.html">Open Content</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_ou_futures.html">OU Futures</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_outreach.html">outreach</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_ple.html">PLE</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_projects.html">projects</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_rss.html">RSS</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_search.html">search</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_semweb.html">semweb</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_socialbookmarking.html">socialBookmarking</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_socialearn.html">sociaLearn</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_student_services.html">Student Services</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_tal.html">TAL</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_talks.html">Talks</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_visualisation.html">visualisation</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_vle.html">vle</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_web20.html">Web2.0</a> <br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/cat_web_2ou.html">Web 2.OU</a> <br />
 
 </div>
-
 
 <div class="sidetitle">
 Archives
 </div>
 
 <div class="side">
-<a href="./2007_10.html">October 2007</a><br />
-<a href="./2007_09.html">September 2007</a><br />
-<a href="./2007_08.html">August 2007</a><br />
-<a href="./2007_07.html">July 2007</a><br />
-<a href="./2007_06.html">June 2007</a><br />
-<a href="./2007_05.html">May 2007</a><br />
-<a href="./2007_04.html">April 2007</a><br />
-<a href="./2007_03.html">March 2007</a><br />
-<a href="./2007_02.html">February 2007</a><br />
-<a href="./2007_01.html">January 2007</a><br />
-<a href="./2006_12.html">December 2006</a><br />
-<a href="./2006_11.html">November 2006</a><br />
-<a href="./2006_10.html">October 2006</a><br />
-<a href="./2006_09.html">September 2006</a><br />
-<a href="./2006_08.html">August 2006</a><br />
-<a href="./2006_07.html">July 2006</a><br />
-<a href="./2006_06.html">June 2006</a><br />
-<a href="./2006_05.html">May 2006</a><br />
-<a href="./2006_04.html">April 2006</a><br />
-<a href="./2006_03.html">March 2006</a><br />
-<a href="./2006_02.html">February 2006</a><br />
-<a href="./2006_01.html">January 2006</a><br />
-<a href="./2005_12.html">December 2005</a><br />
-<a href="./2005_11.html">November 2005</a><br />
-<a href="./2005_10.html">October 2005</a><br />
-<a href="./2005_09.html">September 2005</a><br />
-<a href="./2005_08.html">August 2005</a><br />
-<a href="./2005_07.html">July 2005</a><br />
-<a href="./2005_06.html">June 2005</a><br />
-<a href="./2005_05.html">May 2005</a><br />
-<a href="./2005_04.html">April 2005</a><br />
-<a href="./2005_03.html">March 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_07.html">July 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_06.html">June 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_05.html">May 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_04.html">April 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_03.html">March 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_02.html">February 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2008_01.html">January 2008</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_12.html">December 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_11.html">November 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_10.html">October 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_09.html">September 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_08.html">August 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_07.html">July 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_06.html">June 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_05.html">May 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_04.html">April 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_03.html">March 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_02.html">February 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2007_01.html">January 2007</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_12.html">December 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_11.html">November 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_10.html">October 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_09.html">September 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_08.html">August 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_07.html">July 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_06.html">June 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_05.html">May 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_04.html">April 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_03.html">March 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_02.html">February 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_01.html">January 2006</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_12.html">December 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_11.html">November 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_10.html">October 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_09.html">September 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_08.html">August 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_07.html">July 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_06.html">June 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_05.html">May 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_04.html">April 2005</a><br />
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2005_03.html">March 2005</a><br />
 
 </div>
 
 <!--
-<div><script lang="javascript" src="http://www.feedmap.net/blogmap/blogapi.ashx?method=blogmapbadge&feed=./index.rdf"></script></div>
+<div><script lang="javascript" src="http://www.feedmap.net/blogmap/blogapi.ashx?method=blogmapbadge&feed=http://blogs.open.ac.uk/Maths/ajh59/index.rdf"></script></div>
 -->
 
 
 
+<div class='side'><br />
+<script type="text/javascript"><!--
+google_ad_client = "pub-4627481582813740";
+/* Google pack, OUseful Info */
+google_ad_slot = "1317595213";
+google_ad_width = 180;
+google_ad_height = 60;
+google_cpa_choice = ""; // on file
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br /><br />
+<a href="http://spread.flock.com/buttons/?user=&ref=getFlock-EN.gif"><img style="border: none;" src="http://spread.flock.com/buttons/getFlock-EN.gif" alt="Get Flock" title="Get Flock"/></a>
+</div>
 <div class="powered">
 Powered by<br /><a href="http://www.movabletype.org">Movable Type 2.64</a><br />    <!-- ukey="3474C9B8" -->
 </div>
@@ -660,11 +816,15 @@ Powered by<br /><a href="http://www.movabletype.org">Movable Type 2.64</a><br />
  z_post_category="";
 </script>
 
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script type="text/javascript">
+
+
 </script>
 <script type="text/javascript">
-_uacct = "UA-571814-1";
-urchinTracker();
+
+
+
 </script>
+
 </body>
 </html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: The delicious history of a TinyURL</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014179.html" title="Pivotal Moments... (pivotwitter?!)" />
+
+<link rel="next" href="./014203.html" title="iTwitterous Rationale - and Reimagining as iCoShare" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014179.html">&laquo; Pivotal Moments... (pivotwitter?!)</a> |
+
+<a href="./">Main</a>
+| <a href="./014203.html">iTwitterous Rationale - and Reimagining as iCoShare &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 10, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">The delicious history of a TinyURL</h3>
+
+<p>Yesterday, or maybe the day before, I posted about a Yahoo pipe that took a url and found a list of people who had bookmarked that link on delicious, and listed their description of (comments about) that link as well (<a href="./014179.html">Pivotal Moments... (pivotwitter?!)</a>)</p>
+
+<p>I also described a pipe that would find the actual url of a page from a TinyURL.</p>
+
+<p>Looking for a quick five minute tinker just now, I thought I'd plug the two together to create a pipe that takes a tinyurl andin return gives a list of who's bookmarked it - and how - on delicious:</p>
+
+<p>TinyURL to delicious history pipe: <a href="http://pipes.yahoo.com/ouseful/tinyurl2delihistory">http://pipes.yahoo.com/ouseful/tinyurl2delihistory</a></p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2403485819/" title="tinyurl2delcioushistory by psychemedia, on Flickr"><img src="http://farm4.static.flickr.com/3084/2403485819_0059a169e5.jpg" alt="tinyurl2delcioushistory" style="border: 0pt none ;" height="258" width="500" /></a></p>
+
+<p>It even works...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2404320642/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2205/2404320642_4dd2f97b1c.jpg" alt="tinyurl2delihistory pipe output" style="border: 0pt none ;" height="127" width="500" /></a></p>
+
+<p>I guess the next step is to create a simple wrapper that handles a "normal" (literal?) URL <em>or</em> a TinyURL, and then calls the appropriate pipe...</p>
+
+<p>   <div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/yahoopipe" rel="tag">yahoopipe</a>, <a href="http://technorati.com/tag/%20tinyurl" rel="tag"> tinyurl</a>, <a href="http://technorati.com/tag/%20delicious" rel="tag"> delicious</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 10, 2008 10:42 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>If you like TinyURL, you might also want to check out http://traceurl.com</p>
+
+<p>TraceURL shortens any URL plus it tracks traffic to the page through the TraceURL shortened web site address, showing where the traffic originated. Count accesses and have the origin of the visitor displayed on a Google Map.</p>
+<span class="comments-post">Posted by: <a href="http://traceurl.com">Adrian Buerki</a> at April 21, 2008 05:34 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

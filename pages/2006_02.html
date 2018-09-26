@@ -6,11 +6,12 @@
 
 <title>OUseful Info: February 2006 Archives</title>
 
-<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
-<link rel="start" href="./" title="Home" />
-<link rel="prev" href="./2006_01.html" title="January 2006" />
+<link rel="start" href="http://blogs.open.ac.uk/Maths/ajh59/" title="Home" />
+<link rel="prev" href="http://blogs.open.ac.uk/Maths/ajh59/2006_01.html" title="January 2006" />
 
+<link rel="next" href="http://blogs.open.ac.uk/Maths/ajh59/2006_03.html" title="March 2006" />
 
 
 <script language="javascript" type="text/javascript">
@@ -32,8 +33,8 @@ function OpenTrackback (c) {
 <body>	
 
 <div id="banner">
-<h1><a href="./" accesskey="1">OUseful Info</a></h1>
-<span class="description">Thoughts and doodles on tools and Web2.0 technologies for distance education and digital libraries, that may be OUseful, someday...</span>
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
 <div id="container">
@@ -41,15 +42,680 @@ function OpenTrackback (c) {
 <div class="blog">
 
 <div id="menu">
-<a href="./2006_01.html">&laquo; January 2006</a> |
+<a href="http://blogs.open.ac.uk/Maths/ajh59/2006_01.html">&laquo; January 2006</a> |
 
-<a href="./">Main</a>
+<a href="http://blogs.open.ac.uk/Maths/ajh59/">Main</a>
+| <a href="http://blogs.open.ac.uk/Maths/ajh59/2006_03.html">March 2006 &raquo;</a>
 
 </div>
 
 </div>
 
 <div class="blog">
+
+
+<h2 class="date">February 27, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005818"></a>
+<h3 class="title">Delicious Reading Lists Made Easy</h3>
+
+I hate it when an idea takes shape, 'cos it means I can't sleep... The thing that's been keeping me up tonight is the idea of delicious reading lists...(If you need a briefing on reading lists, here's where it started.)...
+<!--
+<p>I hate it when an idea takes shape, 'cos it means I can't sleep... The thing that's been keeping me up tonight is the idea of <a href="http://dannyayers.com/archives/2006/02/07/delicious-reading-lists/">delicious reading lists</a>...(If you need a briefing on reading lists, <a href="http://www.reallysimplesyndication.com/2005/10/13#a1032">here's where it started</a>.) Here's my first attempt at making 'em easy...</p>
+
+<p>Fist off, we need a way of bookmarking <em>feeds</em> to del.cio.us. One way to do this is to bookmark whatever's pointed to by the first &lt;link rel='alternate' /&gt; on a page, and tag it with, for example, <em>usr:feed</em>. (I have saked the delicious guys, via the developer mailing list, if a system:feed tag is on the cards).</p>
+
+<p>If you need just such a bookmark, here's one I think works in Firefox: <a href="javascript:void(d=document);void(el=d.getElementsByTagName('link'));for(i=0;i<el.length;i++){if(el[i].getAttribute('rel').indexOf('alternate') != -1){void(p=encodeURIComponent(el[i].getAttribute('href')));location.href='http://del.icio.us/psychemedia?v=3&url='+p+'&title='+encodeURIComponent(document.title)+'&tags=usr:feed';};};">+ feed 2 del.icio.us</a></p>
+
+<p>The next thing we need to do is add an OPML feed generator link to a delicious page <em>if</em> there is at least one feed on it (e.g. at least one thing tagged <em>usr:feed</em>).</p>
+
+<p>I've knocked up a  <a href="http://blogs.open.ac.uk/Maths/ajh59/deliciousReadingList.user.js">del.icio.us OPML feed</a> <em>Greasemonkey script</em> to do this, but it's a bit clunky at the moment. For example, it'll only work if you're looking at a page of the form <em>http://del.icio.us/someThing/someTag</em>, because it pulls out the feed for the page (e.g. <em>http://del.icio.us/rss/someThing/someTag</em>) and adds <em>+usr:feed</em> to it... </p>
+
+<p>Here's how I provide a link to the generated OPML file:</p>
+
+<p><img alt="deliOPML.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/deliOPML.JPG" width="410" height="144" border="0" /></p>
+
+<p>If the page doesn't point to a page that relates specifically to tagged items (such as a user's del.icio.us 'homepage') be warned that (at the moment) the script won't work (if there's enough interest, I may try to fix this).</p>
+
+<p>Also, if there's nothing tagged 'usr:feed' on the page, the feed link is not added. Furthermore, the feed link will only make use of items tagged <em>usr:feed</em> in the OPML file (that's all that's passed to the feed generator).</p>
+
+<p>So for example, in the above screenshot, the feed link was generated because of this:</p>
+
+<p><img alt="deliusrfeedTag.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/deliusrfeedTag.JPG" width="244" height="76" border="0" /></p>
+
+<p>Here's an example of clicking the OPML link from my delicious feed on a tag that currently has <a href="http://del.icio.uc/rss/psychemedia/OU">two feeds in it</a>:</p>
+
+<p><img alt="opmlExample.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/opmlExample.JPG" width="724" height="305" border="0" /></p>
+
+<p>Btw - I hope I'm allowed to make use of the OPML-TM gif?! Mail me if not...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005818.html">02:46 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5818" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005817"></a>
+<h3 class="title">Making Something OUseful Out of RSS2Email</h3>
+
+Squeet - Free Email RSS Reader is probably just another RSS2Email service, but it got me thinking about what role this sort of service could play in an elearning (bleurggghhhh;-( environment.... 1) Squeet is (probably another) RSS2email service (though it...
+<!--
+<p><a title="Squeet - Free Email RSS Reader" href="http://www.squeet.com/">Squeet - Free Email RSS Reader</a> is probably just another RSS2Email service, but it got me thinking about what role this sort of service could play in an elearning (bleurggghhhh;-( environment....</p>
+
+<p>1) Squeet is (probably another) RSS2email service (though it does allow you to select when and how emails are sent to you);</p>
+
+<p>2) I don't know if it will aggregate feeds into a single email - but if it doesn't, I suppose you could always <a href="http://suprglu.com/">Suprglu</a> a few sites and then Squeet the Suprglu'd feed;</p>
+
+<p>3) (the OUSeful bit) - I doubt many OU students subscribe to RSS feeds,but I know a lot of them read OU FirstClass conferences. I wonder what the uptake would be if: a) relevant RSS feeds were mailed to course conferences; or b) students could sign up to news mailshots from their student homepage and have these sent direct to their personal Mailbox?</p>
+
+<p>NB I did start to record this as an annotated bookmark that would be fed through my <a href="feeds.feedburner.com/ouseful">OUseful Feedburner feed</a> , but I ran out of words in the delicious <em>Description</em>field, so I've copied the text over to thios blog instead.</p>
+
+<p>However, if I had managed to keep the wordcount low enough to fit in the delicious bookmark <em>Description</em> field, subscribers who don't sub to the <a href="feeds.feedburner.com/ouseful">OUseful Feedburner feed</a> would have missed out... (The content is the same - and more - to the feed from <em>blogs.open.ac.uk/Maths/ajh59</em>...)</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005817.html">01:18 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5817" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 26, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005809"></a>
+<h3 class="title">Hiding delicious Links containing a Particular Tag</h3>
+
+As part of something else I've been working on, I would like to be able to view the links associated with a set of bookmarks tagged in a particular way excluding the display of links that are also tagged with...
+<!--
+<p>As part of something else I've been working on, I would like to be able to view the links associated with a set of bookmarks tagged in a particular way <i>excluding </i>the display of links that are also tagged with a particular term.<br /><br />As far as I know, delicious doesn't support queries of the form <i>del.icio.us/userName/thisTag+thatTag-butNotThisTag</i>.<br /><br />Now, I'm not really bothered if delicious returns links that are tagged with butNotThisTag, as long as I can prevent those links that are tagged this way from displaying.<br /><br />So here is a <a href="javascript:void(d=document.body);void(el=d.getElementsByTagName('div'));void(t=window.getSelection());for(i=0;i<el.length;i++){if(el[i].getAttribute('class')){if(el[i].getAttribute('class').indexOf('meta') != -1){void(tl=el[i].getElementsByTagName('a'));for(j=0;j<tl.length;j++){if(tl[j].firstChild.nodeValue==t)void(el[i].parentNode.style.display='none');};};};};">deliHideTag</a> bookmarklet (only tested in Firefox) that allows you to highlight a particular tag on a results page and then hide all the bookmarks that are tagged with that tag.<br /><br />So for example, if you go to <a href="http://del.icio.us/psychemedia">http://del.icio.us/psychemedia</a>, highlight for example the <i>library</i> tag, and click on the bookmarklet, you should find that all the links tagged with <i>library </i>are hidden.<br /><br />(Actually, you can highlight any text on the page, and if it is found within a tag, that link is hidden.)<br /></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005809.html">06:06 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5809" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005802"></a>
+<h3 class="title">Delicious Reading List Bookmarklet</h3>
+
+Another quick post picking up again on Danny Ayer's del.icio.us Reading Lists post, where he gives a recipe for creating an OPML reading list from a set of feeds (rather than pages or sites) tagged in delicious, this time to...
+<!--
+<p>Another quick post picking up again on Danny Ayer's <a title="Raw » del.icio.us Reading Lists" href="http://dannyayers.com/archives/2006/02/07/delicious-reading-lists/">del.icio.us Reading Lists</a> post, where he gives a recipe for creating an OPML reading list from a set of <em>feeds</em> (rather than pages or sites) tagged in delicious, this time to mention a <a href="javascript:void(d=document);void(el=d.getElementsByTagName('link'));for(i=0;i<el.length;i++){if(el[i].getAttribute('rel').indexOf('alternate') != -1){void(p=encodeURIComponent(el[i].getAttribute('href')));void(l='http://www.w3.org/2000/06/webdata/xslt?xslfile='+encodeURIComponent('http://pragmatron.org/xslt/delicious-to-opml.xsl')+'&xmlfile=');location.href=l+p+'&transform=Submit';break;};};">DeliOPML</a> bookmarklet (only tested in Firefox).</p>
+
+<p>Just drag the link onto your bookmark toolbar, visit a  delicious page that contains a list of feeds (e.g. Danny Ayer's example was at <a href="http://del.icio.us/danja/readinglist+tech">danja/readinglist+tech</a>) and click on the bookmarklet. You'll then be taken to an OPML feed of the page...</p>
+
+<p>Here's an example of clicking the OPML link from my delicious feed on a tag that currently has <a href="http://del.icio.uc/rss/psychemedia/OU">two feeds in it</a>:</p>
+
+<p><img alt="opmlExample.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/opmlExample.JPG" width="724" height="305" border="0" /></p>
+
+<p>(Hmm - I notice that not all the feeds are represented in the list...but they aren't in the example from Danny's page either. I haven't looked at the <a href="http://pragmatron.org/xslt/delicious-to-opml.xsl">XSLT</a>, but perhaps there's a switch in there? or at <a href="http://www.w3.org/2001/05/xslt">W3C</a>?) <strong>Update: it seems that the XSLT <em>is</em>limiting the number of links returned in the OPML file</strong>.</p>
+
+<p>The bookmarklet works by looking for &lt;link rel='alternate'/&gt; tags, then pulls the address of the first one and uses it as the target for Danny's XSLT.</p>
+
+<p>PS I've just uploaded a test <a href="http://greasemonkey.mozdev.org/">Greasemonkey script</a> that appends an OPML link to the bottom of del.icio.us links page that will generate an OPML feed from the RSS feed generated for that page. Here it is: <a href="http://blogs.open.ac.uk/Maths/ajh59/deliciousReadingList-test.user.js">delicious OPML feed Greasemonkey script</a>.</p>
+
+<p>This will generate a feed for <em>all</em> the links whether or not they point to an RSS feed, which isn;t ideal. I have a fix in mind for this, which I';ll post along with a supporting bookmarklet for saving feeds to delicious tomorrow.</p>
+
+<p>Then it'll be time to give OPML a rest for a bit, and I can get back to posting random thoughts and doodles!<br />
+</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005802.html">01:52 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5802" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 24, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005763"></a>
+<h3 class="title">Delicious OPML Link Generator</h3>
+
+Picking up on a couple of recent posts (specifically, Danny Ayers on delicious reading lists via Johnt at LibraryClips) here is a URL/link generator that will generate the link you need when supplied with a delicious username and tag combination:...
+<!--
+<p>Picking up on a couple of recent posts (specifically,  <a href="http://dannyayers.com/archives/2006/02/07/delicious-reading-lists/">Danny Ayers on delicious reading lists</a> via <a href="http://libraryclips.blogsome.com/2006/02/24/create-reading-lists-in-delicious/">Johnt at LibraryClips</a>) here is a URL/link generator that will generate the link you need when supplied with a delicious username and tag combination: <a href="http://blogs.open.ac.uk/Maths/ajh59/deliciousOPML.html">delicious OPML feed URL generator</a>.</p>
+
+<p>The delicious SearchLink code is now working a little better, too: <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">delicious Search Links</a>.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005763.html">02:23 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5763" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 22, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005744"></a>
+<h3 class="title">What Is a PLE?</h3>
+
+I just stumbled across this piece on a Personal Learning Environment Model (via Downes), which comments: I'm not even sure that it [i.e. a PLE] can be created or designed by someone for someone else. Just as each person's desires,...
+<!--
+<p>I just stumbled across this piece on a <a href="http://headspacej.blogspot.com/2006/02/personal-learning-environment-model.html">Personal Learning Environment Model</a> (via <a href="http://www.downes.ca/cgi-bin/page.cgi?post=33612">Downes</a>), which comments:<br />
+<blockquote><font face="arial" size="2"><span class="rss:item">I'm not even sure that it [i.e. a PLE] can be created or designed by someone <em>for</em> someone else. Just as each person's desires, abilities and past experiences are different, each person's personal learning environment should be their own unique combination of tools, networks and methods that help them accomplish their goals. If the learning environment is truly personal, the tools and the learning are self-directed by definition.<br /></span></font></blockquote>and thought I'd use it to post a note-to-self that I really need to write a bit more about portability in the sense of portability of personally generated content and information (e.g. from blogs, e-portfolios, social/online bookmarking systems etc.) as well as portable apps and <a href="http://blogs.open.ac.uk/Maths/ajh59/005515.html">PPLEs</a>) and the extent to which a PLE is actually a personal mashup rather a one-size-fits-all hosted offering.<br /><br />I'm going to start looking at how something like what <a href="http://www.ning.com">Ning</a> might become could play a role in this - i.e. as an environment where users can mix-and-match apps and interoperability is supported by lightweight XML based protocols.</p>
+
+<p>I also wonder whether PLE recipe books could show different configurations of web 2.0 apps, some well known, some possibly not so popular, to demonstrate several starting point PLE conficgurations.<br /><br />This also resonates, for me at least, with something else I picked up from <a href="http://www.downes.ca/cgi-bin/page.cgi?post=33613">Downes</a>, today, who in commenting on <a href="http://opencontent.org/blog/archives/251">As We May Interact?</a>, asks:<br />
+<blockquote>But I still think we need to explore and understand better the nature of distributed applications. Tools like Flickr, Friendster and Technorati each try to become, if you will, a destination for people, to aggregate as many users as they can. We need to focus less on these big centres and more on how even unpopular tools can be mashed up and aggregated. There needs to be, if you will, a long tail of Web 2.0 tools - but nobody knows how to do that yet.<br /></blockquote>A PLE configuration masher, (perhaps with interaction design inspired by <a href="http://www.extratasty.com/submit">Extratasty</a>!), should certainly be able to pick up on some of these long tail apps and add them to any PLE mix, if required...</p>
+
+<p>Hmm - I wonder - are we talking here about VPLEs (virtual PLEs) and is there scope for a VVLE (V2LE) - virtual VLE - that exists only as a mashup configuration, perhaps with an umbrella front end and uniform styling?</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005744.html">01:49 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5744" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 21, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005731"></a>
+<h3 class="title">Should Academic Libraries Map Institutional Social Networks?</h3>
+
+An interesting post - IBM: Untangling Office Connections - from a blog I've only just subscribed to (ELSUA~A KM Blog - "A blog about Knowledge Management, Communities of Practice, Collaboration, Social Networking and Work/Life Balance") on the use of social...
+<!--
+<p>An interesting post - <a href="http://www.elsua.net/2006/02/17/ibm-untangling-office-connections/">IBM: Untangling Office Connections</a> - from a blog I've only just subscribed to (<a href="http://www.elsua.net/">ELSUA~A KM Blog</a> - "A blog about Knowledge Management, Communities of Practice, Collaboration, Social Networking and Work/Life Balance") on the use of <a href="http://en.wikipedia.org/wiki/Social_Network_Analysis">social network analysis</a> in identifying the informal networks that allow an organisation to work.<br /><br />(Who was it told me that the aftershock of an institutional reorganisation can take a year or to subside until the informal networks are working again..?!)<br /><br /><br />Anyway - I was wondering - whose role is it in an organisation to keep tabs on the knowledge flows/pathways (at least the formal ones), and where would I expect to go to find a map of those pathways? The communications department, perhaps? Or the <i>library</i>? As for mapping the informal pathways - perhaps that's too much to ask... although the bloggers may provide an entry point?<br /><br />PS here's a chart of the formal OU communications channels I was aware of a year or so ago (hmmm - the alignment of the various objects appears to be broken...):<br /> <br /><img alt="OUcomms.jpg" src="http://blogs.open.ac.uk/Maths/ajh59/OUcomms.jpg" border="0" height="331" width="608" /><br /><br /><br />Looking at it, there's a couple of things I notice are missing&nbsp; - such as the intranet noticeboard and the <a href="http://www.open.ac.uk/oulifescreensaver/">OU screensaver</a>. Time for a revision perhaps..?<br /></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005731.html">09:38 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5731" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 20, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005729"></a>
+<h3 class="title">ROUTES RSS Greasemonkey Linky Script</h3>
+
+I just posted an updated Greasemonkey script to add an RSS feed link to the results page of a ROUTES search. You can download it from here.(This was a deliberatley short post, as I try out making a post to...
+<!--
+<p>I just posted an updated Greasemonkey script to add an RSS feed link to the results page of a <a href="http://routes.open.ac.uk">ROUTES search</a>. You can download it from <a href="http://blogs.open.ac.uk/Maths/ajh59/routesRSSlinky.user.js">here</a>.<br /><br />(This was a deliberatley short post, as I try out making a post to this blog using PFF, the <a href="http://performancing.com/firefox">Firefox Performancing extension</a>.)<br /><br /><br />Technorati Tags: <a href="http://technorati.com/tag/greasemonkey" rel="tag">greasemonkey</a></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005729.html">11:20 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5729" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005714"></a>
+<h3 class="title">FeedFlaring OUseful Info</h3>
+
+Reminder: are you subscribed to the richest OUseful Blog feed ? A little while ago, I started using Feedburner to syndicate my OUseful Info feed. If you're still subscribed to the feed via blogs.open.ac.uk etc. here's a couple more reasons...
+<!--
+<p><strong>Reminder</strong>: are <em>you</em> subscribed to the <a href="http://feeds.feedburner.com/ouseful"><em>richest</em> OUseful Blog feed</a> <a href="http://feeds.feedburner.com/ouseful" title="Subscribe to my feed, OUseful Info" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="border:0"/></a>?</p>
+
+<p>A little while ago, I started using <a href="http://feedburner.com/">Feedburner</a> to syndicate my <a title="OUseful Info - powered by FeedBurner" href="http://feeds.feedburner.com/ouseful">OUseful Info feed</a>.</p>
+
+<p>If you're still subscribed to the feed via <em>blogs.open.ac.uk</em> etc. here's a couple more reasons why you should move over to <a title="OUseful Info - powered by FeedBurner" href="http://feeds.feedburner.com/ouseful">the OUseful feed at Feedburner</a>:</p>
+
+<p>1) The feed address is guaranteed not to change, even if I move the OUseful blog, which is quite likely to happen.</p>
+
+<p><img alt="feedBurnedInBloglines.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/feedBurnedInBloglines.JPG" width="420" height="593" border="0" /></p>
+
+<p>2) The new feed has a couple of additions at the bottom of each post - an <em>Email this</em> link, so you can email the post on, and an <em>Add to del.icio.us</em> for easier bookmarking. These additions come via <a href="http://www.feedburner.com/fb/a/publishers/feedflare">Feedflare</a>; with the introduction of the <a href="http://www.feedburner.com/fb/a/api/feedflare">Feedflare API</a> a couple of weeks ago, I'm hoping for some interesting additional inserts being made available over the next few weeks.</p>
+
+<p>3) I bookmark reasonably heavily on delicious, and while a lot of the bookmarks posted there are not really relevant to the themes of this blog, some are. So if you're reading this via Feedburner, you'll now get a daily insert of that subset of my delicious bookmarks tagged as <a href="http://del.icio.us/psychemedia/feedthru">feedthru</a>. I'll also strat making an effort to annotate/comment the links, which I haven;t tended to do in the past.</p>
+
+<p>So  - if you're a subscriber - check to see your subscribed via <a title="OUseful Info - powered by FeedBurner" href="http://feeds.feedburner.com/ouseful">http://feeds.feedburner.com/ouseful</a></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005714.html">10:50 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5714" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005708"></a>
+<h3 class="title">Social Bookmarking Aggregated Posting</h3>
+
+If you maintain accounts on several different social bookmarking services that you try to keep in synch, you'll know that keeping each account in line with the other can be a pain. OnlyWire: The Only BookMarklet You'll Ever Need! seeks...
+<!--
+<p>If you maintain accounts on several different social bookmarking services that you try to keep in synch, you'll know that keeping each account in line with the other can be a pain.</p>
+
+<p><a title="OnlyWire: The Only BookMarklet You'll Ever Need!" href="http://www.onlywire.com/#">OnlyWire: The Only BookMarklet You'll Ever Need!</a> seeks to get around this problem by providing you with a <em>single</em> bookmarklet that will post the bookmarked page to multiple social bookmarking sites, acting in effect as a <em>posting aggregator</em>.</p>
+
+<p>To use the service, you need to configure your account with your identities on whichever social bookmarking services you want the link posted to, which I think will cause some people to worry about privacy issues.</p>
+
+<p>Onlywire has a minimal <a href="http://www.onlywire.com/index?api">API</a> too, though I think I'd prefer something a little more elaborate, like the ability to choose which systems the bookmark was supposed to be sent to.</p>
+
+<p><strong>Update:</strong> here are a couple more, not dissimilar, services that I've just come across:</p>
+
+<p>- <a href="http://ekstreme.com/socializer/">Socialiszer</a> - "The Socializer allows you to easily submit a link to several social bookmarking systems. Instead of having a link to each social bookmarking website, you have a single link to all of them!"</p>
+
+<p>- <a href="http://cogdogblog.com/code/marklet_maker.php">Multiplost bookmarklet generator tool</a></p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005708.html">12:35 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5708" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 19, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005707"></a>
+<h3 class="title">Doing Away With Passwords: OpenClickin</h3>
+
+Background At the Carson Workshops "Future of Web Apps Summit", Joshua Schacter made a comment in the closing plenary in which he questioned the need for requiring a login ID/password interaction to gain access to web apps, suggesting instead that...
+<!--
+<p>Background</p>
+
+<p>At the Carson Workshops "Future of Web Apps Summit", Joshua Schacter made a comment in the closing plenary in which he questioned the need for requiring a login ID/password interaction to gain access to web apps, suggesting instead that a model based on the user entering their email address and then having an 'access link' mailed to them with which they could gain access to the site.</p>
+
+<p>This doodle, written on the way home from the summit, runs with that idea, and another idea picked up from the Summit, specifically that a neat app should be good/useful for every other service on the web...</p>
+
+<p>Note that I've bounced this idea around with a couple of other people, and developed it on considerably from the ideas listed here. However, I still haven't managed to persuade anyone to build a demonstrator for me...:-(</p>
+
+<p>If anyone's keen to know more, mail me from the link on the <a href="http://ouseful.open.ac.uk/blog">OUseful blog homepage</a>. I'll also try and distill some of the email conversation I've had on the subject and pop it into anopther blog post, err, next weekend probably...</p>
+
+<p><em>Concept</em>: many web apps require a user to register with them. Frequently, to confirm the identity or existence of the user, a confirmation URL is emailed to the user, which the user must then click on to complete the registration process. This idea is taken one step further in that rather than log in to a service, once registered, using a login ID and password couple, the user simply enters their email address, to which a 'this will log you in' URL is sent. Clicking on that URL, which can only be retrieved from the user's mailbox, then effectively logs the user in to the original app. For convenience, I shall refer to this as a clickIn (" click in") rather than a login. By clickIn into a site, you are logged in to it, as you would be if you had used a login/password means of entry.</p>
+
+<p>Note - the clickIn URL should only be good for a time limited period.</p>
+
+<p><em>Doodle 1 - Can We Do It With GMail?</em></p>
+
+<p>Could we use a Gmail RSS feed to somehow implement a system whereby:</p>
+
+<p>   1. when the user wants to login to a particular web app, they enter their email as a login ID;<br />
+   2. the app sends link to this email address, possibly tagged in some way (e.g. with a clickIn tag, via e.g. my.name,clickIn@gmail.com ??), and perhaps with the URL to click on to gain access to the site in the header or in a custom <item> child tag;<br />
+   3. the app opens a window onto GMail, or, better, onto a representation of the RSS feed item corresponding to the clickIn URL?</p>
+
+<p><em>Doodle 2 - Can We Do It With del.icio.us?</em></p>
+
+<p>del.icio.us offers third parties users the ability to send (private?) links using the for:username tagging convention. (For this to work, the senders links tagged fro someone need to be private, as do the links in an individuals for:received box.)</p>
+
+<p>Ifhe contents of the for:inbox are private to the user, and can only be viewed by a user who is currently 'logged in' (using a cookie) to del.icio.us. ?Can the API  be used to post for:username tagged links.??</p>
+
+<p>   1. When a user want to login to a particular web app, they enter their del/icio.us username as login ID;<br />
+   2. the app posts the clickIn URL to the user's del.icio.us Inbox by tagging it for:username;<br />
+   3. the app opens a window onto the users del.icio.us Inbox; the user clicks on the clickIn URL that will have appeared there and gains entry to the site.</p>
+
+<p><em>Doodle 3 - Clicking In</em><br />
+Example snippet from the web app login page:</p>
+
+<p><fieldset> <legend>Example snippet from the web app login page:</legend><br />
+<form><label for="scr1Login">Login:</label> <input name="scr1Login" type="text" /> <img src="clickIn.gif" alt='clickIn logo' border='0' width="16" height="16" /><br />
+<label for="scr1Passwd">Password:</label> <input name="scr1Passwd" type="text" /><br />
+<input value="Login" class="but" type="button"></form></fieldset></p>
+
+<p>The logo shows that clickIn is supported.</p>
+
+<p>The app knows how the user wants to clickIn from their user profile (see Doodle 4).</p>
+
+<p><em>Doodle 4 - Provide Choice</em></p>
+
+<p>Provide several ways of clickIn-ing(?!). On a 'customer app'. the user preferences need to be augmented with clickIn preferences that can be checked against during a login.</p>
+
+<p>Example snippet from the web app user profile page:</p>
+
+<p><fieldset> <br />
+<legend>Example snippet from the web app user profile page:</legend></p>
+
+<form><img src="clickIn.gif" alt='clickIn logo' border='0' width="16" height="16" />   <label for="scr2clickIn">Enable <em>clickIn</em>?</label>
+   <input name="scr2clickIn" type="checkbox" onclick="showLogin()" value="" />
+   <div id='scr2showID'> <select name="menu1">  <option selected>clickIn</option>  <option>Email</option>  <option>del.icio.us/for</option></select> <label for="scr2IDorEmail">Email/username:</label   <input name="scr2IDorEmail" type="text" /> </div></form></fieldset>
+
+<p>The Login details row would be hidden unless the checkBox was ticked, at which point the details would be revealed.</p>
+
+<p>The place where a clickIn URL is sent to is the clickIn-pit.</p>
+
+<p><em>Doodle 5 - Generating Revenue</em></p>
+
+<p>Creating a service in the hope that someone will buy it is stupid - so ways need to be identified early on for monetising any service site.</p>
+
+<p>Several things come to mind:</p>
+
+<p>    * Google Ads on every clickIn page - when a user is sent to a clickIn page, they see related ads; 'cusotomer' web apps might not like this...<br />
+    * ...so make the apps pay for you not to have ads on their clickIn page; or even better...<br />
+    * ...offer the apps the chance to pay for a customised clickIn page, e..g predominantly styled with their branding.<br />
+    * Licence clickIns or sell batches of (completed) clickIns to to the web app provider. First n'000 per day are free, to encourage small players to adopt the system.</p>
+
+<p><em>Doodle 6 - Where's the API?</em></p>
+
+<p>clickIn as a standalone service could implement a facility very similar to the delicious for tag. The utility arises from providing a single site (i.e. clickIn) that can act as a base for receiving clickIn URLs - i.e. act as a clickIn-pit.</p>
+
+<p>Note that there are two things to distinguish now - firstly, a clickIn URL, which can be sent anywhere (to an email box, to a del.icio.us inbox, for example); and secondly a clickIn-The App web site/web app, which might act as a single location for a particular user to receive their clickIn URLs.</p>
+
+<p>There are a couple of things that need defining here, I think: firstly, a clickIn protocol to regulate how the passing of clickIn URLs works. Secondly, an example clickIn app that could indeed have its own API (more on that later).</p>
+
+<p>The clickIn-The App site itself would require a login, but should maintain a login state in a particular browser via a cookie (as presumably, for example, in the case of del.icio.us) that gets the user into their space within the clickIn site seamlessly (if they have been in there recently enough - the cookie will get renewed each visit).</p>
+
+<p><em>Doodle 7- Using ClickIn-The App as a Gateway to Web Apps</em></p>
+
+<p>Aggregation is a feature of Web 2.0, and ClickIn-The App could indeed offer an aggregation service, for example listing all ClickIn-The App registered sites the user has registered with. (Note the revenue opportunity here - advertising an app a user isn't registered with to them...)</p>
+
+<p>   1. The user goes to their ClickIn homepage and is presented with logos of the services they are known to be registered with*;<br />
+   2. The user clicks on a logo or a 'Get ClickIn URL' and a request is sent to that app site with the user's clickIn ID for a clickIn URL;<br />
+   3. The URL is returned and a login/clickIn option presented to the user;<br />
+   4. Tais king the clickIn option (either pressing a button, or clicking a link that is conjured up with a bit of DOM manipulation etc.) logs the user into the target app site.</p>
+
+<p>* How would clickIn-The App know what services a user was registered with? This would require collecting preferences from the user. There is an API function here, I think - when a user on a 'customer' web app site registers their details, and sets clickIn-The App as their clickIn URL pit, the customer web app should send a clickIn confirmation URL to clickIn-The App which will on the one hand all the customer app to confirm the clickIn-pit identity of the user (when they click the confirmation link) and on the other register the fact that the user has just subscribed to another service using clickIn.</p>
+
+<p><em>Doodle 8 - clickBack</em></p>
+
+<p>The clickIn service does not need to store any personal user information. It simply provides a single site that minimally confirms the clickIn identity of the user. What if clickIn-The App were to store user details, though? Could this then be used to speed up the registration process when the user wanted to register with a new web app?</p>
+
+<p>Imagine storing name information on the clickIn-The App site. If a user wanted to register on a new web app, by entering their clickIn-The App ID in early on, the customer web app could poll the user's clickIn-The App account for personal data.</p>
+
+<p>How would this be done? Using clickBack. clickBack is an area ripe for APIs. in a clickBack scenario, a web app, say, makes a request to clickIn-The App for personal name information about a particular user. The request appears as an enhanced clickIn URL - a clickBack URL - in the user's pit.</p>
+
+<p>The URL that is sent to the pit has an API defined request appended to the end of the URL (e.g. ?rq=personalName). clickIn-The App parses the clickBack URL and spots that info is being requested, If the user clicks on this clickBack URL, the data that was requested is sent back to the polling web app via https (perhaps as a POST - the API would define that).</p>
+
+<p>So - a clickBack URL is then actually a parsed clickIn URL (i.e. parsed by clickIn-The App for example).</p>
+
+<p>When the user goes to their pit and sees the clickBack URL, they may be shown what is being requested and then choose to click it back, or not. The API would define the fieldnames of data that could be sent back etc.</p>
+
+<p><em>Doodle 9 - The Logo</em></p>
+
+<p>It's supposed to look a bit like a keyhole...and play with the C and I...!</p>
+
+<p><em>Doodle 10 - Dregs...</em></p>
+
+<p>Okay - last thoughts: this service would have to be up 24-7; in the first phase (no clickBack) there is no need to store any user data at all; the service does not guarantee you are who you say you are (i.e. clickIn-The App could be very low down on the Trust stakes, e.g. if you didnlt reuiqre anything for a user to get a clickIn-The App account) - all it does is allow you to use one site to act as a pit for a clickIn URL from another. It would be good to offer potential customer sites example functions/routines in a variety of languages to put clickIn requests easily into their sites (and generate clickIn URLs etc.). There is scope for expansion with clickBack. The service would be of use to large numbers of web apps/sites and users. The data storage requirements are minimal. The user base would grow with the number of web sites/apps that signed up. Users could contribute "I'd like siteX to join up" votes to clickIn-The Project that could be used to put pressure on sites to join up. There are probably precedents (I assume there is an Identity 2.0 group out there?) and lots of good reasons why it wouldn;t work etc. But - it's a low tech solution, not very trustable, but okay for sites where you use low low quality passwords when you want to try them out etc.</p>
+
+<p><em>As mentioned at the start, the above is pretty much a stream of consciousness typed out on my way home from the summit. It spawned some intersting email threads for the day or two after, and stalled as anything but an idea.</p>
+
+<p>In particular, the discussions through up interesting lines of thought relating to available channels for communicating clickin links (email, bookmarking accounts, chat/IM, widgets and gadgets etc.), anonymity (no need to submit personal info to get a clickin account), usability, spam, growing the userbase, and most of all openness (via an API. In fact, that's all Open Clickin has to be at first - an API. No website is even required. The service is the API...). And a whole lot more...</p>
+
+<p>If anyone has any thoughts/comments on this as something worth prototyping, I'll run the gauntlet of the spammers and leave comments open for a day or two, just in case....</em></p>
+
+<p><strong>OpenClickIn, aka Login 2.0 - no (other) password required</strong><br />
+</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005707.html">11:39 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5707" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005705"></a>
+<h3 class="title">What Next After PageRank? ClickFrom?</h3>
+
+This was originally a longer post about an interesting couple of graphcis posted by Matt McAlister in What will be the next PageRank? but Firefox crashed out on me just as I was about to post, so I lost everything......
+<!--
+<p>This was originally a longer post about an interesting couple of graphcis posted by Matt McAlister in <a title="Matt McAlister :: What will be the next PageRank?" href="http://www.mattmcalister.com/blog/_archives/2006/2/16/1766344.html">What will be the next PageRank?</a> but Firefox crashed out on me just as I was about to post, so I lost everything...</p>
+
+<p>Anyway, the gist of that now lost post was picking up on the question of what could come after PageRank as the number of failed searches grows in the face of an increasing volume of information and a worsening useful:useless information ratio (by the by, FF crashed just as I google 'PageRank algorithm' so I could give a link to the original paper...if you want the link, go find it;-)</p>
+
+<p>Matt comments:</p>
+
+<blockquote>The click is much more potent than the existence of a link.  Even more potent than clicks are tags, ratings, comments and emailed URLs.  A hyperlink is still a vote, but seeing some form of human action gives me much more confidence that a source has value.</blockquote>
+
+<p>Picking up on the first part of that quote put me in mind of the <a href="http://attentiontrust.org/">Attention Trust</a>. If we record all our interdomain clicks, anonymise and aggregate this information, then are we a step along the road to a ClickRank inspired search engine?</p>
+
+<p>NB I also wonder how the various <a href="http://blogs.open.ac.uk/Maths/ajh59/005493.html">people powered search engines (PeopleRank?) are gonna fare this year? Perhaps information about sites included in user-specified <a href="http://blogs.open.ac.uk/Maths/ajh59/005679.html">searchrolls</a> or <a href='http://opensearch.a9.com'>OpenSearch</a> profiles can also be used to provide intelligence about the sites people really rate as information sources.</p>
+
+<p>This is exactly the sort of question I'd be asking if I was a library 2.0 person, I think...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005705.html">10:40 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5705" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005690"></a>
+<h3 class="title">Searchrolls and Searchlists</h3>
+
+I was hoping to spend a little time tonight putting together a JSON-with-callback powered search page (background and links here) but it seems I can't the RSS2JSON feed to provide me with a JSON object:-( As I don't have access...
+<!--
+<p>I was hoping to spend a little time tonight putting together a JSON-with-callback powered search page (<a href="http://blogs.open.ac.uk/Maths/ajh59/005679.html">background and links here</a>) but it seems I can't the RSS2JSON feed to provide me with a JSON object:-( </p>
+
+<p>As I don't have access to a permanent server when I'm not in work, (which means I can't pop up an RSS2JSON server of my own) this means I'm stuck...</p>
+
+<p>And it means I can't provide you with a link to my searchroll/search lists demonstrator.</p>
+
+<p>(You may guess though that the search roll is a list of URLs or sites that act as the focus for a search, and can be maintained via an RSS feed.)</p>
+
+<p>One application area I can see for search lists is in constrained search activities for info skills development, where students are provided with a  search list to search over, and they thus get to test their keyowrd/search term selection skills over a set of resources chosen by the instructor.</p>
+
+<p>Thiis set of resources (the searchlist) may contain just high quality sources, or it may also contain low quality or irrelevant info sources that contaminate the resaults and help the student tune their search strategy.</p>
+
+<p>Search Lists also potentially add value to recommended reading lists by allwoing the user to search within preselected texts in an effortless way.</p>
+
+<p>NB when I realised that the RSS2JSON service wasnlt working for me, I did consider popping over to <a href="http://ning.com">Ning</a>, not to see if they had an RSS2JSON server but to see if I could build the system server side using off-the-peg Ning RSS components. </p>
+
+<p>However, at first glance, it appeared there was nothing that looked immediately relevant, which got me thinking about a wishlist for Ning features. </p>
+
+<p>Here's a few of them:</p>
+
+<p>- simple to use RSS components;<br />
+- <a href="http://opensearch.a9.com/">OpenSearch</a> components (reminded me of <a href="http://weblog.infoworld.com/udell/2005/03/28.html">this</a> for some reason);<br />
+- components for linking into Library services - Z39.50 handler/wrappers perhaps? Or <a href="http://www.exlibrisgroup.com/sfx_openurl.htm">OpenURL constructors</a>? 'cos it's taking libraries <em>forever</em> to open up their information to web 2.0... and with a few little tools in Ning, it'd make it much easier to assemble services...(Btw, is there a public directory of public SOAP or RESTful library services I can play with? Shame <a href="http://www.mozilla.org/rdf/doc/z3950.html">this appeared to stall</a>);<br />
+- rss aggregator tools, for mixing results from different feeds, clearing out redundant links etc.;<br />
+- a mash creator tool - Ning has apps that wrap APIs to Google, Yahoo, Amazon, eBay etc., but I didnlt see a mash-app creator that lets you click two or three check boxes (say, Yahoo and Amazon) and then loads inthenecessary code libraries for you...</p>
+
+<p>It's the simple tools I want, little things that do little things but that work together to allow you to do loads...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005690.html">02:12 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5690" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 18, 2006</h2>
+
+
+<div class="blogbody">
+<a name="005679"></a>
+<h3 class="title">deliSearch - Searching the Contents of a List of URLs</h3>
+
+Update (12/03/06): - when a deliSearch direct search is run, the Yahoo results page is now loaded into a results frame on the deliSearch page. Update (12/03/06): - deliSearch now supports page-based or domain based searches/search URL generation. So for...
+<!--
+<p><em><strong>Update (12/03/06):</strong> - when a deliSearch direct search is run, the Yahoo results page is now loaded into a results frame on the deliSearch page.</p>
+
+<p><em><strong>Update (12/03/06):</strong> - <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a> now supports page-based <em>or</em> domain based searches/search URL generation. So for example, you can search a list of pages linked to from delicious, <em>or</em> the domains those pages live on.</em></p>
+
+<p><em><strong>Update (04/3/06):</strong> deliSearchLink creator is <!-- <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearchLinkGenerator.html">now working</a> --> <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a> - err - oops - it wasn't  - I think it's better now, and seems to work in IE too, as well as Firefox... The script now makes use of the <a href="http://lists.del.icio.us/pipermail/discuss/2006-February/004880.html">undocumented delicious JSON callback</a>, which seems to have got rid of the race conditions.)</em></p>
+
+<p><a href="http://dan-gottlieb.com/projects/minisearch/search.fcgi">MiniSearch</a>  (which I picked up on via <a href="http://libraryclips.blogsome.com/2005/10/27/minisearch-search-full-text-of-your-delicious-tags/">Library Clips</a>) is a neat little search app that allows you to search the text of all the pages linked to from another page.</p>
+
+<p>As an exercise, I've knocked up a web page that loads a list of del.icio.us bookmarked links -via <a href="http://del.icio.us/help/json">JSON</a> - into the page and then allows you to generate a URL that will perform a Yahoo! search for entered search terms over the JSON loaded links: <s><a href="http://blogs.open.ac.uk/Maths/ajh59/delisearch.html">deliSearch demo</a></s> - <em>deprecated: use this instead: <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearch.html">deliSearch</a>.</em></p>
+
+<p>It's just as easy to redirect the page to Yahoo! as it is to display the link, of course.</p>
+
+<p>Note that the size of the Yahoo! Search URL is limited. The script takes care of this by adding search URLs until a maximum size limit is reached (I really should pop up a warning to say that not all the URLs in the particular delicious tag are are being used if that's the case).</p>
+
+<p>One way round the size limit would be to encode all the URLs as <a href="http://tinyurl.com/">tinyurl's</a> and then use these (would that work? would Yahoo go to the site aliased by the <em?tinyurl</em>?).</p>
+
+<p>On the to-do list for this project, then, is the ability to specify your own user/tag combination. [DONE] <s>This will require me to get my head round the <em>asynch</em> part of AJAX (i.e. build my first proper AJAX app...) because time must be set aside for loading the JSON object before using it to create the search URL.</s> [Details of the fix follow below]</p>
+
+<p>(This post has brought to mind the v unfinished <a href="http://micro-info.blogspot.com/2005/11/searchlinks.html">SearchLink</a> pop-up I started to play with some time ago... The idea behind SearchLink augmented pages was to enable a pop-up search box over a link that will allow you to  search that page/site for a given search term. I seem to remember using a pop-up script that lost focus too quickly, though...maybe worth revisiting (or can someone email me a fix?)</p>
+
+<p>PS I have just modified the file to load in a JSON object from an arbitrary delicious usr/tag combination (<a href="http://blogs.open.ac.uk/Maths/ajh59/delisearch2.html">here *DEPRECATED*)</a>). <s>There is a problem in waiting for the JSON object to arrive though...in FF at least, just tell the browser to keep running the script... Does anyone know how to get round this problem, and if so, can you mail me the solution?;-) Thanks...</s> [The fix was to load the JSON object from delicious using a dynamic script load, followed by a second dynamic script load to operate on the loaded object - a working version of the Yahoo search link generator for a search over pages listed in a particular delious tag feed can be found <a href="http://blogs.open.ac.uk/Maths/ajh59/deliSearchLinkGenerator.html">here</a>]</p>
+
+<p>PPS Note to self - here's an <a href="http://ejohn.org/projects/rss2json/">RSS2JSON</a> service that supports callbacks... so I guess I can create a client side Yahoo search tool that will do a federated search over links pulled from several social bookmarking systems via their RSS feeds...:-) And that's not all - because I can probably get the results back in JSONic form too via the <a href="http://ajaxian.com/archives/yahoo-json-api">Yahoo JSON API</a>... </p>
+
+<p>For more, this is Web 2.0 moving into the client, which is gonna make it even more attractive for the hobbiest who doesn't have access to a server for writing/hosting server side web apps:-)</p>
+
+<p>And as the above thought experiment shows, this opens up all sorts of potential for interesting client side search tool mashups (federss'd ('fed-er-essed') search, perhaps ;-)...</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005679.html">01:35 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5679" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+<a name="005676"></a>
+<h3 class="title">Scriptaculous Slider Code Generator</h3>
+
+As I've spent several hours on trains over the last couple of days, I thought I spend the time in idle code recreation, and the result is a slightly ropey, almost functional (in Firefox at least) code generator for a...
+<!--
+<p>As I've spent several hours on trains over the last couple of days, I thought I spend the time in idle code recreation, and the result is a slightly ropey, almost functional (in Firefox at least) <a href="http://blogs.open.ac.uk/Maths/ajh59/sliderCreator.html">code generator for a script.aculo.us slider</a>. </p>
+
+<p>Full functionality is not there yet - it doesn't even have an option to use an image as a slider yet - but I have run out of time allowed on this curiosity, so unless I get more than a couple of requests for this feature to be added, it won't...</p>
+
+<p>Here's a screenshot (if anyone would like to give me a style file, that'd be great;-)</p>
+
+<p><img alt="scriptaculousSliderGenerator.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/scriptaculousSliderGenerator.JPG" width="650" height="473" border="0" /></p>
+
+<p>In case you don't know it, <a href=http:script.aculo.us/">script.aculo.us</a> is a javascript library that provides all sorts of neat animation effects that can an easily incorporate in your own pages.</p>
+
+
+-->
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005676.html">12:26 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5676" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+<!--
+	
+-->
+</div>
+
+</div>
+
 
 
 <h2 class="date">February 13, 2006</h2>
@@ -59,13 +725,17 @@ function OpenTrackback (c) {
 <a name="005614"></a>
 <h3 class="title">Roll On Loose Coupling...</h3>
 
-<p>I've been thinking a lot about what OU 2.0 (?!) could look like lately, and how if we were going to make a play for e-learning world player status - which I think is one of the scenario planning dreams, I suspect - we'd need to get something going with someone like Google (after all, if there's <a href="http://www.google.com/ig/dell">a Dell portal on Google</a>, why not an OU one in the UK, or even better, Africa, to help with the open content drive there? (It'd be even better if we could get buy in to the Google downloader/updater so we can <a href="./005516.html">ship our software through their channel</a>?)).</p>
+I've been thinking a lot about what OU 2.0 (?!) could look like lately, and how if we were going to make a play for e-learning world player status - which I think is one of the scenario planning dreams,...
+<!--
+<p>I've been thinking a lot about what OU 2.0 (?!) could look like lately, and how if we were going to make a play for e-learning world player status - which I think is one of the scenario planning dreams, I suspect - we'd need to get something going with someone like Google (after all, if there's <a href="http://www.google.com/ig/dell">a Dell portal on Google</a>, why not an OU one in the UK, or even better, Africa, to help with the open content drive there? (It'd be even better if we could get buy in to the Google downloader/updater so we can <a href="http://blogs.open.ac.uk/Maths/ajh59/005516.html">ship our software through their channel</a>?)).</p>
 
 <p>Anyway - I just saw this, which is not the same thing at all:</p>
 
 <blockquote>San José City College (SJCC) has embarked on a technology improvement program, and for the first time will be offering student email accounts. ... [Google are] testing a new service with the school by hosting Gmail accounts with SJCC domain addresses (like student@jaguars.sjcc.edu), plus admin tools for efficient account management. <a title="Official Google Blog: Big mail on campus" href="http://googleblog.blogspot.com/2006/02/big-mail-on-campus.html"><strong>Official Google Blog: Big mail on campus</strong></a></blockquote>
 
 <p>although it did, for some reason, also remind me of <a href="http://domains.live.com/">Microsoft's custom domains</a>, which is completely different again...</p>
+
+<p>[Added 23/02 - Microsoft also offer <a href="http://www.imagine-wl.com/Education/">MSN email hosting for education</a>]</p>
 
 <p>And this is completely different too: </p>
 
@@ -80,9 +750,9 @@ function OpenTrackback (c) {
 <p>(I guess the various bookscanning projects will soon remove the need for our academic libraries, for example... <a href="http://scilib.typepad.com/science_library_pad/2006/02/is_the_research.html">or not...</a>.)</p>
 
 
-
+-->
 <div class="posted">
-	Posted by ajh59 at <a href="./005614.html">12:40 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005614.html">12:40 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5614" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 <!--
@@ -100,6 +770,8 @@ function OpenTrackback (c) {
 <a name="005613"></a>
 <h3 class="title">AJAX Doesn't Stand for Anything...</h3>
 
+At the Carson Web 2.0 Summit last week (annotated here, tag: futureofwebapps), several speakers repeated the message that what AJAX is supposed to stand for (specifically, Asynchronous JavaScript And XML) is actually a misnomer, as the only thing that's actually...
+<!--
 <p>At the <a href="http://www.carsonworkshops.com/summit/">Carson Web 2.0 Summit</a> last week (annotated <a href="http://blogs.nature.com/wp/nascent/2006/02/carson_summit_on_the_future_of.html">here</a>, tag: <a href="http://technorati.com/search/futureofwebapps">futureofwebapps</a>), several speakers repeated the message that what AJAX is <em>supposed</em> to stand for (specifically, <em><strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML</em>) is actually a misnomer, as the only thing that's actually required is the <em>asynchronous</em> bit (and I'd take issue with that were it not for the fact that Javascript is only single threaded (at least, <a href="http://ajaxian.com/archives/multi-threaded-javascript"><em>for the moment</em></a>)).</p>
 
 <p>So  - what does it stand for? Some combination of DOM Manipulation, CSS and remote scripting, mashed together to give a rich browser based app, I reckon...</p>
@@ -109,9 +781,9 @@ function OpenTrackback (c) {
 <p>So - what does AJAX stand for? Neat web app interfaces, I'd say, rather than <a href="http://en.wikipedia.org/wiki/Ajax_(Sophocles)">someone out of a Greek tragedy</a>, <a href="http://en.wikipedia.org/wiki/Ajax_(automobile)">a series of doomed automobiles</a> or <a href="http://en.wikipedia.org/wiki/AJAX">Asynchronous JavaScript And XML</a>.</p>
 
 
-
+-->
 <div class="posted">
-	Posted by ajh59 at <a href="./005613.html">12:15 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005613.html">12:15 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5613" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 <!--
@@ -130,6 +802,8 @@ function OpenTrackback (c) {
 <a name="005612"></a>
 <h3 class="title">OU VLE Programme Blog</h3>
 
+Several months on from the OU's stated intention to adopt Moodle for the OU VLE, VLE programme director Niall Sclater has been doing the rounds of the OU in the last week or two giving staff an overview of what...
+<!--
 <p>Several months on from the OU's stated intention to adopt <a href="http://moodle.org/mod/forum/discuss.php?d=34002">Moodle for the OU VLE</a>, VLE programme director <a href="http://www.sclater.com/">Niall Sclater</a> has been doing the rounds of the OU in the last week or two giving staff an overview of what we can expect: OU readers can check out a <a href="http://stadium.open.ac.uk/stadia/preview.php?s=1&whichevent=711">Berrill Stadium presentation recording on the VLE</a> or check out the <a href="http://intranet.open.ac.uk/ouvle">VLE programme intranet site</a>.</p>
 
 <p>One of the things that was mentioned was that student blogs and wikis would be among the first things to be released, around about May of this year (hmm - that's interesting - the <a href="http://docs.moodle.org/en/Roadmap">Moodle roadmap</a> has blogs down as a late Feb. beta - good to know that OUr students will be getting a proven blogging system then...)</p>
@@ -142,14 +816,14 @@ function OpenTrackback (c) {
 
 <p>Anyway - the intention <em>not</em> to support OU internal blogging solutions that already exist seems pretty blatant:<br />
  <br />
-<img alt="sclaterVLEBLog.JPG" src="./sclaterVLEBLog.JPG" width="771" height="515" border="0" /></p>
+<img alt="sclaterVLEBLog.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/sclaterVLEBLog.JPG" width="771" height="515" border="0" /></p>
 
 <p>Here's the link: <a title="OU VLE Programme Blog" href="http://www.sclater.com/blog/">OU VLE Programme Blog (external site!)</a>...;-)</p>
 
 
-
+-->
 <div class="posted">
-	Posted by ajh59 at <a href="./005612.html">10:34 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005612.html">10:34 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5612" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 <!--
@@ -168,29 +842,31 @@ function OpenTrackback (c) {
 <a name="005605"></a>
 <h3 class="title">OU Library Toolbar Redux</h3>
 
-<p>Having tried to demo my <a href="./003041.html">OU Library Firefox Toolbar</a>the other day, only to find that it couldn't be installed in Firefox 1.5, I've made the necessary tweaks and uploaded a version that should work... You can install it from <a href="./ousefulLib_0.11.xpi" onclick="InstallTrigger.startSoftwareUpdate('./ousefulLib_0.11.xpi');return false;">here</a>.</p>
+Having tried to demo my OU Library Firefox Toolbarthe other day, only to find that it couldn't be installed in Firefox 1.5, I've made the necessary tweaks and uploaded a version that should work... You can install it from here....
+<!--
+<p>Having tried to demo my <a href="http://blogs.open.ac.uk/Maths/ajh59/003041.html">OU Library Firefox Toolbar</a>the other day, only to find that it couldn't be installed in Firefox 1.5, I've made the necessary tweaks and uploaded a version that should work... You can install it from <a href="http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.11.xpi" onclick="InstallTrigger.startSoftwareUpdate('http://blogs.open.ac.uk/Maths/ajh59/ousefulLib_0.11.xpi');return false;">here</a>.</p>
 
 <p>And just in case you need a reminder, here's what it looks like:</p>
 
-<p><img alt="OULibraryToolbar.JPG" src="./OULibraryToolbar.JPG" width="759" height="41" border="0" /></p>
+<p><img alt="OULibraryToolbar.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/OULibraryToolbar.JPG" width="759" height="41" border="0" /></p>
 
 <p>The Library Lookup is, of course, <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">Udell's</a> - if there's a URL in the browser URL address line, as for example when looking at a book on Amazon:</p>
 
-<p><img alt="amazonBook.JPG" src="./amazonBook.JPG" width="694" height="443" border="0" /></p>
+<p><img alt="amazonBook.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/amazonBook.JPG" width="694" height="443" border="0" /></p>
 
 <p>...you can just click on the Library lookup button and that book will be looked up in the OU library catalogue:</p>
 
-<p><img alt="libraryLookedup.JPG" src="./libraryLookedup.JPG" width="926" height="539" border="0" /></p>
+<p><img alt="libraryLookedup.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/libraryLookedup.JPG" width="926" height="539" border="0" /></p>
 
 <p>There are a few quick links in the toolbar too:</p>
 
-<p><img alt="OULibraryToolbar2.JPG" src="./OULibraryToolbar2.JPG" width="170" height="151" border="0" /><br />
+<p><img alt="OULibraryToolbar2.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/OULibraryToolbar2.JPG" width="170" height="151" border="0" /><br />
 </p>
 
 
-
+-->
 <div class="posted">
-	Posted by ajh59 at <a href="./005605.html">09:47 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005605.html">09:47 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5605" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 <!--
@@ -208,22 +884,24 @@ function OpenTrackback (c) {
 <a name="005603"></a>
 <h3 class="title">OU Library Record Bookmarklet</h3>
 
-<p>Having taken the afternoon off, I felt like a bit of guilt free play, so I had a tinker with a <a href="./myLibraryRecord.html">Library Record bookmarklet generator</a> (Firefox only?) that creates a bookmarklet that will take you straight to your OU library record:</p>
+Having taken the afternoon off, I felt like a bit of guilt free play, so I had a tinker with a Library Record bookmarklet generator (Firefox only?) that creates a bookmarklet that will take you straight to your OU library...
+<!--
+<p>Having taken the afternoon off, I felt like a bit of guilt free play, so I had a tinker with a <a href="http://blogs.open.ac.uk/Maths/ajh59/myLibraryRecord.html">Library Record bookmarklet generator</a> (Firefox only?) that creates a bookmarklet that will take you straight to your OU library record:</p>
 
-<p><img alt="ouLibraryRecordBookmarkletGenerator.JPG" src="./ouLibraryRecordBookmarkletGenerator.JPG" width="619" height="385" border="0" /></p>
+<p><img alt="ouLibraryRecordBookmarkletGenerator.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/ouLibraryRecordBookmarkletGenerator.JPG" width="619" height="385" border="0" /></p>
 
-<p>From the screenshot, you'll also notice that the app will also generate a link to an RSS feed that lists a user's current loans from the library (described previously <a href="./005227.html">here</a>.</p>
+<p>From the screenshot, you'll also notice that the app will also generate a link to an RSS feed that lists a user's current loans from the library (described previously <a href="http://blogs.open.ac.uk/Maths/ajh59/005227.html">here</a>.</p>
 
 <p><strong>Update:</strong> I've just modded the generator so that it can - possibly - generate bookmarklets for other Voyager library catalogues:</p>
 
-<p><img alt="otherLibraries.JPG" src="./otherLibraries.JPG" width="614" height="298" border="0" /></p>
+<p><img alt="otherLibraries.JPG" src="http://blogs.open.ac.uk/Maths/ajh59/otherLibraries.JPG" width="614" height="298" border="0" /></p>
 
-<p><strong>Update:</strong> the <a href="./myLibraryRecord.html">generator</a> now also generates a <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">LibraryLookup bookmarklet</a>, along with the My Library Record bookmarklet.</p>
+<p><strong>Update:</strong> the <a href="http://blogs.open.ac.uk/Maths/ajh59/myLibraryRecord.html">generator</a> now also generates a <a href="http://weblog.infoworld.com/udell/stories/2002/12/11/librarylookup.html">LibraryLookup bookmarklet</a>, along with the My Library Record bookmarklet.</p>
 
 
-
+-->
 <div class="posted">
-	Posted by ajh59 at <a href="./005603.html">03:11 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005603.html">03:11 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5603" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 <!--
@@ -242,6 +920,8 @@ function OpenTrackback (c) {
 <a name="005552"></a>
 <h3 class="title">IE Starts to Look Interesting...</h3>
 
+Old news to most perhaps, but if I had a day to play, I'd probably commit it to IE this week for a couple of reasons. First up, there's a new Google toolbar (v. 4) for IE, though not for...
+<!--
 <p>Old news to most perhaps, but if I had a day to play, I'd probably commit it to IE this week for a couple of reasons.</p>
 
 <p>First up, there's a new <a href="http://www.google.com/support/toolbar/bin/static.py?page=features.html&v=4">Google toolbar (v. 4) for IE</a>, though not for Firefox yet. <a href="http://www.niallkennedy.com/blog/">Niall Kennedy</a> provides a neat overview of the <a href="http://www.niallkennedy.com/blog/archives/2006/01/google-bookmark.html">online bookmarking</a> feature and the <a href="http://www.niallkennedy.com/blog/archives/2006/01/google-toolbar-button-api.html">toolbar API</a>  (which lets you "create custom buttons using a custom XML descriptor and extended functionality using RDF, RSS, and Atom feeds"). For more info, check out the <a href="http://www.google.com/tools/toolbar/buttons/apis/">API documentation</a>.</p>
@@ -253,9 +933,9 @@ function OpenTrackback (c) {
 <p>However, as I've started trying to evangelise the role that blogging could play in moving information around the OU, and <em>into</em> the OU, it may be that I can provide value to OU subscribers by simply relaying news items... (hmm - I wonder if I should set up a <em>News from OUtside</em> blog to do this...?)</p>
 
 
-
+-->
 <div class="posted">
-	Posted by ajh59 at <a href="./005552.html">12:26 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/005552.html">12:26 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=5552" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 <!--
@@ -268,6 +948,15 @@ function OpenTrackback (c) {
 
 </div>
 </div>
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
 
 </body>
 </html>

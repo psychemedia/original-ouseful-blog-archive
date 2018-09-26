@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: SPARQLing OUseful Info</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./008419.html" title="Stringle Tabs" />
+
+<link rel="next" href="./008467.html" title="(Library Catalogue) Search Forms in Grazr" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./008419.html">&laquo; Stringle Tabs</a> |
+
+<a href="./">Main</a>
+| <a href="./008467.html">(Library Catalogue) Search Forms in Grazr &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 03, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">SPARQLing OUseful Info</h3>
+
+<p>I've just started wondering (for which, read: 'asking naive questions of people who know about this stuff') how to mark up content in a semantic learning environment (and what such an environment might look like), particularly if it was built out of bits of string'n'glue, so the OUseful posts are quite likely to be littered with basic semantic web exploratory doodles over the next few weeks.</p>
+
+<p>For starters, I think I need to find out what I can do around the search tool front, using SPARQL to query RDF stores. At the moment, I haven't got an RDF version of any OpenLearn content up (maybe I'll do a minimal XSLT over the weekend?) so the next best(?) thing (in that I'm familiar with the content of it) is the RDF feed out of the OUseful blog.</p>
+
+<p>The SPARQL  processor I'm going to use at first is <a href="http://sparql.org/sparql.html">SPARQLer</a>. Here's an example query using it:</p>
+
+<p><img alt="sparql1.jpg" src="./sparql1.jpg" width="704" height="462" border="0" /></p>
+
+<p>and an <a href="http://sparql.org/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+rss%3A+%3Chttp%3A%2F%2Fpurl.org%2Frss%2F1.0%2F%3E%0D%0ASELECT+%3Ftitle+%0D%0AWHERE+%7B+%3Fitem+rdf%3Atype+rss%3Aitem+.%0D%0A+++++++%3Fitem+rss%3Atitle+%3Ftitle+.%0D%0A+++++++%3Fitem+rss%3Adescription+%3Fdescription+.%0D%0A+++++++FILTER+regex%28%3Ftitle%2C+%22OpenLearn%22%29+%7D&default-graph-uri=http%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2Findex.rdf&stylesheet=xml-to-html.xsl">example result</a>:</p>
+
+<p><img alt="sparql2.jpg" src="./sparql2.jpg" width="450" height="215" border="0" /></p>
+
+<p>SPARQLer can apply an arbitrary stylesheet to the results, or a JSON results feed (<a href="http://sparql.org/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+rss%3A+%3Chttp%3A%2F%2Fpurl.org%2Frss%2F1.0%2F%3E%0D%0ASELECT+%3Ftitle+%3Fdescription%0D%0AWHERE+%7B+%3Fitem+rdf%3Atype+rss%3Aitem+.%0D%0A+++++++%3Fitem+rss%3Atitle+%3Ftitle+.%0D%0A+++++++%3Fitem+rss%3Adescription+%3Fdescription+.%0D%0A+++++++FILTER+regex%28%3Ftitle%2C+%22OpenLearn%22%29+%7D%0D%0A&default-graph-uri=http%3A%2F%2Fblogs.open.ac.uk%2FMaths%2Fajh59%2Findex.rdf&stylesheet=xml-to-html.xsl&output=json">example</a>), as well as the pure XML result.</p>
+
+<p>Which actually (by default) popped up this 'error' dialogue in my browser:</p>
+
+<p><img alt="sparqlMime.jpg" src="./sparqlMime.jpg" width="451" height="341" border="0" /></p>
+
+<p>Hmm - might it be handy if I could provide a web application URL that would take 'this sort' of document and display it via a third party website? </p>
+
+<p>Anyway, that's off topic :-) Time to go and learn how to speak SPARQL, I think...</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November  3, 2006 03:46 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

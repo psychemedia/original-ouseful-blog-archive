@@ -2,6 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
 <title>OUseful Info: YouTube Playlist RSS Feeds With Video Enclosures  (Grazring YouTube Favourites Playlists Redux)</title>
@@ -118,19 +119,24 @@ function forgetMe (f) {
 
 <h3 class="title">YouTube Playlist RSS Feeds With Video Enclosures  (Grazring YouTube Favourites Playlists Redux)</h3>
 
-<p>In what will (hopefully!) be the last post on this topic for a bit, here's a link to a Yahoo Pipe that will take in a YouTube Playlist URL, and produce an RSS feed of that playlist - with the appropriate movies attached as an enclosure to each item in the feed.</p>
+<p>UPDATE: most of what follows is <em>out-of-date</em>... until such a time as I write a follow up post, here's a <a href="http://grazr.com/config.html?view=o&theme=default_big_title&file=http://grazr.com/data/psychemedia/b7615c6">YouTube Search'n'Play widget</a> that you can embed in any page. If you want it as a Facebook app, try here: <a href="http://www.facebook.com/apps/application.php?id=5839703548">YouTube Search'n'Play Facebook app</a>...</p>
 
-<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=ijXS6T0Y3BGMaIzvjknRlg">YouTube Playlist Feed With Video Enclosures</a>.</p>
+<p><hr/><br />
+In what will (hopefully!) be the last post on this topic for a bit, here's a link to a Yahoo Pipe that will take in a YouTube Playlist URL, and produce an RSS feed of that playlist - with the appropriate movies attached as an enclosure to each item in the feed.</p>
 
-<p>What the attachment means is that you can <a href="http://grazr.com/gzpanel.html?theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=ijXS6T0Y3BGMaIzvjknRlg&_render=rss&_run=1&youtubeplaylistURL=http%3A%2F%2Fwww.youtube.com%2Fview_play_list%3Fp%3DCA23DDFA84A2ACC9">view a YouTube playlist in a Grazr widget</a>, for example:</p>
+<p><s><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=ijXS6T0Y3BGMaIzvjknRlg">YouTube Playlist Feed With Video Enclosures</a>.</s> Here's one that works, and uses the Youtube gdata API rather than scraping via Dapper (which I built before the API...): <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=TEM_6l0Q3BG6fZjojknRlg">YouTube Playlist Feed With Video Enclosures</a></p>
 
-<div style="height:400px;width:400px;"><a href="http://grazr.com/gzpanel.html?theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=ijXS6T0Y3BGMaIzvjknRlg&_render=rss&_run=1&youtubeplaylistURL=http%3A%2F%2Fwww.youtube.com%2Fview_play_list%3Fp%3DCA23DDFA84A2ACC9" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=ijXS6T0Y3BGMaIzvjknRlg&amp;_render=rss&amp;_run=1&amp;youtubeplaylistURL=http%3A%2F%2Fwww.youtube.com%2Fview_play_list%3Fp%3DCA23DDFA84A2ACC9"></script></div>
+<p>What the attachment means is that you can <a href="http://grazr.com/gzpanel.html?theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=TEM_6l0Q3BG6fZjojknRlg&_render=rss&textinput1=398D1C0A2DC0ED05">view a YouTube playlist in a Grazr widget</a>, for example:</p>
 
-<p>This pipe supercedes the approach described in <a href="./009897.html">Grazring YouTube Favourites Playlists</a>, which took a snapshot of a playlist and generated the feed from an enumerated list of movie IDs that were explicitly captured within a fixed URL; the new pipe scrapes a <em>live</em> feed from the playlist using a <a href="http://www.dapper.net/dapp-howto-use.php?dappName=youtubePlaylistscraper">youTube Playlist scraper Dapp</a>.</p>
+<div style="height:400px;width:400px;"><a href="http://grazr.com/gzpanel.html?theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=TEM_6l0Q3BG6fZjojknRlg&_render=rss&textinput1=398D1C0A2DC0ED05" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=TEM_6l0Q3BG6fZjojknRlg&_render=rss&textinput1=398D1C0A2DC0ED05"></script></div>
 
-<p>If generating the feed URL from the Yahoo Pipes page is too much for you, this <a href="http://grazr.com/read/psychemedia/youtubePlaylist.opml">youTube Playlist viewing Grazr widget</a> (here's a youTube Playlist URL to try it with: <em>http://www.youtube.com/view_play_list?p=398D1C0A2DC0ED05</em>):</p>
+<p><s>This pipe supercedes the approach described in <a href="./009897.html">Grazring YouTube Favourites Playlists</a>, which took a snapshot of a playlist and generated the feed from an enumerated list of movie IDs that were explicitly captured within a fixed URL; the new pipe scrapes a <em>live</em> feed from the playlist using a <a href="http://www.dapper.net/dapp-howto-use.php?dappName=youtubePlaylistscraper">youTube Playlist scraper Dapp</a>.</s></p>
 
-<div style="height:350px;width:300px;"><a href="http://grazr.com/gzpanel.html?file=http://grazr.com/data/psychemedia/youtubePlaylist.opml" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?file=http://grazr.com/data/psychemedia/youtubePlaylist.opml"></script></div>
+<p>UPDATE: The revised new pipe (?!) uses the Youtube gdata API and a Yahoo pipe to augment the feed with enclosures.</p>
+
+<p>UPDATED TO WORK WITH NEW PIPE: If generating the feed URL from the Yahoo Pipes page is too much for you, this <a href="http://grazr.com/read/psychemedia/be8e179">youTube Playlist viewing Grazr widget</a> (here's a youTube Playlist URL to try it with: <em>http://www.youtube.com/view_play_list?p=398D1C0A2DC0ED05</em>; either enter the full URL or just the playlist ID - 398D1C0A2DC0ED05):</p>
+
+<div style="height:400px;width:450px;"><a href="http://grazr.com/read?view=o&file=http://grazr.com/data/psychemedia/be8e179" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://grazr.com/data/psychemedia/be8e179"></script></div>
 
 <p>Or if you'd rather watch a youTube movie playlist using a native Google gadget, check out this post:  <a href="./010394.html">Google Gadgets - RSS Feed Powered YouTube Playlist Player</a>.</p>
 
@@ -153,6 +159,7 @@ function forgetMe (f) {
 
 
 
+
 <div class="comments-head"><a name="comments"></a>Comments</div>
 
 
@@ -163,12 +170,16 @@ function forgetMe (f) {
 
 </div>
 </div>
-<script src="http://feeds.feedburner.com/~s/ouseful?i=./010419.html" type="text/javascript" charset="utf-8"></script>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+
+<script type="text/javascript">
+
+
 </script>
 <script type="text/javascript">
-_uacct = "UA-571814-1";
-urchinTracker();
+
+
+
 </script>
+
 </body>
 </html>

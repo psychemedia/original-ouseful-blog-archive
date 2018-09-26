@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Beyond Google: Multisearch Demo</title>
+<link type="text/css" rel="stylesheet"  href="http://blogs.open.ac.uk/Maths/ajh59/tabber.css" />
+<script type="text/javascript" src="http://blogs.open.ac.uk/Maths/ajh59/tabber.js"></script>
+
+<link type="text/css" rel="stylesheet"  href="http://ouseful.open.ac.uk/xmltools/courseLinksDemo.css" />
+<script type="text/javascript" src="http://ouseful.open.ac.uk/xmltools/courseLinksDemo.js"></script>
+
+<script type="text/javascript">
+ function setFrameSrc(id, url){
+  var el=document.getElementById(id);
+  el.setAttribute('src',url);
+ }
+ 
+ function loadSearchPageFrame(){
+  document.getElementById('searchPages').setAttribute("style", "display:block;width:710px");
+  setFrameSrc('searchPageGoogle','http://www.google.co.uk');
+  setFrameSrc('searchPageYahoo','http://uk.search.yahoo.com');
+  setFrameSrc('searchPageMSN','http://www.msn.co.uk');
+  //setFrameSrc('searchPageLive','http://www.live.com'); 
+ }
+
+ function loadCannedSearch(q){
+  document.getElementById('searchItemPages').setAttribute("style", "display:block;width:710px");
+  setFrameSrc('searchItemPageGoogle','http://www.google.co.uk/search?q='+q);
+  setFrameSrc('searchItemPageYahoo','http://uk.search.yahoo.com/search?p='+q);
+  setFrameSrc('searchItemPageMSN','http://search.msn.co.uk/results.aspx?q='+q);
+  //setFrameSrc('searchItemPageLive','http://www.live.com/?q='+q); 
+ }
+ 
+ function loadUsrSearch(){
+
+  var q=document.getElementById('usrSearchQuery').value;
+  document.getElementById('searchUsrPages').setAttribute("style", "display:block;width:710px");
+  setFrameSrc('searchUsrPageGoogle','http://www.google.co.uk/search?q='+q);
+  setFrameSrc('searchUsrPageYahoo','http://uk.search.yahoo.com/search?p='+q);
+  setFrameSrc('searchUsrPageMSN','http://search.msn.co.uk/results.aspx?q='+q);
+  //setFrameSrc('searchUsrPageLive','http://www.live.com/?q='+q); 
+ }
+ 
+</script>
+</head>
+
+<body>
+ <h1>Multisearch panels demo</h1>
+ <p>The aim of this page is just to demonstrate various ways of getting several
+ search engines displayed together, to encourage students to try out different search engines.</p>
+ <p>Note that the approach used in this demo will incur quite large downloads - each frame is
+ loaded with a search engine homepage. It would be possible to optimise the page and only download
+ a search engine homepage when the tab is opened for the first time.</p>
+ <hr />
+ <h2>Different Search Engine Homepages</h2>
+ <p>Simply provide a panel that displays the home page for each search engine.
+ <h3 class="trigger">Show Search Engines</h3>
+ <div>
+  <p>The Google homepage doesn't like being opened in the frame very much, but all the
+  other examples seem to be okay, inclduign the loading of Google results in other examples.</p>
+  <p><a href="javascript:loadSearchPageFrame()">Load search engines</a></p>
+  <div class="tabber" id="searchPages" style="width:710px;height:410px;">
+   <div class="tabbertab" title="Google">
+    <iframe src="" id="searchPageGoogle" style="width:700px;height:400px" ></iframe>
+   </div>
+   <div class="tabbertab" title="Yahoo">
+    <iframe src="" id="searchPageYahoo" style="width:700px;height:400px" ></iframe>
+   </div>
+   <div class="tabbertab" title="MSN">
+    <iframe src="" id="searchPageMSN" style="width:700px;height:400px" ></iframe>
+   </div>
+  </div>
+ </div>
+ <hr />
+ <h2>Common Search Query, Preapplied</h2>
+ <p>This demonstrates how the same search term(s) can be automatically loaded in to each
+ of the search engines.
+ <h3 class="trigger">Show Search Engines</h3>
+ <div>
+  <p>Click on a link to load the same search query into several search engines at the same time:
+  <a href="javascript:loadCannedSearch('train times')">train times</a>,
+  <a href="javascript:loadCannedSearch('library oswaldtwistle')">library oswaldtwistle</a></p>
+  <div class="tabber" id="searchItemPages" style="width:710px;height:410px;">
+   <div class="tabbertab" title="Google">
+    <iframe src="" id="searchItemPageGoogle" style="width:700px;height:400px" ></iframe>
+   </div>
+   <div class="tabbertab" title="Yahoo">
+    <iframe src="" id="searchItemPageYahoo" style="width:700px;height:400px" ></iframe>
+   </div>
+   <div class="tabbertab" title="MSN">
+    <iframe src="" id="searchItemPageMSN" style="width:700px;height:400px" ></iframe>
+   </div>
+  </div>
+ </div>
+ <hr />
+ <h2>User specified search</h2>
+ <p>This example allows the user to enter a search term and apply it across all the prespecified
+ (by us) search engines at the same time.</p>
+ <h3 class="trigger">Show Search Engines</h3>
+ <div>
+  <form action="" onsubmit="loadUsrSearch();return false;" >
+   <label for="usrSearchQuery">Enter query:</label>
+   <input id='usrSearchQuery' style="width: 200px;" type='text'>
+   <input value="Search" type="submit">
+  </form>
+  <div class="tabber" id="searchUsrPages" style="width:710px;height:410px">
+   <div class="tabbertab" title="Google">
+    <iframe src="" id="searchUsrPageGoogle" style="width:700px;height:400px" ></iframe>
+   </div>
+   <div class="tabbertab" title="Yahoo">
+    <iframe src="" id="searchUsrPageYahoo" style="width:700px;height:400px" ></iframe>
+   </div>
+   <div class="tabbertab" title="MSN">
+    <iframe src="" id="searchUsrPageMSN" style="width:700px;height:400px" ></iframe>
+   </div>
+  </div>
+ </div>
+</body>
+</html>

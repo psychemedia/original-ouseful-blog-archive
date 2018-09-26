@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Some Minor Observations on Reusing OpenLearn Content</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014244.html" title="Twittershow - Modifying Feedshow to Provide Twitter Powered Presentations" />
+
+<link rel="next" href="./014282.html" title="BBC Blogoscoped....?" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014244.html">&laquo; Twittershow - Modifying Feedshow to Provide Twitter Powered Presentations</a> |
+
+<a href="./">Main</a>
+| <a href="./014282.html">BBC Blogoscoped....? &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">April 17, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Some Minor Observations on Reusing OpenLearn Content</h3>
+
+<p>Internet access has been somewhat fractured for me this week (and will continue to be...), so I scheduled several posts for the <a href="http://digitalworlds.wordpress.com">Digital Worlds</a> blog to try can keep the daily delivery thing running...</p>
+
+<p>To write several posts that would get me a few days ahead, I needed to cut down on the production time for each post, so I tried a little experiment writing one post based around some OpenLearn material: <a href="http://digitalworlds.wordpress.com/2008/04/16/representing-analogue-sound-files-in-a-digital-way/" title="Representing Analogue Sound Files in a Digital Way">Representing Analogue Sound Files in a Digital Way</a>.</p>
+
+<p>The post actually pulled in material from two sepearate OpenLearn courses: “Crossing the boundary - analogue universe, digital worlds” (in particular the section <a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=187478">Crossing the boundary - Sound and music</a>) and “Representing and manipulating data in computers” (in particular the section <a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=175793">Representing sound</a>).</p>
+
+<p>I re-presented the material in a single block quote, and used a general copyright notice at the end to qualify its use: "Copyright OpenLearn/The Open University, licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Licence</a>".</p>
+
+<p>Here are a few observations arising from the exercise:</p>
+
+<p>1) "absolute linking" makes seemless embedding/reuse of material difficult. For example, diagrams were referred to by figure numbers:</p>
+
+<p><a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=187478" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2131/2420034513_43ff99e2b8.jpg" alt="openlearn figure" style="border: 0pt none ;" height="294" width="500" /></a></p>
+
+<p>One technique I used to address this issue was not to really refer to figures directly at all, instead using the flow of the document to take the reader from the text into the image:</p>
+
+<p><a href="http://digitalworlds.wordpress.com/2008/04/16/representing-analogue-sound-files-in-a-digital-way/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2141/2420041635_3f320ba50a.jpg" alt="openlearn flow referencing images" style="border: 0pt none ;" height="419" width="482" /></a></p>
+
+<p>It's also worth noting that the HTML of the OpenLean materials uses relative links to image assets rather than absolute links:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2420049725/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2047/2420049725_9ff85cd6bb.jpg" alt="2008-04-17_1031" style="border: 0pt none ;" height="46" width="500" /></a></p>
+
+<p>Rather than grab copies of the images to host them locally, I actually pointed the image source URLs at the URLs used in the OpenLearn units. Whilst this does mean that OpenLearn can track the use of the image through my materials, it also means that I am trusting OpenLearn not to change the image URLs - if they do change, my materials break.</p>
+
+<p>2) References were made to previous sections using absolute references:</p>
+
+<p><a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=187478" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2007/2420037039_8f3fc904f2.jpg" alt="openlearn linking out" style="border: 0pt none ;" height="67" width="500" /></a></p>
+
+<p>To preserve this sort of absolute reference, one approach is to contectualise it within a reference to the original reference:</p>
+
+<p><a href="http://digitalworlds.wordpress.com/2008/04/16/representing-analogue-sound-files-in-a-digital-way/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3145/2420860462_5d245c0e8a.jpg" alt="openlearn - literal reference" style="border: 0pt none ;" height="149" width="459" /></a></p>
+
+<p>3) the material in the two units was stylistically different in the use of headers:</p>
+
+<p><a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=187478" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2189/2420031505_5f5734c4a8.jpg" alt="openlearn saq" style="border: 0pt none ;" height="71" width="283" /></a> <a href="http://openlearn.open.ac.uk/mod/resource/view.php?id=175793" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2058/2420846912_76cc47d763.jpg" alt="openlearn saq" style="border: 0pt none ;" height="120" width="275" /></a></p>
+
+<p>4) with reusing material from two units, how should the content be referenced? In the re-presentation I used, it is impossible to say which part of the blockquote came from which openlearn unit. I also needed to add filler material to join the extracts from the two OpenLearn units, and this is embedded within the blockquote.</p>
+
+<p>The major problem with reusing the content in as light a touch way as possible was having to adopt the voice and teaching line of the original unit authors, as well as finding workarounds for 'incremental'/backreferenced teaching (e.g. "think back to the methods we used for...").</p>
+
+<p>Finding relevant content was also an issue. Leaving aside the matter that I used my own <a href="http://www.google.com/coop/cse?cx=009190243792682903990%3Augr-oyrmt-4">OpenLearn custom search engine</a> (and in particular the 'resources' search refinement) to discover resources on the OpenLearn site, rather than using the OpenLearn search engine itself, finding material that could be taken from OpenLearn and inserted into the Digital Worlds storyline without breaking that storyline too badly could have been easier.</p>
+
+<p>For example, the OpenLearn site is architected at the unit level; finding related resources across units is not really supported within the site other than through free text search (though I think they are trying to experiment with tagging).</p>
+
+<p>Reusing the content did save me some time though, and I'll be looking for opportunities to do it again. Having a good awareness of what material is in OpenLearn would make this easier - knowing when to look to OpenLearn for material with a high likelihood that something relevant will turn up, for example - so on my todo list is a content recommender that will do content analysis on blog posts as I write them, and then pull in OpenLearn recommendations related to those content analysis terms (c.f. serendipitwitterous).</p>
+
+<p>I'm not sure how much OpenLearn content is relevant to Digital Worlds though? So as part of another uncourse blog experiment, this time for a chunk of a module I have to prepare for another course, I'm going to try to reuse as much OpenLearn content as possible.</p>
+
+<p>The topic is visualising data, and the uncourse blog experiment site for it is here: <a href="http://visualgadgets.blogspot.com/">Visual Gadgets</a> (starts next week, hopefully...;-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/digitalworlds" rel="tag">digitalworlds</a>, <a href="http://technorati.com/tag/openlearn" rel="tag">openlearn</a>, <a href="http://technorati.com/tag/%20visualgadgets" rel="tag"> visualgadgets</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at April 17, 2008 11:08 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Not sure if it is just me, but the images from OpenLearn don't show up in the Digital Worlds blog.<br />
+</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;ks4243&#64;tutor&#46;open&#46;ac&#46;uk">Kate</a> at April 17, 2008 08:52 PM</span>
+</div>
+<div class="comments-body">
+<p>"Not sure if it is just me, but the images from OpenLearn don't show up in the Digital Worlds blog."</p>
+
+<p>That's probably because you have at some point used your browser to log in to the OpenLearn website.</p>
+
+<p>There is a snafu with the way the images are tracked/delivered - if you have "I'm a registered OpenLearn user" cookie set, I'm guessing you won't be able to see any Openlearn image that is served from OpenLearn onto a third party webpage (like the Digital Worlds pages, or any OpenLearn RSS feeds you view through Grazr).</p>
+
+<p>(I reported this a long time ago - I think I saw an email that it will be addressed in the next Moodle push?)</p>
+
+<p>Given also that the OpenLearn website appears to hang (or maybe even fall over) when there is more than not many concurrent users, I suppose we should be grateful that not many people are using it, or we might get some bad press... ;-)</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.info">Tony Hirst</a> at April 18, 2008 10:18 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 
 <title>OUseful Info: Geo Archives</title>
 
-<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="stylesheet" href="http://blogs.open.ac.uk/Maths/ajh59/styles-site.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
 
 <script language="javascript" type="text/javascript">
@@ -28,13 +28,732 @@ function OpenTrackback (c) {
 <body>
 
 <div id="banner">
-<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<h1><a href="http://blogs.open.ac.uk/Maths/ajh59/" accesskey="1">OUseful Info</a></h1>
 <span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
 </div>
 
 <div id="container">
 
 <div class="blog">
+
+
+<h2 class="date">June 30, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="014935"></a>
+<h3 class="title">Google Maps Catchup Post</h3>
+
+Earlier this year I did quite a few posts relating to Google Maps, (Google Calendar maps, geoblogging (blogging from Google MyMaps), a geoTwitter map, some maps relating to school catchment areas, and so on) but didn't post everything... So when...
+<!--
+<p>Earlier this year I did quite a few posts relating to Google Maps, (<a href="http://blogs.open.ac.uk/Maths/ajh59/014014.html">Google Calendar maps</a>, <a href="http://blogs.open.ac.uk/Maths/ajh59/012936.html">geoblogging</a> (blogging from Google MyMaps), a <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">geoTwitter map</a>, some <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">maps relating to school catchment areas</a>, and so on) but didn't post everything...</p>
+
+<p>So when an email came round last week asking whether anyone knew how to get postcodes plotted onto maps, I sent a reply:<br />
+<blockquote>Q: I need to create a simple map - plot some sites onto a map of the UK using postcodes (or town names) and then code the markers to denote different site characteristics.</p>
+
+<p>A: One way would be to put the details into a spreadsheet, pass the result through a geocoder (to convert postcodes to lat/long) and then plot different markers on a map.</p>
+
+<p>Here's a recipe for getting the markers onto a map from a spreadsheet with a postcode column: <a href="http://www.andydickinson.net/2008/02/29/maps-spreadsheets-yahoo-pipes-and-post-offices/">http://www.andydickinson.net/2008/02/29/maps-spreadsheets-yahoo-pipes-and-post-offices/</a></p>
+
+<p>I produced a couple of maps that will do client side processing relating to markers before plotting them: <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">http://blogs.open.ac.uk/Maths/ajh59/013580.html</a></blockquote>Looking back at the second of the above mentioned posts, (and spotting the pipe had rotted - now fixed...), I realised that I hadn't posted anywhere the final extent of my tinkerings of the time. And looking around on my laptop, the code appeared to have gone :-( Anyway, fortunately I'd posted a nearly-as-far-as-I'd-got edition of the code to the OUseful blog server, so before I lose it again, here's a link: <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php">Generic Circular Catchment Areas - Interactive Map</a></p>
+
+<p><a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3111/2624872814_420ea60c17.jpg" alt="http://blogs.open.ac.uk/Maths/ajh59/gmaptest-c.php" height="423" width="500" /></a></p>
+
+<p>What the map allows you to do is load in a set of points from a Google MyMap, marked up as members of different classes, and then plot the catchment areas around each point using a customisable radius for each class. (Along with a user defined radius, you can also set the colour of each circular  catchment area (using a YUI colour selector)).</p>
+
+<p>You can hide all the markers from any class, or just hide individual points.</p>
+
+<p>(The URL on the map page for the Plymouth supermarkets MyMap is incorrect. Here's the correct link: <a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=109196350919255002936.000446d925755b10ddf4e&z=10">Plynmouth supermarkets MyMap</a>.)</p>
+
+<p>When I get a chance, I'll try to tidy up the code and do a version that: a) will plot points identified by postcode from a Google spreadsheet; b) let oyou use different markers as well as or instead of the circular catchment areas; c) have a think about how a table containing postcode info could be <a href="http://blogs.open.ac.uk/Maths/ajh59/014014.html">progressively enhanced</a> with a map display.<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/maps" rel="tag">maps</a>, <a href="http://technorati.com/tag/geo" rel="tag">geo</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/014935.html">03:01 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=14935" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 18, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013936"></a>
+<h3 class="title">geotwitterous Now Featuring Twittervision</h3>
+
+I really should be thinking about how to get through my mashup talk on Thursday, so I thought I'd do this instead - a quick update on geotwitterous. In a comment to the original post (Geo Twitter - GeoCoding Your...
+<!--
+<p>I really should be thinking about how to get through my mashup talk on Thursday, so I thought I'd do this instead - a quick update on <a href="http://ouseful.open.ac.uk/geotwitterous">geotwitterous</a>.</p>
+
+<p>In a comment to the original post (<a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</a>), which described a Yahoo peipe that tried to geocode a tweet based on its content,  Jean-NoÃ«l asked: "Why not create a Pipes using API TwitterVision?"</p>
+
+<p>If you don't know it already, Twittervision plots tweets on a map based on the twitterer's location, as specified in theri Twitter profile, or if it's declared in a tweet in a particular way. A quick look at the <a href="http://twittervision.com/api.html">Twittervision API</a> showed how easy it is to call. FOr example:</p>
+
+<p>- <em>http://api.twittervision.com/user/current_status/<strong>twitterID</strong>.xml</em><br />
+- <em>http://api.twittervision.com/user/current_status/<strong>twitterID</strong>.json</em></p>
+
+<p>It only took a few minutes to create pipe to grab this data (<a href="http://pipes.yahoo.com/ouseful/twittervisionapi">http://pipes.yahoo.com/ouseful/twittervisionapi</a>):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2343058868/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2091/2343058868_5d4c5f6592.jpg" alt="2008-03-18_1037" style="border: 0pt none ;" height="430" width="500" /></a></p>
+
+<p>This pipe in turn can be embedded in another pipe that takes in a normal twitter friends feed and then grabs the twittervision details for each user who has a tweet in that feed - <a href="http://pipes.yahoo.com/ouseful/twittervisionfriends">http://pipes.yahoo.com/ouseful/twittervisionfriends</a>. here are some of the interesting bits:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2342234869/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2304/2342234869_5af2d40f77.jpg" style="border: 0pt none ;" alt="Twittervision friends pipe" height="412" width="500" /></a></p>
+
+<p>The regular expression finds the author (as a twitter ID) of each tweet. The Loop runs each item in the feed through the twittervision API pipe, enriching/augementing/annotating the feed with whatever Twittervision can learn about the user. Any geo information returned from twittervision is copied to the top of each feed item so it looks like geoRSS. The Location Extractor uses this geoRSS info to create a full internal geo representation; (if no geoRSS info is found, it will try to extract a location from the title/description elements of each feed item).</p>
+
+<p>On the <a href="http://ouseful.open.ac.uk/geotwitterous/?id=psychemedia&amp;twittervision=on">geotwitterous page</a>, I then take a  JSON output from the pipe and plot the tweets on a Google map, trying to bundle all the tweets from the same person together:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2342244053/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3062/2342244053_7baff64409.jpg" alt="geotwitterous map" style="border: 0pt none ;" height="349" width="500" /></a></p>
+
+<p>So  - a map view of where my friends are twittering from...</p>
+
+<p>I need to fully integrate this with my own twitter geocoder, but as a half-hour hack, it was quite satisfying :-)<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/geotwitterous" rel="tag">geotwitterous</a>, <a href="http://technorati.com/tag/twittervision" rel="tag">twittervision</a>, <a href="http://technorati.com/tag/%20yahoo%20pipes" rel="tag"> yahoo pipes</a>, <a href="http://technorati.com/tag/%20pipes" rel="tag"> pipes</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013936.html">10:52 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13936" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 10, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013846"></a>
+<h3 class="title">gCalMap - Embed Code Generator For Google Calendar Maps</h3>
+
+A really quick post, this one, just to say I've posted a gCalmap embed code generator at http://ouseful.open.ac.uk/maps/gCalMapGenerator.php: Enter the a public Google Calendar ID and generate URL for just the calendar map, or a side-by-side calendar and map view....
+<!--
+<p>A really quick post, this one, just to say I've posted a gCalmap embed code generator at <a href="http://ouseful.open.ac.uk/maps/gCalMapGenerator.php">http://ouseful.open.ac.uk/maps/gCalMapGenerator.php</a>:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2324165794/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2038/2324165794_18aa8df479.jpg" alt="2008-03-10_1329" style="border: 0pt none ;" height="359" width="500" /></a><br />
+   <br />
+Enter the a public Google Calendar ID and generate URL for just the calendar map, or a side-by-side calendar <em>and</em> map view.</p>
+
+<p>I've also added a feature that will generate an iframe embed code, to make it a little easier to embed these views in your own pages.</p>
+
+<p>When I get a chance, I'll add the <a href="http://blogs.open.ac.uk/Maths/ajh59/013807.html">multi-calendar view</a> to the page, too...</p>
+
+<p>PS the mashup has gone wild... (though not using the generator...): <a href="http://www.martinwunderlich.com/foss-calendar.htm">http://www.martinwunderlich.com/foss-calendar.htm</a><br />
+<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/gcalmap" rel="tag">gcalmap</a>, <a href="http://technorati.com/tag/google%20calendar" rel="tag">google calendar</a>, <a href="http://technorati.com/tag/%20google%20map" rel="tag"> google map</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013846.html">01:37 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13846" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">March 07, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013807"></a>
+<h3 class="title">Geocoding Multiple Google Calendar Feeds</h3>
+
+I got an email the other asking how to display several geocoded Google Calendar feeds on the same map using the pipe I've written about before (e.g. Displaying Google Calendars on a Google Map and maps and calendars side by...
+<!--
+<p>I got an email the other asking how to display several geocoded Google Calendar feeds on the same map using the pipe I've written about before (e.g. <a href="http://blogs.open.ac.uk/Maths/ajh59/012594.html">Displaying Google Calendars on a Google Map</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/013608.html">maps and calendars side by side</a>).</p>
+
+<p>The easiest way is possibly to just modify the pipe by merging several separate feeds - this should give the idea:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2316878363/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2235/2316878363_6788b3d1e6.jpg" alt="2008-03-07_2344" style="border: 0pt none ;" height="268" width="500" /></a></p>
+
+<p>A more elegant way, perhaps, is to specify each of the calendar feeds in an OPML file, and pass this to a pipe that merges all the items from the RSS feeds specified in the OPML feed (<a href="http://pipes.yahoo.com/pipes/pipe.info?_id=foG8NYns3BGtuMxP6kjTQA">Feed Merge from OPML then Geocode Pipe</a>):</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2317680092/" title="Photo Sharing"><img src="http://farm4.static.flickr.com/3075/2317680092_95a0b0d666.jpg" alt="2008-03-07_2339" style="border: 0pt none ;" height="269" width="500" /></a></p>
+
+<p>One of the easiest ways of creating an OPML feed is to create a Grazr OPML reading list - that's what I use in the demo.</p>
+
+<p>On the to do list is to build a little form based interface to plot a map when given an appropriate OPML url, ideally using the <a href="http://www.mapstraction.com/">mapstraction</a> library, (so that I can use Yahoo and Live maps, as well as (i.e. instead of) Google maps).</p>
+
+<p>But I've way too much on for the next week or so to be likely to find to do that before Easter :-(<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/gcalmap" rel="tag">gcalmap</a>, <a href="http://technorati.com/tag/google%20calendar" rel="tag">google calendar</a>, <a href="http://technorati.com/tag/%20google%20map" rel="tag"> google map</a>, <a href="http://technorati.com/tag/%20mapstraction" rel="tag"> mapstraction</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013807.html">11:52 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13807" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 25, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013608"></a>
+<h3 class="title">gCalMap: Google Calendar and Calendar Map Views, Side By Side</h3>
+
+In a previous post (that got picked up by both Lifehacker and a wired.com blog, no less ;-) I described how to Display Google Calendar Events on a Map. Today, I got an email from Martin Wunderlich containing a couple...
+<!--
+<p>In a previous post (that got picked up by both <a href="http://lifehacker.com/350560/show-gcal-events-on-google-maps">Lifehacker</a> and a <a href="http://blog.wired.com/monkeybites/2008/01/killer-mashup-p.html">wired.com blog</a>, no less ;-) I described how to <a href="http://blog.wired.com/monkeybites/2008/01/killer-mashup-p.html">Display Google Calendar Events on a Map</a>.</p>
+
+<p>Today, I got an email from <a href=" http://www.martinwunderlich.com">Martin Wunderlich</a> containing a couple of queries about the mashup, that pointed me to a demo page displaying a calendar side by side with a Google map displaying the calendar feed.</p>
+
+<p>I've been meaning to do something like this for a week or two, so this was all the prompting I needed... Here then is a <a href="http://blogs.open.ac.uk/Maths/ajh59/calmaptest.php">side-by-side calendar agend view and map display mashup</a>.</p>
+
+<p><a href="http://www.flickr.com/photos/25451952@N00/2291706477/"><img src="http://farm4.static.flickr.com/3069/2291706477_6cd82e3963.jpg" style="border:0" /></a></p>
+
+<p>The view can be generated from a single (<em>cal</em>) argument passed via the url. For example, <em>http://blogs.open.ac.uk/Maths/ajh59/calmaptest.php?cal=u0aq4g3cjf6g6nnesa8mv0l77g@group.calendar.google.com</em>.</p>
+
+<p>The value of the <em>cal</em> argument is taken from the settings view of a public Google Calendar:</p>
+
+<p><a href="http://www.flickr.com/photos/25451952@N00/2291715651/"><img src="http://farm3.static.flickr.com/2035/2291715651_f2ef1145b7.jpg" style='border:0' /></a></p>
+
+<p>This calendar ID is then passed to the <a href='http://pipes.yahoo.com/ouseful/geocal'>geocal pipe</a> to obtain the KML feed that provides the map overlay, and also used to pull in the calendar agenda view.</p>
+
+<p>To display your own calendar, simply replace the calendar ID in the above example URL with the calendar ID for the calendar you wish to display...</p>
+
+<p>...or paste the calendar ID here to link to the gCalMap view:</p>
+
+<form method='get' action='http://blogs.open.ac.uk/Maths/ajh59/calmaptest.php'>
+<input type='text' size=65 name='cal' value='u0aq4g3cjf6g6nnesa8mv0l77g@group.calendar.google.com' /> <input type='submit' value='View gCalmap' /></form>
+
+<p>If you want to embed the view in your own web pages, you should be able to just embed the gCalMap page in an iframe.</p>
+
+<p>If I get a chance, I'll have a go at producing a customisable 'embed code' generator for the gCalMap view.</p>
+
+<p>Note that for the geocoding to work correctly, you must specify the location of each event in the calendar in the event's 'where' entry box.</p>
+
+<p>PS here's a <a href="http://blogs.open.ac.uk/Maths/ajh59/013846.html">Google calendar events map embed code generator</a> - give it a gCal id and get an iframe containing a map view of the events in return...</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013608.html">10:19 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13608" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 24, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="013580"></a>
+<h3 class="title">Mapping School Catchment Areas, Approximately...</h3>
+
+Attending a public consultation evening about the proposed schools' reorganisation on the Isle of Wight a couple of weeks ago, one of the things that came out was that the schools 'listed' for closure under each option in the public...
+<!--
+<p>Attending a public consultation evening about the proposed schools' reorganisation on the Isle of Wight a couple of weeks ago, one of the things that came out was that the schools 'listed' for closure under each option in the public consultation document were only intended to be <em>indicative</em> of what the effect of choosing each option might be. As I now understand it, once an option is decided upon, another round of consultation, including representation from school governing bodies, will lead up to the decision as to which which schools would actually close.<br />
+ <br />
+Rooting around on the Eduwight webste to see what information is provided there to help people assess not only local consequences of a particular school closing in a particular village, but also the wider consequences of neighbouring schools closing, (or alternatively, one school closing and a neighbouring one not), I came across some maps showing maps such as the following: "<a href="http://eduwight.iow.gov.uk/schools/reorganisation/images/Option2PTwoMiles.pdf">Primary Schools</a>– with the green area indicating the areas not within a 2 mile radius of a primary school" (from the <a href="http://eduwight.iow.gov.uk/schools/reorganisation/The_Options/option2.asp">Option 2 consultation page</a>).</p>
+
+<p><a href="http://eduwight.iow.gov.uk/schools/reorganisation/images/Option2PTwoMiles.pdf"><img src="http://farm4.static.flickr.com/3184/2289316338_da42500d6a.jpg" /></a></p>
+
+<p>On the one hand, I applaud this approach in terms of the way it attempts to make coverage information clear to see; on the other, if the <em>actual</em> school closures are not finalised yet, the map is indicative of only one possible closure plan and hence limited in value...</p>
+
+<p>...so I've started working on an interactive <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest.html">circular catchment area map</a>.</p>
+
+<p><img src="http://farm3.static.flickr.com/2152/2262805774_6aeff79007_o.png" style='border:0' /></p>
+
+<p>The interactive map allows you to select different circular catchment areas for each sector (on the grounds that an appropriate travel distance for 7 year olds in primary school is probably different to an acceptable catchment for teenagers in High school). All the schools in any particular sector can be hidden from the map. In addition, one or more individual schools can be removed from the catchment area plots, simulating school closure(s). Different catchment areas can be modeled for each sector, giving indicative views of 'walking', 'cycling' or 'vehicle' catchment areas, for example.</p>
+
+<p>At the moment, catchment area settings can't be saved, nor can a static 'snapshot' of a map be taken (unless you take a screenshot, of course...). I have a plan for how to hack saved settings, though! ;-)</p>
+
+<p>I have started to generalise the map so that schools, for example, plotted on other Google MyMaps, can be imported into the map. (I'll post more about that approach later; in the meantime, you can always have a play yourself: <a href="http://blogs.open.ac.uk/Maths/ajh59/gmaptest.php">generic schools circular catchment area interactive map</a>).</p>
+
+<p>PS courtesy of a tip from my sister, here's a <a href="http://www.kirklees.gov.uk/community/education-learning/schoolpaa.asp">Huddersfield schools priority admission area interactive map</a> which shows 'actual' priority areas rather than crude 2 mile radius plots (travel times within a 2 mile radius catchment area can vary significantly, of course).</p>
+
+<p>PPS The eduWight website also has information regarding the <a href="http://www.eduwight.iow.gov.uk/schools/reorganisation/Schools_Information/overview.asp">percentage of pupils currently living within two mile of each current school</a>, bu I haven't worked out how I can use it yet!</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/013580.html">09:00 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=13580" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 08, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="012936"></a>
+<h3 class="title">MyMaps GeoBlogger - Blogging From Google Maps</h3>
+
+I've been thinking about contextualised blogging interfaces, lately, in the sense of lightweight publishing and syndication from an environment that supports the easy creation of structured posts, such as posts about a series of events structured in time, or space....
+<!--
+<p>I've been thinking about contextualised blogging interfaces, lately, in the sense of lightweight publishing and syndication from an environment that supports the easy creation of structured posts, such as posts about a series of events structured in time, or space.</p>
+
+<p>The <a href="http://blogs.open.ac.uk/Maths/ajh59/012594.html">Displaying Google Calendar Events on a Map</a> Yahoo pipes mashup may be viewed as using the Google Calendar environment to easily create posts associated with a particular date, and then optionally associate location information (described in natural language) with each posted item. If the date information is removed, the order of posts that appear in the calendar feed can be readily reordered, changing the presentation order in the published feed, simply by moving the posts about in the calendar view. (The body of the post in this case would be contained withing the Calendar event description.)</p>
+
+<p>Google Calendar thus provides an interface for creating - and managing - a series of ordered posts, and does not have to be viewed as just a calendar...</p>
+
+<p>But what if you <span style="font-style: italic;">primarily</span> want to blog from different geographical locations, (without the aid of GPS support!)? It would be really handy if you could just click the relevant location on a map, and write a post exactly from there...</p>
+
+<p>...which is why I tidied up and extended the Yahoo pipe mentioned in <a href="http://blogs.open.ac.uk/Maths/ajh59/012866.html">A "Google MyMaps RSS editor"</a> and added a couple of extra features, like being able to add a 'publication date' for your post, as well as a link URL: <a href="http://pipes.yahoo.com/ouseful/mymapsblog">Google MyMaps Blogging Pipe - http://pipes.yahoo.com/ouseful/mymapsblog</a></p>
+
+<p>The pipe effectively allows you to use a Google My Map as a "geographical blogging surface". Each marker on the map corresponds to a separate post, or feed item. The 'View in Google Earth' link from the MyMap can be passed to the pipe and a valid geoRSS feed will be produced as a result.</p>
+
+<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/KJukKpQDVLQ&rel=0&border=0"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/KJukKpQDVLQ&rel=0&border=0" type="application/x-shockwave-flash" wmode="transparent"width="425" height="355"></embed></object></p>
+
+<p>As well as adding geoRSS lat/long tags to the RSS feed, the pipe is capable of:</p>
+
+<p>- adding a date to each post: to give the post a date, use a construct like: date: February 7th, 2008. You can also add dates like "today", which will give the post the current days date whenever the pipe is run - meaning you can associate 'relative' post dates with posts made from the map.</p>
+
+<p>- associating a URL with the title of each post, in true RSS fashion: to give an item a url, use something like: url:http://example.com or link:http://example.com/foo/bar.html </p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2251411566/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2334/2251411566_107f3d7c3f.jpg" alt="2008-02-08_2111" style="border: 0pt none ;" height="372" width="375" /></a></p>
+
+<p>Here's a very poor <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=109196350919255002936.0004458fc8b1d6b01cd52&amp;z=8&amp;om=0">example MyMaps geoblog</a>, and here's an <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=f8d13298b0cdcc7eebf35763c50791ca&amp;_render=rss&amp;kmlNetworkLinkURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.0004458fc8b1d6b01cd52">example MyMaps geoblog feed</a>.</p>
+
+<p>To generate the MyMaps geoblog RSS feed, get hold of the "View in Google Earth" URL from the MyMap:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250623973/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2240/2250623973_5b77fce1da.jpg" alt="2008-02-08_2117" style="border: 0pt none ;" height="141" width="500" /></a></p>
+
+<p>and paste it in to the Yahoo <a href="http://pipes.yahoo.com/ouseful/mymapsblog">MyMaps geoblogger pipe</a>, then get hold of the RSS feed URL from the pipe:</p>
+
+<p><br />
+   <a title="MyMaps geoblogger pipe" href="http://www.flickr.com/photos/25451952@N00/2250633031/"><img src="http://farm3.static.flickr.com/2307/2250633031_86f7502084_o.png" style="border: 0pt none ;" title="" alt="" /><br />
+</a><br />
+To prove the date stamping works, you can <a href="http://30boxes.com/external/widget?url=http%3A%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Df8d13298b0cdcc7eebf35763c50791ca%26_render%3Drss%26kmlNetworkLinkURL%3Dhttp%253A%252F%252Fmaps.google.co.uk%252Fmaps%252Fms%253Fie%253DUTF8%2526hl%253Den%2526msa%253D0%2526output%253Dnl%2526msid%253D109196350919255002936.0004458fc8b1d6b01cd52+&amp;forceTheme=%2Ftheme%2Fsmall&amp;forceNoResize=1&amp;forceRows=5">view the feed via a 30 Boxes calendar</a> (look for February 2008; link generated using the <a href="http://30boxes.com/external/widget.php?action=buildUrl&amp;theme=%2Ftheme%2Fsmall&amp;url1=http%3A%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Df8d13298b0cdcc7eebf35763c50791ca%26_render%3Drss%26kmlNetworkLinkURL%3Dhttp%253A%252F%252Fmaps.google.co.uk%252Fmaps%252Fms%253Fie%253DUTF8%2526hl%253Den%2526msa%253D0%2526output%253Dnl%2526msid%253D109196350919255002936.0004458fc8b1d6b01cd52&amp;url2=&amp;url3=&amp;title=&amp;resize=on&amp;numWeeks=&amp;bgColor=&amp;feedColor1=&amp;feedColor2=&amp;feedColor3=">30 Boxes Calendar mashup machine</a>; for some reason the calendar doesn't display the description content, but <a href="http://grazr.com/gzpanel.html?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=f8d13298b0cdcc7eebf35763c50791ca&amp;_render=rss&amp;kmlNetworkLinkURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.0004458fc8b1d6b01cd52">a Grazr widget does</a>).</p>
+
+<p><br />
+The mechanics of the pipe are pretty much as described in the <a href="http://blogs.open.ac.uk/Maths/ajh59/012866.html">Google MyMaps RSS editor</a> post, at least insofar as the creation of the main item and geoRSS feed components from the "View in Google Earth" Network Link wrapping KML URL go.</p>
+
+<p>The link and date are then extracted using a regular expression, and the two Pipes date blocks used to identify the date and put it into an appropriate form:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250644905/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2381/2250644905_505a1ef4c3_o.png" alt="2008-02-08_2129" style="border: 0pt none ;" /></a></p>
+
+<p>If you have a go using the pipe, and come across any problems, please let me know.</p>
+
+<p>I'm sure there must be some other geoblogging tools out there, but this one is essentially 'for free', being built as it is from components that already exist.</p>
+
+<p>Okay, so the MyMaps marker annotation editor is maybe not the best in the world, but there is a rich text editor and HTML view if you want to add a little style:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250656705/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2383/2250656705_c75b633906.jpg" alt="2008-02-08_2136" style="border: 0pt none ;" height="361" width="326" /></a></p>
+
+<p>Now, what was next on the list...? ;-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/gmaps" rel="tag">gmaps</a>, <a href="http://technorati.com/tag/mymaps" rel="tag">mymaps</a>, <a href="http://technorati.com/tag/%20geoblog" rel="tag"> geoblog</a>, <a href="http://technorati.com/tag/geoblogging" rel="tag">geoblogging</a>, <a href="http://technorati.com/tag/geoblogger" rel="tag">geoblogger</a>, <a href="http://technorati.com/tag/yahoo%20pipes" rel="tag">yahoo pipes</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012936.html">09:38 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12936" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 07, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="012866"></a>
+<h3 class="title">A "Google MyMaps RSS editor" (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)</h3>
+
+One of the handy things about Google MyMaps is that you can use the map to add markers to particular locations on a map, save the markers to a named MyMap, and obtain a link to "View [the markers] in...
+<!--
+<p>One of the handy things about Google MyMaps is that you can use the map to add markers to particular locations on a map, save the markers to a named MyMap, and obtain a link to "View [the markers] in Google Earth".</p>
+
+<p>The Google Earth link is actually a link to a KML file that in turn points to a second, network linked KML feed that contains the markers you have plotted on the particular MyMap.</p>
+
+<p>If you want to use a Google map to generate an RSS feed (or more specifically, a geoRSS feed, that contains the latitude and longitude of each marker/item in the RSS feed) which can then be displayed in a generic feed reading application (albeit without making using of the geo information), then I don't Google maps can offer you that...</p>
+
+<p>...but a little Yahoo pipes mashup can...</p>
+
+<p>So for example, take the <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=103763259662194171141.000001119b4bc596127f8&amp;z=2&amp;om=0">World of Hello World</a> map. We can grab the "View in Google Earth" feed and pop it into a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=upZvhxPV3BGkyflyX0sBXw">Yahoo Pipe that will firstly extract the Network Link URL</a> that actually points to the KML feed that contains the individual map items:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247758220/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2129/2247758220_43b78c77c5.jpg" alt="2008-02-07_0058" style="border: 0pt none ;" height="318" width="500" /></a></p>
+
+<p>Secondly, you should notice that the above pipe itself calls a second, nested custom pipe, <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=zDJgJA_V3BGpfsszJxOy0Q">KML2geoRSS</a>. This embedded pipe actually converts the KML feed that contains the individual map items to a geoRSS feed:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2246971699/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2071/2246971699_e4810e72e9.jpg" alt="2008-02-07_0104" style="border: 0pt none ;" height="236" width="500" /></a></p>
+
+<p>The location extractor appears to pull the lat/long info out of the KML feed (and maybe just propagate it for the KML output?) However, for some reason, the Yahoo map display when you run the pipe doesn't appear to plot the markers properly (at least it didn't in my browser; and the same buggy result happens if you try to view the geoRSS feed in a google map:-(</p>
+
+<p>[UPDATE: ok, the lat/long cordinates were being pulled out in the wrong order. I must have tested it one way to get the good map, then changed it and broke it... so it now works fine, but some of the screenshots in this post may be a little misleading; check the actual pipe to see how it's *really* built ;-)]</p>
+
+<p>At one point, I did manage to grab the KML output from the pipe, paste it back in to the Google map search box, hit 'Search' to load in the KML file output from the Yahoo pipe, and display it once again in the Google map:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247771374/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2414/2247771374_4b80651457.jpg" alt="2008-02-07_0107" style="border: 0pt none ;" height="193" width="500" /></a></p>
+
+<p>(This time, the 'View in Google Earth' link actually points directly to the Yahoo pipes KML output.)</p>
+
+<p>BUT - this seems to have stopped working now:-( and I get the same broken display the Yahoo map pipe output gives event though the feed looks right in the Pipes debugger?</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2247817130/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2373/2247817130_21dc62e93e.jpg" alt="2008-02-07_0137" style="border: 0pt none ;" height="165" width="324" /></a></p>
+
+<p>(The geocoder/location extractor adds the y:location info, the Point is a remnant of the KML feed.)</p>
+
+<p>So this form of round tripping is all pretty pointless, right? {Especially as it appears to keep breaking in the geocoding stakes:-(] We get a KML file containing a netwrok link from a Google MyMap, stick it into a pipe that pulls out the network link URL and converts the KML file it points to to a geoRSS feed, and then use the Yahoo pipes output filter to get a KML file (which should be pretty similar to the KML file that the network link pointed to...) which can then plot back on the Googlr map...</p>
+
+<p>Hmmm...</p>
+
+<p>But, and here's the possibly useful point, the pipe will also give you an RSS feed that you can display in an RSS display widget, such as Grazr:</p>
+
+<div style="height: 350px; width: 300px;"><a href="http://grazr.com/read?view=o&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=upZvhxPV3BGkyflyX0sBXw&amp;_render=rss&amp;kmzURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D103763259662194171141.000001119b4bc596127f8" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0" /></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=upZvhxPV3BGkyflyX0sBXw&amp;_render=rss&amp;kmzURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D103763259662194171141.000001119b4bc596127f8"></script></div>
+
+<p>Along with the <a href="http://blogs.open.ac.uk/Maths/ajh59/012594.html">Plotting Google Calendar Events on a Google Map</a> hack, which lets you use a calendar as a natural editing enviroment for generating date based feeds (that may additionally contain location information that can be exploited to give you a map view of the calendar feed), this current map2rss hack lets you use a map as an editor for creating location enhanced RSS feeds (that appear to be broken in wrt the geo bit:-( that can also be displayed in any old feed reader...</p>
+
+<p>...which may be useful?</p>
+
+<p>PS if you can spot why the geo bit seems to break in the pipe, please let me know :-) [The problem was lat and long getting switched by mistake... oops]</p>
+
+<p>PPS here's a version that does work, though it is a little more involved: <a href="http://pipes.yahoo.com/ouseful/mymap2georss">http://pipes.yahoo.com/ouseful/mymap2georss</a>.</p>
+
+<p>In particular, it embeds a <a href="http://pipes.yahoo.com/ouseful/kml2rss">pipe that calls the KML2geoRSS service to Microsoft</a> that I cloned off <a href="http://pipes.yahoo.com/barryhunter">Barry Hunter</a>. It uses this rather handy call: <em>http://maps.live.com/GeoCommunity.asjx?mkt=en-gb&mapurl=<strong>KMLfileURL</strong></em> to get a geoRSS feed.</p>
+
+<p>So now if you pass a Google MyMaps "View in Google Earth" URL to the <em>http://pipes.yahoo.com/ouseful/mymap2georss</em> Yahoo pipe, the live network linked KML url will be extracted, the KML feed passed through a Microsoft KML2RSS service, and you'll get a valid (and working) geoRSS feed out as a result which can be viewed in any feed reader, and also plotted on any map that accepts a geoRSS feed :-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/googlemaps" rel="tag">googlemaps</a>, <a href="http://technorati.com/tag/%20hack" rel="tag"> hack</a>, <a href="http://technorati.com/tag/%20kml2rss" rel="tag"> kml2rss</a>, <a href="http://technorati.com/tag/%20kml2georss" rel="tag"> kml2georss</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012866.html">01:42 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12866" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">February 01, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="012714"></a>
+<h3 class="title">Emergency Maps Via Geo-Twitter</h3>
+
+Putting together the Barack Obama Campaign Trail Twitter Map just now, I vaguely recalled this post by John Tropea on Twitter Hashtags and Emergency 2.0, in which he talked about: some kind of emergency/disaster website that streams Twitter hashtags, Flickr...
+<!--
+<p>Putting together the <a href="http://blogs.open.ac.uk/Maths/ajh59/012712.html">Barack Obama Campaign Trail Twitter Map</a> just now, I vaguely recalled this post by John Tropea on <a href="http://libraryclips.blogsome.com/2008/01/17/twitter-hashtags-and-emergency-20/">Twitter Hashtags and Emergency 2.0</a>, in which he talked about:<br />
+<blockquote>some kind of emergency/disaster website that streams Twitter hashtags, Flickr Tags, and YouTube tags ... perhaps this is something Technorati could specialise in. Why not throw in a wiki and maps as well.</blockquote>I've not started trying to think through a good way of mashing different services together, but there's some really lo hanging fruit in terms of cloning the <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">geotwitter pipe</a>  and using it to plot tweets disovered using an RSS search feed (is it an opensearch feed, I wonder?) from <a href="http://terraminds.com/twitter/">Terraminds</a>:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2235355986/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2017/2235355986_5c96b22412.jpg" alt="2008-02-01_1858" style="border: 0pt none ;" height="178" width="500" /></a></p>
+
+<p>So... here's the <a href="http://pipes.yahoo.com/ouseful/geotwittersearch">geo twitter search pipe - http://pipes.yahoo.com/ouseful/geotwittersearch</a>, and here's what a <a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Dbcd9da52f1ee2f488aea5edbaf21ad40%26_render%3Dkml%26twitterq%3Dearthquake&amp;ie=UTF8&amp;ll=35.88905,-117.421875&amp;spn=70.524643,146.25&amp;z=3&amp;om=0">map of recent earthquake twitterings</a> looks like:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2235365450/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2125/2235365450_8d7fe3efbf.jpg" alt="2008-02-01_1905" style="border: 0pt none ;" height="231" width="500" /></a></p>
+
+<p>So - what other twitter map mashups are we lacking? ;-)</p>
+
+<p>PS I've thought about emergency maps before too...: <a href="http://blogs.open.ac.uk/edit/mt-search.cgi?IncludeBlogs=1149&search=emergency%20map">OUseful.info posts on emergency mapping</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/geotwitter" rel="tag">geotwitter</a>, <a href="http://technorati.com/tag/%20terraminds" rel="tag"> terraminds</a>, <a href="http://technorati.com/tag/%20google%20map" rel="tag"> google map</a>, <a href="http://technorati.com/tag/%20twitter" rel="tag"> twitter</a>, <a href="http://technorati.com/tag/%20yahoo%20pipe" rel="tag"> yahoo pipe</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a>, <a href="http://technorati.com/tag/search" rel="tag">search</a>, <a href="http://technorati.com/tag/%20map" rel="tag"> map</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012714.html">07:07 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12714" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+
+
+<div class="blogbody">
+
+<a name="012712"></a>
+<h3 class="title">Barack Obama Campaign Trail Twitter Map</h3>
+
+A comment on my Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map post from Richard@Soapdish point out how the hack is "quite effective if you plug in BarackObama's twitter ID. Shows what a mental amount...
+<!--
+<p>A comment on my <a href="http://blogs.open.ac.uk/Maths/ajh59/012696.html">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</a> post from <a href="http://thesoapdish.wordpress.com/">Richard@Soapdish</a> point out how the hack is "quite effective if you plug in <a href="http://twitter.com/barackobama">BarackObama's twitter ID</a>.  Shows what a mental amount of travelling he's doing at the moment."</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2235231952/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2088/2235231952_01540a442d.jpg" alt="2008-02-01_1744" style="border: 0pt none ;" height="199" width="500" /></a></p>
+
+<p>Here's the <a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3DgB6E0bbQ3BGt8MhmnkartA%26_render%3Dkml%26twitterId%3Dbarackobama&ie=UTF8&z=4&om=0">actual, live map</a> (feed readers, you'll need to click through...):</p>
+
+<p><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3DgB6E0bbQ3BGt8MhmnkartA%26_render%3Dkml%26twitterId%3Dbarackobama&amp;ie=UTF8&amp;om=0&amp;s=AARTsJorZKfdpwB_Il7K8dvOEsUHbh3hBw&amp;ll=38.391226,-95.451514&amp;spn=47.614427,74.707031&amp;z=3&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3DgB6E0bbQ3BGt8MhmnkartA%26_render%3Dkml%26twitterId%3Dbarackobama&amp;ie=UTF8&amp;om=0&amp;ll=38.391226,-95.451514&amp;spn=47.614427,74.707031&amp;z=3&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+
+<p>And how long did that take?! All I had to do was paste <em>barackobama</em> into the <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=gB6E0bbQ3BGt8MhmnkartA">geotwitter pipe</a>, grab the URL of the KML feed (right click on "Get as KML" then choose the option closest to "Copy Link Location"), and paste it into a Google map search box.</p>
+
+<p><img src="http://farm3.static.flickr.com/2376/2221484878_2f877cd196.jpg" /><br />
+Don't you just love it when a mashup comes together? ;-)</p>
+
+<p>PS I'll maybe try to figure out a 1-click way of getting the map embed code from just the twitter userid, over the w/e ;-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/brackobama" rel="tag">brackobama</a>, <a href="http://technorati.com/tag/%20obama" rel="tag"> obama</a>, <a href="http://technorati.com/tag/%20mashup" rel="tag"> mashup</a>, <a href="http://technorati.com/tag/%20twitter" rel="tag"> twitter</a>, <a href="http://technorati.com/tag/%20camplaign%20map" rel="tag"> camplaign map</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012712.html">05:56 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12712" onclick="OpenComments(this.href); return false">Comments (3)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">January 21, 2008</h2>
+
+
+<div class="blogbody">
+
+<a name="012526"></a>
+<h3 class="title">Mapping Proposed School Closure Plans on the Isle of Wight</h3>
+
+When I got back home last week, I found we'd received a copy of a consultation document from the the local council laying out three options for the the future of schools on the Isle of Wight. A lot of...
+<!--
+<p>When I got back home last week, I found we'd received a copy of a consultation document from the the local council laying out three options for the the future of schools on the Isle of Wight. A lot of the detail can be found on the Isle of Wight council website: <a href="http://eduwight.iow.gov.uk/schools/reorganisation/">Which Way Forward for Island Education?</a></p>
+
+<p>I still haven't read the document closely  (I hope to give it a proper read over the next couple of days - you can see an <a href="http://eduwight.iow.gov.uk/schools/reorganisation/consulta.asp">online copy here</a>), but I did skim through it; and one thing that struck me was that the document just contained words, and a series of tables describing the future of each school under each of the three suggested options.</p>
+
+<p>Visual aids can often be used to mislead the reader, of course, or over-simplify matters, but they can also be used to help tell stories. And what is a consultation for if not to listen to the stories of how people act today, and how they think they are likely to be affected by a change? (That these predictions are likely to be unreliable - people accommodate to change very quickly - is irrelevant: the stories may turn up previously unanticipated consequences, particularly when systemic changes are proposed, and that is a Good Thing.)<br />
+   <br />
+Long time readers of this blog may recall that I tinkered with a couple of Google maps mashups at the time of the floods last year (<a href="http://blogs.open.ac.uk/Maths/ajh59/010494.html">Making the Most of Google Maps (or not): Gloucestershire Emergency Water Points</a>) and the foot and mouth outbreaks (<a href="http://blogs.open.ac.uk/Maths/ajh59/010505.html">More UK Emergency Mapping Opportunites - Foot and Mouth</a> and <a href="http://blogs.open.ac.uk/Maths/ajh59/010507.html">Quick Way of Adding Weather to the Foot and Mouth Map</a> - I wish I'd picked up at the time on the <a href="http://googlemapsapi.blogspot.com/2007/01/gpolygon-example.html">Gpolygon API example</a> as a way of plotting circles!)</p>
+
+<p>So it seemed sensible to have a think about how maps might be useful in providing another way of comparing the different closure options, for example by providing a visual overview of school catchment areas and allowing people to see <span style="font-style: italic;">at a glance</span> how the various patterns of closure of local schools might affect families in the villages concerned.</p>
+
+<p>Using the tabulated closure information from the consultation document that was reprinted in last week's <a href="http://www.iwcp.co.uk/News/PRIMARY_SCHOOLS_FACE_DECIMATION.aspx">Isle of Wight County Press</a>, I put together a series of Google maps using <a href="http://local.google.com/support/bin/answer.py?hl=en&amp;answer=68480">Google MyMaps</a>.</p>
+
+<p>- <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=109196350919255002936.00044429d55a8d0c581ef&amp;ll=50.708118,-1.309133&amp;spn=0.427879,0.911865&amp;z=10&amp;om=0" target="_blank"> IW Schools today</a></p>
+
+<p>- <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;om=0&amp;msa=0&amp;msid=109196350919255002936.0004442a4df25160d80a7&amp;ll=50.707765,-1.308746&amp;spn=0.427879,0.911865&amp;z=10" target="_blank">Option A</a></p>
+
+<p>- <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=109196350919255002936.0004442dc550386eb09d3&amp;ll=50.708118,-1.309133&amp;spn=0.427879,0.911865&amp;z=10&amp;om=0" target="_blank">Option B</a></p>
+
+<p>- <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=109196350919255002936.0004442e621115925ae39&amp;ll=50.708118,-1.309133&amp;spn=0.427879,0.911865&amp;z=10&amp;om=0" target="_blank">Option C</a></p>
+
+<p>These maps can be embedded in third party websites by following a link to the map, then clicking on the "Link to this Page" link and copying the embed code you need to add you your own website. The maps can also be viewed in Google Earth.</p>
+
+<p>As an example, here's the Option B map, embedded (if you're reading this via a feed, you'll probably need to click through to see it):</p>
+
+<p><iframe marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;om=0&amp;s=AARTsJpvmzsx8fFYXuMW8x2oNS1KD-aalA&amp;msa=0&amp;msid=109196350919255002936.0004442dc550386eb09d3&amp;ll=50.672965,-1.306686&amp;spn=0.217579,0.480652&amp;z=11&amp;output=embed" frameborder="0" height="500" scrolling="no" width="700"></iframe><br />
+<small><a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;om=0&amp;msa=0&amp;msid=109196350919255002936.0004442dc550386eb09d3&amp;ll=50.672965,-1.306686&amp;spn=0.217579,0.480652&amp;z=11&amp;source=embed" style="color: rgb(0, 0, 255); text-align: left;">View Larger Map</a></small></p>
+
+<p>Looking at this now, I realise I really need to be able to add some sort of caption, as well as a legend for the symbols. If I get a chance, I'll put a proper web site together wrapping all the maps with some navigation, a legend explaining the symbols, and so on.</p>
+
+<p>Once created, MyMaps can be used  as the basis for derivative maps (the three option maps all started out as a copy of the Island Schools map, for example).</p>
+
+<p>To get a copy of a maop so that you can add your own customisations, you need to gain access to the "my maps" feature on http://maps.google.co.uk by registering for a Google account. The easiest was to do this is to go to Google Maps, click on the MyMaps tab and then Create This then gives you</p>
+
+<p>1) Go to one of the custom maps I have linked to above, and copy the link headed "View in Google Earth".</p>
+
+<p>2) In the My maps tab, Create a new map. (If you don't have a Google account, you will be prompted to create one.)</p>
+
+<p>3) Click on the "Import" link.</p>
+
+<p>4)  In the text box that follows "Or enter the url of map data on the web" paste the Google Earth link you copied in the previous step, and hit upload</p>
+
+<p>5) You now have a copy of the annotated map.</p>
+
+<p>Maps can be collaborated on with other named individuals, or with anyone -  just click on the  Collaboration link and do what seems sensible.</p>
+
+<p>PS The map views are particularly useful when addressing geo-related issues. For example, in reconciling school closure options against the best advice contained in this government response:<br />
+<blockquote>Parliamentary Written Answers, Monday January 21, 2008 (via <a href="http://www.theyworkforyou.com/wrans/?id=2008-01-21b.180735.h">They Work For You</a>)</p>
+
+<p>Andrew Turner (Isle of Wight, Conservative)</p>
+
+<p>To ask the Secretary of State for Children, Schools and Families whether his Department has conducted a study of the effect of the reorganisation of schools on the Isle of Wight on the number of road miles driven and car journeys made to travel to schools.</p>
+
+<p>Jim Knight (Minister of State (Schools and Learners), Department for Children, Schools and Families)</p>
+
+<p>No such study has been undertaken by the Department. It is for local authorities to decide how best to organise the schools in their areas in the light of local circumstances, concerns about the proposal should therefore be directed to the Isle of Wight council.</p>
+
+<p>In bringing forward proposals, authorities must consider the implications for school travel and transport, and the Department's statutory guidance to decision makers makes it clear that they should bear in mind that proposals should not unreasonably extend journey times or increase transport costs. In addition, the proposals should not result in too many children being prevented from walking or cycling to school because routes are unsuitable.</blockquote> The route finding tools provided by services like Google maps can provide a quick and easy estimate of these distances/journey times. Just click on one of the pins, then select either a <em>To here</em> or <em>From here</em> link and put in the details of the anticipated replacement school.</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2216039333/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2336/2216039333_4d90dfd887.jpg" width="377" height="300" alt="2008-01-24_1517" style="border:0"/></a></p>
+
+<p>Hmm, I wonder if there is a list of the schools whose catchment area will cover the proposed closed schools?</p>
+
+<p>PS I also put together a calendar of the planned consultation evenings, which can be embedded on a website either as a calendar, or showing locations of the events on a map: <a href="http://blogs.open.ac.uk/Maths/ajh59/012594.html">Displaying Google Calendar Events on a Map</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/googlemaps" rel="tag">googlemaps</a>, <a href="http://technorati.com/tag/%20mymaps" rel="tag"> mymaps</a>, <a href="http://technorati.com/tag/%20gmap" rel="tag"> gmap</a>, <a href="http://technorati.com/tag/isle%20of%20wight" rel="tag">isle of wight</a></p><!-- technorati tags end --></p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/012526.html">09:58 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=12526" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">September 14, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010569"></a>
+<h3 class="title">OU Regional Offices on Google Maps</h3>
+
+Stuart just tipped me off to the presence of a KML file that lists the locations of the OU regional offices on this new looking page: What's the OU all about? Here's the link: OU Regional Offices (Google Maps), OU...
+<!--
+<p>Stuart just tipped me off to the presence of a KML file that lists the locations of the OU regional offices on this new looking page: <a href="http://www.open.ac.uk/you/why-choose-the-ou/whats-the-ou-all-about.php">What's the OU all about?</a> Here's the link: <a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=http:%2F%2Fwww.open.ac.uk%2Fgoogle-earth%2Fthe-open-university-uk-all-regions.kmz&ie=UTF8&z=6&om=1">OU Regional Offices (Google Maps)</a>, <a href="http://www.open.ac.uk/google-earth/the-open-university-uk-all-regions.kmz">OU Regional Offices (KML)</a>)</p>
+
+<p><center><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fwww.open.ac.uk%2Fgoogle-earth%2Fthe-open-university-uk-all-regions.kmz&amp;ie=UTF8&amp;om=1&amp;s=AARTsJoZRagtyQIVwjL2c2mHllB47EbYXQ&amp;ll=53.539211,-3.058917&amp;spn=9.148171,18.676758&amp;z=5&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fwww.open.ac.uk%2Fgoogle-earth%2Fthe-open-university-uk-all-regions.kmz&amp;ie=UTF8&amp;om=1&amp;ll=53.539211,-3.058917&amp;spn=9.148171,18.676758&amp;z=5&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></center></p>
+
+<p>I started to tinker with an OU campus map too (<a href="http://maps.google.co.uk/maps/ms?ie=UTF8&hl=en&msa=0&msid=109196350919255002936.0004350fbe9e51aa9141a&z=17&om=1">OU Campus map (Google maps)</a> (<a href="http://maps.google.co.uk/maps/ms?ie=UTF8&hl=en&msa=0&output=nl&msid=109196350919255002936.0004350fbe9e51aa9141a">KML</a>, but it's way too clunky at the moment).</p>
+
+<p>I also did myself a private map overlay with the new <a href="http://maps.yahoo.com/mapmixer">Yahoo MapMixer</a> which lets you upload and overlay your own map on top of Yahoo maps, then embed the result in your own page.</p>
+
+<p>I'd post a link, but as I 'stole' the campus map, a screenshot will have to suffice.</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5110059271260932306"><img src="http://lh3.google.com/tony.hirst/RuqT1TyzCNI/AAAAAAAAApE/fgF9wsrFN_g/s800/mapmixer.png" /></a></p>
+
+<p>Producing the mix was trivial - simply upload your map, zoom in to a Yahoo map to where you want to place the overlay, then pick two points on the uploaded map and two corresponding locations on the Yahoo map. The MapMix app wil then do the rest :-)</p>
+
+<p>You'll notice that the campus map is not quite to scale - the roundabouts at the bottom should overlap, for example, but with only two sighting points - and no stretch transformations of the uploaded image - an executive decision on the placement was called for!</p>
+
+<p>Setting the level of transparency is also exposed as a public/user control on the map, which is a neat touch, I think...</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010569.html">03:07 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10569" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 08, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010511"></a>
+<h3 class="title">Foot and Mouth Maps on Microsoft Live Search Maps</h3>
+
+An email from Microsoft alerted me to their take on mapping the Foot and Mouth outbreak, presumably given I haven't referenced them in my previous posts on the topic (such as this one on adding weather information to the emergency...
+<!--
+<p>An email from Microsoft alerted me to their take on mapping the Foot and Mouth outbreak, presumably given I haven't referenced them in my previous posts on the topic (such as <a href="http://blogs.open.ac.uk/Maths/ajh59/010507.html">this one on adding weather information to the emergency map</a>):</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5096318713933146050"><img src="http://lh5.google.com/tony.hirst/RrnC3m4pJ8I/AAAAAAAAAZ0/Ecp2WNsm0bg/s800/footMouthMicrosoft.png" /></a></p>
+
+<p><a href="http://maps.live.com/?v=2&amp;cid=5765BC650CFBA6F6%21158&amp;encType=1">Foot and mouth zones on Microsoft Live Maps</a></p>
+
+<p>I can't get the 3D view to work on my Mac, even on XP under Parallels 3, so if anyone can let me have a screen shot of that, it would be appreciated.</p>
+
+<p>I haven't really looked at Live maps before, but they do seem to provide a set of drawing tools so you can create your own overlays.</p>
+
+<p>It also looks like you can add pushpins from the Collections menu, though, and save them if you are signed in to a live.com account.</p>
+
+<p>The <a href="http://maps.live.com/GeoCommunity.aspx?action=retrieverss&amp;mkt=en-us&amp;cid=5765BC650CFBA6F6%21158">feed from the map</a> provides a GeoRSS view of the map, which is handy; it <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fmaps.live.com%2FGeoCommunity.aspx%3Faction%3Dretrieverss%26mkt%3Den-us%26cid%3D5765BC650CFBA6F6%21158&amp;ie=UTF8&amp;z=8&amp;om=1">seems to work in Google maps</a>, too, after a fashion (not all the pins appear) ;-)</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5096325207923697618"><img src="http://lh5.google.com/tony.hirst/RrnIxm4pJ9I/AAAAAAAAAaI/Ys_EGnHNcBk/s800/footMouthMSgeorssgmaps.png" /></a></p>
+
+<p>Maybe I need to take have a bit of a play with this...</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010511.html">02:48 PM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10511" onclick="OpenComments(this.href); return false">Comments (1)</a>
+	
+	
+</div>
+
+</div>
+
+
+
+<h2 class="date">August 05, 2007</h2>
+
+
+<div class="blogbody">
+
+<a name="010507"></a>
+<h3 class="title">Quick Way of Adding Weather to the Foot and Mouth Map</h3>
+
+[For a Google Map showing the current (as of August 3, 2007) "foot and mouth exclusion zone", try here: Foot and Mouth Map, as of 3/8/07.] A comment on Ed Parson's Foot and Mouth - a Geographical Problem post suggests:...
+<!--
+<p>[For a Google Map showing the current (as of August 3, 2007) "foot and mouth exclusion zone", try here: <a href="http://maps.google.com/maps?q=http:%2F%2Fwww.edparsons.com%2FFoot_and_Mouth.kml&ie=UTF8&t=h&z=11&om=1">Foot and Mouth Map, as of 3/8/07</a>.]</p>
+
+<p>A comment on Ed Parson's <a href="http://www.edparsons.com/?p=508">Foot and Mouth - a Geographical Problem</a> post suggests:<br />
+<blockquote>The usefulness of the tool or otherwise comes from what analysis can be done with the output. Given that F&amp;M can often be distributed as an airborne disease, some means of showing the wind direction and speed over time makes this more than just a pretty coloured map...</blockquote><br />
+I agree that it would be useful to be able to overlay wind speed and direction markers on to an emergency response map. And I wonder how difficult it would be to use such data to transform (even approximately) a circular overlay to one that reflects the likely distribution of a gas release, say, given prevailing wind conditions? </p>
+
+<p>The more I think about it, the more I can see a use for an "emergency response web 2.0" toolkit that would allow the rapid construction of an information website to aggregate information in the case of an emergency. A combination of something like <a href="http://ning.com">Ning</a> and <a href="http://services.alphaworks.ibm.com/qedwiki/">IBM's QEDWiki</a> (which I really need to get round to playing with...!), maybe?</p>
+
+<p>Anyway, as a stop gap on the weather thing, a quick search on Google MyMaps ("Add content") turns up this mapplet that can display the wind conditions from various locations around the world, including one not far from Guildford:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095168848108791554"><img src="http://lh5.google.com/tony.hirst/RrWtEm4pJwI/AAAAAAAAAXU/uFXwk3I4vfc/s800/gMapplet.png" /></a></p>
+
+<p>Clicking on the temperature marker opens up a pop-up that includes wind direction data:</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5095162813679740658"><img src="http://lh4.google.com/tony.hirst/RrWnlW4pJvI/AAAAAAAAAXE/bJfPPlnmBaQ/s800/footMouthWeather.png" /></a></p>
+
+<p>The Mapplet is provided by WeatherBug and can be found here: <a href="http://maps.google.com/ig/directory?url=http://mapplets.weatherbug.com/WeatherBugMapplet.xml">WeatherBug Mapplet</a>.</p>
+
+<p>One thing that jumps out at me looking at that map - it would be sensible to make a semi-transparent coloured filter layer within the two circle overlays on the map.</p>
+
+<p>I've not really looked at <a href=:http://code.google.com/apis/kml/documentation/">KML</a> yet, so maybe now's a good time for me to find out a little more about it, and try to add a semi-transparent layer in? ;-)</p>
+
+
+-->
+
+<div class="posted">
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010507.html">11:54 AM</a>
+		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10507" onclick="OpenComments(this.href); return false">Comments (0)</a>
+	
+	
+</div>
+
+</div>
+
 
 
 <h2 class="date">April 15, 2007</h2>
@@ -45,6 +764,8 @@ function OpenTrackback (c) {
 <a name="010163"></a>
 <h3 class="title">Visualising Geo-temporal RSS Feeds</h3>
 
+After a week away from the web (:-) I thought I'd have a quick play with some new 'visualisations' of geo-coded RSS feeds using Yahoo and Google maps presented in the same browser view as a timeline of the associated...
+<!--
 <p>After a week away from the web (:-) I thought I'd have a quick play with some new 'visualisations' of geo-coded RSS feeds using Yahoo and Google maps presented in the same browser view as a <a href="http://simile.mit.edu/timeline/">timeline</a> of the associated feed, in part prompted by some of <a href="http://nogoodreason.typepad.co.uk/no_good_reason/2007/04/technological_e.html">Martin Weller's sideways reflections on using Google maps in education</a>.</p>
 
 <p>The demo app I had in mind was to show a simple travel blog with dual visualisations - mapped and timelined using split screen iframes, the timeline in the top third, the map in the bottom two thirds - BUT I couldn't find a geo-coded, timestamped feed that would work in the timeline and mapping apps...</p>
@@ -65,7 +786,7 @@ function OpenTrackback (c) {
 
 <p>Using these tools in combination with each other thus offers the potential for a powerful <em>visual</em> interface using historical and/or spatial context.</p>
 
-<p>What's really needed then, of course, would be a third window (or pop-up window, maybe in a <a href="./007632.html">lightbox</a>?) to display the description text for a particular feed item when it is selected either from the map <em>or</em> the timeline.</p>
+<p>What's really needed then, of course, would be a third window (or pop-up window, maybe in a <a href="http://blogs.open.ac.uk/Maths/ajh59/007632.html">lightbox</a>?) to display the description text for a particular feed item when it is selected either from the map <em>or</em> the timeline.</p>
 
 <p>On the to do list is a Yahoo pipe that will take a <em>geotagged</em> social bookmarking feeds (using the <em>geo:lat=* geo:long=*</em>) strategy, and produce a valid geoRSS feed as a result. In addition, the Pipe should also be able to handle a <em>datetime=*</em> tag applied to each bookmark and then rewrite the feed item timestamp with <em>this</em> time... So for example I could <em>datetime=</em> or <em>dt=</em> tag an article relating to an English Civil War battle with the date of the battle, have the feed rewritten with this datetime as the item posting time, and <em>then</em> have the feed items displayed appropriately on a timeline (unless the timeline widget could consume a datetime tag directly, that is).</p>
 
@@ -77,14 +798,15 @@ function OpenTrackback (c) {
 
 <p>PS Okay - so someone has sort of done this before: the <a href="http://www.oe-files.de/gmaps/usgseq.html">USGS Live Earthquake mashup</a>:</p>
 
-<p><img alt="gmaptimeline.png" src="./gmaptimeline.png" width="732" height="502" border="0" /></p>
+<p><img alt="gmaptimeline.png" src="http://blogs.open.ac.uk/Maths/ajh59/gmaptimeline.png" width="732" height="502" border="0" /></p>
 
 <p>This approach (timeline+maps) seems to me like a powerful strategy for collecting resources whilst researching an essay topic, for example, with the added advantages that: a) the visualisation may help structure/organise the essay; b) used to illustrate the topic and maybe even provide a visual navigation scheme through it...</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./010163.html">01:54 PM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/010163.html">01:54 PM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=10163" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -102,6 +824,8 @@ function OpenTrackback (c) {
 <a name="002689"></a>
 <h3 class="title">Local to yOU</h3>
 
+The OU is quite unique in many ways, not least the geographical spread of our students. I've been having a play with the (new) UK version of Google Maps, trying to tie it in with autodiscovery of postcode information embedded...
+<!--
 <p>The OU is quite unique in many ways, not least the geographical spread of our students. I've been having a play with the (new) UK version of <a href="http://maps.google.co.uk/">Google Maps</a>, trying to tie it in with autodiscovery of <a href="http://robofesta.open.ac.uk/microinfo/geolocate.html">postcode information embedded in a page &lt;link /&gt; tag</a>, or personal postcode information retrieved from a cookie, for example.</p>
 
 <p>So - what sort of geo-related information might we reasonably want to offer an OU student? Here are a few things off the top of my head (note that <em>local</em> is taken to mean local to a postcode associated with the student OR local to the study centre, say (so the family has something interesting to do while the student is at the tutorial)):</p>
@@ -118,9 +842,10 @@ function OpenTrackback (c) {
 <p>It would also be sensible to be able to provide local information pulled from the <a href="http://www3.open.ac.uk/contact/events.aspx">OU local event directory</a>. Perhaps if I ask them nicely they'll provide RESTful access to this service and an RSS response? :-)</p>
 
 
+-->
 
 <div class="posted">
-	Posted by ajh59 at <a href="./002689.html">09:59 AM</a>
+	Posted by ajh59 at <a href="http://blogs.open.ac.uk/Maths/ajh59/002689.html">09:59 AM</a>
 		| <a href="http://blogs.open.ac.uk/edit/xdkxdlkjv.cgi?entry_id=2689" onclick="OpenComments(this.href); return false">Comments (0)</a>
 	
 	
@@ -132,11 +857,15 @@ function OpenTrackback (c) {
 </div>
 
 </div>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script type="text/javascript">
+
+
 </script>
 <script type="text/javascript">
-_uacct = "UA-571814-1";
-urchinTracker();
+
+
+
 </script>
+
 </body>
 </html>

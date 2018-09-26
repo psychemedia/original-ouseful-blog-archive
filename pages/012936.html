@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: MyMaps GeoBlogger - Blogging From Google Maps</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012866.html" title="A &quot;Google MyMaps RSS editor&quot; (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)" />
+
+<link rel="next" href="./012955.html" title="The Problem With OpenLearn..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012866.html">&laquo; A "Google MyMaps RSS editor" (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)</a> |
+
+<a href="./">Main</a>
+| <a href="./012955.html">The Problem With OpenLearn... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 08, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">MyMaps GeoBlogger - Blogging From Google Maps</h3>
+
+<p>I've been thinking about contextualised blogging interfaces, lately, in the sense of lightweight publishing and syndication from an environment that supports the easy creation of structured posts, such as posts about a series of events structured in time, or space.</p>
+
+<p>The <a href="./012594.html">Displaying Google Calendar Events on a Map</a> Yahoo pipes mashup may be viewed as using the Google Calendar environment to easily create posts associated with a particular date, and then optionally associate location information (described in natural language) with each posted item. If the date information is removed, the order of posts that appear in the calendar feed can be readily reordered, changing the presentation order in the published feed, simply by moving the posts about in the calendar view. (The body of the post in this case would be contained withing the Calendar event description.)</p>
+
+<p>Google Calendar thus provides an interface for creating - and managing - a series of ordered posts, and does not have to be viewed as just a calendar...</p>
+
+<p>But what if you <span style="font-style: italic;">primarily</span> want to blog from different geographical locations, (without the aid of GPS support!)? It would be really handy if you could just click the relevant location on a map, and write a post exactly from there...</p>
+
+<p>...which is why I tidied up and extended the Yahoo pipe mentioned in <a href="./012866.html">A "Google MyMaps RSS editor"</a> and added a couple of extra features, like being able to add a 'publication date' for your post, as well as a link URL: <a href="http://pipes.yahoo.com/ouseful/mymapsblog">Google MyMaps Blogging Pipe - http://pipes.yahoo.com/ouseful/mymapsblog</a></p>
+
+<p>The pipe effectively allows you to use a Google My Map as a "geographical blogging surface". Each marker on the map corresponds to a separate post, or feed item. The 'View in Google Earth' link from the MyMap can be passed to the pipe and a valid geoRSS feed will be produced as a result.</p>
+
+<p><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/KJukKpQDVLQ&rel=0&border=0"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/KJukKpQDVLQ&rel=0&border=0" type="application/x-shockwave-flash" wmode="transparent"width="425" height="355"></embed></object></p>
+
+<p>As well as adding geoRSS lat/long tags to the RSS feed, the pipe is capable of:</p>
+
+<p>- adding a date to each post: to give the post a date, use a construct like: date: February 7th, 2008. You can also add dates like "today", which will give the post the current days date whenever the pipe is run - meaning you can associate 'relative' post dates with posts made from the map.</p>
+
+<p>- associating a URL with the title of each post, in true RSS fashion: to give an item a url, use something like: url:http://example.com or link:http://example.com/foo/bar.html </p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2251411566/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2334/2251411566_107f3d7c3f.jpg" alt="2008-02-08_2111" style="border: 0pt none ;" height="372" width="375" /></a></p>
+
+<p>Here's a very poor <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=109196350919255002936.0004458fc8b1d6b01cd52&amp;z=8&amp;om=0">example MyMaps geoblog</a>, and here's an <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=f8d13298b0cdcc7eebf35763c50791ca&amp;_render=rss&amp;kmlNetworkLinkURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.0004458fc8b1d6b01cd52">example MyMaps geoblog feed</a>.</p>
+
+<p>To generate the MyMaps geoblog RSS feed, get hold of the "View in Google Earth" URL from the MyMap:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250623973/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2240/2250623973_5b77fce1da.jpg" alt="2008-02-08_2117" style="border: 0pt none ;" height="141" width="500" /></a></p>
+
+<p>and paste it in to the Yahoo <a href="http://pipes.yahoo.com/ouseful/mymapsblog">MyMaps geoblogger pipe</a>, then get hold of the RSS feed URL from the pipe:</p>
+
+<p><br />
+   <a title="MyMaps geoblogger pipe" href="http://www.flickr.com/photos/25451952@N00/2250633031/"><img src="http://farm3.static.flickr.com/2307/2250633031_86f7502084_o.png" style="border: 0pt none ;" title="" alt="" /><br />
+</a><br />
+To prove the date stamping works, you can <a href="http://30boxes.com/external/widget?url=http%3A%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Df8d13298b0cdcc7eebf35763c50791ca%26_render%3Drss%26kmlNetworkLinkURL%3Dhttp%253A%252F%252Fmaps.google.co.uk%252Fmaps%252Fms%253Fie%253DUTF8%2526hl%253Den%2526msa%253D0%2526output%253Dnl%2526msid%253D109196350919255002936.0004458fc8b1d6b01cd52+&amp;forceTheme=%2Ftheme%2Fsmall&amp;forceNoResize=1&amp;forceRows=5">view the feed via a 30 Boxes calendar</a> (look for February 2008; link generated using the <a href="http://30boxes.com/external/widget.php?action=buildUrl&amp;theme=%2Ftheme%2Fsmall&amp;url1=http%3A%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3Df8d13298b0cdcc7eebf35763c50791ca%26_render%3Drss%26kmlNetworkLinkURL%3Dhttp%253A%252F%252Fmaps.google.co.uk%252Fmaps%252Fms%253Fie%253DUTF8%2526hl%253Den%2526msa%253D0%2526output%253Dnl%2526msid%253D109196350919255002936.0004458fc8b1d6b01cd52&amp;url2=&amp;url3=&amp;title=&amp;resize=on&amp;numWeeks=&amp;bgColor=&amp;feedColor1=&amp;feedColor2=&amp;feedColor3=">30 Boxes Calendar mashup machine</a>; for some reason the calendar doesn't display the description content, but <a href="http://grazr.com/gzpanel.html?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=f8d13298b0cdcc7eebf35763c50791ca&amp;_render=rss&amp;kmlNetworkLinkURL=http%3A%2F%2Fmaps.google.co.uk%2Fmaps%2Fms%3Fie%3DUTF8%26hl%3Den%26msa%3D0%26output%3Dnl%26msid%3D109196350919255002936.0004458fc8b1d6b01cd52">a Grazr widget does</a>).</p>
+
+<p><br />
+The mechanics of the pipe are pretty much as described in the <a href="./012866.html">Google MyMaps RSS editor</a> post, at least insofar as the creation of the main item and geoRSS feed components from the "View in Google Earth" Network Link wrapping KML URL go.</p>
+
+<p>The link and date are then extracted using a regular expression, and the two Pipes date blocks used to identify the date and put it into an appropriate form:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250644905/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2381/2250644905_505a1ef4c3_o.png" alt="2008-02-08_2129" style="border: 0pt none ;" /></a></p>
+
+<p>If you have a go using the pipe, and come across any problems, please let me know.</p>
+
+<p>I'm sure there must be some other geoblogging tools out there, but this one is essentially 'for free', being built as it is from components that already exist.</p>
+
+<p>Okay, so the MyMaps marker annotation editor is maybe not the best in the world, but there is a rich text editor and HTML view if you want to add a little style:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2250656705/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2383/2250656705_c75b633906.jpg" alt="2008-02-08_2136" style="border: 0pt none ;" height="361" width="326" /></a></p>
+
+<p>Now, what was next on the list...? ;-)<p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/gmaps" rel="tag">gmaps</a>, <a href="http://technorati.com/tag/mymaps" rel="tag">mymaps</a>, <a href="http://technorati.com/tag/%20geoblog" rel="tag"> geoblog</a>, <a href="http://technorati.com/tag/geoblogging" rel="tag">geoblogging</a>, <a href="http://technorati.com/tag/geoblogger" rel="tag">geoblogger</a>, <a href="http://technorati.com/tag/yahoo%20pipes" rel="tag">yahoo pipes</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February  8, 2008 09:38 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Great stuff! I have the perfect domain name for you: blogeography.com. I didn't know what to with it, so you can have it if you want to.</p>
+<span class="comments-post">Posted by: <a href="http://plugg.eu"> Robin Wauters</a> at February 12, 2008 08:43 AM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

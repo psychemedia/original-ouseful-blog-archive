@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: CRIG DRY (Don't Repeat Yourself) Metadata Barcamp</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./014726.html" title="eduPunk Chatter..." />
+
+<link rel="next" href="./014760.html" title="remix 2: Blur, featuring Sir Ken Robinson..." />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./014726.html">&laquo; eduPunk Chatter...</a> |
+
+<a href="./">Main</a>
+| <a href="./014760.html">remix 2: Blur, featuring Sir Ken Robinson... &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">June 07, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">CRIG DRY (Don't Repeat Yourself) Metadata Barcamp</h3>
+
+<p>Just back from another of Paul "<a href="http://blog.iedemonstrator.org">IE Demonstrator</a>"-pushing Walk'n'David Flander's <a href="http://www.ukoln.ac.uk/repositories/digirep/index/CRIG_DRY_Workshop">CRIG DRY (Don't Repeat Yourself)  Metadata workshop</a>/barcamp'n'free beer affairs, where the hardcore(?!) of the UK's academic repository hackers were plotting on how to get the most out of helper webservices being produced by other JISC funded webservices projects...</p>
+
+<p>As I bookmarked the various services, it struck me that I'd <em>already</em> bookmarked at least one of them - and have just never revisited it... Hmm...</p>
+
+<p>Anyway, here were the services:<br />
+<ul><li><a href="http://hypermedia.research.glam.ac.uk/kos/STAR/">STAR</a> - a semantic, archaoelogy thesaurus webservice (which put me in mind of the <a href="http://ads.ahds.ac.uk/">Archaeology Data Service</a>);<br />
+</li><li><a href="http://www.geoxwalk.ac.uk/">GeoCrossWalk</a> - a geocoding and gazeteer serivce (of which, more below);</li><li><a href="http://names.mimas.ac.uk/">Names</a> - an authority name providing service; this is only just beginning, and I do wonder about it's viability...  the idea is to provide an authority name proivider for institutions and academic authors. What I'd like to see is something that in the first instance mines and annotates the names of authors who've written documents that appear in local open research repositories, and then exposes that infomation to an academic people search tool. Practical and pragmatic, in other words...</li><li><a href="http://hilt.cdlr.strath.ac.uk/">HILT</a> - another 'high level' thesaurus; I didn't really get this (yet another etc etc...?)</li><li><a href="http://www.jisc.ac.uk/whatwedo/programmes/programme_rep_pres/interoperabilitydemos/depositplait.aspx">Deposit PLAIT</a>: metadata usage across repositories, and automated metadata creation (once I saw the 'metadata extraction from document templates' bit of this, I thought of the (user created) bibliographic data scraping tools used in <a href="http://svn.citeulike.org/svn/plugins/HOWTO.txt">CiteUlike</a>);<br />
+</li><li><a href="http://www.ukoln.ac.uk/repositories/digirep/index/CRIG">CRIG Service Messaging Architecture</a>: orchestrating RESTful web services.</li></ul>A couple of things to note: JISC apparently likes to fund SOAP powered webservices. Whilst these might conceivably make sense for complicated web service transcations, they're probably overkill in our sector most of the time (a sigh went up from the developers whenever a SOAP interface was mentioned).</p>
+
+<p>Now I know there are tools around that are making playing with services much easier (some of the IBM mashup tools, for example, and I think Popfly?) but sometimes it's just so much quicker to be able to hack around an almost human readable URL and look directly at whatever the data the webservice actually returns in a browser, than have to use a tool to put the webservice call together, get the data out, and then make it readable...</p>
+
+<p>Something that came up a couple of times was managing webservice workflow. In SOAP based processes, of course, there is all many or (complicated) ways of managing orchestration. But in REST, it's not so easy (unless you're happy with a simple pipeline.... Hmm, I wonder how far  has moved on lately?). Scott Wilson mentioend a stalled workflow standard for RESTful services from a decade or so ago that may well be worth a look: <a href="http://www.isr.uci.edu/events/twist/wisen98/presentations/Swenson/">Simple Workflow Access Protocol (SWAP)</a>; see also this old discussion about <a href="www.workflow-research.de/Publications/PDF/MIZU.JENI.KESW-DSS%282004%29.pd">Developing Web Services Choreography Standards – The Case of REST vs. SOAP</a>. </p>
+
+<p>Another issue relating to webservices is one of IPR and licensing. Take for example the geoCrossWalk project. This project actually has two components - a geocoding service, that wil parse a block of text and pull out placenames (among other things) and geocode them, either using "low quality" data (which is probably good enough to help you get thinking about how to build an app, IMHO), and good quality, Ordnance Survey data - which is licensed and requires authenticated access...</p>
+
+<p>I did have a quick look at the <a href="http://edina.ac.uk/digimap/">Edina Digimap</a> pages (where access to the GeoCrossWalk API is hidden away), but I couldn't log in... I guess I could have tried to scour the OU library website, looking for a way in, or a password, or something, but I wanted a quick hit, couldn't get it, so went off to the bar instead...</p>
+
+<p>How ironic would i be for a researcher to fight with their institution about opening up their research data, only to find out they couldnlt expose it on a public website becuase the JISC geocoding service had inherited O/S license conditions that said they couldn't? This isn't at all like software licensed using an aggressive open source software license contaminating all the code it comes into contact with, but then in some respects, it has a  similar feel to it...That is, licensed metadata effectively closing the original data it annotates... There has to be a better way for providers of commercial data to license their wares and generate revenue from it... There has to be... They really, really need to sort out a new business model... Becuase if they don't, we'll just start using good enough data, that we can find for free...</p>
+
+<p>(One of the tellings of 'fairy gold' is that it turns to dust if not passed on before midnight of the day you recieved (or is that dawn of the following day..?!;-) That is, you can spend it, but you can't hoard it. The data providers need to find ways of generating revenue from the flow rate of their data, rather than hoarding it in the hope of a big payoff down the line. If I'm making money in part from your data, I'll give you a cut... But don't prevent me from getting the data to see if I <em>can</em> make use of it in the first place...)</p>
+
+<p>The other part of geoCrossTalk is the CrossWalk part proper. This gazeteer will take one sort of geo reference, such as a place name, postcode, lat/long, region name, local government ward identifier, etc etc, and return references in other forms, including 'polygon bounding boxes' (there must be a proper term for this?) that describe an area: so for example, I could ask about "Bath" and get a KML overlay back that plots the extent of Bath on a map. I was also shown a demo of an overlay for the river Tay, and so on. Given an area overlay, it them becomes possible to ask for all the place names that lay with 1km of the Tay, for example; or all the postcode areas in Bath.</p>
+
+<p>One service I though might be quite handy relates to the display of multiple poorly located markers on a map - for example, markers for 100 photos tagged 'Bath'. By adding an hovering overlay marking out 'Bath' on the map, each marker could be placed somewhere within it, and set to jiggle - like the jiggling or jittery icons on an iPhone or iPod touch when you edit the 'desktop' in those appliances. The jitter suggests that  the location is uncertain, and maybe allows the marker to be pushed down to a lower layer that is more specific, such as a general postcode area - though again, the actual specific location may still be unknown. Only when the marker is jiggle free do you know it is precisley located... (of course, some markers may not designate a point - thay may designate an area...)</p>
+
+<p>As to <em>how</em> to geocode repository data, the assumption was that geocoding would be part of the ingress process whereby documents are added to a repository and annotated with geometadata. Paul Walk suggested that this could actually be added <em>post hoc</em> - a seearch is made over a repository and the results are then geocoded and displayed. (I guess that ideally, the geodata would then be submitted back to the repository?). This put me in mind of Weinberger's aphorism of 'filter on the way out'... If the geodata is not the <em>primary</em> or most important search facet, why go through the pain of adding it to every record, many of which are unlikely to be surfaced ever again, anyway?! The geo data then becomes a search refinement that can be offered as a 'search within results' feature?</p>
+
+<p>I'd actually thought about this <em>post hoc</em> search process earlier in the day, again in conversation with Paul (who also referred to the <a href="http://www.nactem.ac.uk/software/termine/">NaCTem TerMine</a> term extraction service that I need to have a quick play with? Now is it as easy to use as the Yahoo Pipes Term Extraction service; or the not quite so easy to use Reuters Calais service (SOAP, sigh...;-)?) This time it related to thesaurus data - and obvious use case I could see was in providing thesaurus generated 'did you mean?' or 'search with results' facets on a search interface.</p>
+
+<p>One thing I came to realise is that for all their good, many JISC services don't offer a quick hit. In many cases, you can't just start cranking out RESTful URLs, or cobbling Pipes together. <em>You can't get away with not reading the documentation...</em> You have to invest time in finding out what the service is good for, before deciding whether or not it's good for what you want... You can't just have a quick play...</p>
+
+<p>As to other highlights from the day - the ORE work that Richard Jones and ?? are doing looks really fascinating, offereing the ability to unpack repository holdings into aggregate objects (that is, disaggregatable ones). I didnlt make time to talk to Richard - big mistake... Ho hum...</p>
+
+<p>So going forward, what would I like to see on the webserivces front? For every JISC web service, how about one or two of the calls exposed via a Yahoo Pipes or a Popfly block...? Or maybe provided as 'mashlets' in some of the enterprise mashup environments?<div class="flockcredit" style="text-align: right; color: #CCC; font-size: x-small;">Blogged with the <a href="http://www.flock.com/blogged-with-flock" style="color: #999; font-weight: bold;" target="_new" title="Flock Browser">Flock Browser</a></div><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>, <a href="http://technorati.com/tag/CRIG" rel="tag">CRIG</a>,  <a href="http://technorati.com/tag/iedemonstrator" rel="tag">iedemonstrator</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at June  7, 2008 12:26 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

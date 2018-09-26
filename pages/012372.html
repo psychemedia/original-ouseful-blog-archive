@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Youtube Playlists and Related Videos, (and Neulio) All Mixed Up With Yahoo Pipes and Grazr Goodness</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012364.html" title="delicious Inline Images from flickr" />
+
+<link rel="next" href="./012375.html" title="UCBerkeley Youtube Playlist Course Browser &amp; Video Lecture Search" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012364.html">&laquo; delicious Inline Images from flickr</a> |
+
+<a href="./">Main</a>
+| <a href="./012375.html">UCBerkeley Youtube Playlist Course Browser & Video Lecture Search &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">January 10, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Youtube Playlists and Related Videos, (and Neulio) All Mixed Up With Yahoo Pipes and Grazr Goodness</h3>
+
+<p>Some time ago, before Youtube exposed the <a href="http://code.google.com/apis/youtube/developers_guide_protocol.html">Youtube gdata API</a>, I created a Yahoo pipe that used Dapper to scrape a Youtube playlist page to create an RSS feed with video enclosures that could be played in a a Grazr widget.</p>
+
+<p>The Dapper screenscraper was brittle as anything, with the result that the feed kept breaking, but I just kept on failing to get round to fixing the pipe.</p>
+
+<p>Anyway - last night I did fix it (2-3 mins all told, replacing the feed from the broken dapp with one from the youtube api!) so now here's a <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=TEM_6l0Q3BG6fZjojknRlg">Youtube playlist feed augmentation pipe</a>. The augmentation adds an enclosure that points to the actual video file.</p>
+
+<p>You can supply the playlist ID via the pipe URL using either just the playlisyt ID, or by pasting in the playlist page URL (hopefully!).</p>
+
+<p>Here's an example of it in action:</p>
+
+<div style="height:350px;width:400px;"><a href="http://grazr.com/read?view=o&theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=TEM_6l0Q3BG6fZjojknRlg&_render=rss&textinput1=5267E98BCC86741D" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=TEM_6l0Q3BG6fZjojknRlg&amp;_render=rss&amp;textinput1=5267E98BCC86741D"></script></div>
+
+<p>I also tweaked my simple <a href="http://grazr.com/read/psychemedia/be8e179">Grazr Youtube playlist viewer Grazr widget</a> to use the new feed. (All it does is provide you with a text entry box to enter a Youtube playlist, which it will then go and grab for you and play in the widget.)</p>
+
+<p>[Just by the by, here's the URL pattern for a Yotube playlist RSS feed: <em>http://gdata.youtube.com/feeds/api/playlists/93EFDACF7A474A90</em>]</p>
+
+<p>While I was looking at the Youtube gdata API pages, I noticed that feeds are also available for related/recomended videos. GIve it one video Id, and you'll get a list of related videos in return. So here's an augmentation of that feed: <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=e9d2800b8aea6342160cafa0127c5510">Youtube Related videos augmented feed</a>.</p>
+
+<p>Just because, I thought it might also prove interesting to write a little OPML generating script that would take a playlist feed, and augment each video with a link to another augmented feed listing related videos. The OPML generator can be found here (the id points to a Youtube playlist id): <a href="http://ouseful.open.ac.uk/xmltools/youtubePlaylistRelated.php?id=5267E98BCC86741D">http://ouseful.open.ac.uk/xmltools/youtubePlaylistRelated.php?id=5267E98BCC86741D</a></p>
+
+<p>Here's what that one looks like:</p>
+
+<div style="height:350px;width:400px;"><a href="http://grazr.com/read?view=o&theme=gloss_silver&file=http://ouseful.open.ac.uk/xmltools/youtubePlaylistRelated.php?id=5267E98BCC86741D" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;theme=gloss_silver&amp;file=http://ouseful.open.ac.uk/xmltools/youtubePlaylistRelated.php?id=5267E98BCC86741D"></script></div>
+
+<p>To get the videos of the original feeds embedded, I had to put the video player embed code into the actual OPML file. It would be really handy if the Grazr app could take just the URL for an embeddable media item in an OPML outline element and then embed it automatically, in the same way it embeds RSS feed enclosures.</p>
+
+<p>On a final Pipes and Grazr related point, I came across <a href="http://www.neulio.com/">Neulio</a> today via Mashable (<a href="http://mashable.com/2007/12/20/neulio">Neulio is a Free Video Site for Educational Clips</a>), which offers home for people wanting to build 'courses' out of individual video 'lessons'. I didn't notice any feeds coming from the courses I looked at, so here's a pipe that will generate an enclosure augmented feed:</p>
+
+<p><a href="http://pipes.yahoo.com/pipes/pipe.info?_id=Vn5nfGO_3BGMaZG5oeNLYQ">Neulio course feeds pipe</a></p>
+
+<p>Paste in the URl of a neulio course and it should give you a course feed out.</p>
+
+<p>Here it is in a Grazr widget:</p>
+
+<div style="height:350px;width:400px;"><a href="http://grazr.com/read?view=o&theme=gloss_silver&file=http://pipes.yahoo.com/pipes/pipe.run?_id=Vn5nfGO_3BGMaZG5oeNLYQ&_render=rss&urlinput1=http%3A%2F%2Fwww.neulio.com%2Fcourses%2Fd22d7e79b64b2eb91d8ebb4057b13fa6%2Fgates%2F2ae5fe5be613e8640f525caecfa95947" target="gz"><img src="http://grazr.com/images/grazrbadge.png" border="0"></a><script defer="defer" type="text/javascript" src="http://grazr.com/gzloader.js?view=o&amp;theme=gloss_silver&amp;file=http://pipes.yahoo.com/pipes/pipe.run?_id=Vn5nfGO_3BGMaZG5oeNLYQ&amp;_render=rss&amp;urlinput1=http%3A%2F%2Fwww.neulio.com%2Fcourses%2Fd22d7e79b64b2eb91d8ebb4057b13fa6%2Fgates%2F2ae5fe5be613e8640f525caecfa95947"></script></div>
+
+<p>One thing I had hoped was that the flash movie enclosure would be automatically embedded in the GRazr widget, but that doesn't seem to be the case?</p>
+
+<p>Grazr will embed audio players for mp3 files automatically, and also comes with embedding Youtube movies and Slideshare presentations automagically, but maybe these richer flash assets are only embedded if the serving domain/path is recognised, rather than embedding everyhting possible, which would be the more general case?</p>
+
+<p>PS if the idea of Grazr delivered content appears to you, why not check out <a href="http://feedlearner.com">Feedlearner</a>...</p>
+
+<p>PPS see also <a href="./012223.html">RSS Feed Demo from Yale Open Courseware</a><p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/youtube" rel="tag">youtube</a>, <a href="http://technorati.com/tag/grazr" rel="tag">grazr</a>, <a href="http://technorati.com/tag/%20neulio" rel="tag"> neulio</a>, <a href="http://technorati.com/tag/%20yahoo%20pipes" rel="tag"> yahoo pipes</a>, <a href="http://technorati.com/tag/%20fastreams" rel="tag"> fastreams</a>, <a href="http://technorati.com/tag/%20feed%20annotation%20streams" rel="tag"> feed annotation streams</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at January 10, 2008 10:41 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>THIS IS GREAT!</p>
+
+<p>Can you tell if the OPML generator(s) like http://ouseful.open.ac.uk/xmltools/youtubeUserPlaylistsOPML.phpand http://ouseful.open.ac.uk/xmltools/youtubePlaylistRelated.php will stay available?</p>
+<span class="comments-post">Posted by: <a href="http://www.fredscapes.nl/">Fred Zelders</a> at January 10, 2008 03:26 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

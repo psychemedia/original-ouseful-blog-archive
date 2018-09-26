@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Issues With OpenLearn RSS Feeds - Obtaining User Statistics</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./010549.html" title="CreateSpace - On-Demand Publishing via Amazon" />
+
+<link rel="next" href="./010554.html" title="News Education, Daily Learning" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./010549.html">&laquo; CreateSpace - On-Demand Publishing via Amazon</a> |
+
+<a href="./">Main</a>
+| <a href="./010554.html">News Education, Daily Learning &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 10, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Issues With OpenLearn RSS Feeds - Obtaining User Statistics</h3>
+
+<p>[UPDATE: the 'issue' with OpenLearn unit content feeds has now been resolved - all the feeds should be working properly now :-)]</p>
+
+<p>Last week, I posted on the newly announced <a href="./010540.html">OpenLearn RSS feeds</a>, without testing them in anything other than in a web browser (after all, they're just feeds, right? ;-). However, trying the feeds out last night, I found that whilst they worked okay in the browser, they didn't work with a wide variety of online services.</p>
+
+<p>In particular (and insofar as I tested them out), OpenLearn feed subscription works fine with Google Reader, Pageflakes, RSS2PDF, Damia and FeedRinse but the feeds are not discovered or recognised at all by Bloglines, Grazr, Netvibes, Yahoo Pipes, Google mashup editor or Feedburner (I didn't try Popfly).</p>
+
+<p>So what's going on?</p>
+
+<p>A quick test with <a href="http://web-sniffer.net/">Web Sniffer</a> - an online tool for looking at http headers - reveals the problem: a hack to use a cookie and quiet guest login to the OpenLearn Moodle environment, presumably to provide a (naive?) way of trying to track the feed usage (a requirement of the OpenLearn research team).</p>
+
+<p><a href="http://picasaweb.google.com/tony.hirst/OUsefulScreenshots/photo#5108626769298722322"><img src="http://lh6.google.com/tony.hirst/RuV8-uIaDhI/AAAAAAAAAlk/zQixZIbaS0c/s800/openlearnMoodleCookie.png" /></a></p>
+
+<p>Because the cookie'n'redirect hack is causing so much problem with such a wide variety of feed mashup tools, I'm hopeful that a fix will posted sooner rather than later (athough if you are a PHP hacker and know of a way of using curl or some other tool that will accommodate the handshake and will let me create a simple proxy/relay, please let me know!)</p>
+
+<p>Anyway, the reason I'm guessing motivated the hack - obtaining feed user stats - got me thinking about how to collect such data, a problem that is not easy at the best of times (here's some discussion on <a href="http://www.seomoz.org/blog/why-feed-tracking-is-hard">Why Feed Tracking is Hard</a>).</p>
+
+<p>I use Feedburner for the OUseful.info feed, but they may not be the preferred option for many, particularly if you want to use a feed URL that is own your own domain*.</p>
+
+<p><em>* There is a hack way around getting Feedburner stats for your own hosted feed URLs apparently, as demonstrated by this post on <a href="http://www.45n5.com/permalink/how-to-get-feedburner-stats-without-using-feedburn.html">How to Get Feedburner Stats WITHOUT Using Feedburner On Your Blog</a>, a trick that is picked up on in this <a href="http://code.google.com/p/feedburnerstats/">FeedBurner Stats</a> WordPress plugin, which gives you FeedBurner Stats without redirecting your users the FeedBurner feeds.</em></p>
+
+<p>Keeping the stats collection in house, it's probably worth assuming that if there are large numbers of people subscribing to a feed, they will tend to be distributed over the more popular feed readers.</p>
+
+<p><a href="http://blog.velospace.org/?p=15">How-To: Measuring RSS Readership</a> is a recent post reviewing the return of user subscriber numbers from the user agent of the main feed crawlers/readers.</p>
+
+<p>This <a href="http://www.chrisfinke.com/wordpress/plugins/feed-statistics/">Feed Statistics Plugin for Wordpress</a> (<a href="http://www.chrisfinke.com/category/feed-statistics/">latest news</a>) provides a clear (PHP) example of how to make use of these user-agent reports to provide estimated subscriber numbers for a particular feed.</p>
+
+<p>How useful these numbers are is debatable, of course... becasue you don't know for sure how the number of "subscribers" relates to the number of people who actively read the feeds they have subscribed to!</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at September 10, 2007 07:05 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

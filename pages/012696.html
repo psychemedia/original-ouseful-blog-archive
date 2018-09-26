@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012674.html" title="Custom Search Engines - What&#39;s Cooking?" />
+
+<link rel="next" href="./012712.html" title="Barack Obama Campaign Trail Twitter Map" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012674.html">&laquo; Custom Search Engines - What's Cooking?</a> |
+
+<a href="./">Main</a>
+| <a href="./012712.html">Barack Obama Campaign Trail Twitter Map &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 01, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Geo Twitter - GeoCoding Your Tweets and Plotting Them on an Embeddable Map</h3>
+
+<p>I was just catching up on a few feeds over coffee, I read this snippet in a post by repository hacker David Flanders on <a href="http://dfflanders.wordpress.com/2008/01/31/what-is-twitter/">What is Twitter?</a><br />
+<blockquote>My initial answer was what can we do with the Twitter API: especially the idea of a phone app that posted my twitter from a Google maps location so you could actually see where the Twits were coming from. </blockquote>Twittervision and Twittermap already offer geo-location tools, and an API for you to set your location:<br />
+<ul><li>L:place=address[:]	store a personal location</li><br />
+<li>L:place[:]	set a stored personal location as current location</li><br />
+<li>L:address[:]	set an arbitrary location as current location</li></ul><br />
+So here's my offering, a Yahoo Pipe that will have a go at geocoding locations declared in a tweet - <a href="http://pipes.yahoo.com/ouseful/geotwitter">Geo-twitter Pipe - http://pipes.yahoo.com/ouseful/geotwitter</a>:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2234724384/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2130/2234724384_14d8571764.jpg" alt="2008-02-01_1152" style="border: 0pt none ;" height="230" width="500" /></a></p>
+
+<p>You can set the location using any of the following forms: =london, l=san_francisco, l:place=Los_angeles, geo=MILTON_KEYnes (all case insensitive). In deference to a converntion Brian Kelly is using, the pipe will also accept a ':' instead of the '=', so <em>l:Xiang</em> should work okay... Spaces in the location name should be replaced by an underscore (_).</p>
+
+<p>The pipe looks for the declared location, and temporarily pops it (and it alone) into the post title, (purely within the context of the pipe, of course - your feed isn't affected anywhere else). The pipe location extractor actually looks for a location in the title and description elements of the feed. The twitter feed puts the whole tweet (I think) in the both the title and the description of the feed, so by pulling out the declared location we hopefully give the location extractor a big clue as to the location we want to extract and geocode;-) If you <em>don't</em> explicitly mark up the location, the geocoder may well pull it out of the full tweet in the description part of the feed anyway...</p>
+
+<p>If the location extractor recognises the location, it will add geo-rss elements to the feed:</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2234746996/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2116/2234746996_60ecf286a1.jpg" alt="2008-02-01_1214" style="border: 0pt none ;" height="238" width="430" /></a></p>
+
+<p>To run the pipe, simply provide your Twitter name (and pop a location in a recent tweet using one of the techniques mentioned above.</p>
+
+<p>In a sort of related post - <a href="./0125./012594.html94.html">Displaying Google Calendar Events on a Map</a> - I show how you can take the output of a pipe as KML and plot it on a Google map or within Google Earth etc...</p>
+
+<p><a href="http://www.flickr.com/photos/psychemedia/2233961923/" title="Photo Sharing"><img src="http://farm3.static.flickr.com/2408/2233961923_d1baa4fe9a.jpg" width="500" height="261" alt="2008-02-01_1216" style="border:0"/></a></p>
+
+<p>Enjoy :-)</p>
+
+<p>PS if you want to know where your friends are: <a href="http://pipes.yahoo.com/ouseful/geotwitterfriends ">http://pipes.yahoo.com/ouseful/geotwitterfriends </a>. </p>
+
+<p>So for example, here's where the people I follow are tweeting about at the moment:</p>
+
+<p><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3D476168e6b5b16097b2aad6aedef59464%26_render%3Dkml%26twitterId%3Dpsychemedia&amp;ie=UTF8&amp;om=0&amp;s=AARTsJoIafM1pDp2BN17J8kYmtPw3xrv1w&amp;ll=15.961329,13.359375&amp;spn=152.331624,298.828125&amp;z=1&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.uk/maps?f=q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fpipes.yahoo.com%2Fpipes%2Fpipe.run%3F_id%3D476168e6b5b16097b2aad6aedef59464%26_render%3Dkml%26twitterId%3Dpsychemedia&amp;ie=UTF8&amp;om=0&amp;ll=15.961329,13.359375&amp;spn=152.331624,298.828125&amp;z=1&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+
+<p>PPS A question for the community - should I add a filter to the pipe so that it only contains geotagged items? <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/twitter" rel="tag">twitter</a>, <a href="http://technorati.com/tag/yahoo%20pipe" rel="tag">yahoo pipe</a>, <a href="http://technorati.com/tag/%20map" rel="tag"> map</a>, <a href="http://technorati.com/tag/%20georss" rel="tag"> georss</a>, <a href="http://technorati.com/tag/%20geotwitter" rel="tag"> geotwitter</a>, <a href="http://technorati.com/tag/google%20map" rel="tag">google map</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February  1, 2008 12:18 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>It's quite effective if you plug in BarackObama's twitter ID.  Shows what a mental amount of travelling he's doing at the moment.</p>
+<span class="comments-post">Posted by: <a href="http://thesoapdish.wordpress.com/files/2007/09/onsite1.png">Richard</a> at February  1, 2008 03:40 PM</span>
+</div>
+<div class="comments-body">
+<p>Why not create a Pipes using API TwitterVision?</p>
+<span class="comments-post">Posted by: <a href="http://googlexxl.blogspot.com">Jean-Noël</a> at February  1, 2008 05:52 PM</span>
+</div>
+<div class="comments-body">
+<p>Yes. Yahoo pipes reverse geo coding works pretty well. I tried it on Global Voices RSS feed and it works. http://thejeshgn.com/projects/global-voices-on-map/</p>
+<span class="comments-post">Posted by: <a href="http://thejeshgn.com">Thejesh GN</a> at February  3, 2008 05:59 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

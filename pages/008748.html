@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Are PLEs Actually Social or Collaborative Learning Environments?</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./008701.html" title="Collecting Third Party Website Statistics (like Yahoo&#39;s) with Google Analytics" />
+
+<link rel="next" href="./008779.html" title="Netvibes Search and the Pageflakes Browser" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./008701.html">&laquo; Collecting Third Party Website Statistics (like Yahoo's) with Google Analytics</a> |
+
+<a href="./">Main</a>
+| <a href="./008779.html">Netvibes Search and the Pageflakes Browser &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 21, 2006</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Are PLEs Actually Social or Collaborative Learning Environments?</h3>
+
+<p>I had a tinker with <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a> over the weekend to fix badly broken styling in IE and add support for user configuration of the toolbar and stylesheet. As I was doing so it struck me that most of the tools I have in the default setup are <em>social</em> tools.</p>
+
+<p>For example, the StringLE default setup links to a chatroom, whiteboard and Flashmeeting, which are best suited to synchronous interaction with other people.</p>
+
+<p>(Remember - tools appear in the Tools tab.)</p>
+
+<p>Several other tools, whilst personally useful, also have a social dimension, in that they support (asynchronous) collaborative working (that is, document editing can be shared with others): the wiki, drawing tool and social' document editor, for example.</p>
+
+<p>The 'personal' tools include the <a href="http://searchfeedr.com">searchfeedr</a> search engine intermediary service and links to a webtop, map generator and online video editor. Even then, the map is intended for sharing and searchfeedr can display other users' saved searches, as well as allowing you to search over other people's saved links.</p>
+
+<p>Coming as I do from the <em>how might we use "web 2.0" toys to support user created personal learning envrionments?</em> position, it strikes me that just as many <em>social</em> tools are personally useful, <em>personal</em> learning environments can (should?) draw on a wide number of <em>socially</em> useful tools?</p>
+
+<p>It may even be that collaborative group work using online tools is one way of driving individual students towards their personal use of online tools <em>if that's what we want to encourage?</em></p>
+
+<p>Anyway - back to <a href="http://ouseful.open.ac.uk/stringle2.php">StringLE</a>. You can now customise any or all of the following URLs via the StrinGLE URL:</p>
+
+<p>* the navigation OPML file,<br />
+* the toolbar feed,<br />
+* the 'splash' HTML page (that is, the page that loads in the Web tab when you first load StringLE),<br />
+* a CSS stylesheet and<br />
+* an included Javascript file (the Widget panel).</p>
+
+<p>The toolbar feed is a delicious feed from a specified delicious user (or user/tag) combination. Links that are tagged with <em>stringle:tool</em> are pulled into the toolbar. For example, <a href="http://ouseful.open.ac.uk/stringle2.php?t=psychemedia/officeDemo&s=http://www.open2.net">http://ouseful.open.ac.uk/stringle2.php?t=psychemedia/officeDemo&s=http://www.open2.net</a> pulls in links from <a href="http://del.icio.us/psychemedia/officeDemo">http://del.icio.us/psychemedia/officeDemo</a> that are also tagged with <em>stringle:tool</em>. An additional tag can be used to define the label used as the link text for the link. In the example given, <em>stringle:WordProcessor</em> sets the link text as <em>WordProcessor</em>. The above URL also sets the splash screen to <a href="http://open2.net">Open2.net</a>.</p>
+
+<p>All but the Widget panel feed can be configured from the StringLE configuration panel:</p>
+
+<p><img alt="stringleNewconfig.jpg" src="./stringleNewconfig.jpg" width="174" height="230" border="0" /></p>
+
+<p>Hitting the <em>Set URL</em> button loads StringLE with the new configuration.</p>
+
+<p>The configuration is also bookmarkable from the <em>Link to this page</em> link.</p>
+
+<p>Full details <a href="http://stringle.pbwiki.com/StringLE%20URL%20API">here</a>.</p>
+
+<p>(I am going to start documenting StringLE on the <a href="http://stringle.pbwiki.com">StringLE wiki</a> and post about it less here. To keep up, you may want to subscribe to the <a href="http://stringle.pbwiki.com/atom.php">StringLE wiki changes feed</a>.)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at November 21, 2006 10:54 AM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

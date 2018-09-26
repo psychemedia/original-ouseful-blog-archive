@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: RESTful Image Generation - When Text Just Won't Do</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013066.html" title="Best Practice Instructional Material?" />
+
+<link rel="next" href="./013251.html" title="Food for Thought - OpenLearn Spamblogs? and a Welcome to wpOpenLearn" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013066.html">&laquo; Best Practice Instructional Material?</a> |
+
+<a href="./">Main</a>
+| <a href="./013251.html">Food for Thought - OpenLearn Spamblogs? and a Welcome to wpOpenLearn &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 14, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">RESTful Image Generation - When Text Just Won't Do</h3>
+
+<p>One of the take homes for me from the recent OU VLE 2.0 show-and-tell was a talk by LTS developer Jonathan "<a href="http://jonathanfine.wordpress.com/2008/01/14/google-charts-mathtran-and-editable-png-files/">Google Charts, MathTran and editable PNG files</a>" Fine about displaying mathematical equations in online course materials.</p>
+
+<p>This would be easy enough if we could guarantee students had MathML support in their browser, but a fall back position is required if they don't - enter this pretty neat solution to the problem: rendering equations as images, generated from text, using <a href="http://www.mathtran.org/">MathTran</a>.</p>
+
+<p>MathTran is essentially an image resource generator: call the the resource via a URL such as the following:</p>
+
+<p><em>http://www.mathtran.org/cgi-bin/mathtran?D=1;tex=%5Cint%20_0%5E1%20x%5E2%5C%2C%20dx</em></p>
+
+<p>and you should get an image in return: <img src="http://www.mathtran.org/cgi-bin/mathtran?D=1;tex=%5Cint%20_0%5E1%20x%5E2%5C%2C%20dx" /></p>
+
+<p>The URL arguments are an encoded version of TeX, a text based representation for expressing all manner of weird typographical sh*t (to use the vernacular... anyone who's done a maths or physics degree will know <em>all</em> about it ;-)</p>
+
+<p>(There are issues with this approach of course, such as making the image accessible to a screen reader, but at least this approach makes the equation accessible in a visual way! The alt tag is still available of course, for  TeXtual description of the equation, which I'll return to again below...)</p>
+
+<p>This resourceful web service approach is similar in kind to the way the <a href="http://code.google.com/apis/chart/">Google Charts API</a> works: pass a description of the chart via a URL to the chart image generator, and get a chart back as a response. For example:</p>
+
+<p><em>http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240%7CM150%7CM255%7CM257%7CM263%7CMU120%7CM366</em></p>
+
+<p>is responsible for creating this chart:</p>
+
+<p><img src="http://chart.apis.google.com/chart?cht=p&amp;chs=450x160&amp;chd=s:DHNEDFD&amp;chtt=Completed%20T175%20users%20stating%2038%20Current%20courses%20%28min%203%20users%29&amp;chxt=y&amp;chxr=0,0,10&amp;chl=BM240%7CM150%7CM255%7CM257%7CM263%7CMU120%7CM366" /></p>
+
+<p>I use the Google chart API in my evolving <a href="./012240.html">Course Profiles Facebook app reporting tool</a> (which I guess I should do a bit more work on and post about... ho hum, one more thing on th eto do list...;-)</p>
+
+<p>As well as pie charts, the Google Chart API will create line graphs and bar charts, scatter plots and Venn diagrams. If you want to have a play, here's a <a href="http://almaer.com/chartmaker/">rather neat Google Chart generator</a>. Enter some data, pick a chart type, and it will generate the chart image URL for you...</p>
+
+<p>Although the Google Chart API has only be around for a couple of months, it's already been put to some interesting uses. This <a href="http://groups.google.com/group/google-chart-api/browse_thread/thread/d3b4d0f6436796e9">Math equation parser/plotter</a> on the Google Chart API group links to a <a href="http://www.felipebarone.com/plot-function-google.php">Google Chart  maths equation plotter</a>, which lets you type in a simple function and it will then generate a graph for you by running the equation through a web service (I think you have to HTTP POST the arguments through - but I didn't check...) that generates the chart data values and constructs the chart image URL.</p>
+
+<p><img src="http://chart.apis.google.com/chart?chtt=f%28x%29+%3D+sin%28x%29-cos%28x%29%2Acos%28x%29&amp;chts=FF0000,16&amp;cht=lxy&amp;chs=400x400&amp;chd=t:0,1.67,3.33,5,6.67,8.33,10,11.67,13.33,15,16.67,18.33,20,21.67,23.33,25,26.67,28.33,30,31.67,33.33,35,36.67,38.33,40,41.67,43.33,45,46.67,48.33,50,51.67,53.33,55,56.67,58.33,60,61.67,63.33,65,66.67,68.33,70,71.67,73.33,75,76.67,78.33,80,81.67,83.33,85,86.67,88.33,90,91.67,93.33,95,96.67,98.33%7C36.92,44.87,53.46,62.24,70.66,78.22,84.43,88.88,91.28,91.47,89.44,85.31,79.37,72.01,63.69,54.94,46.28,38.19,31.09,25.28,20.96,18.17,16.84,16.78,17.69,19.24,21.06,22.8,24.15,24.9,24.92,24.21,22.89,21.17,19.34,17.77,16.81,16.81,18.06,20.76,25,30.73,37.76,45.81,54.45,63.21,71.56,78.99,85.02,89.26,91.42,91.35,89.07,84.73,78.61,71.12,62.72,53.96,45.33,37.34%7C0,100%7C58.3333333333,58.3333333333%7C66.6666666667,66.6666666667%7C0,100&amp;chco=0033FF,DDDDDD,DDDDDD,3072F3&amp;chxt=x,y&amp;chxl=0:%7C-6%7C-1.5%7C3%7C1:%7C-1.75%7C-0.25%7C1.25&amp;chm=&amp;chg=25,25,1,5" /></p>
+
+<p>Now here's where a general knowledge of design and coding patterns - and what's possible on the web - comes in handy in terms of seeing what the next step might be... (this sort of observation is how I justify reading feeds all day...;-)</p>
+
+<p>Here are a couple more things you need to know, and let's see if you come to the same conclusion as I do about how the maths''n'graphs ideas could merge together...</p>
+
+<p>Firstly, MathTran doesn't just provide a TeX2Image service. They also make available a <a href="http://www.mathtran.org/wiki/index.php/TeX_image">Javascript library</a> that you can add to your web page which lets you write  the TeX equation description in the alt attribute of an image tag, and it will then create the src URL and pull in the image view of the equation.</p>
+
+<p>Here's an example of an image tag as you might write it to encode an image - &lt;img alt="tex:a^2+b^2=c^2"&gt; [Unfortunately, when I tried the script in the original version of this post I got an XML request/cross domain error...]</p>
+
+<p>Secondly, check out this approach to <a href="http://www.wait-till-i.com/2008/01/08/generating-charts-from-accessible-data-tables-using-the-google-charts-api/">Generating charts from accessible data tables using the google charts API</a>. The idea here is to take the data from a straightforward HTML data table in a web page and use a bit of Javascript to create a corresponding Google Chart URL and embed in the image in the same web page. If javascript is disabled, you  stil have the data table. If you're interested, here's <a href="http://icant.co.uk/sandbox/datatable-to-chart/index.html">the table to chart demo</a>. Here's a typical result:</p>
+
+<p><img src="http://ajaxian.com/wp-content/images/rb_googlecharts.gif" /> (via <a href="http://ajaxian.com/archives/accessible-google-charts">Ajaxian</a>)</p>
+
+<p>So here's where idea fusion comes in: would it be possible to create a MathTran+ service that will take a TeX described equation in a div tag attribute, say, and return two images: one displaying the equation in a properly formatted way (using MathTran, for example) and one displaying a Google Chart of the plotted equation?</p>
+
+<p>Over to you, Jonathan (or have you done this already? I seem to recall you mentioning something about 'executable TeX', or similar, where a textually described equation could be treated as an equation and plotted out? Or did this only work with MathML?)</p>
+
+<p>PS  Jonathan also idled about the idea of a musical notation resource generating service - has anyone seen on e of these? I guess the idea would be to pass a textual description of a piece of music to the service, and receive an image of the score, using musical notation, in return...?</p>
+
+<p>PPS whilst on the topic of chart generators-ish, here's a <a href="http://bitworking.org/projects/sparklines/">sparkline generator</a> that works on the same principle - pass the data to the service via a URL and get an image back in return: <img src="http://bitworking.org/projects/sparklines/spark.cgi?type=impulse&amp;d=88,84,82,92,82,86,66,82,44,64,66,88,96,80,24,26,14,0,0,26,8,6,6,24,52,66,36,6,10,14,30&amp;height=20&amp;limits=0,100&amp;upper=90&amp;above-color=red&amp;below-color=gray&amp;width=2" /></p>
+
+<p>PPPS Reduced as I am to using the last.fm website rather than the client, which appears to have stopped working on my office machine (one more reason not to bother coming in to work, I guess), I notice they're pushing embeddable radio players... so here's an example of what I was listening to whilst writing this post... </p>
+
+<p><style type="text/css">table.lfmWidget3bd23294229342a580319e1692ba193e td {margin:0 !important;padding:0 !important;border:0 !important;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmHead a:hover {background:url(http://cdn.last.fm/widgets/images/en/header/radio/mini_grey.png) no-repeat 0 0 !important;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmEmbed object {float:left;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmFoot td.lfmConfig a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat 0px 0 !important;;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmFoot td.lfmView a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat -85px 0 !important;}table.lfmWidget3bd23294229342a580319e1692ba193e tr.lfmFoot td.lfmPopup a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat -159px 0 !important;}</style><br />
+<table class="lfmWidget3bd23294229342a580319e1692ba193e" style="width: 110px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr class="lfmHead"><td><a title="Music tagged bhangra " href="http://www.last.fm/listen/globaltags/Bhangra" target="_blank" style="border: 0pt none ; background: transparent url(http://cdn.last.fm/widgets/images/en/header/radio/mini_grey.png) no-repeat scroll 0pt -20px; overflow: hidden; display: block; height: 20px; width: 110px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;"></a></td></tr><tr class="lfmEmbed"><td><object type="application/x-shockwave-flash" data="http://cdn.last.fm/widgets/radio/19.swf" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="140" width="110"> <param name="movie" value="http://cdn.last.fm/widgets/radio/19.swf"> <param name="flashvars" value="lfmMode=radio&amp;radioURL=globaltags%2FBhangra&amp;title=Music+tagged+bhangra+&amp;theme=grey&amp;autostart=&amp;lang=en&amp;widget_id=3bd23294229342a580319e1692ba193e"> <param name="bgcolor" value="999999"> <param name="quality" value="high"> <param name="allowScriptAccess" value="always"> <param name="allowNetworking" value="all"> </object></td></tr><tr class="lfmFoot"><td style="background: transparent url(http://cdn.last.fm/widgets/images/footer_bg/grey.png) repeat-x scroll 0pt 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right;"><table style="width: 110px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="lfmConfig"><a href="http://www.last.fm/widgets/?url=globaltags%2FBhangra&amp;colour=grey&amp;size=mini&amp;autostart=&amp;from=code&amp;widget=radio" title="Get your own widget" target="_blank" style="border: 0pt none ; background: transparent url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat scroll 0px -20px; overflow: hidden; display: block; width: 85px; height: 20px; float: right; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;"></a></td><td class="lfmPopup" style="width: 25px;"><a href="http://www.last.fm/widgets/popup/?url=globaltags%2FBhangra&amp;colour=grey&amp;size=mini&amp;autostart=&amp;from=code&amp;widget=radio&amp;resize=1" title="Load this radio in a pop up" target="_blank" style="border: 0pt none ; background: transparent url(http://cdn.last.fm/widgets/images/en/footer/grey.png) no-repeat scroll -159px -20px; overflow: hidden; display: block; width: 25px; height: 20px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" onclick="window.open(this.href + '&resize=0','lfm_popup','height=240,width=160,resizable=yes,scrollbars=yes'); return false;"></a></td></tr></tbody></table></td></tr></tbody></table></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 14, 2008 09:43 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Thanks for the post. I was aware of Google Chart API but not of MathTran or some of the possibilities for mash ups that you mention.</p>
+<span class="comments-post">Posted by: <a href="http://crispyj2.blogspot.com">Chris Jobling</a> at February 15, 2008 01:26 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

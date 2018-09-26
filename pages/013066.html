@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Best Practice Instructional Material?</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./013035.html" title="OpenLearn XML Processor, Redux" />
+
+<link rel="next" href="./013114.html" title="RESTful Image Generation - When Text Just Won&#39;t Do" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./013035.html">&laquo; OpenLearn XML Processor, Redux</a> |
+
+<a href="./">Main</a>
+| <a href="./013114.html">RESTful Image Generation - When Text Just Won't Do &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 13, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Best Practice Instructional Material?</h3>
+
+<p>One of the 'issues' we meet again and again when writing OU course materials is the extent to which we have to hand-hold our students when explaining how to use particular software applications. Unlike traditional HEIs, where computer lab sessions are staffed with postgrads eager(?!) to help out, OUr students study at a distance - we use screenshots, and increasingly screencasts (though the jury is still out on those) to show our students how to work through many of our computer based exercises.</p>
+
+<p>At first glance, some of our materials do seem to overly labour the point, though if you've seen the <a href="http://www.youtube.com/watch?v=LRBIVRwvUeE">medieval/Middle Ages tech support</a> video on how to use a book, you'll maybe appreciate why we feel we have to go to such lengths:</p>
+
+<p><object height="355" width="425"><param name="movie" value="http://www.youtube.com/v/LRBIVRwvUeE&amp;rel=1"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/LRBIVRwvUeE&amp;rel=1" type="application/x-shockwave-flash" wmode="transparent" height="355" width="425"></object></p>
+
+<p>Increasingly, though, the baseline IT skills we might expect our students to have are improving - I no longer have to show students at residential school to just lift and replace a mouse on the mousepad, rather than chase it down the table leg because they want the cursor to go to the bottom of the screen!</p>
+
+<p>When writing teaching material around a software application, it is easy to fall in to the trap of taking a screenshot of everything. Maybe this is necessary, maybe it's not. Maybe <em>not</em> including a screenshot of a particular step is the equivalent of the dreaded use of "hence", "obviously", and "clearly" statements that step over particularly difficult steps (for the novice) in many mathematical textbooks.</p>
+
+<p>It can be instructive, though, to consider what sort of guidance we might write around a technology we are pretty sure everyone is comfortable with, and here's a neat example: a <a href="http://blogoscoped.com/archive/2008-02-11-n78.html">manual on using coloured pencils</a>. Here's a snippet:<br />
+<blockquote>Preparing the color pencil device for usage is relatively straightforward. <s>As shown in the photo</s> you will have to open the lid of the metal box using your right or left hand. This installation however was completely undocumented, which may leave non power users confused. What's more, reading the sparse documentation on the backside of the metal box after you set up the pencils for usage requires you to turn around the box - which will make the color pencils fall out of their box onto the floor or table.</p>
+
+<p>How do you use the device? To select a color, you need to compare the color preview printed outside the edges of the specific pencil. The color is also printed on the tip of each pencil, a nice addition. You will then press the pencil onto the display paper, which you will be able to locate inside your printer.</blockquote><br />
+One reason I found this particularly amusing was that it reminded me of the risk assessment supp (supplementary item - OU code for piece of paper with a number on it) that I had to write for one of our short courses in which we sent out a permanent marker pen in the first mailing...  At the time, there was a lot of debate/to and fro discussion - I probably archived the email exchange somewhere - about the different risks associated with washable and permanent markers, although parts of the risk assessment were the same for both.</p>
+
+<p>(I've also had to write a risk assesssment about using Lego in a couple of OU residential school activities - choking and chipped teeth hazard when trying to pry apart bits of Lego with your teeth, head bump on table hazard when bending down to pick up piece of Logo you've dropped on the floor, lifting hazard bending down to pick up pices of Lego dropped on the floor, etc, etc!)</p>
+
+<p>Ho hum - coffee break over and my toast for lunch has just popped up; back to the grind, I guess...</p>
+
+<p>PS just because - have you tried my <a href="http://ouseful.open.ac.uk/howdoi">How Do I? instructional video search</a> app, lately? I keep adding sites to it all the time... ;-)</p>
+
+<p>PPS in case you missed it, this <a href="http://web.sls.csail.mit.edu/lectures/">Video lecture browser with 'teleprompt'-style transcript display</a> from MIT is worth checking out..<br />
+   <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February 13, 2008 01:15 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>I wonder if the introduction of tools like Elluminate, with its app-sharing will reduce the need for large user manuals.</p>
+
+<p>Of course, you would still need a manual for Elluminate. :-)</p>
+<span class="comments-post">Posted by: <a href="mailto&#58;ks4243&#64;tutor&#46;open&#46;ac&#46;uk">Kate</a> at February 13, 2008 05:48 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

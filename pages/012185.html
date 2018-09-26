@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: Plotting Course Profiles Data from Google Spreadsheets with the Google Charts API</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012181.html" title="My First Unconference..." />
+
+<link rel="next" href="./012191.html" title="Fotowoosh Now Available on Facebook" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012181.html">&laquo; My First Unconference...</a> |
+
+<a href="./">Main</a>
+| <a href="./012191.html">Fotowoosh Now Available on Facebook &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">December 08, 2007</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Plotting Course Profiles Data from Google Spreadsheets with the Google Charts API</h3>
+
+<p>For a week or two, now, I've been looking for some simple charting libraries (<a href="http://www.liquidx.net/plotkit/">Plotkit</a> looked interesting, I thought, as does this <a href="http://feeds.feedburner.com/~r/ajaxian/~3/195518662/plotting-in-jquery">jquery chart plotter extension</a>? and PS the <a href="http://developer.yahoo.com/yui/charts/">new YUI chart control</a>...) that I can use to plot some basic graph types reporting on the current state of the Course Profiles Facebook app.</p>
+
+<p>For convenience, we're importing some of the data via an XML file into a Google spreadsheet (read how here: <a href="http://googlesystem.blogspot.com/2007/09/google-spreadsheets-lets-you-import.html">Google Spreadsheeets Lets You Import Online Data</a>). This allows us to plot some simple charts in the spreadsheet itself, as well getting ready access to the data as a gdata feed, JSON output and so on.</p>
+
+<p>Earlier this week, <a hrefr="http://google-code-updates.blogspot.com/2007/12/embed-charts-in-webpages-with-one-of.html">Google released a chart API</a> for creating charts and graphs via a URL, so I thought I'd have a bit of a tinker this afternoon, reusing code from a <a href="http://code.google.com/apis/gdata/samples/spreadsheet_sample.html">Google spreadsheets API example</a> and bit of freeplay with the <a href="http://code.google.com/apis/chart/">Google Charts API</a>. This is a new offering from Google, that offers a range of chart types, in particular: pie charts, Venn diagrams, line graphs, scatter plots, and bar charts.</p>
+
+<p>Here is an example result:</p>
+
+<p><img src="http://chart.apis.google.com/chart?cht=bvs&amp;chtt=Top+10+Most+Popular+Course+Profile+Courses&amp;chts=0000ff,20&amp;chd=s:31olidZWVU&amp;chbh=40&amp;chco=0000ff&amp;chs=500x250&amp;chxt=y&amp;chxr=0,0,300&amp;chl=DD100%7CA103%7CS103%7CDSE212%7CM150%7CMST121%7CED209%7CT171%7CMU120%7CSXR103%7C" style="margin: 0pt auto 10px; display: block; text-align: center;" title="" alt="" /></p>
+
+<p>All the data is passed via a URL, and a png image returned. Many of the chart attributes are customisable, such as colour themes, titles, axis labels and scaling , and so on.</p>
+
+<p>So for example, the above image has an &lt;img src=""/&gt; attribute set to:</p>
+
+<p>http://chart.apis.google.com/chart?<br />
+&nbsp;cht=bvs&amp;chtt=Top+10+Most+Popular+Course+Profile+Courses<br />
+&nbsp;&amp;chts=0000ff,20&amp;chd=s:31olidZWVU&amp;chbh=40&amp;chco=0000ff&amp;chs=500x250&amp;chxt=y&amp;chxr=0,0,300<br />
+&nbsp;&amp;chl=DD100|A103|S103|DSE212|M150|MST121|ED209|T171|MU120|SXR103|</p>
+
+<p>The URL can be created on the fly in the client, of course, as demonstrated here: <a href="./googChartDemo2.html">Google chart powered from a Google spreadsheet demo</a>, though it might make more sense for this to be done on a server?</p>
+
+<p>If I get a chance, I'll see what other 'public' data we can open up from the app, and see how it looks in some of the other Google chart representations. The Venn diagrams could be fun, methinks! ;-)</p>
+
+<p>PS James Cridland has already knocked out a PHP equivalent of the Javascript function given in the Google API 'documentation' that encodes data for the URL: <a href="http://james.cridland.net/code/google-chart.html">Google Chart API in PHP</a>. I wonder how long before we get a full set of libraries from the community?;-) <p style="text-align: right; font-size: 8px">Blogged with <a href="http://www.flock.com/blogged-with-flock" title="Flock" target="_new">Flock</a></p><!-- technorati tags begin --><p style="font-size:10px;text-align:right;">Tags: <a href="http://technorati.com/tag/gChart" rel="tag">gChart</a>, <a href="http://technorati.com/tag/google%20charts" rel="tag">google charts</a>, <a href="http://technorati.com/tag/%20course%20profiles" rel="tag"> course profiles</a>, <a href="http://technorati.com/tag/API" rel="tag">API</a></p><!-- technorati tags end --></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at December  8, 2007 05:40 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>

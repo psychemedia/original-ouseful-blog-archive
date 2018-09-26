@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Progressive Enhancement</title>
+
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+padding:0;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/fonts/fonts-min.css?_yuiversion=2.4.1" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/datatable/assets/skins/sam/datatable.css?_yuiversion=2.4.1" />
+<script type="text/javascript" src="http://yui.yahooapis.com/2.4.1/build/yahoo-dom-event/yahoo-dom-event.js?_yuiversion=2.4.1"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.4.1/build/element/element-beta.js?_yuiversion=2.4.1"></script>
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.4.1/build/datasource/datasource-beta.js?_yuiversion=2.4.1"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.4.1/build/datatable/datatable-beta.js?_yuiversion=2.4.1"></script>
+
+<!--there is no custom header content for this example-->
+
+</head>
+
+<body class=" yui-skin-sam">
+
+<!--BEGIN SOURCE CODE FOR EXAMPLE =============================== -->
+
+<div id="markup">
+    
+    <table id='IW-ms-data'><thead><tr><th>School</th><!--<th>CVA</th><th>Aggregate Score</th><th>Average points per pupil</th>--><th>Budget</th><th>Pupils 1/07(?)</th><th>UKP per pupil</th><th>Option 1</th><th>Option 2</th><th>Option 3</th></tr></thead>
+    <tbody><tr><td class="1 2 3">Chillerton & Rookley Primary School</td><td>193,427</td><td>44</td><td>4,396</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="2">Cowes Primary School</td><td>754,987</td><td>272</td><td>2,776</td><td></td><td>X</td><td></td></tr>
+<tr><td class="1 2">East Cowes Grange Primary School</td><td>604,985</td><td>201</td><td>3,010</td><td>X</td><td>X</td><td></td></tr>
+<tr><td class="1 2 3">Gatten and Lake Primary School</td><td>616,586</td><td>202</td><td>3,052</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Godshill Primary School</td><td>395,954</td><td>128</td><td>3,093</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Gurnard Primary School</td><td>483,256</td><td>166</td><td>2,911</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="2">Nettlestone Primary School</td><td>397,648</td><td>132</td><td>3,012</td><td></td><td>X</td><td></td></tr>
+<tr><td class="2">Newchurch Primary School</td><td>447,496</td><td>145</td><td>3,086</td><td></td><td>X</td><td></td></tr>
+<tr><td class="2">Barton Primary School</td><td>583,866</td><td>143</td><td>4,083</td><td></td><td>X</td><td></td></tr>
+<tr><td class="0">Nine Acres Primary School</td><td>982,293</td><td>347</td><td>2,831</td><td></td><td></td><td></td></tr>
+<tr><td class="2">Niton Primary School</td><td>342,215</td><td>99</td><td>3,457</td><td></td><td>X</td><td></td></tr>
+<tr><td class="2">Northwood Primary School</td><td>537,900</td><td>188</td><td>2,861</td><td></td><td>X</td><td></td></tr>
+<tr><td class="1 2 3">Hunnyhill Primary School</td><td>485,936</td><td>158</td><td>3,076</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1">Haylands Primary School</td><td>788,482</td><td>280</td><td>2,816</td><td>X</td><td></td><td></td></tr>
+<tr><td class="1 2 3">St Helen's Primary School</td><td>241,825</td><td>60</td><td>4,030</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="2 3">Whippingham Primary School</td><td>421,365</td><td>135</td><td>3,121</td><td></td><td>X</td><td>X</td></tr>
+<tr><td class="0">Wootton Community Primary School</td><td>401,729</td><td>130</td><td>3,090</td><td></td><td></td><td></td></tr>
+<tr><td class="1 2 3">Wroxall Primary School</td><td>283,611</td><td>81</td><td>3,501</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Love Lane Primary School</td><td>574,184</td><td>140</td><td>4,101</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="3">Broadlea Primary School</td><td>594,865</td><td>199</td><td>2,989</td><td></td><td></td><td>X</td></tr>
+<tr><td class="1 2">Binstead Primary School</td><td>465,614</td><td>155</td><td>3,004</td><td>X</td><td>X</td><td></td></tr>
+<tr><td class="1 2 3">Green Mount Primary School</td><td>449,423</td><td>148</td><td>3,037</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Summerfields Primary School</td><td>366,577</td><td>112</td><td>3,273</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="0">Dover Park Primary School</td><td>805,871</td><td>229</td><td>3,519</td><td></td><td></td><td></td></tr>
+<tr><td class="1 2 3">Arreton St George's Church of England Controlled Primary School</td><td>281,563</td><td>76</td><td>3,705</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Bembridge Church of England Primary School</td><td>441,860</td><td>148</td><td>2,986</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Brading Church of England Controlled Primary School</td><td>270,197</td><td>69</td><td>3,916</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Carisbrooke Church of England Controlled Primary School</td><td>653,785</td><td>228</td><td>2,867</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Chale Church of England Controlled Primary School</td><td>168,018</td><td>22</td><td>7,637</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="3">All Saints Church of England Primary School, Freshwater 3006</td><td>513,852</td><td>162</td><td>3,172</td><td></td><td></td><td>X</td></tr>
+<tr><td class="0">Sandown Church of England Primary School</td><td>726,148</td><td>216</td><td>3,362</td><td></td><td></td><td></td></tr>
+<tr><td class="1 2 3">St John's Church of England Primary School</td><td>422,281</td><td>138</td><td>3,060</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="2">Shalfleet Church of England Primary School</td><td>397,065</td><td>107</td><td>3,711</td><td></td><td>X</td><td></td></tr>
+<tr><td class="2">Shanklin Church of England Primary School</td><td>468,925</td><td>151</td><td>3,105</td><td></td><td>X</td><td></td></tr>
+<tr><td class="2 3">St Boniface Church of England Primary School</td><td>286,286</td><td>71</td><td>4,032</td><td></td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Saint Margaret's Church of England Primary School</td><td>250,734</td><td>53</td><td>4,731</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="2">Brighstone Church of England Aided Primary School</td><td>295,327</td><td>89</td><td>3,318</td><td></td><td>X</td><td></td></tr>
+<tr><td class="2 3">Oakfield Church of England Aided Primary School, Ryde 3303</td><td>557,575</td><td>178</td><td>3,132</td><td></td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">Yarmouth Church of England Aided Primary School</td><td>209,449</td><td>51</td><td>4,107</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2 3">St Mary's Catholic Primary School</td><td>426,229</td><td>144</td><td>2,960</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="2">St Saviour's Catholic Primary School</td><td>362,693</td><td>111</td><td>3,268</td><td></td><td>X</td><td></td></tr>
+<tr><td class="1 2 3">St Wilfrid's Catholic Primary School</td><td>420,513</td><td>123</td><td>3,419</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="1 2">Holy Cross Catholic Primary School</td><td>408,595</td><td>131</td><td>3,119</td><td>X</td><td>X</td><td></td></tr>
+<tr><td class="1 2 3">St Thomas of Canterbury Catholic Primary School</td><td>262,303</td><td>77</td><td>3,407</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td class="0">Newport Church of England Aided Primary School</td><td>704,548</td><td>250</td><td>2,818</td><td></td><td></td><td></td></tr>
+<tr><td class="1 2 3">Weston Community School</td><td>258,694</td><td>51</td><td>5,072</td><td>X</td><td>X</td><td>X</td></tr>
+
+
+   </tbody>
+    </table>
+</div>
+<!--<script type="text/javascript">
+var color = "#0000ff";
+
+
+</script>
+<form>
+<input type="button" value="Clear" onclick="show(-1)"/><input type="button" value="Option 1" onclick="show(1)"/><input type="button" value="Option 2" onclick="show(2)"/><input type="button" value="Option 3" onclick="show(3)"/><input type="button" value="Safe" onclick="show(0)"/>
+</form>
+-->
+<script type="text/javascript">
+YAHOO.util.Event.addListener(window, "load", function() {
+    YAHOO.example.EnhanceFromMarkup = new function() {
+        var myColumnDefs = [
+            {key:"school",label:"School",sortable:true},
+           // {key:"cva",label:"CVA", formatter:YAHOO.widget.DataTable.formatNumber,sortable:true},
+           // {key:"aggscore",label:"Aggregate Score",formatter:YAHOO.widget.DataTable.formatNumber,sortable:true},
+            //{key:"avpoints",label:"Average points per pupil",formatter:YAHOO.widget.DataTable.formatNumber,sortable:true},
+            {key:"budget",label:"Budget", formatter:YAHOO.widget.DataTable.formatNumber,sortable:true},
+            {key:"pupils",label:"Pupils 1/07(?)", formatter:YAHOO.widget.DataTable.formatNumber,sortable:true},
+            {key:"cashperpupil",label:"UKP per pupil", formatter:YAHOO.widget.DataTable.formatNumber,sortable:true},
+            {key:"option1",label:"Option 1",sortable:true},
+            {key:"option2",label:"Option 2",sortable:true},
+            {key:"option3",label:"Option 3",sortable:true}
+        ];
+
+        this.parseNumberFromCurrency = function(sString) {
+            // Remove dollar sign and make it a float
+            return parseFloat(sString.substring(1));
+        };
+
+        this.myDataSource = new YAHOO.util.DataSource(YAHOO.util.Dom.get("IW-ms-data"));
+        this.myDataSource.responseType = YAHOO.util.DataSource.TYPE_HTMLTABLE;
+        this.myDataSource.responseSchema = {
+            fields: [{key:"school"},
+                   // {key:"cva",parser:YAHOO.util.DataSource.parseNumber},
+                    //{key:"aggscore", parser:YAHOO.util.DataSource.parseNumber},
+                    //{key:"avpoints", parser:this.parseNumber},
+                    {key:"budget"},
+                    {key:"pupils", parser:YAHOO.util.DataSource.parseNumber},
+                    {key:"cashperpupil"},
+                    {key:"option1"},
+                    {key:"option2"},
+                    {key:"option3"}
+            ]
+        };
+
+        this.myDataTable = new YAHOO.widget.DataTable("markup", myColumnDefs, this.myDataSource,
+                {sortedBy:{key:"school",dir:"desc"}});
+        };
+
+});
+</script>
+
+<!--END SOURCE CODE FOR EXAMPLE =============================== -->
+
+
+</body>
+</html>
+

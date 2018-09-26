@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>OUseful Info: OpenLearn Dynamic Custom Search Engine</title>
+
+<link rel="stylesheet" href="./styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouseful" />
+
+<link rel="start" href="./" title="Home" />
+<link rel="prev" href="./012788.html" title="feedshow Link Presenter - Getting There..." />
+
+<link rel="next" href="./012866.html" title="A &quot;Google MyMaps RSS editor&quot; (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes)" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.open.ac.uk';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="./" accesskey="1">OUseful Info</a></h1>
+<span class="description"><em>Quirk. Strangeness. Charm.</em> And all in Search of OU 2.0... Exploring the potential of Web 2.0 techniques and applications in higher and distance education, informal and lifelong learning. </span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="./012788.html">&laquo; feedshow Link Presenter - Getting There...</a> |
+
+<a href="./">Main</a>
+| <a href="./012866.html">A "Google MyMaps RSS editor" (plus a Was Not Quite Working but Now Fixed  Google Maps to Google Maps Round Trip Via Yahoo Pipes) &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">February 05, 2008</h2>
+
+<div class="blogbody">
+
+<h3 class="title">OpenLearn Dynamic Custom Search Engine</h3>
+
+<p>This is a quick heads up about something I was tinkering with over the weekend, and about which I'll be posting more in the next couple of weeks...<br /><br />There has been quite a bit of talk, of late, in the blogosphere about "social search" - for example, <a href="http://venturebeat.com/2008/01/31/googles-marissa-mayer-social-search-is-the-future/">Marissa Mayer in interview with Venturebeat</a> or this <a href="http://www.watshow.com/2008/01/31/exclusive-interview-with-jimmy-wales-wikipedia-founder-watshow-episode-12/">interview with Jimmy Wales about Wikia</a>.<br /><br />One thing I've been trying to argue for for ages are custom, bounded search engines that search over sites linked to from OU courses. And over the weekend, the itch got so bad I had to scratch it...<br /><br />So imagine if you will an OpenLearn unit such as <a href="ouseful.open.ac.uk/t180_8">T180_8 Living with the internet: keeping it safe</a>. This unit explores the downside to "huge increases in ownership of home computers and ever-widening access [that has] been an obvious boon to many peoples' lives". In particular it contains many links to external, third party web sites, such as antivirus company Sophos, among others.<br /><br />And also imagine a piece of magic code that extracts all the weblinks from this course and uses them to define the sites over which a Google custom search engine will search - in effect, a search engine defined by the sites referenced from this online course.<br /><br />(You're familiar with the idea of a custom search engine, right? Like the <a href="http://ouseful.open.ac.uk/howdoi">How Do I?</a> instructional video search engine, or the <a href="http://ouseful.open.ac.uk/howdoicook">How Do Cook/What's Cooking?</a> recipe search engine, or even this <a href="./010642.html">OpenLearn custom search engine</a>...?)<br /><br />Okay - so here's an example - a 'malware search engine' that searches only over the websites linked to from T180_8: <a href="http://ouseful.open.ac.uk/openlearnplayground/openlearncse.php">T180_8 custom search engine</a>.<br /><br />PS the search engine will actually create a custom search engine on the fly for any OpenLearn unit using the URL http://ouseful.open.ac.uk/openlearnplayground/openlearncse.php?cc=<em>unit_code</em></p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by ajh59 at February  5, 2008 09:41 PM
+
+<!--
+
+ 
+
+-->
+
+<br /></span>
+
+</div>
+
+
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+<div class="comments-body">
+<p>Is it possible to feed these custom search engines from deli.cio.us too? It would be really useful have a search engine that would search over certain tags and tag bundles and build these on the fly like your example for OpenLearn.</p>
+<span class="comments-post">Posted by: <a href="http://www.greenhughes.com">Liam Green-Hughes</a> at February  6, 2008 05:34 PM</span>
+</div>
+<div class="comments-body">
+<p>delisearch was one of the first mashups i built (it was the driver behind searchfeedr.com, for example) and I've been keeping an eye on how that sort of approach has been evolving for ages.</p>
+
+<p>For example, here's a Yahoo delisearch pipe (it will only search over about 32 domains, max, i think?): ./009301.html</p>
+
+<p>here's an OPML generator that creates all the OPML you need for a delisearch pipe grazr interface:<br />
+./deli2opml2.html</p>
+
+<p>Here's a variant I started to explore that used the tags as additional, automatic filter terms: ./010010.html</p>
+
+<p>Here's another delicious grazr examples:<br />
+http://grazr.com/read/psychemedia/deliRolls.opml</p>
+
+<p>This is what you really wanted though  - a Google CSE generator for delicious feeds:<br />
+http://gadgets.kbac70.googlepages.com/csebuilder.html<br />
+(techie details here: http://kbac70.blogspot.com/2007/07/custom-search-engine-builder.html )</p>
+<span class="comments-post">Posted by: <a href="http://ouseful.open.ac.uk/blog">Tony</a> at February  6, 2008 06:26 PM</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+</html>
